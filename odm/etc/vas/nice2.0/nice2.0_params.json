@@ -1,0 +1,598 @@
+{
+	"Name":	"nice2.0_params",
+	"project":	"PD2415",
+	"version":	"1",
+	"g_nice_normal_flash_frame_num":	{
+		"value":	[3]
+	},
+	"g_nice_normal_stagger_frame_num":	{
+		"value":	[4]
+	},
+	"g_nice_hdr_frame_num_map_single":	{
+		"":	{
+			"TUNING_CAMERA_TYPE_REAR_WIDE":	[0],
+			"NiceHDRFrameInfoGroup":	{
+				"nicehdrBinningForward":	{
+					"value":	[4, 3, [-1, -2, 2]]
+				},
+				"nicehdrBinning":	{
+					"value":	[0, 8, [0, 0, 0, 1, -2, -1, 0, 0]]
+				},
+				"nicehdrBinningShaking1":	{
+					"value":	[0, 8, [-1, 0, -1, 1, 2, 0, 0, 0]]
+				},
+				"nicehdrBinningShaking2":	{
+					"value":	[0, 8, [0, 1, 0, -2, -1, 0, 0, 0]]
+				},
+				"nicehdrBinningMoreFrame":	{
+					"value":	[0, 11, [-2, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0]]
+				},
+				"nicehdrBinningMoreFrameShaking":	{
+					"value":	[0, 11, [0, 0, 0, 0, 0, 0, -1, 0, -1, 1, 2]]
+				},
+				"nicehdrBinningSunset":	{
+					"value":	[5, 2, [-2, -1]]
+				},
+				"nicehdrRoiQuadForward":	{
+					"value":	[4, 3, [-1, -2, 2]]
+				},
+				"nicehdrRoiQuad":	{
+					"value":	[0, 8, [0, 0, 0, 1, -2, -1, 0, 0]]
+				},
+				"nicehdrRoiQuadShaking1":	{
+					"value":	[0, 8, [-1, 0, -1, 1, 2, 0, 0, 0]]
+				},
+				"nicehdrRoiQuadShaking2":	{
+					"value":	[0, 8, [0, 1, 0, -2, -1, 0, 0, 0]]
+				},
+				"nicehdrRoiQuadMoreFrame":	{
+					"value":	[0, 11, [-2, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0]]
+				},
+				"nicehdrRoiQuadMoreFrameShaking1":	{
+					"value":	[0, 11, [0, 0, 0, 0, 0, 0, -1, 0, -1, 1, 2]]
+				},
+				"nicehdrRoiQuadMoreFrameShaking2":	{
+					"value":	[0, 11, [0, 1, -1, -1, 0, 0, 0, 0, 0, 0, 0]]
+				},
+				"nicehdrRoiQuadMoreFrameSunset":	{
+					"value":	[8, 2, [-1, -1]]
+				},
+				"nicehdrSatQuad":	{
+					"value":	[0, 7, [0, -1, 0, -2, 0, 0, 0]]
+				},
+				"nicehdrSatQuadShaking":	{
+					"value":	[0, 7, [-1, 0, -1, 2, 0, 0, 0]]
+				},
+				"nicehdrSatQuadMoreFrame":	{
+					"value":	[0, 10, [0, 0, 0, -1, 0, -2, 0, 0, 0, 0]]
+				},
+				"nicehdrSatQuadMoreFrameShaking":	{
+					"value":	[0, 10, [-1, 0, -1, 2, 0, 0, 0, 0, 0, 0]]
+				},
+				"nicehdrSatQuadStage":	{
+					"value":	[0, 7, [-1, 0, -2, 2, 0, 0, 0]]
+				},
+				"nicehdrSatQuadShakingStage":	{
+					"value":	[0, 7, [-1, 0, -1, 2, 0, 0, 0]]
+				}
+			}
+		},
+		"":	{
+			"TUNING_CAMERA_TYPE_REAR_TELE":	[2],
+			"NiceHDRFrameInfoGroup":	{
+				"nicehdrBinningForward":	{
+					"value":	[4, 3, [-1, -2, 2]]
+				},
+				"nicehdrBinning":	{
+					"value":	[0, 8, [0, 0, 0, 1, -2, -1, 0, 0]]
+				},
+				"nicehdrBinningShaking1":	{
+					"value":	[0, 8, [-1, 0, -1, 1, 2, 0, 0, 0]]
+				},
+				"nicehdrBinningShaking2":	{
+					"value":	[0, 8, [0, 1, 0, -2, -1, 0, 0, 0, 0]]
+				},
+				"nicehdrBinningMoreFrame":	{
+					"value":	[0, 11, [-2, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0]]
+				},
+				"nicehdrBinningMoreFrameShaking":	{
+					"value":	[0, 11, [0, 0, 0, 0, 0, 0, -1, 0, -1, 1, 2]]
+				},
+				"nicehdrBinningSunset":	{
+					"value":	[5, 2, [-2, -1]]
+				},
+				"nicehdrRoiQuadForward":	{
+					"value":	[0, 10, [0, 0, 0, 0, 0, 0, 0, 0, -1, -1]]
+				},
+				"nicehdrRoiQuad":	{
+					"value":	[0, 8, [0, 0, 0, 1, -1, -1, 0, 0]]
+				},
+				"nicehdrRoiQuadShaking1":	{
+					"value":	[0, 8, [-1, 0, -1, 1, 2, 0, 0, 0]]
+				},
+				"nicehdrRoiQuadShaking2":	{
+					"value":	[0, 8, [0, 1, 0, -2, -1, 0, 0, 0]]
+				},
+				"nicehdrRoiQuadMoreFrame":	{
+					"value":	[0, 11, [-1, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0]]
+				},
+				"nicehdrRoiQuadMoreFrameShaking1":	{
+					"value":	[0, 11, [0, 0, 0, 0, 0, 0, -1, 0, -1, 1, 2]]
+				},
+				"nicehdrRoiQuadMoreFrameShaking2":	{
+					"value":	[0, 11, [0, 1, -1, -1, 0, 0, 0, 0, 0, 0, 0]]
+				},
+				"nicehdrRoiQuadMoreFrameSunset":	{
+					"value":	[8, 2, [-1, -1]]
+				},
+				"nicehdrSatQuad":	{
+					"value":	[0, 7, [0, -1, 0, -1, 0, 0, 0]]
+				},
+				"nicehdrSatQuadShaking":	{
+					"value":	[0, 7, [-1, 0, -1, 2, 0, 0, 0]]
+				},
+				"nicehdrSatQuadMoreFrame":	{
+					"value":	[0, 10, [0, 0, 0, -1, 0, -2, 0, 0, 0, 0]]
+				},
+				"nicehdrSatQuadMoreFrameShaking":	{
+					"value":	[0, 10, [-2, 0, 0, 0, 0, 0, 0, 0, 0, -1]]
+				},
+				"nicehdrSatQuadStage":	{
+					"value":	[0, 7, [-1, 0, -1, 2, 0, 0, 0]]
+				},
+				"nicehdrSatQuadShakingStage":	{
+					"value":	[0, 7, [-1, 0, -1, 2, 0, 0, 0]]
+				}
+			}
+		}
+	},
+	"g_nice_hdr_frame_num_map_dual":	{
+		"":	{
+			"TUNING_CAMERA_TYPE_REAR_WIDE":	[0],
+			"NiceHDRFrameInfoGroup":	{
+				"nicehdrBinningForward":	{
+					"value":	[4, 1, [2, -2]]
+				},
+				"nicehdrBinning":	{
+					"value":	[0, 6, [0, 0, 0, 1, 0, 0, -1, -2, -1, 1, -2, -1]]
+				},
+				"nicehdrBinningShaking1":	{
+					"value":	[0, 6, [2, 0, 0, 1, 0, 0, -1, -1, -1, 1, -1, -1]]
+				},
+				"nicehdrBinningMoreFrame":	{
+					"value":	[0, 5, [0, 0, 0, 0, 0, 0, -2, -1, 0, 0]]
+				},
+				"nicehdrBinningMoreFrameShaking":	{
+					"value":	[0, 5, [0, 0, 0, 0, 2, 0, -1, -1, 0, 0]]
+				},
+				"nicehdrRoiQuadForward":	{
+					"value":	[4, 1, [2, -2]]
+				},
+				"nicehdrRoiQuad":	{
+					"value":	[0, 6, [0, 0, 0, 1, 0, 0, -1, -2, -1, 1, -2, -1]]
+				},
+				"nicehdrRoiQuadShaking1":	{
+					"value":	[0, 6, [2, 0, 0, 1, 0, 0, -1, -1, -1, 1, -1, -1]]
+				},
+				"nicehdrRoiQuadMoreFrame":	{
+					"value":	[0, 5, [0, 0, 0, 0, 0, 0, -2, -1, 0, 0]]
+				},
+				"nicehdrRoiQuadMoreFrameShaking1":	{
+					"value":	[0, 5, [0, 0, 0, 0, 2, 0, -1, -1, 0, 0]]
+				}
+			}
+		},
+		"":	{
+			"TUNING_CAMERA_TYPE_REAR_TELE":	[2],
+			"NiceHDRFrameInfoGroup":	{
+				"nicehdrBinningForward":	{
+					"value":	[4, 1, [2, -2]]
+				},
+				"nicehdrBinning":	{
+					"value":	[0, 6, [0, 0, 0, 1, 0, 0, -1, -2, -1, 1, -2, -1]]
+				},
+				"nicehdrBinningShaking1":	{
+					"value":	[0, 6, [2, 0, 0, 1, 0, 0, -1, -1, -1, 1, -1, -1]]
+				},
+				"nicehdrBinningMoreFrame":	{
+					"value":	[0, 5, [0, 0, 0, 0, 0, 0, -2, -1, 0, 0]]
+				},
+				"nicehdrBinningMoreFrameShaking":	{
+					"value":	[0, 5, [0, 0, 0, 0, 2, 0, -1, -1, 0, 0]]
+				},
+				"nicehdrRoiQuadForward":	{
+					"value":	[4, 1, [2, -2]]
+				},
+				"nicehdrRoiQuad":	{
+					"value":	[0, 6, [0, 0, 0, 1, 0, 0, -1, -2, -1, 1, -2, -1]]
+				},
+				"nicehdrRoiQuadShaking1":	{
+					"value":	[0, 6, [2, 0, 0, 1, 0, 0, -1, -1, -1, 1, -1, -1]]
+				},
+				"nicehdrRoiQuadMoreFrame":	{
+					"value":	[0, 5, [0, 0, 0, 0, 0, 0, -2, -1, 0, 0]]
+				},
+				"nicehdrRoiQuadMoreFrameShaking1":	{
+					"value":	[0, 5, [0, 0, 0, 0, 2, 0, -1, -1, 0, 0]]
+				}
+			}
+		}
+	},
+	"g_nice_hdr_dual_frame_info_map":	{
+		"":	{
+			"DETECT_TYPE_NICE_HDR_BINNING_FORWARD":	[2],
+			"NiceDualRawShotInfo":	{
+				"isNeedAllShortFrame":	[0],
+				"shortFrameNum":	[2],
+				"frameCatchType":	{
+					"PREVIEWHDR_FORWARD":	[1]
+				},
+				"shortFrameIndex":	[-1, -1, 0, 0, 0, 0, 0, 0, 0, 0],
+				"isNeedImageEcho":	[1],
+				"basicFrameIndex":	[-1],
+				"previewHDRType":	[0]
+			}
+		},
+		"":	{
+			"DETECT_TYPE_NICE_HDR_BINNING_SUNSET":	[8],
+			"NiceDualRawShotInfo":	{
+				"isNeedAllShortFrame":	[0],
+				"shortFrameNum":	[2],
+				"frameCatchType":	{
+					"PREVIEWHDR_FORWARD":	[1]
+				},
+				"shortFrameIndex":	[-1, -1, 0, 0, 0, 0, 0, 0, 0, 0],
+				"isNeedImageEcho":	[1],
+				"basicFrameIndex":	[-1],
+				"previewHDRType":	[0]
+			}
+		},
+		"":	{
+			"DETECT_TYPE_NICE_HDR_ROIQUAD_FORWARD":	[9],
+			"NiceDualRawShotInfo":	{
+				"isNeedAllShortFrame":	[0],
+				"shortFrameNum":	[2],
+				"frameCatchType":	{
+					"PREVIEWHDR_FORWARD":	[1]
+				},
+				"shortFrameIndex":	[-1, -1, 0, 0, 0, 0, 0, 0, 0, 0],
+				"isNeedImageEcho":	[1],
+				"basicFrameIndex":	[-1],
+				"previewHDRType":	[0]
+			}
+		},
+		"":	{
+			"DETECT_TYPE_NICE_HDR_ROIQUAD_MOREFRAME_SUNSET":	[16],
+			"NiceDualRawShotInfo":	{
+				"isNeedAllShortFrame":	[0],
+				"shortFrameNum":	[2],
+				"frameCatchType":	{
+					"PREVIEWHDR_FORWARD":	[1]
+				},
+				"shortFrameIndex":	[-1, -1, 0, 0, 0, 0, 0, 0, 0, 0],
+				"isNeedImageEcho":	[1],
+				"basicFrameIndex":	[-1],
+				"previewHDRType":	[0]
+			}
+		},
+		"":	{
+			"DETECT_TYPE_NICE_HDR_BINNING":	[3],
+			"NiceDualRawShotInfo":	{
+				"isNeedAllShortFrame":	[0],
+				"shortFrameNum":	[2],
+				"frameCatchType":	{
+					"PREVIEWHDR_BACKWARD":	[2]
+				},
+				"shortFrameIndex":	[-1, -1, 0, 0, 0, 0, 0, 0, 0, 0],
+				"isNeedImageEcho":	[1],
+				"basicFrameIndex":	[-1],
+				"previewHDRType":	[0]
+			}
+		},
+		"":	{
+			"DETECT_TYPE_NICE_HDR_BINNING_SHAKING2":	[5],
+			"NiceDualRawShotInfo":	{
+				"isNeedAllShortFrame":	[0],
+				"shortFrameNum":	[2],
+				"frameCatchType":	{
+					"PREVIEWHDR_BACKWARD":	[2]
+				},
+				"shortFrameIndex":	[-1, -1, 0, 0, 0, 0, 0, 0, 0, 0],
+				"isNeedImageEcho":	[1],
+				"basicFrameIndex":	[-1],
+				"previewHDRType":	[0]
+			}
+		},
+		"":	{
+			"DETECT_TYPE_NICE_HDR_ROIQUAD":	[10],
+			"NiceDualRawShotInfo":	{
+				"isNeedAllShortFrame":	[0],
+				"shortFrameNum":	[2],
+				"frameCatchType":	{
+					"PREVIEWHDR_BACKWARD":	[2]
+				},
+				"shortFrameIndex":	[-1, -1, 0, 0, 0, 0, 0, 0, 0, 0],
+				"isNeedImageEcho":	[1],
+				"basicFrameIndex":	[-1],
+				"previewHDRType":	[0]
+			}
+		},
+		"":	{
+			"DETECT_TYPE_NICE_HDR_ROIQUAD_SHAKING2":	[12],
+			"NiceDualRawShotInfo":	{
+				"isNeedAllShortFrame":	[0],
+				"shortFrameNum":	[2],
+				"frameCatchType":	{
+					"PREVIEWHDR_BACKWARD":	[2]
+				},
+				"shortFrameIndex":	[-1, -1, 0, 0, 0, 0, 0, 0, 0, 0],
+				"isNeedImageEcho":	[1],
+				"basicFrameIndex":	[-1],
+				"previewHDRType":	[0]
+			}
+		},
+		"":	{
+			"DETECT_TYPE_NICE_HDR_BINNING_SHAKING1":	[4],
+			"NiceDualRawShotInfo":	{
+				"isNeedAllShortFrame":	[0],
+				"shortFrameNum":	[2],
+				"frameCatchType":	{
+					"PREVIEWHDR_SHAKING":	[3]
+				},
+				"shortFrameIndex":	[-1, -1, 0, 0, 0, 0, 0, 0, 0, 0],
+				"isNeedImageEcho":	[1],
+				"basicFrameIndex":	[-1],
+				"previewHDRType":	[0]
+			}
+		},
+		"":	{
+			"DETECT_TYPE_NICE_HDR_ROIQUAD_SHAKING1":	[11],
+			"NiceDualRawShotInfo":	{
+				"isNeedAllShortFrame":	[0],
+				"shortFrameNum":	[2],
+				"frameCatchType":	{
+					"PREVIEWHDR_SHAKING":	[3]
+				},
+				"shortFrameIndex":	[-1, -1, 0, 0, 0, 0, 0, 0, 0, 0],
+				"isNeedImageEcho":	[1],
+				"basicFrameIndex":	[-1],
+				"previewHDRType":	[0]
+			}
+		},
+		"":	{
+			"DETECT_TYPE_NICE_HDR_BINNING_MOREFRAME":	[6],
+			"NiceDualRawShotInfo":	{
+				"isNeedAllShortFrame":	[1],
+				"shortFrameNum":	[5],
+				"frameCatchType":	{
+					"PREVIEWHDR_NIGHT":	[4]
+				},
+				"shortFrameIndex":	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+				"isNeedImageEcho":	[0],
+				"basicFrameIndex":	[-1],
+				"previewHDRType":	[0]
+			}
+		},
+		"":	{
+			"DETECT_TYPE_NICE_HDR_ROIQUAD_MOREFRAME":	[13],
+			"NiceDualRawShotInfo":	{
+				"isNeedAllShortFrame":	[1],
+				"shortFrameNum":	[5],
+				"frameCatchType":	{
+					"PREVIEWHDR_NIGHT":	[4]
+				},
+				"shortFrameIndex":	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+				"isNeedImageEcho":	[0],
+				"basicFrameIndex":	[-1],
+				"previewHDRType":	[0]
+			}
+		},
+		"":	{
+			"DETECT_TYPE_NICE_HDR_BINNING_MOREFRAME_SHAKING1":	[7],
+			"NiceDualRawShotInfo":	{
+				"isNeedAllShortFrame":	[1],
+				"shortFrameNum":	[5],
+				"frameCatchType":	{
+					"PREVIEWHDR_NIGHT_MOTION":	[5]
+				},
+				"shortFrameIndex":	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+				"isNeedImageEcho":	[0],
+				"basicFrameIndex":	[4],
+				"previewHDRType":	[0]
+			}
+		},
+		"":	{
+			"DETECT_TYPE_NICE_HDR_ROIQUAD_MOREFRAME_SHAKING1":	[14],
+			"NiceDualRawShotInfo":	{
+				"isNeedAllShortFrame":	[1],
+				"shortFrameNum":	[5],
+				"frameCatchType":	{
+					"PREVIEWHDR_NIGHT_MOTION":	[5]
+				},
+				"shortFrameIndex":	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+				"isNeedImageEcho":	[0],
+				"basicFrameIndex":	[4],
+				"previewHDRType":	[0]
+			}
+		},
+		"":	{
+			"DETECT_TYPE_NICE_HDR_ROIQUAD_MOREFRAME_SHAKING2":	[15],
+			"NiceDualRawShotInfo":	{
+				"isNeedAllShortFrame":	[1],
+				"shortFrameNum":	[5],
+				"frameCatchType":	{
+					"PREVIEWHDR_NIGHT_MOTION":	[5]
+				},
+				"shortFrameIndex":	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+				"isNeedImageEcho":	[0],
+				"basicFrameIndex":	[4],
+				"previewHDRType":	[0]
+			}
+		}
+	},
+	"g_limitNPUFrequency":	{
+		"value":	[1117]
+	},
+	"g_niceXmlIsoMap":	{
+		"":	{
+			"NOT_QUAD":	[0],
+			"CurrentQuadTypeIsoTHresholdMap":	{
+				"":	{
+					"TUNING_CAMERA_TYPE_REAR_WIDE":	[0],
+					"CAMERA_UI_MODE_NORMAL":	[1],
+					"NiceIsoTHreshold":	[0, 640000]
+				},
+				"":	{
+					"TUNING_CAMERA_TYPE_REAR_WIDE":	[0],
+					"CAMERA_UI_MODE_NIGHT":	[7],
+					"NiceIsoTHreshold":	[800, 640000]
+				},
+				"":	{
+					"TUNING_CAMERA_TYPE_REAR_WIDE":	[0],
+					"CAMERA_UI_MODE_MOON":	[32],
+					"NiceIsoTHreshold":	[800, 640000]
+				},
+				"":	{
+					"TUNING_CAMERA_TYPE_REAR_WIDE":	[0],
+					"CAMERA_UI_MODE_SCENERY":	[74],
+					"NiceIsoTHreshold":	[800, 640000]
+				},
+				"":	{
+					"TUNING_CAMERA_TYPE_REAR_UTRA_WIDE":	[1],
+					"CAMERA_UI_MODE_NORMAL":	[1],
+					"NiceIsoTHreshold":	[0, 3200]
+				},
+				"":	{
+					"TUNING_CAMERA_TYPE_REAR_UTRA_WIDE":	[1],
+					"CAMERA_UI_MODE_NIGHT":	[7],
+					"NiceIsoTHreshold":	[800, 3200]
+				},
+				"":	{
+					"TUNING_CAMERA_TYPE_REAR_UTRA_WIDE":	[1],
+					"CAMERA_UI_MODE_SCENERY":	[74],
+					"NiceIsoTHreshold":	[800, 3200]
+				},
+				"":	{
+					"TUNING_CAMERA_TYPE_REAR_TELE":	[2],
+					"CAMERA_UI_MODE_NORMAL":	[1],
+					"NiceIsoTHreshold":	[0, 2500]
+				},
+				"":	{
+					"TUNING_CAMERA_TYPE_REAR_TELE":	[2],
+					"CAMERA_UI_MODE_NIGHT":	[7],
+					"NiceIsoTHreshold":	[800, 2500]
+				},
+				"":	{
+					"TUNING_CAMERA_TYPE_REAR_TELE":	[2],
+					"CAMERA_UI_MODE_MOON":	[32],
+					"NiceIsoTHreshold":	[800, 2500]
+				},
+				"":	{
+					"TUNING_CAMERA_TYPE_REAR_TELE":	[2],
+					"CAMERA_UI_MODE_SCENERY":	[74],
+					"NiceIsoTHreshold":	[800, 2500]
+				}
+			}
+		},
+		"":	{
+			"SAT_QUAD":	[1],
+			"CurrentQuadTypeIsoTHresholdMap":	{
+				"":	{
+					"TUNING_CAMERA_TYPE_REAR_WIDE":	[0],
+					"CAMERA_UI_MODE_NIGHT":	[7],
+					"NiceIsoTHreshold":	[800, 3200]
+				},
+				"":	{
+					"TUNING_CAMERA_TYPE_REAR_TELE":	[2],
+					"CAMERA_UI_MODE_NIGHT":	[7],
+					"NiceIsoTHreshold":	[800, 3200]
+				},
+				"":	{
+					"TUNING_CAMERA_TYPE_REAR_WIDE":	[0],
+					"CAMERA_UI_MODE_SCENERY":	[74],
+					"NiceIsoTHreshold":	[800, 3200]
+				},
+				"":	{
+					"TUNING_CAMERA_TYPE_REAR_TELE":	[2],
+					"CAMERA_UI_MODE_SCENERY":	[74],
+					"NiceIsoTHreshold":	[800, 3200]
+				}
+			}
+		},
+		"":	{
+			"ROI_QUAD":	[2],
+			"CurrentQuadTypeIsoTHresholdMap":	{
+				"":	{
+					"TUNING_CAMERA_TYPE_REAR_WIDE":	[0],
+					"CAMERA_UI_MODE_NIGHT":	[7],
+					"NiceIsoTHreshold":	[800, 3200]
+				},
+				"":	{
+					"TUNING_CAMERA_TYPE_REAR_TELE":	[2],
+					"CAMERA_UI_MODE_NIGHT":	[7],
+					"NiceIsoTHreshold":	[800, 3200]
+				},
+				"":	{
+					"TUNING_CAMERA_TYPE_REAR_WIDE":	[0],
+					"CAMERA_UI_MODE_SCENERY":	[74],
+					"NiceIsoTHreshold":	[800, 3200]
+				},
+				"":	{
+					"TUNING_CAMERA_TYPE_REAR_TELE":	[2],
+					"CAMERA_UI_MODE_SCENERY":	[74],
+					"NiceIsoTHreshold":	[800, 3200]
+				}
+			}
+		}
+	},
+	"high_magnification_basic_frame_index_threshold":	{
+		"value":	[4]
+	},
+	"g_nice_tone_tunning_params":	{
+		"uiZoomRatioTHreshold":	{
+			"value":	[8]
+		},
+		"wideLuxTndexTHreshold":	{
+			"value":	[280]
+		},
+		"masterLuxTndexTHreshold":	{
+			"value":	[280]
+		},
+		"teleLuxTndexTHreshold":	{
+			"value":	[280]
+		},
+		"tele5xLuxTndexTHreshold":	{
+			"value":	[280]
+		}
+	},
+	"g_nice_error_handler_enalbe":	{
+		"value":	[1]
+	},
+	"g_hdr_net_threshold_normal":	{
+		"value":	[200]
+	},
+	"g_hdr_net_threshold_zeiss":	{
+		"value":	[200]
+	},
+	"g_fast_night_owl_threshold":	{
+		"value":	[320]
+	},
+	"g_nice_sunset_close":	{
+		"value":	[0]
+	},
+	"g_nice_aiawb_tone_enalbe":	{
+		"value":	[0]
+	},
+	"g_isbyapss_selectCOE":	{
+		"value":	[1]
+	},
+	"g_enable3DLUT_allScene":	{
+		"value":	[1]
+	},
+	"g_isdiff_cvtone":	{
+		"value":	[0]
+	},
+	"g_second_sensor_name":	{
+		"value":	["default"]
+	}
+}

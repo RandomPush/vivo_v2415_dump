@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RealtimeReqMap version="1.0.0">
+    <SceneMode value="SCENE_SAT">
+        <Builder value="MAIN_BUILDER">
+            <Node value="REALTIME_NODE" instance="0">
+                <NextNode value="RTYP_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_YUV_WIDE_INPLACE_OUT"/>
+                    <Stream value="REAL_YUV_WIDE_INPLACE_SAT_OUT"/>
+                    <Stream value="REAL_YUV_ULTRAWIDE_INPLACE_OUT"/>
+                    <Stream value="REAL_YUV_ULTRAWIDE_INPLACE_SAT_OUT"/>
+                    <Stream value="REAL_YUV_TELE_INPLACE_OUT"/>
+                    <Stream value="REAL_YUV_TELE_INPLACE_SAT_OUT"/>
+                </NextNode>
+                <NextNode value="RTY2Y_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_YUV_WIDE_ME_OUT"/>
+                    <Stream value="REAL_YUV_WIDE_F1_OUT"/>
+                    <Stream value="REAL_YUV_ULTRAWIDE_ME_OUT"/>
+                    <Stream value="REAL_YUV_ULTRAWIDE_F1_OUT"/>
+                    <Stream value="REAL_YUV_TELE_ME_OUT"/>
+                    <Stream value="REAL_YUV_TELE_F1_OUT"/>
+                </NextNode>
+                <NextNode value="RTY2Y_NODE" builder="SUB_BUILDER">
+                    <Stream value="REAL_YUV_TELE_PIP_OUT"/>
+                    <Stream value="REAL_YUV_ULTRAWIDE_PIP_OUT"/>
+                </NextNode>
+                <FinalStreams>
+                    <Stream  value="REAL_RAW_WIDE_OUT"/>
+                    <Stream  value="REAL_SHORTEX_RAW_WIDE_OUT"/>
+                    <Stream  value="REAL_RAW_ULTRAWIDE_OUT"/>
+                    <Stream  value="REAL_RAW_WIDE_BURST_OUT"/>
+                    <Stream  value="REAL_RAW_TELE_OUT"/>
+                    <Stream  value="REAL_SHORTEX_RAW_TELE_OUT"/>
+                    <Stream  value="REAL_RAW_TELE_BURST_OUT"/>
+                    <Stream  value="REAL_RAW_WIDE_QCFA_OUT"/>
+                    <Stream  value="REAL_RAW_TELE_QCFA_OUT"/>
+                </FinalStreams>
+            </Node>
+            <Node value="RTYP_NODE" instance="0">
+                <PrevNode value="REALTIME_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_YUV_WIDE_INPLACE_OUT"/>
+                    <Stream value="REAL_YUV_WIDE_INPLACE_SAT_OUT"/>
+                    <Stream value="REAL_YUV_ULTRAWIDE_INPLACE_OUT"/>
+                    <Stream value="REAL_YUV_ULTRAWIDE_INPLACE_SAT_OUT"/>
+                    <Stream value="REAL_YUV_TELE_INPLACE_OUT"/>
+                    <Stream value="REAL_YUV_TELE_INPLACE_SAT_OUT"/>
+                </PrevNode>
+                <NextNode value="RTY2Y_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_WIDE_INPLACE_IN"/>
+                    <Stream value="REAL_Y2Y_ULTRAWIDE_INPLACE_IN"/>
+                    <Stream value="REAL_Y2Y_TELE_INPLACE_IN"/>
+                </NextNode>
+                <NextNode value="RTY2Y_NODE" builder="SUB_BUILDER">
+                </NextNode>
+                <FinalStreams/>
+            </Node>
+            <Node value="RTY2Y_NODE" instance="0">
+                <PrevNode value="REALTIME_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_WIDE_ME_IN"/>
+                    <Stream value="REAL_Y2Y_WIDE_F1_IN"/>
+                    <Stream value="REAL_Y2Y_ULTRAWIDE_ME_IN"/>
+                    <Stream value="REAL_Y2Y_ULTRAWIDE_F1_IN"/>
+                    <Stream value="REAL_Y2Y_TELE_ME_IN"/>
+                    <Stream value="REAL_Y2Y_TELE_F1_IN"/>
+                </PrevNode>
+                <PrevNode value="RTYP_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_WIDE_INPLACE_IN"/>
+                    <Stream value="REAL_Y2Y_ULTRAWIDE_INPLACE_IN"/>
+                    <Stream value="REAL_Y2Y_TELE_INPLACE_IN"/>
+                </PrevNode>
+                <NextNode value="RTYP2_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_EXTINP_OUT"/>
+                </NextNode>
+                <FinalStreams>
+                    <Stream  value="EXT_REALTIME_YUV_OUT"/>
+                </FinalStreams>
+            </Node>
+            <Node value="RTYP2_NODE" instance="0">
+                <PrevNode value="RTY2Y_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_EXTINP_OUT"/>
+                </PrevNode>
+                <FinalStreams>
+                    <Stream  value="EXT_PREVIEW_OUT"/>
+                </FinalStreams>
+            </Node>
+        </Builder>
+        <Builder value="SUB_BUILDER">
+            <Node value="RTY2Y_NODE" instance="1">
+                <PrevNode value="REALTIME_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_TELE_PIP_IN"/>
+                    <Stream value="REAL_Y2Y_ULTRAWIDE_PIP_IN"/>
+                </PrevNode>
+                <PrevNode value="RTYP_NODE" builder="MAIN_BUILDER">
+                </PrevNode>
+                <FinalStreams>
+                    <Stream  value="EXT_PIP_YUV_OUT"/>
+                </FinalStreams>
+            </Node>
+        </Builder>
+    </SceneMode>
+    <SceneMode value="SCENE_PORTRAIT_VIDEO_IC_TEST">
+        <Builder value="MAIN_BUILDER">
+            <Node value="REALTIME_NODE" instance="0">
+                <NextNode value="RTYP_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_YUV_WIDE_INPLACE_OUT"/>
+                </NextNode>
+                <NextNode value="RTY2Y_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_YUV_WIDE_ME_OUT"/>
+                    <Stream value="REAL_YUV_WIDE_F1_OUT"/>
+                </NextNode>
+                <FinalStreams/>
+            </Node>
+            <Node value="RTYP_NODE" instance="0">
+                <PrevNode value="REALTIME_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_YUV_WIDE_INPLACE_OUT"/>
+                </PrevNode>
+                <NextNode value="RTY2Y_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_WIDE_INPLACE_IN"/>
+                </NextNode>
+                <FinalStreams/>
+            </Node>
+            <Node value="RTY2Y_NODE" instance="0">
+                <PrevNode value="REALTIME_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_WIDE_ME_IN"/>
+                    <Stream value="REAL_Y2Y_WIDE_F1_IN"/>
+                </PrevNode>
+                <PrevNode value="RTYP_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_WIDE_INPLACE_IN"/>
+                </PrevNode>
+                <FinalStreams>
+                    <Stream  value="EXT_PREVIEW_OUT"/>
+                    <Stream  value="EXT_VIDEO_RAW_OUT"/>
+                </FinalStreams>
+            </Node>
+        </Builder>
+    </SceneMode>
+    <SceneMode value="SCENE_PORTRAIT_SINGLE_PREVIEW_IC">
+        <Builder value="MAIN_BUILDER">
+            <Node value="REALTIME_NODE" instance="0">
+                <NextNode value="RTYP_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_YUV_WIDE_INPLACE_OUT"/>
+                    <Stream value="REAL_YUV_TELE_INPLACE_OUT"/>
+                </NextNode>
+                <NextNode value="RTY2Y_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_YUV_WIDE_ME_OUT"/>
+                    <Stream value="REAL_YUV_WIDE_F1_OUT"/>
+                    <Stream value="REAL_YUV_TELE_ME_OUT"/>
+                    <Stream value="REAL_YUV_TELE_F1_OUT"/>
+                </NextNode>
+                <FinalStreams/>
+            </Node>
+            <Node value="RTYP_NODE" instance="0">
+                <PrevNode value="REALTIME_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_YUV_WIDE_INPLACE_OUT"/>
+                    <Stream value="REAL_YUV_TELE_INPLACE_OUT"/>
+                </PrevNode>
+                <NextNode value="RTY2Y_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_WIDE_INPLACE_IN"/>
+                    <Stream value="REAL_Y2Y_TELE_INPLACE_IN"/>
+                </NextNode>
+                <FinalStreams/>
+            </Node>
+            <Node value="RTY2Y_NODE" instance="0">
+                <PrevNode value="REALTIME_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_WIDE_ME_IN"/>
+                    <Stream value="REAL_Y2Y_WIDE_F1_IN"/>
+                    <Stream value="REAL_Y2Y_TELE_ME_IN"/>
+                    <Stream value="REAL_Y2Y_TELE_F1_IN"/>
+                </PrevNode>
+                <PrevNode value="RTYP_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_WIDE_INPLACE_IN"/>
+                    <Stream value="REAL_Y2Y_TELE_INPLACE_IN"/>
+                </PrevNode>
+                <NextNode value="RTYP2_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_OUT"/>
+                </NextNode>
+                <FinalStreams>
+                    <Stream value="EXT_VIDEO_RAW_OUT"/>
+                </FinalStreams>
+            </Node>
+            <Node value="RTYP2_NODE" instance="0">
+                <PrevNode value="RTY2Y_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_OUT"/>
+                </PrevNode>
+                <NextNode value="RTY2Y_IC_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_INPLACE_IC_IN"/>
+                    <Stream value="REAL_Y2Y_SEGMENT_IC_IN"/>
+                    <Stream value="REAL_Y2Y_DEPTH_IC_IN"/>
+                </NextNode>
+                <FinalStreams>
+                    <Stream value="EXT_AI_SEGMENT_OUT"/>
+                </FinalStreams>
+            </Node>
+            <Node value="RTY2Y_IC_NODE" instance="0">
+                <PrevNode value="RTYP2_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_INPLACE_IC_IN"/>
+                    <Stream value="REAL_Y2Y_SEGMENT_IC_IN"/>
+                    <Stream value="REAL_Y2Y_DEPTH_IC_IN"/>
+                </PrevNode>
+                <FinalStreams>
+                    <Stream value="EXT_PREVIEW_OUT"/>
+                    <Stream value="EXT_AI_DEPTH_OUT"/>
+                    <Stream value="EXT_VIDEO_YUV_OUT"/>
+                </FinalStreams>
+            </Node>
+        </Builder>
+    </SceneMode>
+    <SceneMode value="SCENE_PORTRAIT_SINGLE_PREVIEW_IC_4K">
+        <Builder value="MAIN_BUILDER">
+            <Node value="REALTIME_NODE" instance="0">
+                <NextNode value="RTYP_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_YUV_WIDE_INPLACE_OUT"/>
+                    <Stream value="REAL_YUV_TELE_INPLACE_OUT"/>
+                </NextNode>
+                <NextNode value="RTY2Y_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_YUV_WIDE_ME_OUT"/>
+                    <Stream value="REAL_YUV_WIDE_F1_OUT"/>
+                    <Stream value="REAL_YUV_TELE_ME_OUT"/>
+                    <Stream value="REAL_YUV_TELE_F1_OUT"/>
+                </NextNode>
+                <NextNode value="RTYP3_NODE" builder="SUB_BUILDER">
+                </NextNode>
+                <FinalStreams/>
+            </Node>
+            <Node value="RTYP_NODE" instance="0">
+                <PrevNode value="REALTIME_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_YUV_WIDE_INPLACE_OUT"/>
+                    <Stream value="REAL_YUV_TELE_INPLACE_OUT"/>
+                </PrevNode>
+                <NextNode value="RTY2Y_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_WIDE_INPLACE_IN"/>
+                    <Stream value="REAL_Y2Y_TELE_INPLACE_IN"/>
+                </NextNode>
+                <FinalStreams/>
+            </Node>
+            <Node value="RTY2Y_NODE" instance="0">
+                <PrevNode value="REALTIME_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_WIDE_ME_IN"/>
+                    <Stream value="REAL_Y2Y_WIDE_F1_IN"/>
+                    <Stream value="REAL_Y2Y_TELE_ME_IN"/>
+                    <Stream value="REAL_Y2Y_TELE_F1_IN"/>
+                </PrevNode>
+                <PrevNode value="RTYP_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_WIDE_INPLACE_IN"/>
+                    <Stream value="REAL_Y2Y_TELE_INPLACE_IN"/>
+                </PrevNode>
+                <NextNode value="RTYP2_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_OUT"/>
+                    <Stream value="REAL_Y2Y_TINY_OUT"/>
+                </NextNode>
+                <FinalStreams>
+                    <Stream value="EXT_VIDEO_RAW_OUT"/>
+                </FinalStreams>
+            </Node>
+            <Node value="RTYP2_NODE" instance="0">
+                <PrevNode value="RTY2Y_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_OUT"/>
+                    <Stream value="REAL_Y2Y_TINY_OUT"/>
+                </PrevNode>
+                <NextNode value="RTY2Y_IC_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_INPLACE_IC_IN"/>
+                    <Stream value="REAL_Y2Y_SEGMENT_IC_IN"/>
+                    <Stream value="REAL_Y2Y_DEPTH_IC_IN"/>
+                </NextNode>
+                <FinalStreams>
+                    <Stream value="EXT_AI_SEGMENT_OUT"/>
+                </FinalStreams>
+            </Node>
+            <Node value="RTY2Y_IC_NODE" instance="0">
+                <PrevNode value="RTYP2_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_INPLACE_IC_IN"/>
+                    <Stream value="REAL_Y2Y_SEGMENT_IC_IN"/>
+                    <Stream value="REAL_Y2Y_DEPTH_IC_IN"/>
+                </PrevNode>
+                <NextNode value="RTYP3_NODE" builder="SUB_BUILDER">
+                    <Stream value="REAL_Y2Y_VIDEO_IC_EXTINP_OUT"/>
+                </NextNode>
+                <FinalStreams>
+                    <Stream value="EXT_PREVIEW_OUT"/>
+                    <Stream value="EXT_AI_DEPTH_OUT"/>
+                </FinalStreams>
+            </Node>
+        </Builder>
+        <Builder value="SUB_BUILDER">
+            <Node value="RTYP3_NODE" instance="0">
+                <PrevNode value="REALTIME_NODE" builder="MAIN_BUILDER">
+                </PrevNode>
+                <PrevNode value="RTY2Y_IC_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_Y2Y_VIDEO_IC_EXTINP_OUT"/>
+                </PrevNode>
+                <FinalStreams>
+                    <Stream  value="EXT_VIDEO_YUV_OUT"/>
+                </FinalStreams>
+            </Node>
+        </Builder>
+    </SceneMode>
+    <SceneMode value="SCENE_PROFESSION">
+        <Builder value="MAIN_BUILDER">
+            <Node value="REALTIME_NODE" instance="0">
+                <NextNode value="RTYP_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_YUV_WIDE_EXTINP_OUT"/>
+                    <Stream value="REAL_YUV_ULTRAWIDE_EXTINP_OUT"/>
+                    <Stream value="REAL_YUV_TELE_EXTINP_OUT"/>
+                </NextNode>
+                <FinalStreams>
+                    <Stream  value="REAL_RAW_WIDE_OUT"/>
+                    <Stream  value="REAL_RAW_ULTRAWIDE_OUT"/>
+                    <Stream  value="REAL_RAW_TELE_OUT"/>
+                    <Stream  value="REAL_RAW_WIDE_QCFA_OUT"/>
+                    <Stream  value="REAL_RAW_ULTRAWIDE_QCFA_OUT"/>
+                    <Stream  value="REAL_RAW_TELE_QCFA_OUT"/>
+                    <Stream  value="EXT_REALTIME_YUV_OUT"/>
+                </FinalStreams>
+            </Node>
+            <Node value="RTYP_NODE" instance="0">
+                <PrevNode value="REALTIME_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_YUV_WIDE_EXTINP_OUT"/>
+                    <Stream value="REAL_YUV_ULTRAWIDE_EXTINP_OUT"/>
+                    <Stream value="REAL_YUV_TELE_EXTINP_OUT"/>
+                </PrevNode>
+                <FinalStreams>
+                    <Stream  value="EXT_PREVIEW_OUT"/>
+                </FinalStreams>
+            </Node>
+        </Builder>
+    </SceneMode>
+    <SceneMode value="SCENE_SUPER_RAW">
+        <Builder value="MAIN_BUILDER">
+            <Node value="REALTIME_NODE" instance="0">
+                <NextNode value="RTYP_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_YUV_WIDE_EXTINP_OUT"/>
+                    <Stream value="REAL_YUV_ULTRAWIDE_EXTINP_OUT"/>
+                    <Stream value="REAL_YUV_TELE_EXTINP_OUT"/>
+                </NextNode>
+                <FinalStreams>
+                    <Stream  value="REAL_RAW_WIDE_OUT"/>
+                    <Stream  value="REAL_RAW_ULTRAWIDE_OUT"/>
+                    <Stream  value="REAL_RAW_TELE_OUT"/>
+                    <Stream  value="REAL_RAW_WIDE_QCFA_OUT"/>
+                    <Stream  value="REAL_RAW_ULTRAWIDE_QCFA_OUT"/>
+                    <Stream  value="REAL_RAW_TELE_QCFA_OUT"/>
+                    <Stream  value="EXT_REALTIME_YUV_OUT"/>
+                </FinalStreams>
+            </Node>
+            <Node value="RTYP_NODE" instance="0">
+                <PrevNode value="REALTIME_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_YUV_WIDE_EXTINP_OUT"/>
+                    <Stream value="REAL_YUV_ULTRAWIDE_EXTINP_OUT"/>
+                    <Stream value="REAL_YUV_TELE_EXTINP_OUT"/>
+                </PrevNode>
+                <FinalStreams>
+                    <Stream  value="EXT_PREVIEW_OUT"/>
+                </FinalStreams>
+            </Node>
+        </Builder>
+    </SceneMode>
+    <SceneMode value="SCENE_HIGHRES">
+        <Builder value="MAIN_BUILDER">
+            <Node value="REALTIME_NODE" instance="0">
+                <NextNode value="RTYP_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_YUV_TELE_OUT"/>
+                </NextNode>
+                <FinalStreams>
+                    <Stream  value="REAL_RAW_TELE_OUT"/>
+                    <Stream  value="REAL_RAW_TELE_QCFA_OUT"/>
+                    <Stream  value="REAL_RAW_TELE_HCFA_OUT"/>
+                </FinalStreams>
+            </Node>
+            <Node value="RTYP_NODE" instance="0">
+                <PrevNode value="REALTIME_NODE" builder="MAIN_BUILDER">
+                    <Stream value="REAL_YUV_TELE_OUT"/>
+                </PrevNode>
+                <FinalStreams>
+                    <Stream  value="EXT_PREVIEW_OUT"/>
+                </FinalStreams>
+            </Node>
+        </Builder>
+    </SceneMode>
+</RealtimeReqMap>

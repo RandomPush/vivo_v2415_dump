@@ -1,0 +1,19 @@
+{
+    "DbgInfoEnable":["engcamera|vivoCamera", "this is for vivo 3a exif"],
+    "non3rdCamera":["vivoCamera", "non-3rd camera"],
+    "enableCallBackRule":["engcamera|vivoCamera|Dingding|Whatsapp|Zalo|Wechat", "设置三方相机callback rule"],
+    "Fix3rdAppP1Size":["TikTok|Kuaishou|QQ|Wechat", "修改三方相机P1size"],
+    "CalcFixVSDOFCropForSlaveAppName":["engcamera|vivoCamera", "for app callBack Rule Set Config"],
+    "limitBroadcastAppFpsConfig":["vivoCamera|CTS", "add for limit broadcast app fps when temperature higher than 43 degree start"],
+    "enableFdFullMode":["Wechat|3rd_party|Lrmobile|Messenger|Weibo|mtk_ims|MeiYancamera|TikTokExternal|QQ|TikTok", "3rd party open FD"],
+    "disablePlatformEisFor3rdParty":["vivoCamera|CTS", "除此之外的3rd app全部disable platform eis"],
+    "initRequestConfig":{
+        "appConfig1":["Wechat|FaceUnlockFaceUnlock|vivoCamera|QQ|JoviVision", 4, "init Request Config Number"],
+        "appConfig2":["Alipay", 0, "init Request Config Number"]
+    },
+    "noCheckPipAppList":["vivoCamera|Whatsapp|TeleGram|dakashenqi", "跳过PIP检查"],
+    "pipRawResourceChange":["Whatsapp|TeleGram|dakashenqi", "PIP返回raw资源修改"],
+    "enableAFSpecialApp":["Wechat|QQ|Kuaishou|TikTok|Whatsapp","is AF Special App"],
+    "EngCamera": ["engcamera", "判断是否是工模相机"],
+    "ProtakeCamera": ["protake", "判断是否是protake"]
+}

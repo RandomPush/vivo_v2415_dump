@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <!-- Starting from Android O and above, this system feature is required for
+         getting Google Dialer play store updates. -->
+    <feature name="com.vivo.themestore.SUPPORTED" />
+</permissions>

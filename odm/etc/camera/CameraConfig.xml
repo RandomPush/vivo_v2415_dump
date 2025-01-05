@@ -1,0 +1,1371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CameraConfig version="1.0.0">
+    <VIF_PARITAL_META value="1" />
+    <RDI_QUEUE_SETTING>
+        <RDI_READY_QUEUE_MIN value="6" />
+        <RDI_HDR_READY_QUEUE_MIN value="4" />
+        <RDI_PREALLOCATED_NUM value="2" />
+        <RDI_FULLY_RING_OL_BUFFER_NUM value="0" />
+        <RDI_TOTAL_QUEUE_MAX value="100" />
+    </RDI_QUEUE_SETTING>
+    <MEMORY_POOL_SETTING>
+        <PREV_RING_MAX value="128" />
+        <PREV_RING_MIN value="0" />
+        <CAP_RING_MAX value="8" />
+        <CAP_RING_MIN value="4" />
+        <RING_FREE_MIN value="2" />
+        <RING_FREE_ZOOM_FACTOR value="4" />
+        <MEMORY_POOL_PREALLOCATED_NUM value="1" />
+    </MEMORY_POOL_SETTING>
+    <AP_BUFFER_POOL_SETTING>
+        <AP_BUFFER_PREALLOCATED_NUM value="1" />
+        <PREALLOCATOR_SUPPORT_SCENE>
+            <SceneMode value="SCENE_PLATFORM_SAT_ALGO_MEMC"/>
+            <SceneMode value="SCENE_EIS_SINGLE_VIDEO_AFBC"/>
+            <SceneMode value="SCENE_EIS_4K_SINGLE_VIDEO"/>
+            <SceneMode value="SCENE_NILEIS_SAT_VIDEO_MEMC"/>
+            <SceneMode value="SCENE_NILEIS_SAT_VIDEO"/>
+            <SceneMode value="SCENE_PLATFORM_SAT"/>
+        </PREALLOCATOR_SUPPORT_SCENE>
+        <PREALLOCATOR_NOT_SUPPORT_UIMODE>
+            <UIMODE value="MODE_VIDEO_SLOW"/>
+        </PREALLOCATOR_NOT_SUPPORT_UIMODE>
+    </AP_BUFFER_POOL_SETTING>
+    <C2PS_ANCHOR_SETTING>
+        <C2PS_ANCHOR_ENABLE value="1" />
+        <C2PS_ANCHOR_SUPPORT_SCENE>
+            <SceneMode value="SCENE_SAT"/>
+            <SceneMode value="SCENE_BOKEH_ZOOM"/>
+            <SceneMode value="SCENE_EIS_SAT_VIDEO"/>
+            <SceneMode value="SCENE_EIS_4K_SAT_VIDEO"/>
+            <SceneMode value="SCENE_EIS_SINGLE_VIDEO"/>
+            <SceneMode value="SCENE_EIS_SINGLE_VIDEO_AFBC"/>
+            <SceneMode value="SCENE_EIS_4K_SINGLE_VIDEO"/>
+            <SceneMode value="SCENE_EIS_SAT_VIDEO_IC_HWME"/>
+            <SceneMode value="SCENE_PORTRAIT_SINGLE_PREVIEW_IC"/>
+            <SceneMode value="SCENE_PORTRAIT_SINGLE_PREVIEW_IC_4K"/>
+            <SceneMode value="SCENE_EIS_SINGLE_FILM"/>
+        </C2PS_ANCHOR_SUPPORT_SCENE>
+        <C2PS_ANCHOR_SPEC_ENABLE value="1" />
+    </C2PS_ANCHOR_SETTING>
+    <FORCE_ZOOM_ENABLE value="1" />
+    <SINGLE_CAMERA_SMOOTH_ZOOM_ENABLE value="1" />
+    <PROJ_SUPPORT_TELE_SEAMLESS_ISP_REMOSAIC value="0"/>
+    <PROJ_SUPPORT_TELE_SEAMLESS_ROI_RATIO value="4"/>
+    <MTK_PLATFORM value="1" />
+    <!-- SAT_CONFIGINFO_BEGIN -->
+    <ENABLE_NOPRECROP_FEATURE value="1"/>
+    <ENABLE_SAT_ALGO_MOVE_UP value="1"/>
+    <ENABLE_SAT3_FEATURE value="1"/>
+    <ENABLE_ENG_SAT3OPEN value="1"/>
+    <SAT3_POWERENHANCE_TYPE value="7"/>
+    <SAT_PREVIEW_CLOSE_SLAVE_RDI value="1"/>
+    <ZOOM_ROI_HIGH_RATIO value="2.3"/>
+    <NOPRECROP_HIGH_RATIO value="30.0"/>
+    <DISABLE_AF_AUTO_FALLBACK_RATIO value="2.0"/>
+    <ENABLE_TRIPLE_OPEN value="1" />
+    <ENABLE_TRIPLE_OPEN_TEMPERATURE_LIMIT value="45" />
+    <RECONFIG_SLAVE_RATIO value="2" />
+    <THIRDAPPSAT_ENABLE value="1" />
+    <THIRDAPPSAT_TEMPERATURE_LIMIT value="55" />
+    <ENABLE_ZOOMCTR_BUTTONFRMNUMV2 value="1" />
+    <FALLBACK_SWITCH_DOUBLEOPEN_FRAMES value="0"/>
+    <!-- SAT_CONFIGINFO_END -->
+    <PROJ_SUPPORT_BOKEHMOON_ADD_NICE value="1" />
+    <!-- DEJITTER_CONFIGINFO -->
+    <PREVIEW_DEJITTER_ENABLE value="1" />
+    <ENABLE_PROFESSION_SEAMLESS value="1" />
+    <XDR_CONFIG>
+        <ENABLE_XDR3V0 value="1"/>
+        <ENABLE_XDR3V0_HWENCODE value="1"/>
+        <ENABLE_XDR2V0_JPEGR_PACKAGE value="0"/>
+    </XDR_CONFIG>
+    <DEFAULT_PREVIEW_DEJITTER_MODE>
+        <UIMODE value="MODE_PHOTO_DEFAULT">
+            <DEJITTER_SOF_TYPE value="1" /> <!-- 1:MTK 2:QCOM -->
+            <MAX_AVGLATENCY value="100" />
+        </UIMODE>
+        <UIMODE value="MODE_VIDEO_DEFAULT">
+            <DEJITTER_SOF_TYPE value="1" /> <!-- 1:MTK 2:QCOM -->
+            <MAX_AVGLATENCY value="100" />
+        </UIMODE>
+        <UIMODE value="MODE_PROTRAIT">
+            <DEJITTER_SOF_TYPE value="1" /> <!-- 1:MTK 2:QCOM -->
+            <MAX_AVGLATENCY value="100" />
+        </UIMODE>
+        <UIMODE value="MODE_PROTRAIT_FRONT">
+            <DEJITTER_SOF_TYPE value="1" /> <!-- 1:MTK 2:QCOM -->
+            <MAX_AVGLATENCY value="100" />
+        </UIMODE>
+        <UIMODE value="MODE_MOVIE_EFFECT">
+            <DEJITTER_SOF_TYPE value="1" /> <!-- 1:MTK 2:QCOM -->
+            <MAX_AVGLATENCY value="150" />
+        </UIMODE>
+    </DEFAULT_PREVIEW_DEJITTER_MODE>
+    <ENABLE_QCFA_EXTERNAL value="1" />
+    <INCREASE_GRAPHNODE_PRIORITY value="1" />
+    <EIS_RECORDING_NEED_PREVIEW_TO_FRONT value="1" />
+    <!-- DEFAULT_RDI_QUEUE_STREAM_SET -->
+    <DEFAULT_RDI_QUEUE_STREAM_SET>
+        <VCF_STREAM_ID value="REAL_RAW_WIDE_OUT" />
+        <VCF_STREAM_ID value="REAL_RAW_ULTRAWIDE_OUT" />
+        <VCF_STREAM_ID value="REAL_RAW_TELE_OUT" />
+        <VCF_STREAM_ID value="REAL_RAW_FRONT_OUT" />
+        <VCF_STREAM_ID value="REAL_SHORTEX_RAW_WIDE_OUT" />
+        <VCF_STREAM_ID value="REAL_SHORTEX_RAW_TELE_OUT" />
+        <VCF_STREAM_ID value="REAL_RAW_ULTRAWIDE_TINY_OUT" />
+        <VCF_STREAM_ID value="REAL_RAW_WIDE_BURST_OUT" />
+        <VCF_STREAM_ID value="REAL_RAW_TELE_BURST_OUT" />
+    </DEFAULT_RDI_QUEUE_STREAM_SET>
+    <CAMERATYPE_PAIRS>
+        <ITEM>
+            <CAMERATYPE value="BokehTele2" />
+            <VCF_CAMERATYPE value="BokehTele" />
+        </ITEM>
+        <ITEM>
+            <CAMERATYPE value="BokehTele5" />
+            <VCF_CAMERATYPE value="BokehUltraTele" />
+        </ITEM>
+        <ITEM>
+            <CAMERATYPE value="BokehTele3P5M" />
+            <VCF_CAMERATYPE value="BokehTeleWide" />
+        </ITEM>
+        <ITEM>
+            <CAMERATYPE value="BokehTUW" />
+            <VCF_CAMERATYPE value="BokehTeleUltraWide" />
+        </ITEM>
+        <ITEM>
+            <CAMERATYPE value="Master" />
+            <VCF_CAMERATYPE value="Wide" />
+        </ITEM>
+        <ITEM>
+            <CAMERATYPE value="Wide" />
+            <VCF_CAMERATYPE value="UltraWide" />
+        </ITEM>
+        <ITEM>
+            <CAMERATYPE value="Tele3xLong" />
+            <VCF_CAMERATYPE value="Tele" />
+        </ITEM>
+    </CAMERATYPE_PAIRS>
+    <!-- gSatAvailableCamMaskByRatio -->
+    <SAT_AVAILABLE_CAM_MASK>
+        <RATIO value="1.0">
+            <MASK value="ULTRAWIDE" />
+        </RATIO>
+        <RATIO value="3.0">
+            <MASK value="ULTRAWIDE" />
+            <MASK value="WIDE" />
+        </RATIO>
+        <RATIO value="100.0">
+            <MASK value="ULTRAWIDE" />
+            <MASK value="WIDE" />
+            <MASK value="TELE" />
+        </RATIO>
+    </SAT_AVAILABLE_CAM_MASK>
+    <BUTTON_RATIOS>
+        <RATIO value="0.6"/>
+        <RATIO value="1.0"/>
+        <RATIO value="2.0"/>
+        <RATIO value="3.0"/>
+        <RATIO value="6.0"/>
+        <RATIO value="10.0"/>
+        <RATIO value="20.0"/>
+        <RATIO value="100.0"/>
+    </BUTTON_RATIOS>
+    <!-- gMaxFallbackRangeForSAT -->
+    <MAX_FALLBACK_RANGE_FOR_SAT>
+        <SCENE value="DEFAULT">
+            <RATIO value="0.9999" />
+            <RATIO value="10.0" />
+            <RATIO value="10.0" />
+            <RATIO value="10.0" />
+        </SCENE>
+        <SCENE value="VIDEOSAT">
+            <RATIO value="2.9999" />
+            <RATIO value="20" />
+            <RATIO value="20" />
+            <RATIO value="20" />
+        </SCENE>
+        <SCENE value="VIDEOSTAGE">
+            <RATIO value="2.9999" />
+            <RATIO value="20" />
+            <RATIO value="20" />
+            <RATIO value="20" />
+        </SCENE>
+        <SCENE value="NORMALSAT">
+            <RATIO value="2.9999" />
+            <RATIO value="10" />
+            <RATIO value="10" />
+            <RATIO value="10" />
+        </SCENE>
+        <SCENE value="DOCUMENTSAT">
+            <RATIO value="2.9999" />
+            <RATIO value="10" />
+            <RATIO value="10" />
+            <RATIO value="10" />
+        </SCENE>
+        <SCENE value="THIRDAPPSAT">
+            <RATIO value="10" />
+            <RATIO value="10" />
+            <RATIO value="10" />
+            <RATIO value="10" />
+        </SCENE>
+    </MAX_FALLBACK_RANGE_FOR_SAT>
+    <!-- SATFeatureList must be in order -->
+    <SAT_FEATURE_LIST>
+        <ITEM>
+            <NAME value="EarlyOpen"/>
+            <ISNEED value="1"/>
+        </ITEM>
+        <ITEM>
+            <NAME value="DualOpen"/>
+            <ISNEED value="1"/>
+        </ITEM>
+        <ITEM>
+            <NAME value="SAT2_0"/>
+            <ISNEED value="1"/>
+        </ITEM>
+        <ITEM>
+            <NAME value="SAT3_0"/>
+            <ISNEED value="1"/>
+        </ITEM>
+        <ITEM>
+            <NAME value="PipPreview"/>
+            <ISNEED value="1"/>
+        </ITEM>
+        <ITEM>
+            <NAME value="TeleMacro"/>
+            <ISNEED value="1"/>
+        </ITEM>
+        <ITEM>
+            <NAME value="FusionCap"/>
+            <ISNEED value="1"/>
+        </ITEM>
+        <ITEM>
+            <NAME value="CaptureBlock"/>
+            <ISNEED value="1"/>
+        </ITEM>
+    </SAT_FEATURE_LIST>
+    <ZOOMCTR_BUTTON_FRAMENUMBER>
+        <ITEM>
+            <SPACE_RATIO_LOW value="0.0"/>
+            <SPACE_RATIO_HIGH value="3.0"/>
+            <ZOOMIN_FRAME_NUM value="9"/>
+            <ZOOMOUT_FRAME_NUM value="7"/>
+            <ZOOMIN_FRAME_NUM_D value="7"/>
+            <ZOOMOUT_FRAME_NUM_D value="7"/>
+        </ITEM>
+        <ITEM>
+            <SPACE_RATIO_LOW value="3.0"/>
+            <SPACE_RATIO_HIGH value="5.0"/>
+            <ZOOMIN_FRAME_NUM value="11"/>
+            <ZOOMOUT_FRAME_NUM value="9"/>
+            <ZOOMIN_FRAME_NUM_D value="9"/>
+            <ZOOMOUT_FRAME_NUM_D value="7"/>
+        </ITEM>
+        <ITEM>
+            <SPACE_RATIO_LOW value="5.0"/>
+            <SPACE_RATIO_HIGH value="10.0"/>
+            <ZOOMIN_FRAME_NUM value="12"/>
+            <ZOOMOUT_FRAME_NUM value="10"/>
+            <ZOOMIN_FRAME_NUM_D value="10"/>
+            <ZOOMOUT_FRAME_NUM_D value="8"/>
+        </ITEM>
+        <ITEM>
+            <SPACE_RATIO_LOW value="10.0"/>
+            <SPACE_RATIO_HIGH value="20.0"/>
+            <ZOOMIN_FRAME_NUM value="12"/>
+            <ZOOMOUT_FRAME_NUM value="10"/>
+            <ZOOMIN_FRAME_NUM_D value="10"/>
+            <ZOOMOUT_FRAME_NUM_D value="8"/>
+        </ITEM>
+        <ITEM>
+            <SPACE_RATIO_LOW value="20.0"/>
+            <SPACE_RATIO_HIGH value="50.0"/>
+            <ZOOMIN_FRAME_NUM value="12"/>
+            <ZOOMOUT_FRAME_NUM value="10"/>
+            <ZOOMIN_FRAME_NUM_D value="10"/>
+            <ZOOMOUT_FRAME_NUM_D value="8"/>
+        </ITEM>
+        <ITEM>
+            <SPACE_RATIO_LOW value="50.0"/>
+            <SPACE_RATIO_HIGH value="100.0"/>
+            <ZOOMIN_FRAME_NUM value="12"/>
+            <ZOOMOUT_FRAME_NUM value="10"/>
+            <ZOOMIN_FRAME_NUM_D value="10"/>
+            <ZOOMOUT_FRAME_NUM_D value="8"/>
+        </ITEM>
+    </ZOOMCTR_BUTTON_FRAMENUMBER>
+    <DISABLE_AF_FALLBACK_RANGE>
+        <ITEM>
+            <CAMERA_TYPE value="TELE" />
+            <DISABLE_AF_FALLBACK value="1" />
+            <SPACE_RATIO_LOW value="3.0"/>
+            <SPACE_RATIO_HIGH value="100.1"/>
+        </ITEM>
+    </DISABLE_AF_FALLBACK_RANGE>
+    <!-- gCameraConfigurationTable -->
+    <CAMERA_COMBINATION>
+        <CAMERA_CONFIG_TYPE value="DOUBLE_OPEN_ZOOM_IN">
+            <ITEM>
+                <CAMERA_TYPE value="ULTRAWIDE" />
+                <TRANSITION_LOW value="0.6" />
+                <TRANSITION_HIGH value="1.0" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="WIDE" />
+                        <OVERLAP_VALUE_LOW value="0.6" />
+                        <OVERLAP_VALUE_HIGH value="1.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+                <BOKEH_SLAVE_CAMERA_TYPE value="NONE" />
+            </ITEM>
+            <ITEM>
+                <CAMERA_TYPE value="WIDE" />
+                <TRANSITION_LOW value="1.0" />
+                <TRANSITION_HIGH value="3.0" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="TELE" />
+                        <OVERLAP_VALUE_LOW value="1.0" />
+                        <OVERLAP_VALUE_HIGH value="3.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+                <BOKEH_SLAVE_CAMERA_TYPE value="NONE" />
+            </ITEM>
+            <ITEM>
+                <CAMERA_TYPE value="TELE" />
+                <TRANSITION_LOW value="3.0" />
+                <TRANSITION_HIGH value="100.1" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="WIDE" />
+                        <OVERLAP_VALUE_LOW value="3.0" />
+                        <OVERLAP_VALUE_HIGH value="100.1" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+                <BOKEH_SLAVE_CAMERA_TYPE value="NONE" />
+            </ITEM>
+        </CAMERA_CONFIG_TYPE>
+        <CAMERA_CONFIG_TYPE value="DOUBLE_OPEN_ZOOM_OUT">
+            <ITEM>
+                <CAMERA_TYPE value="ULTRAWIDE" />
+                <TRANSITION_LOW value="0.6" />
+                <TRANSITION_HIGH value="1.0" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="WIDE" />
+                        <OVERLAP_VALUE_LOW value="0.6" />
+                        <OVERLAP_VALUE_HIGH value="1.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+                <BOKEH_SLAVE_CAMERA_TYPE value="NONE" />
+            </ITEM>
+            <ITEM>
+                <CAMERA_TYPE value="WIDE" />
+                <TRANSITION_LOW value="1.0" />
+                <TRANSITION_HIGH value="3.0" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="ULTRAWIDE" />
+                        <OVERLAP_VALUE_LOW value="1.0" />
+                        <OVERLAP_VALUE_HIGH value="3.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+                <BOKEH_SLAVE_CAMERA_TYPE value="NONE" />
+            </ITEM>
+            <ITEM>
+                <CAMERA_TYPE value="TELE" />
+                <TRANSITION_LOW value="3.0" />
+                <TRANSITION_HIGH value="100.1" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="WIDE" />
+                        <OVERLAP_VALUE_LOW value="3.0" />
+                        <OVERLAP_VALUE_HIGH value="100.1" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+                <BOKEH_SLAVE_CAMERA_TYPE value="NONE" />
+            </ITEM>
+        </CAMERA_CONFIG_TYPE>
+        <CAMERA_CONFIG_TYPE value="DOUBLE_OPEN_NOZOOM">
+            <ITEM>
+                <CAMERA_TYPE value="ULTRAWIDE" />
+                <TRANSITION_LOW value="0.6" />
+                <TRANSITION_HIGH value="1.0" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="WIDE" />
+                        <OVERLAP_VALUE_LOW value="0.6" />
+                        <OVERLAP_VALUE_HIGH value="1.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+                <BOKEH_SLAVE_CAMERA_TYPE value="NONE" />
+            </ITEM>
+            <ITEM>
+                <CAMERA_TYPE value="WIDE" />
+                <TRANSITION_LOW value="1.0" />
+                <TRANSITION_HIGH value="3.0" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="ULTRAWIDE" />
+                        <OVERLAP_VALUE_LOW value="1.0" />
+                        <OVERLAP_VALUE_HIGH value="2.0" />
+                    </OVERLAP_ITEM>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="TELE" />
+                        <OVERLAP_VALUE_LOW value="2.0" />
+                        <OVERLAP_VALUE_HIGH value="3.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+                <BOKEH_SLAVE_CAMERA_TYPE value="NONE" />
+            </ITEM>
+            <ITEM>
+                <CAMERA_TYPE value="TELE" />
+                <TRANSITION_LOW value="3.0" />
+                <TRANSITION_HIGH value="100.1" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="WIDE" />
+                        <OVERLAP_VALUE_LOW value="3.0" />
+                        <OVERLAP_VALUE_HIGH value="100.1" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+                <BOKEH_SLAVE_CAMERA_TYPE value="NONE" />
+            </ITEM>
+        </CAMERA_CONFIG_TYPE>
+        <CAMERA_CONFIG_TYPE value="TELE_MACRO_ZOOM">
+            <ITEM>
+                <CAMERA_TYPE value="ULTRAWIDE" />
+                <TRANSITION_LOW value="1.0" />
+                <TRANSITION_HIGH value="2.0" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="WIDE" />
+                        <OVERLAP_VALUE_LOW value="1.0" />
+                        <OVERLAP_VALUE_HIGH value="2.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+                <BOKEH_SLAVE_CAMERA_TYPE value="NONE" />
+            </ITEM>
+            <ITEM>
+                <CAMERA_TYPE value="WIDE" />
+                <TRANSITION_LOW value="2.0" />
+                <TRANSITION_HIGH value="3.0" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="TELE" />
+                        <OVERLAP_VALUE_LOW value="2.0" />
+                        <OVERLAP_VALUE_HIGH value="3.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+                <BOKEH_SLAVE_CAMERA_TYPE value="NONE" />
+            </ITEM>
+            <ITEM>
+                <CAMERA_TYPE value="TELE" />
+                <TRANSITION_LOW value="3.0" />
+                <TRANSITION_HIGH value="100.1" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="WIDE" />
+                        <OVERLAP_VALUE_LOW value="3.0" />
+                        <OVERLAP_VALUE_HIGH value="10.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+                <BOKEH_SLAVE_CAMERA_TYPE value="NONE" />
+            </ITEM>
+        </CAMERA_CONFIG_TYPE>
+        <CAMERA_CONFIG_TYPE value="SAT_BOKEH_OPEN_ZOOM">
+            <ITEM>
+                <CAMERA_TYPE value="WIDE" />
+                <TRANSITION_LOW value="1.0" />
+                <TRANSITION_HIGH value="3.5" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="TELE" />
+                        <OVERLAP_VALUE_LOW value="3.2" />
+                        <OVERLAP_VALUE_HIGH value="3.5" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+                <BOKEH_SLAVE_CAMERA_TYPE value="ULTRAWIDE" />
+            </ITEM>
+            <ITEM>
+                <CAMERA_TYPE value="TELE" />
+                <TRANSITION_LOW value="3.5" />
+                <TRANSITION_HIGH value="10.0" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="WIDE" />
+                        <OVERLAP_VALUE_LOW value="3.5" />
+                        <OVERLAP_VALUE_HIGH value="3.7" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+                <BOKEH_SLAVE_CAMERA_TYPE value="WIDE" />
+            </ITEM>
+        </CAMERA_CONFIG_TYPE>
+        <CAMERA_CONFIG_TYPE value="THIRD_APP">
+            <ITEM>
+                <CAMERA_TYPE value="ULTRAWIDE" />
+                <TRANSITION_LOW value="0.6" />
+                <TRANSITION_HIGH value="1.0" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="WIDE" />
+                        <OVERLAP_VALUE_LOW value="0.6" />
+                        <OVERLAP_VALUE_HIGH value="1.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+                <BOKEH_SLAVE_CAMERA_TYPE value="NONE" />
+            </ITEM>
+            <ITEM>
+                <CAMERA_TYPE value="WIDE" />
+                <TRANSITION_LOW value="1.0" />
+                <TRANSITION_HIGH value="100.1" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="ULTRAWIDE" />
+                        <OVERLAP_VALUE_LOW value="1.0" />
+                        <OVERLAP_VALUE_HIGH value="3.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+                <BOKEH_SLAVE_CAMERA_TYPE value="NONE" />
+            </ITEM>
+        </CAMERA_CONFIG_TYPE>
+        <CAMERA_CONFIG_TYPE value="TRIPLE_OPEN_ZOOM_IN">
+            <ITEM>
+                <CAMERA_TYPE value="ULTRAWIDE" />
+                <TRANSITION_LOW value="0.6" />
+                <TRANSITION_HIGH value="1.0" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="WIDE" />
+                        <OVERLAP_VALUE_LOW value="0.6" />
+                        <OVERLAP_VALUE_HIGH value="1.0" />
+                    </OVERLAP_ITEM>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="TELE" />
+                        <OVERLAP_VALUE_LOW value="0.6" />
+                        <OVERLAP_VALUE_HIGH value="1.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+            </ITEM>
+            <ITEM>
+                <CAMERA_TYPE value="WIDE" />
+                <TRANSITION_LOW value="1.0" />
+                <TRANSITION_HIGH value="3.0" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="TELE" />
+                        <OVERLAP_VALUE_LOW value="1.0" />
+                        <OVERLAP_VALUE_HIGH value="3.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+            </ITEM>
+            <ITEM>
+                <CAMERA_TYPE value="TELE" />
+                <TRANSITION_LOW value="3.0" />
+                <TRANSITION_HIGH value="100.1" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="WIDE" />
+                        <OVERLAP_VALUE_LOW value="3.0" />
+                        <OVERLAP_VALUE_HIGH value="100.1" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+            </ITEM>
+        </CAMERA_CONFIG_TYPE>
+        <CAMERA_CONFIG_TYPE value="TRIPLE_OPEN_ZOOM_OUT">
+            <ITEM>
+                <CAMERA_TYPE value="ULTRAWIDE" />
+                <TRANSITION_LOW value="0.6" />
+                <TRANSITION_HIGH value="1.0" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="WIDE" />
+                        <OVERLAP_VALUE_LOW value="0.6" />
+                        <OVERLAP_VALUE_HIGH value="1.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+            </ITEM>
+            <ITEM>
+                <CAMERA_TYPE value="WIDE" />
+                <TRANSITION_LOW value="1.0" />
+                <TRANSITION_HIGH value="3.0" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="ULTRAWIDE" />
+                        <OVERLAP_VALUE_LOW value="1.0" />
+                        <OVERLAP_VALUE_HIGH value="3.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+            </ITEM>
+            <ITEM>
+                <CAMERA_TYPE value="TELE" />
+                <TRANSITION_LOW value="3.0" />
+                <TRANSITION_HIGH value="100.1" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="WIDE" />
+                        <OVERLAP_VALUE_LOW value="3.0" />
+                        <OVERLAP_VALUE_HIGH value="100.1" />
+                    </OVERLAP_ITEM>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="ULTRAWIDE" />
+                        <OVERLAP_VALUE_LOW value="3.0" />
+                        <OVERLAP_VALUE_HIGH value="100.1" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+            </ITEM>
+        </CAMERA_CONFIG_TYPE>
+        <CAMERA_CONFIG_TYPE value="TRIPLE_OPEN_ZOOM_IN_TOUCH">
+            <ITEM>
+                <CAMERA_TYPE value="ULTRAWIDE" />
+                <TRANSITION_LOW value="0.6" />
+                <TRANSITION_HIGH value="1.0" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="WIDE" />
+                        <OVERLAP_VALUE_LOW value="0.6" />
+                        <OVERLAP_VALUE_HIGH value="1.0" />
+                    </OVERLAP_ITEM>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="TELE" />
+                        <OVERLAP_VALUE_LOW value="0.6" />
+                        <OVERLAP_VALUE_HIGH value="1.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+            </ITEM>
+            <ITEM>
+                <CAMERA_TYPE value="WIDE" />
+                <TRANSITION_LOW value="1.0" />
+                <TRANSITION_HIGH value="3.0" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="TELE" />
+                        <OVERLAP_VALUE_LOW value="1.0" />
+                        <OVERLAP_VALUE_HIGH value="3.0" />
+                    </OVERLAP_ITEM>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="ULTRAWIDE" />
+                        <OVERLAP_VALUE_LOW value="1.0" />
+                        <OVERLAP_VALUE_HIGH value="3.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+            </ITEM>
+            <ITEM>
+                <CAMERA_TYPE value="TELE" />
+                <TRANSITION_LOW value="3.0" />
+                <TRANSITION_HIGH value="100.1" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="WIDE" />
+                        <OVERLAP_VALUE_LOW value="3.0" />
+                        <OVERLAP_VALUE_HIGH value="100.1" />
+                    </OVERLAP_ITEM>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="ULTRAWIDE" />
+                        <OVERLAP_VALUE_LOW value="3.0" />
+                        <OVERLAP_VALUE_HIGH value="100.1" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+            </ITEM>
+        </CAMERA_CONFIG_TYPE>
+        <CAMERA_CONFIG_TYPE value="TRIPLE_OPEN_ZOOM_OUT_TOUCH">
+            <ITEM>
+                <CAMERA_TYPE value="ULTRAWIDE" />
+                <TRANSITION_LOW value="0.6" />
+                <TRANSITION_HIGH value="1.0" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="WIDE" />
+                        <OVERLAP_VALUE_LOW value="0.6" />
+                        <OVERLAP_VALUE_HIGH value="1.0" />
+                    </OVERLAP_ITEM>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="TELE" />
+                        <OVERLAP_VALUE_LOW value="0.6" />
+                        <OVERLAP_VALUE_HIGH value="1.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+            </ITEM>
+            <ITEM>
+                <CAMERA_TYPE value="WIDE" />
+                <TRANSITION_LOW value="1.0" />
+                <TRANSITION_HIGH value="3.0" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="ULTRAWIDE" />
+                        <OVERLAP_VALUE_LOW value="1.0" />
+                        <OVERLAP_VALUE_HIGH value="3.0" />
+                    </OVERLAP_ITEM>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="TELE" />
+                        <OVERLAP_VALUE_LOW value="1.0" />
+                        <OVERLAP_VALUE_HIGH value="3.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+            </ITEM>
+            <ITEM>
+                <CAMERA_TYPE value="TELE" />
+                <TRANSITION_LOW value="3.0" />
+                <TRANSITION_HIGH value="100.1" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="WIDE" />
+                        <OVERLAP_VALUE_LOW value="3.0" />
+                        <OVERLAP_VALUE_HIGH value="100.1" />
+                    </OVERLAP_ITEM>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="ULTRAWIDE" />
+                        <OVERLAP_VALUE_LOW value="3.0" />
+                        <OVERLAP_VALUE_HIGH value="100.1" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+            </ITEM>
+        </CAMERA_CONFIG_TYPE>
+        <CAMERA_CONFIG_TYPE value="ENG_APP">
+            <ITEM>
+                <CAMERA_TYPE value="WIDE" />
+                <TRANSITION_LOW value="1.0" />
+                <TRANSITION_HIGH value="3.0" />
+                <OVERLAP>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="ULTRAWIDE" />
+                        <OVERLAP_VALUE_LOW value="1.0" />
+                        <OVERLAP_VALUE_HIGH value="3.0" />
+                    </OVERLAP_ITEM>
+                    <OVERLAP_ITEM>
+                        <CAMERA_TYPE value="TELE" />
+                        <OVERLAP_VALUE_LOW value="1.0" />
+                        <OVERLAP_VALUE_HIGH value="3.0" />
+                    </OVERLAP_ITEM>
+                </OVERLAP>
+            </ITEM>
+        </CAMERA_CONFIG_TYPE>
+    </CAMERA_COMBINATION>
+    <!-- EIS config -->
+    <EIS_CONFIG>
+        <ITEM>
+            <CROP_FACTOR value="0.8" />
+            <MODE_INDEX value="0" />
+            <USE_FULL_FOV value="1" />
+        </ITEM>
+        <ITEM>
+            <CROP_FACTOR value="0.8" />
+            <MODE_INDEX value="1" />
+            <USE_FULL_FOV value="0" />
+        </ITEM>
+        <ITEM>
+            <CROP_FACTOR value="0.8" />
+            <MODE_INDEX value="2" />
+            <USE_FULL_FOV value="0" />
+        </ITEM>
+        <ITEM>
+            <CROP_FACTOR value="0.8" />
+            <MODE_INDEX value="3" />
+            <USE_FULL_FOV value="0" />
+        </ITEM>
+        <ITEM>
+            <CROP_FACTOR value="0.7" />
+            <MODE_INDEX value="4" />
+            <USE_FULL_FOV value="1" />
+        </ITEM>
+        <ITEM>
+            <CROP_FACTOR value="0.8" />
+            <MODE_INDEX value="5" />
+            <USE_FULL_FOV value="1" />
+        </ITEM>
+        <ITEM>
+            <CROP_FACTOR value="0.9" />
+            <MODE_INDEX value="6" />
+            <USE_FULL_FOV value="0" />
+        </ITEM>
+    </EIS_CONFIG>
+    <!-- ROI remosaic config -->
+    <ROI_REMOSAIC_CONFIG>
+        <ITEM>
+            <CAMERA_TYPE value="ULTRAWIDE" />
+            <RATIO_START value="100" />
+            <RATIO_END value="0" />
+        </ITEM>
+        <ITEM>
+            <CAMERA_TYPE value="WIDE" />
+            <RATIO_START value="2.0" />
+            <RATIO_END value="4.3" />
+        </ITEM>
+        <ITEM>
+            <CAMERA_TYPE value="TELE" />
+            <RATIO_START value="8.0" />
+            <RATIO_END value="100.0" />
+        </ITEM>
+    </ROI_REMOSAIC_CONFIG>
+    <BOKEH_ROI_REMOSAIC_CONFIG>
+        <ITEM>
+            <CAMERA_TYPE value="ULTRAWIDE" />
+            <RATIO_START value="100" />
+            <RATIO_END value="0" />
+        </ITEM>
+        <ITEM>
+            <CAMERA_TYPE value="WIDE" />
+            <RATIO_START value="2.0" />
+            <RATIO_END value="3.5" />
+        </ITEM>
+        <ITEM>
+            <CAMERA_TYPE value="TELE" />
+            <RATIO_START value="10.0" />
+            <RATIO_END value="40.0" />
+        </ITEM>
+    </BOKEH_ROI_REMOSAIC_CONFIG>
+    <!-- gSatFusionParam -->
+    <SAT_FUSION_PARAM>
+        <IS_SUPPORT_FUSION value="0" />
+        <ITEM>
+            <CAMERA_TYPE value="ULTRAWIDE" />
+            <RATIO_START value="9999.9" />
+            <RATIO_END value="0.1" />
+            <THRESHOLD_DISTANCE value="9999.9" />
+            <THRESHOLD_LUX value="0.1" />
+        </ITEM>
+        <ITEM>
+            <CAMERA_TYPE value="WIDE" />
+            <RATIO_START value="9999.9" />
+            <RATIO_END value="0.1" />
+            <THRESHOLD_DISTANCE value="9999.9" />
+            <THRESHOLD_LUX value="0.1" />
+        </ITEM>
+        <ITEM>
+            <CAMERA_TYPE value="TELE" />
+            <RATIO_START value="9999.9" />
+            <RATIO_END value="0.1" />
+            <THRESHOLD_DISTANCE value="9999.9" />
+            <THRESHOLD_LUX value="0.1" />
+        </ITEM>
+        <ITEM>
+            <CAMERA_TYPE value="ULTRATELE" />
+            <RATIO_START value="3.0" />
+            <RATIO_END value="5.0" />
+            <THRESHOLD_DISTANCE value="100" />
+            <THRESHOLD_LUX value="390" />
+        </ITEM>
+    </SAT_FUSION_PARAM>
+    <!-- shot2shot capture count M N config -->
+    <SHOT2SHOT_COUNT_CONFIG>
+        <MEMORY_TYPE value="8G">
+            <UIMODE value="MODE_PHOTO_DEFAULT">
+                <MAX_MULTIFRAME_CAPTURE_COUNT_UFS value="20" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT_UFS value="30" />
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="3" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="5" />
+            </UIMODE>
+            <UIMODE value="MODE_STAGE_PHOTO">
+                <MAX_MULTIFRAME_CAPTURE_COUNT_UFS value="20" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT_UFS value="30" />
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="3" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="5" />
+            </UIMODE>
+            <UIMODE value="MODE_PROTRAIT">
+                <MAX_MULTIFRAME_CAPTURE_COUNT_UFS value="10" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT_UFS value="30" />
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="3" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="3" />
+            </UIMODE>
+            <UIMODE value="MODE_PROTRAIT_FRONT">
+                <MAX_MULTIFRAME_CAPTURE_COUNT_UFS value="10" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT_UFS value="30" />
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="3" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="3" />
+            </UIMODE>
+            <UIMODE value="MODE_HUMANITY">
+                <MAX_MULTIFRAME_CAPTURE_COUNT_UFS value="10" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT_UFS value="30" />
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="3" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="3" />
+            </UIMODE>
+            <UIMODE value="MODE_MOTION_DEBLUR">
+                <MAX_MULTIFRAME_CAPTURE_COUNT_UFS value="20" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT_UFS value="30" />
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="3" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="5" />
+            </UIMODE>
+            <UIMODE value="MODE_FOOD">
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="3" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="3" />
+            </UIMODE>
+            <UIMODE value="MODE_LIVE_PHOTO">
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="3" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="5" />
+            </UIMODE>
+            <UIMODE value="MODE_REMOSAIC">
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="1" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="0" />
+            </UIMODE>
+            <UIMODE value="MODE_NIGHT">
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="2" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="0" />
+            </UIMODE>
+            <UIMODE value="MODE_SCENERY">
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="2" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="0" />
+            </UIMODE>
+            <UIMODE value="MODE_PANORAMA">
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="2" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="0" />
+            </UIMODE>
+            <UIMODE value="UIMODE_DEFAULT">
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="3" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="0" />
+            </UIMODE>
+        </MEMORY_TYPE>
+        <MEMORY_TYPE value="12G">
+            <UIMODE value="MODE_PHOTO_DEFAULT">
+                <MAX_MULTIFRAME_CAPTURE_COUNT_UFS value="20" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT_UFS value="30" />
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="6" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="5" />
+            </UIMODE>
+            <UIMODE value="MODE_STAGE_PHOTO">
+                <MAX_MULTIFRAME_CAPTURE_COUNT_UFS value="20" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT_UFS value="30" />
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="6" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="5" />
+            </UIMODE>
+            <UIMODE value="MODE_PROTRAIT">
+                <MAX_MULTIFRAME_CAPTURE_COUNT_UFS value="20" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT_UFS value="30" />
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="6" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="5" />
+            </UIMODE>
+            <UIMODE value="MODE_PROTRAIT_FRONT">
+                <MAX_MULTIFRAME_CAPTURE_COUNT_UFS value="20" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT_UFS value="30" />
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="6" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="5" />
+            </UIMODE>
+            <UIMODE value="MODE_HUMANITY">
+                <MAX_MULTIFRAME_CAPTURE_COUNT_UFS value="20" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT_UFS value="30" />
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="6" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="5" />
+            </UIMODE>
+            <UIMODE value="MODE_MOTION_DEBLUR">
+                <MAX_MULTIFRAME_CAPTURE_COUNT_UFS value="20" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT_UFS value="30" />
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="6" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="5" />
+            </UIMODE>
+            <UIMODE value="MODE_FOOD">
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="6" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="5" />
+            </UIMODE>
+            <UIMODE value="MODE_LIVE_PHOTO">
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="6" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="5" />
+            </UIMODE>
+            <UIMODE value="MODE_REMOSAIC">
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="1" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="0" />
+            </UIMODE>
+            <UIMODE value="MODE_NIGHT">
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="2" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="0" />
+            </UIMODE>
+            <UIMODE value="MODE_SCENERY">
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="2" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="0" />
+            </UIMODE>
+            <UIMODE value="MODE_PANORAMA">
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="2" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="0" />
+            </UIMODE>
+            <UIMODE value="UIMODE_DEFAULT">
+                <MAX_MULTIFRAME_CAPTURE_COUNT value="6" />
+                <MAX_SINGLEFRAME_CAPTURE_COUNT value="0" />
+            </UIMODE>
+        </MEMORY_TYPE>
+    </SHOT2SHOT_COUNT_CONFIG>
+    <SAT_SEAMLESS_SCENE>
+        <SceneMode value="SCENE_SAT"/>
+        <SceneMode value="SCENE_SAT_BOKEH"/>
+        <SceneMode value="SCENE_BOKEH_ZOOM"/>
+        <SceneMode value="SCENE_SAT_SLOWSHUTTER"/>
+    </SAT_SEAMLESS_SCENE>
+    <VIDEO_SEAMLESS_PARAM>
+        <VIDEO_MODE_SCENE_LIST>
+            <NORMAL_LIGHT>
+                <MODE value="0" />
+                <MODE value="1" />
+                <MODE value="11" />
+            </NORMAL_LIGHT>
+            <NORMAL_NIGHT>
+                <MODE value="2" />
+                <MODE value="12" />
+            </NORMAL_NIGHT>
+            <EXTREME_NIGHT>
+                <MODE value="3" />
+                <MODE value="4" />
+                <MODE value="13" />
+                <MODE value="14" />
+            </EXTREME_NIGHT>
+            <BACK_LIGHT>
+                <MODE value="10" />
+            </BACK_LIGHT>
+        </VIDEO_MODE_SCENE_LIST>
+        <DISPLAY_IC_PARAM>
+            <SUPPORT_SCENE>
+                <NORMAL_NIGHT value="0" />
+                <EXTREME_NIGHT value="1" />
+            </SUPPORT_SCENE>
+            <HIGH_TEMPERATURE_RANGE_LOWER value="45" />
+            <HIGH_TEMPERATURE_RANGE_UPPER value="47" />
+            <SUPPORT_CAMERA_TYPE_LIST>
+                <CAMERA_TYPE value="Wide" />
+            </SUPPORT_CAMERA_TYPE_LIST>
+            <IC_VERSION value="3" />
+            <CRF_LUT_THRES value="300" />
+            <CRT_LUT_INTERVAL value="2" />
+            <CRFLUT_DARK_SCENE>
+                <NORMAL_NIGHT value="1" />
+                <EXTREME_NIGHT value="2" />
+            </CRFLUT_DARK_SCENE>
+            <IC_RELATE_DEBUG_PARAM>
+                <ZOOMRATIO_STABLE>
+                    <STABLETHRES value="10" />
+                    <SPRECISION  value="0.000001" />
+                </ZOOMRATIO_STABLE>
+                <AECLUX_STABLE>
+                    <STABLETHRES value="40" />
+                    <SPRECISION  value="20.0" />
+                </AECLUX_STABLE>
+            </IC_RELATE_DEBUG_PARAM>
+        </DISPLAY_IC_PARAM>
+        <VSHDR_PARAM>
+            <SUPPORT_SCENE>
+                <NORMAL_NIGHT value="0" />
+                <BACK_LIGHT value="1" />
+            </SUPPORT_SCENE>
+            <HIGH_TEMPERATURE_RANGE_LOWER value="100" />
+            <HIGH_TEMPERATURE_RANGE_UPPER value="100" />
+            <SUPPORT_CAMERA_TYPE_LIST>
+                <CAMERA_TYPE value="Wide" />
+                <CAMERA_TYPE value="Tele" />
+            </SUPPORT_CAMERA_TYPE_LIST>
+            <HDR_RATIO_THRESHOLD value="6.0" />
+        </VSHDR_PARAM>
+        <TWO_PASS_NR_PARAM>
+            <SUPPORT_SCENE>
+                <EXTREME_NIGHT value="1" />
+            </SUPPORT_SCENE>
+            <SUPPORT_CAMERA_TYPE_LIST>
+                <CAMERA_TYPE value="UltraWide" />
+                <CAMERA_TYPE value="Wide" />
+                <CAMERA_TYPE value="Tele" />
+                <CAMERA_TYPE value="Master" />  <!-- Front -->
+            </SUPPORT_CAMERA_TYPE_LIST>
+        </TWO_PASS_NR_PARAM>
+        <ROI_REMOSAIC_PARAM>
+            <SUPPORT_CAMERA_TYPE_LIST>
+                <CAMERA_TYPE value="Tele" />
+            </SUPPORT_CAMERA_TYPE_LIST>
+            <SUPPORT_UI_MODE_LIST>
+                <UIMODE value="MODE_VIDEO_DEFAULT" />
+                <UIMODE value="MODE_VIDEO_STAGE" />
+                <UIMODE value="MODE_MOVIE_EFFECT" />
+            </SUPPORT_UI_MODE_LIST>
+            <SUPPORT_SCENE_MODE_LIST>
+                <SCENE_MODE value="SCENE_PORTRAIT_SINGLE_PREVIEW_IC"/>
+                <SCENE_MODE value="SCENE_PORTRAIT_SINGLE_PREVIEW_IC_4K"/>
+                <SCENE_MODE value="SCENE_SAT_VIDEO_BEAUTY"/>
+                <SCENE_MODE value="SCENE_PLATFORM_SAT_MEMC"/>
+                <SCENE_MODE value="SCENE_EIS_SAT_VIDEO"/>
+                <SCENE_MODE value="SCENE_EIS_4K_SAT_VIDEO"/>
+            </SUPPORT_SCENE_MODE_LIST>
+        </ROI_REMOSAIC_PARAM>
+    </VIDEO_SEAMLESS_PARAM>
+    <SHDR_SEAMLESS_SCENE>
+        <SceneMode value="SCENE_SHDR_SNAPSHOT"/>
+    </SHDR_SEAMLESS_SCENE>
+    <PLATFORM_SAT_HDR_SCENE>
+        <SceneMode value="SCENE_PLATFORM_SAT_MEMC"/>
+        <SceneMode value="SCENE_PLATFORM_SAT_ALGO_MEMC"/>
+        <SceneMode value="SCENE_PLATFORM_SAT"/>
+    </PLATFORM_SAT_HDR_SCENE>
+    <QRCODE_SCAN_3RD_SCENE>
+        <SceneMode value="SCENE_3RD_APP_SAT"/>
+    </QRCODE_SCAN_3RD_SCENE>
+    <HBM_STRATEGY_MODE>
+        <SceneMode value="SCENE_PLATFORM_SAT_ALGO_MEMC">
+            <StrategyMode value="HBM_STRATEGY_IMMEDIATE"/>
+        </SceneMode>
+        <SceneMode value="SCENE_FULL_BYPASS_AFBC">
+            <StrategyMode value="HBM_STRATEGY_IMMEDIATE"/>
+        </SceneMode>
+        <SceneMode value="SCENE_PLATFORM_SAT">
+            <StrategyMode value="HBM_STRATEGY_IMMEDIATE"/>
+        </SceneMode>
+    </HBM_STRATEGY_MODE>
+    <VCF_ENABLE_PUREBYPASS value="0" />
+    <VCF_ENABLE_EXTENSION  value="1" />
+    <SEAMLESS_STATE_CONFIG>
+        <CAMERA_TYPE value="ULTRAWIDE">
+            <TARGET_STATE value="SENSOR_BINNING">
+                <CURRENT_STATE value="BAYER_BIN_SMALL" />
+                <CURRENT_STATE value="STATE_UNKNOWN" />
+            </TARGET_STATE>
+            <TARGET_STATE value="BAYER_BIN_SMALL">
+                <CURRENT_STATE value="SENSOR_BINNING" />
+            </TARGET_STATE>
+        </CAMERA_TYPE>
+        <CAMERA_TYPE value="WIDE">
+            <TARGET_STATE value="SENSOR_BINNING">
+                <CURRENT_STATE value="SENSOR_BINNING_3M" />
+                <CURRENT_STATE value="ISP_BINNING" />
+                <CURRENT_STATE value="ISP_REMOSAIC" />
+                <CURRENT_STATE value="ISP_CROP_BAYER" />
+                <CURRENT_STATE value="BAYER_FULL" />
+                <CURRENT_STATE value="BAYER_HDR_ISZ2X" />
+                <CURRENT_STATE value="SHDR_CAPTURE" />
+                <CURRENT_STATE value="SHDR_BURST" />
+                <CURRENT_STATE value="SHDR_SPORT" />
+                <CURRENT_STATE value="QUAD2x2_HDR_ISZ2X" />
+                <CURRENT_STATE value="QUAD2x2_HDR_ISZ2X_FUS" />
+                <CURRENT_STATE value="QUAD2x2_HDR_ISZ2X_PRV_NE" />
+                <CURRENT_STATE value="STATE_UNKNOWN" />
+            </TARGET_STATE>
+            <TARGET_STATE value="ISP_BINNING">
+                <CURRENT_STATE value="SENSOR_BINNING" />
+                <CURRENT_STATE value="SHDR_CAPTURE" />
+                <CURRENT_STATE value="SHDR_BURST" />
+                <CURRENT_STATE value="SHDR_SPORT" />
+            </TARGET_STATE>
+            <TARGET_STATE value="BAYER_FULL">
+                <CURRENT_STATE value="SENSOR_BINNING" />
+            </TARGET_STATE>
+            <TARGET_STATE value="ISP_REMOSAIC">
+                <CURRENT_STATE value="SENSOR_BINNING" />
+                <CURRENT_STATE value="SENSOR_BINNING_3M" />
+                <CURRENT_STATE value="SHDR_CAPTURE" />
+                <CURRENT_STATE value="SHDR_BURST" />
+                <CURRENT_STATE value="SHDR_SPORT" />
+                <CURRENT_STATE value="QUAD2x2_HDR_ISZ2X" />
+                <CURRENT_STATE value="QUAD2x2_HDR_ISZ2X_FUS" />
+                <CURRENT_STATE value="QUAD2x2_HDR_ISZ2X_PRV_NE" />
+                <CURRENT_STATE value="STATE_UNKNOWN" />
+            </TARGET_STATE>
+            <TARGET_STATE value="SHDR_CAPTURE">
+                <CURRENT_STATE value="SENSOR_BINNING" />
+                <CURRENT_STATE value="SENSOR_BINNING_3M" />
+                <CURRENT_STATE value="ISP_BINNING" />
+                <CURRENT_STATE value="ISP_REMOSAIC" />
+                <CURRENT_STATE value="SHDR_BURST" />
+                <CURRENT_STATE value="SHDR_SPORT" />
+                <CURRENT_STATE value="QUAD2x2_HDR_ISZ2X" />
+                <CURRENT_STATE value="QUAD2x2_HDR_ISZ2X_FUS" />
+                <CURRENT_STATE value="QUAD2x2_HDR_ISZ2X_PRV_NE" />
+                <CURRENT_STATE value="ISP_CROP_BAYER" />
+                <CURRENT_STATE value="BAYER_HDR_ISZ2X" />
+                <CURRENT_STATE value="STATE_UNKNOWN" />
+            </TARGET_STATE>
+            <TARGET_STATE value="SHDR_BURST">
+                <CURRENT_STATE value="SHDR_CAPTURE" />
+            </TARGET_STATE>
+            <TARGET_STATE value="SHDR_SPORT">
+                <CURRENT_STATE value="SENSOR_BINNING" />
+                <CURRENT_STATE value="ISP_BINNING" />
+                <CURRENT_STATE value="ISP_REMOSAIC" />
+                <CURRENT_STATE value="SHDR_CAPTURE" />
+                <CURRENT_STATE value="SHDR_BURST" />
+                <CURRENT_STATE value="QUAD2x2_HDR_ISZ2X" />
+                <CURRENT_STATE value="QUAD2x2_HDR_ISZ2X_FUS" />
+                <CURRENT_STATE value="QUAD2x2_HDR_ISZ2X_PRV_NE" />
+                <CURRENT_STATE value="STATE_UNKNOWN" />
+            </TARGET_STATE>
+            <TARGET_STATE value="SENSOR_BINNING_3M">
+                <CURRENT_STATE value="SENSOR_BINNING" />
+                <CURRENT_STATE value="ISP_REMOSAIC" />
+                <CURRENT_STATE value="SHDR_CAPTURE" />
+                <CURRENT_STATE value="QUAD2x2_HDR_ISZ2X" />
+                <CURRENT_STATE value="STATE_UNKNOWN" />
+            </TARGET_STATE>
+            <TARGET_STATE value="ISP_CROP_BAYER">
+                <CURRENT_STATE value="SENSOR_BINNING" />
+                <CURRENT_STATE value="SHDR_CAPTURE" />
+                <CURRENT_STATE value="BAYER_HDR_ISZ2X" />
+                <CURRENT_STATE value="STATE_UNKNOWN" />
+            </TARGET_STATE>
+            <TARGET_STATE value="BAYER_HDR_ISZ2X">
+                <CURRENT_STATE value="SENSOR_BINNING" />
+                <CURRENT_STATE value="SHDR_CAPTURE" />
+                <CURRENT_STATE value="ISP_CROP_BAYER" />
+                <CURRENT_STATE value="STATE_UNKNOWN" />
+            </TARGET_STATE>
+            <TARGET_STATE value="QUAD2x2_HDR_ISZ2X">
+                <CURRENT_STATE value="SENSOR_BINNING" />
+                <CURRENT_STATE value="SENSOR_BINNING_3M" />
+                <CURRENT_STATE value="ISP_REMOSAIC" />
+                <CURRENT_STATE value="SHDR_CAPTURE" />
+                <CURRENT_STATE value="SHDR_BURST" />
+                <CURRENT_STATE value="SHDR_SPORT" />
+                <CURRENT_STATE value="QUAD2x2_HDR_ISZ2X_FUS" />
+                <CURRENT_STATE value="QUAD2x2_HDR_ISZ2X_PRV_NE" />
+                <CURRENT_STATE value="STATE_UNKNOWN" />
+            </TARGET_STATE>
+            <TARGET_STATE value="QUAD2x2_HDR_ISZ2X_FUS">
+                <CURRENT_STATE value="QUAD2x2_HDR_ISZ2X" />
+            </TARGET_STATE>
+            <TARGET_STATE value="QUAD2x2_HDR_ISZ2X_PRV_NE">
+                <CURRENT_STATE value="SENSOR_BINNING" />
+                <CURRENT_STATE value="ISP_REMOSAIC" />
+                <CURRENT_STATE value="SHDR_CAPTURE" />
+                <CURRENT_STATE value="SHDR_BURST" />
+                <CURRENT_STATE value="SHDR_SPORT" />
+                <CURRENT_STATE value="QUAD2x2_HDR_ISZ2X" />
+                <CURRENT_STATE value="QUAD2x2_HDR_ISZ2X_FUS" />
+            </TARGET_STATE>
+        </CAMERA_TYPE>
+        <CAMERA_TYPE value="TELE">
+            <TARGET_STATE value="SENSOR_BINNING">
+                <CURRENT_STATE value="ISP_BINNING" />
+                <CURRENT_STATE value="ISP_REMOSAIC" />
+                <CURRENT_STATE value="ISP_CROP_BAYER" />
+                <CURRENT_STATE value="BAYER_FULL" />
+                <CURRENT_STATE value="QUAD4x4_FULL" />
+                <CURRENT_STATE value="QUAD4x4_ISZ4X" />
+                <CURRENT_STATE value="SHDR_CAPTURE" />
+                <CURRENT_STATE value="SHDR_BURST" />
+                <CURRENT_STATE value="SHDR_SPORT" />
+                <CURRENT_STATE value="STATE_UNKNOWN" />
+            </TARGET_STATE>
+            <TARGET_STATE value="ISP_BINNING">
+                <CURRENT_STATE value="SENSOR_BINNING" />
+                <CURRENT_STATE value="SHDR_CAPTURE" />
+                <CURRENT_STATE value="SHDR_BURST" />
+                <CURRENT_STATE value="SHDR_SPORT" />
+            </TARGET_STATE>
+            <TARGET_STATE value="BAYER_FULL">
+                <CURRENT_STATE value="SENSOR_BINNING" />
+            </TARGET_STATE>
+            <TARGET_STATE value="ISP_REMOSAIC">
+                <CURRENT_STATE value="SENSOR_BINNING" />
+                <CURRENT_STATE value="QUAD4x4_ISZ4X" />
+                <CURRENT_STATE value="SHDR_CAPTURE" />
+                <CURRENT_STATE value="SHDR_BURST" />
+                <CURRENT_STATE value="SHDR_SPORT" />
+                <CURRENT_STATE value="STATE_UNKNOWN" />
+            </TARGET_STATE>
+            <TARGET_STATE value="SHDR_CAPTURE">
+                <CURRENT_STATE value="SENSOR_BINNING" />
+                <CURRENT_STATE value="ISP_BINNING" />
+                <CURRENT_STATE value="ISP_REMOSAIC" />
+                <CURRENT_STATE value="SHDR_BURST" />
+                <CURRENT_STATE value="SHDR_SPORT" />
+                <CURRENT_STATE value="ISP_CROP_BAYER" />
+                <CURRENT_STATE value="STATE_UNKNOWN" />
+            </TARGET_STATE>
+            <TARGET_STATE value="SHDR_BURST">
+                <CURRENT_STATE value="SHDR_CAPTURE" />
+            </TARGET_STATE>
+            <TARGET_STATE value="SHDR_SPORT">
+                <CURRENT_STATE value="SENSOR_BINNING" />
+                <CURRENT_STATE value="ISP_BINNING" />
+                <CURRENT_STATE value="ISP_REMOSAIC" />
+                <CURRENT_STATE value="SHDR_CAPTURE" />
+                <CURRENT_STATE value="SHDR_BURST" />
+                <CURRENT_STATE value="STATE_UNKNOWN" />
+            </TARGET_STATE>
+            <TARGET_STATE value="ISP_CROP_BAYER">
+                <CURRENT_STATE value="SENSOR_BINNING" />
+                <CURRENT_STATE value="SHDR_CAPTURE" />
+                <CURRENT_STATE value="STATE_UNKNOWN" />
+            </TARGET_STATE>
+            <TARGET_STATE value="QUAD4x4_FULL">
+                <CURRENT_STATE value="SENSOR_BINNING" />
+            </TARGET_STATE>
+            <TARGET_STATE value="QUAD4x4_ISZ4X">
+                <CURRENT_STATE value="ISP_REMOSAIC" />
+                <CURRENT_STATE value="STATE_UNKNOWN" />
+            </TARGET_STATE>
+        </CAMERA_TYPE>
+    </SEAMLESS_STATE_CONFIG>
+    <VSS_CONFIG>
+        <VSS_ENABLE>
+            <NOT_SUPPORT_SCENE>
+                <SceneMode value="SCENE_SAT_VIDEO_FAST"/>
+                <SceneMode value="SCENE_NILEIS_SAT_FAST"/>
+            </NOT_SUPPORT_SCENE>
+        </VSS_ENABLE>
+    </VSS_CONFIG>
+    <EARLY_CONFIG_SETTING>
+        <EARLY_CONFIG_ALL_UI_MODES value="0" />
+        <UI_MODES>
+                <UI_MODE value="MODE_PROTRAIT" />
+        </UI_MODES>
+    </EARLY_CONFIG_SETTING>
+    <REPEATING_CONFIG>
+        <ENABLE_REPEATING_VCF value="1">
+            <NOT_SUPPORT_SCENE>
+                <SceneMode value="SCENE_3RD_APP_BEAUTY"/>
+                <SceneMode value="SCENE_3RD_APP_BEAUTY_VIDEO"/>
+                <SceneMode value="SCENE_3RD_APP_SAT"/>
+                <SceneMode value="SCENE_3RD_ENG_SAT"/>
+                <SceneMode value="SCENE_3RD_APP_BEAUTY_2"/>
+                <SceneMode value="SCENE_3RD_APP_SAT_HDR"/>
+            </NOT_SUPPORT_SCENE>
+        </ENABLE_REPEATING_VCF>
+        <ENABLE_REPEATING_SKIP_TUNING value="1"/>
+        <ENABLE_REPEATING_PLATFORM value="1"/>
+    </REPEATING_CONFIG>
+    <SEAMLESS_HDR_TYPE_CONFIG>
+        <SCENE_MODE value="SCENE_SAT">
+            <CAMERA_TYPE value="WIDE">
+                <HDR_TYPE value="BAYER_DOL"/>
+                <QUAD2x2_ROI_HDR_TYPE value="QUAD2x2_ROI_DOL"/>
+            </CAMERA_TYPE>
+        </SCENE_MODE>
+        <SCENE_MODE value="SCENE_EIS_SINGLE_VIDEO">
+            <CAMERA_TYPE value="FRONT">
+                <HDR_TYPE value="BAYER_MFHDR"/>
+                <PROLONG_TYPE value="0"/>
+            </CAMERA_TYPE>
+            <CAMERA_TYPE value="WIDE">
+                <HDR_TYPE value="BAYER_LBMF"/>
+                <PROLONG_TYPE value="1"/>
+            </CAMERA_TYPE>
+            <CAMERA_TYPE value="TELE">
+                <HDR_TYPE value="BAYER_LBMF"/>
+                <PROLONG_TYPE value="1"/>
+            </CAMERA_TYPE>
+        </SCENE_MODE>
+        <SCENE_MODE value="SCENE_PORTRAIT_SINGLE_PREVIEW_IC"/>
+        <SCENE_MODE value="SCENE_PORTRAIT_SINGLE_PREVIEW_IC_4K">
+            <CAMERA_TYPE value="WIDE">
+                <HDR_TYPE value="BAYER_LBMF"/>
+                <PROLONG_TYPE value="1"/>
+            </CAMERA_TYPE>
+        </SCENE_MODE>
+        <SCENE_MODE value="SCENE_EIS_SAT_VIDEO"/>
+        <SCENE_MODE value="SCENE_EIS_4K_SAT_VIDEO"/>
+        <SCENE_MODE value="SCENE_EIS_SAT_VIDEO_IC_HWME"/>
+        <SCENE_MODE value="SCENE_EIS_4K_SINGLE_VIDEO"/>
+        <SCENE_MODE value="SCENE_EIS_4K_SINGLE_VIDEO_AFBC"/>
+        <SCENE_MODE value="SCENE_SAT_VIDEO_BEAUTY"/>
+        <SCENE_MODE value="SCENE_EIS_SINGLE_FILM"/>
+        <SCENE_MODE value="SCENE_NILEIS_SAT_VIDEO_AISEGMENT"/>
+        <SCENE_MODE value="SCENE_EIS_SINGLE_VIDEO_AFBC"/>
+        <SCENE_MODE value="SCENE_EIS_SINGLE_VIDEO">
+            <CAMERA_TYPE value="WIDE">
+                <HDR_TYPE value="BAYER_LBMF"/>
+                <PROLONG_TYPE value="1"/>
+            </CAMERA_TYPE>
+            <CAMERA_TYPE value="TELE">
+                <HDR_TYPE value="BAYER_LBMF"/>
+                <PROLONG_TYPE value="1"/>
+            </CAMERA_TYPE>
+        </SCENE_MODE>
+        <SCENE_MODE value="SCENE_SHDR_SNAPSHOT">
+            <CAMERA_TYPE value="TELE">
+                <HDR_TYPE value="BAYER_LBMF"/>
+            </CAMERA_TYPE>
+        </SCENE_MODE>
+    </SEAMLESS_HDR_TYPE_CONFIG>
+    <VCF_USE_HALBUF_MGR_SC value="1" />
+</CameraConfig>

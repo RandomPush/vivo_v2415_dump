@@ -1,0 +1,409 @@
+{
+    "Sensors": [
+        {
+            "Name":"IMX921PD2415_MIPI_RAW",
+            "Capture Size":{
+                "4:3":["4096x3072"],
+                "20:9":["4096x1856"],
+                "16:9":["4096x2304"],
+                "1:1":["3072x3072"]
+            },
+            "IMGOYUV Size":{
+                "4:3":["4096x3072"],
+                "20:9":["4096x1856"],
+                "16:9":["4096x2304"],
+                "1:1":["3072x3072"]
+            },
+            "RRZOYUV Size":{
+                "4:3":"1280x960",
+                "20:9":"2112x960",
+                "16:9":"1712x960",
+                "1:1":"960x960"
+            },
+            "SensorScenarioZSD":{
+                "VSDoF":"preview",
+                "3rdParty":"preview",
+                "Zoom":"preview",
+                "MtkDepthmap":"preview",
+                "Multicam":"preview"
+            },
+            "SensorScenarioRecording":{
+                "VSDoF":"custom1",
+                "3rdParty":"custom1",
+                "Zoom":"Video",
+                "MtkDepthmap":"custom1"
+            },
+            "SensorScenarioRecordingHighSpeed":{
+                "VSDoF":"custom3",
+                "3rdParty":"custom3",
+                "Zoom":"custom3",
+                "MtkDepthmap":"custom3"
+            },
+            "FOV":{
+                "D":84.8
+            },
+            "Calibration":{
+                "Macro Distance":150,
+                "Infinite Distance":10000
+            }
+        },{
+            "Name":"IMX882PD2415_MIPI_RAW",
+            "Capture Size":{
+                "4:3":["4096x3072"],
+                "20:9":["4096x1836"],
+                "16:9":["4096x2304"],
+                "1:1":["3072x3072"]
+            },
+            "IMGOYUV Size":{
+                "4:3":"4096x3072",
+                "20:9":"4096x1836",
+                "16:9":"4096x2304",
+                "1:1":"3072x3072"
+            },
+            "RRZOYUV Size":{
+                "4:3":"1280x960",
+                "20:9":"2112x960",
+                "16:9":"1712x960",
+                "1:1":"960x960"
+            },
+            "SensorScenarioZSD":{
+                "VSDoF":"preview",
+                "3rdParty":"preview",
+                "Zoom":"preview",
+                "MtkDepthmap":"preview",
+                "Multicam":"preview"
+            },
+            "SensorScenarioRecording":{
+                "VSDoF":"custom1",
+                "3rdParty":"custom1",
+                "Zoom":"Video",
+                "MtkDepthmap":"custom1"
+            },
+            "SensorScenarioRecordingHighSpeed":{
+                "VSDoF":"custom3",
+                "3rdParty":"custom3",
+                "Zoom":"custom3",
+                "MtkDepthmap":"custom3"
+            },
+            "FOV":{
+                "D":28.3
+            },
+            "Calibration":{
+                "Macro Distance":150,
+                "Infinite Distance":10000
+            }
+        },
+        {
+            "Name":"S5KJN1PD2415_MIPI_RAW",
+            "Capture Size":{
+                "4:3":["4080x3060"],
+                "20:9":["4080x1836"],
+                "16:9":["4080x2296"],
+                "1:1":["3060x3060"]
+            },
+            "IMGOYUV Size":{
+                "4:3":"4080x3060",
+                "20:9":"4080x1836",
+                "16:9":"4080x2296",
+                "1:1":"3060x3060"
+            },
+            "RRZOYUV Size":{
+                "4:3":"1280x960",
+                "20:9":"2112x960",
+                "16:9":"1712x960",
+                "1:1":"960x960"
+            },
+            "SensorScenarioZSD":{
+                "VSDoF":"custom7",
+                "3rdParty":"custom7",
+                "Zoom":"custom6",
+                "MtkDepthmap":"custom7",
+                "Multicam":"custom7"
+            },
+            "SensorScenarioRecording":{
+                "VSDoF":"custom1",
+                "3rdParty":"custom1",
+                "Zoom":"Video",
+                "MtkDepthmap":"custom1"
+            },
+            "SensorScenarioRecordingHighSpeed":{
+                "VSDoF":"custom2",
+                "3rdParty":"custom2",
+                "Zoom":"custom2",
+                "MtkDepthmap":"custom2"
+            },
+            "FOV":{
+                "D":119.400002
+            },
+            "Calibration":{
+                "Macro Distance":100,
+                "Infinite Distance":10000
+            }
+        }, {
+            "Name":"S5KJN1PD2419_MIPI_RAW",
+            "Capture Size":{
+                "4:3":["4080x3060"],
+                "20:9":["4080x1836"],
+                "16:9":["4080x2296"],
+                "1:1":["3060x3060"]
+            },
+            "IMGOYUV Size":{
+                "4:3":"4080x3060",
+                "20:9":"4080x1836",
+                "16:9":"4080x2296",
+                "1:1":"3060x3060"
+            },
+            "RRZOYUV Size":{
+                "4:3":"1280x960",
+                "20:9":"2112x960",
+                "16:9":"1712x960",
+                "1:1":"960x960"
+            },
+            "SensorScenarioZSD":{
+                "VSDoF":"custom7",
+                "3rdParty":"custom7",
+                "Zoom":"custom6",
+                "MtkDepthmap":"custom7",
+                "Multicam":"custom7"
+            },
+            "SensorScenarioRecording":{
+                "VSDoF":"custom1",
+                "3rdParty":"custom1",
+                "Zoom":"Video",
+                "MtkDepthmap":"custom1"
+            },
+            "SensorScenarioRecordingHighSpeed":{
+                "VSDoF":"custom2",
+                "3rdParty":"custom2",
+                "Zoom":"custom2",
+                "MtkDepthmap":"custom2"
+            },
+            "FOV":{
+                "D":119.400002
+            },
+            "Calibration":{
+                "Macro Distance":100,
+                "Infinite Distance":10000
+            }
+        },
+        {
+            "Name":"IMX882PD2419_MIPI_RAW",
+            "Capture Size":{
+                "4:3":["4096x3072"],
+                "20:9":["4096x1836"],
+                "16:9":["4096x2304"],
+                "1:1":["3072x3072"]
+            },
+            "IMGOYUV Size":{
+                "4:3":"4096x3072",
+                "20:9":"4096x1836",
+                "16:9":"4096x2304",
+                "1:1":"3072x3072"
+            },
+            "RRZOYUV Size":{
+                "4:3":"1280x960",
+                "20:9":"2112x960",
+                "16:9":"1712x960",
+                "1:1":"960x960"
+            },
+            "SensorScenarioZSD":{
+                "VSDoF":"preview",
+                "3rdParty":"preview",
+                "Zoom":"preview",
+                "MtkDepthmap":"preview",
+                "Multicam":"preview"
+            },
+            "SensorScenarioRecording":{
+                "VSDoF":"custom1",
+                "3rdParty":"custom1",
+                "Zoom":"Video",
+                "MtkDepthmap":"custom1"
+            },
+            "SensorScenarioRecordingHighSpeed":{
+                "VSDoF":"custom3",
+                "3rdParty":"custom3",
+                "Zoom":"custom3",
+                "MtkDepthmap":"custom3"
+            },
+            "FOV":{
+                "D":28.3
+            },
+            "Calibration":{
+                "Macro Distance":150,
+                "Infinite Distance":10000
+            }
+        },
+        {
+            "Name":"IMX06CPD2419_MIPI_RAW",
+            "Capture Size":{
+                "4:3":["4000x3000"],
+                "20:9":["4000x1800"],
+                "16:9":["4000x2250"],
+                "1:1":["3000x3000"]
+            },
+            "IMGOYUV Size":{
+                "4:3":"4000x3000",
+                "20:9":"4000x1800",
+                "16:9":"4000x2250",
+                "1:1":"3000x3000"
+            },
+            "RRZOYUV Size":{
+                "4:3":"1280x960",
+                "20:9":"2112x960",
+                "16:9":"1712x960",
+                "1:1":"960x960"
+            },
+            "SensorScenarioZSD":{
+                "VSDoF":"preview",
+                "3rdParty":"preview",
+                "Zoom":"preview",
+                "MtkDepthmap":"preview",
+                "Multicam":"preview"
+            },
+            "SensorScenarioRecording":{
+                "VSDoF":"custom1",
+                "3rdParty":"custom1",
+                "Zoom":"Video",
+                "MtkDepthmap":"custom1"
+            },
+            "SensorScenarioRecordingHighSpeed":{
+                "VSDoF":"custom3",
+                "3rdParty":"custom3",
+                "Zoom":"custom3",
+                "MtkDepthmap":"custom3"
+            },
+            "FOV":{
+                "D":84.8
+            },
+            "Calibration":{
+                "Macro Distance":150,
+                "Infinite Distance":10000
+            }
+        }
+    ],
+    "Sensor Combinations": [
+        {
+            "Logical Device":{
+                "Name":"multicamera",
+                "Features":["VSDoF", "Zoom"]
+            },
+            "3A Sync Mode":{
+                "Zoom":"sync"
+            },
+            "Sensors":["IMX921PD2415_MIPI_RAW", "IMX882PD2415_MIPI_RAW", "S5KJN1PD2415_MIPI_RAW"],
+            "Exclusives":[["IMX882PD2415_MIPI_RAW", "S5KJN1PD2415_MIPI_RAW"]],
+            "ISP Profile":{
+                "Preview":["EIspProfile_VSDOF_PV_Main", "EIspProfile_VSDOF_PV_Main_toW"],
+                "Record":["EIspProfile_VSDOF_Video_Main", "EIspProfile_VSDOF_PV_Main_toW "]
+            },
+            "Groups":[{
+                    "Zoom Ratio":1.000000,
+                    "Sensors Order":[0, 2],
+                    "Sensor Offset":[2.318, 0],
+                    "SensorScenarioZSD":["preview", "custom6"],
+                    "SensorScenarioRecording":["preview", "custom6"],
+                    "SensorScenarioRecordingHighSpeed":["custom3", "custom2"]
+                }, {
+                    "Zoom Ratio":1.000010,
+                    "Sensors Order":[0, 2],
+                    "Sensor Offset":[2.318, 0],
+                    "Enable N3D":0,
+                    "SensorScenarioZSD":["custom8", "custom7"],
+                    "SensorScenarioRecording":["custom8", "custom7"],
+                    "SensorScenarioRecordingHighSpeed":["custom3", "custom2"]
+                }, {
+                    "Zoom Ratio":1.000030,
+                    "Sensors Order":[0, 2],
+                    "Sensor Offset":[2.318, 0],
+                    "Enable N3D":0,
+                    "SensorScenarioZSD":["preview", "custom7"],
+                    "SensorScenarioRecording":["preview", "custom7"],
+                    "SensorScenarioRecordingHighSpeed":["custom3", "custom2"]
+                }, {
+                    "Zoom Ratio":1.000050,
+                    "Sensors Order":[1, 0],
+                    "Sensor Offset":[0.035, -1.985],
+                    "Enable N3D":0,
+                    "SensorScenarioZSD":["preview", "custom6"],
+                    "SensorScenarioRecording":["preview", "custom6"],
+                    "SensorScenarioRecordingHighSpeed":["custom1", "custom3"]
+                }, {
+                    "Zoom Ratio":1.200000,
+                    "Sensors Order":[1, 0],
+                    "Sensor Offset":[0.035, -1.985],
+                    "SensorScenarioZSD":["preview", "custom6"],
+                    "SensorScenarioRecording":["preview", "custom6"],
+                    "SensorScenarioRecordingHighSpeed":["custom1", "custom3"]
+                }],
+            "Zoom Range":[0.600000, 100],
+            "Zoom Steps":[0.600000, 1, 3.500000]
+        },
+        {
+            "Logical Device":{
+                "Name":"multicamera",
+                "Features":["VSDoF", "Zoom"]
+            },
+            "3A Sync Mode":{
+                "Zoom":"sync"
+            },
+            "Sensors":["IMX06CPD2419_MIPI_RAW", "IMX882PD2419_MIPI_RAW", "S5KJN1PD2419_MIPI_RAW"],
+            "Exclusives":[["IMX882PD2419_MIPI_RAW", "S5KJN1PD2419_MIPI_RAW"]],
+            "ISP Profile":{
+                "Preview":["EIspProfile_VSDOF_PV_Main", "EIspProfile_VSDOF_PV_Main_toW"],
+                "Record":["EIspProfile_VSDOF_Video_Main", "EIspProfile_VSDOF_PV_Main_toW "]
+            },
+            "Groups":[{
+                    "Zoom Ratio":1.000000,
+                    "Sensors Order":[0, 2],
+                    "Sensor Offset":[2.318, 0],
+                    "SensorScenarioZSD":["preview", "custom6"],
+                    "SensorScenarioRecording":["preview", "custom6"],
+                    "SensorScenarioRecordingHighSpeed":["custom3", "custom2"]
+                }, {
+                    "Zoom Ratio":1.000010,
+                    "Sensors Order":[0, 2],
+                    "Sensor Offset":[2.318, 0],
+                    "Enable N3D":0,
+                    "SensorScenarioZSD":["custom8", "custom7"],
+                    "SensorScenarioRecording":["custom8", "custom7"],
+                    "SensorScenarioRecordingHighSpeed":["custom3", "custom2"]
+                }, {
+                    "Zoom Ratio":1.000030,
+                    "Sensors Order":[0, 2],
+                    "Sensor Offset":[2.318, 0],
+                    "Enable N3D":0,
+                    "SensorScenarioZSD":["custom8", "custom7"],
+                    "SensorScenarioRecording":["custom8", "custom7"],
+                    "SensorScenarioRecordingHighSpeed":["custom3", "custom2"]
+                }, {
+                    "Zoom Ratio":1.000050,
+                    "Sensors Order":[1, 0],
+                    "Sensor Offset":[0.035, -1.985],
+                    "Enable N3D":0,
+                    "SensorScenarioZSD":["preview", "custom23"],
+                    "SensorScenarioRecording":["preview", "custom23"],
+                    "SensorScenarioRecordingHighSpeed":["custom1", "custom3"]
+                }, {
+                    "Zoom Ratio":1.200000,
+                    "Sensors Order":[1, 0],
+                    "Sensor Offset":[0.035, -1.985],
+                    "SensorScenarioZSD":["preview", "custom8"],
+                    "SensorScenarioRecording":["preview", "custom8"],
+                    "SensorScenarioRecordingHighSpeed":["custom1", "custom3"]
+                }],
+            "Zoom Range":[0.600000, 100],
+            "Zoom Steps":[0.600000, 1, 3.500000]
+        }
+    ],
+    "Depth Delay": 0,
+    "Enable Record": 1,
+    "Me PowerSaving": {
+        "Preview": [0, 0],
+        "Record": [1, 1]
+    },
+    "Callback Buffer List": {
+        "//": ["ci: Clean Image, bi: Bokeh Image, mbd: MTK Bokeh Depth, mdb: MTK Debug Buffer, mbm: MTK Bokeh Metadata",
+           "Value must <= 91 bytes"],
+        "Value": "bi"
+    }
+}

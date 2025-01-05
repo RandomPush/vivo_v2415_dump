@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VendorTagClassifyMap version="1.0.0">
+    <Tag value="vivo.parameter-sensorLowFpsMode">
+        <SceneMode_List>
+            <tagSceneMap value="SCENE_SAT"/>
+        </SceneMode_List>
+        <Node_List>
+            <tagNodeMap value="REALTIME_NODE"/>
+            <tagNodeMap value="RTYP_NODE"/>
+        </Node_List>
+    </Tag>
+    <Tag value="vcf.parameter-hwdeviceStage">
+        <SceneMode_List>
+            <tagSceneMap value="SCENE_EIS_SAT_VIDEO_IC_HWME"/>
+        </SceneMode_List>
+        <Node_List>
+            <tagNodeMap value="RTY2Y_NODE"/>
+        </Node_List>
+    </Tag>
+    <Tag value="vcf.parameter-satPipCropFloat">
+        <SceneMode_List>
+            <tagSceneMap value="SCENE_SAT"/>
+        </SceneMode_List>
+        <Node_List>
+            <tagNodeMap value="RTY2Y_NODE"/>
+        </Node_List>
+    </Tag>
+    <Tag value="vivo.control-advance_fullsize">
+        <SceneMode_List>
+            <tagSceneMap value="SCENE_SUPER_RAW"/>
+            <tagSceneMap value="SCENE_PROFESSION"/>
+        </SceneMode_List>
+    </Tag>
+    <Tag value="vivo.control-ai_highresolution">
+        <SceneMode_List>
+            <tagSceneMap value="SCENE_QCFA"/>
+        </SceneMode_List>
+    </Tag>
+    <Tag value="vivo.parameter-highResolutionDngType">
+        <SceneMode_List>
+            <tagSceneMap value="SCENE_SUPER_RAW"/>
+            <tagSceneMap value="SCENE_PROFESSION"/>
+        </SceneMode_List>
+    </Tag>
+    <Tag value="vivo.feedback-superMoonDetectResult">
+        <SceneMode_List>
+            <tagSceneMap value="SCENE_SAT"/>
+            <tagSceneMap value="SCENE_SUPERMOON"/>
+            <tagSceneMap value="SCENE_EIS_SUPERMOON"/>
+            <tagSceneMap value="SCENE_2NR"/>
+            <tagSceneMap value="SCENE_EIS_SKYLINE_SNAPSHOT_MUL"/>
+        </SceneMode_List>
+    </Tag>
+    <Tag value="vivo.feedback-superMoonSkipFrames">
+        <SceneMode_List>
+            <tagSceneMap value="SCENE_SAT"/>
+            <tagSceneMap value="SCENE_SUPERMOON"/>
+            <tagSceneMap value="SCENE_EIS_SUPERMOON"/>
+            <tagSceneMap value="SCENE_2NR"/>
+            <tagSceneMap value="SCENE_EIS_SKYLINE_SNAPSHOT_MUL"/>
+        </SceneMode_List>
+    </Tag>
+</VendorTagClassifyMap>

@@ -1,0 +1,10 @@
+model_AWBCNNCCT_dx4.vdnn
+model_SceneDetect_dx4.vdnn
+model_ConsistNetCCT_fea_dx4.vdnn
+model_ConsistNetCCT_pre_dx4.vdnn
+trans_mat_2415_06X_2011_1X.txt
+trans_mat_2419_1X_2011_1X.txt
+trans_mat_2415_3X_2011_1X.txt
+trans_mat_2415_3X_2011_1X.txt
+trans_mat_2415_3X_2011_1X.txt
+2

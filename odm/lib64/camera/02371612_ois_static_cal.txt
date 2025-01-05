@@ -1,0 +1,7 @@
+Inputx:439
+Inputy:384.2
+target code:(12000,8192)(4384,8192)(8192,12492)(8192,3892)
+Ampx:280724
+Ampy:280724
+Delay:1500
+Frequency:40000

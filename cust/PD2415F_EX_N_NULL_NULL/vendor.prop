@@ -1,0 +1,16 @@
+ro.vendor.build.fingerprint=vivo/V2415_EEA/V2415:15/AP3A.240905.015.A2/compiler12032055:user/release-keys
+ro.product.vendor.name=V2415_EEA
+ro.product.vendor.device=V2415
+ro.vendor.product.model=V2415
+ro.product.vendor.model=V2415
+ro.vivo.product.model=PD2415F_EX
+ro.vivo.oem.model=
+ro.vendor.product.customize.bbk=N
+ro.vendor.vivo.product.model=PD2415F_EX
+ro.vendor.hardware.bbk=PD2415F_EXMA
+ro.vendor.vivo.hardware.version=PD2415F_EXMA
+ro.vendor.vivo.internet.name=
+ro.vendor.vivo.market.name=
+ro.vendor.product.model.bbk=PD2415F_EX
+ro.boot.product.hardware.sku=
+ro.build.software.version=PD2415F_EX_A_15.0.9.19.W30

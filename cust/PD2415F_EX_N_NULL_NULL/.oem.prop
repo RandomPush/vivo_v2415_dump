@@ -1,0 +1,58 @@
+
+ro.oem.version=V1.00.20150519
+ro.product.model=V2415
+ro.product.device=V2415
+ro.product.name=V2415
+ro.vivo.product.release.model=PD2415F_EX
+ro.product.customize.bbk=N
+ro.vivo.product.model=PD2415F_EX
+persist.sys.vivo.product.cust=N
+
+ro.product.country.region=N
+ro.product.customize.comercial=NULL
+
+ro.hardware.bbk=PD2415F_EXMA
+ro.vivo.hardware.version=PD2415F_EXMA
+ro.product.model.bbk=PD2415F_EX
+
+ro.com.google.ime.theme_id=5
+ro.com.google.ime.key_border = true
+ro.com.google.ime.corner_key_r = 25
+ro.com.google.ime.corner_key_l = 25
+ro.com.google.ime.kb_pad_port_r=5
+ro.com.google.ime.kb_pad_port_l=5
+ro.com.google.ime.kb_pad_port_b=2
+ro.com.google.ime.kb_pad_land_r=55
+ro.com.google.ime.kb_pad_land_l=55
+ro.com.google.ime.kb_pad_land_b=2
+ro.com.google.ime.key_popup = false
+ro.com.google.ime.number_row = true
+ro.com.google.ime.system_lm_dir=/data/language/
+
+
+
+persist.vivo.product.series=X-5G
+ro.quick_start.device_id=X200
+ro.quick_start.oem_id=0837
+ro.vivo.camera.watermark=vivo X200
+ro.vivo.product.release.name=X200
+ro.vivo.oem.name=PD2415F_EX_N_NULL_NULL
+ro.vivo.build.version=PD2415F_EX_A_15.0.9.19.W30
+ro.vivo.device.type=phone
+ro.system.vivo.tierlevel=4
+ro.system.vivo.searchlevel=2
+ro.com.google.clientidbase=android-vivo
+ro.com.google.clientidbase.cr=
+ro.com.google.clientidbase.ms=android-vivo-terr1-rso2
+ro.com.google.clientidbase.vs=android-vivo-terr1-rso2
+ro.com.google.clientidbase.tx=android-vivo-terr1-rso2
+ro.vivo.clientid.browser=android-vivo-terr1-rwo2
+ro.com.google.clientidbase.pg=android-vivo-deo2
+ro.com.google.acsa=true
+ro.com.google.lens.oem_camera_package=com.android.camera
+ro.build.netaccess.version=PD2415F_EX_A_15.0.9.19.W30
+ro.build.software.version=PD2415F_EX_A_15.0.9.19.W30
+ro.vivo.dyn.type=DYNN
+ro.system.vivo.dp.level=100
+
+ro.vivo.system.hardware.version=PD2415F_EXMA

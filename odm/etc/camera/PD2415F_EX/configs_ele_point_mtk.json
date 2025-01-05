@@ -1,0 +1,194 @@
+﻿{
+    "common": {
+        "seninfTop": "cd /sys/devices/platform/ ; find . -name \"*seninf*top\" -type d",
+        "phyPath": "/sys/devices/platform/@seninfTop/debug_ops",
+        "isRFpoweron": true
+    },
+    "config": [
+        {
+            "type": "后主3.2G_mode0",
+            "sensorID": "0",
+            "mode": "0",
+            "keyPoints": [
+                {
+                    "xPoint": 3,
+                    "yPoint": 0
+                },
+                {
+                    "xPoint": 10,
+                    "yPoint": 0
+                },
+                {
+                    "xPoint": 6,
+                    "yPoint": -10
+                },
+                {
+                    "xPoint": 6,
+                    "yPoint": 10
+                }
+            ],
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "后主2.0G_mode2",
+            "sensorID": "0",
+            "mode": "2",
+            "keyPoints": [
+               {
+                    "xPoint": 6,
+                    "yPoint": 0
+                },				
+				{
+                    "xPoint": 16,
+                    "yPoint": 0
+                },
+                {
+                    "xPoint": 10,
+                    "yPoint": -10
+                },
+                {
+                    "xPoint": 10,
+                    "yPoint": 10
+                }
+            ],
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "潜望1.6G_mode0",
+            "sensorID": "2",
+            "mode": "0",
+            "keyPoints": [
+                {
+                    "xPoint": 20,
+                    "yPoint": 0
+                },
+                {
+                    "xPoint": 28,
+                    "yPoint": -8
+                },
+                {
+                    "xPoint": 28,
+                    "yPoint": 8
+                }
+            ],
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "潜望1.0G_mode8",
+            "sensorID": "2",
+            "mode": "9",
+            "keyPoints": [
+                {
+                    "xPoint": 16,
+                    "yPoint": 0
+                },
+                {
+                    "xPoint": 28,
+                    "yPoint": -8
+                },
+                {
+                    "xPoint": 28,
+                    "yPoint": 8
+                }
+            ],
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "广角1.7G_mode0",
+            "sensorID": "3",
+            "mode": "0",
+            "keyPoints": [
+                {
+                    "xPoint": 17,
+                    "yPoint": 0
+                },
+                {
+                    "xPoint": 0,
+                    "yPoint": -15
+                },
+                {
+                    "xPoint": 0,
+                    "yPoint": 15
+                }
+            ],
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "广角1.4G_mode9",
+            "sensorID": "3",
+            "mode": "9",
+            "keyPoints": [
+                {
+                    "xPoint": 20,
+                    "yPoint": 0
+                },
+                {
+                    "xPoint": 0,
+                    "yPoint": -15
+                },
+                {
+                    "xPoint": 0,
+                    "yPoint": 15
+                }
+            ],
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "前置1.7G_mode0",
+            "sensorID": "1",
+            "mode": "0",
+            "keyPoints": [
+                {
+                    "xPoint": 17,
+                    "yPoint": 0
+                },
+                {
+                    "xPoint": 0,
+                    "yPoint": -15
+                },
+                {
+                    "xPoint": 0,
+                    "yPoint": 15
+                }
+            ],
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "前置1.0Gbps_mode8",
+            "sensorID": "1",
+            "mode": "8",
+            "keyPoints": [
+                {
+                    "xPoint": 26,
+                    "yPoint": 0
+                },
+                {
+                    "xPoint": 0,
+                    "yPoint": -15
+                },
+                {
+                    "xPoint": 0,
+                    "yPoint": 15
+                }
+            ],
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        }
+    ]
+}

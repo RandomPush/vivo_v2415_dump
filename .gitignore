@@ -1,0 +1,15 @@
+system/system/framework/vivo-res.apk
+system/system/app/VivoGallery/VivoGallery.apk
+system/system/app/LiveWallpaperBoxRes/LiveWallpaperBoxRes.apk
+system/system/app/VivoCamera/VivoCamera.apk
+system/system/priv-app/Settings/Settings.apk
+product/app/Photos/Photos.apk
+product/app/YouTube/YouTube.apk
+product/app/Gmail2/Gmail2.apk
+product/app/Maps/Maps.apk
+product/app/TrichromeLibrary64/TrichromeLibrary64.apk
+product/priv-app/Messages/Messages.apk
+product/priv-app/Velvet/Velvet.apk
+product/priv-app/GmsCore/GmsCore.apk
+vendor/lib64/mt6991/libaibc_tuning_p2.so
+vendor/lib64/mt6991/libaibc_tuning.so

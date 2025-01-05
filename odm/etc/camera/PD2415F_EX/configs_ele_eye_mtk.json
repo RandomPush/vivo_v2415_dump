@@ -1,0 +1,83 @@
+﻿{
+    "common":{
+		"seninfTop":"cd /sys/devices/platform/ ; find . -name \"*seninf*top\" -type d",
+        "phyPath":"/sys/devices/platform/@seninfTop/debug_ops",
+		"isRFpoweron": true
+    },
+    "config":[
+		{
+            "type":"潜望_mode0",
+			"sensorID":"2",
+            "mode":"0",
+            "y_mtk":{
+                "start":"-20",
+				"end":"20",
+				"step":"1"
+				},
+			"x_mtk":{
+                "start":"0",
+				"end":"31",
+				"step":"1"
+				},
+            "closeCameraDuration": "1000",
+			"flushCRCDuration":"600",
+            "streamOnDuration":"300",
+            "ischecked":true
+        },{
+            "type":"后主_mode0",
+			"sensorID":"0",
+            "mode":"0",
+            "y_mtk":{
+                "start":"-20",
+				"end":"20",
+				"step":"1"
+				},
+			"x_mtk":{
+                "start":"0",
+				"end":"17",
+				"step":"1"
+				},
+            "closeCameraDuration": "1000",
+			"flushCRCDuration":"600",
+            "streamOnDuration":"300",
+            "ischecked":true
+        },{
+            "type":"前摄1.7G_mode0",
+			"sensorID":"1",
+            "mode":"0",
+            "y_mtk":{
+                "start":"-20",
+				"end":"20",
+				"step":"1"
+				},
+			"x_mtk":{
+                "start":"0",
+				"end":"26",
+				"step":"1"
+				},
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration":"300",
+            "ischecked":true
+        },{
+            "type":"广角1.7G_mode0",
+			"sensorID":"3",
+            "mode":"0",
+            "y_mtk":{
+                "start":"-20",
+				"end":"20",
+				"step":"1"
+				},
+			"x_mtk":{
+                "start":"0",
+				"end":"26",
+				"step":"1"
+				},
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration":"300",
+            "ischecked":true
+        }
+    ]
+}
+

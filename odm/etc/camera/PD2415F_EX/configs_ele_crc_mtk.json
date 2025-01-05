@@ -1,0 +1,362 @@
+﻿{
+    "common": {
+        "seninfTop": "cd /sys/devices/platform/ ; find . -name \"*seninf*top\" -type d",
+        "phyPath": "/sys/devices/platform/@seninfTop/debug_ops",
+        "isRFpoweron": false
+    },
+    "config": [
+        {
+            "type": "后主_mode0",
+            "sensorID": "0",
+            "mode": "0",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "后主_mode2",
+            "sensorID": "0",
+            "mode": "2",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "后主_mode3",
+            "sensorID": "0",
+            "mode": "3",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "后主_mode4",
+            "sensorID": "0",
+            "mode": "4",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "后主_mode5",
+            "sensorID": "0",
+            "mode": "5",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "后主_mode7",
+            "sensorID": "0",
+            "mode": "7",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "后主_mode9",
+            "sensorID": "0",
+            "mode": "9",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "后主_mode10",
+            "sensorID": "0",
+            "mode": "10",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "后主_mode12",
+            "sensorID": "0",
+            "mode": "12",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "后主_mode13",
+            "sensorID": "0",
+            "mode": "13",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "后主_mode15",
+            "sensorID": "0",
+            "mode": "15",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "后主_mode16",
+            "sensorID": "0",
+            "mode": "16",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "后主_mode18",
+            "sensorID": "0",
+            "mode": "18",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "后主_mode20",
+            "sensorID": "0",
+            "mode": "20",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "后主_mode22",
+            "sensorID": "0",
+            "mode": "22",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "后主_mode24",
+            "sensorID": "0",
+            "mode": "24",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "后主_mode25",
+            "sensorID": "0",
+            "mode": "25",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "潜望_mode0",
+            "sensorID": "2",
+            "mode": "0",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "潜望_mode2",
+            "sensorID": "2",
+            "mode": "2",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "潜望_mode5",
+            "sensorID": "2",
+            "mode": "5",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "潜望_mode6",
+            "sensorID": "2",
+            "mode": "6",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "潜望_mode7",
+            "sensorID": "2",
+            "mode": "7",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "潜望_mode8",
+            "sensorID": "2",
+            "mode": "8",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "潜望_mode9",
+            "sensorID": "2",
+            "mode": "9",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "潜望_mode12",
+            "sensorID": "2",
+            "mode": "12",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "潜望_mode13",
+            "sensorID": "2",
+            "mode": "13",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "潜望_mode14",
+            "sensorID": "2",
+            "mode": "14",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "潜望_mode15",
+            "sensorID": "2",
+            "mode": "15",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "潜望_mode16",
+            "sensorID": "2",
+            "mode": "16",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "广角_mode0",
+            "sensorID": "3",
+            "mode": "0",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "广角_mode2",
+            "sensorID": "3",
+            "mode": "2",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "广角_mode5",
+            "sensorID": "3",
+            "mode": "5",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "广角_mode6",
+            "sensorID": "3",
+            "mode": "6",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "广角_mode9",
+            "sensorID": "3",
+            "mode": "9",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "广角_mode10",
+            "sensorID": "3",
+            "mode": "10",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "广角_mode11",
+            "sensorID": "3",
+            "mode": "11",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "广角_mode19",
+            "sensorID": "3",
+            "mode": "19",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "前置_mode0",
+            "sensorID": "1",
+            "mode": "0",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "前置_mode2",
+            "sensorID": "1",
+            "mode": "2",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "前置_mode5",
+            "sensorID": "1",
+            "mode": "5",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "前置_mode8",
+            "sensorID": "1",
+            "mode": "8",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "前置_mode9",
+            "sensorID": "1",
+            "mode": "9",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "前置_mode10",
+            "sensorID": "1",
+            "mode": "10",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        },{
+            "type": "前置_mode11",
+            "sensorID": "1",
+            "mode": "11",
+            "closeCameraDuration": "1000",
+			"flushCRCDuration": "600",
+            "streamOnDuration": "300",
+            "ischecked": true
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CameraConfigBase version="1.0.0">
+    <ENABLE_ZOOM_CONTROL value="1" />
+    <PROJ_SUPPORT_SAT_REMOSAIC value="1" />
+    <ENABLE_PARALLEL_REQUEST value="1" />
+    <SUPPORT_PROLONG value="1" />
+    <EIS_CACHE_COUNT value="35" />
+    <PDAF_CONFIDENCE_THRESHOLD value="20" />
+    <ENABLE_HWME value="1" />
+    <USE_PHYMETA_IN_VSS value="1" />
+    <ENABLE_FUSION_JUDGMENT value="0" />
+    <ENABLE_3RDSAT value="1" />
+    <DARKSCENE_EXPTIME_LIMIT value="50.0" />
+    <!-- g_defaultMapStatus -->
+    <DEVICE_CATEGORY_MAP_STATUS>
+        <DEVICE_CATEGORY value="REALTIME">
+            <NUM_OF_DEVICE value="1" id="WIDE" />
+            <NUM_OF_DEVICE value="1" id="MASTER_FRONT" />
+            <NUM_OF_DEVICE value="1" id="ULTRAWIDE" />
+            <NUM_OF_DEVICE value="1" id="TELE" />
+            <NUM_OF_DEVICE value="1" id="ULTRATELE" />
+            <NUM_OF_DEVICE value="1" id="SECURECAM" />
+            <NUM_OF_DEVICE value="1" id="BOKEH_BACK" />
+            <NUM_OF_DEVICE value="1" id="BOKEH_TELE" />
+            <NUM_OF_DEVICE value="1" id="BOKEH_TELE_WIDE" />
+            <NUM_OF_DEVICE value="1" id="SAT" />
+            <NUM_OF_DEVICE value="1" id="MULTICAM" />
+            <NUM_OF_DEVICE value="0" id="VSE" />
+            <NUM_OF_DEVICE value="0" id="CAPTURE" />
+            <NUM_OF_DEVICE value="0" id="WPE" />
+            <NUM_OF_DEVICE value="0" id="FD" />
+            <NUM_OF_DEVICE value="1" id="BOKEH_ULTRATELE" />
+            <NUM_OF_DEVICE value="1" id="BOKEH_MOON" />
+            <NUM_OF_DEVICE value="1" id="BOKEH_TELE_ULTRAWIDE" />
+            <NUM_OF_DEVICE value="1" id="BOKEH_FOOD2" />
+            <NUM_OF_DEVICE value="0" id="IC" />
+            <NUM_OF_DEVICE value="0" id="MEMC" />
+            <NUM_OF_DEVICE value="0" id="NOUSE_DEVICE" />
+        </DEVICE_CATEGORY>
+        <DEVICE_CATEGORY value="REALTIME_Y2Y">
+            <NUM_OF_DEVICE value="0" id="WIDE" />
+            <NUM_OF_DEVICE value="0" id="MASTER_FRONT" />
+            <NUM_OF_DEVICE value="0" id="ULTRAWIDE" />
+            <NUM_OF_DEVICE value="0" id="TELE" />
+            <NUM_OF_DEVICE value="0" id="ULTRATELE" />
+            <NUM_OF_DEVICE value="0" id="SECURECAM" />
+            <NUM_OF_DEVICE value="0" id="BOKEH_BACK" />
+            <NUM_OF_DEVICE value="0" id="BOKEH_TELE" />
+            <NUM_OF_DEVICE value="0" id="BOKEH_TELE_WIDE" />
+            <NUM_OF_DEVICE value="0" id="SAT" />
+            <NUM_OF_DEVICE value="0" id="MULTICAM" />
+            <NUM_OF_DEVICE value="8" id="VSE" />
+            <NUM_OF_DEVICE value="3" id="CAPTURE" />
+            <NUM_OF_DEVICE value="6" id="WPE" />
+            <NUM_OF_DEVICE value="0" id="FD" />
+            <NUM_OF_DEVICE value="0" id="BOKEH_ULTRATELE" />
+            <NUM_OF_DEVICE value="0" id="BOKEH_MOON" />
+            <NUM_OF_DEVICE value="0" id="BOKEH_TELE_ULTRAWIDE" />
+            <NUM_OF_DEVICE value="0" id="BOKEH_FOOD2" />
+            <NUM_OF_DEVICE value="1" id="IC" />
+            <NUM_OF_DEVICE value="1" id="MEMC" />
+            <NUM_OF_DEVICE value="0" id="NOUSE_DEVICE" />
+        </DEVICE_CATEGORY>
+        <DEVICE_CATEGORY value="OFFLINE_IMAGE_ECHO">
+            <NUM_OF_DEVICE value="0" id="WIDE" />
+            <NUM_OF_DEVICE value="0" id="MASTER_FRONT" />
+            <NUM_OF_DEVICE value="0" id="ULTRAWIDE" />
+            <NUM_OF_DEVICE value="0" id="TELE" />
+            <NUM_OF_DEVICE value="0" id="ULTRATELE" />
+            <NUM_OF_DEVICE value="0" id="SECURECAM" />
+            <NUM_OF_DEVICE value="0" id="BOKEH_BACK" />
+            <NUM_OF_DEVICE value="0" id="BOKEH_TELE" />
+            <NUM_OF_DEVICE value="0" id="BOKEH_TELE_WIDE" />
+            <NUM_OF_DEVICE value="0" id="SAT" />
+            <NUM_OF_DEVICE value="0" id="MULTICAM" />
+            <NUM_OF_DEVICE value="0" id="VSE" />
+            <NUM_OF_DEVICE value="8" id="CAPTURE" />
+            <NUM_OF_DEVICE value="0" id="WPE" />
+            <NUM_OF_DEVICE value="0" id="FD" />
+            <NUM_OF_DEVICE value="0" id="BOKEH_ULTRATELE" />
+            <NUM_OF_DEVICE value="0" id="BOKEH_MOON" />
+            <NUM_OF_DEVICE value="0" id="BOKEH_TELE_ULTRAWIDE" />
+            <NUM_OF_DEVICE value="0" id="BOKEH_FOOD2" />
+            <NUM_OF_DEVICE value="0" id="IC" />
+            <NUM_OF_DEVICE value="0" id="MEMC" />
+            <NUM_OF_DEVICE value="0" id="NOUSE_DEVICE" />
+        </DEVICE_CATEGORY>
+    </DEVICE_CATEGORY_MAP_STATUS>
+    <!-- SatCameraIndexValToCamType -->
+    <SAT_CAMERA_INDEX_VAL_TO_CAMTYPE>
+        <CAM_IDX_ULTRAWIDE value="ULTRAWIDE" />
+        <CAM_IDX_WIDE value="WIDE" />
+        <CAM_IDX_TELE value="TELE" />
+        <CAM_IDX_ULTRATELE value="ULTRATELE" />
+    </SAT_CAMERA_INDEX_VAL_TO_CAMTYPE>
+    <MEMC_SEAMLESS_PARAM>
+        <PREVIEW_TEMPERATURE_RANGE_LOWER value="100" />
+        <PREVIEW_TEMPERATURE_RANGE_UPPER value="100" />
+        <!-- no video temperature range currently -->
+        <VIDEO_TEMPERATURE_RANGE_LOWER value="100" />
+        <VIDEO_TEMPERATURE_RANGE_UPPER value="100" />
+        <SCENE_MODE value="SCENE_PLATFORM_SAT_ALGO_MEMC">
+            <DARK_VIDEO_MODE_LIST>
+                <MODE value="3" />
+                <MODE value="4" />
+                <MODE value="13" />
+                <MODE value="14" />
+            </DARK_VIDEO_MODE_LIST>
+        </SCENE_MODE>
+        <SCENE_MODE value="SCENE_EIS_RAW_VIDEO_ALGO_MEMC">
+            <DARK_VIDEO_MODE_LIST>
+                <MODE value="4" />
+                <MODE value="14" />
+            </DARK_VIDEO_MODE_LIST>
+        </SCENE_MODE>
+        <PLATFORM_EIS_FLUSH_CACHE_NUM_WITH_MEMC value="2" />
+    </MEMC_SEAMLESS_PARAM>
+    <!-- depend on MTK platform p1 enque size, current: 4 -->
+    <ZOOMIN_MAX_EARLY_FRAME  value="3" />
+    <ZOOMOUT_MAX_EARLY_FRAME value="2" />
+    <VCF_REQUEST_BUFFER_RETRY_CNT value="4" />
+    <VCF_REQUEST_BUFFER_RETRY_INTERVAL_US value="30000" />
+</CameraConfigBase>

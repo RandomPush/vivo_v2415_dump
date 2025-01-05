@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * vivo copyright
+ */
+-->
+<settings version="1.0">
+
+<!-- for adapter -->
+<!-- master imx989 4096*3072  id 0
+       ultrawide JN1 4080*3060 id 3
+       3X OV64b 4608*3456 id 2 -->
+<struct-array name="satSetting">
+    <item>
+        <string name="platformCameraType">Wide</string>
+        <string name="cameratype">Wide</string>
+        <integer name="cameraid">4</integer>
+        <bool name="isSATEnable">true</bool>
+        <integer name="width">4080</integer>
+        <integer name="height">3060</integer>
+        <integer name="binValue">1</integer>
+        <float name="basicZoomRatio">0.6</float>
+         <float name="roiRatio">1.0</float>
+	<string name="cameraRoleType">UltraWide</string>
+    </item>
+    <item>
+        <string name="platformCameraType">Master</string>
+        <string name="cameratype">Master</string>
+        <integer name="cameraid">2</integer>
+        <bool name="isSATEnable">true</bool>
+        <integer name="width">4096</integer>
+        <integer name="height">3072</integer>
+        <integer name="binValue">1</integer>
+        <float name="basicZoomRatio">1</float>
+         <float name="roiRatio">2.0</float>
+	<string name="cameraRoleType">Master</string>
+    </item>
+    <item>
+	<string name="platformCameraType">Tele3xLong</string>
+        <string name="cameratype">Tele</string>
+        <integer name="cameraid">3</integer>
+        <bool name="isSATEnable">true</bool>
+        <integer name="width">4096</integer>
+        <integer name="height">3072</integer>
+        <integer name="binValue">1</integer>
+        <float name="basicZoomRatio">3.0</float>
+         <float name="roiRatio">2.0</float>
+	<string name="cameraRoleType">Tele</string>
+    </item>
+</struct-array>
+
+<!-- for adapter -->
+<!-- master imx989 4096*3072  id 0
+       ultrawide JN1 4080*3060 id 3
+       3X OV64b 4608*3456 id 2 -->
+<!-- slaveCameratype bokeh slave camera -->
+<!-- activewidth/height sensor setting width height(sensorr out width/height)-->
+<!-- activeZoomRatio (sensor out ZoomRatio)-->
+<struct-array name="satBokehSetting">
+    <item>
+        <string name="cameratype">Wide</string>
+        <string name="slaveCameratype">NONE</string>
+        <integer name="cameraid">4</integer>
+        <bool name="isSATEnable">true</bool>
+        <integer name="width">4080</integer>
+        <integer name="height">3060</integer>
+        <integer name="activewidth">4080</integer>
+        <integer name="activeheight">3060</integer>
+        <integer name="binValue">1</integer>
+        <float name="basicZoomRatio">0.6</float>
+        <float name="activeZoomRatio">0.6</float>
+         <float name="roiRatio">1.0</float>
+	 <string name="cameraRoleType">UltraWide</string>
+    </item>
+    <item>
+        <string name="cameratype">Master</string>
+        <string name="slaveCameratype">Wide</string>
+        <integer name="cameraid">2</integer>
+        <bool name="isSATEnable">true</bool>
+        <integer name="width">4096</integer>
+        <integer name="height">3072</integer>
+        <integer name="activewidth">4096</integer>
+        <integer name="activeheight">3072</integer>
+        <integer name="binValue">1</integer>
+        <float name="basicZoomRatio">1</float>
+        <float name="activeZoomRatio">1</float>
+         <float name="roiRatio">2.0</float>
+	 <string name="cameraRoleType">Master</string>
+    </item>
+    <item>
+        <string name="cameratype">Tele</string>
+        <string name="slaveCameratype">Master</string>
+        <integer name="cameraid">3</integer>
+        <bool name="isSATEnable">true</bool>
+        <integer name="width">4096</integer>
+        <integer name="height">3072</integer>
+        <integer name="activewidth">4096</integer>
+        <integer name="activeheight">3072</integer>
+        <integer name="binValue">1</integer>
+        <float name="basicZoomRatio">3.0</float>
+        <float name="activeZoomRatio">3.0</float>
+         <float name="roiRatio">2.0</float>
+	 <string name="cameraRoleType">Tele</string>
+    </item>
+</struct-array>
+
+<float name="ultraEisMarginRatio">0.3</float>
+
+<bool name="sat_care_flash">true</bool>
+
+<!-- for adapter -->
+<!-- portrait sat bokeh, master imx866 4096*3072  id 0
+       ultrawide JN1 4080*3060 id 3
+       3X OV64b 4608*3456 id 2 -->
+<struct-array name="satBokehFallbackSetting">
+    <item>
+        <string name="cameratype">Wide</string>
+        <integer name="cameraid">4</integer>
+        <integer-array name="roiEnable">0,0,0</integer-array>
+        <integer-array name="fallbackEnable">0,0,0</integer-array>
+    </item>
+    <item>
+        <string name="cameratype">Master</string>
+        <integer name="cameraid">2</integer>
+        <integer-array name="roiEnable">1,0,0</integer-array>
+        <integer-array name="fallbackEnable">1,1,1</integer-array>
+    </item>
+    <item>
+        <string name="cameratype">Tele4x</string>
+        <integer name="cameraid">3</integer>
+        <integer-array name="roiEnable">0,0,0</integer-array>
+        <integer-array name="fallbackEnable">1,1,0</integer-array>
+    </item>
+</struct-array>
+
+<integer name="wideSensorType">14</integer>
+<integer name="teleSensorType">17</integer>
+
+<float name="bypassEISZoomRatio">9.5</float>
+<integer name="needWindowShift">1</integer>
+<!-- 4k走inline -->
+<!-- 示例，默认已经是false, 需求，X系列配置成true -->
+<bool name="enable4kInline">true</bool>
+<integer  name="slowShutterVersion">1</integer>
+</settings>

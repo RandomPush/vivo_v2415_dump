@@ -1,0 +1,29 @@
+{
+    "version":"1",
+    "featureConfig":{
+        "SupportMicroCamera":[5,"是否支持超微距功能： 0 （不支持微距）；1 （有微距摄像头，支持微距）；2（无微距镜头，使用广角摄像头做超微距）；4（仅支持长焦微距功能）；5（支持长焦微距+超微距自动）"],
+        "SupportSatPip":[1,"是否支持高倍率导航框"],
+        "SupportGimbal":[1,"是否支持云台防抖,通常支持的是主摄"],
+        "SupportFilmFormat":[1,"是否支持电影画幅"],
+        "SupportVsyncRender":[1,"是否支持Vsync"],
+        "SupportWeatherTuning":[1,"是否支持天气对效果优化,某个高通平台的功能，三星暂不支持"],
+        "SupportVcf":[1,"是否支持VCF"],
+        "SupportRefocusHALRotate":[1,"双摄虚化是否底层旋转，目前只有MTK平台是底层旋转的"],
+        "SupportCurrentModeVersion":[0,"是否是currentmode重构后的代码"],
+        "SupportObjectTrackVersion":[6.0,"追焦支持版本 默认1.0"],
+        "SupportObjectTrackMinZoomRatio":[0.6,"追焦支持的minzoomratio"],
+        "SupportObjectTrackMaxZoomRatio":[6.1,"追焦支持的maxzoomratio"],
+        "SupportObjectTrackMaxLuxIndex":[400,"追焦支持的最大LuxIndex"],
+        "SupportFrontVideo2PassMCNR":[1,"是否支持前置2PassMCNR"],
+        "SupportFrontAndBackSensorSwitch":[1,"是否支持录像前后置切换"],
+        "SupportAPPDistortionCorrection":["remosaic,advanced,streamer_camera,tilt_shift","应用畸变矫正支持的模式，高像素 专业模式拍照 时光慢门 移轴模式"],
+        "SupportVideoModeVersion":[1,"是否支持VideoModeVersion"],
+        "SupportSetVivoHidlZoomTag":[1,"是否支持AIDL更新zoomRatio"],
+        "SupportAppEquivalentFocalLength":[1,"是否支持app等效焦距计算"],
+        "SupportAILut":[1, 5,"匹配格式: 是否支持AILut，打开AILut的场景"],
+        "SupportAECtrlMoonAnimation":[1,"匹配格式: 是否支持MAAE优化功能 0: 不支持 1: 支持"]
+    },
+    "halVersion":[2, "halVersion索引"],
+    "groupZoomRatioMap":[3, 1.0, 4, 1.00001, 11, 1.00003, 16, 1.00005, "配置格式:bokehSessionId, zoomRatio; 3:人像1x; 4:人像2x; 11:美食2x; 16:人像4x"],
+    "vivoModEnabled":[1, "this is vivoModEnabled"]
+}

@@ -1,0 +1,1930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StreamConfigInfo version="1.0.0">
+    <SceneMode value="SCENE_NORMAL" trim="true">
+        <Stream id="REAL_YUV_WIDE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_TELE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_GAINMAP_IN" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_GAINMAP_IN" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_GAINMAP_IN" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_GAINMAP_IN" size="GainmapYuvSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_GAINMAP_OUT" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_R2Y_WIDE_GAINMAP_IN" size="GainmapYuvSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_GAINMAP_OUT" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_R2Y_TELE_GAINMAP_IN" size="GainmapYuvSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_GAINMAP_OUT" size="GainmapSize" format="Format_P010"/>
+    </SceneMode>
+    <SceneMode value="SCENE_FRONT" trim="false">
+        <Stream id="REAL_YUV_FRONT_OUT" size="PreviewSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_FRONT_QCFA_OUT" size="QCFASize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_OUT" size="SensorSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_FRONT_QCFA_IN" size="QCFASize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_QCFA_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_FRONT_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_FRONT_QCFA_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_FRONT_SENSOR_IN" size="SensorSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_FRONT_ENGINEER" trim="true">
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_FRONT_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_OIS_STATIC_CALIBRATION" trim="true">
+        <Stream id="REAL_YUV_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_VIDEO_EXTINP_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_FRONT_VIDEO" trim="false">
+        <Stream id="REAL_YUV_FRONT_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_FRONT_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_VIDEO_DIMENSION" trim="true">
+        <Stream id="REAL_YUV_WIDE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_FRONT_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_FRONT_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_FRONT_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_SAT_BOKEH" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="PreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_SAT_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="PreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_SAT_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_TINY_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="PreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="PreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_TELE_PIP_IN" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_PIP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_TINY_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_TINY_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_JPGPACK_SUBJPG_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_JPGPACK_SUBJPG_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_JPGPACK_SUBJPG_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_SAT_VIDEO" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="PreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="PreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="PreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="PreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="PreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="PreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_VIDEO_EXTINP_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_BOKEH" trim="true">
+        <Stream id="REAL_YUV_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_JPGPACK_SUBJPG_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_JPGPACK_SUBJPG_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_JPGPACK_SUBJPG_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_BOKEH_ZOOM" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="PreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="PreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_SHORTEX_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_SHORTEX_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="PreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="PreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_SHORTEX_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_SHORTEX_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_SHORTEX_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_SHORTEX_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_JPGPACK_SUBJPG_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_JPGPACK_SUBJPG_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_JPGPACK_SUBJPG_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_QCFA_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_QCFA_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="PreviewSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="PreviewSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="PreviewSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="PreviewSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_BOKEH_ENGINEER" trim="true">
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_ADVANCED_VIDEO" trim="true">
+        <Stream id="REAL_YUV_WIDE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_SAT_VIDEO_FAST" trim="false">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="PreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="PreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="PreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_SAT_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_SAT_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_SAT_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="PreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="PreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="PreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_VIDEO_FAST" trim="true">
+        <Stream id="REAL_YUV_WIDE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain10"/>
+    </SceneMode>
+    <SceneMode value="SCENE_PROFESSION" trim="true">
+        <Stream id="REAL_YUV_WIDE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_YUV_TELE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_SUPER_RAW" trim="true">
+        <Stream id="REAL_YUV_WIDE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_TELE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_3RD_APP_BEAUTY" trim="false">
+        <Stream id="REAL_YUV_FRONT_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_OUT" size="SensorSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_FRONT_QCFA_IN" size="QCFASize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_QCFA_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_FRONT_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_FRONT_QCFA_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_3RD_APP_BEAUTY_VIDEO" trim="true">
+        <Stream id="REAL_YUV_FRONT_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_FRONT_WPE_IN" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_FRONT_VIDEO_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_OUT" size="SensorSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_FRONT_QCFA_IN" size="QCFASize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_QCFA_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_FRONT_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_FRONT_QCFA_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_3RD_APP_SAT" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_SAT_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_SAT_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_3RD_ENG_SAT" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="PreviewSize" format="Format_YCBCR_420_888" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_SAT_OUT" size="PreviewSize" format="Format_YCBCR_420_888" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="PreviewSize" format="Format_YCBCR_420_888" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_SAT_OUT" size="PreviewSize" format="Format_YCBCR_420_888" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="PreviewSize" format="Format_YCBCR_420_888" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_SAT_OUT" size="PreviewSize" format="Format_YCBCR_420_888" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain16" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain16" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain16" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="PreviewSize" format="Format_YCBCR_420_888" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="PreviewSize" format="Format_YCBCR_420_888" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="PreviewSize" format="Format_YCBCR_420_888" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="REAL_Y2Y_OUT" size="PreviewSize" format="Format_YCBCR_420_888" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="SensorSize" format="Format_YCBCR_420_888" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="SensorSize" format="Format_YCBCR_420_888" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="SensorSize" format="Format_YCBCR_420_888" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_4K_SINGLE_PREVIEW" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_IC_ENGINEER" trim="false">
+        <Stream id="REAL_YUV_WIDE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_WIDE_IN" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_WIDE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_IC_IN" size="PreviewSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_SAT_VIDEO_IC_HWME" trim="false">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_HWME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_HWME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_HWME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_HWME_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WPE_VIDEO_OUT" size="VideoSize" format="Format_P010"/>
+        <Stream id="REAL_Y2Y_INPLACE_VIDEO_IC_IN" size="VideoSize" format="Format_P010"/>
+        <Stream id="REAL_Y2Y_VIDEO_IC_EXTINP_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_SKYLINE_SNAPSHOT" trim="true">
+        <Stream id="REAL_YUV_ULTRAWIDE_P010_OUT" size="EisPreviewSize" format="Format_P010"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_P010_IN" size="PreviewSize" format="Format_P010"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_P010_OUT" size="EisPreviewSize" format="Format_P010"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_Y2Y_P010_IN_1" size="PreviewSize" format="Format_P010"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_SKYLINE_VIDEO" trim="true">
+        <Stream id="REAL_YUV_ULTRAWIDE_OUT" size="EisVideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_VIDEO_OUT" size="EisVideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_IN" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_VIDEO_IN" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_VIDEO_EXTINP_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_SKYLINE_SNAPSHOT_MUL" trim="true">
+        <Stream id="REAL_YUV_ULTRAWIDE_P010_OUT" size="PreviewSize" format="Format_P010"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_P010_IN" size="PreviewSize" format="Format_P010"/>
+        <Stream id="REAL_Y2Y_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_P010_OUT" size="PreviewSize" format="Format_P010"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_P010_IN_1" size="PreviewSize" format="Format_P010"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_GAINMAP_IN" size="GainmapYuvSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_GAINMAP_OUT" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_R2Y_WIDE_GAINMAP_IN" size="GainmapYuvSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_GAINMAP_OUT" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_Y2J_WIDE_GAINMAP_IN" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_GAINMAP_IN" size="GainmapSize" format="Format_P010"/>
+    </SceneMode>
+    <SceneMode value="SCENE_NILEIS_SINGLE_VIDEO" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_FRONT_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_VIDEO_WPE_EXTINP_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_VIDEO_WPE_EXTINP_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_TELE_VIDEO_WPE_EXTINP_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_FRONT_VIDEO_WPE_EXTINP_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_FRONT_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_NILEIS_SINGLE_VIDEO_AFBC" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_FRONT_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_VIDEO_WPE_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_VIDEO_WPE_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_TELE_VIDEO_WPE_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_FRONT_VIDEO_WPE_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_FRONT_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_NILEIS_SINGLE_VIDEO_MEMC" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_FRONT_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_VIDEO_WPE_EXTINP_OUT" size="VideoSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_VIDEO_WPE_EXTINP_OUT" size="VideoSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_VIDEO_WPE_EXTINP_OUT" size="VideoSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_FRONT_VIDEO_WPE_EXTINP_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_FRONT_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y3_MEMC_VIDEO_EXTINP_IN" size="VideoSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+
+    <SceneMode value="SCENE_EIS_SINGLE_VIDEO_LOG2" trim="true">
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_Y2Y2_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_ULTRAWIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_TELE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_FRONT_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_WIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_ULTRAWIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_TELE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_FRONT_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_RAW_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_RAW_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_RAW_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_Y2Y_FRONT_RAW_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_Y2Y_WIDE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_TELE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_FRONT_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_FRONT_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_FRONT_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y2_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y2_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_TELE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y2_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_FRONT_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y2_FRONT_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_WIDE_ME_VIDEO_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y2_WIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_ULTRAWIDE_ME_VIDEO_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y2_ULTRAWIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_TELE_ME_VIDEO_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y2_TELE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_FRONT_ME_VIDEO_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y2_FRONT_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_SINGLE_VIDEO_LOG2_4K" trim="true">
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_Y2Y2_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_ULTRAWIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_TELE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_FRONT_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_WIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_ULTRAWIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_TELE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_FRONT_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_RAW_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_RAW_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_RAW_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_Y2Y_FRONT_RAW_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_Y2Y_WIDE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_TELE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_VIDEO_OUT" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_VIDEO_OUT" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_TELE_VIDEO_OUT" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_FRONT_VIDEO_OUT" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_FRONT_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_FRONT_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_FRONT_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_VIDEO_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_VIDEO_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_F1_VIDEO_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_FRONT_F1_VIDEO_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y2_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y2_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_TELE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y2_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_FRONT_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y2_FRONT_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_WIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_ULTRAWIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_TELE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_PLATFORM_SAT" trim="true">
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_PLATFORM_SAT_ALGO_MEMC" trim="true">
+        <Stream id="REAL_YUV_VIDEO_EXTINP_OUT" size="VideoSize" format="Format_ImplementationDefined"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_NILEIS_SAT_VIDEO_MEMC" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_INPLACE_WPE_VIDEO_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_VIDEO_WPE_EXTINP_OUT" size="VideoSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y3_MEMC_VIDEO_EXTINP_IN" size="VideoSize" format="Format_ImplementationDefined"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_NILEIS_SINGLE_FILM_VIDEO" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_FRONT_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_WPE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_WPE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_TELE_WPE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_FRONT_WPE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_WIDE_VIDEO_WPE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_VIDEO_WPE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_TELE_VIDEO_WPE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_FRONT_VIDEO_WPE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_FRONT_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_SINGLE_FILM" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_FRONT_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_WIDE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_TELE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_FRONT_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_FRONT_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_FRONT_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_FRONT_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_FRONT_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_FRONT_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_NILEIS_SAT_VIDEO" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_INPLACE_WPE_VIDEO_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_VIDEO_WPE_EXTINP_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_NILEIS_SAT_VIDEO_AFBC" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_INPLACE_WPE_VIDEO_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_VIDEO_WPE_OUT" size="EisVideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_NILEIS_SAT_FAST" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_INPLACE_WPE_VIDEO_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_VIDEO_WPE_EXTINP_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_NILEIS_SAT_VIDEO_AISEGMENT" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y2_INPLACE_WPE_IN" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y2_INPLACE_WPE_VIDEO_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y2_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y2_VIDEO_WPE_EXTINP_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_NILEIS_4K_SAT_VIDEO" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_OUT" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_INPLACE_WPE_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_INPLACE_WPE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_VIDEO_WPE_EXTINP_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_2NR" trim="true">
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="PreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="PreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="PreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="PreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="PreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="PreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_TELE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_GAINMAP_IN" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_GAINMAP_IN" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_Y2J_TELE_GAINMAP_IN" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_JPGPACK_SUBJPG_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_JPGPACK_SUBJPG_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_JPGPACK_SUBJPG_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_GAINMAP_IN" size="GainmapYuvSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_GAINMAP_OUT" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_R2Y_WIDE_GAINMAP_IN" size="GainmapYuvSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_GAINMAP_OUT" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_R2Y_TELE_GAINMAP_IN" size="GainmapYuvSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_GAINMAP_OUT" size="GainmapSize" format="Format_P010"/>
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_4K_VIDEO_2NR" trim="true">
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_2NR_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_2NR_IN" size="EisVideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_OUT" size="EisPreviewSize" format="Format_Pack_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_OUT" size="EisPreviewSize" format="Format_Pack_P010"/>
+        <Stream id="REAL_Y2Y2_WIDE_VSE_IN" size="EisPreviewSize" format="Format_Pack_P010"/>
+        <Stream id="REAL_Y2Y2_ULTRAWIDE_VSE_IN" size="EisPreviewSize" format="Format_Pack_P010"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_2NR_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_2NR_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_2NR_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_2NR_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_WIDE_VSE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_ULTRAWIDE_VSE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_NONEIS_4K_VIDEO_2NR" trim="true">
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="VideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="VideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_2NR_IN" size="VideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_2NR_IN" size="VideoSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_OUT" size="VideoSize" format="Format_Pack_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_OUT" size="VideoSize" format="Format_Pack_P010"/>
+        <Stream id="REAL_Y2Y2_WIDE_VSE_IN" size="VideoSize" format="Format_Pack_P010"/>
+        <Stream id="REAL_Y2Y2_ULTRAWIDE_VSE_IN" size="VideoSize" format="Format_Pack_P010"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRATELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRATELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRATELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_F1_OUT" size="VideoSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_F1_OUT" size="VideoSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_2NR_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_2NR_F1_IN" size="VideoSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_2NR_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_2NR_F1_IN" size="VideoSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_OUT" size="VideoSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_OUT" size="VideoSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_WIDE_VSE_F1_IN" size="VideoSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_ULTRAWIDE_VSE_F1_IN" size="VideoSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_NILEIS_FRONT_VIDEO" trim="false">
+        <Stream id="REAL_YUV_FRONT_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_FRONT_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_INPLACE_FRONT_WPE_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_INPLACE_FRONT_WPE_VIDEO_IN" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y2_FRONT_WPE_VIDEO_EXTINP_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_FRONT_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_FRONT_INPLACE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_FRONT_INPLACE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_RAW_VIDEO" trim="false">
+        <Stream id="REAL_RAW_WIDE_VIDEO_OUT" size="SensorSize" format="Format_RawPlain12"/>
+        <Stream id="REAL_Y2Y_WIDE_RAW_IN" size="SensorSize" format="Format_RawPlain12"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_RAW_VIDEO" trim="false">
+        <Stream id="REAL_RAW_WIDE_VIDEO_OUT" size="SensorSize" format="Format_RawPlain12"/>
+        <Stream id="REAL_Y2Y_WIDE_RAW_IN" size="SensorSize" format="Format_RawPlain12"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_OUT" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y2_WIDE_INPLACE_IN" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y2_WIDE_INPLACE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_WIDE_INPLACE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_RAW_VIDEO_ALGO_MEMC" trim="true">
+        <Stream id="REAL_RAW_WIDE_VIDEO_OUT" size="SensorSize" format="Format_RawPlain12"/>
+        <Stream id="REAL_Y2Y_WIDE_RAW_IN" size="SensorSize" format="Format_RawPlain12"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_OUT" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y2_WIDE_INPLACE_IN" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y2_WIDE_INPLACE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y2_WIDE_INPLACE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y2_VIDEO_VSE_EXTINP_OUT" size="VideoSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_SHDR_SNAPSHOT" trim="true">
+        <Stream id="REAL_YUV_WIDE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_SHORTEX_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_SHORTEX_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_SHORTEX_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_GAINMAP_IN" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_SHORTEX_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_SHORTEX_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_SHORTEX_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_GAINMAP_IN" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_GAINMAP_IN" size="GainmapYuvSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_GAINMAP_OUT" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_R2Y_TELE_GAINMAP_IN" size="GainmapYuvSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_GAINMAP_OUT" size="GainmapSize" format="Format_P010"/>
+    </SceneMode>
+    <SceneMode value="SCENE_SLOWSHUTTER" trim="true">
+        <Stream id="REAL_YUV_WIDE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>\
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_R2Y_WIDE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_R2Y_ULTRAWIDE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_R2Y_TELE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_QCFA" trim="true">
+        <Stream id="REAL_YUV_WIDE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_TELE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_WIDE_QCFA_OUT" size="QCFASize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_QCFA_OUT" size="QCFASize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_QCFA_OUT" size="QCFASize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_QCFA_IN" size="QCFASize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_QCFA_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_QCFA_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_QCFA_IN" size="QCFASize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_QCFA_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_QCFA_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_QCFA_IN" size="QCFASize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_QCFA_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_QCFA_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_SINGLE_VIDEO_NORTYP" trim="true">
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_FRONT_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_4KVSS_SINGLE_VIDEO_NORTYP" trim="true">
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_NONEIS_VIDEO" trim="true">
+        <Stream id="REAL_YUV_WIDE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_TELE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_FRONT_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_WIDE_VIDEO_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_VIDEO_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_VIDEO_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_FRONT_VIDEO_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_FRONT_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_SUPERMOON" trim="true">
+        <Stream id="REAL_YUV_WIDE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_TELE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_TELE_PIP_IN" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_PIP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_PIP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_PIP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2EXTY_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2EXTY_TELE_P010_IN" size="SensorSize" format="Format_P010"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_GAINMAP_IN" size="GainmapYuvSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_GAINMAP_OUT" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_R2Y_WIDE_GAINMAP_IN" size="GainmapYuvSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_GAINMAP_OUT" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_R2Y_TELE_GAINMAP_IN" size="GainmapYuvSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_GAINMAP_OUT" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_GAINMAP_IN" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_Y2J_WIDE_GAINMAP_IN" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_Y2J_TELE_GAINMAP_IN" size="GainmapSize" format="Format_P010"/>
+    </SceneMode>
+    <SceneMode value="SCENE_MULTIEXP" trim="true">
+        <Stream id="REAL_YUV_WIDE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_YUV_FRONT_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"/>
+    </SceneMode>
+    <SceneMode value="SCENE_PANORAMA_STICKER" trim="true">
+        <Stream id="REAL_YUV_WIDE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_FRONT_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"/>
+    </SceneMode>
+    <SceneMode value="SCENE_HDR10P" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_P010"/>
+        <Stream id="REAL_Y2Y_WIDE_OUT" size="VideoSize" format="Format_P010"/>
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_4K_FILM" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_VIDEO_OUT" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_VIDEO_OUT" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_WIDE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_WIDE_VIDEO_EXTINP_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_VIDEO_EXTINP_OUT" size="VideoSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_WIDE_F1_VIDEO_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_VIDEO_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_NIGHT_SINGLE" trim="true">
+        <Stream id="REAL_YUV_WIDE_P010_OUT" size="PreviewSize" format="Format_P010"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_P010_OUT" size="PreviewSize" format="Format_P010"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_P010_IN_1" size="PreviewSize" format="Format_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_P010_IN" size="PreviewSize" format="Format_P010"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_VIDEO_ENHANCE" trim="true">
+        <Stream id="REAL_YUV_WIDE_OUT" size="EisPreviewSize" format="Format_P010"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_OUT" size="EisPreviewSize" format="Format_P010"/>
+        <Stream id="REAL_Y2Y_P010_IN_1" size="PreviewSize" format="Format_P010"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_P010_IN" size="PreviewSize" format="Format_P010"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_SAT_VIDEO_BEAUTY" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_SUPERMOON" trim="true">
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="PreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_SAT_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="PreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_PIP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y2_TELE_PIP_IN" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2EXTY_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2EXTY_TELE_P010_IN" size="SensorSize" format="Format_P010"/>
+        <Stream id="OFF_R2Y_TELE_GAINMAP_IN" size="GainmapYuvSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_GAINMAP_OUT" size="GainmapSize" format="Format_P010"/>
+        <Stream id="OFF_Y2J_TELE_GAINMAP_IN" size="GainmapSize" format="Format_P010"/>
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_SAT_VIDEO" trim="false">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_WIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"  />
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined" />
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_TELE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"  />
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_WIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_TELE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_TELE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_VIDEO_EXTINP_OUT" size="VideoSize" format="Format_ImplementationDefined"  />
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_4K_SAT_VIDEO" trim="false">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_WIDE_INPLACE_VIDEO_OUT" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_WIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"  />
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined" />
+        <Stream id="REAL_YUV_WIDE_F1_VIDEO_OUT" size="VirtualSize" format="Format_ImplementationDefined" />
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_VIDEO_OUT" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_VIDEO_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_TELE_INPLACE_VIDEO_OUT" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_TELE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_TELE_F1_VIDEO_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_WIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_TELE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_TELE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_VIDEO_EXTINP_OUT" size="VideoSize" format="Format_ImplementationDefined"  />
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_SINGLE_2PASS_VIDEO" trim="false">
+        <Stream id="REAL_YUV_FRONT_INPLACE_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_FRONT_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_FRONT_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_FRONT_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_FRONT_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_VIDEO_EXTINP_OUT" size="VideoSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_FRONT_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_FRONT_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_FRONT_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_FRONT_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_SINGLE_VIDEO" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined" />
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_YUV_FRONT_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_FRONT_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_FRONT_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_WIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_TELE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_FRONT_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_FRONT_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_FRONT_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_TELE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_VIDEO_EXTINP_OUT" size="VideoSize" format="Format_ImplementationDefined"  />
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_R2Y_FRONT_OUT" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_Y2J_FRONT_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+    </SceneMode>
+    <SceneMode value="SCENE_VSS_SINGLE_VIDEOSTAGE_INPLACE" trim="true">
+        <Stream id="REAL_YUV_TELE_VIDEO_EXTINP_OUT" size="VideoSize" format="Format_YCBCR_420_888" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888" gni="NODE_MAX_NUM" rotate="StreamRotation0"/>
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_SINGLE_VIDEO_AFBC" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined" />
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_YUV_FRONT_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_FRONT_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_FRONT_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_WIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_TELE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_FRONT_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_FRONT_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_FRONT_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_TELE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_R2Y_FRONT_OUT" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_Y2J_FRONT_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_SAT_FAST" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_VIDEO_EXTINP_OUT" size="VideoSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_SINGLE_FAST" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_SAT_OUT" size="EisPreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_OUT" size="EisPreviewSize" format="Format_UFBC_YUV_P010"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"/>
+        <Stream id="REAL_Y2Y_VIDEO_EXTINP_OUT" size="VideoSize" format="Format_ImplementationDefined"/>
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_4K_SINGLE_VIDEO" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_WIDE_INPLACE_VIDEO_OUT" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined" />
+        <Stream id="REAL_YUV_WIDE_F1_VIDEO_OUT" size="VirtualSize" format="Format_ImplementationDefined" />
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_VIDEO_OUT" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_VIDEO_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_TELE_INPLACE_VIDEO_OUT" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_TELE_F1_VIDEO_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_YUV_FRONT_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_FRONT_INPLACE_VIDEO_OUT" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_FRONT_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_FRONT_F1_VIDEO_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_FRONT_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_WIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_TELE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_FRONT_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_FRONT_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_FRONT_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_TELE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_VIDEO_EXTINP_OUT" size="VideoSize" format="Format_ImplementationDefined"  />
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_Y2J_FRONT_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_EIS_4K_SINGLE_VIDEO_AFBC" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_WIDE_INPLACE_VIDEO_OUT" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined" />
+        <Stream id="REAL_YUV_WIDE_F1_VIDEO_OUT" size="VirtualSize" format="Format_ImplementationDefined" />
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_VIDEO_OUT" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_VIDEO_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_TELE_INPLACE_VIDEO_OUT" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_TELE_F1_VIDEO_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_YUV_FRONT_INPLACE_OUT" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_FRONT_INPLACE_VIDEO_OUT" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_YUV_FRONT_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_FRONT_F1_VIDEO_OUT" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_YUV_FRONT_ME_OUT" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"  />
+        <Stream id="REAL_RAW_FRONT_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_WIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_TELE_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_IN" size="EisPreviewSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_FRONT_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_FRONT_F1_VIDEO_IN" size="VirtualSize" format="Format_ImplementationDefined"  />
+        <Stream id="REAL_Y2Y_FRONT_ME_IN" size="VirtualSize" format="Format_Y8"  />
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_TELE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="REAL_Y2Y_FRONT_INPLACE_VIDEO_IN" size="EisVideoSize" format="Format_UFBC_NV12"  />
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"  />
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"  />
+        <Stream id="OFF_R2Y_FRONT_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_Y2J_FRONT_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_SLOWSHUTTER_HDR" trim="true">
+        <Stream id="REAL_YUV_WIDE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_R2Y_WIDE_OUT" size="SensorSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_R2Y_ULTRAWIDE_OUT" size="SensorSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_R2Y_TELE_OUT" size="SensorSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_WIDE_WPE_IN" size="SensorSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_WPE_IN" size="SensorSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_TELE_WPE_IN" size="SensorSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+    <SceneMode value="SCENE_SAT_SLOWSHUTTER" trim="true">
+        <Stream id="REAL_YUV_WIDE_INPLACE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_INPLACE_SAT_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_INPLACE_SAT_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_INPLACE_SAT_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_RAW_WIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_ULTRAWIDE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_RAW_TELE_OUT" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_Y2Y_WIDE_INPLACE_IN" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_INPLACE_IN" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_TELE_INPLACE_IN" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_EXTINP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_Y2Y_TELE_PIP_IN" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_TELE_PIP_OUT" size="PreviewSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_YUV_WIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_WIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_ULTRAWIDE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_YUV_TELE_ME_OUT" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_YUV_TELE_F1_OUT" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_WIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_WIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_ULTRAWIDE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_Y2Y_TELE_ME_IN" size="VirtualSize" format="Format_Y8"/>
+        <Stream id="REAL_Y2Y_TELE_F1_IN" size="VirtualSize" format="Format_ImplementationDefined"/>
+        <Stream id="REAL_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain10"/>
+        <Stream id="REAL_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="REAL_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_WIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_TELE_IN" size="SensorSize" format="Format_RawPlain16"/>
+        <Stream id="OFF_R2Y_WIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_ULTRAWIDE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_R2Y_TELE_OUT" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_WIDE_GAINMAP_IN" size="GainmapSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_ULTRAWIDE_GAINMAP_IN" size="GainmapSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_GAINMAP_IN" size="GainmapSize" format="Format_YCBCR_420_888"/>
+        <Stream id="OFF_Y2J_TELE_JPGPACK_SUBJPG_IN" size="JpegSize" format="Format_YCBCR_420_888"/>
+    </SceneMode>
+</StreamConfigInfo>

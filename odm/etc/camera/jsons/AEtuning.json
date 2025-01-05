@@ -1,0 +1,208 @@
+{
+    "tuningKey": {
+        "COMMENT":[[8, 0, 0, "this is Feature1 tuningkey"]],
+        "appType":{
+            "currentEngineerMode":[[8, "engcamera", 8, 70, "OISTest"]]
+        },
+        "appType":[
+		    [8, "engcamera", 3, "Engineer"],
+		    [8, "QQ", 62, "QQ"],
+		    [8, "Wechat", 63, "WeChat"],
+		    [8, "TikTok", 64, "TikTok"],
+		    [8, "Facebook", 65, "FaceBook"],
+		    [8, "CTS", 69, "CTS"],
+		    [8, "FaceUnlock", 72, "FaceUnlock"],
+		    [8, "3rd_party", 61, "Third_Party"]
+		],
+		"VideoIC_Face":[[8, 1, 76, "VideoIC_Face"]],
+		"currentUiMode":[
+			[8, -1, 61, "Third_Party"],
+			[8, 56, 61, "Third_Party beauty"]
+		],
+		"flashMode":{
+			"cameraFacing":[
+			    [8, 1, 0, 6, "Flash"],
+			    [8, 2, 0, 7, "Torch"]
+			]
+		},
+		"DolbyMode":[
+			[8, 80, 83, "DolbyMode"],
+			[8, 64, 83, "DolbyMode"],
+			[8, 32, 84, "LogMode"],
+			[8, 48, 84, "LogMode"],
+			[8, 160, 84, "LogMode"],
+			[8, 176, 84, "LogMode"]
+		],
+        "appType":{
+			"lightStreamMode":[
+                [8, "vivoCamera", 1, 28, "SS_CarTrail"],
+                [8, "vivoCamera", 2, 29, "SS_LightPainting"],
+                [8, "vivoCamera", 4, 30, "SS_Pedestrain"],
+                [8, "vivoCamera", 8, 31, "SS_WaterStream"],
+                [8, "vivoCamera", 16, 32, "SS_StarTrail"],
+                [8, "vivoCamera", 32, 34, "SS_CarTrail_2"],
+                [8, "vivoCamera", 64, 33, "SS_FireWork"]
+            ],
+            "currentUiMode":{
+                "sceneMode":[
+                    [8, "vivoCamera", 7, 1572864, 12, "SuperNightTripod"],
+					[8, "vivoCamera", 74, 1572864, 12, "SuperNightTripod"],
+                    [8, "vivoCamera", 7, 7340032, 12, "SuperNightTripod"],
+					[8, "vivoCamera", 74, 7340032, 12, "SuperNightTripod"],
+                    [8, "vivoCamera", 7, 1048576, 13, "SuperNightExtreme"],
+					[8, "vivoCamera", 74, 1048576, 13, "SuperNightExtreme"],
+		            [8, "vivoCamera", 40, 3670016, 15, "SuperStarHandheld"],
+					[8, "vivoCamera", 74, 3670016, 15, "SuperStarHandheld"],
+		            [8, "vivoCamera", 40, 17825792, 10, "SuperStarPortrait"],
+			        [8, "vivoCamera", 74, 17825792, 10, "SuperStarPortrait"],
+					[8, "vivoCamera", 74, 65536, 14, "SuperStar"]
+                ],
+				"superMoonDetectResult":[[8, "vivoCamera", 74, 2, 16, "NormalMoon"]],
+				"icpreviewscene":[
+				    [8, "vivoCamera", 3, 1, 48, "Video_IC"],
+                    [8, "vivoCamera", 3, 9, 46, "Video_VivoIC"],
+                    [8, "vivoCamera", 3, 5, 47, "Video_NovaIC"],
+					[8, "vivoCamera", 3, 13, 45, "VideoHDR"]
+                ],
+			    "twoPassNRDetection":[[8, "vivoCamera", 3, 1, 79, "Video2Pass"]],
+				"seamlessMode":[[8, "vivoCamera", 3, 4, 45, "VideoHDR"]],
+				"hdr":{
+					"cameraFacing":[
+					    [8, "vivoCamera", 3, 1, 0, 45, "VideoHDR"]
+					]
+                },
+				"videoNight":{
+					"AEvideoMode":[
+                        [8, "vivoCamera", 3, 1, 4, 77, "VideoNight12FPS"],
+                        [8, "vivoCamera", 3, 11, 4, 77, "VideoNight12FPS"],
+                        [8, "vivoCamera", 3, 1, 14, 77, "VideoNight12FPS"],
+                        [8, "vivoCamera", 3, 11, 14, 77, "VideoNight12FPS"]
+                    ],
+				    "FPS":[
+                        [8, "vivoCamera", 3, 1, 24, 44, "VideoNight"],
+                        [8, "vivoCamera", 3, 11, 24, 44, "VideoNight"],
+						[8, "vivoCamera", 3, 1, 12, 77, "VideoNight12FPS"],
+                        [8, "vivoCamera", 3, 11, 12, 77, "VideoNight12FPS"],
+						[8, "vivoCamera", 3, 1, 4, 78, "VideoNight4FPS"],
+                        [8, "vivoCamera", 3, 11, 4, 78, "VideoNight4FPS"]
+					]
+                }
+            },
+            "currentUiMode":{
+                "isNormalMoon":[
+                    [8, "vivoCamera", 32, 1, 16, "NormalMoon"],
+                    [8, "vivoCamera", 32, 0, 17, "SuperMoon"]
+                ],
+		"seamlessMode":[
+                    [8, "vivoCamera", 31, 4, 82, "PortraitHDR"],
+                    [8, "vivoCamera", 31, 1280, 82, "PortraitHDR"],
+					[8, "vivoCamera", 31, 6, 85, "PortraitMotion"],
+					[8, "vivoCamera", 31, 1282, 85, "PortraitMotion"]
+                ],
+                "isdecreaseExposure":[
+                    [8, "vivoCamera", 1, 1, 17, "SuperMoon"],
+                    [8, "vivoCamera", 7, 1, 17, "SuperMoon"],
+                    [8, "vivoCamera", 74, 1, 17, "SuperMoon"]
+                ]
+            },
+			"isSportLivePhoto":[[8, "vivoCamera", 1, 22, "Motion_LivePhoto"]],
+			"aiSceneType":[[8, "vivoCamera", 4, 36, "Food"]],
+			"isMicroMode":[[8, "vivoCamera", 2, 20, "SuperMico"]],
+            "is_common_livephoto":{
+                "zeiss_ps":[
+                    [8, "vivoCamera", 1, 1, 87, "Texture_LivePhoto"],
+                    [8, "vivoCamera", 1, 1, 92, "BlackWhite_LivePhoto"],
+                    [8, "vivoCamera", 1, 3, 88, "ZeissColor_LivePhoto"],
+                    [8, "vivoCamera", 1, 0, 41, "LivePhoto"]
+                ]
+            },
+            "isquicknightCapture":{
+                "zeiss_ps":[
+                    [8, "vivoCamera", 1, 1, 80, "Texture_FastLite"],
+                    [8, "vivoCamera", 1, 1, 91, "BlackWhite_FastLite"],
+                    [8, "vivoCamera", 1, 3, 81, "ZeissColor_FastLite"],
+                    [8, "vivoCamera", 1, 0, 75, "FastLite"]
+                ]
+            },
+            "zeiss_ps":[
+                [8, "vivoCamera", 1, 5, "Texture"],
+                [8, "vivoCamera", 2, 90, "BlackWhite"],
+                [8, "vivoCamera", 3, 4, "ZeissColor"]
+            ],
+            "currentUiMode":[
+                [8, "vivoCamera", 7,  11, "SuperNight"],
+				[8, "vivoCamera", 74,  11, "SuperNight"],
+		        [8, "vivoCamera", 31, 8, "Portrait"],
+				[8, "vivoCamera", 0, 8, "Portrait"],
+				[8, "vivoCamera", 3,  43, "Video"],
+				[8, "vivoCamera", 64,  76, "VideoIC_Face"],
+                [8, "vivoCamera", 16, 23, "Professional"],
+				[8, "vivoCamera", 51, 23, "Professional"],
+                [8, "vivoCamera", 24, 37, "ARStickers"],
+                [8, "vivoCamera", 26, 53, "FunVideo"],
+                [8, "vivoCamera", 12, 27, "TimeLapse"],
+                [8, "vivoCamera", 28, 41, "LivePhoto"],
+                [8, "vivoCamera", 11, 26, "SlowMotion"],
+                [8, "vivoCamera", 29, 24, "Remosaic"],
+                [8, "vivoCamera", 35, 21, "MotionCapture"],
+                [8, "vivoCamera", 40, 14, "SuperStar"],
+                [8, "vivoCamera", 42, 39, "DiplexExposure"],
+		        [8, "vivoCamera", 57, 36, "Food"],
+		        [8, "vivoCamera", 13, 25, "Document"],
+		        [8, "vivoCamera", 53, 52, "DualVideo"],
+				[8, "vivoCamera", -1, 61, "Third_Party"],
+				[8, "vivoCamera", 56, 61, "Third_Party"],
+		        [8, "vivoCamera", 30, 38, "Jovi"],
+		        [8, "vivoCamera", 69, 86, "VideoStage"]
+            ],
+            "modePano":[[8, "vivoCamera", 1, 18, "Panorama"]],
+            "modeSuperPano":[[8, "vivoCamera", 1, 19, "SuperPano"]]
+        },
+        "appType":[[8, "vivoCamera", 0, "None"]],
+
+        "COMMENT":[[9, 0, 0, "this is Feature2 tuningkey"]],
+		"zeiss_ps":[
+		    [9, 5, 26, "Soft"],
+			[9, 6, 25, "Atmosphere"]
+		],
+		"aiSceneType":[[9, 13, 16, "Stage"]],
+		"aiSceneType":[
+		    [9, 10, 22, "Sunset"],
+			[9, 39, 22, "Sunset"],
+			[9, 40, 22, "Sunset"]
+		],
+		"aiSceneType":[[9, 15, 23, "Firework"]],
+        "currentUiMode":{
+			"zoomRatio":[[9, 35, 2, 20, "MotionZoom2X"]],
+			"seamlessMode":[[9, 35, 6, 9, "MotionLevel5"]],
+            "isSportbokeh":[[9, 31, 1, 10, "SportBokeh"]],
+            "portraitStyle":[
+				[9, 31, 21, 11, "PartyPortrait"],
+			    [9, 31, 3, 12, "FlashPortrait"],
+				[9, 31, 37, 13, "TexturePortrait"]
+			]
+	    },
+		"fiHint":[
+			[9, 10, 18, "Interpolation"],
+			[9, 12, 19, "Interpolation4k"]
+		],
+		"movieEffectSlowShutter":[
+		    [9, 8, 15, "MovieEffectSlowShutter"],
+			[9, 10, 15, "MovieEffectSlowShutter"],
+			[9, 13, 15, "MovieEffectSlowShutter"]
+		],
+        "vivoDeblur":[[9, 1, 17, "Deblur"]],
+		"digitalZoom10":[[9, 1, 4, "Zoom10X"]],
+		"digitalZoom5":[[9, 1, 3, "Zoom5X"]],
+		"digitalZoom2":[[9, 1, 2, "Zoom2X"]],
+		"digitalZoom":[[9, 1, 1, "Zoom"]],
+		"modeBeauty":{
+			"cameraFacing":[
+			    [9, 1, 0, 21, "BeautyMode"]
+			]
+		},
+		"seamlessMode":[[9, 6, 27, "PreviewSnapDualFlow"]],
+		"COMMENT":[[10, 0, 0, "this is AE Scene Mode tuningkey"]]
+    },
+    "JsonVersion":[["版本号",1,"控制变量总数：39，KM：http://km.vivo.xyz/x/6B6LH"]]
+}
