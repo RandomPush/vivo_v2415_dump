@@ -1,0 +1,7 @@
+{
+    "version":"1",
+    "isVivoIgnoreTimestamp":[1,"VIVO_IGNORE_TIMESTAMP"],
+    "BoundSizeConfig":["my.beautyCamera", 1920, 1080,"AppName boundSize.width boundSize.height"],
+    "isVivoCtsLogicam":[1,"VIVO_CTS_LOGICAM"],
+    "NeedVibrateProjectList":[0]
+}

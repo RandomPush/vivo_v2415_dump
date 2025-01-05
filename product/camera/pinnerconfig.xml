@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2017, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources>
+    <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
+    on the headphone/microphone jack. When false use the older uevent framework -->
+    <enable name="Enable">true</enable>
+	  <size-limit>100000000</size-limit>
+
+    <!-- Default list of files pinned by the Pinner Service -->
+    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <item>/vendor/lib64/vendor.mediatek.hardware.camera.atms-V1-ndk.so</item>
+        <item>/vendor/lib64/android.hardware.camera.device-V2-ndk.so</item>
+        <item>/vendor/lib64/libvcf_camera_aidl_device.so</item>
+        <item>/vendor/lib64/libvcf_platform.so</item>
+        <item>/vendor/lib64/libvcf_platform_utils.so</item>
+        <item>/vendor/lib64/libvcf_utils.so</item>
+        <item>/vendor/lib64/libvcf_configure.so</item>
+        <item>/vendor/lib64/vendor.vivo.hardware.vcode@1.0.so</item>
+        <item>/vendor/lib64/libvcf_log_control.so</item>
+        <item>/vendor/lib64/vendor.vivo.hardware.camera.cameralog@1.0.so</item>
+        <item>/vendor/lib64/libvcf_session.so</item>
+        <item>/vendor/lib64/libvcf_features.so</item>
+        <item>/vendor/lib64/libvcf_core.so</item>
+        <item>/vendor/lib64/libvcf_camera_aidl_provider.so</item>
+        <item>/vendor/lib64/libmtkcam_grallocutils_aidlv1helper.so</item>
+        <item>/vendor/lib64/libcam_common.so</item>
+        <item>/vendor/lib64/libcam.zoomoverridemgr.so</item>
+        <item>/vendor/lib64/libcamalgo.platform.so</item>
+        <item>/vendor/lib64/libfeaturepolicy.so</item>
+        <item>/vendor/lib64/libcamalgo.sat.so</item>
+        <item>/vendor/lib64/libvivo.vas.adapter.mtk.so</item>
+        <item>/vendor/lib64/libvivo.vas.file.ops.s</item>
+        <item>/vendor/lib64/libvivo.vaf.algo.previewaidetect.so</item>
+        <item>/vendor/lib64/libvas.algoprovider.impl.so</item>
+        <item>/vendor/lib64/libvivo.vas.interface.so</item>
+        <item>/vendor/lib64/libvivo.vas.pipeline.so </item>
+        <item>/vendor/lib64/libvivo.vas.core.pipeline.so</item>
+        <item>/vendor/lib64/libvivo.vas.pipeline.utils.so</item>
+        <item>/vendor/lib64/libvivo.vaf.system.so</item>
+        <item>/vendor/lib64/libvivo.vaf.algo.common.so</item>
+        <item>/vendor/lib64/libvivo.vaf.utils.so</item>
+        <item>/vendor/lib64/libvivo.vaf.tunning.so</item>
+        <item>/vendor/lib64/libvivo_preBPS.so</item>
+        <item>/vendor/lib64/libmulti_cam_sat_process.so</item>
+        <item>/vendor/lib64/libvcap_core.so </item>
+        <item>/vendor/lib64/libcvkit_camera.so </item>
+        <item>/vendor/lib64/libvivo.algo.metadata.so</item>
+        <item>/vendor/lib64/libvivo.camera3rd.log.so</item>
+        <item>/vendor/lib64/libSQLiteModule_VER_ALL.so</item>
+        <item>/vendor/lib64/com.vivo.stats.awb.so</item>
+        <item>/vendor/lib64/com.vivo.stats.af.interface.so</item>
+        <item>/vendor/lib64/com.vivo.stats.af_8.0.so</item>
+
+        <item>/vendor/lib64/android.hardware.camera.provider-V2-ndk.so</item>
+        <item>/vendor/lib64/mt6991/lib_bsscore.so</item>
+        <item>/vendor/lib64/mt6991/lib3a.awb.core.so</item>
+        <item>/vendor/lib64/mt6991/lib3a.flicker.so</item>
+        <item>/vendor/lib64/mt6991/lib3a.sensors.flicker.so</item>
+        <item>/vendor/lib64/mt6991/libaaa_ltm.so</item>
+        <item>/vendor/lib64/mt6991/libaiseg_p1ggm.so</item>
+        <item>/vendor/lib64/mt6991/libapiwrapper.so</item>
+        <item>/vendor/lib64/libbwc.so</item>
+        <item>/vendor/lib64/libcam.hal3a.custom.ae.HDRStateEvaluator.so</item>
+        <item>/vendor/lib64/mt6991/libcam.hal3a.pdstatmgr.so</item>
+        <item>/vendor/lib64/mt6991/libcam.hal3a.policy.so</item>
+        <item>/vendor/lib64/mt6991/libcam.hal3a.v3.lsctbl.v4l2.so</item>
+        <item>/vendor/lib64/mt6991/libcam.hal3a.v3.strobe.so</item>
+        <item>/vendor/lib64/mt6991/libcam.vhdr.so</item>
+        <item>/vendor/lib64/mt6991/libcamalgo.gyro.so</item>
+        <item>/vendor/lib64/mt6991/libcamalgo.lsc.so</item>
+        <item>/vendor/lib64/mt6991/libcamera.custom.af_assist_pdp.so</item>
+        <item>/vendor/lib64/mt6991/libcamera.customflk.so</item>
+        <item>/vendor/lib64/mt6991/libcameracustom.eis.so</item>
+        <item>/vendor/lib64/mt6991/libcameracustom.so</item>
+        <item>/vendor/lib64/mt6991/libfeature.aiseg.so</item>
+        <item>/vendor/lib64/mt6991/libfeature.mcnr.so</item>
+        <item>/vendor/lib64/mt6991/libfeature.stereo.provider.so</item>
+        <item>/vendor/lib64/mt6991/libfeature.vsdof.3a_info_provider.so</item>
+        <item>/vendor/lib64/mt6991/libfeature_eis.so</item>
+        <item>/vendor/lib64/mt6991/libfeatureiodrv_mem.so</item>
+        <item>/vendor/lib64/mt6991/libfeaturepolicy_dbhandler.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam.featurepipe.capture.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam.logicalcaminfoprovider.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam.logicalmodule.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_camctrl.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_camdatareceiver.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_camdeliver.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_custom.policy.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_detectnode.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_devicemgr.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_dma_map.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_externalisploader.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_grallocutils.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_hal_android_app_cbadaptor.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_hal_aov.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_hal_core_app.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_hal_core_app_cbadaptor.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_hal_core_device.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_hal_core_devicesessionpolicy.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_hal_core_featurepolicy.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_hal_core_utils.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_hal_custom.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_hal3a_provider.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_hwnode.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_ipc_core.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_metaconv.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_modulefactory_utils.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_modulehelper.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_packutils.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_perfctrl.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_pipeline.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_pipelinemodel_capture.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_pipelinemodel_session.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_pipelinepolicy.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_pipelinepolicy_factory.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_pipemgr.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_request_requlator.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_resourcedecision.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_synchelper.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_sysutils.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_thirdparty.core.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_thirdparty.customer.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_thirdparty.customzone.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_thirdparty.mtk.so</item>
+        <item>/vendor/lib64/mt6991/libmtkcam_ulog.so</item>
+        <item>/vendor/lib64/libmulti_cam_fov_control.so</item>
+        <item>/vendor/lib64/libphioams_vendor.so</item>
+        <item>/vendor/lib64/libsensor_laser_interface_vendor.so</item>
+        <item>/vendor/lib64/libvas.utils.mm.interface.so</item>
+        <item>/vendor/lib64/libvivo.vac.interface.so</item>
+        <item>/vendor/lib64/libvivo.vaf.algo.sat.so</item>
+        <item>/vendor/lib64/libvivo.vas.adapter.vcf.so</item>
+    </string-array>
+
+</resources>

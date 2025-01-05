@@ -1,0 +1,619 @@
+{
+    "version": "1",
+    "TypeValueConfig": {
+        "com.facebook.katana": [
+            2,
+            "3rd_party",
+            "Facebook"
+        ],
+        "com.tmri.app.main": [
+            2,
+            "3rd_party",
+            "Jiaoguan"
+        ],
+        "com.tencent.ttpic": [
+            2,
+            "3rd_party",
+            "Ttpic"
+        ],
+        "com.jkfantasy.gpsmapcamera": [
+            2,
+            "3rd_party",
+            "gpscam"
+        ],
+        "com.adobe.lrmobile": [
+            2,
+            "3rd_party",
+            "Lrmobile"
+        ],
+        "com.snapchat.android": [
+            2,
+            "3rd_party",
+            "3rd_party"
+        ],
+        "com.bbm": [
+            2,
+            "3rd_party",
+            "3rd_party"
+        ],
+        "com.google.android.googlequicksearchbox": [
+            2,
+            "3rd_party",
+            "3rd_party"
+        ],
+        "video.like": [
+            2,
+            "3rd_party",
+            "LiKee"
+        ],
+        "sg.bigo.live": [
+            2,
+            "BiGo",
+            "BiGo"
+        ],
+        "com.vivo.familycare.local": [
+            2,
+            "3rd_party",
+            "familylcare"
+        ],
+        "com.vivo.familycare.child": [
+            2,
+            "3rd_party",
+            "familylcare"
+        ],
+        "com.android.settings": [
+            2,
+            "Settings",
+            "Settings"
+        ],
+        "com.gorgeous.lite": [
+            2,
+            "3rd_party",
+            "QingYanCamera"
+        ],
+        "com.campmobile.snowcamera": [
+            2,
+            "3rd_party",
+            "B612Camera"
+        ],
+        "org.telegram.messenger": [
+            2,
+            "3rd_party",
+            "TeleGram"
+        ],
+        "com.xiangji.daka": [
+            2,
+            "3rd_party",
+            "dakashenqi"
+        ],
+        "com.instagram.android": [
+            2,
+            "3rd_party",
+            "instagram"
+        ],
+        "com.netease.cloudmusic": [
+            2,
+            "3rd_party",
+            "cloudmusic"
+        ],
+        "android": [
+            17,
+            "FaceUnlock",
+            "FaceUnlock"
+        ],
+        "com.vivo.faceunlock": [
+            17,
+            "FaceUnlock",
+            "FaceUnlock"
+        ],
+        "com.vivo.faceui": [
+            17,
+            "FaceUnlock",
+            "FaceUnlock"
+        ],
+        "com.vivo.ircapture": [
+            17,
+            "FaceUnlock",
+            "FaceUnlock"
+        ],
+        "com.vivo.irledtest": [
+            17,
+            "FaceUnlock",
+            "FaceUnlock"
+        ],
+        "com.vivo.ir": [
+            17,
+            "FaceUnlock",
+            "FaceUnlock"
+        ],
+        "com.android.camera": [
+            1,
+            "vivoCamera",
+            "vivoCamera"
+        ],
+        "com.tencent.mobileqq": [
+            4,
+            "QQ",
+            "QQ"
+        ],
+        "com.tencent.mm": [
+            8,
+            "Wechat",
+            "Wechat"
+        ],
+        "com.mediatek.ims": [
+            64,
+            "mtk_ims",
+            "3rd_party"
+        ],
+        "com.winning.hsdj": [
+            45,
+            "Hsdj",
+            "Hsdj"
+        ],
+        "com.bbk.facewake": [
+            16,
+            "FaceWake"
+        ],
+        "com.whatsapp": [
+            18,
+            "3rd_party",
+            "Whatsapp"
+        ],
+        "jp.naver.line.android": [
+            129,
+            "3rd_party",
+            "Line"
+        ],
+        "com.facebook.orca": [
+            129,
+            "3rd_party",
+            "Messenger"
+        ],
+        "com.zing.zalo": [
+            129,
+            "3rd_party",
+            "MTKCam"
+        ],
+        "com.viber.voip": [
+            129,
+            "3rd_party",
+            "MTKCam"
+        ],
+        "com.systec.umeeting": [
+            129,
+            "3rd_party",
+            "MTKCam"
+        ],
+        "im.yixin": [
+            129,
+            "3rd_party",
+            "MTKCam"
+        ],
+        "com.smile.gifmaker": [
+            9,
+            "3rd_party",
+            "Kuaishou"
+        ],
+        "com.alibaba.android.rimet": [
+            14,
+            "3rd_party",
+            "Dingding"
+        ],
+        "com.imo.android.imoim": [
+            132,
+            "3rd_party",
+            "IMO"
+        ],
+        "com.vivo.alphacamera": [
+            5,
+            "engcamera",
+            "Production"
+        ],
+        "com.example.mycamera": [
+            5,
+            "IQTest",
+            "IQTest"
+        ],
+        "com.huaqin.factory": [
+            5,
+            "engcamera",
+            "huaqinfactory"
+        ],
+        "com.android.cts.verifier": [
+            20,
+            "CTS",
+            "CTS"
+        ],
+        "android.camera.cts": [
+            21,
+            "CTS",
+            "MTKCam"
+        ],
+        "photoeditor.filter.camera": [
+            21,
+            "MTKCam",
+            "MTKCam"
+        ],
+        "com.ufotosoft.justshot": [
+            22,
+            "MTKCam",
+            "MTKCam"
+        ],
+        "com.blink.academy.protake": [
+            23,
+            "protake",
+            "protake"
+        ],
+        "com.kuaibao.skuaidi": [
+            23,
+            "MTKCam",
+            "MTKCam"
+        ],
+        "com.cam001.selfie": [
+            23,
+            "MTKCam",
+            "MTKCam"
+        ],
+        "net.one97.paytm": [
+            24,
+            "MTKCam",
+            "MTKCam"
+        ],
+        "com.ss.android.ugc.aweme": [
+            25,
+            "TikTok",
+            "TikTok"
+        ],
+        "com.ss.android.ugc.trill": [
+            26,
+            "TikTokExternal",
+            "TikTokExternal"
+        ],
+        "com.zhiliaoapp.musically": [
+            26,
+            "TikTokExternal",
+            "TikTokExternal"
+        ],
+        "com.vivo.vtouch": [
+            26,
+            "JoviVision",
+            "JoviVision"
+        ],
+        "com.yixia.videoeditor": [
+            27,
+            "MiaoPai",
+            "MiaoPai"
+        ],
+        "com.sina.weibo": [
+            27,
+            "Weibo",
+            "Weibo"
+        ],
+        "com.picsart.studio": [
+            27,
+            "Picsart",
+            "Picsart"
+        ],
+        "com.ezid.social": [
+            30,
+            "social",
+            "social"
+        ],
+        "com.syxjapp.www": [
+            31,
+            "syxjapp",
+            "syxjapp"
+        ],
+        "com.vivo.cameraparamluma": [
+            32,
+            "ParamLuma"
+        ],
+        "com.segi.Uhomebk": [
+            32,
+            "Uhomebk",
+            "Uhomebk"
+        ],
+        "com.eg.android.AlipayGphone": [
+            33,
+            "Alipay",
+            "Alipay"
+        ],
+        "vStudio.Android.Camera360": [
+            35,
+            "3rd_party",
+            "Camera360"
+        ],
+        "com.kwai.m2u.gp": [
+            39,
+            "yitian",
+            "yitian"
+        ],
+        "com.tencent.karaoke": [
+            40,
+            "Karaoke",
+            "Karaoke"
+        ],
+        "com.lemon.faceu": [
+            41,
+            "Lemon",
+            "Lemon"
+        ],
+        "com.google.ar.core": [
+            42,
+            "ARCore",
+            "ARCore"
+        ],
+        "com.google.ar.core.examples.java.augmentedfaces": [
+            42,
+            "ARCore",
+            "ARCore"
+        ],
+        "com.google.ar.infrastructure.compliance.imagequality": [
+            42,
+            "ARCore",
+            "ARCore"
+        ],
+        "com.google.ar.infrastructure.compliance.arcorefactorycal": [
+            42,
+            "ARCore",
+            "ARCore"
+        ],
+        "com.google.ar.core.examples.java.computervision": [
+            42,
+            "ARCore",
+            "ARCore"
+        ],
+        "com.google.ar.core.examples.java.helloar": [
+            42,
+            "ARCore",
+            "ARCore"
+        ],
+        "com.google.ar.core.examples.java.sharedcamera": [
+            42,
+            "ARCore",
+            "ARCore"
+        ],
+        "com.google.ar.infrastructure.compliance.e2ecert": [
+            42,
+            "ARCore",
+            "ARCore"
+        ],
+        "com.longshine.smartcity": [
+            44,
+            "LongShine",
+            "LongShine"
+        ],
+        "com.linkedin.android": [
+            262,
+            "linkedin",
+            "linkedin"
+        ],
+        "com.android.newfeaturedemo.s16pro": [
+            263,
+            "newfeaturedemo_s16pro",
+            "newfeaturedemo_s16pro"
+        ],
+        "com.manboker.headportrait": [
+            60,
+            "3rd_party",
+            "MTKCam"
+        ],
+        "com.hkjc.crm.raoa": [
+            63,
+            "hkjc",
+            "hkjc"
+        ],
+        "com.tongzhu.tz": [
+            63,
+            "hkjc",
+            "hkjc"
+        ],
+        "com.jingdong.app.mall": [
+            101,
+            "JingDong",
+            "JingDong"
+        ],
+        "com.dianping.v1": [
+            3,
+            "3rd_party",
+            "3rd_party"
+        ],
+        "com.vivo.videoeditor": [
+            289,
+            "3rd_party",
+            "VideoEditor"
+        ],
+        "com.meitu.meiyancamera": [
+            2,
+            "MeiYancamera",
+            "MeiYancamera"
+        ]
+    },
+    "othersTypeValueConfig": {
+        "Special3rdApp": [
+            50,
+            "Special3rdApp",
+            "Special3rdApp"
+        ],
+        "others3rdApp": [
+            2,
+            "3rd_party",
+            "MTKCam"
+        ]
+    },
+    "Top30VideoApp": [
+        "com.tencent.mm|com.tencent.mobileqq|com.kuaishou.nebula|com.taobao.taobao|com.quvideo.xiaoying|com.manboker.headportrait|com.tencent.weishi|com.ss.android.ugc.live|com.hithway.wecut|com.pixlr.express|my.beautyCamera|air.tv.douyu.android|com.gorgeous.lite|com.gorgeous.lite|com.lemon.faceu|com.ss.android.ugc.aweme|com.ss.android.ugc.aweme|com.smile.gifmaker|com.ss.android.ugc.aweme.lite|com.milecn.milevideo|com.jm.video|com.ss.android.ugc.livelite|com.duowan.kiwi|com.duowan.mobile|com.jt.hanhan.video|my.PCamera|com.leqi.idpicture|com.campmobile.snowcamera|com.lemon.lv|com.sankuai.meituan|com.kinggrid.uploadphotos|com.sinosoft.chinalife.intelligent|jp.naver.line.android|com.pxsw.mobile.xxb|com.max.xiaoheihe|net.evecom.android.mztapp|com.alibaba.android.rimet|cn.com.servyou.servyougstax|com.ydtx.camera|com.whatsapp|com.chinaunicom.zst|com.mm.switchphone|cn.com.nxy.mbank.shanxi|com.iqoo.aftersale.engineermode|com.kugou.fanxing|com.vos.as.vit|com.meitu.meiyancamera|com.sie.mp|com.seewo.easicare.pro|com.hkjc.crm.raoa|com.baidu.tieba|com.lx100.agent.activity|com.chinalife.ebz"
+    ],
+    "MapAndAF": [
+        "com.baidu.BaiduMap|com.autonavi.minimap|com.sogou.map.android.maps|com.tencent.map|com.google.android.apps.maps|cld.navi.mainframe"
+    ],
+    "ninjavanApp": [
+        "ninjavan"
+    ],
+    "Top3rdSatAPP": [
+        "com.tencent.mm|com.ss.android.ugc.aweme|com.eg.android.AlipayGphone|com.tencent.mobileqq|com.taobao.taobao|com.baidu.homework|com.xunmeng.pinduoduo|com.smile.gifmaker|com.alibaba.android.rimet|com.ss.android.ugc.aweme.lite|com.kuaishou.nebula|com.yitong.mbank.psbc|com.chinaunicom.zst"
+    ],
+    "VibrateSkip": [
+        "com.tencent.mm"
+    ],
+    "AppBoundSizeConfig": [
+        "com.wuba",
+        1920,
+        1088
+    ],
+    "AppRemoveSizeConfig": [
+        "com.sankuai.meituan",
+        720,
+        1280
+    ],
+    "ApplimitsizeConfig": [
+        "ReserveAppPackageName",
+        1920,
+        1080
+    ],
+    "AppStreamInfoSize": [
+        "com.snapchat.android",
+        34,
+        720,
+        1280,
+        1080,
+        1080
+    ],
+    "mSkipPreviewProcessFormat17PackageList": [
+        "com.tencent.zebra"
+    ],
+    "mSkipPreviewProcessFormat34PackageList": [
+        "com.tencent.zebra",
+        "com.tencent.wework",
+        "com.sie.mp",
+        "com.baidu.haokan"
+    ],
+    "mSkipPreviewProcessFormat35PackageList": [
+        "com.tencent.zebra"
+    ],
+    "mPreviewProcessFormat35PartlyPackageList": [
+        "com.taobao.taobao"
+    ],
+    "PROXY_NAME": [
+        "com.android.cameraextensions",
+        "com.android.cameraextensions.CameraExtensionsProxyService"
+    ],
+    "SUPPORT_EXTENSION": [
+        "com.extension.camera.isSupport"
+    ],
+    "mDefaultCameraWhitePackages": [
+        "com.android.camera",
+        "com.vivo.bsptest",
+        "com.iqoo.engineermode",
+        "com.vivo.alphacamera",
+        "com.huaqin.factory",
+        "com.vivo.vtouch",
+        "com.example.mycamera"
+    ],
+    "mConstrainPackages": [
+        "com.tencent.mm|com.gorgeous.lite|com.tencent.mobileqq|com.instagram.android|com.ss.android.ugc.aweme|com.campmobile.snowcamera|best.camera|hd.best.camera|com.lemon.faceu|beauty.hd.camera|com.mt.mtxx.mtxx|com.facebook.orca|com.meitu.meiyancamera|com.tencent.weishi|com.facebook.katana|com.shizhuang.duapp|org.telegram.messenger|com.photo.android.camera|com.risingcabbage.hd.camera|com.camerafilter.coffeecamera.procamera"
+    ],
+    "mOEMPackages": [
+        "com.android.camera|com.vivo.alphacamera|com.example.mycamera"
+    ],
+    "mProtakePackages": [
+        "com.blink.academy.protake|com.blink.academy.camerainfo"
+    ],
+    "ForBlockBroadcast": [
+        "com.vivo.biometrics"
+    ],
+    "ComponentNameFromJson": [
+        "com.vivo.video.floating",
+        "com.vivo.video.floating.receiver.ActivationReceiver"
+    ],
+    "SortSizeConfig": [
+        "com.twitter.android"
+    ],
+    "VivoCameraConfig": [
+        "com.android.camera"
+    ],
+    "CAMERA_MANAGER": [
+        "android.hardware.vivocamera.VivoCameraManager"
+    ],
+    "DB_NAME_FromJson": [
+        "VivoCamera.db"
+    ],
+    "appName2VCFValue": [
+        18,
+        "com.whatsapp",
+        1290,
+        "com.zing.zalo",
+        1291,
+        "com.viber.voip",
+        1292,
+        "jp.naver.line.android",
+        1293,
+        "com.facebook.orca",
+        1294,
+        "com.bbm",
+        1295,
+        "com.systec.umeeting",
+        1296,
+        "im.yixin"
+    ],
+    "vivoWhiteAppList": [
+        "com.android.camera",
+        "com.vivo.alphacamera",
+        "com.vivo.bsptest",
+        "com.iqoo.engineermode",
+        "com.example.mycamera"
+    ],
+    "TrustedPackageList": [
+        "com.vivo.findphone",
+        "com.android.camera",
+        "com.vivo.alphacamera",
+        "com.example.mycamera"
+    ],
+    "UidIsTrustedConfig": [
+        "com.android.camera|com.vivo.alphacamera|com.example.mycamera"
+    ],
+    "ConflictResolution": [
+        "com.vivo.cameraparamluma|com.bbk.facewake|com.vivo.bsptest|com.vivo.simplelauncher"
+    ],
+    "BypassUidActiveCheck": [
+        "com.android.camera|com.vivo.findphone",
+        "for UID not actice walk around begin"
+    ],
+    "WhitelistedSubUsers": [
+        "android|com.mediatek.ims|com.vivo.faceui"
+    ],
+    "QosSceneOptWhiteListed": [
+        "com.vivo.faceui"
+    ],
+    "LowestPriority": [
+        "android|com.vivo.faceui",
+        "for making sure android is lowest priority"
+    ],
+    "HighestPriority": [
+        "com.mediatek.ims",
+        "for making sure android is lowest priority"
+    ],
+    "previewdmsConfig": [
+        "com.vivo.familycare.local|com.vivo.familycare.child"
+    ],
+    "VivoCamera": [
+        "com.android.camera"
+    ],
+    "vivoAppListConfig": [
+        "com.android.camera|com.vivo.alphacamera|com.example.mycamera"
+    ],
+    "defaultSuperApps": [
+        "androidx.camera.integration.extensions",
+        "com.android.example.camera2.extensions",
+        "com.example.android.cameraxextensions",
+        "com.snapchat.android",
+        "com.tencent.mm"
+    ],
+    "is3rdAppUseHdr": [
+        "com.ss.android.ugc.aweme|com.smile.gifmaker|com.tencent.mm"
+    ],
+    "vivoSpecialAppConfig": [
+        "com.tencent.mm|com.tencent.mobileqq"
+    ]
+}
