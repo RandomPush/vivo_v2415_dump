@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+   <!-- hide launchActivity -->    
+   <hideAppsIcon name="com.bbk.lite.theme"/>
+   <hideAppsIcon name="com.bbk.cloud"/>
+   <hideAppsIcon name="com.vivo.base.gallery" />
+   <hideAppsIcon name="com.vivo.upslide" />
+   <hideAppsIcon name="com.vivo.pay"/>
+   <!-- vivo <xuyoujian> modify for SPD2222:[B230201-2046]add config, 2023.02.01 start-->
+   <hideAppsIcon name="com.vivo.base.vtouch"/>
+   <!-- vivo <xuyoujian> modify for SPD2222:[B230201-2046]add config, 2023.02.01 end-->
+   
+   <!-- split baseApp/fullApp -->
+   <!-- <package baseApp="com.vivo.baseapp" fullApp="com.vivo.fullapp"/> -->
+   <splitBaseApp baseApp="com.vivo.base.gallery" fullApp="com.vivo.gallery" />
+   <splitBaseApp baseApp="com.vivo.base.player" fullApp="com.android.bbkmusic" />
+   <!-- vivo <sunhan> modify for SPD1820:[B221214-3573]add config, 2022.12.14 start-->
+   <splitBaseApp baseApp="com.vivo.base.agent" fullApp="com.vivo.agent" />
+   <!-- vivo <sunhan> modify for SPD1820:[B221214-3573]add config, 2022.12.14 end-->
+   <!-- vivo <xuyoujian> modify for SPD2222:[B230201-2046]add config, 2023.02.01 start-->
+   <splitBaseApp baseApp="com.vivo.base.vtouch" fullApp="com.vivo.vtouch" />
+   <!-- vivo <xuyoujian> modify for SPD2222:[B230201-2046]add config, 2023.02.01 end-->
+   <!-- vivo <menghailong> modify for [B231130-3879] add config, 2023.11.30 start-->
+   <splitBaseApp baseApp="com.vivo.ai.base.copilot" fullApp="com.vivo.ai.copilot" />
+   <!-- vivo <menghailong> modify for [B231130-3879] add config, 2023.11.30 end-->
+   <!-- vivo <wujun> modify for [B240322-83832] add config, 2024.03.22 start-->
+   <splitBaseApp baseApp="com.vivo.aitranslate" fullApp="com.vivo.translator" />
+   <!-- vivo <wujun> modify for [B240322-83832] add config, 2024.03.22 end-->
+
+   <!-- install failed conflicting system app name -->
+   <installBlackApp name="com.vivo.space"/>
+   <installBlackApp name="com.vivo.wallet"/>
+   <installBlackApp name="com.iqoo.secure"/>
+   <installBlackApp name="com.android.VideoPlayer"/>
+   <installBlackApp name="com.android.bbkmusic"/>
+   <installBlackApp name="com.vivo.agent"/>
+   <installBlackApp name="com.vivo.moodcube"/>
+   <installBlackApp name="com.bbk.calendar"/>
+   <installBlackApp name="com.vivo.gallery"/>
+   <installBlackApp name="com.android.BBKClock"/>
+   <installBlackApp name="com.bbk.theme"/>
+   <installBlackApp name="com.vivo.ai.copilot"/>
+   <installBlackApp name="com.vivo.translator"/>
+
+   <!-- install failed conflicting system app provider -->
+   <!--<installBlackAuthority name="vivo.test.example.mozil.authority"/>-->
+</config>

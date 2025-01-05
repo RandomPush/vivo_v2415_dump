@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<exceptions>
+  <exception
+    package="com.android.incallui">
+    <permission name="android.permission.CAMERA" fixed="false"/>
+    <permission name="android.permission.GET_ACCOUNTS" fixed="false"/>
+    <permission name="android.permission.READ_CALL_LOG" fixed="false"/>
+    <permission name="android.permission.WRITE_CALL_LOG" fixed="false"/>
+    <permission name="android.permission.READ_CONTACTS" fixed="false"/>
+    <permission name="android.permission.RECORD_AUDIO" fixed="false"/>
+    <permission name="android.permission.READ_PHONE_STATE" fixed="false"/>
+  </exception>
+  <exception
+    package="com.vivo.appstore">
+    <permission name="android.permission.READ_EXTERNAL_STORAGE" fixed="false"/>
+    <permission name="android.permission.WRITE_EXTERNAL_STORAGE" fixed="false"/>
+    <permission name="android.permission.READ_PHONE_STATE" fixed="false"/>
+  </exception>
+  <exception
+    package="com.vivo.tws.vivotws">
+    <permission name="android.permission.BLUETOOTH_SCAN" fixed="false" />
+    <permission name="android.permission.BLUETOOTH_CONNECT" fixed="false" />
+  </exception>
+  <exception
+    package="com.android.vivo.tws.vivotws">
+    <permission name="android.permission.BLUETOOTH_SCAN" fixed="false" />
+    <permission name="android.permission.BLUETOOTH_CONNECT" fixed="false" />
+  </exception>
+  <exception
+    package="com.facebook.appmanager">
+    <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+  </exception>
+  <exception
+    package="com.google.android.apps.photos">
+    <permission name="android.permission.READ_MEDIA_IMAGES" fixed="false"/>
+    <permission name="android.permission.READ_MEDIA_VIDEO" fixed="false"/>
+  </exception>
+  <exception
+    package="com.vos.as.vit">
+    <permission name="android.permission.READ_PHONE_STATE" fixed="false"/>
+    <permission name="android.permission.CALL_PHONE" fixed="false"/>
+    <permission name="android.permission.CAMERA" fixed="false"/>
+    <permission name="android.permission.RECORD_AUDIO" fixed="false"/>
+  </exception>
+  <exception
+      package="com.vivo.alphacamera">
+    <permission name="android.permission.CAMERA" fixed="false" />
+    <permission name="android.permission.RECORD_AUDIO" fixed="false" />
+  </exception>
+</exceptions>

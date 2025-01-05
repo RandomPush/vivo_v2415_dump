@@ -1,0 +1,37 @@
+[
+    {
+        "project":[ "PD2415F_EX" ],
+        "sreConfigStatus": "true",
+		"panel":[{
+			   "panel_name":["pd2415_panel_nt37707_cmd"],
+               "Version": 4,
+               "hbmMap": [ 14063, 14063, 14238, 14390, 14537, 14537, 15415 ],
+               "hbmUpLuxLevel": [ 20000, 30000, 50000, 60000, 80000, 100000 ],
+               "hbmDownLuxLevel": [ 10000, 20000, 30000, 50000, 60000, 80000 ],
+               "hbmLimitTime": 15,
+               "transitionPoint": 14063,
+               "upLuxDelay": 2500,
+               "downLuxDelay": 3500,
+               "batteryLimit": {
+			        "batteryPercent": [5,10,15,20],
+			        "batteryLimitBrightness": [14063,14537,14816,15089]
+				}
+           },
+		   {
+               "panel_name":["pd2415_panel_rm692k0_cmd"],
+               "Version": 4,
+               "hbmMap": [ 14063, 14063, 14293, 14478, 14651, 14651, 15415 ],
+               "hbmUpLuxLevel": [ 20000, 30000, 50000, 60000, 80000, 100000 ],
+               "hbmDownLuxLevel": [ 10000, 20000, 30000, 50000, 60000, 80000 ],
+               "hbmLimitTime": 15,
+               "transitionPoint": 14063,
+               "upLuxDelay": 2500,
+               "downLuxDelay": 3500,
+               "batteryLimit": {
+			        "batteryPercent": [5,10,15,20],
+			        "batteryLimitBrightness": [14063,14651,14990,15328]
+				}
+		   }
+	   ]
+	}
+]

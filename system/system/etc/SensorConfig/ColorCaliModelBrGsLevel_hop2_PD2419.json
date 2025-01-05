@@ -1,0 +1,16 @@
+[
+	{
+		"sensor":29,
+		"lcm_id":"0x00000036",
+		"ModelBrLV3_GsLevel": [3276],
+		"ModelBrLV4_GsLevel": [11809,3],
+		"ModelGS": [63,127,255]
+	},
+	{
+		"sensor":29,
+		"lcm_id":"0x00000010",
+		"ModelBrLV3_GsLevel": [3960],
+		"ModelBrLV4_GsLevel": [12018,3],
+		"ModelGS": [63,127,255]
+	}
+]

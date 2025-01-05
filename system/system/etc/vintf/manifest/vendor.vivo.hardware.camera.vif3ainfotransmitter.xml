@@ -1,0 +1,10 @@
+<!--
+    Input:
+        vendor/vivo/system/extras/vivocameraserver/vif3ainfoutils/vendor.vivo.hardware.camera.vif3ainfotransmitter.xml
+-->
+<manifest version="8.0" type="framework">
+    <hal format="aidl">
+        <name>vendor.vivo.hardware.camera.vif3ainfotransmitter</name>
+        <fqname>IVIF3AInfoCallback/default</fqname>
+    </hal>
+</manifest>

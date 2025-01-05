@@ -1,0 +1,65 @@
+{
+    "SCENE_TYPE_UNKNOWN": [
+        "com.scene.test"
+    ],
+    "SCENE_TYPE_DEMO": [
+        "com.scene.test"
+    ],
+    "SCENE_TYPE_DEMO2": [
+        "com.scene.test"
+    ],
+    "SCENE_TYPE_ON_FOOT": [
+        "com.scene.test",
+        "com.vivo.sensor.brightness.curve.GameSceneThreshold",
+        "com.android.server.wifi.fence.elevatorfence",
+        "com.android.phone"
+    ],
+    "SCENE_TYPE_POCKET": [
+        "com.scene.test"
+    ],
+    "SCENE_TYPE_POCKET_FUSION": [
+        "com.scene.test"
+    ],
+    "SCENE_TYPE_RAISE_HAND": [
+        "com.scene.test",
+        "com.vivo.fingerprintui",
+        "com.vivo.biometrics",
+        "com.vivo.daemonService"
+    ],
+    "SCENE_TYPE_IN_VEHICLE": [
+        "com.scene.test"
+    ],
+    "SCENE_TYPE_STILL": [
+        "com.scene.test"
+    ],
+    "SCENE_TYPE_WALKING": [
+        "com.scene.test"
+    ],
+    "SCENE_TYPE_RUNNING": [
+        "com.scene.test"
+    ],
+    "SCENE_TYPE_ON_BICYCLE": [
+        "com.scene.test"
+    ],
+    "SCENE_TYPE_IN_HIGH_SPEED_RAIL": [
+        "com.scene.test"
+    ],
+    "SCENE_TYPE_IN_ELEVATOR": [
+        "com.scene.test",
+        "com.vivo.aiengine"
+    ],
+    "SCENE_TYPE_ON_FOOT_FAST": [
+        "com.scene.test"
+    ],
+    "SCENE_TYPE_AIRPLANE_TRACK": [
+        "com.scene.test",
+        "com.vivo.aiengine"
+    ],
+    "SCENE_TYPE_MAX": [
+        "com.scene.test"
+    ],
+    "SCENE_TYPE_CALL_HOLD_SIDE": [
+        "com.scene.test",
+        "com.vivo.services.sarpower.VivoCallHoldSideController"
+    ]
+}

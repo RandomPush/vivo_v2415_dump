@@ -1,0 +1,35 @@
+{
+  "version": "202411250",
+  "array": [
+    {
+      "switchCode": 500001,
+      "switchName": "AI消除-智能圈选",
+      "version": 202409031,
+      "isSwitchAllOpen": false,
+      "switchConditionArray": [
+        {
+          "switchFlavors": "overseas",
+          "whiteList": {
+            "switchInProject": "PD2324F_EX, PD2309F_EX, PD2307F_EX, PD2337F_EX, PD2242F_EX, PD2241F_EX, PD2243F_EX, PD2338F_EX, PD2406F_EX, PD2363F_EX, PD2362F_EX, PD2332F_EX, PD2323F_EX, PD2343F_EX, PD2284F_EX, PD2283F_EX, PD2325F_EX, PD2313F_EX, PD2404F_EX, PD2422F_EX, PD2418F_EX, PD2423F_EX, PD2415F_EX, PD2405F_EX, PD2408F_EX",
+            "switchInCountryCode": "TR, JO, LB, SA, AE, KW, OM, QA, BH, YE, IQ, IN, ID, PG, TZ, ZA, EG, KE, NG, MA, TN, DZ, PK, BD, NP, LK, BT, AZ, KZ, UZ, AU, TH, LA, MY, BN, VN, PH, KH, MM, HK, TW, SG"
+          }
+        }
+      ]
+    },
+    {
+      "switchCode": 500002,
+      "switchName": "反光消除",
+      "version": 202411250,
+      "isSwitchAllOpen": false,
+      "switchConditionArray": [
+        {
+          "switchFlavors": "overseas",
+          "whiteList": {
+            "switchInProject": "PD2405F_EX, PD2415F_EX, PD2419F_EX",
+            "switchInCountryCode": "TR, JO, LB, SA, AE, KW, OM, QA, BH, YE, IQ, IN, ID, PG, TZ, ZA, EG, KE, NG, MA, TN, DZ, PK, BD, NP, LK, BT, AZ, KZ, UZ, AU, TH, LA, MY, BN, VN, PH, KH, MM, HK, TW, SG, CL, PE, CO, MX, PA, CR, GT, BR, DE, UK, IE, SK, RO, BG, NL, FR, ES, IT, PL, PT, CZ, AT, HU, GR, HR, SI, CY, AL, MK, BA, ME, RS, BR"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+	"ramperbrightness": {
+		"sectiondown": [
+			[-0.5269214227,10065.5152],
+			[-0.8103818581,13708.26526],
+			[-1.158042403,17225.54699],
+			[-2.145782781,24982.27218],
+			[-2.121084594,24818.15273],
+			[-1.390497258,20485.03924],
+			[-3.356763723,31071.41789],
+			[-4.259401907,35553.01647],
+			[-8.826064198,51522.6345],
+			[-8.700367647,51184.88787],
+			[-7.035161744,49428.09564],
+			[-8.409090909,49900.72727],
+			[-16.75,50201]
+		],
+		"section_downpoint": [12851,10117,7853,6645,5931,5384,4965,3497,2687,1055,344,36,12],
+		"section_down_min_step": [114,75,52,28,29,108,45,36,17,18,22,18,9],
+		"sectiondowngapminone": 20,
+		"sectiondowngapmintwo": 80,
+		"sectiondownkeybr": 6645,
+		"downlcmFlickValue": 2,
+		"uptotaltime": 2800,
+		"uplimmitcount": 25,
+		"section_uppoint": [6385,10493],
+		"quickupstep": [594,515,266],
+		"quickupgap": [20,0,0],
+		"quickdownstep": [84,97,63,206],
+		"quickdowngap": [40,40,30,20],
+		"quick_sectionpoint": [9317,7215,4939,12],
+		"pemtotaltime": 10000,
+		"useFixedRefreshRate":1,
+		"dragTotalTime":500,
+		"dimSmoothTotalTime":500
+	}
+}

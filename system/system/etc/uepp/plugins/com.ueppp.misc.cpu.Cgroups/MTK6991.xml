@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<group __id__="com.ueppp.misc.cpu.Cgroups"
+    __ver__="1">
+    <group __id__="RSC_CPULIMIT">
+        <group __id__="com.tencent.mm">
+            <group __id__="com.tencent.mm">
+                <elem __name__="VFS.Maintenance"
+                    index="1"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="4622"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+
+                <elem __name__="[GT]ColdPool*"
+                    index="2"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="4622"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+
+                <elem __name__="[GT]HotPool*"
+                    index="3"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="4622"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+
+                <elem __name__="JSBrandServi#*"
+                    index="28"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+
+                <elem __name__="JSRuntimeLooper"
+                    index="29"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+
+                <elem __name__="Loader:Extracto"
+                    index="33"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+            </group>
+
+            <group __id__="com.tencent.mm:push">
+                <elem __name__="VFS.Maintenance"
+                    index="4"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="4622"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+
+                <elem __name__="[GT]ColdPool*"
+                    index="5"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="4622"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+
+                <elem __name__="[GT]HotPool*"
+                    index="6"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="4622"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+            </group>
+        </group>
+
+        <group __id__="com.bbk.appstore">
+            <group __id__="com.bbk.appstore:install">
+                <elem __name__="*"
+                    index="7"
+                    occupied_cycle="2"
+                    total_cycle="2"
+                    threshold="1000"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+            </group>
+        </group>
+
+        <group __id__="com.ss.android.article.news">
+            <group __id__="com.ss.android.article.news">
+                <elem __name__="bd_tracker_n"
+                    index="8"
+                    occupied_cycle="1"
+                    total_cycle="1"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+            </group>
+        </group>
+
+        <group __id__="com.vivo.browser">
+            <group __id__="com.vivo.browser">
+                <elem __name__="RequestRece"
+                    index="9"
+                    occupied_cycle="1"
+                    total_cycle="1"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+
+                <elem __name__="vclould.mdl"
+                    index="10"
+                    occupied_cycle="1"
+                    total_cycle="1"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+            </group>
+        </group>
+
+        <group __id__="com.youku.phone">
+            <group __id__="com.youku.phone">
+                <elem __name__="vclould.mdl"
+                    index="13"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+
+                <elem __name__="RequestRece"
+                    index="21"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+            </group>
+        </group>
+
+        <group __id__="com.ss.android.ugc.aweme">
+            <group __id__="com.ss.android.ugc.aweme">
+                <elem __name__="vclould.mdl"
+                    index="14"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+
+                <elem __name__="Lynx_JS"
+                    index="24"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+
+                <elem __name__="Playe2-*"
+                    index="25"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+            </group>
+        </group>
+
+        <group __id__="com.quark.browser">
+            <group __id__="com.quark.browser">
+                <elem __name__="vclould.mdl"
+                    index="15"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+
+                <elem __name__="RequestRece"
+                    index="16"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+            </group>
+        </group>
+
+        <group __id__="com.UCMobile">
+            <group __id__="com.UCMobile">
+                <elem __name__="vclould.mdl"
+                    index="17"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+            </group>
+        </group>
+
+        <group __id__="com.baidu.searchbox.lite">
+            <group __id__="com.baidu.searchbox.lite">
+                <elem __name__="elastic_dsp_sou"
+                    index="18"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="4"
+                    sleeptime_ms="6"/>
+
+                <elem __name__="elastic_dsp_ges"
+                    index="19"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="4"
+                    sleeptime_ms="6"/>
+            </group>
+        </group>
+
+        <group __id__="com.codoon.gps">
+            <group __id__="com.codoon.gps">
+                <elem __name__="hawtdispatch-DE"
+                    index="20"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+            </group>
+        </group>
+
+        <group __id__="com.cat.readall">
+            <group __id__="com.cat.readall">
+                <elem __name__="vclould.mdl"
+                    index="22"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+            </group>
+        </group>
+
+        <group __id__="com.gotokeep.keep">
+            <group __id__="com.gotokeep.keep">
+                <elem __name__="m.gotokeep.keep"
+                    index="23"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+            </group>
+        </group>
+
+        <group __id__="com.netease.cloudmusic">
+            <group __id__="com.netease.cloudmusic">
+                <elem __name__="RenderThread"
+                    index="26"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+            </group>
+        </group>
+
+        <group __id__="tv.danmaku.bili">
+            <group __id__="tv.danmaku.bili">
+                <elem __name__="ff_video_dec"
+                    index="27"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+            </group>
+        </group>
+
+        <group __id__="com.xtc.watch">
+            <group __id__="com.xtc.watch">
+                <elem __name__="http service"
+                    index="30"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+            </group>
+        </group>
+
+        <group __id__="com.ss.android.ugc.aweme.lite">
+            <group __id__="com.ss.android.ugc.aweme.lite">
+                <elem __name__="#tp-default-*"
+                    index="31"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+            </group>
+        </group>
+
+        <group __id__="com.kmxs.reader">
+            <group __id__="com.kmxs.reader">
+                <elem __name__="Loader:Extracto"
+                    index="32"
+                    occupied_cycle="6"
+                    total_cycle="6"
+                    threshold="14600"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+            </group>
+        </group>
+
+        <group __id__="com.ytl.testload">
+            <group __id__="com.ytl.testload">
+                <elem __name__="*"
+                    index="12"
+                    occupied_cycle="2"
+                    total_cycle="2"
+                    threshold="100"
+                    exectime_ms="2"
+                    sleeptime_ms="8"/>
+            </group>
+        </group>
+    </group>
+
+    <group __id__="CGROUP_FREEZER"/>
+
+    <group __id__="CGROUP_CPUSET"/>
+
+    <group __id__="CGROUP_CPUCTL"/>
+</group>

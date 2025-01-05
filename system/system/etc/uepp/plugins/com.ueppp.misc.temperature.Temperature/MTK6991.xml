@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<group __id__="com.ueppp.misc.temperature.Temperature"
+    __ver__="1">
+    <elem __name__="accuracy"
+        ntc="1000"
+        battery="1000"
+        ps_battery="10"/>
+
+    <elem __name__="tick"
+        ntc="10"
+        battery="10"
+        ps_battery="10"/>
+
+    <elem __name__="simple_temp_config"
+        temp_open_front_flash_light="48"
+        temp_toast_front_flash_light="51"
+        temp_forbid_front_flash_light="52"
+        temp_broadcast_front_flash_close="51"
+        temp_broadcast_front_flash_restore="48"
+        temp_broadcast_rear_flash_close="51"
+        temp_broadcast_rear_flash_restore="48"
+        temp_reduce_fps="47"
+        temp_recover_fps="45"
+        temp_broadcast_camera_hull="40"
+        temp_scale_size="43"
+        temp_recover_size="41"
+        temp_switch_to_4g="50"
+        temp_switch_to_5g="47"
+        temp_broadcast_camera_trigger_start="38"
+        temp_broadcast_camera_trigger_end="66"
+        temp_to_packmode_unfreeze="42"
+        temp_to_packmode_enter="40"
+        temp_car_mode_start="48"
+        temp_check_ccc_enter="46"
+        temp_check_ccc_exit="44"
+        temp_check_ccc_battery="30"
+        temp_htp_enter_level_2="52"
+        temp_htp_enter_level_3="58"
+        temp_htp_quit_level_2="49"
+        temp_htp_quit_level_3="55"
+        temp_broadcast_nav_start="45"
+        temp_htp_nav="60"
+        temp_htp_safety_line="58"
+        temp_app_store_download_limit_min="28"
+        temp_app_store_download_limit_max="30"
+        temp_cpulimit_trigger_start="0"
+        temp_cpulimit_trigger_end="50"
+        temp_ntc_night_heat_enter_no_amb="52"
+        temp_ntc_night_heat_enter_with_amb="50"
+        temp_shell_night_heat_enter_with_amb="40"
+        temp_easy_share_low_send="41"
+        temp_easy_share_high_send="44"
+        temp_easy_share_low_recv="41"
+        temp_easy_share_high_recv="44"
+        temp_easy_share_restore="44"
+        temp_to_packmode_force_stop="49"
+        temp_to_packmode_freeze="45"/>
+
+    <group __id__="virtual_temp_define">
+        <elem __name__="virtual_shell_ntc"
+            select_first_enable="virtual_shell;ntc"/>
+
+        <elem __name__="virtual_battery"
+            select_first_enable="battery;ps_battery"/>
+    </group>
+
+    <group __id__="virtual_temp_config">
+        <elem __name__="temp_htp_enter_level_1"
+            virtual_temp="virtual_shell_ntc"
+            virtual_shell="40"
+            ntc="41"/>
+
+        <elem __name__="temp_htp_quit_level_1"
+            virtual_temp="virtual_shell_ntc"
+            virtual_shell="37"
+            ntc="38"/>
+    </group>
+
+    <group __id__="country_region__V__IN">
+        <elem __name__="simple_temp_config"
+            temp_htp_enter_level_2="62"
+            temp_htp_enter_level_3="65"
+            temp_htp_quit_level_2="59"
+            temp_htp_quit_level_3="62"
+            temp_htp_nav="67"/>
+    </group>
+
+    <group __id__="country_region__V__EU">
+        <elem __name__="simple_temp_config"
+            temp_htp_enter_level_2="51"
+            temp_htp_enter_level_3="55"
+            temp_htp_quit_level_2="48"
+            temp_htp_quit_level_3="52"/>
+    </group>
+
+    <group __id__="cts_mode__V__yes">
+        <elem __name__="simple_temp_config"
+            temp_htp_enter_level_3="65"
+            temp_htp_quit_level_3="62"
+            temp_htp_nav="67"/>
+    </group>
+</group>

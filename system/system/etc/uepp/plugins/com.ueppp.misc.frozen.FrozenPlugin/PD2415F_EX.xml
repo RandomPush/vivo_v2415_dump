@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8"?>
+<group __id__="com.ueppp.misc.frozen.FrozenPlugin"
+    __ver__="1">
+    <elem __name__="frozen_config"
+        frozen_enable="true"
+        unfreeze_per_enable="true"
+        upc_enable="true"
+        im_frozen_enable="true"
+        im_frozen_alarm="false"
+        mute_check_enable="true"
+        speed_list_enable="true"
+        frozen_ex_enable="true"/>
+
+    <group __id__="unfrozen_broadcast">
+        <set __name__="*">
+            action_prefix_com.vivo.daemonService.unifiedconfig.update_finish_broadcast;
+            com.vivo.abe;
+            android.intent.action.MEDIA_BUTTON;
+            android.intent.action.PHONE_STATE;
+            android.appwidget.action.APPWIDGET_UPDATE;
+            com.google.android.c2dm.intent.RECEIVE;
+            com.facebook.rti.fbns.intent.RECEIVE;
+        </set>
+
+        <set __name__="com.android.VideoPlayer">
+            android.net.conn.CONNECTIVITY_CHANGE;
+            vivo_android.intent.action.PACKAGE_ADDED;
+        </set>
+
+        <set __name__="com.kugou.android">
+            android.intent.action.ACTION_POWER_CONNECTED;
+        </set>
+
+        <set __name__="com.kugou.android.ringtone">
+            android.intent.action.ACTION_POWER_CONNECTED;
+            android.intent.action.SCREEN_ON;
+        </set>
+
+        <set __name__="com.vivo.space">
+            android.net.conn.CONNECTIVITY_CHANGE;
+        </set>
+
+        <set __name__="com.vivo.browser">
+            android.net.conn.CONNECTIVITY_CHANGE;
+            android.intent.action.PACKAGE_ADDED;
+            com.vivo.puresearch.hot_word_exposure.deliver_to_otherapp;
+            com.vivo.browser.pendant.hotword;
+            com.vivo.action.launch.pendant.report;
+            browser.intent.health.code.click;
+        </set>
+
+        <set __name__="com.bbk.appstore">
+            android.net.conn.CONNECTIVITY_CHANGE;
+            android.intent.action.PACKAGE_ADDED;
+            android.intent.action.PACKAGE_REMOVED;
+            android.intent.action.SCREEN_OFF;
+            android.intent.action.USER_PRESENT;
+            com.vivo.packageinstaller.ACTION_INSTALL;
+            com.bbk.appstore.ACTION_INSTALL_RESULT;
+        </set>
+
+        <set __name__="com.vivo.game">
+            android.net.conn.CONNECTIVITY_CHANGE;
+            android.intent.action.PACKAGE_ADDED;
+            android.intent.action.PACKAGE_REMOVED;
+        </set>
+
+        <set __name__="com.vivo.magazine">
+            android.net.conn.CONNECTIVITY_CHANGE;
+        </set>
+
+        <set __name__="com.coloros.backuprestore">
+            android.intent.action.PACKAGE_ADDED;
+        </set>
+
+        <set __name__="com.tencent.mobileqq">
+            android.net.wifi.WIFI_STATE_CHANGED;
+        </set>
+
+        <set __name__="com.tencent.mm">
+            android.intent.action.SCREEN_ON;
+            android.intent.action.SCREEN_OFF;
+            android.net.wifi.WIFI_STATE_CHANGED;
+            com.tencent.mm.TrafficStatsReceiver;
+            ALARM_ACTION(10000);
+        </set>
+    </group>
+
+    <group __id__="freeze_period">
+        <group __id__="period_time">
+            <set __name__="default">
+                60,1;
+            </set>
+
+            <set __name__="com.xiaomi.smarthome">
+                0.25,2;
+                240,1;
+            </set>
+        </group>
+
+        <elem __name__="period_temp"
+            plug_temp_on="38"
+            plug_temp_off="40"
+            screen_on_temp="38"
+            screen_off_temp="36"/>
+    </group>
+
+    <group __id__="download_threshold">
+        <set __name__="com.baidu.netdisk">
+            5,10,6,200,5,18;
+        </set>
+
+        <set __name__="com.baidu.netdisk22222">
+            500,1000,600,200,500,1800;
+        </set>
+    </group>
+
+    <group __id__="im_frozen">
+        <group __id__="im_frozen_csocket">
+            <set __name__="com.tencent.mobileqq">
+                com.tencent.mobileqq;
+                com.tencent.mobileqq:tool;
+                com.tencent.mobileqq:qzone;
+            </set>
+
+            <set __name__="com.tencent.mm">
+                com.tencent.mm:tools;
+                com.tencent.mm:toolsmp;
+                com.tencent.mm;
+                com.tencent.mm:appbrand0;
+            </set>
+        </group>
+
+        <group __id__="im_push">
+            <set __name__="com.tencent.mobileqq">
+                com.tencent.mobileqq:MSF;
+            </set>
+
+            <set __name__="com.tencent.mm">
+                com.tencent.mm:push;
+            </set>
+        </group>
+    </group>
+
+    <group __id__="frozen_list">
+        <set __name__="black_list">
+            com.displaylink.presenter;
+            com.truecaller;
+            com.tencent.mm;
+            com.tencent.mobileqq;
+            com.alibaba.android.rimet;
+            com.taobao.qianniu;
+            com.tencent.minihd.qq;
+            com.skype.raider;
+            com.microsoft.teams;
+            com.facebook.katana;
+            com.whatsapp;
+            com.twitter.android;
+            com.snapchat.android;
+            jp.naver.line.android;
+            com.vanyun.onetalk.app;
+            com.longrise.mhjy;
+            com.jmshzl.gridman;
+            com.facebook.orca;
+            com.google.android.gms;
+            org.telegram.messenger;
+            com.bbk.cloud;
+            com.mgoogle.android.gms;
+            com.google.android.googlequicksearchbox;
+            com.vivo.easyshare;
+            com.antutu;
+            com.antutu.benchmark.full;
+            com.antutu.ABenchMark;
+            cn.com.jtap.android;
+            cn.com.jtap.android.ime;
+            cn.com.xxxx.gpstest;
+            com.dzsoft.battery.monitor;
+            com.android.providers.media.module;
+            com.google.android.providers.media.module;
+            com.mobiletools.systemhelper;
+            com.android.systemui;
+            com.google.android.gms.persistent;
+            com.google.android.gms.unstable;
+            com.google.android.apps.uploader;
+            com.qualcomm.embms;
+            com.android.providers.contacts;
+            com.android.BBKTools;
+            android.process.media;
+            com.android.providers.media;
+            com.lalamove.huolala.client;
+            com.lalamove.huolala.driver;
+            cn.imdada.scaffold;
+            com.dada.mobile.android;
+            com.sfexpress.knight;
+            com.wlqq;
+            com.google.android.projection.gearhead;
+            com.raimbekov.android.sajde;
+            com.sankuai.meituan.dispatch.homebrew;
+            me.ele.shopcenter;
+            com.mc.cpyr.cqgyb.yqsyb;
+            com.xunmeng.im;
+            com.aimi.knock;
+            com.ubercab.driver;
+            net.easyconn.carman;
+            net.easyconn.carman.neutral.vp;
+            com.vhome.castscreen.sficast;
+            com.didiglobal.express.driver;
+            com.tubafang.express.driver;
+            com.ichinait.gbdriver;
+            com.sdu.didi.gsui;
+            com.didichuxing.rainbow;
+            com.kuaidi.daijia.driver;
+            com.zwfw.YueZhengYi;
+            com.microsoft.office.outlook;
+            com.tencent.wemeet.app;
+            com.ss.android.lark;
+            com.systec.umeeting;
+            com.sankuai.meituan.meituanwaimaibusiness;
+            com.sankuai.meituan.dispatch.crowdsource;
+            com.sfic.kfc.knight;
+            me.ele.napos;
+            com.sankuai.meituan.merchant;
+            com.cxyw.suyun.ui;
+            com.bbk.scene.indoor;
+            com.bsb.hike;
+            com.google.android.calendar;
+            com.android.deskclock;
+            com.android.BBKCrontab;
+            cn.com.vivo.vgnss;
+            com.android.frameworks.servicestests;
+            com.payjoy.status.df;
+            com.google.android.apps.devicelock;
+            com.trustonic.telecoms.client.standard.dlc.playground;
+            com.xiaomi.smarthome;
+            com.iqoo.trafficupgrade;
+            cn.com.vivo.vhd;
+            org.skia.skqp;
+            com.android.cts.videoperf;
+            com.ctsi.emm;
+            com.iqoo.nfc.wifidirect;
+            com.redteamobile.virtual.softsim;
+            com.android.vendors.bridge.softsim;
+            com.iflytek.speechsuite;
+            com.mobile.iroaming;
+            com.sie.mp;
+            com.android.mtp;
+            com.xtc.watch;
+            com.xtc.originwidget;
+            com.teslamotors.tesla;
+            cn.com.weilaihui3;
+            com.yongche;
+            com.sec.android.app.shealth;
+            com.google.android.wearable.app.cn;
+            devsticks.cartoonsticker.forwhat;
+            com.sgiggle.production;
+            im.thebot.messenger;
+            com.kakao.talk;
+            com.catfiz;
+            com.jio.qcmiddleware;
+            com.google.android.marvin.talkback;
+            com.mplusapp;
+            android.libcore.cts.wycheproof.bouncycastle;
+            com.mygolbs.mybus;
+            com.hike.chat.stickers;
+            com.xiwei.logistics;
+            com.justsy.mdmsys;
+            com.justsy.mdm;
+            com.olacabs.sharedriver;
+            com.winit.merucab;
+            com.meru.merumobile;
+            com.oneway.driver;
+            com.ftstkmb.solat;
+            com.bitsmedia.android.muslimpro;
+            ru.mts.mtscashback;
+            ru.mts.mtstv;
+            ru.mts.mymts;
+            com.comprion.android.test;
+            com.google.android.permissioncontroller;
+            com.android.permissioncontroller;
+            es.gob.radarcovid;
+            de.rki.coronawarnapp;
+            nl.rijksoverheid.en;
+            com.tencent.wework;
+            com.ishansong;
+            com.vcts.uiautomator;
+            com.vcts.uiautomator.test;
+            test.vcts.uiautomator2;
+            test.vcts.uiautomator2.test;
+            com.bbk.theme.online.livewallpaper;
+            jp.co.canon.bsd.ad.pixmaprint;
+            com.hp.printercontrol;
+            com.huawei.cv80.printer_huawei;
+            com.hp.android.printservice;
+            com.sankuai.xmpp;
+            com.yidejia.yim;
+            com.alibaba.taurus.zhengzhou;
+            com.zte.softda;
+            com.example.administrator.icome;
+            com.haier.kdweibo.client;
+            com.sds.sdsmeeting;
+            com.microsoft.office.lync15;
+            Uxpp.UC;
+            com.yealink.vc.mobile.caict;
+            com.cisco.webex.meetings;
+            com.foreverht.workplus.ymtc.pro;
+            us.zoom.videomeetings;
+            com.ctripframework.OAapp;
+            com.xianyi.mobile.dtyd;
+            com.jw.iworker.sh;
+            com.wdrcloud.jzh;
+            com.chinacnd.app;
+            com.ccb.ecpmobile.drs;
+            com.jd.oa;
+            com.paic.mo.client;
+            com.samsundot.talking;
+            com.midea.connect;
+            com.gnet.uc;
+            com.baidu.hi;
+            com.ss.android.lark.kacrc;
+            com.crcc.tjt;
+            net.qihoo.corp.app.iqha;
+            com.netease.popo;
+            com.vanke.kdweibo.client;
+            com.erp.wczd;
+            com.boc.bocwechat;
+            com.gmcc.gdmobileimoa;
+            com.weaver.custom7;
+            cn.com.countrygarden.yb;
+            com.jicaiapp;
+            com.imgotv.oa;
+            com.cmbchina.amoffice;
+            com.tencent.weworkenterprise;
+            com.pingan.xueyuan;
+            com.zgzt.mobile;
+            com.zxy.bpmti9;
+            com.sunboxsoft.charge.institute;
+            com.tencent.weworklocal;
+            com.duoke.app.android;
+            com.google.android.apps.work.clouddpc;
+            com.github.uiautomator;
+            com.netease.open.pocoservice;
+            com.trustonic.telecoms.standard.dlc;
+            android.mobly.snippet.uiautomator.cts;
+            com.google.android.mobly.snippet.bundled;
+            com.sticktoit;
+            com.kaixinkan.ugc.video;
+            androidx.test.services
+        </set>
+
+        <set __name__="black_list_ex_adjoin"
+            __min_sdk__="35">
+            com.microsoft.office.excel;
+            com.microsoft.office.word;
+            com.eyecon.global;
+            com.facebook.services;
+            com.trustonic.telecoms.standard.dlc;
+            com.trustonic.telecoms.client.standard.dlc.playground;
+            com.google.android.apps.devicelock;
+            com.payjoy.status.df;
+            com.uusafe.portal;
+            com.android.vending;
+            com.google.android.apps.photos;
+            com.google.android.apps.nbu.files;
+            com.google.android.setupwizard;
+            com.google.android.apps.setupwizard.searchselector;
+            com.google.android.apps.wellbeing;
+            com.google.android.projection.gearhead;
+            com.google.android.gms;
+            com.google.android.configupdater;
+            com.google.android.ext.shared;
+            com.google.android.feedback;
+            com.google.android.gms.location.history;
+            com.google.android.onetimeinitializer;
+            com.google.android.partnersetup;
+            com.google.android.printservice.recommendation;
+            com.google.android.apps.restore;
+            com.google.android.gsf;
+            com.google.android.webview;
+            com.android.chrome;
+            com.android.providers.partnerbookmarks;
+            com.android.bookmarkprovider;
+            com.google.android.googlequicksearchbox;
+            com.google.android.apps.googleassistant;
+            com.google.ar.lens;
+            com.google.android.marvin.talkback;
+            com.google.android.tts;
+            com.android.email.partnerprovider;
+            com.google.android.apps.maps;
+            com.google.android.calendar;
+            com.google.android.syncadapters.calendar;
+            com.google.android.keep;
+            com.google.android.apps.subscriptions.red;
+            com.google.android.apps.magazines;
+            com.google.android.apps.docs;
+            com.google.android.apps.adm;
+            com.google.android.apps.fitness;
+            com.google.android.apps.healthdata;
+            com.google.android.as;
+            com.google.ambient.streaming;
+            com.google.android.as.oss;
+            android.autoinstalls.config.vivo.devices;
+            com.google.android.apps.googlevoice;
+            com.google.android.wearable.app;
+            com.vivo.customtool;
+            com.vivo.cota;
+            co.sitic.pp;
+        </set>
+
+        <set __name__="black_list_ex_disjoin"
+            __min_sdk__="35">
+            com.smile.gifmaker;
+            com.tencent.mm;
+            com.tencent.mobileqq;
+            com.alibaba.android.rimet;
+            com.skype.raider;
+            com.microsoft.teams;
+            com.facebook.katana;
+            com.whatsapp;
+            com.twitter.android;
+            com.snapchat.android;
+            jp.naver.line.android;
+            com.facebook.orca;
+            org.telegram.messenger;
+            com.microsoft.office.outlook;
+            com.tencent.wemeet.app;
+            com.ss.android.lark;
+            com.xiaomi.smarthome;
+            com.kakao.talk;
+            com.truecaller;
+        </set>
+
+        <set __name__="no_noti_dl_list">
+            com.xunlei.downloadprovider;
+            com.taptap;
+        </set>
+
+        <set __name__="alarm_app">
+            com.zdworks.android.zdclock;
+            com.erciyuan.clock;
+            com.wnnz.hw;
+            com.dotools.clock;
+            com.svm.batterychargeralarm;
+            com.shrq.clockmorning;
+            com.pm.clock;
+            com.shoujinaozhong.all;
+            com.lrnz.lrnz;
+            com.mengmeng.clock;
+            com.doudoubird.alarmcolck;
+            com.king.clock;
+            com.smclock.cn.smclock;
+            com.getup.activity;
+            droom.sleepIfUCan;
+            com.good.clock;
+            com.ea.flutter_app;
+            com.net.alarmclock;
+            com.ingyomate.shakeit;
+            com.sygd.gdalarmclock;
+        </set>
+
+        <set __name__="ig_black">
+            com.lalamove.huolala.driver;
+            cn.imdada.scaffold;
+            com.dada.mobile.android;
+            com.sfexpress.knight;
+            com.wlqq;
+            com.sankuai.meituan.dispatch.homebrew;
+            me.ele.crowdsource;
+            me.ele.shopcenter;
+            me.ele.hbdteam;
+            com.wanshua;
+            com.unlimit.ulreader;
+            io.legado.app.release;
+            com.ubercab.driver;
+            net.easyconn.carman;
+            com.vhome.castscreen.sficast;
+            com.didiglobal.express.driver;
+            com.tubafang.express.driver;
+            com.cxcxcx.express.driver;
+            com.chengpei.express.driver;
+            com.tuoshou.express.driver;
+            com.ichinait.gbdriver;
+            com.fengyuncx.yydriver;
+            com.sdu.didi.gsui;
+            com.didichuxing.rainbow;
+            com.kuaidi.daijia.driver;
+            com.sankuai.meituan.meituanwaimaibusiness;
+            com.sankuai.meituan.dispatch.crowdsource;
+            com.sfic.kfc.knight;
+            me.ele.napos;
+            com.sankuai.meituan.merchant;
+            com.cxyw.suyun.ui;
+            com.yongche;
+            com.sec.android.app.shealth;
+            com.xiwei.logistics;
+            com.ishansong;
+        </set>
+
+        <set __name__="raf">
+            com.kugou.android;
+            cn.kuwo.player;
+            com.netease.cloudmusic;
+            com.tencent.qqmusic;
+            com.ximalaya.ting.android;
+            com.ximalaya.ting.lite;
+            com.xs.fm;
+            cmccwm.mobilemusic;
+            bubei.tingsh;
+        </set>
+
+        <set __name__="frozen_offline">
+            com.tencent.mm;
+            com.tencent.mobileqq;
+            com.sie.mp;
+        </set>
+
+        <set __name__="uncheck_download">
+            com.kuaishou.nebula;
+            com.kwai.thanos;
+            com.kwai.bulldog;
+            com.smile.gifmaker;
+            com.ss.android.ugc.aweme;
+            com.ss.android.ugc.aweme.lite;
+            com.meelive.ingkee;
+            com.yilahuo.driftbottle;
+            com.sina.weibo;
+            com.xmiles.colorfulcallshow;
+            net.csdn.csdnplus;
+            com.snda.wifilocating;
+            com.shsp.cleanmaster;
+            com.zdworks.android.zdclock;
+            com.mc.cpyr.cqgyb.yqsyb;
+            com.taobao.taobao;
+            com.taobao.idlefish;
+            com.taobao.live;
+            com.huimai365;
+            com.daraz.android;
+            com.cubic.autohome;
+            com.mt.mtxx.mtxx;
+            com.ziroom.android.manager;
+            com.wecut.ouo;
+            com.qingshu520.chat;
+            com.hicorenational.antifraud;
+            com.wallstreetcn.news;
+            com.erciyuan.clock;
+            com.dotools.clock;
+            cn.soulapp.android;
+            com.zsyj.wallpaper;
+            com.ddmh.livewallpaper;
+            com.ptu.photoeditor;
+            com.magicwallpaper.camera;
+            com.qimiaoptu.camera;
+            com.vmos.pro;
+            com.muxin.happysport;
+            com.guangle.happywalk;
+            cn.gov.tax.its;
+            com.scgroup.shopmall;
+        </set>
+
+        <set __name__="service_caller">
+            com.tencent.mm;
+            com.tencent.mobileqq;
+            com.tencent.minihd.qq;
+            com.google.android.gms;
+            com.vivo.musicwidgetmix;
+            com.vivo.agent;
+            com.vivo.car.networking;
+            com.vivo.wallet;
+            com.android.nfc;
+            com.android.systemui;
+            com.vivo.pushservice;
+            com.vivo.hiboard;
+            com.android.incallui;
+            com.waze;
+            com.sina.news.vivo.widget;
+            com.vivo.videowidgetmix;
+            com.youku.widget.vivo;
+            com.taobao.widgetvivo;
+            com.vivo.game;
+        </set>
+
+        <set __name__="called_serivce">
+            com.tencent.mm;
+            com.tencent.mobileqq;
+            com.tencent.minihd.qq;
+            com.bbk.appstore;
+            com.eg.android.AlipayGphone;
+        </set>
+
+        <set __name__="period_unfreeze_black_list"/>
+
+        <set __name__="aosp_frozen_exempt_list">
+            com.vivo.familycare.local;
+            com.vivo.bsptest;
+            com.vos.as.vit;
+            com.iqoo.engineermode;
+            com.vivo.customtool;
+            com.vivo.cota;
+            co.sitic.pp;
+            com.payjoy.status.df;
+            com.google.android.apps.devicelock;
+            com.trustonic.telecoms.standard.dlc;
+            com.trustonic.telecoms.client.standard.dlc.playground;
+            com.vivo.gallery;
+            com.vivo.hybrid;
+            com.vivo.game;
+            com.android.VideoPlayer;
+            com.kaixinkan.ugc.video;
+            com.vivo.appstore;
+            com.bbk.appstore;
+            com.vivo.smartoffice;
+            com.vivo.aiservice;
+            com.bbk.cloud;
+            com.vivo.findphone;
+            com.bbk.account;
+            com.android.camera;
+            com.vivo.browser;
+            com.vivo.accessibility;
+            com.vivo.demovideo;
+            com.vivo.gallery.aiservice;
+            com.android.settings;
+            com.android.settings.intelligence;
+            com.yozo.vivo.office;
+            com.vivo.smartshot;
+            com.android.mms;
+            com.bbk.updater;
+            com.vivo.healthservice;
+            com.vivo.health;
+            com.vivo.health.deviceConn;
+            com.iqoo.secure;
+            com.vivo.imanager;
+            com.android.bbklog;
+            com.vivo.musicwidgetmix;
+            com.vivo.telephonyapp;
+            com.vivo.devicereg;
+            com.android.systemui;
+        </set>
+
+        <set __name__="widget_exempt_list">
+            com.vivo.widgetweather.WeatherAppWidgetProvider;
+            com.vivo.widgetweather.pm25Widget.Pm25WidgetProvider;
+            com.vivo.widgetweather.uvWidgetBlack.UvWidgetBlackProvider;
+            com.vivo.widgetweather.pm25WidgetBlack.Pm25WidgetBlackProvider;
+            com.vivo.widgetweather.uvWidget.UvWidgetProvider;
+            com.vivo.widgetweather.WeatherWidget2X2.WeatherWidget2X2Provider;
+            com.vivo.widgetweather.WeatherWidget2X2New.WeatherWidget2X2NewProvider;
+            com.vivo.widgetweather.xflip.xflipWeatherMainWidget.XflipWeatherMainWidgetProvider;
+            com.vivo.widgetweather.xflip.xflipWeather2X1SimpleWidget.XflipWeather2X1SimpleWidgetProvider;
+            com.vivo.widgetweather.xflip.xflipWeather2X1LineWidget.XflipWeather2X1LineWidgetProvider;
+            com.vivo.widgetweather.xflip.xflipWeather1X1Widget.XflipWeather1X1WidgetProvider;
+            com.vivo.widgetweather.tempKeyguard.TempKeyguardWidgetProvider;
+            com.vivo.widgetweather.WeatherDataChangeBroadcastReceiver;
+            com.vivo.widgetweather.WeatherBroadcastReceiver;
+            com.vivo.ese.widget.view.CustomWidget;
+            com.vivo.wallet.nfc.bus.update.widget;
+            com.vivo.wallet.nfc.bus.update.widget.swing.card;
+            com.vivo.wallet.nfc.bus.control.data.upload;
+            com.vivo.devicepower.widget.DarkDevicePowerWidget;
+            com.vivo.devicepower.widget.WhiteDevicePowerWidget;
+            com.vivo.devicepower.widget.LockScreenWidgetProvider;
+            com.vivo.devicepower.widget.LockScreenWidgetProvider2;
+            com.vivo.devicepower.widget.InnerLockScreenWidgetProvider;
+            com.vivo.devicepower.widget.InnerLockScreenWidgetProvider2;
+            com.vivo.widget.timemanager.widget.TimeManagerWidgetProvider;
+            com.vivo.widget.timemanager.widget.TimeManagerWidgetProviderLight;
+            com.vivo.widget.timemanager.lock.widget.TimeManagerLockWidget;
+        </set>
+
+        <set __name__="black_list"
+            __not_replace__="+">
+            com.microsoft.office.excel;
+            com.microsoft.office.word;
+            com.eyecon.global;
+            com.facebook.services;
+            com.trustonic.telecoms.standard.dlc;
+            com.trustonic.telecoms.client.standard.dlc.playground;
+            com.google.android.apps.devicelock;
+            com.payjoy.status.df;
+            com.uusafe.portal;
+            com.android.vending;
+            com.google.android.apps.photos;
+            com.google.android.apps.nbu.files;
+            com.google.android.setupwizard;
+            com.google.android.apps.setupwizard.searchselector;
+            com.google.android.apps.wellbeing;
+            com.google.android.projection.gearhead;
+            com.google.android.gms;
+            com.google.android.configupdater;
+            com.google.android.ext.shared;
+            com.google.android.feedback;
+            com.google.android.gms.location.history;
+            com.google.android.onetimeinitializer;
+            com.google.android.partnersetup;
+            com.google.android.printservice.recommendation;
+            com.google.android.apps.restore;
+            com.google.android.gsf;
+            com.google.android.webview;
+            com.android.chrome;
+            com.android.providers.partnerbookmarks;
+            com.android.bookmarkprovider;
+            com.google.android.googlequicksearchbox;
+            com.google.android.apps.googleassistant;
+            com.google.ar.lens;
+            com.google.android.marvin.talkback;
+            com.google.android.tts;
+            com.android.email.partnerprovider;
+            com.google.android.apps.maps;
+            com.google.android.calendar;
+            com.google.android.syncadapters.calendar;
+            com.google.android.keep;
+            com.google.android.apps.subscriptions.red;
+            com.google.android.apps.magazines;
+            com.google.android.apps.docs;
+            com.google.android.apps.adm;
+            com.google.android.apps.fitness;
+            com.google.android.apps.healthdata;
+            com.google.android.as;
+            com.google.ambient.streaming;
+            com.google.android.as.oss;
+            android.autoinstalls.config.vivo.devices;
+            com.google.android.apps.googlevoice;
+            com.google.android.wearable.app;
+        </set>
+
+        <set __name__="black_list"
+            __not_replace__="-">
+            com.smile.gifmaker;
+            com.tencent.mm;
+            com.tencent.mobileqq;
+            com.alibaba.android.rimet;
+            com.skype.raider;
+            com.microsoft.teams;
+            com.facebook.katana;
+            com.whatsapp;
+            com.twitter.android;
+            com.snapchat.android;
+            jp.naver.line.android;
+            com.facebook.orca;
+            org.telegram.messenger;
+            com.microsoft.office.outlook;
+            com.tencent.wemeet.app;
+            com.ss.android.lark;
+            com.xiaomi.smarthome;
+            com.kakao.talk;
+            com.truecaller;
+        </set>
+    </group>
+</group>

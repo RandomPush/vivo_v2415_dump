@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--mapping_rule="01110111233323330111011123332333" 表示0~31的对应映射值分别对应01...333，每一位必须为正整数值-->
+<!--mapping_rule 新的AOL取值范围扩展到64位，规则同上-->
+<!--当product存在相同项时，使用最上面的<product></product>一项配置，其后的相同项不会读取-->
+<config>
+  <product model="PD2359">
+      <item hardware_id="1" mapping_rule="01012222333333330101222233333333" />
+  </product>
+  <product model="PD2405">
+      <item hardware_id="1" mapping_rule="0011001122223333001100112222333344444444444444445555555555555555" />
+  </product>
+  <product model="PD2415">
+      <item hardware_id="1" mapping_rule="0011001100110011001100110011001122222222222222222222222222222222" />
+  </product>
+  <product model="PD2421F_EX">
+      <item hardware_id="1" mapping_rule="0011001100110011001100110011001122222222222222222222222222222222" />
+  </product>
+  <product model="PD2430">
+      <item hardware_id="1" mapping_rule="0011001122223333001100112222333344444444444444445555555555555555" />
+  </product>
+
+  <product model="PD2419">
+      <item hardware_id="1" mapping_rule="0011001100110011001100110011001122222222222222222222222222222222" />
+  </product>
+</config>

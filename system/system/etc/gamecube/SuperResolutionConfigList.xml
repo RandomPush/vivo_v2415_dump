@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<games>
+    <!--    2415F_EX名单-->
+    <version>1</version>
+        <item pkgName="com.miHoYo.GenshinImpact" label="Genshin" channel="*" state="1" frameDepress="" frameInter=""  monsterFrameDepress="" monsterFrameInter=""/>
+        <item pkgName="com.pubg.imobile" label="BGMI" channel="*" state="1" frameDepress="" frameInter=""  monsterFrameDepress="" monsterFrameInter=""/>
+        <item pkgName="com.tencent.ig" label="PUBG Mobile" channel="*" state="1" frameDepress="" frameInter=""  monsterFrameDepress="" monsterFrameInter=""/>
+        <item pkgName="com.tencent.tmgp.sgame" label="王者荣耀" channel="*" state="1" frameDepress="" frameInter=""  monsterFrameDepress="" monsterFrameInter=""/>
+        <item pkgName="com.riotgames.league.wildrift" label="LoLm" channel="*" state="1" frameDepress="" frameInter=""  monsterFrameDepress="" monsterFrameInter=""/>
+        <item pkgName="com.pubg.newstate" label="PUBG New State" channel="*" state="1" frameDepress="" frameInter=""  monsterFrameDepress="" monsterFrameInter=""/>
+        <item pkgName="com.activision.callofduty.shooter" label="CODM" channel="*" state="1" frameDepress="" frameInter=""  monsterFrameDepress="" monsterFrameInter=""/>
+        <item pkgName="com.garena.game.codm" label="CODM" channel="*" state="1" frameDepress="" frameInter=""  monsterFrameDepress="" monsterFrameInter=""/>
+        <item pkgName="com.dts.freefiremax" label="FreeFire MAX" channel="*" state="1" frameDepress="" frameInter=""  monsterFrameDepress="" monsterFrameInter=""/>
+        <item pkgName="com.carxtech.carxdr2" label="CarX Drift Racing 2" channel="*" state="1" frameDepress="" frameInter=""  monsterFrameDepress="" monsterFrameInter=""/>
+        <item pkgName="com.igg.android.lordsmobile" label="Lords Mobile" channel="*" state="1" frameDepress="" frameInter=""  monsterFrameDepress="" monsterFrameInter=""/>
+</games>

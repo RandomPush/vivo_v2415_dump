@@ -1,0 +1,85 @@
+{
+    "underProxWhiteList":[
+        "com.invensense.logger.fragments",
+        "com.qualcomm.qti.sensors",
+        "com.qualcomm.sensors.qsensortest",
+        "engineermode",
+        "com.vos.user.vit",
+        "com.vos.as.vit.sensor",
+        "com.vivo.sensor.SDC",
+        "com.vivo.sensor.proximity"
+    ],
+
+    "cctWhiteList":[
+        "com.invensense.logger.fragments",
+        "com.qualcomm.qti.sensors",
+        "com.qualcomm.sensors.qsensortest",
+        "engineermode",
+        "com.vos.user.vit",
+        "com.android.camera",
+        "hidl_client_pid",
+        "com.vivo.sensor.utils.CCTRawDataDisplayService"
+    ],
+
+    "raiseUpDetectWhiteList":[
+        "com.invensense.logger.fragments",
+        "com.qualcomm.qti.sensors",
+        "com.qualcomm.sensors.qsensortest",
+        "engineermode",
+        "com.vos.user.vit",
+        "com.vivo.services.motion.RaiseUpWakeService",
+        "com.vivo.keyguard.presenter.smart.KeyguardRaiseAndPutDownManager",
+        "com.vivo.bsptest",
+        "com.vivo.faceui",
+        "com.vivo.fingerprintui",
+        "com.vivo.services.nightpearl",
+        "com.android.incallui"
+    ],
+
+    "underLightWhiteList":[
+        "com.invensense.logger.fragments",
+        "com.qualcomm.qti.sensors",
+        "com.qualcomm.sensors.qsensortest",
+        "engineermode",
+        "com.vos.user.vit",
+        "com.vivo.sensor.SDC",
+        "com.vivo.bsptest"
+    ],
+
+    "airplaneIdentifyWhiteList":[
+        "com.invensense.logger.fragments",
+        "com.qualcomm.qti.sensors",
+        "com.qualcomm.sensors.qsensortest",
+        "com.vivo.aiengine"
+    ],
+
+    "elevatorDetectWhiteList": [
+        "com.android.server.wifi",
+        "com.vivo.aiengine",
+        "com.android.nfc",
+        "com.qualcomm.qti.sensors",
+        "com.qualcomm.sensors.qsensortest",
+        "com.example.elevatorsensortest",
+        "com.android.phone"
+    ],
+
+    "vivomotion": [
+        "com.vivo.fingerprintui",
+        "com.vivo.daemonService",
+        "com.android.server.location",
+        "com.vivo.aiengine",
+        "com.vivo.pem",
+        "com.vivo.connbase",
+        "com.vivo.services.nightpearl",
+        "com.vivo.biometrics",
+        "com.android.server.location.VivoNlpPowerMonitor",
+        "com.qualcomm.qti.sensors",
+        "com.qualcomm.sensors.qsensortest",
+        "com.vivo.bsptest",
+        "com.vivo.services.motion.DirectCallingService"
+    ],
+
+    "vibClassification": [
+        "com.android.server.policy.key.VivoSmartwakeKeyHandler"
+    ]
+}

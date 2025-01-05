@@ -1,0 +1,26 @@
+#
+# Copyright (c) 2024 vivo Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - vivo Technologies, Inc.
+#
+
+on fs
+    chmod 0666 /dev/symphony-app-cmd
+    chmod 0660 /dev/symphony-cmd
+    chmod 0660 /dev/symphony-entry
+
+    chown root system /dev/symphony-cmd
+    chown root system /dev/symphony-entry
+
+on post-fs-data
+    mkdir /data/vivo-common/galleryThumbnail 0777 system system
+
+service ioinitialize /system/bin/ioinitialize
+    class late_start
+    disabled
+    user root
+    group root system readproc
+    oneshot
+
+on property:sys.boot_completed=1
+    start ioinitialize

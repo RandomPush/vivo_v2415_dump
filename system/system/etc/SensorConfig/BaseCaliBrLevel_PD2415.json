@@ -1,0 +1,24 @@
+[
+    {
+        "sensor":29,
+        "lcm_id":"0x000000A0",
+        "lcm_index":0,
+        "ModelBrLV1_GsLevel": [200],
+        "ModelBrLV2_GsLevel": [2100],
+        "ModelBrLV3_GsLevel": [3200],
+        "ModelBrLV4_GsLevel": [4300],
+        "ModelBrLV5_GsLevel": [5155],
+        "ModelBrLV6_GsLevel": [12000]
+    },
+    {
+        "sensor":29,
+        "lcm_id":"0x00000031",
+        "lcm_index":1,
+        "ModelBrLV1_GsLevel": [200],
+        "ModelBrLV2_GsLevel": [2100],
+        "ModelBrLV3_GsLevel": [3200],
+        "ModelBrLV4_GsLevel": [4300],
+        "ModelBrLV5_GsLevel": [5155],
+        "ModelBrLV6_GsLevel": [12000]
+    }
+]

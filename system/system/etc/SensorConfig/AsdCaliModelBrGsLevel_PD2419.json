@@ -1,0 +1,14 @@
+[
+    {
+        "sensor":29,
+        "lcm_id":"0x00000036",
+        "lcm_index":0,
+        "ModelBrLV6_GsLevel": [13000]
+    },
+    {
+        "sensor":29,
+        "lcm_id":"0x00000010",
+        "lcm_index":1,
+        "ModelBrLV6_GsLevel": [13000]
+    }
+]

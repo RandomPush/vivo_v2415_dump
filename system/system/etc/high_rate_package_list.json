@@ -1,0 +1,34 @@
+{
+	"iqoo_game_list":
+	[
+		"com.tencent.tmgp.sgame",
+		"com.tencent.tmgp.pubgmhd",
+		"com.tencent.tmgp.cod",
+		"com.tencent.tmgp.cf"
+	],
+	"normal_game_highest_list":
+	[
+		"1#com.miHoYo.Yuanshen"
+	],
+	"normal_game_list":
+	[
+		"com.tencent.tmgp.sgame",
+		"com.tencent.tmgp.pubgmhd",
+		"com.tencent.tmgp.cod",
+		"com.tencent.tmgp.cf"
+	],
+	"oversea_game_list":
+	[
+		"com.dts.freefireth",
+		"com.mobile.legends",
+		"com.tencent.iglite",
+		"com.tencent.ig",
+		"com.garena.game.kgth",
+		"com.garena.game.codm",
+		"com.activision.callofduty.shooter"
+	],
+	"no_battle_state_list":
+	[
+		"com.miHoYo.Yuanshen"
+	]
+}

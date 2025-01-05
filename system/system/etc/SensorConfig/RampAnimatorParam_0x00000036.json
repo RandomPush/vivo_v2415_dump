@@ -1,0 +1,26 @@
+{
+	"ramperbrightness": {
+		"sectiondown": [
+			[-3.48528049,50326.49954],
+			[-4.192545335e-14,50208]
+		],
+		"section_downpoint": [34,4],
+		"section_down_min_step": [18,"_Inf_"],
+		"sectiondowngapminone": 20,
+		"sectiondowngapmintwo": 80,
+		"sectiondownkeybr": 34,
+		"downlcmFlickValue": 2,
+		"uptotaltime": 2800,
+		"uplimmitcount": 25,
+		"section_uppoint": [4756,8513],
+		"quickupstep": [436,444,249],
+		"quickupgap": [20,0,0],
+		"quickdownstep": [62,81,56,175],
+		"quickdowngap": [40,40,30,20],
+		"quick_sectionpoint": [7397,5524,3623,4],
+		"dragTotalTime":500,
+		"dimSmoothTotalTime":500,
+		"pemtotaltime": 10000,
+		"useFixedRefreshRate":1
+	}
+}

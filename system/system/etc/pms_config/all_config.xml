@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <ignoreSharedUserId name="com.android.vivo.tws.vivotws"/>
+    <ignoreSharedUserId name="com.vivo.connbase"/>
+</config>

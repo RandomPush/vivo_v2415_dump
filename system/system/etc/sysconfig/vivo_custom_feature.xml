@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<permissions>
+    <!-- This is an custom Feature.  Basically this is for EasyShare to use. -->
+    <feature name="com.vivo.feature.GDPR" />
+</permissions>

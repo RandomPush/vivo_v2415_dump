@@ -1,0 +1,8 @@
+[{
+    "sensor":29,
+    "ModelBrLV1_GsLevel": [2465,2,3],
+    "ModelBrLV2_GsLevel": [2861,2,3],
+    "ModelBrLV3_GsLevel": [3748,2,3],
+    "ModelBrLV4_GsLevel": [11918,3],
+    "ModelGS": [63,127,255]
+}]

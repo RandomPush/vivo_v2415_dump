@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<group __id__="com.ueppp.misc.cpu.OverloadThread"
+    __ver__="1">
+    <group __id__="com.tencent.mm">
+        <group __id__="com.tencent.mm">
+            <elem __name__="VFS.Maintenance"
+                invalid_temp="35"
+                valid_temp="37"
+                background="1"
+                no_audio="1"
+                no_record="1"
+                no_camera="1"/>
+
+            <elem __name__="[GT]ColdPool*"
+                invalid_temp="34"
+                valid_temp="36"
+                background="1"
+                no_audio="1"
+                no_record="1"
+                no_camera="1"/>
+
+            <elem __name__="[GT]HotPool*"
+                invalid_temp="34"
+                valid_temp="36"
+                background="1"
+                no_audio="1"
+                no_record="1"
+                no_camera="1"/>
+
+            <elem __name__="JSBrandServi"
+                invalid_temp="34"
+                valid_temp="36"
+                background="1"
+                no_audio="1"
+                no_record="1"
+                no_camera="1"/>
+
+            <elem __name__="JSRuntimeLooper"
+                invalid_temp="34"
+                valid_temp="36"
+                background="1"
+                no_audio="1"
+                no_record="1"
+                no_camera="1"/>
+
+            <elem __name__="Loader:Extracto"
+                invalid_temp="34"
+                valid_temp="36"
+                background="1"
+                no_audio="1"
+                no_record="1"
+                no_camera="1"/>
+        </group>
+
+        <group __id__="com.tencent.mm:push">
+            <elem __name__="VFS.Maintenance"
+                invalid_temp="35"
+                valid_temp="37"
+                background="1"
+                no_audio="1"
+                no_record="1"
+                no_camera="1"/>
+
+            <elem __name__="[GT]ColdPool*"
+                invalid_temp="34"
+                valid_temp="36"
+                background="1"
+                no_audio="1"
+                no_record="1"
+                no_camera="1"/>
+
+            <elem __name__="[GT]HotPool*"
+                invalid_temp="34"
+                valid_temp="36"
+                background="1"
+                no_audio="1"
+                no_record="1"
+                no_camera="1"/>
+        </group>
+    </group>
+
+    <group __id__="com.bbk.appstore">
+        <group __id__="com.bbk.appstore:install">
+            <elem __name__="*"
+                appstore_download_limit="1"/>
+        </group>
+    </group>
+
+    <group __id__="com.ytl.testload">
+        <group __id__="com.ytl.testload">
+            <elem __name__="*"/>
+        </group>
+    </group>
+
+    <group __id__="com.ss.android.article.news">
+        <group __id__="com.ss.android.article.news">
+            <elem __name__="bd_tracker_n"/>
+        </group>
+    </group>
+
+    <group __id__="com.vivo.browser">
+        <group __id__="com.vivo.browser">
+            <elem __name__="RequestRece"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"
+                no_audio="1"
+                no_record="1"
+                no_camera="1"/>
+
+            <elem __name__="vclould.mdl"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"
+                no_audio="1"
+                no_record="1"
+                no_camera="1"/>
+        </group>
+    </group>
+
+    <group __id__="com.youku.phone">
+        <group __id__="com.youku.phone">
+            <elem __name__="vclould.mdl"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"/>
+
+            <elem __name__="RequestRece"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"/>
+        </group>
+    </group>
+
+    <group __id__="com.ss.android.ugc.aweme">
+        <group __id__="com.ss.android.ugc.aweme">
+            <elem __name__="vclould.mdl"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"/>
+
+            <elem __name__="Lynx_JS"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"/>
+
+            <elem __name__="Playe2-*"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"/>
+        </group>
+    </group>
+
+    <group __id__="com.quark.browser">
+        <group __id__="com.quark.browser">
+            <elem __name__="vclould.mdl"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"/>
+
+            <elem __name__="RequestRece"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"
+                no_audio="1"
+                no_record="1"
+                no_camera="1"/>
+        </group>
+    </group>
+
+    <group __id__="com.UCMobile">
+        <group __id__="com.UCMobile">
+            <elem __name__="vclould.mdl"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"/>
+        </group>
+    </group>
+
+    <group __id__="com.baidu.searchbox.lite">
+        <group __id__="com.baidu.searchbox.lite">
+            <elem __name__="elastic_dsp_sou"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"
+                no_audio="1"
+                no_record="1"
+                no_camera="1"/>
+
+            <elem __name__="elastic_dsp_ges"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"
+                no_audio="1"
+                no_record="1"
+                no_camera="1"/>
+        </group>
+    </group>
+
+    <group __id__="com.codoon.gps">
+        <group __id__="com.codoon.gps">
+            <elem __name__="hawtdispatch-DE"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"/>
+        </group>
+    </group>
+
+    <group __id__="com.cat.readall">
+        <group __id__="com.cat.readall">
+            <elem __name__="vclould.mdl"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"/>
+        </group>
+    </group>
+
+    <group __id__="com.gotokeep.keep">
+        <group __id__="com.gotokeep.keep">
+            <elem __name__="m.gotokeep.keep"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"/>
+        </group>
+    </group>
+
+    <group __id__="com.netease.cloudmusic">
+        <group __id__="com.netease.cloudmusic">
+            <elem __name__="RenderThread"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"/>
+        </group>
+    </group>
+
+    <group __id__="tv.danmaku.bili">
+        <group __id__="tv.danmaku.bili">
+            <elem __name__="ff_video_dec"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"/>
+        </group>
+    </group>
+
+    <group __id__="com.xtc.watch">
+        <group __id__="com.xtc.watch">
+            <elem __name__="http service"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"/>
+        </group>
+    </group>
+
+    <group __id__="com.ss.android.ugc.aweme.lite">
+        <group __id__="com.ss.android.ugc.aweme.lite">
+            <elem __name__="#tp-default-*"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"/>
+        </group>
+    </group>
+
+    <group __id__="com.kmxs.reader">
+        <group __id__="com.kmxs.reader">
+            <elem __name__="Loader:Extracto"
+                invalid_temp="30"
+                valid_temp="32"
+                background="1"/>
+        </group>
+    </group>
+</group>

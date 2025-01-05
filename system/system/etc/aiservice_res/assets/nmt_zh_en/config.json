@@ -1,0 +1,8 @@
+{
+	"algorithm": "nmt_zh_en",
+	"algorithmResName": "nmt_zh_en",
+	"algorithmVerName": "1",
+	"algorithmVerCode": 1,
+	"modelDir": "assets/nmt_zh_en/1"
+}
+

@@ -1,0 +1,77 @@
+
+#
+/system/framework/framework.jar
+#
+/system/framework/framework.jar
+0
+(/system/framework/framework-graphics.jar35
+0
+(/system/framework/framework-graphics.jar35
+0
+(/system/framework/framework-location.jar35
+0
+(/system/framework/framework-location.jar35
+
+/system/framework/ext.jar
+
+/system/framework/ext.jar
+*
+&/system/framework/telephony-common.jar
+*
+&/system/framework/telephony-common.jar
+%
+!/system/framework/voip-common.jar
+%
+!/system/framework/voip-common.jar
+$
+ /system/framework/ims-common.jar
+$
+ /system/framework/ims-common.jar
++
+#/system/framework/framework-nfc.jar35
++
+#/system/framework/framework-nfc.jar35
+(
+$/system/framework/vivo-framework.jar
+(
+$/system/framework/vivo-framework.jar
+$
+ /system/framework/vivo-media.jar
+$
+ /system/framework/vivo-media.jar
++
+'/system/framework/framework-adapter.jar
++
+'/system/framework/framework-adapter.jar
+'
+#/system/framework/soc-framework.jar
+'
+#/system/framework/soc-framework.jar
+(
+$/system/framework/vivo-vgcclient.jar
+(
+$/system/framework/vivo-vgcclient.jar
++
+'/system/framework/vivo-coworkclient.jar
++
+'/system/framework/vivo-coworkclient.jar
+-
+)/system_ext/framework/mediatek-common.jar
+-
+)/system_ext/framework/mediatek-common.jar
+0
+,/system_ext/framework/mediatek-framework.jar
+0
+,/system_ext/framework/mediatek-framework.jar
+/
++/system_ext/framework/mediatek-ims-base.jar
+/
++/system_ext/framework/mediatek-ims-base.jar
+5
+1/system_ext/framework/mediatek-telecom-common.jar
+5
+1/system_ext/framework/mediatek-telecom-common.jar
+1
+-/apex/com.android.i18n/javalib/core-icu4j.jar
+1
+-/apex/com.android.i18n/javalib/core-icu4j.jar

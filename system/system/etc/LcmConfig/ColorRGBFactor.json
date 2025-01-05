@@ -1,0 +1,909 @@
+{
+    "Debug" : "false",
+    "UsePanelName" : "true",
+    "RgbFactorArray" : [
+        {
+            "index" : 0,
+            "array" : [255, 218, 164, 255, 238, 206, 255, 255, 249]
+        },
+        {
+            "index" : 1,
+            "array" : [255, 218, 167, 255, 237, 208, 255, 255, 250]
+        },
+        {
+            "index" : 2,
+            "array" : [255, 226, 178, 255, 243, 215, 255, 255, 249]
+        },
+        {
+            "index" : 3,
+            "array" : [255, 214, 164, 255, 238, 206, 255, 255, 249]
+        },
+        {
+            "index" : 4,
+            "array" : [255, 214, 167, 255, 237, 208, 255, 255, 250]
+        },
+        {
+            "index" : 5,
+            "array" : [255, 219, 171, 255, 240, 210, 255, 255, 249]
+        },
+        {
+            "index" : 6,
+            "array" : [255, 218, 164, 255, 238, 206, 255, 255, 249]
+        },
+        {
+            "index" : 7,
+            "array" : [255, 218, 167, 255, 237, 208, 255, 255, 250]
+        },
+        {
+            "index" : 8,
+            "array" : [255, 226, 178, 255, 243, 215, 255, 255, 249]
+        },
+        {
+            "index" : 9,
+            "array" : [255, 218, 164, 255, 238, 206, 255, 255, 249]
+        },
+        {
+            "index" : 10,
+            "array" : [255, 218, 167, 255, 237, 208, 255, 255, 250]
+        },
+        {
+            "index" : 11,
+            "array" : [255, 226, 178, 255, 243, 215, 255, 255, 249]
+        }
+    ],
+
+	"VicoColorTempFactorArray": [
+        {
+            "index" : 0,
+            "vicoFactorMap": [
+                [ 1, 6250, 255, 251, 249 ],
+                [ 2, 6000, 255, 245, 240 ],
+                [ 3, 5750, 255, 244, 234 ],
+                [ 4, 5500, 255, 242, 227 ],
+                [ 5, 5250, 255, 239, 221 ],
+                [ 6, 5000, 255, 234, 210 ],
+                [ 7, 4750, 255, 231, 202 ],
+                [ 8, 4500, 255, 228, 194 ],
+                [ 9, 4250, 255, 225, 184 ]
+            ]
+        },
+        {
+            "index" : 1,
+            "vicoFactorMap": [
+                [ 1, 6500, 255, 252, 251 ],
+                [ 2, 6250, 255, 249, 243 ],
+                [ 3, 6000, 255, 247, 237 ],
+                [ 4, 5750, 255, 242, 230 ],
+                [ 5, 5500, 255, 240, 224 ],
+                [ 6, 5250, 255, 237, 216 ],
+                [ 7, 5000, 255, 234, 208 ],
+                [ 8, 4750, 255, 231, 201 ],
+                [ 9, 4500, 255, 229, 192 ],
+                [ 10, 4250, 255, 225, 182 ]
+            ]
+        },
+        {
+            "index" : 2,
+            "vicoFactorMap": [
+                [ 1, 6500, 255, 252, 250 ],
+                [ 2, 6250, 255, 249, 245 ],
+                [ 3, 6000, 255, 247, 238 ],
+                [ 4, 5750, 255, 243, 229 ],
+                [ 5, 5500, 255, 239, 222 ],
+                [ 6, 5250, 255, 237, 214 ],
+                [ 7, 5000, 255, 235, 207 ],
+                [ 8, 4750, 255, 232, 199 ],
+                [ 9, 4500, 255, 229, 190 ],
+                [ 10, 4250, 255, 224, 179 ]
+            ]
+        },
+        {
+            "index" : 3,
+            "vicoFactorMap": [
+                [ 1, 6250, 255, 250, 248 ],
+                [ 2, 6000, 255, 248, 242 ],
+                [ 3, 5750, 255, 245, 234 ],
+                [ 4, 5500, 255, 243, 227 ],
+                [ 5, 5250, 255, 240, 219 ],
+                [ 6, 5000, 255, 236, 210 ],
+                [ 7, 4750, 255, 232, 201 ],
+                [ 8, 4500, 255, 227, 192 ],
+                [ 9, 4250, 255, 223, 182 ]
+            ]
+        },
+		{
+            "index" : 4,
+            "vicoFactorMap": [
+                [ 1, 6500, 255, 252, 250 ],
+                [ 2, 6250, 255, 249, 243 ],
+                [ 3, 6000, 255, 246, 238 ],
+                [ 4, 5750, 255, 243, 230 ],
+                [ 5, 5500, 255, 242, 225 ],
+                [ 6, 5250, 255, 239, 216 ],
+                [ 7, 5000, 255, 236, 209 ],
+                [ 8, 4750, 255, 233, 201 ],
+                [ 9, 4500, 255, 229, 193 ],
+                [ 10, 4250, 255, 225, 184 ]
+			]
+        },
+		{
+            "index" : 5,
+            "vicoFactorMap": [
+                [ 1, 6250, 255, 250, 248 ],
+                [ 2, 6000, 255, 248, 242 ],
+                [ 3, 5750, 255, 245, 234 ],
+                [ 4, 5500, 255, 243, 227 ],
+                [ 5, 5250, 255, 240, 219 ],
+                [ 6, 5000, 255, 236, 210 ],
+                [ 7, 4750, 255, 232, 201 ],
+                [ 8, 4500, 255, 227, 192 ],
+                [ 9, 4250, 255, 223, 182 ]
+			]
+        },
+		{
+            "index" : 6,
+            "vicoFactorMap": [
+                [ 1, 6500, 255, 253, 251 ],
+                [ 2, 6250, 255, 251, 246 ],
+                [ 3, 6000, 255, 248, 239 ],
+                [ 4, 5750, 255, 246, 234 ],
+                [ 5, 5500, 255, 244, 228 ],
+                [ 6, 5250, 255, 242, 222 ],
+                [ 7, 5000, 255, 239, 214 ],
+                [ 8, 4750, 255, 237, 208 ],
+                [ 9, 4500, 255, 233, 199 ],
+                [ 10, 4250, 255, 229, 190 ]
+            ]
+        },
+		{
+            "index" : 7,
+            "vicoFactorMap": [
+                [ 1, 6500, 255, 248, 246 ],
+                [ 2, 6250, 255, 244, 240 ],
+                [ 3, 6000, 255, 241, 234 ],
+                [ 4, 5750, 255, 240, 229 ],
+                [ 5, 5500, 255, 238, 221 ],
+                [ 6, 5250, 255, 235, 214 ],
+                [ 7, 5000, 255, 231, 205 ],
+                [ 8, 4750, 255, 228, 197 ],
+                [ 9, 4500, 255, 224, 189 ],
+                [ 10, 4250, 255, 221, 180 ]
+            ]
+        },
+		{
+            "index" : 8,
+            "vicoFactorMap": [
+                [ 1, 6250, 255, 247, 244 ],
+                [ 2, 6000, 255, 242, 237 ],
+                [ 3, 5750, 255, 241, 232 ],
+                [ 4, 5500, 255, 239, 225 ],
+                [ 5, 5250, 255, 236, 218 ],
+                [ 6, 5000, 255, 232, 209 ],
+                [ 7, 4750, 255, 231, 202 ],
+                [ 8, 4500, 255, 227, 192 ],
+                [ 9, 4250, 255, 222, 183 ]
+            ]
+        },
+		{
+            "index" : 9,
+            "vicoFactorMap": [
+                [ 1, 6500, 255, 249, 246 ],
+                [ 2, 6250, 255, 246, 240 ],
+                [ 3, 6000, 255, 244, 235 ],
+                [ 4, 5750, 255, 242, 229 ],
+                [ 5, 5500, 255, 239, 223 ],
+                [ 6, 5250, 255, 236, 216 ],
+                [ 7, 5000, 255, 234, 209 ],
+                [ 8, 4750, 255, 232, 203 ],
+                [ 9, 4500, 255, 229, 195 ],
+                [ 10, 4250, 255, 225, 185 ]
+            ]
+        },
+		{
+            "index" : 10,
+            "vicoFactorMap": [
+                [ 1, 6500, 255, 252, 250 ],
+                [ 2, 6250, 255, 250, 245 ],
+                [ 3, 6000, 255, 247, 238 ],
+                [ 4, 5750, 255, 246, 232 ],
+                [ 5, 5500, 255, 245, 229 ],
+                [ 6, 5250, 255, 243, 221 ],
+                [ 7, 5000, 255, 240, 213 ],
+                [ 8, 4750, 255, 237, 207 ],
+                [ 9, 4500, 255, 233, 197 ],
+                [ 10, 4250, 255, 229, 188 ]
+            ]
+        }
+    ],
+
+    "VicoColorTempFactor": [
+        {
+            "colorMode"           : "default",
+            "panelName"           : "pd2415_panel_nt37707_cmd",
+            "VicoColorTempIndex"  : 1
+        },
+        {
+            "colorMode"           : "COLOR_MODE_PROFESSIONAL",
+            "panelName"           : "pd2415_panel_nt37707_cmd",
+            "VicoColorTempIndex"  : 0
+        },
+        {
+            "colorMode"           : "COLOR_MODE_ENHANCED",
+            "panelName"           : "pd2415_panel_nt37707_cmd",
+            "VicoColorTempIndex"  : 6
+        },
+        {
+            "colorMode"           : "COLOR_MODE_STANDARD",
+            "panelName"           : "pd2415_panel_nt37707_cmd",
+            "VicoColorTempIndex"  : 1
+        },
+		{
+            "colorMode"           : "default",
+            "panelName"           : "pd2415_panel_rm692k0_cmd",
+            "VicoColorTempIndex"  : 4
+        },
+        {
+            "colorMode"           : "COLOR_MODE_PROFESSIONAL",
+            "panelName"           : "pd2415_panel_rm692k0_cmd",
+            "VicoColorTempIndex"  : 5
+        },
+        {
+            "colorMode"           : "COLOR_MODE_ENHANCED",
+            "panelName"           : "pd2415_panel_rm692k0_cmd",
+            "VicoColorTempIndex"  : 4
+        },
+        {
+            "colorMode"           : "COLOR_MODE_STANDARD",
+            "panelName"           : "pd2415_panel_rm692k0_cmd",
+            "VicoColorTempIndex"  : 4
+        },
+		{
+            "colorMode"           : "default",
+            "panelName"           : "pd2419_panel_rm692j0_cmd",
+            "VicoColorTempIndex"  : 2
+        },
+        {
+            "colorMode"           : "COLOR_MODE_PROFESSIONAL",
+            "panelName"           : "pd2419_panel_rm692j0_cmd",
+            "VicoColorTempIndex"  : 3
+        },
+        {
+            "colorMode"           : "COLOR_MODE_ENHANCED",
+            "panelName"           : "pd2419_panel_rm692j0_cmd",
+            "VicoColorTempIndex"  : 10
+        },
+        {
+            "colorMode"           : "COLOR_MODE_STANDARD",
+            "panelName"           : "pd2419_panel_rm692j0_cmd",
+            "VicoColorTempIndex"  : 2
+        },
+		{
+            "colorMode"           : "default",
+            "panelName"           : "pd2419_panel_nt37707_cmd",
+            "VicoColorTempIndex"  : 7
+        },
+        {
+            "colorMode"           : "COLOR_MODE_PROFESSIONAL",
+            "panelName"           : "pd2419_panel_nt37707_cmd",
+            "VicoColorTempIndex"  : 8
+        },
+        {
+            "colorMode"           : "COLOR_MODE_ENHANCED",
+            "panelName"           : "pd2419_panel_nt37707_cmd",
+            "VicoColorTempIndex"  : 9
+        },
+        {
+            "colorMode"           : "COLOR_MODE_STANDARD",
+            "panelName"           : "pd2419_panel_nt37707_cmd",
+            "VicoColorTempIndex"  : 7
+        }
+    ],
+
+    "RgbFactorBlueLight" : {
+        "oled" : [
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "default",
+                "colorMode"             : "default",
+                "rgbFactorArrayIndex"   : 0
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_STANDARD",
+				"panelName"             : "pd2415_panel_nt37707_cmd",
+                "rgbFactorArrayIndex"   : 0
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_PROFESSIONAL",
+				"panelName"             : "pd2415_panel_nt37707_cmd",
+                "rgbFactorArrayIndex"   : 1
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_ENHANCED",
+				"panelName"             : "pd2415_panel_nt37707_cmd",
+                "rgbFactorArrayIndex"   : 2
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_STANDARD",
+				"panelName"             : "pd2415_panel_rm692k0_cmd",
+                "rgbFactorArrayIndex"   : 3
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_PROFESSIONAL",
+				"panelName"             : "pd2415_panel_rm692k0_cmd",
+                "rgbFactorArrayIndex"   : 4
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_ENHANCED",
+				"panelName"             : "pd2415_panel_rm692k0_cmd",
+                "rgbFactorArrayIndex"   : 5
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_STANDARD",
+				"panelName"             : "pd2419_panel_nt37707_cmd",
+                "rgbFactorArrayIndex"   : 6
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_PROFESSIONAL",
+				"panelName"             : "pd2419_panel_nt37707_cmd",
+                "rgbFactorArrayIndex"   : 7
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_ENHANCED",
+				"panelName"             : "pd2419_panel_nt37707_cmd",
+                "rgbFactorArrayIndex"   : 8
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_STANDARD",
+				"panelName"             : "pd2419_panel_rm692j0_cmd",
+                "rgbFactorArrayIndex"   : 9
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_PROFESSIONAL",
+				"panelName"             : "pd2419_panel_rm692j0_cmd",
+                "rgbFactorArrayIndex"   : 10
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_ENHANCED",
+				"panelName"             : "pd2419_panel_rm692j0_cmd",
+                "rgbFactorArrayIndex"   : 11
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "false",
+                "colorMode"             : "default",
+                "rgbFactorArrayIndex"   : 3
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_PROFESSIONAL",
+                "rgbFactorArrayIndex"   : 1
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "false",
+                "colorMode"             : "COLOR_MODE_STANDARD",
+                "rgbFactorArrayIndex"   : 3
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "false",
+                "colorMode"             : "COLOR_MODE_PROFESSIONAL",
+                "rgbFactorArrayIndex"   : 3
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "false",
+                "colorMode"             : "VIVO_COLOR_MODE_FINGERPRINT",
+                "rgbFactorArrayIndex"   : 3
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "false",
+                "colorMode"             : "COLOR_MODE_ENHANCED",
+                "rgbFactorArrayIndex"   : 3
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "false",
+                "colorMode"             : "default",
+                "rgbFactorArrayIndex"   : 3
+            }
+        ],
+
+        "super_lcd" : [
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "default",
+                "colorMode"             : "default",
+                "rgbFactorArrayIndex"   : 3
+            }
+        ],
+
+        "lcd" : [
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "default",
+                "colorMode"             : "default",
+                "rgbFactorArrayIndex"   : 3
+            }
+        ],
+
+        "e1pro" : [
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "default",
+                "colorMode"             : "default",
+                "rgbFactorArrayIndex"   : 4
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "VIVO_COLOR_MODE_FINGERPRINT",
+                "rgbFactorArrayIndex"   : 3
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_STANDARD",
+                "rgbFactorArrayIndex"   : 0
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_ENHANCED",
+                "rgbFactorArrayIndex"   : 0
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_PROFESSIONAL",
+                "rgbFactorArrayIndex"   : 1
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "false",
+                "colorMode"             : "VIVO_COLOR_MODE_FINGERPRINT",
+                "rgbFactorArrayIndex"   : 3
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_STANDARD",
+                "rgbFactorArrayIndex"   : 0
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_PROFESSIONAL",
+                "rgbFactorArrayIndex"   : 1
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_ENHANCED",
+                "rgbFactorArrayIndex"   : 0
+            }
+        ],
+
+        "default" : [
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "default",
+                "colorMode"             : "default",
+                "rgbFactorArrayIndex"   : 0
+            }
+        ]
+    },
+
+    "RgbFactorColorTemp": {
+        "oled" : [
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "default",
+                "colorMode"             : "default",
+                "rgbFactorArrayIndex"   : 5
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_STANDARD",
+                "rgbFactorArrayIndex"   : 5
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_PROFESSIONAL",
+                "rgbFactorArrayIndex"   : 6
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_ENHANCED",
+                "rgbFactorArrayIndex"   : 7
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "VIVO_COLOR_MODE_FINGERPRINT",
+                "rgbFactorArrayIndex"   : 8
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "false",
+                "colorMode"             : "default",
+                "rgbFactorArrayIndex"   : 8
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "false",
+                "colorMode"             : "COLOR_MODE_STANDARD",
+                "rgbFactorArrayIndex"   : 8
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "false",
+                "colorMode"             : "COLOR_MODE_PROFESSIONAL",
+                "rgbFactorArrayIndex"   : 8
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "false",
+                "colorMode"             : "VIVO_COLOR_MODE_FINGERPRINT",
+                "rgbFactorArrayIndex"   : 8
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "false",
+                "colorMode"             : "COLOR_MODE_ENHANCED",
+                "rgbFactorArrayIndex"   : 8
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_PROFESSIONAL",
+                "rgbFactorArrayIndex"   : 6
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "false",
+                "colorMode"             : "COLOR_MODE_STANDARD",
+                "rgbFactorArrayIndex"   : 8
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "false",
+                "colorMode"             : "COLOR_MODE_PROFESSIONAL",
+                "rgbFactorArrayIndex"   : 8
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "false",
+                "colorMode"             : "VIVO_COLOR_MODE_FINGERPRINT",
+                "rgbFactorArrayIndex"   : 8
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "false",
+                "colorMode"             : "COLOR_MODE_ENHANCED",
+                "rgbFactorArrayIndex"   : 8
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "false",
+                "colorMode"             : "default",
+                "rgbFactorArrayIndex"   : 8
+            }
+        ],
+
+        "super_lcd" : [
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "default",
+                "colorMode"             : "default",
+                "rgbFactorArrayIndex"   : 8
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_PROFESSIONAL",
+                "rgbFactorArrayIndex"   : 8
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "false",
+                "colorMode"             : "COLOR_MODE_PROFESSIONAL",
+                "rgbFactorArrayIndex"   : 8
+            }
+        ],
+
+        "lcd" : [
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "default",
+                "colorMode"             : "default",
+                "rgbFactorArrayIndex"   : 8
+            }
+        ],
+
+        "e1pro" : [
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "default",
+                "colorMode"             : "default",
+                "rgbFactorArrayIndex"   : 9
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "VIVO_COLOR_MODE_FINGERPRINT",
+                "rgbFactorArrayIndex"   : 8
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_STANDARD",
+                "rgbFactorArrayIndex"   : 5
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_ENHANCED",
+                "rgbFactorArrayIndex"   : 5
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_PROFESSIONAL",
+                "rgbFactorArrayIndex"   : 6
+            },
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "false",
+                "colorMode"             : "VIVO_COLOR_MODE_FINGERPRINT",
+                "rgbFactorArrayIndex"   : 8
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_STANDARD",
+                "rgbFactorArrayIndex"   : 5
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_PROFESSIONAL",
+                "rgbFactorArrayIndex"   : 6
+            },
+            {
+                "deviceType"            : "tablet",
+                "supportColorManager"   : "true",
+                "colorMode"             : "COLOR_MODE_ENHANCED",
+                "rgbFactorArrayIndex"   : 5
+            }
+        ],
+
+        "default" : [
+            {
+                "deviceType"            : "default",
+                "supportColorManager"   : "default",
+                "colorMode"             : "default",
+                "rgbFactorArrayIndex"   : 5
+            }
+        ]
+    },
+
+    "RgbRatioArray" : [
+        {
+            "index" : 0,
+            "array" : [255, 255, 255]
+        },
+        {
+            "index" : 1,
+            "array" : [255, 252, 203]
+        }
+    ],
+
+    "RgbRatio": [
+        {
+            "panelType"           : "default",
+            "platform"            : "default",
+            "colorMode"           : "default",
+            "rgbRatioArrayIndex"  : 0
+        },
+        {
+            "panelType"           : "super_lcd",
+            "platform"            : "mtk",
+            "colorMode"           : "COLOR_MODE_PROFESSIONAL",
+            "rgbRatioArrayIndex"  : 1
+        },
+        {
+            "panelType"           : "e1pro",
+            "platform"            : "mtk",
+            "colorMode"           : "COLOR_MODE_PROFESSIONAL",
+            "rgbRatioArrayIndex"  : 1
+        }
+    ],
+    "CircleColor" : [
+        {
+            "mode"                : 0,
+            "panelName"           : "pd2415_panel_nt37707_cmd",
+            "whitePointX"         : 0.308,
+            "whitePointY"         : 0.321,
+            "R"                   : 50.0,
+            "angle"               : 82.0,
+            "transformMatrix"     :[
+                1.78421053,	-0.66644737,-0.28815789,-0.83157895,1.76710526,0.02368421,0.04736842,-0.10065789,1.26447368,
+				0.68,0.265,0.15,0.32,0.69,0.06,0,0.045,0.79,
+				2.50428479,-0.93541316,-0.40445307,-0.83443496,1.77317429,0.02376555,0.03368482,-0.07158025,0.89919767
+            ]
+        },
+        {
+            "mode"                : 0,
+            "panelName"           : "pd2415_panel_rm692k0_cmd",
+            "whitePointX"         : 0.309,
+            "whitePointY"         : 0.321,
+            "R"                   : 50.0,
+            "angle"               : 82.0,
+            "transformMatrix"     :[
+                1.78421053,-0.66644737,-0.28815789,-0.83157895,1.76710526,0.02368421,0.04736842,-0.10065789,1.26447368,
+				0.68,0.265,0.15,0.32,0.69,0.06,0,0.045,0.79,
+				2.48179602,-0.92701304,-0.40082104,-0.83667182,1.77792762,0.02382926,0.03377589,-0.07177378,0.90162873
+            ]
+        },
+        {
+            "mode"                : 0,
+            "panelName"           : "pd2419_panel_nt37707_cmd",
+            "whitePointX"         : 0.308,
+            "whitePointY"         : 0.321,
+            "R"                   : 50.0,
+            "angle"               : 82.0,
+            "transformMatrix"     :[
+                1.78421053,	-0.66644737,-0.28815789,-0.83157895,1.76710526,0.02368421,0.04736842,-0.10065789,1.26447368,
+				0.68,0.265,0.15,0.32,0.69,0.06,0,0.045,0.79,
+				2.50428479,-0.93541316,-0.40445307,-0.83443496,1.77317429,0.02376555,0.03368482,-0.07158025,0.89919767
+            ]
+        },
+        {
+            "mode"                : 0,
+            "panelName"           : "pd2419_panel_rm692j0_cmd",
+            "whitePointX"         : 0.308,
+            "whitePointY"         : 0.321,
+            "R"                   : 50.0,
+            "angle"               : 82.0,
+            "transformMatrix"     :[
+                1.78421053,	-0.66644737,-0.28815789,-0.83157895,1.76710526,0.02368421,0.04736842,-0.10065789,1.26447368,
+				0.68,0.265,0.15,0.32,0.69,0.06,0,0.045,0.79,
+				2.50428479,-0.93541316,-0.40445307,-0.83443496,1.77317429,0.02376555,0.03368482,-0.07158025,0.89919767
+            ]
+        },
+        {
+            "mode"                : 1,
+            "panelName"           : "pd2415_panel_nt37707_cmd",
+            "whitePointX"         : 0.31,
+            "whitePointY"         : 0.324,
+            "R"                   : 50.0,
+            "angle"               : 82.0,
+            "transformMatrix"     :[
+				2.08835341,-0.99062918,-0.32128514,-1.15528782,2.23605533,0.04953146,0.0669344,-0.24542615,1.27175368,
+				0.64,0.3,0.15,0.33,0.6,0.06,0.03,0.1,0.79,
+				3.24,-1.53692308,-0.49846154,-0.97357939,1.88435933,0.04174095,0.05332456,-0.19552337,1.01316656
+            ]
+        },
+        {
+            "mode"                : 1,
+            "panelName"           : "pd2415_panel_rm692k0_cmd",
+            "whitePointX"         : 0.311,
+            "whitePointY"         : 0.324,
+            "R"                   : 50.0,
+            "angle"               : 82.0,
+            "transformMatrix"     :[
+                2.08835341,-0.99062918,-0.32128514,-1.15528782,2.23605533,0.04953146,0.0669344,-0.24542615,1.27175368,
+				0.64,0.3,0.15,0.33,0.6,0.06,0.03,0.1,0.79,
+				3.20304183,-1.51939163,-0.49277567,-0.97663989,1.89028292,0.04187216,0.053483,-0.19610432,1.01617696
+            ]
+        },
+        {
+            "mode"                : 1,
+            "panelName"           : "pd2419_panel_nt37707_cmd",
+            "whitePointX"         : 0.31,
+            "whitePointY"         : 0.324,
+            "R"                   : 50.0,
+            "angle"               : 82.0,
+            "transformMatrix"     :[
+				2.08835341,-0.99062918,-0.32128514,-1.15528782,2.23605533,0.04953146,0.0669344,-0.24542615,1.27175368,
+				0.64,0.3,0.15,0.33,0.6,0.06,0.03,0.1,0.79,
+				3.24,-1.53692308,-0.49846154,-0.97357939,1.88435933,0.04174095,0.05332456,-0.19552337,1.01316656
+            ]
+        },
+        {
+            "mode"                : 1,
+            "panelName"           : "pd2419_panel_rm692j0_cmd",
+            "whitePointX"         : 0.31,
+            "whitePointY"         : 0.324,
+            "R"                   : 50.0,
+            "angle"               : 82.0,
+            "transformMatrix"     :[
+				2.08835341,-0.99062918,-0.32128514,-1.15528782,2.23605533,0.04953146,0.0669344,-0.24542615,1.27175368,
+				0.64,0.3,0.15,0.33,0.6,0.06,0.03,0.1,0.79,
+				3.24,-1.53692308,-0.49846154,-0.97357939,1.88435933,0.04174095,0.05332456,-0.19552337,1.01316656
+            ]
+        },
+        {
+            "mode"                : 2,
+            "panelName"           : "pd2415_panel_nt37707_cmd",
+            "whitePointX"         : 0.3035,
+            "whitePointY"         : 0.3165,
+            "R"                   : 50.0,
+            "angle"               : 82.0,
+            "transformMatrix"     :[
+                1.76204286,-0.63431833,-0.25883754,-0.79116552,1.69677636,0.03306063,0.02912266,-0.06245803,1.22577691,
+                0.682,0.26,0.137,0.318,0.71,0.048,0,0.03,0.815,
+                2.32702121,	-0.83770506,-0.34183075,-0.81073498,1.73874609,0.03387838,0.02106989,-0.04518763,0.88683478
+            ]
+        },
+        {
+            "mode"                : 2,
+            "panelName"           : "pd2415_panel_rm692k0_cmd",
+            "whitePointX"         : 0.303,
+            "whitePointY"         : 0.316,
+            "R"                   : 50.0,
+            "angle"               : 82.0,
+            "transformMatrix"     :[
+                1.74135586,-0.57538121,-0.26848877,-0.78757025,1.67358679,0.04886209,0.04621439,-0.09820558,1.21962667,
+                0.68,0.242,0.14,0.32,0.71,0.042,0,0.048,0.818,
+                2.20033688,	-0.72703835,-0.33925618,-0.81044156,1.72218831,0.05028106,0.03418018,-0.07263289,0.90203644
+            ]
+        },
+        {
+            "mode"                : 2,
+            "panelName"           : "pd2419_panel_nt37707_cmd",
+            "whitePointX"         : 0.303,
+            "whitePointY"         : 0.316,
+            "R"                   : 50.0,
+            "angle"               : 82.0,
+            "transformMatrix"     :[
+                1.73673191,-0.59572122,-0.2724408,-0.77170058,1.67556242,0.04103244,0.03496867,-0.0798412,1.23140835,
+                0.684,0.25,0.143,0.315,0.711,0.046,0.001,0.039,0.811,
+                2.2978763,-0.78820091,-0.36046741,-0.78541526,1.70534056,0.04176167,0.02539615,-0.05798503,0.89431585
+            ]
+        },
+        {
+            "mode"                : 2,
+            "panelName"           : "pd2419_panel_rm692j0_cmd",
+            "whitePointX"         : 0.303,
+            "whitePointY"         : 0.316,
+            "R"                   : 50.0,
+            "angle"               : 82.0,
+            "transformMatrix"     :[
+                1.73673191,-0.59572122,-0.2724408,-0.77170058,1.67556242,0.04103244,0.03496867,-0.0798412,1.23140835,
+                0.684,0.25,0.143,0.315,0.711,0.046,0.001,0.039,0.811,
+                2.2978763,-0.78820091,-0.36046741,-0.78541526,1.70534056,0.04176167,0.02539615,-0.05798503,0.89431585
+            ]
+        }
+    ]
+}

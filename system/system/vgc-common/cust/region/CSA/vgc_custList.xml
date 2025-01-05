@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <custlist name="setupwizard_language_with_iso_map">
+        <item name="UA" value="uk_UA"/>
+        <item name="UZ" value="uz_Latn_UZ"/>
+    </custlist>
+</config>

@@ -1,0 +1,18 @@
+{
+    "CameraCurvePromotion": 1,
+    "EngineModeRejectReduceSar": 1,
+    "MultilevelBright": 1,
+    "IsUseNitBrightnessBar": 1,
+    "DriverProxTempCali": 1,
+    "MaxBrightness": 14063,
+    "ScreenOnWaitLux": 300,
+    "UserModifyVer": 3,
+    "MtkSupportDsiCommand":1,
+    "NotifyLcmBrightnessToDriverList": 1,
+    "VicoVersion": 2,
+    "UseWindowDrag": 1,
+    "UnderDisplayLight": 1,
+    "UseOriginNitCurve": 1
+}
+
+

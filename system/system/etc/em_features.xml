@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<boolean name="leds_support">false</boolean>
+	<boolean name="fm_support">false</boolean>
+	<boolean name="gyroscope_support">true</boolean>
+	<boolean name="dpdt_test">true</boolean>
+	<boolean name="smart_spearker_amplifier_cali_support">true</boolean>
+	<boolean name="linear_motor_support">true</boolean>
+	<boolean name="speaker_resdetect_support">true</boolean>
+	<boolean name="diag_socket">true</boolean>
+	<boolean name="support_5g">true</boolean>
+	<boolean name="voice_wakeupt_test_support">true</boolean>
+	<boolean name="lcm_light_sensor">false</boolean>
+	<boolean name="light_sensor_angle">true</boolean>
+	<boolean name="high_rate_shadow_support">true</boolean>
+	<boolean name="front_camera_under_screen">true</boolean>
+	<boolean name="sim_test_support">true</boolean>
+	<boolean name="reduce_sar_test">true</boolean>
+	<string  name="camera_type">back[Master,Periscope,Wide]front[Master]</string>
+	<boolean name="camera_ois_test">true</boolean>
+	<boolean name="sub_smart_spearker_amplifier_cali_support">true</boolean>
+	<boolean name="multi_speaker_receiver_support">true</boolean>
+	<boolean name="lcm_ltpo_support">true</boolean>
+	<boolean name="rear_main_wide_tele_unsupport">true</boolean>
+	<boolean name="doule_flash_light">false</boolean>
+	<boolean name="hifi_support">false</boolean>
+	<boolean name="flash_light_cali_support">true</boolean>
+	<boolean name="camera_mipi_crc_test">false</boolean>
+	<boolean name="double_speaker_support">true</boolean>
+	<boolean name="nova_display_ic_support">false</boolean>
+	<boolean name="nova_display_ic_v2_support">false</boolean>
+	<boolean name="camera_pdaf">true</boolean>
+	<boolean name="bad_screen_support">false</boolean>
+	<boolean name="under_infrared_support">true</boolean>
+	<boolean name="long_wave_infrared_support">true</boolean>
+	<boolean name="lcm_light_cali_support">false</boolean>
+	<boolean name="light_sensor_test_support">true</boolean>
+	<!-- 手电筒测试（单个） -->
+	<boolean name="single_flash_light">true</boolean>
+	<boolean name="front_cct_support">true</boolean>
+	<boolean name="laser_TMF8805_support">true</boolean>
+	<!-- 多光谱CCT校准 -->
+	<boolean name="multi_spectral_cct_support">false</boolean>
+	<!-- 前置主摄像头PDAF测试 -->
+	<boolean name="front_main_pdaf_test">false</boolean>
+	<!-- DP传输测试 -->
+	<boolean name="display_port_support">false</boolean>
+	<!-- 背麦气密性测试 -->
+	<boolean name="third_air_tightness_test">false</boolean>
+	<boolean name="multi_mic_echo_support">false</boolean>
+	<boolean name="cct_support">true</boolean>
+	<boolean name="cct_cal_support">true</boolean>
+	<string name="btb_slot">SIM1,SIM2</string>
+	<!-- vivo_camera_type -->
+	<string name="special_vivo_camera_type">"Tele3xLong"</string>
+	<boolean name="second_generation_cct_support">true</boolean>
+	<boolean name="usb_port_test_support">true</boolean>
+</resources>
