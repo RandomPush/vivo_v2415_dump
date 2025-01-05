@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ntc_auto_test>
+    <iteminfo name = "WIFI_PA_THERM" operation="read" basic_path="/sys/class/thermal/thermal_zone%d" if_type="wifi_ntc" value_deal="/1000" value_type="%.1f" />
+	<iteminfo name = "CHARGER_THERM" operation="read"  path="/sys/class/cms_class/chg_ic_temp" value_deal="/10" value_type="%.1f"/>
+	<iteminfo name = "BAT_BTB_1_THERM" operation="read"  path="/sys/class/stm32_debug/master_bat_conn_temp" value_deal="/10" value_type="%.1f"/>
+
+    <Command name = "AT+BK_PWR_NTC=1,1">
+        <item name = "BOARD_THERM"/>
+        <item name = "AP_THERM"/>
+    </Command>
+    <Command name = "AT+BK_PWR_NTC=1,2" cache_file="/cache/recovery/last_ntc_temperature">
+		<item name = "USB_CON_THERM"/>
+		<item name = "BAT_BOARD_THERM"/>
+		<item name = "BAT_BTB_THERM"/>
+		<item name = "SUB_BOARD_THERM"/>
+		<item name = "4G_PA_THERM"/>
+		<item name = "5G_PA_THERM"/>
+		<item name = "WIFI_PA_THERM"/>
+		<item name = "BAT_BTB_1_THERM"/>
+		<item name = "CHARGER_THERM"/>
+    </Command>
+	<Command name = "AT+BK_PWR_NTC=1,3">
+		<item name = "USB_CON_THERM"/>
+		<item name = "BAT_BOARD_THERM"/>
+		<item name = "BAT_BTB_THERM"/>
+		<item name = "SUB_BOARD_THERM"/>
+		<item name = "4G_PA_THERM"/>
+		<item name = "5G_PA_THERM"/>
+		<item name = "WIFI_PA_THERM"/>
+		<item name = "BAT_BTB_1_THERM"/>
+		<item name = "CHARGER_THERM"/>
+	</Command>
+</ntc_auto_test>

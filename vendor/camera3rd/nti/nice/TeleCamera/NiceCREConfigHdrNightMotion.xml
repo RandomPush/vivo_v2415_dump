@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NiceCREConfig version="0.0.1" name='MainCamera'>
+    <!-- common config  -->
+    <ModelSubPath description="model sub path">TeleCamera</ModelSubPath>
+    <FallBackKeepHdr>1</FallBackKeepHdr>
+    <Perception use='1' description="perception paramter">
+        <!--default 70-->
+        <GhostDetectOn>1</GhostDetectOn>
+        <ShakingTH>0.01</ShakingTH>
+        <LuxIndexTh>8888888</LuxIndexTh>
+        <ExpTimeTh>87944</ExpTimeTh>
+        <BandingNNTh>1000</BandingNNTh>
+        <BandingSSTh>1000</BandingSSTh>
+        <MatchShakingThreshold>0.1</MatchShakingThreshold>
+        <FirstSFrameIndex>8</FirstSFrameIndex>
+        <SecondSFrameIndex>9</SecondSFrameIndex>
+        <SwitchNormalMatchThreshold>1</SwitchNormalMatchThreshold>
+    </Perception>
+    <DeGhost description="DeGhost params">
+        <nThd description="ghost detection threshold of normal frame">19</nThd>
+        <s0Thd description="ghost detection threshold of s0 frame">-300</s0Thd>
+        <s1Thd description="ghost detection threshold of s1 frame">-300</s1Thd>
+        <shakeThd description="nThd, soThd, s1Thd will change to [nThdShake, s0ThdShake, s1ThdShake] if shaking value bigger than shakeThd">0.028</shakeThd>
+        <nThdShake description="if shaking value bigger than shakeThd, use nThdShake replace nThd">18</nThdShake>
+        <s0ThdShake description="if shaking value bigger than shakeThd, use s0ThdShake replace s0Thd">-300</s0ThdShake>
+        <s1ThdShake description="if shaking value bigger than shakeThd, use s1ThdShake replace s1Thd">-300</s1ThdShake>
+        <maskDilate description="mask dilate size">1</maskDilate>
+        <diffThd description="threshold of diff mask">3</diffThd>
+        <minCropSize description="minimum size of ghost cropping size">1024</minCropSize>
+        <cropThd1 description="the first threshold of increase ghost crop size. float type">0.02</cropThd1>
+        <cropThd2 description="the second threshold of increase ghost crop size. float type">0.1</cropThd2>
+        <cropThd1Shake description="if shaking value bigger than shakeThd, use s0ThdShake replace s0Thd">0.02</cropThd1Shake>
+        <cropThd2Shake description="if shaking value bigger than shakeThd, use s1ThdShake replace s1Thd">0.1</cropThd2Shake>
+        <flexRatio1 description="a ratio that use to increase ghost crop size if ghost area bigger than cropThd1 and les than cropThd2. float type">3.0</flexRatio1>
+        <flexRatio2 description="a ratio that use to increase ghost crop size if ghost area bigger than cropThd2. float type">4.0</flexRatio2>
+        <refineGhostThd description="param of refine ghost mask">5</refineGhostThd>
+        <refineInpaintThd description="param of refine inpainting mask">1</refineInpaintThd>
+        <s0Thd1 description="ghost detection threshold of s0 frame, use to detect banding ghost">19</s0Thd1>
+        <s1Thd1 description="ghost detection threshold of s1 frame, use to detect banding ghost">-300</s1Thd1>
+        <ghostDeleteSize description="use to delete small ghosts that pixel number lower than this param">18</ghostDeleteSize>
+        <minGhostPixelNum description="decide whether to use inpainting if all ghost pixel number lower than this param">64</minGhostPixelNum>
+        <InpaintingModel>
+            <inputScale inw="512" inh="512" num="1">0.000030518509447574615</inputScale>
+            <outScale>0.0000339735415764153</outScale>
+            <ModelPath tempBufferSizeMb="38" use="1" eng="10">nice_inpainting.vdnn</ModelPath>
+        </InpaintingModel>
+    </DeGhost>
+    <XDR use="1">
+        <xmlPath>/vendor/camera3rd/nti/xdr</xmlPath>
+    </XDR>
+    <Magic>
+        <UseMagic>0</UseMagic>
+        <UseMagicRoiAdjust>1</UseMagicRoiAdjust>
+        <DigitalzoomTh>8.0</DigitalzoomTh>
+        <MaxSize>1024</MaxSize>
+        <ControlType description="default 0:0, digitalzoom control, 1, maxsize control,  2, digitalzoom or maxsize control">1</ControlType>
+        <XmlPath>/vendor/camera3rd/nti/nice_magic/NiceMagicConfig.xml</XmlPath>
+        <ModelPath>/vendor/camera3rd/nti/nice_magic</ModelPath>
+    </Magic>
+    <!-- normal config  -->
+    <NormalConfig description="normal scene config">
+        <PreBpsParam description="pre bps parameter">
+            <!--0: none, 1: only for pretbps local, 2: only for prebps global, 4: only for postbps local, 5: only for postbps global, 6: vst and ivst (not support) -->
+            <OpticalBlackCorrect use='1' method='2' description="local ob prameter file path">/vendor/camera3rd/nti/TeleCamera/prebps_localobc_normal.xml</OpticalBlackCorrect>
+            <CodeFunc description="pre bps function code">2560</CodeFunc>
+        </PreBpsParam>
+        <NoiseInfo num='1' name='IMX882'>
+            <Sensor01>
+                <a0>0.0002645549</a0>
+                <a1>-0.0006132909</a1>
+                <b0>0.000000187</b0>
+                <b1>0.0000564981</b1>
+                <b2>0.013513111</b2>
+            </Sensor01>
+        </NoiseInfo>
+        <ImageAlign description="image align information">
+            <FeatureTrack description="feature track information">
+                <MaxCorners>1000</MaxCorners>
+                <MaxCandidateCorners>32768</MaxCandidateCorners>
+                <MinDistance>16</MinDistance>
+                <HarrisK use='0'>0.04</HarrisK>
+                <QualityLevel>0.01</QualityLevel>
+            </FeatureTrack>
+            <GlobalAlign description="global align information">
+                <MinPointsNum>50</MinPointsNum>
+                <LKEpsilon>0.01</LKEpsilon>
+                <LKMaxIter>20</LKMaxIter>
+                <LKNumRatio>0.7</LKNumRatio>
+                <RansacMaxIter>100</RansacMaxIter>
+                <RansacConfidence>0.9950</RansacConfidence>
+                <RansacThreshold>3</RansacThreshold>
+                <UseRegion>0</UseRegion>
+                <Ratio>0.5</Ratio>
+                <SwitchRegionDigitalZoom>4</SwitchRegionDigitalZoom>
+                <DeltaPad>32</DeltaPad>
+                <RandomDisturbDigitalZoom use="1">1</RandomDisturbDigitalZoom>
+            </GlobalAlign>
+        </ImageAlign>
+        <Overlap description="block overlap, default 16">16</Overlap>
+        <ROIStrategy use='1'>
+            <ROIUseType>2</ROIUseType>
+            <UseRoiDigitZoom>2.0</UseRoiDigitZoom>
+        </ROIStrategy>
+        <PostBpsParam description="post bps parameter">
+            <CodeFunc description="post bps function code">8456</CodeFunc>
+            <LTMCodeFunc description="ltm function code, 0, not ltm; 1, cvltm; 2, mtk ltm; 3, nice-tone">2</LTMCodeFunc>
+            <ToneFunc>1</ToneFunc>
+            <NormalNiceTMDigitalZoomTH>0</NormalNiceTMDigitalZoomTH>
+            <NiceTMOnlyUsePortrait>2</NiceTMOnlyUsePortrait>
+            <HightLightKeepAWB>
+                <use>1</use>
+                <scaleratio>1.3</scaleratio>
+                <DrcLowThresh>2.0</DrcLowThresh>
+                <DrcHighThresh>3.5</DrcHighThresh>
+                <LscSigma>0.4</LscSigma>
+                <LscOffset>0.0</LscOffset>
+            </HightLightKeepAWB>
+        </PostBpsParam>
+        <NiceTone description="nice-tone algorithm config" tnable="1">
+            <ModelPath description="nice-tone model path">/vendor/camera3rd/nti/nice_tce/Model/</ModelPath>
+            <XmlPath description="nice-tone xmlfile name">/vendor/camera3rd/nti/nice_tce</XmlPath>
+            <SkysegConfigPath description="nice-tone SkysegConfigPath name">/vendor/camera3rd/nti/skyseg.xml</SkysegConfigPath>
+            <SegmentjsonName description="nice-tone segment config path">/vendor/camera3rd/nti/aisegment_config.json</SegmentjsonName>
+            <AllinoneXML description="nice-tone allinone config path">/vendor/camera3rd/nti/allinone2_0_config.xml</AllinoneXML>
+            <SpeConfigPath description="spe xml path for txe">/vendor/camera3rd/nti/nice_spe/spe_config.xml</SpeConfigPath>
+            <FaceDetConfigPath description="FaceDet config path for txe">/vendor/camera3rd/nti/fdcapture3_0/</FaceDetConfigPath>
+            <OutlineConfigPath description="OutlineConfigPath config path for txe">/vendor/camera3rd/nti/outline/</OutlineConfigPath>
+        </NiceTone>
+        <UseRandNoise description="random noise swith, default 0">0</UseRandNoise>
+        <LogDomainMax description="Max vaule in Log Domain Convert">17034.8</LogDomainMax>
+        <BitWidthNormal description="normal flow bitwidth, default 16">32</BitWidthNormal>
+        <ModelsInfo descrption="normal models info">
+            <UseAnalogGainMethod>1</UseAnalogGainMethod>
+            <GhostModelLuxIndexThd>1000</GhostModelLuxIndexThd>
+            <GhostModelScene>0</GhostModelScene>
+            <UseNormalModel isoMin="0">0</UseNormalModel>
+            <polarAFInfo use="0">150,160,170,180,190,204,224,249,280,300,319,350,372,400,445</polarAFInfo>
+
+            <SingleModelInfo>
+                <UseClipMap>0</UseClipMap>
+                <drcgianThd>0.0</drcgianThd>
+                <digitZoomUp>0.0</digitZoomUp>
+                <FrameMatchSuccessThd>0</FrameMatchSuccessThd>
+                <UseVst hdrvstmode="1" clipinput="0" maxvalue="1" vstNormCoeff="1." avst="0" vstBaseISOMode="0">1</UseVst>
+                <!-- FrameTypeOrder ref='2' refn='2' clip='0' useawb='0'>1,1,1,1,1,0,3</FrameTypeOrder -->
+                <inputScale inputZep="0" inw="544" inh="544" num="4">0.00003051850944757462</inputScale>
+                <outScale outZep="0">0.00003632319931057282</outScale>
+                <ModelPath tempBufferSizeMb="33" use="1" s2d="0" rng="1" rate="1" eng="10" dev="4" warp="2" maxiso="2000">nice_ldr_imx882_general_bayer_x1.vdnn</ModelPath>
+            </SingleModelInfo>
+            <SingleModelInfo>
+                <UseClipMap>0</UseClipMap>
+                <drcgianThd>0.0</drcgianThd>
+                <digitZoomUp>0.0</digitZoomUp>
+                <FrameMatchSuccessThd>0</FrameMatchSuccessThd>
+                <UseVst hdrvstmode="1" clipinput="0" maxvalue="1" vstNormCoeff="1." avst="0" vstBaseISOMode="0">1</UseVst>
+                <!-- FrameTypeOrder ref='2' refn='2' clip='0' useawb='0'>1,1,1,1,1,0,3</FrameTypeOrder -->
+                <inputScale inputZep="0" inw="544" inh="544" num="4">0.00003051850944757462</inputScale>
+                <outScale outZep="0">0.00003632319931057282</outScale>
+                <ModelPath tempBufferSizeMb="33" use="1" s2d="0" rng="1" rate="1" eng="10" dev="4" warp="2">nice_ldr_imx882_general_bayer_x1.vdnn</ModelPath>
+            </SingleModelInfo>
+            <SingleModelInfo>
+                <UseClipMap>0</UseClipMap>
+                <drcgianThd>0.0</drcgianThd>
+                <digitZoomUp>0.0</digitZoomUp>
+                <FrameMatchSuccessThd>2</FrameMatchSuccessThd>
+                <UseVst hdrvstmode="1" clipinput="0" maxvalue="1" vstNormCoeff="1." avst="0" vstBaseISOMode="0">1</UseVst>
+                <!-- FrameTypeOrder ref='2' refn='2' clip='0' useawb='0'>1,1,1,1,1,0,3</FrameTypeOrder -->
+                <inputScale inputZep="0" inw="544" inh="544" num="4">0.00003051850944757462</inputScale>
+                <outScale outZep="0">0.00003632319931057282</outScale>
+                <ModelPath tempBufferSizeMb="33" use="1" s2d="0" rng="1" rate="1" eng="10" dev="4" warp="2" maxiso="0">nice_ldr_imx882_general_bayer_x1_alignfail.vdnn</ModelPath>
+            </SingleModelInfo>
+            <SingleDrcGainModelInfo>
+                <UseClipMap>0</UseClipMap>
+                <drcgianThd>2.5</drcgianThd>
+                <digitZoomUp>0.0</digitZoomUp>
+                <FrameMatchSuccessThd>0</FrameMatchSuccessThd>
+                <UseVst hdrvstmode="1" clipinput="0" maxvalue="1" vstNormCoeff="1." avst="0" vstBaseISOMode="0">1</UseVst>
+                <!-- FrameTypeOrder ref='2' refn='2' clip='0' useawb='0'>1,1,1,1,1,0,3</FrameTypeOrder -->
+                <inputScale inputZep="0" inw="544" inh="544" num="4">0.00003051850944757462</inputScale>
+                <outScale outZep="0">0.00003632319931057282</outScale>
+                <ModelPath tempBufferSizeMb="33" use="1" s2d="0" rng="1" rate="1" eng="10" dev="4" warp="2">nice_ldr_imx882_general_bayer_x1.vdnn</ModelPath>
+            </SingleDrcGainModelInfo>
+        </ModelsInfo>
+    </NormalConfig>
+    <!-- hdr config  -->
+    <HDRConfig description="hdr scene config">
+        <PreBpsParam description="pre bps parameter">
+            <!--0: none, 1: only for pretbps local, 2: only for prebps global, 4: only for postbps local, 5: only for postbps global, 6: vst and ivst (not support) -->
+            <OpticalBlackCorrectHDR use='1' method='2' description="local ob prameter file path">/vendor/camera3rd/nti/TeleCamera/prebps_localobc_hdr.xml</OpticalBlackCorrectHDR>
+            <CodeFunc description="pre bps function code">2560</CodeFunc>
+        </PreBpsParam>
+        <NoiseInfoHDR num='1' name='IMX882'>
+            <Sensor01>
+                <a0>0.0002501056</a0>
+                <a1>0.0016395854</a1>
+                <b0>0.0000001722</b0>
+                <b1>0.0000588153</b1>
+                <b2>0.0089309174</b2>
+            </Sensor01>
+        </NoiseInfoHDR>
+        <ImageAlign description="image align information">
+            <FeatureTrack description="feature track information">
+                <MaxCorners>1000</MaxCorners>
+                <MaxCandidateCorners>32768</MaxCandidateCorners>
+                <MinDistance>16</MinDistance>
+                <HarrisK use='0'>0.04</HarrisK>
+                <QualityLevel>0.01</QualityLevel>
+            </FeatureTrack>
+            <GlobalAlign description="global align information">
+                <MinPointsNum>50</MinPointsNum>
+                <LKEpsilon>0.01</LKEpsilon>
+                <LKMaxIter>20</LKMaxIter>
+                <LKNumRatio>0.35</LKNumRatio>
+                <RansacMaxIter>100</RansacMaxIter>
+                <RansacConfidence>0.9950</RansacConfidence>
+                <RansacThreshold>3</RansacThreshold>
+                <UseRegion>0</UseRegion>
+                <Ratio>0.5</Ratio>
+                <SwitchRegionDigitalZoom>4</SwitchRegionDigitalZoom>
+                <DeltaPad>32</DeltaPad>
+                <RandomDisturbDigitalZoom use="1">1</RandomDisturbDigitalZoom>
+                <frameAlignFailedFallbackMethod>1</frameAlignFailedFallbackMethod>
+            </GlobalAlign>
+        </ImageAlign>
+        <Overlap description="block overlap, default 16">16</Overlap>
+        <ROIStrategy use='1'>
+            <ROIUseType>2</ROIUseType>
+            <UseRoiDigitZoom>2.0</UseRoiDigitZoom>
+        </ROIStrategy>
+        <PostBpsParam description="post bps parameter">
+            <CodeFunc description="post bps function code">264</CodeFunc>
+            <LTMCodeFunc description="ltm function code, 0, not ltm; 1, cvltm; 2, mtk ltm; 3, nice-tone">0</LTMCodeFunc>
+            <ToneFunc>1</ToneFunc>
+            <NormalNiceTMDigitalZoomTH>0</NormalNiceTMDigitalZoomTH>
+            <NiceTMOnlyUsePortrait>2</NiceTMOnlyUsePortrait>
+            <HightLightKeepAWBHDR>
+                <use>0</use>
+                <scaleratio>1.4</scaleratio>
+                <DrcLowThresh>2.0</DrcLowThresh>
+                <DrcHighThresh>3.5</DrcHighThresh>
+                <LscSigma>0.4</LscSigma>
+                <LscOffset>0.0</LscOffset>
+            </HightLightKeepAWBHDR>
+        </PostBpsParam>
+        <NiceTone description="nice-tone algorithm config" tnable="1">
+            <ModelPath description="nice-tone model path">/vendor/camera3rd/nti/nice_tce/Model/</ModelPath>
+            <XmlPath description="nice-tone xmlfile name">/vendor/camera3rd/nti/nice_tce</XmlPath>
+            <SkysegConfigPath description="nice-tone SkysegConfigPath name">/vendor/camera3rd/nti/skyseg.xml</SkysegConfigPath>
+            <SegmentjsonName description="nice-tone segment config path">/vendor/camera3rd/nti/aisegment_config.json</SegmentjsonName>
+            <AllinoneXML description="nice-tone allinone config path">/vendor/camera3rd/nti/allinone2_0_config.xml</AllinoneXML>
+            <SpeConfigPath description="spe xml path for txe">/vendor/camera3rd/nti/nice_spe/spe_config.xml</SpeConfigPath>
+            <FaceDetConfigPath description="FaceDet config path for txe">/vendor/camera3rd/nti/fdcapture3_0/</FaceDetConfigPath>
+            <OutlineConfigPath description="OutlineConfigPath config path for txe">/vendor/camera3rd/nti/outline/</OutlineConfigPath>
+        </NiceTone>
+        <UseRandNoise description="random noise swith, default 0">0</UseRandNoise>
+        <LogDomainMax description="Max vaule in Log Domain Convert">17034.8</LogDomainMax>
+        <BitWidthHDR description="hdr flow bitwidth, default 32">32</BitWidthHDR>
+        <ModelsInfo descrption="hdr models info">
+            <UseAnalogGainMethod>0</UseAnalogGainMethod>
+            <GhostModelLuxIndexThd>1000</GhostModelLuxIndexThd>
+            <GhostModelScene>0</GhostModelScene>
+            <UseNormalModel isoMin="0">0</UseNormalModel>
+            <polarAFInfo use="0">150,160,170,180,190,204,224,249,280,300,319,350,372,400,445</polarAFInfo>
+
+            <SingleModelInfo>
+                <UseClipMap>0</UseClipMap>
+                <drcgianThd>0.0</drcgianThd>
+                <digitZoomUp>0.0</digitZoomUp>
+                <FrameMatchSuccessThd>0</FrameMatchSuccessThd>
+                <VstBaseISOMode>0</VstBaseISOMode>
+                <UseVst hdrvstmode="2" clipinput="0" maxvalue="1" vstNormCoeff="1." avst="0">1</UseVst>
+                <FrameTypeOrder ref='3' refn='3' clip='0' useawb='0'>1,1,1,1,1,1,1,2,0,0</FrameTypeOrder>
+                <inputScale inputZep="0" inw="544" inh="544" num="10">0.000030518509447574615</inputScale>
+                <outScale outZep="0">0.0005296346498653293</outScale>
+                <ModelPath tempBufferSizeMb="55" use="1" eng="10" dev="4" warp="2" oflg='1' swarp="6" usesqrtev="1">nice_hdr_imx882_night_motion_bayer_x1.vdnn</ModelPath>
+            </SingleModelInfo>
+        </ModelsInfo>
+    </HDRConfig>
+</NiceCREConfig>

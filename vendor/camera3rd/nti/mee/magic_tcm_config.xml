@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MagicTCMConfig version="1.0.12.0" name='MaigicTCMConfig'>
+    <!-- max num of camera config is 10. -->
+    <CameraConfig id="0" begUIZoom="0" endUIZoom="2">
+        <LumMask use='0'>
+            <LowThres>-0.1</LowThres>
+            <HighThres>1.1</HighThres>
+        </LumMask>
+        <SpectralMask use='0'>
+            <LowThres>35</LowThres>
+            <HighThres>77</HighThres>
+        </SpectralMask>
+        <!-- class = [人：1；天空：2；屏幕：3；建筑：4；水面：5；植被：6；地面：7] -->>
+        <AllinoneMask use='0'>
+            <SegModel use="1" inw="512" inh="512" num="1">SceneSeg_QNN2_x.vdnn</SegModel>
+            <AlgXMLModel>/vendor/camera3rd/nti/allinone2_0_config.xml</AlgXMLModel>
+            <AddClass ecoff='1'>7</AddClass>
+            <AddClass ecoff='1'>6</AddClass>
+        </AllinoneMask>
+
+        <SkyMask use='1'>
+            <ecoff>1</ecoff>
+            <FilterThres>127</FilterThres>
+        </SkyMask>
+
+        <MaskParam>
+            <BlurRaduis>5</BlurRaduis>
+            <ErodeRaduis>5</ErodeRaduis>
+            <Foreground>0</Foreground>
+            <Background>255</Background>
+        </MaskParam>
+
+        <TextureGenerator>
+            <!--1: gaussion, 2: uniform, 3: fftgaussion-->
+            <method>3</method>
+            <gaussion iso='100'>
+                <mu>0</mu>
+                <sigma>0.01</sigma>
+            </gaussion>
+            <!--(0.01, 0.05)相当于 PS2.0的强度， (0.01, 0.03)相当于 PS 1.2的强度-->
+            <uniform iso='100'>
+                <min>0.01</min>
+                <max>0.03</max>
+            </uniform>
+            <uniform iso='200'>
+                <min>0.01</min>
+                <max>0.03</max>
+            </uniform>
+            <uniform iso='1000'>
+                <min>0.01</min>
+                <max>0.03</max>
+            </uniform>
+
+            <!-- 0 luxIndex, 1 iso -->
+            <fftgaussion_threshold_type>0</fftgaussion_threshold_type>
+            <fftgaussion threshold='200'>
+                <maskr>0.5</maskr>
+                <gaussa>0.2</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+            <fftgaussion threshold='300'>
+                <maskr>0.5</maskr>
+                <gaussa>0.2</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+            <fftgaussion threshold='400'>
+                <maskr>0.5</maskr>
+                <gaussa>0.3</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+            <fftgaussion threshold='4000'>
+                <maskr>0.5</maskr>
+                <gaussa>0.3</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+        </TextureGenerator>
+    </CameraConfig>
+
+    <CameraConfig id="1" begUIZoom="2" endUIZoom="3">
+        <LumMask use='0'>
+            <LowThres>-0.1</LowThres>
+            <HighThres>1.1</HighThres>
+        </LumMask>
+        <SpectralMask use='0'>
+            <LowThres>35</LowThres>
+            <HighThres>77</HighThres>
+        </SpectralMask>
+        <!-- class = [人：1；天空：2；屏幕：3；建筑：4；水面：5；植被：6；地面：7] -->>
+        <AllinoneMask use='0'>
+            <SegModel use="1" inw="512" inh="512" num="1">SceneSeg_QNN2_x.vdnn</SegModel>
+            <AlgXMLModel>/vendor/camera3rd/nti/allinone2_0_config.xml</AlgXMLModel>
+            <AddClass ecoff='1'>7</AddClass>
+            <AddClass ecoff='1'>6</AddClass>
+        </AllinoneMask>
+
+        <SkyMask use='1'>
+            <ecoff>1</ecoff>
+            <FilterThres>127</FilterThres>
+        </SkyMask>
+
+        <MaskParam>
+            <BlurRaduis>5</BlurRaduis>
+            <ErodeRaduis>5</ErodeRaduis>
+            <Foreground>0</Foreground>
+            <Background>255</Background>
+        </MaskParam>
+
+        <TextureGenerator>
+            <!--1: gaussion, 2: uniform, 3: fftgaussion-->
+            <method>3</method>
+            <gaussion iso='100'>
+                <mu>0</mu>
+                <sigma>0.01</sigma>
+            </gaussion>
+            <!--(0.01, 0.05)相当于 PS2.0的强度， (0.01, 0.03)相当于 PS 1.2的强度-->
+            <uniform iso='100'>
+                <min>0.01</min>
+                <max>0.03</max>
+            </uniform>
+            <uniform iso='200'>
+                <min>0.01</min>
+                <max>0.03</max>
+            </uniform>
+            <uniform iso='1000'>
+                <min>0.01</min>
+                <max>0.03</max>
+            </uniform>
+
+            <fftgaussion_threshold_type>0</fftgaussion_threshold_type>
+            <fftgaussion threshold='200'>
+                <maskr>0.5</maskr>
+                <gaussa>0.2</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+            <fftgaussion threshold='300'>
+                <maskr>0.5</maskr>
+                <gaussa>0.2</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+            <fftgaussion threshold='400'>
+                <maskr>0.5</maskr>
+                <gaussa>0.3</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+            <fftgaussion threshold='4000'>
+                <maskr>0.5</maskr>
+                <gaussa>0.3</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+        </TextureGenerator>
+    </CameraConfig>
+
+    <CameraConfig id="2" begUIZoom="3.5" endUIZoom="5">
+        <LumMask use='0'>
+            <LowThres>-0.1</LowThres>
+            <HighThres>1.1</HighThres>
+        </LumMask>
+        <SpectralMask use='0'>
+            <LowThres>35</LowThres>
+            <HighThres>77</HighThres>
+        </SpectralMask>
+        <!-- class = [人：1；天空：2；屏幕：3；建筑：4；水面：5；植被：6；地面：7] -->>
+        <AllinoneMask use='0'>
+            <SegModel use="1" inw="512" inh="512" num="1">SceneSeg_QNN2_x.vdnn</SegModel>
+            <AlgXMLModel>/vendor/camera3rd/nti/allinone2_0_config.xml</AlgXMLModel>
+            <AddClass ecoff='1'>7</AddClass>
+            <AddClass ecoff='1'>6</AddClass>
+        </AllinoneMask>
+
+        <SkyMask use='1'>
+            <ecoff>1</ecoff>
+            <FilterThres>127</FilterThres>
+        </SkyMask>
+
+        <MaskParam>
+            <BlurRaduis>5</BlurRaduis>
+            <ErodeRaduis>5</ErodeRaduis>
+            <Foreground>0</Foreground>
+            <Background>255</Background>
+        </MaskParam>
+
+        <TextureGenerator>
+            <!--1: gaussion, 2: uniform, 3: fftgaussion-->
+            <method>3</method>
+            <gaussion iso='100'>
+                <mu>0</mu>
+                <sigma>0.01</sigma>
+            </gaussion>
+            <!--(0.01, 0.05)相当于 PS2.0的强度， (0.01, 0.03)相当于 PS 1.2的强度-->
+            <uniform iso='100'>
+                <min>0.01</min>
+                <max>0.03</max>
+            </uniform>
+            <uniform iso='200'>
+                <min>0.01</min>
+                <max>0.03</max>
+            </uniform>
+            <uniform iso='1000'>
+                <min>0.01</min>
+                <max>0.03</max>
+            </uniform>
+
+            <fftgaussion_threshold_type>0</fftgaussion_threshold_type>
+            <fftgaussion threshold='200'>
+                <maskr>0.5</maskr>
+                <gaussa>0.4</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+            <fftgaussion threshold='300'>
+                <maskr>0.5</maskr>
+                <gaussa>0.45</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+            <fftgaussion threshold='400'>
+                <maskr>0.5</maskr>
+                <gaussa>0.5</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+            <fftgaussion threshold='4000'>
+                <maskr>0.5</maskr>
+                <gaussa>0.55</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+        </TextureGenerator>
+    </CameraConfig>
+
+    <CameraConfig id="3" begUIZoom="5" endUIZoom="7">
+        <LumMask use='0'>
+            <LowThres>-0.1</LowThres>
+            <HighThres>1.1</HighThres>
+        </LumMask>
+        <SpectralMask use='0'>
+            <LowThres>35</LowThres>
+            <HighThres>77</HighThres>
+        </SpectralMask>
+        <!-- class = [人：1；天空：2；屏幕：3；建筑：4；水面：5；植被：6；地面：7] -->>
+        <AllinoneMask use='0'>
+            <SegModel use="1" inw="512" inh="512" num="1">SceneSeg_QNN2_x.vdnn</SegModel>
+            <AlgXMLModel>/vendor/camera3rd/nti/allinone2_0_config.xml</AlgXMLModel>
+            <AddClass ecoff='1'>7</AddClass>
+            <AddClass ecoff='1'>6</AddClass>
+        </AllinoneMask>
+
+        <SkyMask use='1'>
+            <ecoff>1</ecoff>
+            <FilterThres>127</FilterThres>
+        </SkyMask>
+
+        <MaskParam>
+            <BlurRaduis>5</BlurRaduis>
+            <ErodeRaduis>5</ErodeRaduis>
+            <Foreground>0</Foreground>
+            <Background>255</Background>
+        </MaskParam>
+
+        <TextureGenerator>
+            <!--1: gaussion, 2: uniform, 3: fftgaussion-->
+            <method>3</method>
+            <gaussion iso='100'>
+                <mu>0</mu>
+                <sigma>0.01</sigma>
+            </gaussion>
+            <!--(0.01, 0.05)相当于 PS2.0的强度， (0.01, 0.03)相当于 PS 1.2的强度-->
+            <uniform iso='100'>
+                <min>0.01</min>
+                <max>0.03</max>
+            </uniform>
+            <uniform iso='200'>
+                <min>0.01</min>
+                <max>0.03</max>
+            </uniform>
+            <uniform iso='1000'>
+                <min>0.01</min>
+                <max>0.03</max>
+            </uniform>
+
+            <fftgaussion_threshold_type>0</fftgaussion_threshold_type>
+            <fftgaussion threshold='200'>
+                <maskr>0.5</maskr>
+                <gaussa>0.3</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+            <fftgaussion threshold='300'>
+                <maskr>0.5</maskr>
+                <gaussa>0.25</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+            <fftgaussion threshold='400'>
+                <maskr>0.5</maskr>
+                <gaussa>0.25</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+            <fftgaussion threshold='4000'>
+                <maskr>0.5</maskr>
+                <gaussa>0.25</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+        </TextureGenerator>
+    </CameraConfig>
+
+    <CameraConfig id="4" begUIZoom="7" endUIZoom="100">
+        <LumMask use='0'>
+            <LowThres>-0.1</LowThres>
+            <HighThres>1.1</HighThres>
+        </LumMask>
+        <SpectralMask use='0'>
+            <LowThres>35</LowThres>
+            <HighThres>77</HighThres>
+        </SpectralMask>
+        <!-- class = [人：1；天空：2；屏幕：3；建筑：4；水面：5；植被：6；地面：7] -->>
+        <AllinoneMask use='0'>
+            <SegModel use="1" inw="512" inh="512" num="1">SceneSeg_QNN2_x.vdnn</SegModel>
+            <AlgXMLModel>/vendor/camera3rd/nti/allinone2_0_config.xml</AlgXMLModel>
+            <AddClass ecoff='1'>7</AddClass>
+            <AddClass ecoff='1'>6</AddClass>
+        </AllinoneMask>
+
+        <SkyMask use='1'>
+            <ecoff>1</ecoff>
+            <FilterThres>127</FilterThres>
+        </SkyMask>
+
+        <MaskParam>
+            <BlurRaduis>5</BlurRaduis>
+            <ErodeRaduis>5</ErodeRaduis>
+            <Foreground>0</Foreground>
+            <Background>255</Background>
+        </MaskParam>
+
+        <TextureGenerator>
+            <!--1: gaussion, 2: uniform, 3: fftgaussion-->
+            <method>3</method>
+            <gaussion iso='100'>
+                <mu>0</mu>
+                <sigma>0.01</sigma>
+            </gaussion>
+            <!--(0.01, 0.05)相当于 PS2.0的强度， (0.01, 0.03)相当于 PS 1.2的强度-->
+            <uniform iso='100'>
+                <min>0.01</min>
+                <max>0.03</max>
+            </uniform>
+            <uniform iso='200'>
+                <min>0.01</min>
+                <max>0.03</max>
+            </uniform>
+            <uniform iso='1000'>
+                <min>0.01</min>
+                <max>0.03</max>
+            </uniform>
+
+            <fftgaussion_threshold_type>0</fftgaussion_threshold_type>
+            <fftgaussion threshold='200'>
+                <maskr>0.5</maskr>
+                <gaussa>0.3</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+            <fftgaussion threshold='300'>
+                <maskr>0.5</maskr>
+                <gaussa>0.25</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+            <fftgaussion threshold='400'>
+                <maskr>0.5</maskr>
+                <gaussa>0.25</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+            <fftgaussion threshold='4000'>
+                <maskr>0.5</maskr>
+                <gaussa>0.25</gaussa>
+                <mu>0</mu>
+                <sigma>100</sigma>
+            </fftgaussion>
+        </TextureGenerator>
+    </CameraConfig>
+</MagicTCMConfig>

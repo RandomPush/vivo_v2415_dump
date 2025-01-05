@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * vivo copyright
+ */
+-->
+<settings version="1.0">
+
+<string name="softbrp_require_camera_types">Wide, Master, Tele, Tele5x, AuxMain</string>
+<string name="input_raw_frame_suffix">_16bit.raw</string>
+<string name="hdr_cpu_mask">00000011</string>
+<string name="motiodenoise_1.0_cpu_mask">00000011</string>
+
+<!-- for dualbokeh algo -->
+<integer name="dualbokeh_AiSegment_segmentType">7</integer>
+<bool name="dualbokeh_AiSegment_roiEnable">false</bool>
+<bool name="dualbokeh_AiSegment_enableHandseg">false</bool>
+<!-- end for dualbokeh algo -->
+
+<struct name="roiRemosaicSetting">
+    <!-- typedef enum {
+        SAT_CAM_ROLE_ULTRA_WIDE = 0,
+        SAT_CAM_ROLE_WIDE       = 1,
+        SAT_CAM_ROLE_TELE       = 2,
+        SAT_CAM_ROLE_ULTRA_TELE = 3,
+        SAT_CAM_ROLE_MAX,
+    } SAT_CAM_ROLE; -->
+    <string name="roiSensorRole">SAT_CAM_ROLE_ULTRA_WIDE</string>
+    <float name="sensorBasicRatio">1.0</float>
+    <float name="roiRatio">1.0</float>
+</struct>
+
+<!-- EIS_MTK_DEFAULT = 0x0000,
+    EIS_MTK_GRID_WRAP = 0x1001,
+    EIS_QUAL_GRID_WRAP = 0x2001,
+    EIS_QUAL_MATRIX_WRAP = 0x2002, -->
+<integer name="superme_eisWrapType">0</integer>
+<bool name="rejudgment_nightHd">false</bool>
+
+<!-- change thread priority -->
+<integer  name="changePriority">-10</integer >
+<!-- change thread priority -->
+
+<string-array name="enabledPipelineList">
+    <item>config/component/basic/pipeline_single_raw_shot.xml</item>
+    <item>config/component/basic/pipeline_sdk_preview.xml</item>
+    <item>config/component/basic/pipeline_dual_cam_shot.xml</item>
+    <item>config/component/basic/pipeline_frame_select.xml</item>
+    <item>config/component/basic/pipeline_sat_preview.xml</item>
+    <item>config/component/basic/pipeline_dual_facing_cam_shot.xml</item>
+    <item>config/component/basic/pipeline_movie_preprocess.xml</item>
+    <item>config/component/basic/pipeline_post_edit.xml</item>
+    <item>config/component/basic/pipeline_post_dual_cam_shot_sync.xml</item>
+    <item>config/component/basic/pipeline_raw_preview.xml</item>
+    <item>config/component/basic/pipeline_multi_raw_shot.xml</item>
+    <item>config/component/basic/pipeline_common_video.xml</item>
+    <item>config/component/basic/pipeline_shot_before_jpeg.xml</item>
+    <item>config/component/basic/pipeline_pre_dual_cam_shot_sync.xml</item>
+    <item>config/component/basic/pipeline_common_preview.xml</item>
+    <item>config/component/basic/pipeline_pre_dual_cam_shot.xml</item>
+    <item>config/component/basic/pipeline_jpeg_pack_shot.xml</item>
+    <item>config/component/basic/pipeline_post_dual_cam_shot.xml</item>
+    <item>config/component/basic/pipeline_document_shot.xml</item>
+    <item>config/component/basic/pipeline_parallel_yuv_shot.xml</item>
+    <item>config/component/basic/pipeline_preview_detect.xml</item>
+    <item>config/component/basic/pipeline_sat_shot.xml</item>
+    <item>config/component/basic/pipeline_single_yuv_shot.xml</item>
+    <item>config/component/basic/pipeline_multi_yuv_shot.xml</item>
+    <item>config/component/basic/pipeline_preview_zoom_control.xml</item>
+    <item>config/component/basic/pipeline_face_detect.xml</item>
+    <item>config/component/basic/pipeline_algo_info_query.xml</item>
+    <item>config/component/basic/pipeline_videostage_film.xml</item>
+    <item>config/component/basic/pipeline_videostage_online.xml</item>
+    <item>config/component/basic/pipeline_special_yuv_preview.xml</item>
+</string-array>
+
+<integer  name="slowShutterVersion">0</integer >
+
+</settings>
+
+

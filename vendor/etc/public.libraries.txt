@@ -1,0 +1,7 @@
+libOpenCL.so
+libnir_neon_driver_ndk.mtk.vndk.so
+libcmdl_ndk.mtk.vndk.so
+libarmnn_ndk.mtk.vndk.so
+libvcap_npu_network.so
+libvcap_npu_network_v1.so
+libvdnn.so

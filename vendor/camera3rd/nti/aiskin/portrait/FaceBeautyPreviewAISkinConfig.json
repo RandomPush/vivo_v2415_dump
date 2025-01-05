@@ -1,0 +1,13 @@
+{
+	"version":	"3.1.2401",
+	"release data":	"2023-08-01 18:00",
+	"device":	0,
+	"model01":	{
+		"node_info":	[["input_0", "add_76"], [3921568.627451, 4005361.921793], [0, -2]],
+		"model_name":	"AISkinPreview_Mdx3_004_256.vdnn"
+	},
+	"model02":	{
+		"node_info":	[["input_0", "add_76"], [3921568.627451, 3826682.275051], [0, -2]],
+		"model_name":	"AISkinPreview_Mdx3_004_192.vdnn"
+	}
+}

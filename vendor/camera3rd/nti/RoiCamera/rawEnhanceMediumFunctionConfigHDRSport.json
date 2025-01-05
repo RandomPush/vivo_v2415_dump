@@ -1,0 +1,284 @@
+{
+    "version":{
+        "majorVersion":2,
+        "minorVersion":0,
+        "releaseVersion":1,
+        "tuningVersion":0
+    },
+    "debug":{
+        "comment_debuglevel":"0:fatal, 1:error/init, 2:key, 3:info, 4:debug",
+        "debuglevel":4,
+        "comment_watermarker":"0:disable, >=1:enable",
+        "watermarkerEn":0,
+        "comment_bypass":"0:disable, >=1:enable",
+        "bypassEn":0,
+        "comment_algorithm_mode":"0: high_quality, 1:medium, 4: single frame AINR, 5: debanding",
+        "algorithmMode":1,
+        "comment_dump":"0:disable, >=1:enable",
+        "dumpEn":0,
+        "comment_time_threshold":"return if run time over threshold",
+        "timeThreshold":4500
+    },
+    "auxgainknee":{
+        "comment_rawISO":"rawISO = shortGain * 50.",
+        "isoKneeNum":11,
+        "isoKnee":[
+            100,200,400,800,1600,3200,6400,12800,19200,25600,51200
+        ],
+        "drcGainKneeNum":4,
+        "drcGainKnee":[
+            1,2,3,4
+        ],
+        "lumaKneeNum":4,
+        "lumaKnee":[
+            0.1,0.25,0.5,0.75
+        ],
+        "radialGainKneeNum":4,
+        "radialGainKnee":[
+            1.0,1.0,2.0,3.0
+        ]
+    },
+
+    "noiseProfile":
+    {
+        "a0": 0.0001598507,
+        "a1": 0.0000733172,
+        "b0": 0.0000000636,
+        "b1": 0.0000040131
+    },
+    "rawPreparaFunctionParam":{
+        "sbpcEnable":1
+    },
+    "ainr":{
+        "comment_ainrEnable":"1 - enable AINR, 0 - disable AINR.",
+        "ainrEnable":1,
+        "comment_blockEnable":"block parallel processing. 1 - enable, 0 - disable.",
+        "blockEnable":0,
+        "ainrCompansateEnable":0,
+        "ainrHighISOThreshold":"20000"
+    },
+    "aimodel":{
+        "0":{
+            "watermark_string":"AI_denoise",
+            "model_path":"GN5_ROI_HISO_MODEL.vdnn",
+            "comment_framework":"vdnn / qnn / hta/ eden / neuron",
+            "framework":"vdnn",
+            "comment_powerLevel":"100 / 90 / 80 / 70 / 60 / 50 / 40",
+            "powerLevel":80,
+            "comment_device":"3: qualcom/ 4: mtk",
+            "device":3,
+            "input_num":1,
+            "output_num":1,
+            "input_shape":[
+                1,2,1120,1120
+            ],
+            "output_shape":[
+                1,1,1120,1120
+            ],
+            "enable":0,
+            "comment_overlap_mode":"0: average, 1:linear ",
+            "overlap_mode":1,
+            "overlap_w":48,
+            "overlap_h":48,
+            "comment_patch_pad":"overlap region boudary part for cut, this region is inside overlap region",
+            "patch_pad_w":32,
+            "patch_pad_h":32,
+            "comment_manul_space2depth":"0: Pixel Unshuffle on CPU / 1: Pixel Unshuffle on NPU",
+            "manul_space2depth":0,
+            "comment_manul_depth2space":"0: Pixel Shuffle on CPU / 1: Pixel Shuffle on NPU",
+            "manul_depth2space":0
+        },
+        "1":{
+            "watermark_string":"AI_denoise",
+            "model_path":"GN5_ROI_HISO_MODEL.vdnn",
+            "comment_framework":"vdnn / qnn / hta/ eden / neuron",
+            "framework":"vdnn",
+            "comment_powerLevel":"100 / 90 / 80 / 70 / 60 / 50 / 40",
+            "powerLevel":80,
+            "comment_device":"3: qualcom/ 4: mtk",
+            "device":3,
+            "input_num":1,
+            "output_num":1,
+            "input_shape":[
+                1,2,1120,1120
+            ],
+            "output_shape":[
+                1,1,1120,1120
+            ],
+            "enable":0,
+            "comment_overlap_mode":"0: average, 1:linear ",
+            "overlap_mode":1,
+            "overlap_w":48,
+            "overlap_h":48,
+            "comment_patch_pad":"overlap region boudary part for cut, this region is inside overlap region",
+            "patch_pad_w":32,
+            "patch_pad_h":32,
+            "comment_manul_space2depth":"0: Pixel Unshuffle on CPU / 1: Pixel Unshuffle on NPU",
+            "manul_space2depth":0,
+            "comment_manul_depth2space":"0: Pixel Shuffle on CPU / 1: Pixel Shuffle on NPU",
+            "manul_depth2space":0
+        }
+    },
+    "aidenoise":{
+        "0":{
+            "input_min":0.0,
+            "input_max":1.0,
+            "output_min":-0.16019032895565033,
+            "output_max":0.2818472385406494,
+            "a0":0.0001598507,
+            "a1":0.0000733172,
+            "b0":0.0000000729,
+            "b1":-0.0000318957,
+            "b2":0.0259927047,
+            "scale":1,
+            "paddingSize":8,
+            "comment_use_fusionmap":"0:disble, 1:enable ",
+            "use_fusionmap":0,
+            "comment_use_mask":"0:disable, 1:enable ",
+            "use_mask":0,
+            "comment_use_blacklevel":"0: input_wto_blacklevel, 1: input_wt_blacklevel",
+            "use_blacklevel":1,
+            "comment_use_noisemap_blacklevel":"0: calibration value wto blacklevel, 1: wt blacklevel",
+            "use_noisemap_blacklevel":0,
+            "comment_use_noisemap_num":"map index lens should equal to the noisemap_num. noisemap num should less than 8",
+            "noisemap_num":1,
+            "map_index":[
+                0
+            ]
+        },
+        "1":{
+            "input_min":0.0,
+            "input_max":1.0,
+            "output_min":-0.16019032895565033,
+            "output_max":0.2818472385406494,
+            "a0":0.0001598507,
+            "a1":0.0000733172,
+            "b0":0.0000000729,
+            "b1":-0.0000318957,
+            "b2":0.0259927047,
+            "scale":1,
+            "paddingSize":8,
+            "comment_use_fusionmap":"0:disble, 1:enable ",
+            "use_fusionmap":0,
+            "comment_use_mask":"0:disable, 1:enable ",
+            "use_mask":0,
+            "comment_use_blacklevel":"0: input_wto_blacklevel, 1: input_wt_blacklevel",
+            "use_blacklevel":1,
+            "comment_use_noisemap_blacklevel":"0: calibration value wto blacklevel, 1: wt blacklevel",
+            "use_noisemap_blacklevel":0,
+            "comment_use_noisemap_num":"map index lens should equal to the noisemap_num. noisemap num should less than 8",
+            "noisemap_num":1,
+            "map_index":[
+                0
+            ]
+        }
+    },
+    "noiseestimation":{
+        "comment_noiseestimation_method":"0:bypass, 1:laplace band pass filter,2 noise profile",
+        "noiseestimationmethod":1,
+        "comment_pixel count threshold":"if pixel count < threshold, profile will be invalid",
+        "pixelcountthreshold":100,
+        "comment_noise_calculation_method":"0:ave, 1:percentage,2 ave only g channel, 3 percentage only g channel",
+        "noisecalculationmethod":1
+    },
+    "alignment":{
+        "comment_alignmethod":"0:opticalflow_method, 1:multi-H_method, 2:blockmatch+opticalflow_method, 3:homography_method, 4:pbm_method",
+        "alignmethod":0,
+        "comment_opticalflow_method":"0: farneback, 1:l1TV, 2:nti_dis, 3:l1_dis, 4:epic_flow, 5:eva",
+        "opticalflowmethod":2,
+        "comment_finestScale":"1 / finestScale is the begin scale for alignment ",
+        "finestScale":2,
+        "comment_global_alignment":"0:off, 1:on",
+        "globalAlignment":1,
+        "disflow":{
+            "comment_dis_finest_scale":"finest layer of pyramid in dis optical flow, suggest to be default",
+            "disfinestscale":0,
+            "comment_dis_patch_size":"patch size in inverse search, suggest to be default",
+            "dispatchsize":8,
+            "comment_dis_patch_stride":"patch stride in inverse search, suggest to be default",
+            "dispatchstride":4,
+            "comment_dis_gradient_descent_iterations":"iterations in inverse search processing",
+            "disiteration":24,
+            "disiterationLastLayer":[
+                3,3
+            ],
+            "comment_dis_variational_refinement_iterations":"refinement interations, suggest to be default",
+            "disrefinementiteration":0,
+            "comment_dis_use_spatial_propagation":"whether use spatial propagation in inverse search, 0:off, 1:on, suggest to be default",
+            "dispropagation":1
+        },
+        "evaflow":{
+            "init_config_actual_fps":30,
+            "init_config_operational_fps":30,
+            "init_config_am_fileter_config_conf_thresh":150,
+            "init_config_am_filter_config_step_size":0,
+            "init_config_am_filter_config_up_scale":0,
+            "init_config_am_filter_config_output_int_only":0,
+            "init_config_am_filter_config_output_format":0,
+            "init_config_conf_output_enable":1,
+            "init_config_slic_output_enable":1,
+            "init_config_mv_pack_format":1,
+            "init_config_of_direction":1,
+            "frame_config_hole_fill_enable":1,
+            "frame_config_am_filter_enable":1,
+            "frame_config_census_config_cur_noise_thresh_offset":0,
+            "frame_config_census_config_cur_noise_thresh_scale":0,
+            "frame_config_census_config_ref_noise_thresh_offset":0,
+            "frame_config_census_config_ref_noise_thresh_scale":0,
+            "frame_config_flatness_thresh":1,
+            "frame_config_p1_config_adap_enable":1,
+            "frame_config_p1_config_default_value":11,
+            "frame_config_p1_config_edge_value":10,
+            "frame_config_p1_config_smooth_value":22,
+            "frame_config_p1_config_edge_thresh":8,
+            "frame_config_p1_config_smooth_thresh":2,
+            "frame_config_p2_config_adap_enable":1,
+            "frame_config_p2_config_default_value":33,
+            "frame_config_p2_config_edge_value":22,
+            "frame_config_p2_config_smooth_value":63,
+            "frame_config_conf_weight_occlusion":8,
+            "frame_config_conf_weight_mv_variance":8,
+            "frame_config_conf_weight_ds_mv_variance":8,
+            "frame_config_conf_weight_flatness":8,
+            "frame_config_flatness_override":0,
+            "frame_config_ds_thresh":2,
+            "frame_config_mv_var_thresh":2,
+            "frame_config_hole_fill_config_high_conf_thresh":150,
+            "frame_config_hole_fill_config_fill_conf_thresh":180,
+            "frame_config_hole_fill_config_min_valid_pixels":1,
+            "frame_config_hole_fill_config_zero_override":0,
+            "frame_config_mv_cand_prun":0,
+            "frame_config_ds4_max_overwrite":0
+        },
+        "mismatch":{
+            "comment_mismatch":"using mismatch map to guide multi frame merge, 0:0ff, 1:on",
+            "mismatchEnable":1,
+            "comment_mismatchC":"ralated to noise level,range[0.1,5]",
+            "mismatchC":[
+                2,2,2,2,2,2,2,2,2,2,2
+            ],
+            "comment_mismatchMax":"range[0,1]",
+            "mismatchMax":[
+                0.8,0.8,0.8,0.8,0.8,0.8,0.8,0.8,0.8,0.8,0.8
+            ],
+            "comment_mismatchHR":"calculating mismatch map in the high resolution, 0:0ff, 1:on",
+            "mismatchHREnable":0,
+            "comment_mismatchHR_BlockSize":"the neighborhood block size when calculating mismatch map in the high resolution, odd number only",
+            "mismatchHRBlockSize":3
+        }
+    },
+    "fusion":{
+        "blocksize":16,
+        "comment_transformMethod":"0: dct, 1: wavlet_haar, 2: wavelet_db, 3: wavlet_haar_dislocation",
+        "transformMethod":3,
+        "comment_fusionMethod":"0: ave, 1: p-power, 2: wiener merge, 3: wiener merge ref dominate, 4: robust, 5: wiener p_power, 6: wiener merge dislocation",
+        "fusionMethod":6,
+        "comment_overlapsize":"int in [0, blocksize], 0: non-overlap, blocksize: overall overlap",
+        "overlapsize":4,
+        "comment_blockmvRefinement":" 0: round, 1: floor and ceil mv search, 2: corner mv search",
+        "blockmvRefinementMethod":2,
+        "comment_waveletLevels":"wavelet levels",
+        "waveletLevels":1,
+        "multiChannelEnable":1
+    }
+}

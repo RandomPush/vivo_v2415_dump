@@ -1,0 +1,41 @@
+on post-fs-data
+    exec - root -- /vendor/bin/bsc  bootevent post-fs-data
+
+on early-boot
+    exec - root -- /vendor/bin/bsc  bootevent early-boot
+    start set_sec_prop
+
+on boot
+    exec - root -- /vendor/bin/bsc  bootevent boot
+
+on property:sys.setsecprop_completed=1
+    exec - root -- /vendor/bin/bsc  bootevent boot script-done
+
+on property:sys.boot_completed=1
+    setprop ro.vendor.defend.boot_completed yes
+    exec - root -- /vendor/bin/bsc  bootevent boot-completed
+
+on property:sys.user.0.ce_available=true
+    exec - root -- /vendor/bin/bsc  bootevent boot-completed media-ready
+
+on property:sys.boot_completed=1 && property:sys.vivo.custverify_complete=1
+    exec - root -- /vendor/bin/bsc  bootevent boot-completed custverify-complete
+
+on property:sys.vivo.imi_complete=1
+    exec - root -- /vendor/bin/bsc  bootevent boot-completed imi-complete
+
+on property:sys.vivo.fbelog_complete=1
+    exec - root -- /vendor/bin/bsc  bootevent boot-completed fbelog-complete
+
+on property:ro.vendor.defend.bindids_status=success
+    exec - root -- /vendor/bin/bsc  bootevent boot-completed update_ids_success
+
+on property:ro.vendor.defend.bindids_status=failed
+    exec - root -- /vendor/bin/bsc  bootevent boot-completed update_ids_fail
+
+service set_sec_prop /vendor/bin/init.vivo.set_sec_prop.sh
+    class main
+    user root
+    group root
+    disabled
+    oneshot

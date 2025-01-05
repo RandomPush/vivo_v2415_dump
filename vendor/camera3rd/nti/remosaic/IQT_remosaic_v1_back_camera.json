@@ -1,0 +1,98 @@
+{
+    "version": {
+      "majorVersion": 1,
+      "minorVersion": 0,
+      "releaseVersion": 19,
+      "tuningVersion": 0
+    },
+
+    "debug":
+    {
+        "comment_debuglevel": "0:error/init, 1:key, 2:info, 3:debug",
+        "debuglevel": 3,
+
+        "comment_watermarker": "0:disable, >=1:enable",
+        "watermarkerEn": 0,
+        
+        "comment_bypass": "0:disable, >=1:enable",
+        "bypassEn": 0,
+        
+        "comment_dump": "0:disable, >=1:enable",
+        "dumpEn": 0
+    },
+    
+
+    "auxgainknee":
+    {
+        "isoKneeNum": 9,
+        "isoKnee": [50, 100, 200, 400, 800, 1600, 3200, 6400, 12800],
+
+        "drcGainKneeNum": 4,
+        "drcGainKnee": [1.0, 2.0, 3.0, 4.0],
+
+        "radialKneeNum": 4,
+        "radialGainKnee": [1.0, 1.0, 2.0, 3.0]
+    },
+
+
+  "remosaic": {
+    "comment_method": "0-cvRemosaic method, 1-aiRemosaic method",
+    "method": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+    "comment_fullProcEnable": "control the image full-size processing, not block-wise: 1-on,0-off",
+    "fullProcEnable": 0,
+    "comment_fcsEnable": "control the false color suppression: 1-on,0-off",
+    "fcsEnable": 1,
+    "comment_fcsAddNum": "intensity of suppressing the high frequency color false, range:[0,9]",
+    "fcsAddNum": 4,
+    "comment_cvReorder": "pseudo-bayer raw reorder to quad raw, 1-on, 0-off",
+    "cvReorder": 0,
+    "comment_sharpenAmount": "sharpen strength, range:[0,16]",
+    "sharpenAmount": 9,
+    "comment_gAvgEnable": "control the filter of green channel, 1-on, 0-off",
+    "gAvgEnable": 1,
+    "comment_satRatio": "ratio of the calculated saturation, range:[0,32]",
+    "satRatio": 7,
+    "comment_satThr": "threshold of the calculated saturation, range:[0,255]",
+    "satThr": 120,
+    "comment_demoiEnable": "control the demoire function, 1-on, 0-off",
+    "demoiEnable": 0,
+    "comment_demoiStrength": "Strength of the demoire function, range:[0,16]",
+    "demoiStrength": 2,
+    "comment_graColorDifStren": "Usage factor of color difference, range:[0,16]",
+    "graColorDifStren": 10,
+    "comment_graDisThr": "threshold of color difference, range:[0,255]",
+    "graDisThr": 50,
+    "comment_graSatThr": "threshold of the saturation for gradient judgment, range:[0,255]",
+    "graSatThr": 90,
+    "comment_gBfEnables": "control the inside de-mesh function, 1-on, 0-off",
+    "gBfEnables": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+    "comment_gBfStrens": "Strength of de-mesh, range:[0,16]",
+    "gBfStrens": [ 14, 14, 14, 14, 14, 14, 14, 14, 14 ],
+    "comment_gBfThrMin": "minimum threshold of de-mesh, range:[0,255]",
+    "gBfThrMin": 0,
+    "comment_gBfThrMax": "maximum threshold of de-mesh, range:[0,255]",
+    "gBfThrMax": 250,
+    "comment_gBfRatios": "threshold ratio of de-mesh, range:[0,255]",
+    "gBfRatios": [ 26, 26, 26, 26, 26, 26, 26, 26, 26 ],
+    "comment_gBfFusionThrs": "fusion threshold of dual-filter, range:[0,255]",
+    "gBfFusionThrs": [ 100, 100, 100, 100, 100, 100, 100, 100, 100 ],
+    "comment_gBfFusioStrens": "maximum ratio of larger filter, range:[0,128]",
+    "gBfFusioStrens": [ 128, 128, 128, 128, 128, 128, 128, 128, 128 ],
+    "comment_bpcEn": "control the inside bpc function, 1-on, 0-off",
+    "bpcEn": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+    "comment_bpcThrRatio": "threshold ratio of bpc, range:[0,255]",
+    "bpcThrRatio": 10,
+	
+    "model_path": "/vendor/camera3rd/nti/remosaic/unet_res43_xnet_sigmoid_relu_qnn3_f.bin",
+    "resi": 1,
+    "engine": 4,
+    "device": 4,
+    "inw": 1000,
+    "inh": 1000,
+    "aiReorder": 1,
+    "open_spaceTodepth": 1,
+    "open_blc": 1,
+    "dims": 4
+
+  }
+}

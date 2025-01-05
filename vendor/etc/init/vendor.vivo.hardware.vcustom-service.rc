@@ -1,0 +1,4 @@
+service vendor.vcustom_default /vendor/bin/hw/vendor.vivo.hardware.vcustom-service
+    class hal
+    user system
+    group system

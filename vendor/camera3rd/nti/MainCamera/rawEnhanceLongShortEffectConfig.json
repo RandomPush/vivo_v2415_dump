@@ -1,0 +1,26 @@
+{
+    "aimodeleffect": {
+        "0": {
+            "apply_priority": 0,
+            "apply_range_iso": [ 0, 100000 ],
+            "apply_range_luxidx": [ 0, 1000 ],
+            "apply_range_motion_level": [ 0, 5 ],
+            "comment_apply_scene": "0:unsupport, 1:support, scene array[ indoor, outdoor, common, close]",
+            "apply_scene": [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
+
+            "comment_blend_amount": "the weight to blend input, 0: means no blend, [0.0, 1.0]",
+            "blend_amount": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        }
+    },
+    "aidenoiseeffect":
+    {
+        "0":
+        {
+            "evScaleComment": "the weight of noise map estimate",
+            "evScale": [ 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+            "resScaleComment": "the weight of residule output",
+            "resScale": [ 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.98, 0.98],
+            "resDrcgainGamma": 0
+        }
+    }
+}

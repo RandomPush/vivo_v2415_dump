@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sw_selfcheck_items>
+	<command name = "lcm_cali_file">
+		<item type = "file" tag = "/mnt/vendor/persist/display/MTK_C3D_3DLUT.json" />
+	</command>
+</sw_selfcheck_items>

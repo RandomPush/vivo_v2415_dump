@@ -1,0 +1,17 @@
+{
+    "network_configs":  {
+        "modelNames": [ "airfh.vdnn", "airfv.vdnn" ],
+        "networkRuntime": "neuron",
+        "deviceType": 3,
+        "powerMode": 2,
+        "iNodeNames": ["DispMatteHairTensor", "ImageMatteHairTensor"],
+        "oNodeNames": ["conv2d_153"],
+        "inputScales": [ 0.00299812201410532, 0.00003051850580959581 ],
+        "outputScales": [ 0.001362627255730331 ],
+        "inputZeps": [ 0, 0 ],
+        "outputZeps": [ 0 ],
+        "imageBias": 0
+    }
+}
+
+

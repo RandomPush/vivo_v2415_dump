@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NiceLCAConfig version="0.0.1" name='Tele5XCamera'>
+    <!--vendor/camera3rd/nti/SceneSeg_QNN2_x.bin-->
+    <!--vendor/camera3rd/nti/allinone2_0_config.xml-->
+    <Mask>
+        <SegMetod description="segment method: 0, only high light; 1: allinone">1</SegMetod>
+        <SegModel use="1" inw="512" inh="512" num="1">sceneseg.vdnn</SegModel>
+        <AlgXMLModel>/vendor/camera3rd/nti/allinone2_0_config.xml</AlgXMLModel>
+        <DigitalZoomThred>1</DigitalZoomThred>
+        <IosMinThred>1</IosMinThred>
+        <IosMaxThred>1</IosMaxThred>
+        <FGValue>6</FGValue>
+        <HighGlossValue>0.95</HighGlossValue>
+        <!--FG:0, portrait:1, sky:2, ppt:3, building:4, water:5, plant:6, Floor:7-->
+        <SceneSegThred>1, 1, 1, 1, 1, 1, 1, 1</SceneSegThred>
+        <!--FG:0, portrait:1, sky:2, ppt:3, building:4, water:5, plant:6, Floor:7, Motion:8, Motion_Person:9, Face:10-->
+        <SceneSegValue>0, 1, 2, 3, 4, 5, 6, 7</SceneSegValue>
+        <DilateSize>10</DilateSize>
+    </Mask>
+</NiceLCAConfig>

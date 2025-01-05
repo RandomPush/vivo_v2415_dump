@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ddr_freq_options>
+
+	<write path="/sys/kernel/helio-dvfsrc/dvfsrc_force_vcore_dvfs_opp"/>
+	<opp path="/sys/kernel/helio-dvfsrc/dvfsrc_opp_table"/>
+	<read path="/sys/bus/platform/drivers/dramc_drv/dram_data_rate"   read_regex="(DRAM data rate = )(\d+)" regex_group="2"/>
+
+	<option name="opp0 7488Mbps"       write_value="0"       read_value="7488"/>
+	<option name="opp8 6370Mbps"       write_value="8"       read_value="6370"/>
+	<option name="opp14 5460Mbps"      write_value="14"      read_value="5460"/>
+	<option name="opp20 4212Mbps"      write_value="20"      read_value="4212"/>
+	<option name="opp30 3094Mbps"      write_value="30"      read_value="3094"/>
+	<option name="opp45 2067Mbps"      write_value="45"      read_value="2066"/>
+	<option name="opp66 1532Mbps"      write_value="66"      read_value="1534"/>
+	
+</ddr_freq_options>

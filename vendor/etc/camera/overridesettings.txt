@@ -1,0 +1,2 @@
+AECalibrationNum=2
+AECaliGoldenThreshold=25

@@ -1,0 +1,17 @@
+on init && property:ro.vendor.build.version.release=13
+    enable vgnss-hal-1-0
+
+on init && property:ro.vendor.build.version.release=12
+    enable vgnss-hal-1-0
+
+on init && property:ro.vendor.build.version.release=11
+    enable vgnss-hal-1-0
+
+on init && property:ro.vendor.build.version.release=10
+    enable vgnss-hal-1-0
+
+service vgnss-hal-1-0 /vendor/bin/hw/vendor.vivo.hardware.vgnss@1.0-service
+    disabled
+    class hal
+    user system
+    group system

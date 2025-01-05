@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ANGConfig version="1.0.1.0">
+    <!-- 0 luxIndex, 1 iso -->
+    <ThresholdType>1</ThresholdType>
+    <!-- max num of EffectConfig is 10 -->
+    <EffectConfig id="0" begUIZoom="0" endUIZoom="2">
+        <MaskRefine>
+            <BlurRaduis>5</BlurRaduis>
+            <ErodeRaduis>5</ErodeRaduis>
+            <Foreground>0</Foreground>
+            <Background>255</Background>
+        </MaskRefine>
+
+        <NoiseAddConfig threshold='0'>
+            <LumMask use='1'>
+                <LumCurveX>0 128 192 224 255</LumCurveX>
+                <LumCurveY>255 255 255 200 120</LumCurveY>
+            </LumMask>
+            <SkinMask use='1'>
+                <RefineRatio>1.0</RefineRatio>
+            </SkinMask>
+            <SkyMask use='1'>
+                <FilterThres>127</FilterThres>
+                <Strength>0</Strength>
+            </SkyMask>
+            <NoiseGenerator>
+                <Mu>0</Mu>
+                <Sigma>100</Sigma>
+                <Gaussa>0.20</Gaussa>
+                <Maskr>0.0 0.5</Maskr>
+            </NoiseGenerator>
+        </NoiseAddConfig>
+        <NoiseAddConfig threshold='3000'>
+            <LumMask use='1'>
+                <LumCurveX>0 128 192 224 255</LumCurveX>
+                <LumCurveY>255 255 255 200 120</LumCurveY>
+            </LumMask>
+            <SkinMask use='1'>
+                <RefineRatio>1.0</RefineRatio>
+            </SkinMask>
+            <SkyMask use='1'>
+                <FilterThres>127</FilterThres>
+                <Strength>0</Strength>
+            </SkyMask>
+            <NoiseGenerator>
+                <Mu>0</Mu>
+                <Sigma>100</Sigma>
+                <Gaussa>0.20</Gaussa>
+                <Maskr>0.0 0.5</Maskr>
+            </NoiseGenerator>
+        </NoiseAddConfig>
+        <NoiseAddConfig threshold='6000'>
+            <LumMask use='1'>
+                <LumCurveX>0 128 192 224 255</LumCurveX>
+                <LumCurveY>255 255 255 200 120</LumCurveY>
+            </LumMask>
+            <SkinMask use='1'>
+                <RefineRatio>1.0</RefineRatio>
+            </SkinMask>
+            <SkyMask use='1'>
+                <FilterThres>127</FilterThres>
+                <Strength>0</Strength>
+            </SkyMask>
+            <NoiseGenerator>
+                <Mu>0</Mu>
+                <Sigma>100</Sigma>
+                <Gaussa>0.3</Gaussa>
+                <Maskr>0.0 0.5</Maskr>
+            </NoiseGenerator>
+        </NoiseAddConfig>
+        <NoiseAddConfig threshold='10000'>
+            <LumMask use='1'>
+                <LumCurveX>0 128 192 224 255</LumCurveX>
+                <LumCurveY>255 255 255 200 120</LumCurveY>
+            </LumMask>
+            <SkinMask use='1'>
+                <RefineRatio>1.0</RefineRatio>
+            </SkinMask>
+            <SkyMask use='1'>
+                <FilterThres>127</FilterThres>
+                <Strength>0</Strength>
+            </SkyMask>
+            <NoiseGenerator>
+                <Mu>0</Mu>
+                <Sigma>100</Sigma>
+                <Gaussa>0.3</Gaussa>
+                <Maskr>0.0 0.5</Maskr>
+            </NoiseGenerator>
+        </NoiseAddConfig>
+    </EffectConfig>
+    <EffectConfig id="1" begUIZoom="2" endUIZoom="4">
+        <MaskRefine>
+            <BlurRaduis>5</BlurRaduis>
+            <ErodeRaduis>5</ErodeRaduis>
+            <Foreground>0</Foreground>
+            <Background>255</Background>
+        </MaskRefine>
+
+        <NoiseAddConfig threshold='0'>
+            <LumMask use='1'>
+                <LumCurveX>0 128 192 224 255</LumCurveX>
+                <LumCurveY>255 255 255 200 120</LumCurveY>
+            </LumMask>
+            <SkinMask use='1'>
+                <RefineRatio>1.0</RefineRatio>
+            </SkinMask>
+            <SkyMask use='1'>
+                <FilterThres>127</FilterThres>
+                <Strength>0</Strength>
+            </SkyMask>
+            <NoiseGenerator>
+                <Mu>0</Mu>
+                <Sigma>100</Sigma>
+                <Gaussa>0.20</Gaussa>
+                <Maskr>0.0 0.5</Maskr>
+            </NoiseGenerator>
+        </NoiseAddConfig>
+        <NoiseAddConfig threshold='3000'>
+            <LumMask use='1'>
+                <LumCurveX>0 128 192 224 255</LumCurveX>
+                <LumCurveY>255 255 255 200 120</LumCurveY>
+            </LumMask>
+            <SkinMask use='1'>
+                <RefineRatio>1.0</RefineRatio>
+            </SkinMask>
+            <SkyMask use='1'>
+                <FilterThres>127</FilterThres>
+                <Strength>0</Strength>
+            </SkyMask>
+            <NoiseGenerator>
+                <Mu>0</Mu>
+                <Sigma>100</Sigma>
+                <Gaussa>0.20</Gaussa>
+                <Maskr>0.0 0.5</Maskr>
+            </NoiseGenerator>
+        </NoiseAddConfig>
+        <NoiseAddConfig threshold='6000'>
+            <LumMask use='1'>
+                <LumCurveX>0 128 192 224 255</LumCurveX>
+                <LumCurveY>255 255 255 200 120</LumCurveY>
+            </LumMask>
+            <SkinMask use='1'>
+                <RefineRatio>1.0</RefineRatio>
+            </SkinMask>
+            <SkyMask use='1'>
+                <FilterThres>127</FilterThres>
+                <Strength>0</Strength>
+            </SkyMask>
+            <NoiseGenerator>
+                <Mu>0</Mu>
+                <Sigma>100</Sigma>
+                <Gaussa>0.3</Gaussa>
+                <Maskr>0.0 0.5</Maskr>
+            </NoiseGenerator>
+        </NoiseAddConfig>
+        <NoiseAddConfig threshold='10000'>
+            <LumMask use='1'>
+                <LumCurveX>0 128 192 224 255</LumCurveX>
+                <LumCurveY>255 255 255 200 120</LumCurveY>
+            </LumMask>
+            <SkinMask use='1'>
+                <RefineRatio>1.0</RefineRatio>
+            </SkinMask>
+            <SkyMask use='1'>
+                <FilterThres>127</FilterThres>
+                <Strength>0</Strength>
+            </SkyMask>
+            <NoiseGenerator>
+                <Mu>0</Mu>
+                <Sigma>100</Sigma>
+                <Gaussa>0.45</Gaussa>
+                <Maskr>0.0 0.5</Maskr>
+            </NoiseGenerator>
+        </NoiseAddConfig>
+    </EffectConfig>
+    <EffectConfig id="2" begUIZoom="4" endUIZoom="8">
+        <MaskRefine>
+            <BlurRaduis>5</BlurRaduis>
+            <ErodeRaduis>5</ErodeRaduis>
+            <Foreground>0</Foreground>
+            <Background>255</Background>
+        </MaskRefine>
+
+        <NoiseAddConfig threshold='0'>
+            <LumMask use='1'>
+                <LumCurveX>0 128 192 224 255</LumCurveX>
+                <LumCurveY>255 255 255 200 120</LumCurveY>
+            </LumMask>
+            <SkinMask use='1'>
+                <RefineRatio>1.0</RefineRatio>
+            </SkinMask>
+            <SkyMask use='1'>
+                <FilterThres>127</FilterThres>
+                <Strength>0</Strength>
+            </SkyMask>
+            <NoiseGenerator>
+                <Mu>0</Mu>
+                <Sigma>100</Sigma>
+                <Gaussa>0.35</Gaussa>
+                <Maskr>0.0 0.5</Maskr>
+            </NoiseGenerator>
+        </NoiseAddConfig>
+        <NoiseAddConfig threshold='3000'>
+            <LumMask use='1'>
+                <LumCurveX>0 128 192 224 255</LumCurveX>
+                <LumCurveY>255 255 255 200 120</LumCurveY>
+            </LumMask>
+            <SkinMask use='1'>
+                <RefineRatio>1.0</RefineRatio>
+            </SkinMask>
+            <SkyMask use='1'>
+                <FilterThres>127</FilterThres>
+                <Strength>0</Strength>
+            </SkyMask>
+            <NoiseGenerator>
+                <Mu>0</Mu>
+                <Sigma>100</Sigma>
+                <Gaussa>0.45</Gaussa>
+                <Maskr>0.0 0.5</Maskr>
+            </NoiseGenerator>
+        </NoiseAddConfig>
+        <NoiseAddConfig threshold='6000'>
+            <LumMask use='1'>
+                <LumCurveX>0 128 192 224 255</LumCurveX>
+                <LumCurveY>255 255 255 200 120</LumCurveY>
+            </LumMask>
+            <SkinMask use='1'>
+                <RefineRatio>1.0</RefineRatio>
+            </SkinMask>
+            <SkyMask use='1'>
+                <FilterThres>127</FilterThres>
+                <Strength>0</Strength>
+            </SkyMask>
+            <NoiseGenerator>
+                <Mu>0</Mu>
+                <Sigma>100</Sigma>
+                <Gaussa>0.50</Gaussa>
+                <Maskr>0.0 0.5</Maskr>
+            </NoiseGenerator>
+        </NoiseAddConfig>
+        <NoiseAddConfig threshold='10000'>
+            <LumMask use='1'>
+                <LumCurveX>0 128 192 224 255</LumCurveX>
+                <LumCurveY>255 255 255 200 120</LumCurveY>
+            </LumMask>
+            <SkinMask use='1'>
+                <RefineRatio>1.0</RefineRatio>
+            </SkinMask>
+            <SkyMask use='1'>
+                <FilterThres>127</FilterThres>
+                <Strength>0</Strength>
+            </SkyMask>
+            <NoiseGenerator>
+                <Mu>0</Mu>
+                <Sigma>100</Sigma>
+                <Gaussa>0.50</Gaussa>
+                <Maskr>0.0 0.5</Maskr>
+            </NoiseGenerator>
+        </NoiseAddConfig>
+    </EffectConfig>
+    <EffectConfig id="3" begUIZoom="8" endUIZoom="101">
+        <MaskRefine>
+            <BlurRaduis>5</BlurRaduis>
+            <ErodeRaduis>5</ErodeRaduis>
+            <Foreground>0</Foreground>
+            <Background>255</Background>
+        </MaskRefine>
+
+        <NoiseAddConfig threshold='0'>
+            <LumMask use='1'>
+                <LumCurveX>0 128 192 224 255</LumCurveX>
+                <LumCurveY>255 255 255 200 120</LumCurveY>
+            </LumMask>
+            <SkinMask use='1'>
+                <RefineRatio>1.0</RefineRatio>
+            </SkinMask>
+            <SkyMask use='1'>
+                <FilterThres>127</FilterThres>
+                <Strength>0</Strength>
+            </SkyMask>
+            <NoiseGenerator>
+                <Mu>0</Mu>
+                <Sigma>100</Sigma>
+                <Gaussa>0.35</Gaussa>
+                <Maskr>0.0 0.5</Maskr>
+            </NoiseGenerator>
+        </NoiseAddConfig>
+        <NoiseAddConfig threshold='3000'>
+            <LumMask use='1'>
+                <LumCurveX>0 128 192 224 255</LumCurveX>
+                <LumCurveY>255 255 255 200 120</LumCurveY>
+            </LumMask>
+            <SkinMask use='1'>
+                <RefineRatio>1.0</RefineRatio>
+            </SkinMask>
+            <SkyMask use='1'>
+                <FilterThres>127</FilterThres>
+                <Strength>0</Strength>
+            </SkyMask>
+            <NoiseGenerator>
+                <Mu>0</Mu>
+                <Sigma>100</Sigma>
+                <Gaussa>0.45</Gaussa>
+                <Maskr>0.0 0.5</Maskr>
+            </NoiseGenerator>
+        </NoiseAddConfig>
+        <NoiseAddConfig threshold='6000'>
+            <LumMask use='1'>
+                <LumCurveX>0 128 192 224 255</LumCurveX>
+                <LumCurveY>255 255 255 200 120</LumCurveY>
+            </LumMask>
+            <SkinMask use='1'>
+                <RefineRatio>1.0</RefineRatio>
+            </SkinMask>
+            <SkyMask use='1'>
+                <FilterThres>127</FilterThres>
+                <Strength>0</Strength>
+            </SkyMask>
+            <NoiseGenerator>
+                <Mu>0</Mu>
+                <Sigma>100</Sigma>
+                <Gaussa>0.5</Gaussa>
+                <Maskr>0.0 0.5</Maskr>
+            </NoiseGenerator>
+        </NoiseAddConfig>
+        <NoiseAddConfig threshold='10000'>
+            <LumMask use='1'>
+                <LumCurveX>0 128 192 224 255</LumCurveX>
+                <LumCurveY>255 255 255 200 120</LumCurveY>
+            </LumMask>
+            <SkinMask use='1'>
+                <RefineRatio>1.0</RefineRatio>
+            </SkinMask>
+            <SkyMask use='1'>
+                <FilterThres>127</FilterThres>
+                <Strength>0</Strength>
+            </SkyMask>
+            <NoiseGenerator>
+                <Mu>0</Mu>
+                <Sigma>100</Sigma>
+                <Gaussa>0.5</Gaussa>
+                <Maskr>0.0 0.5</Maskr>
+            </NoiseGenerator>
+        </NoiseAddConfig>
+    </EffectConfig>
+</ANGConfig>

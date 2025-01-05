@@ -1,0 +1,4 @@
+service vmediametrics-hal-service /vendor/bin/hw/vendor.vivo.hardware.vmediametrics-service
+    class hal
+    user system
+    group system

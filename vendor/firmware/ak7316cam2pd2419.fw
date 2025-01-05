@@ -1,0 +1,35 @@
+<actutor_name>ak7316cam2pd2419</actutor_name>
+<slave_addr>0xE8</slave_addr>
+<af_id_addr>0</af_id_addr>
+<af_id>0</af_id>
+<dac_reg_addr>0x00</dac_reg_addr>
+<data_shift_value>2</data_shift_value>
+<max_focus_pos>16383</max_focus_pos>
+<origin_focus_pos>0</origin_focus_pos>
+<move_steps>200</move_steps>
+<move_delay_us>5000</move_delay_us>
+<focus_step>1</focus_step>
+<hold_name>hold_actuator_tele</hold_name>
+<hold_dac_value>8191</hold_dac_value>
+<power_on_seq>VIO, 1000, 1800000, 1800000;VAF, 10000, 2800000, 2800000;</power_on_seq>
+<power_off_seq>VAF, 1000;VIO, 0;</power_off_seq>
+<active_reg_addr>0x02</active_reg_addr>
+<active_reg_val>0x00</active_reg_val>
+<active_setting>0x02, 0x40, 2710;0x02, 0x00, 500;0xAE, 0x3B, 0;0x09, 0x20, 0;0xAE, 0x00, 0;</active_setting>
+<standby_setting>0x02, 0x20, 1000;</standby_setting>
+<hall_reg_addr>0x84</hall_reg_addr>
+<softlanding_direction>REVERSE</softlanding_direction>
+<post_poweron_work>0</post_poweron_work>
+<boot_poweron>0</boot_poweron>
+<get_lens_hall>1</get_lens_hall>
+<set_sensormode>0</set_sensormode>
+<set_phone_pose>1</set_phone_pose>
+<set_ui_mode>1</set_ui_mode>
+<soft_landing>1</soft_landing>
+<poweroff_work>1</poweroff_work>
+<enable_standby>1</enable_standby>
+<standby_work>1</standby_work>
+<step_power_up>0</step_power_up>
+<max_power_up_step>0</max_power_up_step>
+<step_power_up_delay_us>0</step_power_up_delay_us>
+<enable_i2c_seq_lock>1</enable_i2c_seq_lock>

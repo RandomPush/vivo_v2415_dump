@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SceneSegConfig version="0.0.2">
+    <!--算法运行框架(集成勿改)-->
+    <FrameWork>NEURON</FrameWork>
+    <!--算法运行设备(集成勿改)0.cpu 1.gpu, 2.dsp, 3.npu-->
+    <Device>3</Device>
+	<!--模型路径-->
+	<ModelPath>/vendor/camera3rd/nti/sceneseg.vdnn</ModelPath>
+	<!--datatype: 1(int8), 2(u8), 3(int16), 4(u16), 5(int32), 6(u32), 7(f16), 8(f32), 9(hvx), 10(NHWC8_INT8)-->
+	<input_data_type>2</input_data_type>
+	<output_data_type>2</output_data_type>	
+</SceneSegConfig>

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sw_selfcheck_items>
+	<!-- 1、这里放工模保存的校准参数/文件 -->
+	<!-- 2、模块自己产生的校准文件放在模块的xml中，由模块自己维护 -->
+	<!-- sensor -->
+	<!-- TMF8801 -->
+	<command name = "TMF8801_crosstalk_cali">
+		<item type = "backup" tag = "cali_flag_crosstalk_TMF8801" />
+	</command>
+
+	<command name = "TMF8801_clock_cali">
+		<item type = "backup" tag = "cali_flag_clock_TMF8801" />
+	</command>
+
+	<!-- ps_cali high -->
+	<command name = "f_ps_high_cali">
+		<item type = "backup" tag = "ps_cali_data" />
+		<item type = "backup" tag = "ps_cali_flag" />
+		<item type = "backup" tag = "ps_cali_offset" />
+		<item type = "backup" tag = "ps_cali_offset_data" />
+	</command>
+	<!-- ps_cali low -->
+	<command name = "f_ps_low_cali">
+		<item type = "backup" tag = "ps_cali_data_low" />
+		<item type = "backup" tag = "ps_cali_data_short_low" />
+		<item type = "backup" tag = "ps_cali_flag_low" />
+	</command>
+	<!-- ps_cali high and low -->
+	<command name = "f_ps_high_and_low_cali">
+		<item type = "backup" tag = "ps_cali_data" />
+		<item type = "backup" tag = "ps_cali_data_short" />
+		<item type = "backup" tag = "ps_cali_flag" />
+		<item type = "backup" tag = "ps_cali_offset" />
+		<item type = "backup" tag = "ps_cali_offset_data" />
+		<item type = "backup" tag = "ps_cali_data_low" />
+		<item type = "backup" tag = "ps_cali_data_short_low" />
+		<item type = "backup" tag = "ps_cali_flag_low" />
+	</command>
+
+	<command name = "cct_cali">
+		<item type = "backup" tag = "cct_cali_flag" />
+	</command>
+
+	<command name = "ultra_far">
+		<item type = "backup" tag = "ultra_sound_flag" />
+		<item type = "backup" tag = "ultra_sound_nearfar" />
+	</command>
+
+	<command name = "light_sensor_cali">
+		<item type = "backup" tag = "als_cali_data" />
+		<item type = "backup" tag = "als_cali_flag" />
+		<item type = "backup" tag = "als_cali_ver" />
+	</command>
+
+	<command name = "cct_lux1_cali">
+		<item type = "backup" tag = "cct_data_lux1" />
+		<item type = "backup" tag = "cct_cali_data" />
+		<item type = "backup" tag = "cct_cali_flag" />
+	</command>
+	<command name = "cct_lux2_cali">
+		<item type = "backup" tag = "cct_data_lux2" />
+	</command>
+
+	<command name = "light_sensor_dark_screen_cali">
+		<item type = "backup" tag = "als_cali_data" />
+		<item type = "backup" tag = "als_cali_flag" />
+		<item type = "backup" tag = "als_cali_ver" />
+	</command>
+
+	<command name = "light_sensor_bright_screen_cali">
+		<item type = "backup" tag = "cct_data_lux1" />
+	</command>
+
+	<command name = "light_sensor_leak_cali">
+		<item type = "backup" tag = "light_sensor_leak_cali_factor_k1" />
+		<item type = "backup" tag = "light_sensor_leak_offset_value" />
+		<item type = "backup" tag = "light_sensor_leak_cali_flag" />
+	</command>
+
+	<command name = "light_sensor_dark_screen_main_left_cali">
+		<item type = "backup" tag = "als_cali_data_fold_c" />
+		<item type = "backup" tag = "als_cali_flag_fold_c" />
+		<item type = "backup" tag = "als_cali_ver" />
+	</command>
+
+	<command name = "light_sensor_bright_screen_main_left_cali">
+		<item type = "backup" tag = "cct_data_lux1_fold_c" />
+	</command>
+
+	<command name = "light_sensor_leak_main_left_cali">
+		<item type = "backup" tag = "light_sensor_leak_cali_factor_k1_fold_c" />
+		<item type = "backup" tag = "light_sensor_leak_offset_value_fold_c" />
+		<item type = "backup" tag = "light_sensor_leak_cali_flag_fold_c" />
+	</command>
+
+	<command name = "gyroscope_cali">
+		<item type = "backup" tag = "gyr_cali_dataX" />
+		<item type = "backup" tag = "gyr_cali_dataY" />
+		<item type = "backup" tag = "gyr_cali_dataZ" />
+		<item type = "backup" tag = "gyroscope_calibration_flag" />
+	</command>
+
+	<!-- gyrosensor -->
+	<command name = "gyrosensor_cali">
+		<item type = "backup" tag = "gs_cali_dataX" />
+		<item type = "backup" tag = "gs_cali_dataY" />
+		<item type = "backup" tag = "gs_cali_dataZ" />
+		<item type = "backup" tag = "gsensor_calibration_flag" />
+	</command>
+
+	<!-- gyrosensor_background -->
+	<command name = "gyrosensor_cali_bkgd">
+		<item type = "backup" tag = "gs_cali_dataX" />
+		<item type = "backup" tag = "gs_cali_dataY" />
+		<item type = "backup" tag = "gs_cali_dataZ" />
+		<item type = "backup" tag = "gsensor_calibration_flag" />
+	</command>
+
+	<!-- gyrosensor_ois -->
+	<command name = "gyrosensor_ois_cali">
+		<item type = "backup" tag = "gyr_ois_cali_dataX" />
+		<item type = "backup" tag = "gyr_ois_cali_dataY" />
+		<item type = "backup" tag = "gyr_ois_cali_dataZ" />
+		<item type = "backup" tag = "gyroscope_ois_calibration_flag" />
+	</command>
+	<!-- gyrosensor all -->
+	<command name = "gyrosensor_all_cali">
+		<item type = "backup" tag = "gs_cali_dataX" />
+		<item type = "backup" tag = "gs_cali_dataY" />
+		<item type = "backup" tag = "gs_cali_dataZ" />
+		<item type = "backup" tag = "gyr_ois_cali_dataX" />
+		<item type = "backup" tag = "gyr_ois_cali_dataY" />
+		<item type = "backup" tag = "gyr_ois_cali_dataZ" />
+		<item type = "backup" tag = "gsensor_calibration_flag" />
+		<item type = "backup" tag = "gyroscope_ois_calibration_flag" />
+	</command>
+
+	<!-- back cct cali -->
+	<command name = "back_cct_cali">
+		<item type = "backup" tag = "cct_cali_factor_c" />
+		<item type = "backup" tag = "cct_cali_factor_r" />
+		<item type = "backup" tag = "cct_cali_factor_g" />
+		<item type = "backup" tag = "cct_cali_factor_b" />
+		<item type = "backup" tag = "cct_cali_factor_w" />
+		<item type = "backup" tag = "cct_cali_flag" />
+	</command>
+	<!-- front cct cali -->
+	<command name = "front_cct_cali">
+		<item type = "backup" tag = "mscct_cali_factor_c" />
+		<item type = "backup" tag = "mscct_cali_factor_r" />
+		<item type = "backup" tag = "mscct_cali_factor_g" />
+		<item type = "backup" tag = "mscct_cali_factor_b" />
+		<item type = "backup" tag = "mscct_cali_factor_w" />
+		<item type = "backup" tag = "mscct_cali_flag" />
+	</command>
+
+	<!-- cct_cali_TSL2522  -->
+	<command name = "cct_cali_TSL2522">
+		<item type = "backup" tag = "mscct_cali_factor_r" />
+		<item type = "backup" tag = "mscct_cali_factor_g" />
+		<item type = "backup" tag = "mscct_cali_flag" />
+	</command>
+
+
+	<!-- back cct golden cali -->
+	<command name = "back_cct_golden_cali">
+		<item type = "backup" tag = "cct_metal_data_c" />
+		<item type = "backup" tag = "cct_metal_data_r" />
+		<item type = "backup" tag = "cct_metal_data_g" />
+		<item type = "backup" tag = "cct_metal_data_b" />
+		<item type = "backup" tag = "cct_metal_data_w" />
+		<item type = "backup" tag = "cct_metal_data_cct" />
+	</command>
+	<!-- front cct golden cali -->
+	<command name = "front_cct_golden_cali">
+		<item type = "backup" tag = "mscct_metal_data_c" />
+		<item type = "backup" tag = "mscct_metal_data_r" />
+		<item type = "backup" tag = "mscct_metal_data_g" />
+		<item type = "backup" tag = "mscct_metal_data_b" />
+		<item type = "backup" tag = "mscct_metal_data_w" />
+		<item type = "backup" tag = "mscct_metal_data_cct" />
+	</command>
+
+	<!-- back ps cali -->
+	<command name = "back_ps_cali">
+		<item type = "back_backup" tag = "ps_cali_data" />
+		<item type = "back_backup" tag = "ps_cali_data_short" />
+		<item type = "back_backup" tag = "ps_cali_flag" />
+		<item type = "back_backup" tag = "ps_cali_offset" />
+		<item type = "back_backup" tag = "ps_cali_offset_data" />
+	</command>
+
+	<!-- back cct cali -->
+	<command name = "back_cct_cali_flag">
+		<item type = "back_backup" tag = "cct_cali_flag" />
+	</command>
+
+	<!-- back light sensor cali -->
+	<command name = "back_light_sensor_cali">
+		<item type = "back_backup" tag = "als_cali_data" />
+		<item type = "back_backup" tag = "als_cali_flag" />
+		<item type = "back_backup" tag = "als_cali_ver" />
+	</command>
+
+	<!-- back cct lux1 cali -->
+	<command name = "back_cct_lux1_cali">
+		<item type = "back_backup" tag = "cct_data_lux1" />
+		<item type = "back_backup" tag = "cct_cali_data" />
+		<item type = "back_backup" tag = "cct_cali_flag" />
+	</command>
+
+	<!-- back cct lux2 cali -->
+	<command name = "back_cct_lux2_cali">
+		<item type = "back_backup" tag = "cct_data_lux2" />
+	</command>
+
+	<!-- back light sensor dark screen cali -->
+	<command name = "back_dark_screen_cali">
+		<item type = "back_backup" tag = "als_cali_data_back" />
+		<item type = "back_backup" tag = "als_cali_flag_back" />
+	</command>
+
+	<!-- back light sensor bright screen cali -->
+	<command name = "back_bright_screen_cali">
+		<item type = "back_backup" tag = "cct_data_lux1_back" />
+	</command>
+
+	<!-- back light sensor bright screen cali -->
+	<command name = "back_light_sensor_leak_cali">
+		<item type = "back_backup" tag = "light_sensor_leak_cali_factor_k1_back" />
+		<item type = "back_backup" tag = "light_sensor_leak_offset_value_back" />
+		<item type = "back_backup" tag = "light_sensor_leak_cali_flag_back" />
+	</command>
+
+	<!-- silence hall ic -->
+	<command name = "up_hall_ic_zero">
+		<item type = "backup" tag = "up_hall_test_singal_value_zero_angle" />
+	</command>
+	<command name = "up_hall_ic_flat">
+		<item type = "backup" tag = "up_hall_test_singal_value_flat_angle" />
+	</command>
+	<command name = "low_hall_ic_zero">
+		<item type = "backup" tag = "low_hall_test_singal_value_zero_angle" />
+	</command>
+	<command name = "low_hall_ic_flat">
+		<item type = "backup" tag = "low_hall_test_singal_value_flat_angle" />
+	</command>
+
+	<command name = "lcm_cali_main">
+		<item type = "backup" tag = "lcm_main_rgb" />
+	</command>
+
+	<command name = "lcm_cali_sub">
+		<item type = "backup" tag = "lcm_sub_rgb" />
+	</command>
+
+	<!-- 前置补光灯校准 -->
+	<command name = "f_flash_cali">
+		<item type = "backup" tag = "led2_result" />
+		<item type = "backup" tag = "led2_rg" />
+		<item type = "backup" tag = "led2_bg" />
+		<item type = "backup" tag = "led_result_curr_luma" />
+		<item type = "backup" tag = "led_result_exp_idx" />
+	</command>
+
+	<!-- 后置补光灯校准 -->
+	<command name = "b_flash_cali">
+		<item type = "backup" tag = "led_result" />
+		<item type = "backup" tag = "led_back_rg_bg" />
+		<item type = "backup" tag = "led1_rg" />
+		<item type = "backup" tag = "led1_bg" />
+	</command>
+
+	<!-- 摄像头霍尔传感器校准 -->
+	<command name = "camera_hall_cali_push_rotate">
+		<item type = "backup" tag = "hall_retract_cali_data" />
+	</command>
+	<command name = "camera_hall_cali_push">
+		<item type = "backup" tag = "ccm_hall1_push_cali_data" />
+		<item type = "backup" tag = "ccm_hall2_push_cali_data" />
+	</command>
+	<command name = "half_retract_fluency">
+		<item type = "backup" tag = "half_pop_hall_cali_data" />
+	</command>
+	<command name = "camera_hall_cali_pop_rotate">
+		<item type = "backup" tag = "hall_pop_cali_data" />
+	</command>
+	<command name = "camera_hall_cali_pop">
+		<item type = "backup" tag = "ccm_hall1_pop_cali_data" />
+		<item type = "backup" tag = "ccm_hall2_pop_cali_data" />
+	</command>
+	<command name = "half_pop_fluency">
+		<item type = "backup" tag = "half_pop_hall_cali_data" />
+	</command>
+
+	<command name = "rotate_max_angle_fluency">
+		<item type = "backup" tag = "rotary_camera_border_angle" />
+		<item type = "backup" tag = "rotary_camera_unreached_angle" />
+		<item type = "backup" tag = "rotary_camera_cali_deg0" />
+		<item type = "backup" tag = "rotary_camera_cali_deg180" />
+	</command>
+	<command name = "rotate_front_cam_angle_cali">
+		<item type = "backup" tag = "rotary_camera_cali_deg180" />
+	</command>
+	<command name = "rotate_back_cam_angle_cali">
+		<item type = "backup" tag = "rotary_camera_cali_deg0" />
+	</command>
+
+	<command name = "linear_motor_cali">
+		<item type = "backup" tag = "linear_motor_offset" />
+	</command>
+
+	<command name = "sys_theme_color">
+		<item type = "backup" tag = "theme_color" />
+	</command>
+
+	<command name = "show_device">
+		<item type = "backup" tag = "special_product" />
+	</command>
+
+	<command name = "clean_backup_cali_data">
+		<item type = "backup" tag = "ps_cali_flag" />
+		<item type = "backup" tag = "als_cali_flag" />
+		<item type = "backup" tag = "cct_cali_flag" />
+		<item type = "backup" tag = "mscct_cali_flag" />
+		<item type = "backup" tag = "gsensor_calibration_flag" />
+		<item type = "backup" tag = "gsensor_ois_calibration_flag" />
+		<item type = "backup" tag = "gyroscope_calibration_flag" />
+		<item type = "backup" tag = "gyroscope_ois_calibration_flag" />
+		<item type = "backup" tag = "ccm_hall1_pop_cali_data" />
+		<item type = "backup" tag = "ccm_hall1_push_cali_data" />
+		<item type = "backup" tag = "ccm_hall2_pop_cali_data" />
+		<item type = "backup" tag = "ccm_hall2_push_cali_data" />
+		<item type = "backup" tag = "up_hall_cali_value_flat_angle" />
+		<item type = "backup" tag = "low_hall_cali_value_flat_angle" />
+		<item type = "backup" tag = "silent_hall_cali_flag_flat_angle" />
+		<item type = "backup" tag = "up_hall_cali_value_zero_angle" />
+		<item type = "backup" tag = "low_hall_cali_value_zero_angle" />
+		<item type = "backup" tag = "silent_hall_cali_flag_zero_angle" />
+		<item type = "backup" tag = "angle_cali_90_degrees" />
+		<item type = "backup" tag = "angle_cali_90_degrees_flag" />
+		<item type = "backup" tag = "angle_cali_150_degrees" />
+		<item type = "backup" tag = "angle_cali_150_degrees_flag" />
+		<item type = "back_backup" tag = "als_cali_data_back" />
+		<item type = "backup" tag = "up_hall_test_singal_value_flat_angle" />
+		<item type = "backup" tag = "low_hall_test_singal_value_flat_angle" />
+		<item type = "backup" tag = "up_hall_test_singal_value_zero_angle" />
+		<item type = "backup" tag = "low_hall_test_singal_value_zero_angle" />
+		<item type = "backup" tag = "hall_switch_cali_val" />
+		<item type = "backup" tag = "hall_switch_cali_flag" />
+		<item type = "backup" tag = "cali_flag_clock_TMF8801" />
+		<item type = "backup" tag = "cali_flag_crosstalk_TMF8801" />
+	</command>
+
+	<command name = "software_selfcheck">
+		<item type = "file" tag = "/data/engineermode/.*$" ap = "system" value = "0" />
+		<item type = "file" tag = "/data/vivo-common/engineermode/.*$" ap = "system" value = "0" />
+		<item type = "file" tag = "/data/media/0/factory_log" ap = "system" value = "0" />
+		<item type = "file" tag = "/cache/recovery/last_self_check" ap = "system" value = "0" />
+		<item type = "file" tag = "/cache/recovery/last_PCB_*" ap = "system" value = "0" />
+	</command>
+</sw_selfcheck_items>

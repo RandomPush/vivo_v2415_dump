@@ -1,0 +1,85 @@
+<softpqeConfig>
+  <version>2023122717</version>
+  <processMode description="softpqe process mode, 0: run Y and UV, 1: run UV only">1</processMode>
+  <multiThreadMode description="Use multiple threads for Y/UV process">1</multiThreadMode>
+  <postSharpeningFuntion description="Enable/Disable post sharpening funtions">
+      <enableUsm description="Enable/Disable USM">1</enableUsm>
+      <enableSharpen description="Enable/Disable sharpen">1</enableSharpen>
+      <enablePartialSharpen description="Enable/Disable partial sharpen via mask">0</enablePartialSharpen>
+  </postSharpeningFuntion>
+  <autoDetectUvDownScale description="Detect the down scale of UV model automatically">1</autoDetectUvDownScale>
+  <autoUvDownScaleConfig description="[Internal use] The down scale level of UV model when autoDetectUvDownScale is 1">3,3,3,6</autoUvDownScaleConfig>
+  <dumpDataMode description="softpqe dump data mode, 0: dump input/output yuv/png, 1: dump input/output yuv only">1</dumpDataMode>
+  <enableSuperResolution description="Enable/Disable super resolution (Y model), 0: disable, 1: output ori size, 2: output scale size">0</enableSuperResolution>
+  <defaultAlgoConfig description="The file name of default config">softpqe_configs_master_1x.xml</defaultAlgoConfig>
+  <totalSatNum>4</totalSatNum>
+  <!-- 
+      satRole: 
+      1: ultra wide
+      2: master
+      3: tele
+      4: vr
+      5: tele5x
+      6: tele2_5x
+      7: aux main
+      8: tele3x
+      9: tele3_5x
+      10: tele4x
+  -->
+  <satConfigData>
+    <satRole description="camera type">8</satRole>
+    <quad description="quad type, 0: normal, 1: sat quad, 2: roi quad">2</quad>
+    <algoConfig1x description="The file name of 1x config">softpqe_configs_tele_roi_quad.xml</algoConfig1x>
+  </satConfigData>
+  <satConfigData>
+    <satRole description="camera type">10</satRole>
+    <quad description="quad type, 0: normal, 1: sat quad, 2: roi quad">2</quad>
+    <algoConfig1x description="The file name of 1x config">softpqe_configs_tele_roi_quad.xml</algoConfig1x>
+  </satConfigData>
+  <satConfigData>
+    <satRole description="camera type">8</satRole>
+    <quad description="quad type, 0: normal, 1: sat quad, 2: roi quad">0</quad>
+    <algoConfig1x description="The file name of 1x config">softpqe_configs_tele_binning.xml</algoConfig1x>
+  </satConfigData>
+  <satConfigData>
+    <satRole description="camera type">10</satRole>
+    <quad description="quad type, 0: normal, 1: sat quad, 2: roi quad">0</quad>
+    <algoConfig1x description="The file name of 1x config">softpqe_configs_tele_binning.xml</algoConfig1x>
+  </satConfigData>
+  <disableSoftpqeCondition>
+    <totalNum>2</totalNum>
+    <condition>
+      <cameraSatRole description="camera type">1</cameraSatRole>
+    </condition>
+    <condition>
+      <cameraSatRole>2</cameraSatRole>
+      <isoFrom>0</isoFrom>
+      <isoTo>1600</isoTo>
+    </condition>
+  </disableSoftpqeCondition>
+  <!--
+    condition sample
+    <condition>
+          <cameraSatRole>2</cameraSatRole>
+          <quad>0</quad>
+          <digitialZoomRatioFrom>1.0</digitialZoomRatioFrom>
+          <digitialZoomRatioTo>1.5</digitialZoomRatioTo>
+          <isoFrom>50</isoFrom>
+          <isoTo>400</isoTo>
+      </condition>
+  -->
+  <!--
+  <enableSoftpqeCondition>
+      <totalNum>3</totalNum>
+      <condition>
+          <digitialZoomRatioFrom>1.5</digitialZoomRatioFrom>
+      </condition>
+      <condition>
+          <quad>1</quad>
+      </condition>
+      <condition>
+          <isoFrom>6400</isoFrom>
+      </condition>
+  </enableSoftpqeCondition>
+  -->
+</softpqeConfig>

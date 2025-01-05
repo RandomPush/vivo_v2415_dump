@@ -1,0 +1,44 @@
+﻿{
+    "config": [
+        {
+            "mode":"Analogbypass",
+            "Enable": true,
+            "Resolution": "1080x2400,1440x3200",
+            "SweepVoltage": "30,36,45",
+            "TestLoops": 1,
+            "Note": "Analogbypass测试: 指定分辨率条件下,配置不同Core电压进行测试，测试结果需要人工判断并记录画面异常发生的时间点"
+        },
+        {
+            "mode":"Display2_MEMC_SDR2HDR",
+            "Enable": true,
+            "Resolution": "1080x2400,1440x3200",
+            "FrameRate30to60": true,
+            "FrameRate45to90": true,
+            "FrameRate60to120": true,
+            "SweepVoltage": "30,36,45",
+            "TestLoops": 1,
+            "Note":"Display2_MEMC_SDR2HDR测试: 指定分辨率条件下遍历各Frame Rate规格测试，每个Frame Rate配置不同Core电压进行测试，测试结果需要人工判断并记录画面异常发生的时间点"
+        },
+        {
+            "mode":"Display1_SDR2HDR",
+            "Enable": true,
+            "Resolution": "1080x2400,1440x3200",
+            "FrameRate60": true,
+            "FrameRate90": true,
+            "FrameRate120": true,
+            "SweepVoltage": "30,36,45",
+            "TestLoops": 1,
+            "Note":"Display1_SDR2HDR测试: 指定分辨率条件下遍历各Frame Rate规格测试，每个Frame Rate配置不同Core电压进行测试，测试结果需要人工判断并记录画面异常发生的时间点"
+        },
+        {
+            "mode":"ISP2Pass",
+            "Enable": false,
+            "NightMode": "1,2",
+            "FrameRate24": true,
+            "FrameRate30": true,
+            "SweepVoltage": "30,36,45",
+            "TestLoops": 3,
+            "Note":"Display1_SDR2HDR测试: 指定模式下遍历各Frame Rate规格测试，每个Frame Rate配置不同Core电压进行测试，测试结果自动判定，返回Pass or Fail"
+        }
+    ]
+}

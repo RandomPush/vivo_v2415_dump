@@ -1,0 +1,92 @@
+# 2024-4-15:vivo chenjianzhong add for factory
+
+import /system/etc/init/vendor.factory.hardware.vivoatcmd@1.0-service.rc
+import /vendor/etc/init/vendor.factory.hardware.vivoem@1.0-service.rc
+import /system/etc/init/vendor.factory.hardware.vivoatcmd-service.rc
+import /vendor/etc/init/vendor.factory.hardware.vivoem-service.rc
+import /vendor/etc/init/vendor.vivo.hardware.bspservice@1.0-service.rc
+import /vendor/etc/init/vtsthp.rc
+import /vendor/etc/init/vts_app.rc
+import /vendor/etc/init/mtk_storageproxyd.rc
+import /vendor/etc/init/ise_apploader.rc
+
+on late-fs
+    load_vivo_custom_props
+    start vivoatcmd-hal-1-0
+    start vivoem-hal-1-0
+
+on post-fs && property:ro.virtual_ab.enabled=true
+    mkdir /logdata/recovery 0770 system cache
+    chown system cache /logdata
+    chmod 0770 /logdata
+    restorecon_recursive /logdata
+    mkdir /logdata/cryptfs 0770 system cache
+    mkdir /logdata/recovery 0770 system cache
+    mkdir /logdata/recovery/update_engine_log 0770 system cache
+    # vivo lizhijiao add for engineermode in v-ab
+    mkdir /logdata/recovery/engineer 0774
+    mkdir /logdata/recovery/engineer/recovery 0774
+    chown system cache /logdata/recovery/engineer
+    chown system cache /logdata/recovery/engineer/recovery
+    restorecon /logdata/recovery/engineer
+    chmod /cache/recovery 0774
+    chown system cache /cache/recovery
+    restorecon /cache/recovery
+    #vivo xushiming add for mobile_log_d read begin
+    chown root system /dev/kmsg
+    chmod 0664 /dev/kmsg
+    #vivo xushiming add for mobile_log_d read end
+
+service atcid-daemon /factory/bin/atcid_factory
+    user root
+    group radio system cache audio
+
+service atcid-user /vendor/bin/atcid_user
+	class core
+	user root
+	group radio system cache root
+
+service vivo_em_svr /vendor/bin/vivo_em_svr
+	class core
+	user root
+	group system cache
+	oneshot
+
+on property:vendor.vivo.factory_mount=1
+    mount ext4 /dev/block/by-name/factory /factory ro barrier=1 discard
+
+on property:sys.factory.atmode=1
+    start  atcid-daemon
+    stop   atcid-user
+
+service atcid_vendor_init /vendor/bin/atcid_vendor -init
+    class late_start
+    user root
+    group system
+    oneshot
+
+service atcid_vendor_socket /vendor/bin/atcid_vendor -socket
+    socket atcid_vendor_socket stream 660 radio system
+    class core
+    user root
+    group system cache
+
+service factory_logcat /system/bin/atcid_common -log
+	user root
+	group system cache
+	disabled
+	oneshot
+
+on property:sys.factory.log=1 && property:ro.vivo.disable.vusbd=0
+    start factory_logcat
+    stop adbd
+    start vusbd
+
+on property:sys.factory.log=1 && property:ro.vivo.disable.vusbd=1
+    start factory_logcat
+
+service vusbd /system/bin/vusbd --root_seclabel=u:r:su:s0
+    class core
+    socket adbd seqpacket 660 system system
+    disabled
+    seclabel u:r:adbd:s0

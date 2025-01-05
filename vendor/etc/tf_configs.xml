@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tf_config>
+	<tf_path project="default" platform = "" path="/sys/devices/virtual/mmc_debugfs/mmc/sd_status"/>
+</tf_config>

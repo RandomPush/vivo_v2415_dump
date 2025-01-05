@@ -1,0 +1,34 @@
+<actutor_name>aw8601cam2pd2426</actutor_name>
+<slave_addr>0x18</slave_addr>
+<af_id_addr>0</af_id_addr>
+<af_id>0</af_id>
+<dac_reg_addr>0x03</dac_reg_addr>
+<data_shift_value>0</data_shift_value>
+<max_focus_pos>1023</max_focus_pos>
+<origin_focus_pos>0</origin_focus_pos>
+<move_steps>100</move_steps>
+<move_delay_us>5000</move_delay_us>
+<focus_step>1</focus_step>
+<hold_name></hold_name>
+<hold_dac_value>511</hold_dac_value>
+<power_on_seq>VIO, 1000, 1800000, 1800000;VDIG, 1000, 1000000, 1000000;VANA, 1000, 0, 0;VAF, 2000, 2800000, 2800000;</power_on_seq>
+<power_off_seq>VAF, 2000;VANA, 2000;VDIG, 1000;VIO, 1000;</power_off_seq>
+<active_reg_addr>0x02</active_reg_addr>
+<active_reg_val>0x02</active_reg_val>
+<active_setting>0x02, 0x01, 100;0x02, 0x02, 0;0x06, 0x40, 0;0x07, 0x78, 1000;</active_setting>
+<standby_setting>0x02, 0x01, 0;0x06, 0x00, 1000;</standby_setting>
+<hall_reg_addr>0x84</hall_reg_addr>
+<softlanding_direction>NORMAL</softlanding_direction>
+<post_poweron_work>0</post_poweron_work>
+<boot_poweron>0</boot_poweron>
+<get_lens_hall>1</get_lens_hall>
+<set_sensormode>0</set_sensormode>
+<set_phone_pose>0</set_phone_pose>
+<set_ui_mode>0</set_ui_mode>
+<soft_landing>0</soft_landing>
+<poweroff_work>1</poweroff_work>
+<enable_standby>1</enable_standby>
+<standby_work>0</standby_work>
+<step_power_up>0</step_power_up>
+<max_power_up_step>0</max_power_up_step>
+<step_power_up_delay_us>0</step_power_up_delay_us>

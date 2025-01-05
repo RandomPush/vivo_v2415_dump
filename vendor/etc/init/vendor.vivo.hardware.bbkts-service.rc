@@ -1,0 +1,4 @@
+service vivo-bbkts-aidl_hal /vendor/bin/hw/vendor.vivo.hardware.bbkts-service
+	class hal
+	user system
+	group system

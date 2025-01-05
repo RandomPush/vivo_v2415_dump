@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+id由EIS类型+模式组成
+EIS类型） 
+	01：前置人像EIS
+	02: 微距主体EIS
+模式）
+	01：普通模式
+	02：超级模式
+
+20231117
+ -->
+<settings>
+    <parameters id="0201">
+    	<cameraNum>3</cameraNum>
+    	<cameraIndex>2 3 4</cameraIndex>
+		<gyro>
+		   <gyro_x0>0</gyro_x0>
+		   <gyro_x1>-1</gyro_x1>
+		   <gyro_y0>-1</gyro_y0>
+		   <gyro_y1>0</gyro_y1>
+		   <gyro_z0>-1</gyro_z0>
+		   <gyro_z1>0</gyro_z1>
+		</gyro>
+        <ImgStabIntensity>75</ImgStabIntensity>
+		<SupportAcc>1</SupportAcc>
+		<imuCheck>
+		   <panThreshold>3.0</panThreshold>
+		   <panEnterTime>10</panEnterTime>
+		   <panExitTime>10</panExitTime>
+		   <tripodEnterTime>30</tripodEnterTime>
+		   <tripodExitTime>10</tripodExitTime>
+		   <shakeEnterTime>10</shakeEnterTime>
+		   <shakeExitTime>10</shakeExitTime>
+		   <gyroTripodThr>100</gyroTripodThr>
+		   <gyroStableThr>1000</gyroStableThr>
+		   <gyroShakeThr>60000</gyroShakeThr>
+		   <covw>0.1</covw>
+		   <cova>0.01</cova>
+		</imuCheck>		
+		<camera2>
+		   <baseOutPutSzie>1440</baseOutPutSzie>
+		   <baseRatio>2.0</baseRatio>
+		   <upZoomRatio>2.0</upZoomRatio>
+           <focalLength>2281.98</focalLength>
+           <gyro_delay>2350985</gyro_delay>
+
+		   <oisDataTpye>2</oisDataTpye>
+		   <ois_x0>0.0</ois_x0>
+		   <ois_x1>1.0</ois_x1>
+		   <ois_y0>-1.0</ois_y0>
+		   <ois_y1>0.0</ois_y1>
+		   <ois_z0>0.0</ois_z0>
+		   <ois_z1>0.0</ois_z1>
+           <ois_delay>-2708457</ois_delay>
+		   
+		   <limitX>0.020</limitX>
+           <limitY>0.025</limitY>
+           <limitZ>0.02</limitZ>
+
+		   <O_W0>0</O_W0>
+		   <S_W1>0</S_W1>
+		   <M_W2>0</M_W2>
+	       <C_W3>0</C_W3>
+
+           <HeadO_1>0</HeadO_1>
+		   <HeadO_2>0</HeadO_2>
+		   <Adjust_W0>0</Adjust_W0>
+		   <Adjust_W1>0</Adjust_W1>
+		   <Adjust_W2>0</Adjust_W2>
+		   <Adjust_W3>0</Adjust_W3>
+		</camera2>
+		
+		<camera3>
+		   <ImgStabIntensity>50</ImgStabIntensity>
+		   <baseOutPutSzie>1440</baseOutPutSzie>
+		   <baseRatio>3.0</baseRatio>
+		   <upZoomRatio>10.0</upZoomRatio>
+		   <ROIzoomratio>6.0</ROIzoomratio>
+		   <ROIscale>1.25</ROIscale>
+		   
+           <focalLength>3266.52</focalLength>
+           <gyro_delay>2416156</gyro_delay>
+
+		   <oisDataTpye>2</oisDataTpye>
+		   <ois_x0>0.0</ois_x0>
+		   <ois_x1>0.99</ois_x1>
+		   <ois_y0>-0.99</ois_y0>
+		   <ois_y1>0.00</ois_y1>
+		   <ois_z0>-0.99</ois_z0>
+		   <ois_z1>-0.0</ois_z1>
+           <ois_delay>-2242146</ois_delay>
+		   
+		   <limitX>0.011</limitX>
+           <limitY>0.015</limitY>
+           <limitZ>0.015</limitZ>
+
+		   <O_W0>0</O_W0>
+		   <S_W1>0</S_W1>
+		   <M_W2>0</M_W2>
+	       <C_W3>0</C_W3>
+
+           <HeadO_1>0</HeadO_1>
+		   <HeadO_2>0</HeadO_2>
+		   <Adjust_W0>0</Adjust_W0>
+		   <Adjust_W1>0</Adjust_W1>
+		   <Adjust_W2>0</Adjust_W2>
+		   <Adjust_W3>0</Adjust_W3>
+		</camera3>
+		
+		<camera4>
+		   <baseOutPutSzie>1440</baseOutPutSzie>
+		   <baseRatio>1.0</baseRatio>
+		   <upZoomRatio>1.0</upZoomRatio>
+           <focalLength>1145.27</focalLength>
+           <gyro_delay>2862986</gyro_delay>
+
+		   <oisDataTpye>0</oisDataTpye>
+		   <ois_x0>-0.00</ois_x0>
+		   <ois_x1>0.0</ois_x1>
+		   <ois_y0>-0.0</ois_y0>
+		   <ois_y1>0.0</ois_y1>
+		   <ois_z0>0.0</ois_z0>
+		   <ois_z1>0.0</ois_z1>
+           <ois_delay>1000000</ois_delay>
+		   
+		   <limitX>0.045</limitX>
+           <limitY>0.045</limitY>
+           <limitZ>0.025</limitZ>
+
+		   <O_W0>0</O_W0>
+		   <S_W1>0</S_W1>
+		   <M_W2>0</M_W2>
+	       <C_W3>0</C_W3>
+
+           <HeadO_1>0</HeadO_1>
+		   <HeadO_2>0</HeadO_2>
+		   <Adjust_W0>0</Adjust_W0>
+		   <Adjust_W1>0</Adjust_W1>
+		   <Adjust_W2>0</Adjust_W2>
+		   <Adjust_W3>0</Adjust_W3>
+		</camera4>
+		
+	</parameters>
+	
+  <parameters id="0101">
+        <cameraNum>1</cameraNum>
+    	<cameraIndex>0</cameraIndex>
+		<gyro>
+		   <gyro_x0>0</gyro_x0>
+		   <gyro_x1>1</gyro_x1>
+		   <gyro_y0>-1</gyro_y0>
+		   <gyro_y1>0</gyro_y1>
+		   <gyro_z0>1</gyro_z0>
+		   <gyro_z1>0</gyro_z1>
+		</gyro>
+		
+		<imuCheck>
+		   <panThreshold>3.0</panThreshold>
+		   <panEnterTime>10</panEnterTime>
+		   <panExitTime>10</panExitTime>
+		   <tripodEnterTime>30</tripodEnterTime>
+		   <tripodExitTime>10</tripodExitTime>
+		   <shakeEnterTime>10</shakeEnterTime>
+		   <shakeExitTime>10</shakeExitTime>
+		   <gyroTripodThr>100</gyroTripodThr>
+		   <gyroStableThr>1000</gyroStableThr>
+		   <gyroShakeThr>60000</gyroShakeThr>
+		   <covw>0.1</covw>
+		   <cova>0.01</cova>
+		</imuCheck>
+		
+		<camera0>
+		   <baseOutPutSzie>1920</baseOutPutSzie>
+		   <baseRatio>0.8</baseRatio>
+		   <upZoomRatio>1.25</upZoomRatio>
+           <focalLength>1040</focalLength>
+           <gyro_delay>8000000</gyro_delay>
+		   
+		   <limitX>0.02</limitX>
+           <limitY>0.03</limitY>
+           <limitZ>0.03</limitZ>
+
+		   <O_W0>25</O_W0>
+		   <S_W1>500</S_W1>
+		   <M_W2>250</M_W2>
+	       <C_W3>50</C_W3>
+
+           <HeadO_1>1</HeadO_1>
+		   <HeadO_2>10</HeadO_2>
+		   <Adjust_W0>50</Adjust_W0>
+		   <Adjust_W1>150</Adjust_W1>
+		   <Adjust_W2>0</Adjust_W2>
+		   <Adjust_W3>0.0005</Adjust_W3>
+		</camera0>
+		
+	</parameters>
+
+
+
+  <parameters id="010101">
+        <comments>"hdr_mode"</comments>
+        <cameraNum>1</cameraNum>
+    	<cameraIndex>0</cameraIndex>
+		<gyro>
+		   <gyro_x0>0</gyro_x0>
+		   <gyro_x1>1</gyro_x1>
+		   <gyro_y0>-1</gyro_y0>
+		   <gyro_y1>0</gyro_y1>
+		   <gyro_z0>1</gyro_z0>
+		   <gyro_z1>0</gyro_z1>
+		</gyro>
+		
+		<imuCheck>
+		   <panThreshold>3.0</panThreshold>
+		   <panEnterTime>10</panEnterTime>
+		   <panExitTime>10</panExitTime>
+		   <tripodEnterTime>30</tripodEnterTime>
+		   <tripodExitTime>10</tripodExitTime>
+		   <shakeEnterTime>10</shakeEnterTime>
+		   <shakeExitTime>10</shakeExitTime>
+		   <gyroTripodThr>100</gyroTripodThr>
+		   <gyroStableThr>1000</gyroStableThr>
+		   <gyroShakeThr>60000</gyroShakeThr>
+		   <covw>0.1</covw>
+		   <cova>0.01</cova>
+		</imuCheck>
+		
+		<camera0>
+		   <baseOutPutSzie>1920</baseOutPutSzie>
+		   <baseRatio>0.8</baseRatio>
+		   <upZoomRatio>1.25</upZoomRatio>
+           <focalLength>1040</focalLength>
+           <gyro_delay>-8000000</gyro_delay>
+		   
+		   <limitX>0.02</limitX>
+           <limitY>0.04</limitY>
+           <limitZ>0.03</limitZ>
+
+		   <O_W0>25</O_W0>
+		   <S_W1>500</S_W1>
+		   <M_W2>250</M_W2>
+	       <C_W3>50</C_W3>
+
+           <HeadO_1>1</HeadO_1>
+		   <HeadO_2>10</HeadO_2>
+		   <Adjust_W0>50</Adjust_W0>
+		   <Adjust_W1>100</Adjust_W1>
+		   <Adjust_W2>0</Adjust_W2>
+		   <Adjust_W3>0.0005</Adjust_W3>
+		</camera0>
+		
+	</parameters>
+
+
+
+  <parameters id="010103">
+        <comments>"60fps"</comments>
+        <cameraNum>1</cameraNum>
+    	<cameraIndex>0</cameraIndex>
+		<gyro>
+		   <gyro_x0>0</gyro_x0>
+		   <gyro_x1>1</gyro_x1>
+		   <gyro_y0>-1</gyro_y0>
+		   <gyro_y1>0</gyro_y1>
+		   <gyro_z0>1</gyro_z0>
+		   <gyro_z1>0</gyro_z1>
+		</gyro>
+		
+		<imuCheck>
+		   <panThreshold>3.0</panThreshold>
+		   <panEnterTime>10</panEnterTime>
+		   <panExitTime>10</panExitTime>
+		   <tripodEnterTime>30</tripodEnterTime>
+		   <tripodExitTime>10</tripodExitTime>
+		   <shakeEnterTime>10</shakeEnterTime>
+		   <shakeExitTime>10</shakeExitTime>
+		   <gyroTripodThr>100</gyroTripodThr>
+		   <gyroStableThr>1000</gyroStableThr>
+		   <gyroShakeThr>60000</gyroShakeThr>
+		   <covw>0.1</covw>
+		   <cova>0.01</cova>
+		</imuCheck>
+		
+		<camera0>
+		   <baseOutPutSzie>1920</baseOutPutSzie>
+		   <baseRatio>0.8</baseRatio>
+		   <upZoomRatio>1.25</upZoomRatio>
+           <focalLength>1040</focalLength>
+           <gyro_delay>8000000</gyro_delay>
+		   
+		   <limitX>0.02</limitX>
+           <limitY>0.04</limitY>
+           <limitZ>0.03</limitZ>
+
+		   <O_W0>5</O_W0>
+		   <S_W1>500</S_W1>
+		   <M_W2>350</M_W2>
+	       <C_W3>50</C_W3>
+
+           <HeadO_1>1</HeadO_1>
+		   <HeadO_2>10</HeadO_2>
+		   <Adjust_W0>25</Adjust_W0>
+		   <Adjust_W1>50</Adjust_W1>
+		   <Adjust_W2>0</Adjust_W2>
+		   <Adjust_W3>0.0005</Adjust_W3>
+		</camera0>
+		
+	</parameters>
+
+    <parameters id="0102">
+        <cameraNum>1</cameraNum>
+    	<cameraIndex>0</cameraIndex>
+		<gyro>
+		   <gyro_x0>0</gyro_x0>
+		   <gyro_x1>1</gyro_x1>
+		   <gyro_y0>-1</gyro_y0>
+		   <gyro_y1>0</gyro_y1>
+		   <gyro_z0>1</gyro_z0>
+		   <gyro_z1>0</gyro_z1>
+		</gyro>
+		
+		<imuCheck>
+		   <panThreshold>3.0</panThreshold>
+		   <panEnterTime>10</panEnterTime>
+		   <panExitTime>10</panExitTime>
+		   <tripodEnterTime>30</tripodEnterTime>
+		   <tripodExitTime>10</tripodExitTime>
+		   <shakeEnterTime>10</shakeEnterTime>
+		   <shakeExitTime>10</shakeExitTime>
+		   <gyroTripodThr>100</gyroTripodThr>
+		   <gyroStableThr>1000</gyroStableThr>
+		   <gyroShakeThr>60000</gyroShakeThr>
+		   <covw>0.1</covw>
+		   <cova>0.01</cova>
+		</imuCheck>
+		
+		<camera0>
+		   <baseOutPutSzie>1920</baseOutPutSzie>
+		   <baseRatio>0.8</baseRatio>
+		   <upZoomRatio>1.25</upZoomRatio>
+           <focalLength>1140</focalLength>
+           <gyro_delay>8000000</gyro_delay>
+		   
+		   <limitX>0.07</limitX>
+           <limitY>0.09</limitY>
+           <limitZ>0.05</limitZ>
+
+		   <O_W0>25</O_W0>
+		   <S_W1>500</S_W1>
+		   <M_W2>100</M_W2>
+	       <C_W3>50</C_W3>
+
+           <HeadO_1>1</HeadO_1>
+		   <HeadO_2>10</HeadO_2>
+		   <Adjust_W0>20</Adjust_W0>
+		   <Adjust_W1>50</Adjust_W1>
+		   <Adjust_W2>0</Adjust_W2>
+		   <Adjust_W3>0.0005</Adjust_W3>
+		</camera0>
+		
+	</parameters>
+
+    <parameters id="010201">
+        <cameraNum>1</cameraNum>
+    	<cameraIndex>0</cameraIndex>
+		<gyro> 
+		   <gyro_x0>0</gyro_x0>
+		   <gyro_x1>1</gyro_x1>
+		   <gyro_y0>-1</gyro_y0>
+		   <gyro_y1>0</gyro_y1>
+		   <gyro_z0>1</gyro_z0>
+		   <gyro_z1>0</gyro_z1>
+		</gyro>
+		
+		<imuCheck>
+		   <panThreshold>3.0</panThreshold>
+		   <panEnterTime>10</panEnterTime>
+		   <panExitTime>10</panExitTime>
+		   <tripodEnterTime>30</tripodEnterTime>
+		   <tripodExitTime>10</tripodExitTime>
+		   <shakeEnterTime>10</shakeEnterTime>
+		   <shakeExitTime>10</shakeExitTime>
+		   <gyroTripodThr>100</gyroTripodThr>
+		   <gyroStableThr>1000</gyroStableThr>
+		   <gyroShakeThr>60000</gyroShakeThr>
+		   <covw>0.1</covw>
+		   <cova>0.01</cova>
+		</imuCheck>
+		
+		<camera0>
+		   <baseOutPutSzie>1920</baseOutPutSzie>
+		   <baseRatio>0.8</baseRatio>
+		   <upZoomRatio>1.25</upZoomRatio>
+           <focalLength>1040</focalLength>
+           <gyro_delay>-8000000</gyro_delay>
+		   
+		   <limitX>0.06</limitX>
+           <limitY>0.10</limitY>
+           <limitZ>0.05</limitZ>
+
+		   <O_W0>25</O_W0>
+		   <S_W1>500</S_W1>
+		   <M_W2>100</M_W2>
+	       <C_W3>50</C_W3>
+
+           <HeadO_1>1</HeadO_1>
+		   <HeadO_2>10</HeadO_2>
+		   <Adjust_W0>20</Adjust_W0>
+		   <Adjust_W1>50</Adjust_W1>
+		   <Adjust_W2>0</Adjust_W2>
+		   <Adjust_W3>0.0005</Adjust_W3>
+		</camera0>
+		
+	</parameters>
+		<parameters id="0301">
+        <cameraNum>2</cameraNum>
+    	<cameraIndex>2 4</cameraIndex>
+		<gyro>
+		   <gyro_x0>0</gyro_x0>
+		   <gyro_x1>1</gyro_x1>
+		   <gyro_y0>-1</gyro_y0>
+		   <gyro_y1>0</gyro_y1>
+		   <gyro_z0>1</gyro_z0>
+		   <gyro_z1>0</gyro_z1>
+		</gyro>
+		
+		<camera2>
+		   <note>main</note>
+		   
+		   <imuCheck>
+			   <panThreshold>0.1</panThreshold>
+			   <panEnterTime>30</panEnterTime>
+			   <panExitTime>10</panExitTime>
+			   <tripodEnterTime>30</tripodEnterTime>
+			   <tripodExitTime>10</tripodExitTime>
+			   <shakeEnterTime>10</shakeEnterTime>
+			   <shakeExitTime>10</shakeExitTime>
+			   <gyroTripodThr>100</gyroTripodThr>
+			   <gyroStableThr>1000</gyroStableThr>
+			   <gyroShakeThr>60000</gyroShakeThr>
+			   <covw>0.1</covw>
+			   <cova>0.01</cova>
+		   </imuCheck>
+		   <blur_threshold_std>20.0</blur_threshold_std>   
+           <buffer>10</buffer>		   
+		   
+		   
+           <focalLength>1637</focalLength>
+           <gyro_delay>0</gyro_delay>
+		   <oisDataTpye>1</oisDataTpye>
+		   <ois_x0>-0.000</ois_x0>
+		   <ois_x1>0.0</ois_x1>
+		   <ois_y0>-0.0</ois_y0>
+		   <ois_y1>-0</ois_y1>
+		   <ois_z0>0.0</ois_z0>
+		   <ois_z1>0.0</ois_z1>
+		   <ois_delay>0</ois_delay>	
+		   
+		</camera2>
+
+		<camera4>
+		   <note>wide</note>
+		   
+		   <imuCheck>
+			   <panThreshold>3.0</panThreshold>
+			   <panEnterTime>10</panEnterTime>
+			   <panExitTime>10</panExitTime>
+			   <tripodEnterTime>30</tripodEnterTime>
+			   <tripodExitTime>10</tripodExitTime>
+			   <shakeEnterTime>10</shakeEnterTime>
+			   <shakeExitTime>10</shakeExitTime>
+			   <gyroTripodThr>100</gyroTripodThr>
+			   <gyroStableThr>1000</gyroStableThr>
+			   <gyroShakeThr>60000</gyroShakeThr>
+			   <covw>0.1</covw>
+			   <cova>0.01</cova>
+		   </imuCheck>
+		   
+		   <blur_threshold_std>5.0</blur_threshold_std>   
+           <buffer>10</buffer>
+		  
+           <focalLength>1652</focalLength>
+           <gyro_delay>0</gyro_delay>
+		   <oisDataTpye>0</oisDataTpye>
+		   <ois_x0>-0.000</ois_x0>
+		   <ois_x1>0.0</ois_x1>
+		   <ois_y0>-0.0</ois_y0>
+		   <ois_y1>-0</ois_y1>
+		   <ois_z0>0.0</ois_z0>
+		   <ois_z1>0.0</ois_z1>
+		   <ois_delay>0</ois_delay>	
+	
+		</camera4>
+	</parameters>
+</settings>

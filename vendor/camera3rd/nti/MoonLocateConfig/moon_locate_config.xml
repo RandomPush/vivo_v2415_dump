@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MoonLocateConfig version="2.0.0">
+    <!-- for landscope moon locate on normal-exposed frame. used in landscope-moon preview and capture scene. -->
+    <ModelConfig use="1" nid="2" engine="7" device="0" power="0" netsize="512" thread="1" range="0">
+        <ModelPath>moondet_quant16.vdnn</ModelPath>
+        <InputNode>input</InputNode>
+        <OutputNode>yolo-v3_pred_1_act_quant_FakeQuantWithMinMaxVars yolo-v3_pred_2_act_quant_FakeQuantWithMinMaxVars yolo-v3_pred_3_act_quant_FakeQuantWithMinMaxVars</OutputNode>
+    </ModelConfig>
+
+    <EffectConfig>
+        <RunConditions>
+            <UIZoom min="0.6" max="35.0"></UIZoom>
+            <ISOVal min="0" max="256000"></ISOVal>
+        </RunConditions>
+    </EffectConfig>
+</MoonLocateConfig>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HandSegConfig version="0.0.1">
+
+	<DetModel>
+		<networkRuntime>neuron</networkRuntime>
+		<deviceType>3</deviceType>
+		<modelPath>/vendor/camera3rd/nti/hand_det.vdnn</modelPath>
+		<Scale>0.29946622252464294</Scale>
+		<ZeroPoint>81</ZeroPoint>
+		<iNodeNames>
+			<item>input</item>
+		</iNodeNames>
+        <oNodeNames>
+			<item>concat</item>
+		</oNodeNames>
+		
+	</DetModel>
+
+	<SegModel>
+		<networkRuntime>neuron</networkRuntime>
+		<deviceType>3</deviceType>
+		<modelPath>/vendor/camera3rd/nti/hand_seg.vdnn</modelPath>
+		<iNodeNames>
+			<item>input_0</item>
+		</iNodeNames>
+        <oNodeNames>
+			<item>sigmoid_179</item>
+			<item>conv2d_179</item>
+		</oNodeNames>
+	</SegModel>
+
+	<HumanDilateSize>0</HumanDilateSize>
+
+	<RegionThres>25</RegionThres>
+
+	<HandMaskColor>10</HandMaskColor>
+
+	<!-- 日志等级 0.FATAL 4.Debug -->
+	<DebugLevel>4</DebugLevel>
+
+</HandSegConfig>

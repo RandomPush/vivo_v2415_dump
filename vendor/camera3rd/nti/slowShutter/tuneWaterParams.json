@@ -1,0 +1,16 @@
+{
+    "SlowShutter": {
+        "MergeHdrMode": 1,
+        "MaxAlignUIZoomRatio": "1000.000",
+        "Enable_PW_HLC": true,
+        "PWCTL": {
+            "Slope": "6.000",
+            "Threshold": "0.150"
+        },
+        "PWIQA": {
+            "Enable_PWIQA": false,
+            "PWIQA_F": "0.400",
+            "PWIQA_T": "2.000"
+        }
+    }
+}

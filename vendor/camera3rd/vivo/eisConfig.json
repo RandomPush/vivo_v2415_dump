@@ -1,0 +1,316 @@
+{
+	"modeNum": 26,
+
+	"mode0": {
+		"latency": 40,
+		"crop_factor": 0.8,
+		"width_margin": 0.75,
+		"height_margin": 0.675,
+		"modeindex": 0,
+		"useFullFov": 0,
+		"fovc": 1,
+		"description": "normal eis 1080P 30FPS"
+	},
+	"mode1": {
+		"latency": 60,
+		"crop_factor": 0.75,
+		"modeindex": 1,
+		"useFullFov": 0,
+		"fovc": 1,
+		"description": "normal eis 1080P 60FPS"
+	},
+	"mode2": {
+		"latency": 40,
+		"crop_factor": 0.8,
+		"width_margin": 0.75,
+		"height_margin": 0.675,
+		"modeindex": 2,
+		"useFullFov": 0,
+		"fovc": 1,
+		"description": "normal eis 4K 30FPS"
+	},
+	"mode3": {
+		"latency": 60,
+		"crop_factor": 0.75,
+		"modeindex": 3,
+		"useFullFov": 0,
+		"fovc": 1,
+		"description": "normal eis 4K 60FPS"
+	},
+	"mode4": {
+		"latency": 40,
+		"crop_factor": 0.8,
+		"modeindex": 4,
+		"useFullFov": 0,
+		"fovc": 1,
+		"description": "normal eis wide"
+	},
+	"mode5": {
+		"latency": 40,
+		"crop_factor": 0.7,
+		"width_margin": 0.6,
+		"height_margin": 0.45,
+		"modeindex": 5,
+		"useFullFov": 0,
+		"fovc": 0,
+		"superEIS": 1,
+		"description": "super eis 30"
+	},
+	"mode6": {
+		"latency": 0,
+		"crop_factor": 1.0,
+		"modeindex": 6,
+		"useFullFov": 0,
+		"fovc": 0,
+		"superEIS": 0,
+		"bypassRatio": 10,
+        "algoType": 3,
+		"description": "photoMode open eis in 10x"
+	},
+	"mode7": {
+		"latency": 7,
+		"crop_factor": 0.8,
+		"width_margin": 0.8,
+		"height_margin": 0.72,
+		"modeindex": 7,
+		"useFullFov": 0,
+		"fovc": 0,
+		"hc_enable": 0,
+		"description": "front Super portrait eis"
+	},
+	"mode8": {
+		"latency": 20,
+		"crop_factor": 0.5,
+		"modeindex": 8,
+		"useFullFov": 0,
+		"fovc": 1,
+		"hc_enable": 1,
+		"description": "skyline eis 30"
+	},
+	"mode9": {
+		"latency": 20,
+		"crop_factor": 0.5,
+		"modeindex": 9,
+		"useFullFov": 0,
+		"fovc": 1,
+		"hc_enable": 1,
+		"description": "skyline eis 24"
+	},
+	"mode10": {
+		"latency": 40,
+		"crop_factor": 0.75,
+		"width_margin": 0.75,
+		"height_margin": 0.675,
+		"modeindex": 11,
+		"useFullFov": 0,
+		"fovc": 1,
+		"description": "night eis 24/30FPS"
+	},
+	"mode11": {
+		"latency": 60,
+		"crop_factor": 0.5,
+		"modeindex": 11,
+		"useFullFov": 1,
+		"fovc": 1,
+		"hc_enable": 1,
+		"description": "skyline eis 60"
+	},
+	"mode12": {
+		"latency": 40,
+		"crop_factor": 0.5,
+		"modeindex": 12,
+		"useFullFov": 1,
+		"fovc": 1,
+		"hc_enable": 1,
+		"description": "skyline eis 30"
+	},
+	"mode13": {
+		"latency": 40,
+		"crop_factor": 0.8,
+		"modeindex": 13,
+		"useFullFov": 1,
+		"fovc": 1,
+		"hc_enable": 1,
+		"description": "skyline eis 30"
+	},
+	"mode14": {
+		"latency": 40,
+		"crop_factor": 0.8,
+		"modeindex": 14,
+		"useFullFov": 1,
+		"fovc": 1,
+		"hc_enable": 1,
+		"description": "skyline eis 30"
+	},
+	"mode15": {
+		"latency": 7,
+		"crop_factor": 0.95,
+		"width_margin": 0.95,
+		"height_margin": 0.855,
+		"modeindex": 15,
+		"useFullFov": 0,
+		"fovc": 0,
+		"hc_enable": 0,
+		"description": "portrait eis 30"
+	},
+	"mode16": {
+		"latency": 40,
+		"crop_factor": 0.8,
+		"width_margin": 0.75,
+		"height_margin": 0.675,
+		"modeindex": 16,
+		"useFullFov": 0,
+		"fovc": 1,
+		"description": "beautyFace eis 30"
+	},
+	"mode17": {
+		"latency": 40,
+		"crop_factor": 0.8,
+		"width_margin": 0.9,
+		"height_margin": 0.81,
+		"modeindex": 17,
+		"useFullFov": 0,
+		"fovc": 1,
+		"description": "timeDelay eis 720/1080P"
+	},
+	"mode18": {
+		"latency": 40,
+		"crop_factor": 0.8,
+		"modeindex": 18,
+		"useFullFov": 0,
+		"fovc": 1,
+		"description": "night eis 24/30FPS(UI)"
+	},
+	"mode19": {
+		"latency": 0,
+		"crop_factor": 0.9,
+		"width_margin": 1,
+		"height_margin": 1,
+		"inner_ratio":0.1,
+		"modeindex": 19,
+		"upInnerRatio": 1.5,
+		"start_upZoomRatio": 5,
+		"useFullFov": 0,
+		"description": "object eis preview"
+	},
+	"mode20": {
+		"latency": 13,
+		"crop_factor": 0.95,
+		"width_margin": 0.95,
+		"height_margin": 0.95,
+		"modeindex": 20,
+		"useFullFov": 0,
+		"fovc": 1,
+		"description": "portrait eis 60"
+	},
+	"mode21": {
+		"latency": 40,
+		"crop_factor": 0.8,
+		"width_margin": 0.8,
+		"height_margin": 0.8,
+		"modeindex": 21,
+		"useFullFov": 0,
+		"fovc": 1,
+		"description": "movie portrait"
+	},
+	"mode22": {
+		"latency": 7,
+		"crop_factor": 0.8,
+		"width_margin": 0.8,
+		"height_margin": 0.8,
+		"modeindex": 22,
+		"useFullFov": 0,
+		"fovc": 0,
+		"description": "front Super portrait eis and hdr"
+	},
+	"mode23": {
+		"latency": 60,
+		"crop_factor": 0.7,
+		"width_margin": 0.6,
+		"height_margin": 0.45,
+		"modeindex": 23,
+		"useFullFov": 0,
+		"fovc": 0,
+		"superEIS": 1,
+		"description": "super eis 60"
+	},
+	"mode24": {
+		"latency": 40,
+		"crop_factor": 0.8,
+		"width_margin": 0.75,
+		"height_margin": 0.675,
+		"modeindex": 0,
+		"useFullFov": 0,
+		"fovc": 1,
+		"useImage": 1,
+		"description": "stage video"
+	},
+	"mode25": {
+		"latency": 7,
+		"crop_factor": 0.95,
+		"width_margin": 0.95,
+		"height_margin": 0.95,
+		"modeindex": 24,
+		"useFullFov": 0,
+		"fovc": 0,
+		"superEIS": 0,
+		"description": "movie portrait for front"
+	},
+	"dynamicDeblur": 1,
+
+	"cameraNum": 5,
+
+	"comments": "oisType 0:none 1:LENS_SHIFT 2:SENSOR_SHIFT 3:LENS_TILT 4:MODULE_TILT",
+
+	"camera0": {
+		"cameraid": 2,
+		"oisType": 1,
+		"icCount": 1000,
+		"binning": 1,
+		"smoothlevel": 14,
+		"smoothexp": 30,
+		"baseRatio": 1.0,
+		"basefovFactor": 0.953,
+		"description": "wide with LENS_SHIFT"
+	},
+	"camera1": {
+		"cameraid": 3,
+		"oisType": 3,
+		"icCount": 62.5,
+		"binning": 1,
+		"smoothlevel": 0,
+		"smoothexp": 100,
+		"baseRatio": 4.3,
+		"description": "2x with MODULE_TILT"
+	},
+	"camera2": {
+		"cameraid": 4,
+		"oisType": 0,
+		"icCount": 0,
+		"binning": 1,
+		"smoothlevel": 30,
+		"smoothexp": 20,
+		"baseRatio": 0.6,
+		"description": "ultra wide with no OIS"
+	},
+	"camera3": {
+		"cameraid": 5,
+		"oisType": 0,
+		"icCount": 1000,
+		"binning": 0,
+		"smoothlevel": 0,
+		"smoothexp": 100,
+		"baseRatio": 5.0,
+		"description": "5x with LENS_TILT"
+	},
+	"camera4": {
+		"cameraid": 1,
+		"oisType": 0,
+		"binning": 0,
+		"smoothlevel": 0,
+		"smoothexp": 100,
+		"baseRatio": 1.0,
+		"description": "front with no OIS"
+ 	}
+
+}

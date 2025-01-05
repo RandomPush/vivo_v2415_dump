@@ -1,0 +1,68 @@
+{
+    "version":6,
+    "debugEn":0,
+    "funcConfig":{
+        "comment_min_af_depth_gap_thr":"[DepthMapTab Gap] min threshold ",
+        "min_af_depth_gap_thr":55,
+        "comment_min_af_depth_thr_obj_dist_thr":"[ObjDist] min_af_depth_gap_thr dist threshold (mm)",
+        "min_af_depth_thr_obj_dist_thr":260,
+
+        "comment_min_obj_dist":"Min Obj Dist Value",
+        "min_obj_dist_thr":100,
+        "min_obj_dist_depth_scale":5.0,
+        "min_obj_dist_af_depth_gap_thr":130,
+
+        "comment_max_obj_dist":"Max Obj Dist Value",
+        "max_obj_dist_thr":500, 
+        "max_obj_dist_depth_scale":4.5,
+        
+        "comment_confidence_rate_thr":"Confifence Matrix Rate",
+        "confidence_rate_thr":0.05,
+
+        "comment_light_ctrl_type":"0:Passby, 1:ISO, 2:Lux",
+        "light_ctrl_type":2,
+        "threshold_overflow_rate":1.05,
+
+        "comment_weaken_iso":"Weaken ISO/lux Value",
+        "weaken_iso_value_thr":3000,
+        "weaken_lux_value_thr":320,
+        "weaken_light_confidence_value_thr":500,
+
+        "comment_max_iso":"Max ISO/lux Value",
+        "max_iso_value_thr":4000,
+        "max_lux_value_thr":360,
+        "max_light_confidence_value_thr":400,
+
+        "Comment_defocus_matrix":"Matrix Info",
+        "defocus_matrix_skip_cnt":1,
+        "defocus_matrix_max_width":16,
+        "defocus_matrix_min_heigth":14,
+        
+        "comment_smooth_type":"0: PassBy,1:mean,2:median",
+        "smooth_type":0,
+
+        "comment_chk_en":"Func Enable Switch",
+        "aiscene_chk_en":0,
+        "aiscene_doc_type":[1,2,3],
+        "motion_chk_en":0,
+        "motion_chk_thr":1
+    },
+    "depthMapTableName":"depthMapTable_989",
+    "depthMapTable_989":
+    {
+        "minTab":{
+            "a":0,
+            "b":-0.0706215179,
+            "c":1.00425553,
+            "d":0.000216019403
+        },
+        "maxTab":{
+            "a":0,
+            "b":0.0822482829,
+            "c":0.997411863,
+            "d":0.000787661301
+        }
+    }
+
+
+}

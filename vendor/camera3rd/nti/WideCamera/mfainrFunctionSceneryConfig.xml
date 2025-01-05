@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MfainrFunctionConfig version="1.4.916">
+    <Framework>neuron</Framework>
+
+    <!-- 4c标定相关参数 -->
+    <a0 R="6.950411764705e-07" G1="6.950411764705e-07" G2="6.950411764705e-07" B="6.950411764705e-07">1</a0>
+    <a1 R="1.052721568627e-06" G1="1.052721568627e-06" G2="1.052721568627e-06" B="1.052721568627e-06">1</a1>
+    <b0 R="8.735101883890e-13" G1="8.735101883890e-13" G2="8.735101883890e-13" B="8.735101883890e-13">1</b0>
+    <b1 R="1.557839292579e-09" G1="1.557839292579e-09" G2="1.557839292579e-09" B="1.557839292579e-09">1</b1>
+    <b2 R="3.833120799692e-08" G1="3.833120799692e-08" G2="3.833120799692e-08" B="3.833120799692e-08">1</b2>
+
+    <!-- 网络相关参数 -->
+    <!-- npu功耗模式设置 -->
+    <!-- NET_RUN_PERFORMANCE_MODE = 1,         // high power mode from open -> forward -> close -->
+    <!-- NET_RUN_ENERGYSAVEING_MODE = 2,       // low power mode from open -> forward -> close -->
+    <!-- NET_RUN_MINOR_PERFORMANCE_MODE = 3,   // minor power mode from open -> forward -> close -->
+    <!-- NET_RESIDENT_ALGO_POWER_MODE = 5,     // After the end of open, forward and close, low power consumption will be set -->
+    <NpuPowerLevel>100</NpuPowerLevel>
+    <PaddingDelta>48</PaddingDelta>
+    <MaxDelete>0</MaxDelete>
+
+    <!-- 颜色矫正相关参数 -->
+    <ChannelMeanISOThres>100</ChannelMeanISOThres>
+    <ColorThres>8000</ColorThres>
+
+    <!-- 配准工作位置参数 -->
+    <MatchInPreprocess>1</MatchInPreprocess>
+    <MatchSizeExpand>6</MatchSizeExpand>
+    <!-- 0: rawnr配准模式 -->
+    <!-- 5: DIS配准模式 -->
+    <!-- 6: Auto配准模式, 根据Lux阈值选择 RawNR(低) or DIS(高) -->
+    <MatchMode>6</MatchMode>
+    <MatchRawNRModeFillBorderType>1</MatchRawNRModeFillBorderType>
+    <MatchAutoModeLuxThreshold>550</MatchAutoModeLuxThreshold>
+    <InputBlend>0</InputBlend>
+    <OutputBlend>0</OutputBlend>
+
+    <!-- 分模型逻辑 -->
+    <!-- 根据iso = again*dgain*50来进行区分 -->
+    <!-- 根据静止运动确认最终模型-->
+    <ModelInfo>
+        <ISOStart>0</ISOStart>
+        <ISOEnd>5000</ISOEnd>
+        <ExpTimeStart>0</ExpTimeStart>
+        <ExpTimeEnd>10000</ExpTimeEnd>
+        <OBAdder>0</OBAdder>
+        <SkyThres>0</SkyThres>
+        <skyRatio>0.15</skyRatio>
+        <StaticModel>
+            <ModelName>PD2405_mfainr_wide_v328.vdnn</ModelName>
+            <FrameNum>8</FrameNum>
+            <RunWidth>560</RunWidth>
+            <RunHegiht>560</RunHegiht>
+            <MannulSpace2depth>1</MannulSpace2depth>
+            <MannulDepth2space>1</MannulDepth2space>
+            <InputChannel>2</InputChannel>
+            <OutputChannel>1</OutputChannel>
+            <RunPattern>0</RunPattern>
+            <OutputMin>-1.0135703086853027</OutputMin>
+            <OutputMax>1.013539433479309</OutputMax>
+            <StdCoff>400</StdCoff>
+            <netRefFrame>0</netRefFrame>
+            <Blacklevel>0</Blacklevel>
+            <ExtremeNight>1</ExtremeNight>
+            <ZeroNoiseMask>1</ZeroNoiseMask>
+        </StaticModel>
+        <MotionModel>
+            <ModelName>PD2405_mfainr_wide_v328.vdnn</ModelName>
+            <FrameNum>8</FrameNum>
+            <RunWidth>560</RunWidth>
+            <RunHegiht>560</RunHegiht>
+            <MannulSpace2depth>1</MannulSpace2depth>
+            <MannulDepth2space>1</MannulDepth2space>
+            <InputChannel>2</InputChannel>
+            <OutputChannel>1</OutputChannel>
+            <RunPattern>0</RunPattern>
+            <OutputMin>-1.0135703086853027</OutputMin>
+            <OutputMax>1.013539433479309</OutputMax>
+            <StdCoff>400</StdCoff>
+            <netRefFrame>0</netRefFrame>
+            <Blacklevel>0</Blacklevel>
+            <ExtremeNight>1</ExtremeNight>
+            <ZeroNoiseMask>1</ZeroNoiseMask>
+        </MotionModel>
+    </ModelInfo>   <!-- 0  15000 -->
+    <ModelInfo>
+        <ISOStart>5000</ISOStart>
+        <ISOEnd>60000</ISOEnd>
+        <ExpTimeStart>0</ExpTimeStart>
+        <ExpTimeEnd>10000</ExpTimeEnd>
+        <OBAdder>0</OBAdder>
+        <SkyThres>0</SkyThres>
+        <skyRatio>0.15</skyRatio>
+        <StaticModel>
+            <ModelName>m878_0927.vdnn</ModelName>
+            <FrameNum>8</FrameNum>
+            <RunWidth>560</RunWidth>
+            <RunHegiht>560</RunHegiht>
+            <MannulSpace2depth>1</MannulSpace2depth>
+            <MannulDepth2space>1</MannulDepth2space>
+            <InputChannel>2</InputChannel>
+            <OutputChannel>1</OutputChannel>
+            <RunPattern>0</RunPattern>
+            <OutputMin>-1.2381463050842285</OutputMin>
+            <OutputMax>1.238108515739441</OutputMax>
+            <StdCoff>400</StdCoff>
+            <netRefFrame>0</netRefFrame>
+            <Blacklevel>0</Blacklevel>
+            <ExtremeNight>1</ExtremeNight>
+            <ZeroNoiseMask>1</ZeroNoiseMask>
+        </StaticModel>
+        <MotionModel>
+            <ModelName>m878_0927.vdnn</ModelName>
+            <FrameNum>8</FrameNum>
+            <RunWidth>560</RunWidth>
+            <RunHegiht>560</RunHegiht>
+            <MannulSpace2depth>1</MannulSpace2depth>
+            <MannulDepth2space>1</MannulDepth2space>
+            <InputChannel>2</InputChannel>
+            <OutputChannel>1</OutputChannel>
+            <RunPattern>0</RunPattern>
+            <OutputMin>-1.2381463050842285</OutputMin>
+            <OutputMax>1.238108515739441</OutputMax>
+            <StdCoff>400</StdCoff>
+            <netRefFrame>0</netRefFrame>
+            <Blacklevel>0</Blacklevel>
+            <ExtremeNight>1</ExtremeNight>
+            <ZeroNoiseMask>1</ZeroNoiseMask>
+        </MotionModel>
+    </ModelInfo>   <!-- 0  15000 -->
+</MfainrFunctionConfig>

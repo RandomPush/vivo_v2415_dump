@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AudioParam version="1.1">
+  <ParamTree>
+    <Param path="RCV" param_id="0"/>
+    <Param path="HAC" param_id="5"/>
+    <Param path="HS" param_id="1"/>
+    <Param path="HP" param_id="1"/>
+    <Param path="SPK" param_id="2"/>
+    <Param path="HS5POLE" param_id="4"/>
+    <Param path="HS5POLE_ANC" param_id="4"/>
+    <Param path="USB" param_id="1"/>
+    <Param path="HEARING_AID" param_id="6"/>
+    <Param path="BT_A2DP" param_id="6"/>
+    <Param path="BT_A2DP_HP" param_id="6"/>
+    <Param path="BT_A2DP_SPK" param_id="6"/>
+    <Param path="Default,RCV" param_id="14"/>
+    <Param path="Default,HAC" param_id="14"/>
+    <Param path="Default,HP" param_id="16"/>
+    <Param path="Default,HS" param_id="16"/>
+    <Param path="Default,SPK" param_id="20"/>
+    <Param path="Default,USB" param_id="21"/>
+    <Param path="GameVoip,USB" param_id="22"/>
+    <Param path="GameVoip,SPK" param_id="23"/>
+    <Param path="GameVoip,HP" param_id="30"/>
+    <Param path="GameVoip,HS" param_id="30"/>
+    <Param path="GameVoip,RCV" param_id="37"/>
+    <Param path="GameVoip,HAC" param_id="37"/>
+  </ParamTree>
+  <ParamUnitPool>
+    <ParamUnit param_id="0">
+      <Param name="dl_gain" value="22,19,16,13,10,7,4,0,0,0"/>
+      <Param name="ul_gain" value="34"/>
+      <Param name="swagc_ignore" value="0"/>
+    </ParamUnit>
+    <ParamUnit param_id="1">
+      <Param name="dl_gain" value="27,24,21,18,15,12,9,0,0,0"/>
+      <Param name="ul_gain" value="34"/>
+      <Param name="swagc_ignore" value="0"/>
+    </ParamUnit>
+    <ParamUnit param_id="2">
+      <Param name="dl_gain" value="22,19,16,13,10,7,4,0,0,0"/>
+      <Param name="ul_gain" value="34"/>
+      <Param name="swagc_ignore" value="0"/>
+    </ParamUnit>
+    <ParamUnit param_id="4">
+      <Param name="dl_gain" value="27,24,21,18,15,12,9,0,0,0"/>
+      <Param name="ul_gain" value="24"/>
+      <Param name="swagc_ignore" value="0"/>
+    </ParamUnit>
+    <ParamUnit param_id="5">
+      <Param name="dl_gain" value="22,19,16,13,10,7,4,0,0,0"/>
+      <Param name="ul_gain" value="0"/>
+      <Param name="swagc_ignore" value="0"/>
+    </ParamUnit>
+    <ParamUnit param_id="6">
+      <Param name="dl_gain" value="48,33,25,19,13,6,0,0,0,0"/>
+      <Param name="ul_gain" value="0"/>
+      <Param name="swagc_ignore" value="0"/>
+    </ParamUnit>
+    <ParamUnit param_id="20">
+      <Param name="dl_gain" value="33,28,23,18,13,11,8,5,3,0"/>
+      <Param name="ul_gain" value="27"/>
+      <Param name="swagc_ignore" value="0"/>
+    </ParamUnit>
+    <ParamUnit param_id="21">
+      <Param name="dl_gain" value="31,27,23,19,15,12,9,6,3,0"/>
+      <Param name="ul_gain" value="27"/>
+      <Param name="swagc_ignore" value="0"/>
+    </ParamUnit>
+    <ParamUnit param_id="22">
+      <Param name="dl_gain" value="26,22,18,14,10,8,6,4,2,0"/>
+      <Param name="ul_gain" value="27"/>
+      <Param name="swagc_ignore" value="0"/>
+    </ParamUnit>
+    <ParamUnit param_id="23">
+      <Param name="dl_gain" value="26,22,18,14,10,8,6,4,2,0"/>
+      <Param name="ul_gain" value="27"/>
+      <Param name="swagc_ignore" value="0"/>
+    </ParamUnit>
+    <ParamUnit param_id="37">
+      <Param name="dl_gain" value="26,22,18,14,10,8,6,4,2,0"/>
+      <Param name="ul_gain" value="27"/>
+      <Param name="swagc_ignore" value="0"/>
+    </ParamUnit>
+    <ParamUnit param_id="14">
+      <Param name="dl_gain" value="26,22,18,14,10,8,6,4,2,0"/>
+      <Param name="ul_gain" value="27"/>
+      <Param name="swagc_ignore" value="0"/>
+    </ParamUnit>
+    <ParamUnit param_id="16">
+      <Param name="dl_gain" value="33,29,25,21,17,14,11,8,5,2"/>
+      <Param name="ul_gain" value="27"/>
+      <Param name="swagc_ignore" value="0"/>
+    </ParamUnit>
+    <ParamUnit param_id="30">
+      <Param name="dl_gain" value="33,29,25,21,17,14,11,8,5,2"/>
+      <Param name="ul_gain" value="27"/>
+      <Param name="swagc_ignore" value="0"/>
+    </ParamUnit>
+  </ParamUnitPool>
+</AudioParam>

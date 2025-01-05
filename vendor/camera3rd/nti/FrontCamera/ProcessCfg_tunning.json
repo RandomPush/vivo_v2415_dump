@@ -1,0 +1,101 @@
+{
+    "hdrMotion": {
+        "ainrCfg": {
+            "shortGainThrold":	1000,
+            "delevThrold":	-100
+        }
+    },
+    "HDR": {
+        "ainrCfg": {
+            "ISOThrold":	100000
+        }
+    },
+    "supernight": {
+        "ainrCfg": {
+            "Enable":	1
+        },
+		"mfainrCfg": {
+		    "Enable":	0,
+            "ShortGainISOThrold":	10000,
+			"InputFrameMax":  10,
+			"InputFrameMin":  5
+        },
+        "localawbCfg": {
+            "Enable":	1,
+            "ButtonEnable": 0
+        }
+    },
+    "fastnight": {
+        "ainrCfg": {
+            "Enable":	1
+        },
+		"mfainrCfg": {
+		    "Enable":	1,
+            "ShortGainISOThrold":	9600,
+			"InputFrameMax":  10,
+			"InputFrameMin":  5
+        },
+        "localawbCfg": {
+            "Enable":	1,
+            "ButtonEnable": 1
+        }
+    },
+    "HDRLite": {
+        "ainrCfg": {
+            "shortGainThrold":	32,
+            "darkBoostGainRatioThrold":	10
+        },
+        "localawbCfg": {
+            "Enable":	1
+        }
+    },
+    "LLHDR": {
+        "ainrCfg": {
+            "shortGainThrold":	32,
+            "darkBoostGainRatioThrold":	6
+        }
+    },
+    "HDRoff": {
+        "ainrCfg": {
+            "shortGainThrold":	32,
+            "darkBoostGainRatioThrold":	10
+        }
+    },
+    "HDRsport": {
+        "mfnrMode": {
+            "isoBoundary0":	600,
+            "isoBoundary1":	2000,
+            "motionLevelBoundary":	3
+        }
+    },
+    "prebps": {
+        "ModeCfg": {
+            "expTimeThrold":	500,
+            "shortgainThrold":	120
+        }
+    },
+    "portraitToneMap": {
+        "ToneCfg": {
+            "outlineEnable": 1,
+            "portraitEnable":	1
+        }
+    },
+    "skySegment": {
+        "segCfg": {
+            "Enable": 1
+        }
+    },
+    "mfnr": {
+        "evmmDenoiseMode": 1,
+        "evmmMfnrEnable": 1
+    },
+    "cac": {
+        "Enable": 0
+    },
+    "lightspot": {
+        "Enable": 1,
+        "luxThreshold": 290,
+        "threshDay": 10000,
+        "threshNight": 10000
+    }
+}

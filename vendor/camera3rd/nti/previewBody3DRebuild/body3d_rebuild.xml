@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AiConfig version="1.0.1">
+  <!--配置最多支持多少个人体-->
+  <maxBodyNum>1</maxBodyNum>
+  <!--当输入人体框与上一帧检出框IOU超过给定阈值时，使用上一帧检出框作为当前帧的boundingBox-->
+  <iouThreshold>1000</iouThreshold>
+  <modelParams>
+    <!--算法运行框架(勿改)-->
+    <frameWork>vdnn</frameWork>
+    <!--模型路径-->
+    <modelPath>body3d_rebuild.vdnn</modelPath>
+    <!--性能设置，类型为档次数值0-10-->
+    <powerLevel>10</powerLevel>
+    <!--模型推理引擎类型类型-->
+    <engineType>7</engineType>
+    <!--运行硬件类型,0(cpu)，1(gpu)类型为0时设置线程数-->
+    <device>0</device>
+    <threads>1</threads>
+    <!--网络输入node名-->
+    <inputNodes>input_0</inputNodes>
+    <!--网络输出node名-->
+    <outputNodes>conv2d_99 conv2d_100 conv2d_101</outputNodes>
+  </modelParams>
+  <smplParams>
+    <!--参数bin路径：body3d_rebuild_tide.bin 不能支持全部身体点位的预测；body3d_rebuild_full.bin可以支持全部身体点位的预测-->
+    <binPath>body3d_rebuild_tide.bin</binPath>
+    <!--是否开启全部人体点位预测-->
+    <all_vertices_enable>0</all_vertices_enable>
+    <!--是否开启额外关节点位预测-->
+    <extra_joints_enable>0</extra_joints_enable>
+    <!--相机焦距-->
+    <focalLength>2203</focalLength>
+    <!--相机到投影中心的距离-->
+    <center>112</center>
+    <!--3角网数量-->
+    <triAngleNum>13776</triAngleNum>
+    <!--3D点数量-->
+    <triPointsNum>6890</triPointsNum>
+    <!--关节点数量-->
+    <jointNum>24</jointNum>
+    <!--额外关节点数量-->
+    <extraJointNum>21</extraJointNum>
+  </smplParams>
+  <TemporalFilterParams>
+    <!--是否使用TemporalFilter平滑-->
+    <useTemporalFilter>1</useTemporalFilter>
+    <!--TemporalFilter平滑参数decay_factor-->
+    <decay_factor>1.0</decay_factor>
+    <!--TemporalFilter窗口大小windowSize-->
+    <windowSize>3</windowSize>
+  </TemporalFilterParams>
+</AiConfig>

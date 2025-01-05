@@ -1,0 +1,123 @@
+{
+    "version":{
+        "majorVersion":2,
+        "minorVersion":0,
+        "releaseVersion":1,
+        "tuningVersion":0
+    },
+    "rawPrepareEffectParam":{
+        "comment_bpcHotFactor":"specifies the threshold for a hot pixel value to be selected for correction. A higher value results in fewer pixels detected as bad pixels.",
+        "bpcHotFactor":3.0,
+        "comment_bpcOffsetMax":"specifies the offset threshold for a hot pixel detection. A higher value results in fewer pixels detected as bad pixels.",
+        "bpcOffsetMax":3,
+        "comment_bpcColdFactor":"specifies the threshold for a cold pixel value to be selected for correction. A lower value results in fewer pixels detected as bad pixels.",
+        "bpcColdFactor":0.333,
+        "comment_bpcOffsetMin":"specifies the offset threshold for a cold pixel detection. A higher value results in fewer pixels detected as bad pixels.",
+        "bpcOffsetMin":2,
+        "comment_highlightDetectThresh":"A smaller value means that fewer pixels will be reset as 'highlight pixel' after correction.",
+        "highlightDetectThresh":1.2,
+        "comment_highlightValueThresh":"only those pixels with value higher than the threshold can be highlight pixel.",
+        "highlightValueThresh":64,
+        "comment_bpcColdAbsThresh":"judgment threshold of cold bpc.",
+        "bpcColdAbsThresh":10
+    },
+    "ainrEffectParam":{
+        "comment_ainrDrcGainCompansation":"drc compansation for ainr, higher value means stronger denoise",
+        "ainrDrcGainCompansation":[
+            1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,
+            1.0,1.0,1.0,1.0,1.0,1.15,1.2,1.6,1.2,1.2,1.2,
+            1.0,1.0,1.0,1.0,1.0,1.25,1.8,2.0,1.8,1.6,1.6,
+            1.0,1.0,1.0,1.0,1.0,1.35,2.0,2.4,1.8,1.6,1.6
+        ],
+        "ainrDarkRegionThreshold":[
+            1024,1024,1024,1024,1024,1120,1280,1280,1280,1280,1280
+        ],
+        "ainrShadingCompansation":[
+            1,1,1,1,1,1.2,3,3,3,2.5,2.5
+        ]
+    },
+    "aidenoiseeffect":{
+        "0":{
+            "evScaleComment":"the weight of noise map estimate",
+            "evScale":[
+                0.8,0.85,0.9,0.9,1,1,1,1,1,1,1
+            ],
+            "resScaleComment":"the weight of residule output",
+            "resScale":[
+                0.7,0.7,0.75,0.75,0.75,0.75,0.85,0.85,0.85,0.92,0.985
+            ]
+        },
+        "1":{
+            "evScaleComment":"the weight of noise map estimate",
+            "evScale":[
+                0.8,0.85,0.9,0.9,1,1,1,1,1,1,1
+            ],
+            "resScaleComment":"the weight of residule output",
+            "resScale":[
+                0.7,0.7,0.75,0.75,0.75,0.75,0.85,0.85,0.85,0.92,0.985
+            ]
+        }
+    },
+    "noiseestimationEffectParam":{
+        "comment_noisesigma":"noise sigma for range filter if bypass noise estimation",
+        "noisesigma":5.0,
+        "comment_percentage threshold":"noise estimation percentage threshold according to ISO value",
+        "percentagethresholdBayer":[
+            0.5,0.65,0.65,0.65,
+            0.5,0.65,0.65,0.65,
+            0.5,0.65,0.65,0.65,
+            0.5,0.65,0.65,0.65,
+            0.5,0.65,0.65,0.65,
+            0.5,0.6,0.6,0.6,
+            0.5,0.6,0.6,0.6,
+            0.5,0.6,0.6,0.6,
+            0.5,0.6,0.6,0.6,
+            0.5,0.6,0.6,0.6,
+            0.5,0.6,0.6,0.6
+        ],
+        "noiseSigmaThresholdRatioWithPixel":[
+            0.4,0.4,0.4,0.45,0.5,0.55,0.6,0.6,0.6,0.6,0.6
+        ]
+    },
+    "fusionEffectParam":{
+        "comment_waveletWienerCMatrix":"wavelet wiener fusion parameters, ll,lh,hl,hh",
+        "waveletWienerCMatrix":[
+            0.04,0.08,0.08,0.08,
+            0.04,0.12,0.12,0.12,
+            0.04,0.16,0.16,0.16,
+            0.04,0.16,0.16,0.16,
+            0.06,0.24,0.24,0.24,
+            0.08,0.32,0.32,0.32,
+            0.12,0.48,0.48,0.48,
+            0.16,0.64,0.64,0.64,
+            0.16,0.64,0.64,0.64,
+            0.16,0.64,0.64,0.64,
+            0.16,0.64,0.64,0.64,
+            0.002,0.002,0.002,0.004,
+            0.004,0.004,0.004,0.008,
+            0.008,0.008,0.008,0.016,
+            0.016,0.016,0.016,0.032,
+            0.032,0.032,0.032,0.064,
+            0.064,0.064,0.064,0.128,
+            0.096,0.096,0.096,0.192,
+            0.12,0.12,0.12,0.24,
+            0.144,0.144,0.144,0.288,
+            0.144,0.144,0.144,0.288,
+            0.144,0.144,0.144,0.288
+        ],
+        "channelMinRatio":[
+            0.1,0.1,0.1,0.1,0.1,0.1,0.0,0.0,0.0,0.0,0.0
+        ],
+        "comment_highFrequencyCoefThreshold":"coef ratio between high frequency and low frequency, only for wavelet fusion",
+        "highFrequencyCoefThreshold":[
+            0.65,0.65,0.65,0.65,0.65,0.6,0.55,0.65,0.7,0.7,0.7
+        ],
+        "edgeFusionCoef":[
+            0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5
+        ],
+        "misAlignThreshold":1.0,
+        "preMisAlignThreshold":0.5,
+        "preMisAlignLFWeight":0.15,
+        "preMisAlignHFWeight":0.2
+    }
+}

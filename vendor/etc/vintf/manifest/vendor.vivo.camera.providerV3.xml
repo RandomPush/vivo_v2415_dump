@@ -1,0 +1,11 @@
+<!--
+    Input:
+        vendor/vivo/hardware/VCF-CORE/aosp_interface/aidl/provider/vendor.vivo.camera.providerV3.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="aidl">
+        <name>android.hardware.camera.provider</name>
+        <version>3</version>
+        <fqname>ICameraProvider/vendorVcf/0</fqname>
+    </hal>
+</manifest>

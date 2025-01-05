@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SPEConfig version="1.0.3.8">
+    <BaseConfig use="1">
+        <ModelConfig engine="7" power="1" frequency="50" thread="1">
+            <ModelPath>spe_capture_0_640x480.vdnn</ModelPath>
+            <InputNode>x</InputNode>
+            <OutputNode>sigmoid_1_act_fake_quant heads_scene_linear_pred_act_fake_quant heads_semseg_linear_pred_act_fake_quant heads_ram_linear_pred1_act_fake_quant</OutputNode>
+        </ModelConfig>
+        <ClsThreshold>
+            0.972 0.999 0.999 0.921 0.037 0.921
+            0.998 0.899 0.999 0.838 0.838 0.634
+            0.838 0.037 0.939 0.838 0.797 0.899
+            0.102 0.634 0.568 0.367 0.163 0.568
+            0.204 0.500 0.500 0.204 0.797 0.939
+            0.838 0.163 0.634 0.979 0.307 1.000
+        </ClsThreshold>
+    </BaseConfig>
+
+    <ClsOpenSetConfig use="1">
+        <ModelConfig type="1" engine="7" power="1" frequency="50" thread="1">
+            <ModelPath>spe_capture_2_512x384.vdnn</ModelPath>
+            <InputNode>x</InputNode>
+            <OutputNode>fc_conv_36_3_act_fake_quant fc_conv_1024_3_act_fake_quant</OutputNode>
+        </ModelConfig>
+        <ClsThreshold>
+            <!-- 0 ~ 35 classes -->
+            <General>
+                0.029 0.999 0.999 0.459 0.159 0.991
+                0.997 0.088 0.999 0.698 0.623 0.623
+                0.459 0.055 0.698 0.418 0.662 0.662
+                0.459 0.623 0.182 0.418 0.303 0.339
+                0.303 0.237 0.339 0.339 0.623 0.698
+                0.662 0.138 0.542 0.269 0.662 1.000
+            </General>
+            <!-- 36 ~ N classes, max length is 64 -->
+            <Openset>
+                <selector subId="115" threshold="0.500"></selector>
+                <selector subId="428" threshold="0.500"></selector>
+                <selector subId="35" threshold="0.500"></selector>
+                <selector subId="197" threshold="0.500"></selector>
+                <selector subId="1" threshold="0.500"></selector>
+                <selector subId="689"  threshold="0.500"></selector>
+				<selector subId="559" threshold="0.500"></selector>
+                <selector subId="1010" threshold="0.500"></selector>
+                <selector subId="851" threshold="0.500"></selector>
+                <selector subId="680" threshold="0.500"></selector>
+                <selector subId="271" threshold="0.500"></selector>
+                <selector subId="847"  threshold="0.500"></selector>
+				<selector subId="805" threshold="0.500"></selector>
+                <selector subId="984" threshold="0.500"></selector>
+                <selector subId="494" threshold="0.500"></selector>
+                <selector subId="357" threshold="0.500"></selector>
+                <selector subId="942" threshold="0.700"></selector>
+				<selector subId="377" threshold="0.500"></selector>
+				<selector subId="724" threshold="0.500"></selector>
+            </Openset>
+        </ClsThreshold>
+        <!-- max cluster num is 36 -->
+        <ClsBinConfig path="tree_android.bin" minSubId="0" maxSubId="4584">
+            <cluster name="bird"          threshold="0.507" subset="89 329 333 196 440 901 631 558 495 355 556 827 900 862 660 732 267"></cluster>
+            <cluster name="stage"         threshold="0.121" subset="842 803 500 570 683 684 684"></cluster>
+            <cluster name="snow_mountain" threshold="0.426" subset="820 587 646 821"></cluster>
+            <cluster name="rosy_cloud"    threshold="0.284" subset="224 225 811 99 999 605 579 890 889 724"></cluster>
+            <cluster name="food"          threshold="0.326" subset="395 305 229 416 769 790 304"></cluster>
+            <cluster name="flower"        threshold="0.466" subset="387 886 389"></cluster>
+            <cluster name="fireworks"     threshold="0.006" subset="372 373 811 605"></cluster>
+            <cluster name="dynamic_water" threshold="0.596" subset="739 521 410 988 990"></cluster>
+            <cluster name="docs"          threshold="0.367" subset="143 769 1019 309 798 186 240 208 135 395 163 731 860"></cluster>
+            <cluster name="children"      threshold="0.366" subset="197 115 428 35"></cluster>
+            <cluster name="car"           threshold="0.506" subset="163 979 572 948 974 948"></cluster>
+            <cluster name="beach"         threshold="0.570" subset="69"></cluster>
+            <cluster name="bar"           threshold="0.394" subset="52 842"></cluster>
+            <cluster name="generalized_person"           threshold="0.400" subset="115 428 35 197 1 689 559 1010 851 680 271 847 805 984 494 357 942"></cluster>
+        </ClsBinConfig>
+    </ClsOpenSetConfig>
+
+    <WordDetectConfig use="1">
+        <ModelConfig engine="7" power="1" frequency="50" thread="1">
+            <ModelPath>spe_capture_3_320x320.vdnn</ModelPath>
+            <InputNode>x</InputNode>
+            <OutputNode>
+                head_reg_preds_0_act_fake_quant head_obj_preds_0_act_fake_quant head_cls_preds_0_act_fake_quant
+                head_reg_preds_1_act_fake_quant head_obj_preds_1_act_fake_quant head_cls_preds_1_act_fake_quant
+                head_reg_preds_2_act_fake_quant head_obj_preds_2_act_fake_quant head_cls_preds_2_act_fake_quant
+            </OutputNode>
+        </ModelConfig>
+    </WordDetectConfig>
+
+    <GlareClsConfig use="1">
+        <ModelConfig engine="7" power="1" frequency="50" thread="1">
+            <ModelPath>spe_capture_4_640x640.vdnn</ModelPath>
+            <InputNode>getitem</InputNode>
+            <OutputNode>reshaped_output</OutputNode>
+        </ModelConfig>
+    </GlareClsConfig>
+
+    <GlareSegConfig use="1">
+        <ModelConfig engine="7" power="1" frequency="50" thread="1">
+            <ModelPath>spe_capture_5_320x320.vdnn</ModelPath>
+            <InputNode>input_0</InputNode>
+            <OutputNode>sigmoid_157</OutputNode>
+        </ModelConfig>
+    </GlareSegConfig>
+</SPEConfig>

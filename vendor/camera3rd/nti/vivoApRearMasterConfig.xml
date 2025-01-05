@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IC2APNode>
+	<PerfAttri>
+		<!--Func Switch -->
+		<PerfVersion>1.3.5</PerfVersion>
+		<Enable>1</Enable>
+		<EisEnable>1</EisEnable>
+		<BigFOV>1</BigFOV>
+		<LogLevel>7</LogLevel>
+		<PowerLevel>1</PowerLevel>
+		<GtmHistEnable>0</GtmHistEnable>
+		<SuperMeEnable>0</SuperMeEnable>
+		<EcoMeEnable>1</EcoMeEnable>
+		<BlkGPMeEnable>1</BlkGPMeEnable>
+		<AIMeEnable>0</AIMeEnable>
+		<ZoomDymSwitch>1</ZoomDymSwitch>
+		<UseSafeISO>0</UseSafeISO>
+		<IsoFactorMe>1.0</IsoFactorMe>
+		<McpuBindPara>1,4,7</McpuBindPara>
+		<BCpuBindPara>1,4,7</BCpuBindPara>
+		<forceMvValFlag>0</forceMvValFlag>
+		<forceMvValX>0</forceMvValX>
+		<forceMvValY>0</forceMvValY>
+		<forceMvConfFlag>0</forceMvConfFlag>
+		<forceMvConfVal>0.0</forceMvConfVal>
+		<meConfzoomMinStep>0.0</meConfzoomMinStep>
+		<meConfzoomFactor>1.0</meConfzoomFactor>
+		<gammaEnableFlag_Y>0</gammaEnableFlag_Y>
+		<gammaEnableFlag_RGB>0</gammaEnableFlag_RGB>
+		<gammaVal_inv>1.6</gammaVal_inv>
+		<gammaVal_for>2.2</gammaVal_for>
+		<drcGainFactorForGamma>0.6</drcGainFactorForGamma>
+		<luxIndexThr>420</luxIndexThr>
+		<gammaVal_low>1.5</gammaVal_low>
+		<gammaVal_high>1.3</gammaVal_high>
+		<gammaIIR_curRatio>0.9</gammaIIR_curRatio>
+		<sensorSwitchSmoothFrmNum>10</sensorSwitchSmoothFrmNum>	
+		<maxMvConfSensorSwitch>1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0 </maxMvConfSensorSwitch>		
+		<meSceneChooseMode>1</meSceneChooseMode>
+		<drcGainTh>14,4,14</drcGainTh>		
+		<luxTab0>400,440</luxTab0>
+		<meTab0>1,1,1,1,1,1</meTab0>
+		<luxTab1>150,200,270,350,420,480</luxTab1>
+		<meTab1>0,0,1,3,3,3,3</meTab1>
+	</PerfAttri>
+	<SuperMeAttri>
+		<bGpEnable> 1</bGpEnable>
+		<b3DRSEnable> 1</b3DRSEnable>
+		<me_ecoISOthr> 0</me_ecoISOthr>
+		<meBypassISO> 4700</meBypassISO>
+		<me_480x270_en> 0</me_480x270_en>
+		<me_SADNORM_en> 1</me_SADNORM_en>
+		<me_version> 1</me_version>
+		<me_penalty_v2_16x16> 300, 600, 350, 100, 300, 300, 300, 80, 800 </me_penalty_v2_16x16>
+		<me_penalty_py3_8x8_norm_on>950, 1300, 1075, 950, 950, 950, 950 </me_penalty_py3_8x8_norm_on>
+		<me_penalty_py3_8x8_norm_off>951, 1301, 1071, 951, 951, 951, 951</me_penalty_py3_8x8_norm_off>
+		<me_penalty_py3_16x16_norm_on>3000, 6000, 3500, 3000, 3000, 3000, 3500</me_penalty_py3_16x16_norm_on> 
+		<me_penalty_py3_16x16_norm_off>953, 1303, 1073, 953, 953, 953, 953 </me_penalty_py3_16x16_norm_off>
+		<me_penalty_py2_s>350</me_penalty_py2_s> 
+		<me_penalty_py2_delta1>700</me_penalty_py2_delta1>
+		<me_penalty_py2_delta2>450</me_penalty_py2_delta2> 
+		<me_penalty_py2_global_blk>600</me_penalty_py2_global_blk> 
+		<me_penalty_py2_global>350</me_penalty_py2_global>
+		<me_penalty_py2_tmp_neighbor1>350</me_penalty_py2_tmp_neighbor1> 
+		<me_penalty_py2_tmp_neighbor2>350</me_penalty_py2_tmp_neighbor2> 
+		<me_penalty_py2_tmp_otherloop>350</me_penalty_py2_tmp_otherloop>
+		<me_GP_motion_thr_max_x> 150</me_GP_motion_thr_max_x>
+		<me_GP_motion_thr_max_y>100 </me_GP_motion_thr_max_y>
+		<me_GP_penalty_ratio_gamma>0.5</me_GP_penalty_ratio_gamma>
+		<me_norm_enable_ratio>1.0</me_norm_enable_ratio> 
+		<me_outlier_960x540_th>64</me_outlier_960x540_th> 
+		<me_outlier_480x270_th>64</me_outlier_480x270_th> 
+		<me_valid_gmv_thr>135</me_valid_gmv_thr>
+		<me_valid_gmv_thr_lut>135,100,100,100,100,100,100,100,100</me_valid_gmv_thr_lut>
+		<me_GP_LUT_src>0,15,30,45,60,75</me_GP_LUT_src>
+		<me_GP_LUT_dst>0,10,25,50,67,75</me_GP_LUT_dst>		
+		<me_preME_confidence_iir_ratio>0.6</me_preME_confidence_iir_ratio>
+		<me_py2_zero_lut_8x8_norm_on>520,480,460,420,400,380,360,300,256</me_py2_zero_lut_8x8_norm_on>
+		<me_py3_zero_lut_8x8_norm_on>800,650,550,650,750,775,775,775,775</me_py3_zero_lut_8x8_norm_on>
+		<pMeISO>6400,9600,12800,15000,20000,25000,30000,35000</pMeISO>
+		<me_960x540_dif_thr>2,3,4,5,7,9,11,14,20</me_960x540_dif_thr>
+		<me_GP_BLK_lut_16x16_norm_on>3000, 3100, 3125, 3250, 3250, 3250, 3250, 3250, 3300</me_GP_BLK_lut_16x16_norm_on>
+		<me_GP_min_lut_16x16_norm_on>2000, 1150, 1100, 1050, 1020, 1000, 960, 930, 900</me_GP_min_lut_16x16_norm_on>
+		<me_GP_max_lut_16x16_norm_on>2000, 1150, 1100, 1050, 1020, 1000, 960, 930, 900</me_GP_max_lut_16x16_norm_on>
+		<me_py2_zero_lut_16x16_norm_on>350,350,350,300,275,250,225,200,160</me_py2_zero_lut_16x16_norm_on>
+		<me_py3_zero_lut_16x16_norm_on>2000, 1250, 1200, 1150, 1120, 1100, 1050, 980, 950</me_py3_zero_lut_16x16_norm_on>
+		<me_py2_zero_lut_8x8_norm_off>522,482,462,422,402,382,362,302,252</me_py2_zero_lut_8x8_norm_off>
+		<me_py3_zero_lut_8x8_norm_off>802,652,552,652,752,772,772,772,772</me_py3_zero_lut_8x8_norm_off>
+		<me_py2_zero_lut_16x16_norm_off>523,483,463,423,403,383,363,303,253</me_py2_zero_lut_16x16_norm_off>
+		<me_py3_zero_lut_16x16_norm_off>803,653,553,653,753,773,773,773,773</me_py3_zero_lut_16x16_norm_off> 
+		<me_GMV_stable_dif_thr>10.0</me_GMV_stable_dif_thr>
+		<me_GMV_std_valid_thr>8.0</me_GMV_std_valid_thr>
+		<me_GMV_search_range>50</me_GMV_search_range>
+		<me_GMV_segment_search_range>16</me_GMV_segment_search_range>
+		<me_costdown_map_ISO_sectNUM>7</me_costdown_map_ISO_sectNUM>
+		<me_costdown_map_ISO_sect>6400, 12800, 19600, 25600, 32000, 39600, 46000 </me_costdown_map_ISO_sect>
+		<me_costdown_map_0>0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0</me_costdown_map_0>
+		<me_costdown_map_1>0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0</me_costdown_map_1>
+		<me_costdown_map_2>0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0</me_costdown_map_2>
+		<me_costdown_map_3>0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0</me_costdown_map_3>
+		<me_costdown_map_4>0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0</me_costdown_map_4>
+		<me_costdown_map_5>0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0</me_costdown_map_5>
+		<me_costdown_map_6>0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0</me_costdown_map_6>
+		<me_costdown_map_7>0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0</me_costdown_map_7>
+		<preIsoMap>3000, 6000, 9000, 12000, 15000, 18000, 21000, 24000, 25600, 36000</preIsoMap> 
+		<preSigma>0.125</preSigma>
+		<preNumLevel>6</preNumLevel> 
+		<preFactTab>0, -0.1, -0.3, -0.5, -0.7, -0.9, -1.0, -1.0, -1.0, -1.0</preFactTab>
+	</SuperMeAttri>
+	<EvaMeAttri>
+		<curGpWeight>0.1</curGpWeight>
+		<staticGpTh>0.1</staticGpTh>
+		<staticMvTh>1.5</staticMvTh>
+		<eisGmvIsoTh>10000</eisGmvIsoTh>
+		<gmv_th_max_x>63</gmv_th_max_x>
+		<gmv_th_max_y>31</gmv_th_max_y>
+		<mv_conf_iir_ratio>0.6</mv_conf_iir_ratio>
+		<confHighValTh>150</confHighValTh>
+		<confFinalMixTh>140</confFinalMixTh>
+		<evaOF_nActualFps>24</evaOF_nActualFps>
+		<evaOF_nOperationalFps>24</evaOF_nOperationalFps>
+		<evaOF_sOfAmFilterConfig_nConfThresh>150</evaOF_sOfAmFilterConfig_nConfThresh>
+		<evaOF_sOfAmFilterConfig_nStepSize>0</evaOF_sOfAmFilterConfig_nStepSize>
+		<evaOF_sOfAmFilterConfig_nUpScale>0</evaOF_sOfAmFilterConfig_nUpScale>
+		<evaOF_sOfAmFilterConfig_nOutputIntOnly>0</evaOF_sOfAmFilterConfig_nOutputIntOnly>
+		<evaOF_sOfAmFilterConfig_nOutputFormat>0</evaOF_sOfAmFilterConfig_nOutputFormat>
+		<evaOF_bConfOutputEnable>1</evaOF_bConfOutputEnable>
+		<evaOF_bSlicOutputEnable>1/</evaOF_bSlicOutputEnable>
+		<evaOF_eOfMvPackFormat>1</evaOF_eOfMvPackFormat>
+		<evaOF_eOfDirection>0</evaOF_eOfDirection>
+		<evaOF_eOfRefMode>0</evaOF_eOfRefMode>
+		<evaOF_isoSectNum>10</evaOF_isoSectNum>
+		<pEisMvTh>30,30,30,28,26,24,22,20,18,16</pEisMvTh>	
+		<evaOF_pIsoSectVal>500,1000,2000,5000,9000,15000,22000,30000,40000,51200</evaOF_pIsoSectVal>
+		<evaOF_bAmFilterEnable>0,0,0,0,0,0,0,0,0,0</evaOF_bAmFilterEnable>
+		<evaOF_nHoleFillEnable>0,0,0,0,0,0,0,0,0,0</evaOF_nHoleFillEnable>
+		<evaOF_sOfHoleFillConfig_nHighConfThresh>1,1,1,1,1,1,1,1,1,1</evaOF_sOfHoleFillConfig_nHighConfThresh>
+		<evaOF_sOfHoleFillConfig_nFillConfThresh>1,1,1,1,1,1,1,1,1,1</evaOF_sOfHoleFillConfig_nFillConfThresh>
+		<evaOF_sOfHoleFillConfig_nMinValidPixels>1,1,1,1,1,1,1,1,1,1</evaOF_sOfHoleFillConfig_nMinValidPixels>
+		<evaOF_sOfHoleFillConfig_nZeroOverride>0,0,0,0,0,0,0,0,0,0</evaOF_sOfHoleFillConfig_nZeroOverride>
+		<evaOF_sOfP1Config_nAdapEnable>1,1,1,1,1,1,1,1,1,1</evaOF_sOfP1Config_nAdapEnable>
+		<evaOF_sOfP1Config_nDefaultValue>15,18,21,25,29,33,37,41,46,50</evaOF_sOfP1Config_nDefaultValue>
+		<evaOF_sOfP1Config_nEdgeValue>15,18,21,25,29,33,37,41,46,50</evaOF_sOfP1Config_nEdgeValue>
+		<evaOF_sOfP1Config_nSmoothValue>25,27,29,32,36,39,42,45,48,50</evaOF_sOfP1Config_nSmoothValue>
+		<evaOF_sOfP1Config_nEdgeThresh>12,12,13,13,14,14,15,15,16,16</evaOF_sOfP1Config_nEdgeThresh>
+		<evaOF_sOfP1Config_nSmoothThresh>5,5,6,6,7,8,9,10,11,12</evaOF_sOfP1Config_nSmoothThresh>
+		<evaOF_sOfP2Config_nAdapEnable>1,1,1,1,1,1,1,1,1,1</evaOF_sOfP2Config_nAdapEnable>
+		<evaOF_sOfP2Config_nDefaultValue>35,37,40,45,52,60,70,80,90,100</evaOF_sOfP2Config_nDefaultValue>
+		<evaOF_sOfP2Config_nEdgeValue>25,28,32,38,48,59,70,80,90,100</evaOF_sOfP2Config_nEdgeValue>
+		<evaOF_sOfP2Config_nSmoothValue>65,67,70,74,78,82,86,90,95,100</evaOF_sOfP2Config_nSmoothValue>
+		<evaOF_sOfCensusConfig_nCurNoiseThreshOffset>0,1,2,3,4,5,6,7,7,8,8</evaOF_sOfCensusConfig_nCurNoiseThreshOffset>
+		<evaOF_sOfCensusConfig_nCurNoiseThreshScale>0,1,2,3,4,5,6,7,7,8,8</evaOF_sOfCensusConfig_nCurNoiseThreshScale>
+		<evaOF_sOfCensusConfig_nRefNoiseThreshOffset>0,1,2,3,4,5,6,7,7,8,8</evaOF_sOfCensusConfig_nRefNoiseThreshOffset>
+		<evaOF_sOfCensusConfig_nRefNoiseThreshScale>0,1,2,3,4,5,6,7,7,8,8</evaOF_sOfCensusConfig_nRefNoiseThreshScale>
+		<evaOF_sOfConfWeight_nOcclusion>16,16,16,16,16,16,16,16,16,16</evaOF_sOfConfWeight_nOcclusion>
+		<evaOF_sOfConfWeight_nMvVariance>10,10,10,10,10,10,10,10,10,10</evaOF_sOfConfWeight_nMvVariance>
+		<evaOF_sOfConfWeight_nDsMvVariance>0,0,0,0,0,0,0,0,0,0</evaOF_sOfConfWeight_nDsMvVariance>
+		<evaOF_sOfConfWeight_nFlatness>6,6,6,6,6,6,6,6,6,6</evaOF_sOfConfWeight_nFlatness>
+		<evaOF_nDsThreshold>0,0,0,0,0,0,0,0,0,0</evaOF_nDsThreshold>
+		<evaOF_nFlatnessThreshold>2,2,2,2,2,2,2,2,2,2</evaOF_nFlatnessThreshold>
+		<evaOF_bFlatnessOverride>0,0,0,0,0,0,0,0,0,0</evaOF_bFlatnessOverride>
+		<evaOF_nMvVarThreshold>1,1,1,1,1,1,1,1,1,1</evaOF_nMvVarThreshold>
+		<evaOF_eOfMvCandPrun>3,3,3,3,3,3,3,3,3,3</evaOF_eOfMvCandPrun>
+		<evaOF_bDS4MaxOverwrite>0,0,0,0,0,0,0,0,0,0</evaOF_bDS4MaxOverwrite>
+	</EvaMeAttri>	
+	<BlkGPMeAttri>	
+	<blkGP_isoSectNum>10</blkGP_isoSectNum>
+                <blkGP_pIsoSectVal>500, 1000, 2000, 5000, 9000, 15000, 22000, 30000, 40000, 51200</blkGP_pIsoSectVal>
+                <blkGP_varTh>0, 0, 0, 0, 0, 0.03, 0.06, 0.12, 0.18, 0.23</blkGP_varTh>	
+	</BlkGPMeAttri>	
+	<AIMeAttri>
+		<ai_quat_type>1</ai_quat_type>
+		<ai_flow_qat_zero>128</ai_flow_qat_zero>				
+		<ai_flow_qat_scale>1.0</ai_flow_qat_scale>
+		<frequencyHint>40</frequencyHint>
+		<aidsp_frequency>560</aidsp_frequency>
+		<ai_mixModelPath>/vendor/camera3rd/nti/aime_v_2_mix.vdnn </ai_mixModelPath>
+		<ai_a8ModelPath>/vendor/camera3rd/nti/aime_v_2_a8w8.vdnn </ai_a8ModelPath>		
+	</AIMeAttri>
+	<HwMeAttri>
+		<eisGmvFlag>0</eisGmvFlag>
+		<cntGmvFlag>1</cntGmvFlag>
+		<me_conf_iir_ratio>0.6</me_conf_iir_ratio>
+		<isoSectNum>10</isoSectNum>
+		<pIsoSectVal>500, 1000, 2500, 4000, 9000, 14000, 19000, 24000, 29000, 35600</pIsoSectVal>
+		<pGmvThMaxX>250, 250, 250, 250, 250, 250, 250, 250, 250, 250</pGmvThMaxX>
+		<pGmvThMaxY>250, 250, 250, 250, 250, 250, 250, 250, 250, 250</pGmvThMaxY>		
+	</HwMeAttri>
+	<HdrGtmAttri>
+		<common>
+			<mode> 1 </mode>
+			<ExtGammaYLut> 0 </ExtGammaYLut>
+			<ThreeDLut_CCTCrv_Day> 3500, 5500, 0, 1 </ThreeDLut_CCTCrv_Day>
+			<ThreeDLut_LuxCrv_Day> 150, 300, 1, 0 </ThreeDLut_LuxCrv_Day>
+			<ThreeDLut_CCTCrv_Night> 3000, 4000, 0, 0 </ThreeDLut_CCTCrv_Night>
+			<ThreeDLut_LuxCrv_Night> 400, 200, 1, 1 </ThreeDLut_LuxCrv_Night>
+		</common>
+		<GTM>
+			<SDR2SDR>
+				<SDR2SDRmode> 0 </SDR2SDRmode>
+				<BoostOpt> 1 </BoostOpt>
+				<LuxIdx2NormGain> 400, 500, 1, 4 </LuxIdx2NormGain>
+			</SDR2SDR>
+			<COMMON>
+				<d_hist_Th1> 150.0 </d_hist_Th1>
+				<d_hist_Th2> 425.0 </d_hist_Th2>
+				<d_hist_Lev1> 1.0 </d_hist_Lev1>
+				<d_hist_Lev2> 0.25 </d_hist_Lev2>
+			<d_hist_GainLim> 300, 350, 16, 16 </d_hist_GainLim>
+				<NormGain_ratio> 1</NormGain_ratio>
+			</COMMON>
+			<SOFTCLIP_LUT>
+			    <SOFTCLIP_LUT_mode>0</SOFTCLIP_LUT_mode>
+			<thLow> 0.15 </thLow>
+			<thMid> 0.5 </thMid>
+			<thHigh> 0.45 </thHigh>
+			<minVal> 0.217 </minVal>
+			<midVal> 0.45 </midVal>
+			<maxVal> 0.85 </maxVal>	
+				<th1_min>0</th1_min>
+				<th1_max>0.15</th1_max>
+				<th2>0.6</th2>
+				<CDF>90</CDF>
+				<CDF_gain>1.0</CDF_gain>
+				<SoftClip_FixAnchor> 0 </SoftClip_FixAnchor>	
+				<SoftClip_FixMidtone> 0.217 </SoftClip_FixMidtone>	
+				<SoftClip_FixBright> 0.456 </SoftClip_FixBright>	
+				<SoftClip_FixSpecular> 0.97 </SoftClip_FixSpecular>	
+			<EVratio_PWLcurve> 1.35, 2, 1, 1 </EVratio_PWLcurve>				
+				<faceGain_PWLcurve> 0.1, 0.4, 1, 1 </faceGain_PWLcurve>				
+				<frameLumaRef> 0 </frameLumaRef>				
+				<SoftClip_Bld_PWLcurve> 350, 370, 0.55, 0.4 </SoftClip_Bld_PWLcurve>				
+				<MidtoneRange> 0.2 </MidtoneRange>		
+				<Midtonerange_clip> 1 </Midtonerange_clip>
+				<HighlightGain_max> 1.0 </HighlightGain_max>	
+				<highlight_a> 2 </highlight_a>
+				<highlight_x> 1 </highlight_x>
+				<highlight_b> -0.15 </highlight_b>
+			</SOFTCLIP_LUT>
+			<BEZIER_POINT>
+				<BEZIER_POINT_mode> 1 </BEZIER_POINT_mode>
+				<Highlight_EV0> 230 </Highlight_EV0>
+				<Highlight_EV4> 240 </Highlight_EV4>
+				<Midlight_EV0> 128 </Midlight_EV0>
+				<Zerofive_EV0> 180 </Zerofive_EV0>
+				<point_05_x_PWLcurve> 0.1, 0.6, 0.5, 0.9</point_05_x_PWLcurve>
+				<cdf_midlight_PWLcurve> 0.05, 0.25, 1.0, 0.5</cdf_midlight_PWLcurve>
+				<luxGain_ch_PWLcurve> 0.25, 0.80, 0.25, 1.0</luxGain_ch_PWLcurve>
+				<p1Y_ratio> 1.0 </p1Y_ratio>
+				<p1Y_ratio_PWLcurve> 450,470,1,1.8</p1Y_ratio_PWLcurve>
+				<p1y_min> 0.0 </p1y_min>
+				<p1y_max> 0.3 </p1y_max>
+				<p1y_min_PWLcurve>90.0, 70.0, 0.0, 0.5</p1y_min_PWLcurve>
+				<p1y_max_PWLcurve> 90.0, 70.0, 0.3, 0.7</p1y_max_PWLcurve>
+				<p2Y_ratio> 1.0 </p2Y_ratio>
+				<ev4lowlight_PWLcurve> 0.08, 0.30, 0.0, 0.8</ev4lowlight_PWLcurve>
+				<Point3_Alpha> 0.3 </Point3_Alpha>
+				<Point3_Min> 0.5 </Point3_Min>
+				<Point3_Max> 0.9 </Point3_Max>
+			<lowLuxIdx1> 120 </lowLuxIdx1>
+			<lowLuxIdx2> 260 </lowLuxIdx2>
+			<lowLuxIdx3> 320 </lowLuxIdx3>
+			<lowLuxIdx4> 370 </lowLuxIdx4>
+			<lowLuxIdx5> 420 </lowLuxIdx5>
+			<lowLuxIdx6> 480 </lowLuxIdx6>
+			<lowLuxIdx7> 530 </lowLuxIdx7>
+			
+			<BezierPoints1>0, 0, 0.11, 0.101429, 0.218571, 0.202857, 0.392857, 0.355714, 0.607143, 0.538571, 0.808571, 0.725714, 1, 1</BezierPoints1>
+			<BezierPoints2>0, 0, 0.11, 0.101429, 0.218571, 0.202857, 0.392857, 0.355714, 0.607143, 0.538571, 0.808571, 0.725714, 1, 1</BezierPoints2>
+			<BezierPoints3>0, 0, 0.11, 0.101429, 0.218571, 0.202857, 0.392857, 0.355714, 0.607143, 0.538571, 0.808571, 0.725714, 1, 1</BezierPoints3>
+			<BezierPoints4>0, 0, 0.128571, 0.0857143, 0.244286, 0.198571, 0.408571, 0.348571, 0.607143, 0.538571, 0.808571, 0.725714, 1, 1</BezierPoints4>
+			<BezierPoints5>0, 0, 0.134286, 0.0685714, 0.255714, 0.188571, 0.421429, 0.327143, 0.617143, 0.53, 0.808571, 0.725714, 1, 1</BezierPoints5>
+			<BezierPoints6>0, 0, 0.144286, 0.06, 0.32, 0.221429, 0.464286, 0.351429, 0.631429, 0.527143, 0.808571, 0.725714, 1, 1</BezierPoints6>
+			<BezierPoints7>0, 0, 0.124286, 0.0285714, 0.332857, 0.218571, 0.478571, 0.345714, 0.64, 0.524286, 0.812857, 0.712857, 1, 1</BezierPoints7>
+			<LuxIdx1_EV> 150 </LuxIdx1_EV>
+		  <LuxIdx2_EV> 350 </LuxIdx2_EV>
+		  <LuxIdx3_EV>370</LuxIdx3_EV>
+		  <LuxIdx4_EV>420</LuxIdx4_EV>
+		  <LuxIdx5_EV>520</LuxIdx5_EV>
+		  
+		  <EV01_PWLcurve>10.0, 16.0, 0, 0</EV01_PWLcurve>
+		  <EV11_PWLcurve>5.9, 7.0, 0, 0</EV11_PWLcurve>
+		  
+			<LuxEV_BezierPoints10>0, 0, 0.0471429, 0.0828571, 0.104286, 0.161429, 0.181429, 0.198571, 0.421429, 0.35, 0.64, 0.495714, 1, 1</LuxEV_BezierPoints10>
+			<LuxEV_BezierPoints11>0, 0, 0.0471429, 0.0828571, 0.104286, 0.161429, 0.181429, 0.198571, 0.421429, 0.35, 0.64, 0.495714, 1, 1</LuxEV_BezierPoints11>
+			<LuxEV_BezierPoints20>0, 0, 0.02, 0.0214286, 0.0542857, 0.0871429, 0.244286, 0.252857, 0.49, 0.348571, 0.748571, 0.66, 1, 1</LuxEV_BezierPoints20>
+			<LuxEV_BezierPoints21>0, 0, 0.02, 0.0214286, 0.0542857, 0.0871429, 0.244286, 0.252857, 0.49, 0.348571, 0.748571, 0.66, 1, 1</LuxEV_BezierPoints21>
+			<LuxEV_BezierPoints30>0, 0, 0.0414286, 0.0585714, 0.118571, 0.0985714, 0.508571, 0.284286, 0.785714, 0.56, 0.907143, 0.782857, 1, 1</LuxEV_BezierPoints30>
+			<LuxEV_BezierPoints31>0, 0, 0.0414286, 0.0585714, 0.118571, 0.0985714, 0.508571, 0.284286, 0.785714, 0.56, 0.907143, 0.782857, 1, 1</LuxEV_BezierPoints31>			
+			<LuxEV_BezierPoints40>0, 0, 0.0528571, 0.0685714, 0.264286, 0.171429, 0.618571, 0.401429, 0.761429, 0.545714, 0.927143, 0.704286, 1, 1</LuxEV_BezierPoints40>
+			<LuxEV_BezierPoints41>0, 0, 0.0528571, 0.0685714, 0.264286, 0.171429, 0.618571, 0.401429, 0.761429, 0.545714, 0.927143, 0.704286, 1, 1</LuxEV_BezierPoints41>
+			<LuxEV_BezierPoints50>0, 0, 0.0971429, 0.00142857, 0.264286, 0.0571429, 0.474286, 0.378571, 0.628571, 0.312857, 0.934286, 0.617143, 1, 1</LuxEV_BezierPoints50>
+			<LuxEV_BezierPoints51>0, 0, 0.0971429, 0.00142857, 0.264286, 0.0571429, 0.474286, 0.378571, 0.628571, 0.312857, 0.934286, 0.617143, 1, 1</LuxEV_BezierPoints51>
+
+				<!-- tunning bezier point mode 1 HDR Modeifined according CDF - CDFt--> 				
+				<LuxIdx_CDF1> 340,355 </LuxIdx_CDF1>	
+				<Bezier_CDFth1> 0,35 </Bezier_CDFth1>	
+				<CDF_PWLcurve1>0.01, 0.02, 0,0</CDF_PWLcurve1>
+				<BezierPointsCDF1>0.0, 0.0, 0.0433, 0.082667, 0.06266, 0.2462, 0.201, 0.3908, 0.484, 0.50267, 0.81997, 0.65334, 1.0, 1.0</BezierPointsCDF1>			
+				
+				<LuxIdx_CDF2> 370,400</LuxIdx_CDF2>	
+				<Bezier_CDFth2> 20,90 </Bezier_CDFth2>	
+				<CDF_PWLcurve2> 0.20, 0.15, 0, 0</CDF_PWLcurve2>
+				<BezierPointsCDF2>0, 0, 0.0814286, 0.0157143, 0.00857143, 0.267143, 0.567143, 0.297143, 0.672857, 0.892857, 0.844286, 0.938571, 1, 1</BezierPointsCDF2>	
+				 
+				<LuxIdx_CDF3> 370,410 </LuxIdx_CDF3>	
+				<Bezier_CDFth3> 0,20 </Bezier_CDFth3>	
+				<CDF_PWLcurve3> 0.008, 0.0008, 0, 0</CDF_PWLcurve3>
+				<BezierPointsCDF3>0, 0, 0.00714286, 0.0171429, 0.25, 0.211429, 0.214286, 0.574286, 0.46, 0.5, 0.781429, 0.597143, 1, 1</BezierPointsCDF3>			
+				
+				<LuxIdx_CDF4> 350,420 </LuxIdx_CDF4>	
+				<Bezier_CDFth4> 0,20 </Bezier_CDFth4>	
+				<CDF_PWLcurve4> 0.037, 0.06, 0, 0</CDF_PWLcurve4>
+				<BezierPointsCDF4>0, 0, 0.0514286, 0.0214286, 0.0971429, 0.09, 0.0557143, 0.27, 0.165714, 0.35, 0.424286, 0.835714, 1, 1</BezierPointsCDF4>			
+				
+				<LuxIdx_CDF5> 0,520 </LuxIdx_CDF5>	
+				<Bezier_CDFth5> 0,20 </Bezier_CDFth5>	
+			<CDF_PWLcurve5> 0.14, 0.19, 0, 0</CDF_PWLcurve5>
+			<BezierPointsCDF5>0, 0, 0.0357143, 0.0342857, 0.15, 0.184286, 0.258571, 0.265714, 0.332857, 0.615714, 0.577143, 0.575714, 1, 1</BezierPointsCDF5>			
+				
+			</BEZIER_POINT>
+			<BT2446>
+				<BT2446_gamma_min> 1.8 </BT2446_gamma_min>
+				<BT2446_gamma_max> 2.0 </BT2446_gamma_max>
+				<Reg__L_HDR> 1600.0 </Reg__L_HDR>
+				<Reg__L_SDR> 400.0 </Reg__L_SDR>
+			</BT2446>
+			<HIST>
+				<Reg__pctBlack> 1.0 </Reg__pctBlack>
+				<Reg__pctShadow> 3.0 </Reg__pctShadow>
+				<Reg__pctMidtone> 20 </Reg__pctMidtone>
+				<Reg__pctBright> 70 </Reg__pctBright>
+				<Reg__pctSpecular> 99.0 </Reg__pctSpecular>
+			<IIR_alpha> 0.96 </IIR_alpha>
+				<Reg__Pre_gm> 1.6 </Reg__Pre_gm>
+			</HIST>
+			<BEZIER_LUT>
+            <IIR_alpha_bezier> 0.93 </IIR_alpha_bezier>
+				<bright_th1>0.0</bright_th1>
+				<bright_th2> 0.05</bright_th2>
+				<bld_alpha_min> 1.0 </bld_alpha_min>
+				<bld_alpha_max> 0.0 </bld_alpha_max>
+				<weight1_th1> 300.0 </weight1_th1>
+				<weight1_th2> 450.0 </weight1_th2>
+			<weight1_min> 1.0 </weight1_min>
+				<weight1_max> 1.0 </weight1_max>
+				<weight2_th1> 300.0 </weight2_th1>
+				<weight2_th2> 450.0 </weight2_th2>
+				<weight2_min> 1.0 </weight2_min>
+				<weight2_max> 1.0 </weight2_max>
+			</BEZIER_LUT>
+			<FixBezier_LUT>
+				<Enable> 0 </Enable>
+				 <LUT>0,0,0.000000,0.000000,0.03,0.35,0.2,0.8,0.3,0.95,1.000000,1.000000, 1.0, 1.0</LUT>
+			</FixBezier_LUT>
+		</GTM>
+		<RegGTM version="0.7">
+			<COMMON>
+				<EnGTM bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 1 </EnGTM>
+				<!--0: off, out = in, 1: on -->
+				<frontICSC bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 1 </frontICSC>
+				<!--0: off, for RGB input; 1: on, for YUV input; turn on only input is YUV -->
+				<frontICSC_coef bitDepth="12" valMin="-2048" valMax="2047" size="9" dbuf="1"> 1026,3,1613,1023,-193,-479,1024,1900,0 </frontICSC_coef>
+				<!--coef of front iCSC -->
+				<frontICSC_ofst bitDepth="10" valMin="0" valMax="512" size="3" dbuf="1"> 0,512,512 </frontICSC_ofst>
+				<!--offset of front iCSC -->
+				<backCSC bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </backCSC>
+				<!--0: off; 1: on; turn on only if input is RGB and EnGTM is 0 -->
+				<backCSC_coef bitDepth="12" valMin="-2048" valMax="2047" size="9" dbuf="1"> 218,732,74,-117,-395,512,512,-465,-48 </backCSC_coef>
+				<!--coef of back CSC -->
+				<backCSC_ofst bitDepth="10" valMin="0" valMax="512" size="3" dbuf="1"> 0,512,512 </backCSC_ofst>
+				<!--offset of back CSC -->
+				<LUTfromAP bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 1 </LUTfromAP>
+				<!--0: from IC DSW, 1: from AP metadata -->
+				<EnForceEV bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </EnForceEV>
+				<!-- 0：EV from AP metadata -->
+				<ValForceEV bitDepth="24" valMin="0" valMax="16777215" size="1" dbuf="1"> 0 </ValForceEV>
+				<!-- u10.14 -->
+				<valHistNrm bitDepth="27" valMin="0" valMax="67108864" size="1" dbuf="1"> 0 </valHistNrm>
+				<!-- u17.10 -->
+				<valSoftClipNrm bitDepth="25" valMin="0" valMax="16777216" size="1" dbuf="1"> 0 </valSoftClipNrm>
+				<!-- u15.10 -->
+			</COMMON>
+			<HistSta>
+				<Hist_RGB2Y bitDepth="11" valMin="0" valMax="2047" size="3" dbuf="0"> 306,601,117 </Hist_RGB2Y>
+				<!-- u1.10 -->
+				<Hist_MrgYRGB_alpha bitDepth="7" valMin="0" valMax="64" size="1" dbuf="0"> 32 </Hist_MrgYRGB_alpha>
+				<!-- u0.7 -->
+				<Hist_DSPhase_Hor bitDepth="1" valMin="0" valMax="1" size="1" dbuf="0"> 0 </Hist_DSPhase_Hor>
+				<!-- u1; 0: keep even; 1: keep odd -->
+				<Hist_DSPhase_Ver bitDepth="1" valMin="0" valMax="1" size="1" dbuf="0"> 0 </Hist_DSPhase_Ver>
+				<!-- u1; 0: keep even; 1: keep odd -->
+				<Hist_window_En bitDepth="1" valMin="0" valMax="1" size="1" dbuf="0"> 0 </Hist_window_En>
+				<!-- u1; 0: off; 1: on -->
+				<Hist_window_startHor bitDepth="12" valMin="0" valMax="4095" size="1" dbuf="0"> 100 </Hist_window_startHor>
+				<!-- u1; hist window start X_coor / 2 -->
+				<Hist_window_startVer bitDepth="12" valMin="0" valMax="4095" size="1" dbuf="0"> 15 </Hist_window_startVer>
+				<!-- u1; hist window start Y_coor / 2 -->
+				<Hist_window_endHor bitDepth="12" valMin="0" valMax="4095" size="1" dbuf="0"> 350 </Hist_window_endHor>
+				<!-- u1; hist window end X_coor / 2 -->
+				<Hist_window_endVer bitDepth="12" valMin="0" valMax="4095" size="1" dbuf="0"> 530 </Hist_window_endVer>
+				<!-- u1; hist window end Y_coor / 2 -->
+			</HistSta>
+			<Bezier>
+				<Bezier_RGB2Y bitDepth="11" valMin="0" valMax="2047" size="3" dbuf="0"> 306,601,117 </Bezier_RGB2Y>
+				<!-- u1.10 -->
+				<Bezier_MrgYRGB_alpha bitDepth="7" valMin="0" valMax="64" size="1" dbuf="0"> 32 </Bezier_MrgYRGB_alpha>
+				<!-- u0.7 -->
+		<Bezier_EnNrm bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </Bezier_EnNrm> <!-- 0：disable -->
+				<!-- 0：disable -->
+				<Bezier_EnSoftClipLUT bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </Bezier_EnSoftClipLUT>
+				<!-- 0：disable -->
+				<Bezier_softClip_BldAlpha bitDepth="11" valMin="0" valMax="1024" size="1" dbuf="1"> 512 </Bezier_softClip_BldAlpha>
+				<!-- u0.11 -->
+		<Bezier_softClip_BldWeight1 bitDepth="11" valMin="0" valMax="1024" size="1" dbuf="1"> 1024 </Bezier_softClip_BldWeight1> <!-- u0.11 -->
+				<!-- u0.11 -->
+		<Bezier_softClip_BldWeight2 bitDepth="11" valMin="0" valMax="1024" size="1" dbuf="1"> 1024 </Bezier_softClip_BldWeight2> <!-- u0.11 -->
+				<!-- u0.11 -->
+				<Bezier_EnBezierLUT bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 1 </Bezier_EnBezierLUT>
+				<!-- 0：disable -->
+		<Bezier_EnHgmLUT bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </Bezier_EnHgmLUT> <!-- 0：disable -->
+				<!-- 0：disable -->
+		<Bezier_EnLgmLUT bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </Bezier_EnLgmLUT> <!-- 0：disable -->
+				<!-- 0：disable -->
+				<Bezier_EnForceRatio bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </Bezier_EnForceRatio>
+				<!-- 0：disable -->
+				<Bezier_ValForceRatio bitDepth="16" valMin="0" valMax="65535" size="1" dbuf="0"> 1 </Bezier_ValForceRatio>
+				<!-- u6.10 -->
+			</Bezier>
+			<BT2446>
+				<BT2446_RGB2Y bitDepth="11" valMin="0" valMax="2047" size="3" dbuf="0"> 218,732,74 </BT2446_RGB2Y>
+				<!-- u1.10, RGB2Y -->
+				<BT2446_BY2U bitDepth="22" valMin="0" valMax="2097152" size="1" dbuf="0"> 1104 </BT2446_BY2U>
+				<!-- u1.10, B-Y/BY2U, = 2097152 / 1900 -->
+				<BT2446_RY2V bitDepth="22" valMin="0" valMax="2097152" size="1" dbuf="0"> 1300 </BT2446_RY2V>
+				<!-- u1.10 = 2097152 / 1613 -->
+				<BT2446_uvCompGain bitDepth="8" valMin="0" valMax="255" size="1" dbuf="1"> 70 </BT2446_uvCompGain>
+				<!-- u2.6 -->
+				<BT2446_EnRGBGamma bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 1 </BT2446_EnRGBGamma>
+				<!-- 0: disable -->
+		<BT2446_EnY2446 bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </BT2446_EnY2446>  <!-- 0: disable -->
+				<!-- 0: disable -->
+		<BT2446_EnDynGamma bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </BT2446_EnDynGamma>  <!-- 0: disable -->
+				<!-- 0: disable -->
+				<BT2446_EnForceUVRatio bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </BT2446_EnForceUVRatio>
+				<!-- 0：disable -->
+				<BT2446_ValForceUVRatio bitDepth="11" valMin="0" valMax="2047" size="1" dbuf="1"> 1 </BT2446_ValForceUVRatio>
+				<!-- u1.10 -->
+				<BT2446_AdjLuma bitDepth="8" valMin="0" valMax="64" size="1" dbuf="1"> 13 </BT2446_AdjLuma>
+				<!-- u1.6 -->
+			</BT2446>
+			<DebugMap>
+				<DebugMap_En bitDepth="1" valMin="0" valMax="1" size="1" dbuf="0"> 0 </DebugMap_En>
+				<!-- 0: off, 1: on -->
+				<DebugMap_Idx bitDepth="4" valMin="0" valMax="15" size="1" dbuf="0"> 9 </DebugMap_Idx>
+				<!-- u5 -->
+				<DebugMap_RSB_C1 bitDepth="3" valMin="0" valMax="7" size="1" dbuf="0"> 6 </DebugMap_RSB_C1>
+				<!-- Right shift bit value for debug map output -->
+				<DebugMap_RSB_C2 bitDepth="3" valMin="0" valMax="7" size="1" dbuf="0"> 6 </DebugMap_RSB_C2>
+				<!-- Right shift bit value for debug map output -->
+				<DebugMap_RSB_C3 bitDepth="3" valMin="0" valMax="7" size="1" dbuf="0"> 6 </DebugMap_RSB_C3>
+				<!-- Right shift bit value for debug map output -->
+			</DebugMap>
+		</RegGTM>
+	</HdrGtmAttri>
+	<NRGtmAttri>
+		<common>
+			<mode> 1 </mode>
+			<ExtGammaYLut> 0 </ExtGammaYLut>
+			<ThreeDLut_CCTCrv_Day> 3500, 5500, 0, 1 </ThreeDLut_CCTCrv_Day>
+			<ThreeDLut_LuxCrv_Day> 150, 300, 1, 0 </ThreeDLut_LuxCrv_Day>
+			<ThreeDLut_CCTCrv_Night> 3000, 4000, 0, 0 </ThreeDLut_CCTCrv_Night>
+			<ThreeDLut_LuxCrv_Night> 400, 200, 1, 1 </ThreeDLut_LuxCrv_Night>
+		</common>
+		<GTM>
+			<SDR2SDR>
+				<SDR2SDRmode> 0 </SDR2SDRmode>
+				<BoostOpt> 1 </BoostOpt>
+				<LuxIdx2NormGain> 400, 500, 1, 4 </LuxIdx2NormGain>
+			</SDR2SDR>
+			<COMMON>
+				<d_hist_Th1> 150.0 </d_hist_Th1>
+				<d_hist_Th2> 425.0 </d_hist_Th2>
+				<d_hist_Lev1> 1.0 </d_hist_Lev1>
+				<d_hist_Lev2> 0.25 </d_hist_Lev2>
+			<d_hist_GainLim> 300, 350, 16, 16 </d_hist_GainLim>
+				<NormGain_ratio> 1</NormGain_ratio>
+			</COMMON>
+			<SOFTCLIP_LUT>
+			<SOFTCLIP_LUT_mode>0</SOFTCLIP_LUT_mode>
+			<thLow> 0.3 </thLow>
+			<thMid> 0.4 </thMid>
+			<thHigh> 0.5 </thHigh>
+			<minVal> 0.13 </minVal>
+			<midVal> 0.45 </midVal>
+			<maxVal> 0.75 </maxVal>	
+				<th1_min>0</th1_min>
+				<th1_max>0.15</th1_max>
+				<th2>0.6</th2>
+				<CDF>90</CDF>
+				<CDF_gain>1.0</CDF_gain>
+				<SoftClip_FixAnchor> 0 </SoftClip_FixAnchor>	
+				<SoftClip_FixMidtone> 0.217 </SoftClip_FixMidtone>	
+				<SoftClip_FixBright> 0.456 </SoftClip_FixBright>	
+				<SoftClip_FixSpecular> 1.1 </SoftClip_FixSpecular>	
+			<EVratio_PWLcurve> 1.35, 2, 1, 1 </EVratio_PWLcurve>				
+				<faceGain_PWLcurve> 0.1, 0.4, 1, 1 </faceGain_PWLcurve>				
+				<frameLumaRef> 0 </frameLumaRef>				
+				<SoftClip_Bld_PWLcurve> 350, 370, 0.8, 0.8 </SoftClip_Bld_PWLcurve>				
+				<MidtoneRange> 0.2 </MidtoneRange>		
+				<Midtonerange_clip> 1 </Midtonerange_clip>
+				<HighlightGain_max> 1.0 </HighlightGain_max>	
+				<highlight_a> 2 </highlight_a>
+				<highlight_x> 1 </highlight_x>
+				<highlight_b> -0.15 </highlight_b>
+			</SOFTCLIP_LUT>
+			<BEZIER_POINT>
+				<BEZIER_POINT_mode> 1 </BEZIER_POINT_mode>
+				<Highlight_EV0> 230 </Highlight_EV0>
+				<Highlight_EV4> 240 </Highlight_EV4>
+				<Midlight_EV0> 128 </Midlight_EV0>
+				<Zerofive_EV0> 180 </Zerofive_EV0>
+				<point_05_x_PWLcurve> 0.1, 0.6, 0.5, 0.9</point_05_x_PWLcurve>
+				<cdf_midlight_PWLcurve> 0.05, 0.25, 1.0, 0.5</cdf_midlight_PWLcurve>
+				<luxGain_ch_PWLcurve> 0.25, 0.80, 0.25, 1.0</luxGain_ch_PWLcurve>
+				<p1Y_ratio> 1.0 </p1Y_ratio>
+				<p1Y_ratio_PWLcurve> 450,470,1,1.8</p1Y_ratio_PWLcurve>
+				<p1y_min> 0.0 </p1y_min>
+				<p1y_max> 0.3 </p1y_max>
+				<p1y_min_PWLcurve>90.0, 70.0, 0.0, 0.5</p1y_min_PWLcurve>
+				<p1y_max_PWLcurve> 90.0, 70.0, 0.3, 0.7</p1y_max_PWLcurve>
+				<p2Y_ratio> 1.0 </p2Y_ratio>
+				<ev4lowlight_PWLcurve> 0.08, 0.30, 0.0, 0.8</ev4lowlight_PWLcurve>
+				<Point3_Alpha> 0.3 </Point3_Alpha>
+				<Point3_Min> 0.5 </Point3_Min>
+				<Point3_Max> 0.9 </Point3_Max>
+			<lowLuxIdx1> 120 </lowLuxIdx1>
+			<lowLuxIdx2> 260 </lowLuxIdx2>
+			<lowLuxIdx3> 320 </lowLuxIdx3>
+			<lowLuxIdx4> 370 </lowLuxIdx4>
+			<lowLuxIdx5> 420 </lowLuxIdx5>
+			<lowLuxIdx6> 480 </lowLuxIdx6>
+			<lowLuxIdx7> 530 </lowLuxIdx7>
+			
+			<BezierPoints1>0, 0, 0.0828571, 0.0457143, 0.17, 0.1, 0.228571, 0.365714, 0.457143, 0.787143, 0.728571, 0.871429, 1, 1</BezierPoints1>
+			<BezierPoints2>0, 0, 0.117143, 0.0542857, 0.214286, 0.205714, 0.338571, 0.414286, 0.462857, 0.73, 0.72, 0.798571, 1, 1</BezierPoints2>
+			<BezierPoints3>0, 0, 0.0857143, 0.0857143, 0.158571, 0.247143, 0.447143, 0.372857, 0.44, 0.617143, 0.801429, 0.752857, 1, 1</BezierPoints3>
+			<BezierPoints4>0, 0, 0.151429, 0.0371429, 0.235714, 0.218571, 0.46, 0.265714, 0.477143, 0.558571, 0.794286, 0.711429, 1, 1</BezierPoints4>
+			<BezierPoints5>0, 0, 0.132857, 0.0585714, 0.254286, 0.175714, 0.427143, 0.352857, 0.694286, 0.574286, 0.775714, 0.677143, 1, 1</BezierPoints5>
+			<BezierPoints6>0, 0, 0.175714, 0.06, 0.315714, 0.225714, 0.527143, 0.354286, 0.567143, 0.507143, 0.792857, 0.612857, 1, 1</BezierPoints6>
+			<BezierPoints7>0, 0, 0.0671429, 0.09, 0.15, 0.241429, 0.408571, 0.297143, 0.477143, 0.558571, 0.687143, 0.575714, 1, 1</BezierPoints7>
+			<LuxIdx1_EV> 150 </LuxIdx1_EV>
+		  <LuxIdx2_EV> 350 </LuxIdx2_EV>
+		  <LuxIdx3_EV>370</LuxIdx3_EV>
+		  <LuxIdx4_EV>420</LuxIdx4_EV>
+		  <LuxIdx5_EV>520</LuxIdx5_EV>
+		  
+		  <EV01_PWLcurve>10.0, 16.0, 0, 0.8</EV01_PWLcurve>
+		  <EV11_PWLcurve>5.9, 7.0, 0, 0</EV11_PWLcurve>
+		  
+			<LuxEV_BezierPoints10>0, 0, 0.0471429, 0.0828571, 0.104286, 0.161429, 0.181429, 0.198571, 0.421429, 0.35, 0.64, 0.495714, 1, 1</LuxEV_BezierPoints10>
+			<LuxEV_BezierPoints11>0, 0, 0.0471429, 0.0828571, 0.104286, 0.161429, 0.181429, 0.198571, 0.421429, 0.35, 0.64, 0.495714, 1, 1</LuxEV_BezierPoints11>
+			<LuxEV_BezierPoints20>0, 0, 0.02, 0.0214286, 0.0542857, 0.0871429, 0.244286, 0.252857, 0.49, 0.348571, 0.748571, 0.66, 1, 1</LuxEV_BezierPoints20>
+			<LuxEV_BezierPoints21>0, 0, 0.02, 0.0214286, 0.0542857, 0.0871429, 0.244286, 0.252857, 0.49, 0.348571, 0.748571, 0.66, 1, 1</LuxEV_BezierPoints21>
+			<LuxEV_BezierPoints30>0, 0, 0.0414286, 0.0585714, 0.118571, 0.0985714, 0.508571, 0.284286, 0.785714, 0.56, 0.907143, 0.782857, 1, 1</LuxEV_BezierPoints30>
+			<LuxEV_BezierPoints31>0, 0, 0.0414286, 0.0585714, 0.118571, 0.0985714, 0.508571, 0.284286, 0.785714, 0.56, 0.907143, 0.782857, 1, 1</LuxEV_BezierPoints31>			
+			<LuxEV_BezierPoints40>0, 0, 0.0528571, 0.0685714, 0.264286, 0.171429, 0.618571, 0.401429, 0.761429, 0.545714, 0.927143, 0.704286, 1, 1</LuxEV_BezierPoints40>
+			<LuxEV_BezierPoints41>0, 0, 0.0528571, 0.0685714, 0.264286, 0.171429, 0.618571, 0.401429, 0.761429, 0.545714, 0.927143, 0.704286, 1, 1</LuxEV_BezierPoints41>
+			<LuxEV_BezierPoints50>0, 0, 0.0971429, 0.00142857, 0.264286, 0.0571429, 0.474286, 0.378571, 0.628571, 0.312857, 0.934286, 0.617143, 1, 1</LuxEV_BezierPoints50>
+			<LuxEV_BezierPoints51>0, 0, 0.0971429, 0.00142857, 0.264286, 0.0571429, 0.474286, 0.378571, 0.628571, 0.312857, 0.934286, 0.617143, 1, 1</LuxEV_BezierPoints51>
+
+				<!-- tunning bezier point mode 1 HDR Modeifined according CDF - CDFt--> 				
+				<LuxIdx_CDF1> 340,355 </LuxIdx_CDF1>	
+				<Bezier_CDFth1> 0,35 </Bezier_CDFth1>	
+				<CDF_PWLcurve1>0.01, 0.02, 0,0</CDF_PWLcurve1>
+				<BezierPointsCDF1>0.0, 0.0, 0.0433, 0.082667, 0.06266, 0.2462, 0.201, 0.3908, 0.484, 0.50267, 0.81997, 0.65334, 1.0, 1.0</BezierPointsCDF1>			
+				
+				<LuxIdx_CDF2> 370,400</LuxIdx_CDF2>	
+				<Bezier_CDFth2> 20,90 </Bezier_CDFth2>	
+				<CDF_PWLcurve2> 0.20, 0.15, 0, 0</CDF_PWLcurve2>
+				<BezierPointsCDF2>0, 0, 0.0814286, 0.0157143, 0.00857143, 0.267143, 0.567143, 0.297143, 0.672857, 0.892857, 0.844286, 0.938571, 1, 1</BezierPointsCDF2>	
+				 
+				<LuxIdx_CDF3> 370,410 </LuxIdx_CDF3>	
+				<Bezier_CDFth3> 0,20 </Bezier_CDFth3>	
+				<CDF_PWLcurve3> 0.008, 0.0008, 0, 0</CDF_PWLcurve3>
+				<BezierPointsCDF3>0, 0, 0.00714286, 0.0171429, 0.25, 0.211429, 0.214286, 0.574286, 0.46, 0.5, 0.781429, 0.597143, 1, 1</BezierPointsCDF3>			
+				
+				<LuxIdx_CDF4> 350,420 </LuxIdx_CDF4>	
+				<Bezier_CDFth4> 0,20 </Bezier_CDFth4>	
+				<CDF_PWLcurve4> 0.037, 0.06, 0, 0</CDF_PWLcurve4>
+				<BezierPointsCDF4>0, 0, 0.0514286, 0.0214286, 0.0971429, 0.09, 0.0557143, 0.27, 0.165714, 0.35, 0.424286, 0.835714, 1, 1</BezierPointsCDF4>			
+				
+				<LuxIdx_CDF5> 0,520 </LuxIdx_CDF5>	
+				<Bezier_CDFth5> 0,20 </Bezier_CDFth5>	
+			<CDF_PWLcurve5> 0.14, 0.19, 0, 0.8</CDF_PWLcurve5>
+			<BezierPointsCDF5>0, 0, 0.0357143, 0.0342857, 0.15, 0.184286, 0.258571, 0.265714, 0.332857, 0.615714, 0.577143, 0.575714, 1, 1</BezierPointsCDF5>			
+				
+			</BEZIER_POINT>
+			<BT2446>
+				<BT2446_gamma_min> 1.8 </BT2446_gamma_min>
+				<BT2446_gamma_max> 2.0 </BT2446_gamma_max>
+				<Reg__L_HDR> 1600.0 </Reg__L_HDR>
+				<Reg__L_SDR> 400.0 </Reg__L_SDR>
+			</BT2446>
+			<HIST>
+				<Reg__pctBlack> 1.0 </Reg__pctBlack>
+				<Reg__pctShadow> 3.0 </Reg__pctShadow>
+				<Reg__pctMidtone> 20 </Reg__pctMidtone>
+				<Reg__pctBright> 70 </Reg__pctBright>
+				<Reg__pctSpecular> 90.0 </Reg__pctSpecular>
+			<IIR_alpha> 0.96 </IIR_alpha>
+				<Reg__Pre_gm> 1.6 </Reg__Pre_gm>
+			</HIST>
+			<BEZIER_LUT>
+            <IIR_alpha_bezier> 0.93 </IIR_alpha_bezier>
+				<bright_th1>0.0</bright_th1>
+				<bright_th2> 0.05</bright_th2>
+				<bld_alpha_min> 1.0 </bld_alpha_min>
+				<bld_alpha_max> 0.0 </bld_alpha_max>
+				<weight1_th1> 300.0 </weight1_th1>
+				<weight1_th2> 450.0 </weight1_th2>
+			<weight1_min> 1.0 </weight1_min>
+				<weight1_max> 1.0 </weight1_max>
+				<weight2_th1> 300.0 </weight2_th1>
+				<weight2_th2> 450.0 </weight2_th2>
+				<weight2_min> 1.0 </weight2_min>
+				<weight2_max> 1.0 </weight2_max>
+			</BEZIER_LUT>
+			<FixBezier_LUT>
+				<Enable> 0 </Enable>
+				 <LUT>0,0,0.000000,0.000000,0.03,0.35,0.2,0.8,0.3,0.95,1.000000,1.000000, 1.0, 1.0</LUT>
+			</FixBezier_LUT>
+		</GTM>
+		<RegGTM version="0.7">
+			<COMMON>
+				<EnGTM bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 1 </EnGTM>
+				<!--0: off, out = in, 1: on -->
+				<frontICSC bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 1 </frontICSC>
+				<!--0: off, for RGB input; 1: on, for YUV input; turn on only input is YUV -->
+				<frontICSC_coef bitDepth="12" valMin="-2048" valMax="2047" size="9" dbuf="1"> 1026,3,1613,1023,-193,-479,1024,1900,0 </frontICSC_coef>
+				<!--coef of front iCSC -->
+				<frontICSC_ofst bitDepth="10" valMin="0" valMax="512" size="3" dbuf="1"> 0,512,512 </frontICSC_ofst>
+				<!--offset of front iCSC -->
+				<backCSC bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </backCSC>
+				<!--0: off; 1: on; turn on only if input is RGB and EnGTM is 0 -->
+				<backCSC_coef bitDepth="12" valMin="-2048" valMax="2047" size="9" dbuf="1"> 218,732,74,-117,-395,512,512,-465,-48 </backCSC_coef>
+				<!--coef of back CSC -->
+				<backCSC_ofst bitDepth="10" valMin="0" valMax="512" size="3" dbuf="1"> 0,512,512 </backCSC_ofst>
+				<!--offset of back CSC -->
+				<LUTfromAP bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 1 </LUTfromAP>
+				<!--0: from IC DSW, 1: from AP metadata -->
+				<EnForceEV bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </EnForceEV>
+				<!-- 0：EV from AP metadata -->
+				<ValForceEV bitDepth="24" valMin="0" valMax="16777215" size="1" dbuf="1"> 0 </ValForceEV>
+				<!-- u10.14 -->
+				<valHistNrm bitDepth="27" valMin="0" valMax="67108864" size="1" dbuf="1"> 0 </valHistNrm>
+				<!-- u17.10 -->
+				<valSoftClipNrm bitDepth="25" valMin="0" valMax="16777216" size="1" dbuf="1"> 0 </valSoftClipNrm>
+				<!-- u15.10 -->
+			</COMMON>
+			<HistSta>
+				<Hist_RGB2Y bitDepth="11" valMin="0" valMax="2047" size="3" dbuf="0"> 306,601,117 </Hist_RGB2Y>
+				<!-- u1.10 -->
+				<Hist_MrgYRGB_alpha bitDepth="7" valMin="0" valMax="64" size="1" dbuf="0"> 32 </Hist_MrgYRGB_alpha>
+				<!-- u0.7 -->
+				<Hist_DSPhase_Hor bitDepth="1" valMin="0" valMax="1" size="1" dbuf="0"> 0 </Hist_DSPhase_Hor>
+				<!-- u1; 0: keep even; 1: keep odd -->
+				<Hist_DSPhase_Ver bitDepth="1" valMin="0" valMax="1" size="1" dbuf="0"> 0 </Hist_DSPhase_Ver>
+				<!-- u1; 0: keep even; 1: keep odd -->
+				<Hist_window_En bitDepth="1" valMin="0" valMax="1" size="1" dbuf="0"> 0 </Hist_window_En>
+				<!-- u1; 0: off; 1: on -->
+				<Hist_window_startHor bitDepth="12" valMin="0" valMax="4095" size="1" dbuf="0"> 100 </Hist_window_startHor>
+				<!-- u1; hist window start X_coor / 2 -->
+				<Hist_window_startVer bitDepth="12" valMin="0" valMax="4095" size="1" dbuf="0"> 15 </Hist_window_startVer>
+				<!-- u1; hist window start Y_coor / 2 -->
+				<Hist_window_endHor bitDepth="12" valMin="0" valMax="4095" size="1" dbuf="0"> 350 </Hist_window_endHor>
+				<!-- u1; hist window end X_coor / 2 -->
+				<Hist_window_endVer bitDepth="12" valMin="0" valMax="4095" size="1" dbuf="0"> 530 </Hist_window_endVer>
+				<!-- u1; hist window end Y_coor / 2 -->
+			</HistSta>
+			<Bezier>
+				<Bezier_RGB2Y bitDepth="11" valMin="0" valMax="2047" size="3" dbuf="0"> 306,601,117 </Bezier_RGB2Y>
+				<!-- u1.10 -->
+				<Bezier_MrgYRGB_alpha bitDepth="7" valMin="0" valMax="64" size="1" dbuf="0"> 32 </Bezier_MrgYRGB_alpha>
+				<!-- u0.7 -->
+		<Bezier_EnNrm bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </Bezier_EnNrm> <!-- 0：disable -->
+				<!-- 0：disable -->
+				<Bezier_EnSoftClipLUT bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </Bezier_EnSoftClipLUT>
+				<!-- 0：disable -->
+				<Bezier_softClip_BldAlpha bitDepth="11" valMin="0" valMax="1024" size="1" dbuf="1"> 512 </Bezier_softClip_BldAlpha>
+				<!-- u0.11 -->
+		<Bezier_softClip_BldWeight1 bitDepth="11" valMin="0" valMax="1024" size="1" dbuf="1"> 1024 </Bezier_softClip_BldWeight1> <!-- u0.11 -->
+				<!-- u0.11 -->
+		<Bezier_softClip_BldWeight2 bitDepth="11" valMin="0" valMax="1024" size="1" dbuf="1"> 1024 </Bezier_softClip_BldWeight2> <!-- u0.11 -->
+				<!-- u0.11 -->
+				<Bezier_EnBezierLUT bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 1 </Bezier_EnBezierLUT>
+				<!-- 0：disable -->
+		<Bezier_EnHgmLUT bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </Bezier_EnHgmLUT> <!-- 0：disable -->
+				<!-- 0：disable -->
+		<Bezier_EnLgmLUT bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </Bezier_EnLgmLUT> <!-- 0：disable -->
+				<!-- 0：disable -->
+				<Bezier_EnForceRatio bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </Bezier_EnForceRatio>
+				<!-- 0：disable -->
+				<Bezier_ValForceRatio bitDepth="16" valMin="0" valMax="65535" size="1" dbuf="0"> 1 </Bezier_ValForceRatio>
+				<!-- u6.10 -->
+			</Bezier>
+			<BT2446>
+				<BT2446_RGB2Y bitDepth="11" valMin="0" valMax="2047" size="3" dbuf="0"> 218,732,74 </BT2446_RGB2Y>
+				<!-- u1.10, RGB2Y -->
+				<BT2446_BY2U bitDepth="22" valMin="0" valMax="2097152" size="1" dbuf="0"> 1104 </BT2446_BY2U>
+				<!-- u1.10, B-Y/BY2U, = 2097152 / 1900 -->
+				<BT2446_RY2V bitDepth="22" valMin="0" valMax="2097152" size="1" dbuf="0"> 1300 </BT2446_RY2V>
+				<!-- u1.10 = 2097152 / 1613 -->
+				<BT2446_uvCompGain bitDepth="8" valMin="0" valMax="255" size="1" dbuf="1"> 70 </BT2446_uvCompGain>
+				<!-- u2.6 -->
+				<BT2446_EnRGBGamma bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 1 </BT2446_EnRGBGamma>
+				<!-- 0: disable -->
+		<BT2446_EnY2446 bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </BT2446_EnY2446>  <!-- 0: disable -->
+				<!-- 0: disable -->
+		<BT2446_EnDynGamma bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </BT2446_EnDynGamma>  <!-- 0: disable -->
+				<!-- 0: disable -->
+				<BT2446_EnForceUVRatio bitDepth="1" valMin="0" valMax="1" size="1" dbuf="1"> 0 </BT2446_EnForceUVRatio>
+				<!-- 0：disable -->
+				<BT2446_ValForceUVRatio bitDepth="11" valMin="0" valMax="2047" size="1" dbuf="1"> 1 </BT2446_ValForceUVRatio>
+				<!-- u1.10 -->
+				<BT2446_AdjLuma bitDepth="8" valMin="0" valMax="64" size="1" dbuf="1"> 13 </BT2446_AdjLuma>
+				<!-- u1.6 -->
+			</BT2446>
+			<DebugMap>
+				<DebugMap_En bitDepth="1" valMin="0" valMax="1" size="1" dbuf="0"> 0 </DebugMap_En>
+				<!-- 0: off, 1: on -->
+				<DebugMap_Idx bitDepth="4" valMin="0" valMax="15" size="1" dbuf="0"> 9 </DebugMap_Idx>
+				<!-- u5 -->
+				<DebugMap_RSB_C1 bitDepth="3" valMin="0" valMax="7" size="1" dbuf="0"> 6 </DebugMap_RSB_C1>
+				<!-- Right shift bit value for debug map output -->
+				<DebugMap_RSB_C2 bitDepth="3" valMin="0" valMax="7" size="1" dbuf="0"> 6 </DebugMap_RSB_C2>
+				<!-- Right shift bit value for debug map output -->
+				<DebugMap_RSB_C3 bitDepth="3" valMin="0" valMax="7" size="1" dbuf="0"> 6 </DebugMap_RSB_C3>
+				<!-- Right shift bit value for debug map output -->
+			</DebugMap>
+		</RegGTM>
+	</NRGtmAttri>	
+</IC2APNode>

@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GTRConfig version="2.0.10.0">
+    <BaseConfig>
+        <!-- 0: front gtr skin, 1: front gtr HD, 2: front lowlight HD, 3: back gtr skin, 4: back gtr HD, 5: back super group photo HD -->
+        <AlgoMode>4</AlgoMode>
+        <!-- max number of faces can be processed -->
+        <MaxFaceNum>3</MaxFaceNum>
+        <!-- enable drcGain or not -->
+        <UseDrcgain>0</UseDrcgain>
+        <!-- border rate for blending HD result with input -->
+        <BlendRate>30</BlendRate>
+        <!-- algorithm run condition -->
+        <GlobalRunCondition use="1">
+            <!-- lumType: 0 means ISO, 1 means LuxIndex -->
+            <LumVal type="0" min="0" max="25600"></LumVal>
+            <!-- roll: [minRoll,maxRoll], yaw: [minYaw, maxYaw], pitch: [minPitch, maxPitch] -->
+            <FaceAngle minRoll="0" maxRoll="360" minYaw="-90" maxYaw="90" minPitch="-90" maxPitch="90"></FaceAngle>
+        </GlobalRunCondition>
+        <DetailConfig>
+            <A>6.6162771e-7</A>
+            <B>-0.6937669</B>
+            <MinC>0.25</MinC>
+            <OrganMaxV>256</OrganMaxV>
+            <SkinRate>1.0</SkinRate>
+            <FiveOrganRate>1.0</FiveOrganRate>
+        </DetailConfig>
+        <!-- method: 0 - USM, 1 - Pyramid-->
+        <SharpenConfig method="0">
+            <USM>
+                <Sigma>1.0</Sigma>
+                <Weight>1.0</Weight>
+                <Threshold>1</Threshold>
+            </USM>
+            <Pyramid>
+                <!-- maximum levelMum is 4 -->
+                <LevelNum>3</LevelNum>
+                <Levels>16 64 256</Levels>
+            </Pyramid>
+        </SharpenConfig>
+        <!-- FaceBoxConfig: method 0 - use 103 landmark, 1 - use 127 landmark, 2 - only use face box -->
+        <FaceBoxConfig method="0">
+            <!-- face box expand rate. -->
+            <ExpandRateL>0.20</ExpandRateL>
+            <ExpandRateT>0.65</ExpandRateT>
+            <ExpandRateR>0.20</ExpandRateR>
+            <ExpandRateB>0.35</ExpandRateB>
+        </FaceBoxConfig>
+    </BaseConfig>
+
+    <!-- model config list -->
+    <ModelConfigList>
+        <!-- for small face, low zoom, cover all lum range. -->
+        <ModelConfig use="1" nid="0" engine="7" device="0" power="0" thread="1" space2depth="0" resi="1" range="0">
+            <ModelPath>gtr_rc205_mt6991_00.vdnn</ModelPath>
+            <InputNode>input_0</InputNode>
+            <OutputNode>conv2d_35</OutputNode>
+        </ModelConfig>
+        <!-- for middle face, low zoom, cover all lum range. -->
+        <ModelConfig use="1" nid="1" engine="7" device="0" power="0" thread="1" space2depth="0" resi="1" range="0">
+            <ModelPath>gtr_rc205_mt6991_01.vdnn</ModelPath>
+            <InputNode>input_0</InputNode>
+            <OutputNode>conv2d_35</OutputNode>
+        </ModelConfig>
+        <!-- for big face, low zoom, cover all lum range. -->
+        <ModelConfig use="1" nid="2" engine="7" device="0" power="0" thread="1" space2depth="0" resi="1" range="0">
+            <ModelPath>gtr_rc205_mt6991_02.vdnn</ModelPath>
+            <InputNode>input_0</InputNode>
+            <OutputNode>conv2d_36</OutputNode>
+        </ModelConfig>
+    </ModelConfigList>
+
+    <!-- effect config list, segment according to UIZoomRatio and lum (ISO or LuxIndex). -->
+    <EffectConfigList lumType="0">
+        <!-- uiZoomRatio: [minUIZoomRatio, maxUIZoomRatio), lum: [minLum, maxLum) -->
+        <EffectConfig minUIZoomRatio="1.0" maxUIZoomRatio="2.0" minLum="0" maxLum="200">
+            <!-- local algorithm run condition -->
+            <LocalRunCondition use="1">
+                <!-- min Laplacian Clarity Threshold, won't run algorithm if the laplacian clarity of face region lower than this config value. -->
+                <MinLaplacian>2.4 1.6 1.4</MinLaplacian>
+            </LocalRunCondition>
+            <!-- model selector base on face size: the long border length of face box. if only one face received, use SingalFaceThreshold as MinFace size for bigModel. -->
+            <ModelSelector useSingalFaceThreshold="1" SingalFaceThreshold="790">
+                <MinFace use="1" minFace="128" maxFace="560"  minConfidence="0.1" nid="0"></MinFace>
+                <MidFace use="1" minFace="560" maxFace="790"  minConfidence="0.1" nid="1"></MidFace>
+                <MaxFace use="1" minFace="790" maxFace="6000" minConfidence="0.0" nid="2"></MaxFace>
+            </ModelSelector>
+            <!-- fusion weights with netout of Input -->
+            <HDFusionWeight useHighlightThreshold="1" highlightThreshold="256">
+                <!-- corresponding to the regions: hair|eye|brow|mouth|skin|bodyWithoutFace|background -->
+                <MinFace use="1">0.90 0.80 0.70 0.90 0.90 0.80 0.00</MinFace>
+                <MidFace use="1">0.65 0.80 1.00 1.00 0.85 0.80 0.00</MidFace>
+                <MaxFace use="1">0.85 1.00 1.00 1.00 1.00 1.00 0.00</MaxFace>
+            </HDFusionWeight>
+            <!-- fusion weights with sharpen of Input -->
+            <SharpenFusionWeight useHighlightThreshold="1" highlightThreshold="256">
+                <!-- corresponding to the regions: hair|eye|brow|mouth|skin|bodyWithoutFace|background -->
+                <MinFace use="1">0.20 0.10 0.10 0.40 0.30 0.20 0.00</MinFace>
+                <MidFace use="1">0.20 0.20 0.20 0.40 0.30 0.20 0.00</MidFace>
+                <MaxFace use="0">0.00 0.00 0.00 0.00 0.00 0.00 0.00</MaxFace>
+            </SharpenFusionWeight>
+            <!-- hd post process method: 0 without detail, 1 with detail -->
+            <HDPostMethod>
+                <MinFace>1</MinFace>
+                <MidFace>1</MidFace>
+                <MaxFace>1</MaxFace>
+            </HDPostMethod>
+        </EffectConfig>
+        <EffectConfig minUIZoomRatio="1.0" maxUIZoomRatio="2.0" minLum="200" maxLum="3200">
+            <!-- local algorithm run condition -->
+            <LocalRunCondition use="1">
+                <!-- min Laplacian Clarity Threshold, won't run algorithm if the laplacian clarity of face region lower than this config value. -->
+                <MinLaplacian>2.4 1.6 1.4</MinLaplacian>
+            </LocalRunCondition>
+            <!-- model selector base on face size: the long border length of face box. if only one face received, use SingalFaceThreshold as MinFace size for bigModel. -->
+            <ModelSelector useSingalFaceThreshold="1" SingalFaceThreshold="790">
+                <MinFace use="1" minFace="128" maxFace="560"  minConfidence="0.1" nid="0"></MinFace>
+                <MidFace use="1" minFace="560" maxFace="790"  minConfidence="0.1" nid="1"></MidFace>
+                <MaxFace use="1" minFace="790" maxFace="6000" minConfidence="0.0" nid="2"></MaxFace>
+            </ModelSelector>
+            <!-- fusion weights with netout of Input -->
+            <HDFusionWeight useHighlightThreshold="1" highlightThreshold="256">
+                <!-- corresponding to the regions: hair|eye|brow|mouth|skin|bodyWithoutFace|background -->
+                <MinFace use="1">0.90 0.80 0.80 0.90 0.90 0.80 0.00</MinFace>
+                <MidFace use="1">0.65 0.80 1.00 1.00 0.85 0.80 0.00</MidFace>
+                <MaxFace use="1">0.85 1.00 1.00 1.00 1.00 1.00 0.00</MaxFace>
+            </HDFusionWeight>
+            <!-- fusion weights with sharpen of Input -->
+            <SharpenFusionWeight useHighlightThreshold="1" highlightThreshold="256">
+                <!-- corresponding to the regions: hair|eye|brow|mouth|skin|bodyWithoutFace|background -->
+                <MinFace use="1">0.20 0.20 0.20 0.40 0.30 0.20 0.00</MinFace>
+                <MidFace use="1">0.20 0.20 0.20 0.40 0.30 0.20 0.00</MidFace>
+                <MaxFace use="0">0.00 0.00 0.00 0.00 0.00 0.00 0.00</MaxFace>
+            </SharpenFusionWeight>
+            <!-- hd post process method: 0 without detail, 1 with detail -->
+            <HDPostMethod>
+                <MinFace>1</MinFace>
+                <MidFace>1</MidFace>
+                <MaxFace>1</MaxFace>
+            </HDPostMethod>
+        </EffectConfig>
+        <EffectConfig minUIZoomRatio="1.0" maxUIZoomRatio="2.0" minLum="3200" maxLum="25600">
+            <!-- local algorithm run condition -->
+            <LocalRunCondition use="1">
+                <!-- min Laplacian Clarity Threshold, won't run algorithm if the laplacian clarity of face region lower than this config value. -->
+                <MinLaplacian>2.4 1.6 1.4</MinLaplacian>
+            </LocalRunCondition>
+            <!-- model selector base on face size: the long border length of face box. if only one face received, use SingalFaceThreshold as MinFace size for bigModel. -->
+            <ModelSelector useSingalFaceThreshold="1" SingalFaceThreshold="790">
+                <MinFace use="1" minFace="128" maxFace="560"  minConfidence="0.1" nid="0"></MinFace>
+                <MidFace use="1" minFace="560" maxFace="790"  minConfidence="0.1" nid="1"></MidFace>
+                <MaxFace use="1" minFace="790" maxFace="6000" minConfidence="0.0" nid="2"></MaxFace>
+            </ModelSelector>
+            <!-- fusion weights with netout of Input -->
+            <HDFusionWeight useHighlightThreshold="1" highlightThreshold="256">
+                <!-- corresponding to the regions: hair|eye|brow|mouth|skin|bodyWithoutFace|background -->
+                <MinFace use="1">0.85 0.85 0.80 0.90 0.90 0.80 0.00</MinFace>
+                <MidFace use="1">0.65 0.80 1.00 1.00 0.85 0.80 0.00</MidFace>
+                <MaxFace use="1">0.85 1.00 1.00 1.00 1.00 1.00 0.00</MaxFace>
+            </HDFusionWeight>
+            <!-- fusion weights with sharpen of Input -->
+            <SharpenFusionWeight useHighlightThreshold="1" highlightThreshold="256">
+                <!-- corresponding to the regions: hair|eye|brow|mouth|skin|bodyWithoutFace|background -->
+                <MinFace use="1">0.20 0.20 0.20 0.40 0.30 0.20 0.00</MinFace>
+                <MidFace use="1">0.20 0.20 0.20 0.40 0.30 0.20 0.00</MidFace>
+                <MaxFace use="0">0.00 0.00 0.00 0.00 0.00 0.00 0.00</MaxFace>
+            </SharpenFusionWeight>
+            <!-- hd post process method: 0 without detail, 1 with detail -->
+            <HDPostMethod>
+                <MinFace>1</MinFace>
+                <MidFace>1</MidFace>
+                <MaxFace>1</MaxFace>
+            </HDPostMethod>
+        </EffectConfig>
+        <EffectConfig minUIZoomRatio="2.0" maxUIZoomRatio="3.0" minLum="0" maxLum="3200">
+            <!-- local algorithm run condition -->
+            <LocalRunCondition use="1">
+                <!-- min Laplacian Clarity Threshold, won't run algorithm if the laplacian clarity of face region lower than this config value. -->
+                <MinLaplacian>2.4 1.6 1.4</MinLaplacian>
+            </LocalRunCondition>
+            <!-- model selector base on face size: the long border length of face box. if only one face received, use SingalFaceThreshold as MinFace size for bigModel. -->
+            <ModelSelector useSingalFaceThreshold="1" SingalFaceThreshold="790">
+                <MinFace use="1" minFace="128" maxFace="560"  minConfidence="0.1" nid="0"></MinFace>
+                <MidFace use="1" minFace="560" maxFace="790"  minConfidence="0.1" nid="1"></MidFace>
+                <MaxFace use="1" minFace="790" maxFace="6000" minConfidence="0.0" nid="2"></MaxFace>
+            </ModelSelector>
+            <!-- fusion weights with netout of Input -->
+            <HDFusionWeight useHighlightThreshold="1" highlightThreshold="256">
+                <!-- corresponding to the regions: hair|eye|brow|mouth|skin|bodyWithoutFace|background -->
+                <MinFace use="1">0.90 0.85 0.80 0.90 0.90 0.80 0.00</MinFace>
+                <MidFace use="1">0.65 0.80 1.00 1.00 0.85 0.80 0.00</MidFace>
+                <MaxFace use="1">0.85 1.00 1.00 1.00 1.00 1.00 0.00</MaxFace>
+            </HDFusionWeight>
+            <!-- fusion weights with sharpen of Input -->
+            <SharpenFusionWeight useHighlightThreshold="1" highlightThreshold="256">
+                <!-- corresponding to the regions: hair|eye|brow|mouth|skin|bodyWithoutFace|background -->
+                <MinFace use="1">0.20 0.20 0.20 0.40 0.30 0.20 0.00</MinFace>
+                <MidFace use="1">0.20 0.20 0.20 0.40 0.30 0.20 0.00</MidFace>
+                <MaxFace use="1">0.20 0.20 0.20 0.40 0.60 0.30 0.00</MaxFace>
+            </SharpenFusionWeight>
+            <!-- hd post process method: 0 without detail, 1 with detail -->
+            <HDPostMethod>
+                <MinFace>1</MinFace>
+                <MidFace>1</MidFace>
+                <MaxFace>1</MaxFace>
+            </HDPostMethod>
+        </EffectConfig>
+        <EffectConfig minUIZoomRatio="2.0" maxUIZoomRatio="3.0" minLum="3200" maxLum="25600">
+            <!-- local algorithm run condition -->
+            <LocalRunCondition use="1">
+                <!-- min Laplacian Clarity Threshold, won't run algorithm if the laplacian clarity of face region lower than this config value. -->
+                <MinLaplacian>2.4 1.6 1.4</MinLaplacian>
+            </LocalRunCondition>
+            <!-- model selector base on face size: the long border length of face box. if only one face received, use SingalFaceThreshold as MinFace size for bigModel. -->
+            <ModelSelector useSingalFaceThreshold="1" SingalFaceThreshold="790">
+                <MinFace use="1" minFace="128" maxFace="560"  minConfidence="0.1" nid="0"></MinFace>
+                <MidFace use="1" minFace="560" maxFace="790"  minConfidence="0.1" nid="1"></MidFace>
+                <MaxFace use="1" minFace="790" maxFace="6000" minConfidence="0.0" nid="2"></MaxFace>
+            </ModelSelector>
+            <!-- fusion weights with netout of Input -->
+            <HDFusionWeight useHighlightThreshold="1" highlightThreshold="256">
+                <!-- corresponding to the regions: hair|eye|brow|mouth|skin|bodyWithoutFace|background -->
+                <MinFace use="1">0.85 0.85 0.90 0.70 0.90 0.50 0.00</MinFace>
+                <MidFace use="1">0.45 0.80 1.00 1.00 0.85 0.80 0.00</MidFace>
+                <MaxFace use="1">0.85 1.00 1.00 1.00 1.00 1.00 0.00</MaxFace>
+            </HDFusionWeight>
+            <!-- fusion weights with sharpen of Input -->
+            <SharpenFusionWeight useHighlightThreshold="1" highlightThreshold="256">
+                <!-- corresponding to the regions: hair|eye|brow|mouth|skin|bodyWithoutFace|background -->
+                <MinFace use="1">0.20 0.20 0.20 0.40 0.30 0.20 0.00</MinFace>
+                <MidFace use="1">0.20 0.20 0.20 0.40 0.30 0.20 0.00</MidFace>
+                <MaxFace use="0">0.00 0.00 0.00 0.00 0.00 0.00 0.00</MaxFace>
+            </SharpenFusionWeight>
+            <!-- hd post process method: 0 without detail, 1 with detail -->
+            <HDPostMethod>
+                <MinFace>1</MinFace>
+                <MidFace>1</MidFace>
+                <MaxFace>1</MaxFace>
+            </HDPostMethod>
+        </EffectConfig>
+       <EffectConfig minUIZoomRatio="3.0" maxUIZoomRatio="8.0" minLum="0" maxLum="25600">
+            <!-- local algorithm run condition -->
+            <LocalRunCondition use="0">
+                <!-- min Laplacian Clarity Threshold, won't run algorithm if the laplacian clarity of face region lower than this config value. -->
+                <MinLaplacian>2.0 2.0 2.0</MinLaplacian>
+            </LocalRunCondition>
+            <!-- model selector base on face size: the long border length of face box. if only one face received, use SingalFaceThreshold as MinFace size for bigModel. -->
+            <ModelSelector useSingalFaceThreshold="1" SingalFaceThreshold="790">
+                <MinFace use="1" minFace="128" maxFace="560"  minConfidence="0.1" nid="0"></MinFace>
+                <MidFace use="1" minFace="560" maxFace="790"  minConfidence="0.1" nid="1"></MidFace>
+                <MaxFace use="1" minFace="790" maxFace="6000" minConfidence="0.0" nid="2"></MaxFace>
+            </ModelSelector>
+            <!-- fusion weights with netout of Input -->
+            <HDFusionWeight useHighlightThreshold="1" highlightThreshold="256">
+                <!-- corresponding to the regions: hair|eye|brow|mouth|skin|bodyWithoutFace|background -->
+                <MinFace use="1">0.80 0.80 0.80 0.80 0.60 0.80 0.00</MinFace>
+                <MidFace use="1">0.85 0.90 0.90 0.90 0.85 0.70 0.00</MidFace>
+                <MaxFace use="1">0.90 0.85 0.90 0.90 1.00 0.80 0.00</MaxFace>
+            </HDFusionWeight>
+            <!-- fusion weights with sharpen of Input -->
+            <SharpenFusionWeight useHighlightThreshold="1" highlightThreshold="256">
+                <!-- corresponding to the regions: hair|eye|brow|mouth|skin|bodyWithoutFace|background -->
+                <MinFace use="0">0.00 0.00 0.00 0.00 0.00 0.00 0.00</MinFace>
+                <MidFace use="0">0.00 0.00 0.00 0.00 0.00 0.00 0.00</MidFace>
+                <MaxFace use="0">0.00 0.00 0.00 0.00 0.00 0.00 0.00</MaxFace>
+            </SharpenFusionWeight>
+            <!-- hd post process method: 0 without detail, 1 with detail -->
+            <HDPostMethod>
+                <MinFace>1</MinFace>
+                <MidFace>1</MidFace>
+                <MaxFace>1</MaxFace>
+            </HDPostMethod>
+        </EffectConfig>
+       <EffectConfig minUIZoomRatio="8.0" maxUIZoomRatio="20.0" minLum="0" maxLum="25600">
+            <!-- local algorithm run condition -->
+            <LocalRunCondition use="0">
+                <!-- min Laplacian Clarity Threshold, won't run algorithm if the laplacian clarity of face region lower than this config value. -->
+                <MinLaplacian>2.0 2.0 2.0</MinLaplacian>
+            </LocalRunCondition>
+            <!-- model selector base on face size: the long border length of face box. if only one face received, use SingalFaceThreshold as MinFace size for bigModel. -->
+            <ModelSelector useSingalFaceThreshold="1" SingalFaceThreshold="790">
+                <MinFace use="1" minFace="128" maxFace="560"  minConfidence="0.1" nid="0"></MinFace>
+                <MidFace use="1" minFace="560" maxFace="790"  minConfidence="0.1" nid="1"></MidFace>
+                <MaxFace use="1" minFace="790" maxFace="6000" minConfidence="0.0" nid="2"></MaxFace>
+            </ModelSelector>
+            <!-- fusion weights with netout of Input -->
+            <HDFusionWeight useHighlightThreshold="1" highlightThreshold="256">
+                <!-- corresponding to the regions: hair|eye|brow|mouth|skin|bodyWithoutFace|background -->
+                <MinFace use="1">0.80 0.80 0.80 0.80 0.60 0.80 0.00</MinFace>
+                <MidFace use="1">0.85 0.90 0.90 0.90 0.85 0.70 0.00</MidFace>
+                <MaxFace use="1">0.90 0.85 0.90 0.90 1.00 0.80 0.00</MaxFace>
+            </HDFusionWeight>
+            <!-- fusion weights with sharpen of Input -->
+            <SharpenFusionWeight useHighlightThreshold="1" highlightThreshold="256">
+                <!-- corresponding to the regions: hair|eye|brow|mouth|skin|bodyWithoutFace|background -->
+                <MinFace use="0">0.00 0.00 0.00 0.00 0.00 0.00 0.00</MinFace>
+                <MidFace use="0">0.00 0.00 0.00 0.00 0.00 0.00 0.00</MidFace>
+                <MaxFace use="0">0.00 0.00 0.00 0.00 0.00 0.00 0.00</MaxFace>
+            </SharpenFusionWeight>
+            <!-- hd post process method: 0 without detail, 1 with detail -->
+            <HDPostMethod>
+                <MinFace>1</MinFace>
+                <MidFace>1</MidFace>
+                <MaxFace>1</MaxFace>
+            </HDPostMethod>
+        </EffectConfig>
+        <EffectConfig minUIZoomRatio="20.0" maxUIZoomRatio="100.1" minLum="0" maxLum="25600">
+            <!-- local algorithm run condition -->
+            <LocalRunCondition use="0">
+                <!-- min Laplacian Clarity Threshold, won't run algorithm if the laplacian clarity of face region lower than this config value. -->
+                <MinLaplacian>2.0 2.0 2.0</MinLaplacian>
+            </LocalRunCondition>
+            <!-- model selector base on face size: the long border length of face box. if only one face received, use SingalFaceThreshold as MinFace size for bigModel. -->
+            <ModelSelector useSingalFaceThreshold="1" SingalFaceThreshold="790">
+                <MinFace use="1" minFace="128" maxFace="560"  minConfidence="0.1" nid="0"></MinFace>
+                <MidFace use="1" minFace="560" maxFace="790"  minConfidence="0.1" nid="1"></MidFace>
+                <MaxFace use="1" minFace="790" maxFace="6000" minConfidence="0.0" nid="2"></MaxFace>
+            </ModelSelector>
+            <!-- fusion weights with netout of Input -->
+            <HDFusionWeight useHighlightThreshold="1" highlightThreshold="256">
+                <!-- corresponding to the regions: hair|eye|brow|mouth|skin|bodyWithoutFace|background -->
+                <MinFace use="1">0.80 1.00 0.90 1.00 1.00 0.60 0.00</MinFace>
+                <MidFace use="1">0.40 0.50 0.70 0.70 0.70 0.80 0.00</MidFace>
+                <MaxFace use="1">0.50 0.50 0.60 0.50 0.60 0.70 0.00</MaxFace>
+            </HDFusionWeight>
+            <!-- fusion weights with sharpen of Input -->
+            <SharpenFusionWeight useHighlightThreshold="1" highlightThreshold="256">
+                <!-- corresponding to the regions: hair|eye|brow|mouth|skin|bodyWithoutFace|background -->
+                <MinFace use="0">0.00 0.00 0.00 0.00 0.00 0.00 0.00</MinFace>
+                <MidFace use="0">0.00 0.00 0.00 0.00 0.00 0.00 0.00</MidFace>
+                <MaxFace use="0">0.00 0.00 0.00 0.00 0.00 0.00 0.00</MaxFace>
+            </SharpenFusionWeight>
+            <!-- hd post process method: 0 without detail, 1 with detail -->
+            <HDPostMethod>
+                <MinFace>1</MinFace>
+                <MidFace>1</MidFace>
+                <MaxFace>1</MaxFace>
+            </HDPostMethod>
+        </EffectConfig>
+    </EffectConfigList>
+</GTRConfig>

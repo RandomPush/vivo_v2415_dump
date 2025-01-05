@@ -1,0 +1,4 @@
+service vendor.sectee /vendor/bin/hw/vendor.vivo.hardware.sectee@1.0-service
+    class main
+    user system
+    group system

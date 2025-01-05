@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * vivo copyright
+ */
+-->
+<settings version="1.0">
+
+<!-- begin for preview in hal -->
+<bool name="vas_hal">true</bool>
+<!-- end for preview in hal -->
+
+<!-- begin for sat nonCenterCrop Plstform support -->
+<bool name="nonCenterCrop">true</bool>
+<!-- end for sat nonCenterCrop Plstform support -->
+
+<!-- for c2ps lib name -->
+<string name="C2PS_LIB_PATH">libmtkcam_c2psperfctrl.so</string>
+<!-- end for c2ps lib name -->
+
+<!-- begin for vivo_affinity -->
+<integer-array name="affinity_cpu">
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+    <item>7</item>
+</integer-array>
+<integer-array name="affinity_cpu_portrait">
+    <item>4</item>
+    <item>5</item>
+</integer-array>
+<!-- begin for vivo_affinity -->
+
+<!-- change thread priority -->
+<integer  name="changePriority">-16</integer >
+<!-- change thread priority -->
+
+<!-- go to gallery need increase GPU&CPU frequency -->
+<integer  name="gallery_perf_args_size">16</integer >
+<integer-array name="gallery_perf_args">
+    <item>0x00408000</item>
+    <item>2100000</item>
+    <item>0x00408100</item>
+    <item>2800000</item>
+    <item>0x00408200</item>
+    <item>3600000</item>
+    <item>0x0040c000</item>
+    <item>2100000</item>
+    <item>0x0040c100</item>
+    <item>2800000</item>
+    <item>0x0040c200</item>
+    <item>3600000</item>
+    <item>0x00c00000</item>
+    <item>10</item>
+    <item>0x00c04000</item>
+    <item>10</item>
+</integer-array>
+<integer  name="gallery_perf_time">10000</integer >
+<!-- go to gallery need increase GPU&CPU frequency -->
+
+</settings>

@@ -1,0 +1,6 @@
+<MtkConfig version="1.0.1.1">
+	<!--threadNums: 线程数量 threadMems: 模型dmaBuffer数量-->
+	<CpuConfig id="cpuconfig" threadNums="4" threadMems="4" cpuLevel="100" />
+	<MarcoModelPath id="macro" moldelChangeTime="2022-06-28 14:00:00">DocHRV8.3_Macro_Eall_wood_U8_576x576_240508.dla</MarcoModelPath>
+	<DocHrModelPath id="dochr" moldelChangeTime="2022-04-12 21:05:05">DocHR_Re_038_03241036_458_quant_240508.dla</DocHrModelPath>
+</MtkConfig>

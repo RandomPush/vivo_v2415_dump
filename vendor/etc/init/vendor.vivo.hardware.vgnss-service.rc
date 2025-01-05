@@ -1,0 +1,4 @@
+service vgnss-hal /vendor/bin/hw/vendor.vivo.hardware.vgnss-service
+    class hal
+    user system
+    group system

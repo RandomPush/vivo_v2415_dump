@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mixer>
+    <!-- mixer control default setting start -->
+    <ctl name="aw_dev_0_switch" value="Disable" />
+    <ctl name="aw_dev_1_switch" value="Disable" />
+    <ctl name="aw_dev_0_prof" value="Music" />
+    <ctl name="aw_dev_1_prof" value="Music" />
+
+    <ctl name="ADC_R_Mux" value="Idle" />
+    <ctl name="ADC_L_Mux" value="Idle" />
+    <ctl name="ADC_3_Mux" value="Idle" />
+    <ctl name="PGA_3_Mux" value="AIN3" />
+    <ctl name="PGA_R_Mux" value="None" />
+    <ctl name="PGA_L_Mux" value="None" />
+
+    <ctl name="DAC In Mux" value="Sgen" />
+    <ctl name="RCV Mux" value="Open" />
+    <ctl name="HPL Mux" value="Open" />
+    <ctl name="HPR Mux" value="Open" />
+    <ctl name="MISO4_MUX" value="UL3_CH1" />
+    <ctl name="MISO5_MUX" value="UL3_CH1" />
+
+    <ctl name="DMIC0_MUX" value="DMIC_DATA3" />
+    <ctl name="DMIC1_MUX" value="DMIC_DATA3" />
+    <ctl name="UL_SRC_MUX" value="AMIC" />
+    <ctl name="UL2_SRC_MUX" value="AMIC" />
+    <ctl name="CM1_UL_MUX" value="CM1_2CH_PATH" />
+
+    <ctl name="ADDA_DL_CH1 DL2_CH1" value="0" />
+    <ctl name="ADDA_DL_CH2 DL2_CH2" value="0" />
+    <ctl name="ADDA_DL_CH3 DL2_CH1" value="0" />
+    <ctl name="ADDA_DL_CH4 DL2_CH2" value="0" />
+
+    <ctl name="I2SOUT4_CH1 DL2_CH1" value="0" />
+    <ctl name="I2SOUT4_CH2 DL2_CH2" value="0" />
+    <ctl name="I2SOUT3_CH1 DL2_CH1" value="0" />
+    <ctl name="I2SOUT3_CH2 DL2_CH2" value="0" />
+    <ctl name="I2SOUT3_CH1 DL3_CH1" value="0" />
+    <ctl name="I2SOUT3_CH2 DL3_CH2" value="0" />
+
+    <ctl name="UL_CM1_CH1 ADDA_UL_CH1" value="0" />
+    <ctl name="UL_CM1_CH1 ADDA_UL_CH2" value="0" />
+    <ctl name="UL_CM1_CH1 ADDA_UL_CH3" value="0" />
+    <ctl name="UL_CM1_CH2 ADDA_UL_CH1" value="0" />
+    <ctl name="UL_CM1_CH2 ADDA_UL_CH2" value="0" />
+    <ctl name="UL_CM1_CH2 ADDA_UL_CH3" value="0" />
+    <ctl name="UL6_CH1 ADDA_UL_CH1" value="0" />
+    <ctl name="UL6_CH2 ADDA_UL_CH2" value="0" />
+    <ctl name="UL6_CH1 ADDA_UL_CH2" value="0" />
+    <ctl name="UL6_CH2 ADDA_UL_CH1" value="0" />
+    <ctl name="UL6_CH1 ADDA_UL_CH3" value="0" />
+    <ctl name="UL6_CH2 ADDA_UL_CH3" value="0" />
+
+    <ctl name="MIC Hifi mode" value="On" />
+    <ctl name="HP Hifi mode" value="On" />
+    <ctl name="Codec_HwGain_Enable" value="Off" />
+    <ctl name="Codec_DL_HwGain" value="116" /> <!-- -6db -->
+
+    <!-- default gain setting -->
+    <ctl name="PGA1 Volume" value="0" />
+    <ctl name="PGA2 Volume" value="0" />
+    <ctl name="PGA3 Volume" value="0" />
+    <ctl name="Headset Volume" value="0" />
+    <!-- mixer control default setting start end -->
+    <!-- playback devices start -->
+    <path name="handset"> <!-- 听筒 -->
+        <ctl name="aw_dev_0_switch" value="Enable" />
+        <ctl name="aw_dev_1_switch" value="Disable" />
+        <ctl name="aw_dev_0_prof" value="At_Receiver" />
+    </path>
+
+    <path name="speaker_l"><!-- 上扬 -->
+        <ctl name="aw_dev_0_switch" value="Enable" />
+        <ctl name="aw_dev_1_switch" value="Disable" />
+        <ctl name="aw_dev_0_prof" value="At_Speaker" />
+    </path>
+
+    <path name="speaker_r"> <!-- 下扬 -->
+        <ctl name="aw_dev_0_switch" value="Disable" />
+        <ctl name="aw_dev_1_switch" value="Enable" />
+        <ctl name="aw_dev_1_prof" value="At_Speaker" />
+    </path>
+
+    <path name="double-spk"> <!-- 双扬 -->
+        <ctl name="aw_dev_0_switch" value="Enable" />
+        <ctl name="aw_dev_1_switch" value="Enable" />
+        <ctl name="aw_dev_0_prof" value="At_Speaker" />
+        <ctl name="aw_dev_1_prof" value="At_Speaker" />
+    </path>
+
+    <path name="headphones"> <!-- 耳机 -->
+        <ctl name="DAC In Mux" value="Normal Path" />
+        <ctl name="HPL Mux" value="Audio Playback" />
+        <ctl name="HPR Mux" value="Audio Playback" />
+    </path>
+
+    <path name="headphone-hifi"> <!-- HiFi -->
+        <ctl name="DAC In Mux" value="Normal Path" />
+        <ctl name="HPL Mux" value="Audio Playback" />
+        <ctl name="HPR Mux" value="Audio Playback" />
+    </path>
+
+    <path name="hphl"> <!-- 耳机左声道 -->
+        <ctl name="DAC In Mux" value="Normal Path" />
+        <ctl name="HPL Mux" value="Audio Playback" />
+    </path>
+
+    <path name="hphr"> <!-- 耳机右声道 -->
+        <ctl name="DAC In Mux" value="Normal Path" />
+        <ctl name="HPR Mux" value="Audio Playback" />
+    </path>
+    <!-- playback devices end -->
+
+    <path name="playback">
+        <ctl name="I2SOUT4_CH1 DL2_CH1" value="1" />
+        <ctl name="I2SOUT4_CH2 DL2_CH2" value="1" />
+    </path>
+
+    <path name="playback-speaker">
+        <ctl name="I2SOUT4_CH1 DL2_CH1" value="1" />
+        <ctl name="I2SOUT4_CH2 DL2_CH2" value="1" />
+    </path>
+
+    <path name="playback-deepbuffer">
+        <ctl name="I2SOUT4_CH1 DL2_CH1" value="1" />
+        <ctl name="I2SOUT4_CH2 DL2_CH2" value="1" />
+    </path>
+
+    <path name="playback-headphone">
+        <ctl name="ADDA_DL_CH1 DL2_CH1" value="1" />
+        <ctl name="ADDA_DL_CH2 DL2_CH2" value="1" />
+        <ctl name="ADDA_DL_CH3 DL2_CH1" value="1" />
+        <ctl name="ADDA_DL_CH4 DL2_CH2" value="1" />
+    </path>
+
+    <path name="playback-headphone_l">
+        <ctl name="ADDA_DL_CH1 DL2_CH1" value="1" />
+    </path>
+
+    <path name="playback-headphone_r">
+        <ctl name="ADDA_DL_CH2 DL2_CH2" value="1" />
+    </path>
+
+    <path name="playback-headphone-hifi">
+        <ctl name="ADDA_DL_CH1 DL2_CH1" value="1" />
+        <ctl name="ADDA_DL_CH2 DL2_CH2" value="1" />
+        <ctl name="ADDA_DL_CH3 DL2_CH1" value="1" />
+        <ctl name="ADDA_DL_CH4 DL2_CH2" value="1" />
+    </path>
+
+    <path name="handset-mic"> <!-- 主麦 -->
+        <ctl name="MISO4_MUX" value="UL1_CH1" />
+        <ctl name="MISO5_MUX" value="UL1_CH1" />
+        <ctl name="ADC_L_Mux" value="Left Preamplifier" />
+        <ctl name="PGA_L_Mux" value="AIN0" />
+        <ctl name="DMIC0_MUX" value="DMIC_DATA0" />
+        <ctl name="DMIC1_MUX" value="DMIC_DATA0" />
+    </path>
+
+    <path name="sub-mic"> <!-- 副麦 -->
+        <ctl name="MISO4_MUX" value="UL1_CH2" />
+        <ctl name="MISO5_MUX" value="UL1_CH2" />
+        <ctl name="ADC_R_Mux" value="Right Preamplifier" />
+        <ctl name="PGA_R_Mux" value="AIN2" />
+        <ctl name="DMIC0_MUX" value="DMIC_DATA2" />
+        <ctl name="DMIC1_MUX" value="DMIC_DATA2" />
+    </path>
+
+    <path name="3nd-mic"> <!-- mic3 -->
+        <ctl name="MISO4_MUX" value="UL2_CH1" />
+        <ctl name="MISO5_MUX" value="UL2_CH1" />
+        <ctl name="ADC_3_Mux" value="Preamplifier" />
+        <ctl name="PGA_3_Mux" value="AIN5" />
+        <ctl name="DMIC0_MUX" value="DMIC_DATA1" />
+        <ctl name="DMIC1_MUX" value="DMIC_DATA1" />
+    </path>
+
+    <path name="smart-mic">
+    </path>
+
+    <path name="headset-mic"> <!-- 耳机麦 -->
+        <ctl name="MISO4_MUX" value="UL1_CH1" />
+        <ctl name="MISO5_MUX" value="UL1_CH1" />
+        <ctl name="ADC_L_Mux" value="Left Preamplifier" />
+        <ctl name="PGA_L_Mux" value="AIN1" />
+    </path>
+
+    <path name="double-mic"> <!-- 双麦 -->
+        <ctl name="MISO4_MUX" value="UL1_CH1" />
+        <ctl name="MISO5_MUX" value="UL1_CH2" />
+        <ctl name="ADC_L_Mux" value="Left Preamplifier" />
+        <ctl name="ADC_R_Mux" value="Right Preamplifier" />
+        <ctl name="PGA_L_Mux" value="AIN0" />
+        <ctl name="PGA_R_Mux" value="AIN2" />
+        <ctl name="DMIC0_MUX" value="DMIC_DATA0" />
+        <ctl name="DMIC1_MUX" value="DMIC_DATA1" />
+    </path>
+
+    <path name="record"> <!-- 录音 -->
+        <ctl name="UL6_CH1 ADDA_UL_CH1" value="1" />
+        <ctl name="UL6_CH2 ADDA_UL_CH2" value="1" />
+        <ctl name="UL6_CH1 ADDA_UL_CH3" value="1" />
+        <ctl name="UL6_CH2 ADDA_UL_CH3" value="1" />
+
+        <ctl name="UL_CM1_CH1 ADDA_UL_CH1" value="1" />
+        <ctl name="UL_CM1_CH2 ADDA_UL_CH2" value="1" />
+        <ctl name="CM1_UL_MUX" value="CM1_16CH_PATH" />
+
+        <!-- ADDA_UL_CH3 for mic3 PGA3 UL2_CH1 -->
+        <ctl name="UL_CM1_CH1 ADDA_UL_CH3" value="1" />
+        <ctl name="UL_CM1_CH2 ADDA_UL_CH3" value="1" />
+        <ctl name="adsp_capture_sharemem_scenario" value="Off" />
+    </path>
+
+    <path name="record_invert">  <!-- 录音取反：主要是耳机相关的测试项是反的，需要在对应测试项使用 -->
+        <ctl name="UL6_CH1 ADDA_UL_CH2" value="1" />
+        <ctl name="UL6_CH2 ADDA_UL_CH1" value="1" />
+        <ctl name="UL6_CH1 ADDA_UL_CH3" value="1" />
+        <ctl name="UL6_CH2 ADDA_UL_CH3" value="1" />
+
+        <ctl name="UL_CM1_CH1 ADDA_UL_CH2" value="1" />
+        <ctl name="UL_CM1_CH2 ADDA_UL_CH1" value="1" />
+        <ctl name="CM1_UL_MUX" value="CM1_16CH_PATH" />
+
+        <!-- ADDA_UL_CH3 for mic3 PGA3 UL2_CH1 -->
+        <ctl name="UL_CM1_CH1 ADDA_UL_CH3" value="1" />
+        <ctl name="UL_CM1_CH2 ADDA_UL_CH3" value="1" />
+        <ctl name="adsp_capture_sharemem_scenario" value="Off" />
+    </path>
+
+    <!-- alsa record usecase start -->
+    <path name="tc-capture-main-mic">  <!-- 主麦录音测试 -->
+        <path name="handset-mic" />
+        <path name="record" />
+        <ctl name="PGA1 Volume" value="10" />
+        <ctl name="PGA2 Volume" value="10" />
+    </path>
+
+    <path name="tc-capture-sub-mic"> <!-- 副麦录音测试 -->
+        <path name="sub-mic" />
+        <path name="record" />
+        <ctl name="PGA1 Volume" value="7" />
+        <ctl name="PGA2 Volume" value="7" />
+    </path>
+
+    <path name="tc-capture-smart-mic"> 
+        <path name="smart-mic" />
+        <path name="record" />
+        <ctl name="PGA1 Volume" value="7" />
+        <ctl name="PGA2 Volume" value="7" />
+    </path>
+
+    <path name="tc-capture-headset-mic"> <!-- 耳麦录音测试 -->
+        <path name="headset-mic" />
+        <path name="record" />
+        <ctl name="PGA1 Volume" value="7" />
+        <ctl name="PGA2 Volume" value="7" />
+    </path>
+
+    <path name="tc-capture-double-mic"> <!-- 双麦录音测试 主麦右声道 副麦左声道-->
+        <path name="double-mic" />
+        <path name="record_invert" />
+        <ctl name="PGA1 Volume" value="7" />
+        <ctl name="PGA2 Volume" value="7" />
+    </path>
+    <!-- alsa record usecase end -->
+
+    <path name="tc-playback-rcv"> <!-- 受话器模拟通话测试 -->
+        <path name="handset" />
+        <path name="playback" />
+    </path>
+
+    <path name="tc-playback-left-speaker"> <!-- 上扬模拟通话测试 -->
+        <path name="speaker_l" />
+        <path name="playback-speaker" />
+    </path>
+
+    <path name="tc-playback-right-speaker"> <!-- 下扬模拟通话测试 -->
+        <path name="speaker_r" />
+        <path name="playback-speaker" />
+    </path>
+
+    <path name="tc-playback-dual-speaker"> <!-- 双扬模拟通话测试 -->
+        <path name="double-spk" />
+        <path name="playback-speaker" />
+    </path>
+
+    <path name="tc-playback-hifi"> <!-- HiFi测试 -->
+        <path name="headphones" />
+        <path name="playback-headphone-hifi" />
+    </path>
+
+    <!-- alsa tightness mic test start -->
+    <path name="tc-tightness-main-mic-spk"> <!-- 主麦堵麦测试 主麦 + 下扬声器 -->
+        <path name="speaker_r" />
+        <path name="playback-speaker" />
+        <path name="handset-mic" />
+        <path name="record" />
+        <ctl name="PGA1 Volume" value="8" />
+        <ctl name="PGA2 Volume" value="8" />
+    </path>
+
+    <path name="tc-tightness-sub-mic-rcv"> <!-- 副麦堵麦测试 副麦 + 受话器 -->
+        <path name="handset" />
+        <path name="playback" />
+        <path name="sub-mic" />
+        <path name="record" />
+        <ctl name="PGA1 Volume" value="4" />
+        <ctl name="PGA2 Volume" value="4" />
+    </path>
+
+    <path name="tc-tightness-third-mic-spk"> <!-- 背麦堵麦测试 背麦 + 上扬 -->
+        <path name="double-spk" />
+        <path name="playback-speaker" />
+        <path name="3nd-mic" />
+        <path name="record" />
+        <ctl name="PGA1 Volume" value="4" />
+        <ctl name="PGA2 Volume" value="4" />
+	<ctl name="PGA3 Volume" value="4" />
+    </path>
+
+    <path name="tc-tightness-main-sub-mic-spk">  <!-- 双麦堵麦测试 主麦左声道，副麦右声道 -->
+        <path name="double-spk" />
+        <path name="playback-speaker" />
+        <path name="double-mic" />
+        <path name="record" />
+        <ctl name="PGA1 Volume" value="4" />
+        <ctl name="PGA2 Volume" value="4" />
+    </path>
+
+    <path name="tc-tightness-third-mic-spk">
+    </path>
+    <!-- alsa tightness mic test usecase end -->
+
+    <!-- alsa loopback usecase start -->
+    <path name="tc-handset-rcv-alsa"> <!-- 主麦回音测试 主麦到听筒回环 -->
+        <path name="handset-mic" />
+        <path name="record" />
+        <path name="handset" />
+        <path name="playback" />
+        <ctl name="PGA1 Volume" value="6" />
+        <ctl name="PGA2 Volume" value="6" />
+    </path>
+
+    <path name="tc-submic-hp-alsa"> <!-- 副麦回音测试 副麦到耳机回环 -->
+        <path name="sub-mic" />
+        <path name="record" />
+        <path name="headphones" />
+        <path name="playback-headphone" />
+        <ctl name="PGA1 Volume" value="4" />
+        <ctl name="PGA2 Volume" value="4" />
+        <ctl name="Headset Volume" value="1" />
+        <ctl name="Codec_HwGain_Enable" value="On" />
+        <ctl name="Codec_DL_HwGain" value="116" /> <!-- -6db -->
+        <ctl name="HP Hifi mode" value="On" />
+    </path>
+
+    <path name="tc-mic1-hp-alsa">  <!-- 主麦幅值测试 主麦到耳机回环 -->
+        <path name="handset-mic" />
+        <path name="record" />
+        <path name="headphones" />
+        <path name="playback-headphone" />
+        <ctl name="PGA1 Volume" value="4" />
+        <ctl name="PGA2 Volume" value="4" />
+        <ctl name="Headset Volume" value="1" />
+        <ctl name="Codec_HwGain_Enable" value="On" />
+        <ctl name="Codec_DL_HwGain" value="116" /> <!-- -6db -->
+        <ctl name="HP Hifi mode" value="On" />
+    </path>
+
+    <path name="tc-mic2-hp-alsa"> <!-- 副麦幅值测试 副麦到耳机回环 -->
+        <path name="sub-mic" />
+        <path name="record" />
+        <path name="headphones" />
+        <path name="playback-headphone" />
+        <ctl name="PGA1 Volume" value="4" />
+        <ctl name="PGA2 Volume" value="4" />
+        <ctl name="Headset Volume" value="8" />
+        <ctl name="Codec_HwGain_Enable" value="On" />
+        <ctl name="Codec_DL_HwGain" value="116" /> <!-- -6db -->
+        <ctl name="HP Hifi mode" value="On" />
+    </path>
+
+    <path name="tc-mic3-hp-alsa"> <!-- mic3幅值测试 mic3到耳机回环 -->
+        <path name="3nd-mic" />
+        <path name="record" />
+        <path name="headphones" />
+        <path name="playback-headphone" />
+        <ctl name="PGA1 Volume" value="4" />
+        <ctl name="PGA2 Volume" value="4" />
+        <ctl name="PGA3 Volume" value="4" />
+        <ctl name="Headset Volume" value="8" />
+        <ctl name="Codec_HwGain_Enable" value="On" />
+        <ctl name="Codec_DL_HwGain" value="116" /> <!-- -6db -->
+        <ctl name="HP Hifi mode" value="On" />
+    </path>
+
+    <path name="tc-dmic-hp-alsa"> <!-- 双麦幅值测试 主麦到耳机右声道，副麦到耳机左声道，需要使用声道转换 -->
+        <path name="double-mic" />
+        <path name="record_invert" />
+        <path name="headphones" />
+        <path name="playback-headphone" />
+        <ctl name="PGA1 Volume" value="10" />
+        <ctl name="PGA2 Volume" value="10" />
+        <ctl name="Headset Volume" value="8" />
+        <ctl name="HP Hifi mode" value="On" />
+        <ctl name="Codec_HwGain_Enable" value="On" />
+        <ctl name="Codec_DL_HwGain" value="116" /> <!-- -6db -->
+    </path>
+
+    <path name="tc-handset-hp-alsa"> <!-- 主麦幅值测试 主麦到耳机回环 -->
+        <path name="handset-mic" />
+        <path name="record" />
+        <path name="headphones" />
+        <path name="playback-headphone" />
+        <ctl name="PGA1 Volume" value="4" />
+        <ctl name="PGA2 Volume" value="4" />
+        <ctl name="Headset Volume" value="8" />
+        <ctl name="Codec_HwGain_Enable" value="On" />
+        <ctl name="Codec_DL_HwGain" value="116" /> <!-- -6db -->
+        <ctl name="HP Hifi mode" value="On" />
+    </path>
+
+    <path name="tc-headset-rcv-alsa">  <!-- 听筒幅值测试 耳机麦到听筒回环 -->
+        <path name="headset-mic" />
+        <path name="record" />
+        <path name="handset" />
+        <path name="playback" />
+        <ctl name="PGA1 Volume" value="4" />
+        <ctl name="PGA2 Volume" value="4" />
+    </path>
+
+    <path name="tc-headset-spk-alsa"> <!-- 扬声器幅值测试 耳机麦到扬声器回环 -->
+        <path name="headset-mic" />
+        <path name="record" />
+        <path name="speaker_r" />
+        <path name="playback-speaker" />
+        <ctl name="PGA1 Volume" value="6" />
+        <ctl name="PGA2 Volume" value="6" />
+    </path>
+
+    <path name="tc-headset-hifi-alsa"> <!-- HIFI测试  -->
+        <path name="headset-mic" />
+        <path name="record" />
+        <path name="headphone-hifi" />
+        <path name="playback-headphone-hifi" />
+        <ctl name="PGA1 Volume" value="4" />
+        <ctl name="PGA2 Volume" value="4" />
+        <ctl name="Headset Volume" value="8" />
+        <ctl name="Codec_HwGain_Enable" value="On" />
+        <ctl name="Codec_DL_HwGain" value="116" /> <!-- -6db -->
+        <ctl name="HP Hifi mode" value="On" />
+    </path>
+
+    <path name="tc-handset-hphr-alsa"> <!-- 主麦到耳机右声道 -->
+        <path name="handset-mic" />
+        <path name="record" />
+        <path name="hphr" />
+        <path name="playback-headphone_r" />
+        <ctl name="PGA1 Volume" value="4" />
+        <ctl name="PGA2 Volume" value="4" />
+        <ctl name="Headset Volume" value="8" />
+        <ctl name="Codec_HwGain_Enable" value="On" />
+        <ctl name="Codec_DL_HwGain" value="116" /> <!-- -6db -->
+        <ctl name="HP Hifi mode" value="On" />
+    </path>
+
+    <path name="tc-submic-hphl-alsa"> <!-- 副麦到耳机左声道  -->
+        <path name="sub-mic" />
+        <path name="record" />
+        <path name="hphl" />
+        <path name="playback-headphone_l" />
+        <ctl name="PGA1 Volume" value="4" />
+        <ctl name="PGA2 Volume" value="4" />
+        <ctl name="Headset Volume" value="8" />
+        <ctl name="Codec_HwGain_Enable" value="On" />
+        <ctl name="Codec_DL_HwGain" value="116" /> <!-- -6db -->
+        <ctl name="HP Hifi mode" value="On" />
+    </path>
+    <!-- alsa loopback usecase end -->
+
+    <!-- volume settings start -->
+    <path name="tc-handset-rcv-vol">
+    </path>
+
+    <path name="tc-dmic-hp-vol">
+    </path>
+
+    <path name="tc-submic-hp-vol">
+    </path>
+
+    <path name="tc-handset-hp-vol">
+    </path>
+
+    <path name="tc-mic1-hp-vol">
+    </path>
+
+    <path name="tc-mic2-hp-vol">
+    </path>
+
+    <path name="tc-mic3-hp-vol">
+    </path>
+
+    <path name="tc-headset-rcv-vol">
+    </path>
+
+    <path name="tc-headset-spk-vol">
+    </path>
+
+    <path name="tc-headset-hifi-vol">
+    </path>
+
+    <path name="tc-handset-hphr-vol">
+    </path>
+
+    <path name="tc-submic-hphl-vol">
+    </path>
+    <!-- volume settings end -->
+
+    <!-- config other ftm  feature start -->
+    <config name="is_hifi_support" value="0" /> 		<!-- 是否支持hifi，1： 支持， 0：不支持 -->
+    <config name="is_fm_support" value="0" /> 			<!-- 是否支持FM，1： 支持， 0：不支持 -->
+    <config name="is_ultrasound_support" value="0" />	<!-- 是否支持超声，1： 支持， 0：不支持 -->
+    <config name="mic_num" value="3" /> 				<!-- mic数量 -->
+    <!-- config headset type  0: type C , 1: 3.5mm -->
+    <config name="headset_type" value="0" /> 			<!-- 耳机类型：0：typec, 1:3.5mm -->
+    <config name="loopback_type" value="4" /> 			<!-- loopback 类型，1： AFE  4:  ALSA, 一般配置为ALSA -->
+    <config name="loopback-rx-pcm" value="2" /> 		<!-- 下行用的pcm设备id号，记住这里的pcm 设备要与playback-speaker配置的CPU dai对应，否则会无声 -->
+    <config name="loopback-tx-pcm" value="27" /> 		<!-- 上行用的pcm设备id号，记住这里的pcm 设备要与record配置的CPU dai对应，否则会无声 -->
+    <config name="alsa_tinymix_allow" value="1" /> 		<!-- tinymix dump 开关，1： 打开 ，0 ：关闭 -->
+    <config name="alsa_pcm_dump_allow" value="1" />		<!-- pcm dump 开关，1： 打开 ，0 ：关闭 -->
+    <config name="pcm1_config_select" value="4" /> 		<!-- pcm config定义了6组数据，0，1：三星平台， 2，3 ：高通平台， 4，5：MTK平台，单数对应的是playback thread1, 偶数对应的是playback thread2 -->
+    <config name="pcm2_config_select" value="5" /> 		<!-- pcm config定义了6组数据，0，1：三星平台， 2，3 ：高通平台， 4，5：MTK平台，单数对应的是playback thread1, 偶数对应的是playback thread2 -->
+    <config name="tx-db-spec" value="70" />
+    <config name="tightness-db-spec" value="80" />
+    <config name="mute-rate" value="90" />
+    <config name="tightness-mute-rate" value="90" />
+    <config name="deepbuffer-rx-pcm" value="3" />       <!-- //单扬堵麦测试时会用到，playback thread2 pcm设备id号，记住这里pcm设备id号要与playback-deepbuffer对应 -->
+    <!-- config spk-calibrate-info: oem_type(1-vivo,2-ti,3-tfa,4-aw), sp_type(1-vivo,2-ti,3-tfa,4-aw). otherwise, can not change the order of items -->
+    <config name="spk-calibrate-info" spk_num="2" oem_type="4" sp_type="4" re_min="5" re_max="10" f0_min="400" f0_max="1200" qt_min="0" re_min2="5" re_max2="10" f0_min2="400" f0_max2="1200" qt_min2="0" />
+    <config name="factory_test_version" value="factory_v1.0" />
+    <config name="codec_register_path" value="/sys/class/sound/card0/mtk_afe_attrs/mtk_afe_node" /> 	<!-- afe寄存器dump路径配置 -->
+    <!--config name="codec_analog_register_path" value="/sys/class/sound/card0/mtk_codec_attrs/mtk_audio_codec" -->  <!-- codec寄存器dump路径  -->
+    <config name="pa_register_path" value="/sys/bus/i2c/devices/6-0034/reg" />							<!-- smartPA  寄存器dump路径 -->
+    <config name="second_pa_register_path" value="/sys/bus/i2c/devices/6-0035/reg" />					<!-- 双PA项目，第二个pa寄存器dump路径 -->
+    <config name="dbg_storage_dir_new" value="/data/vendor/audiohal/audio_dump/engineermode" /> 		<!-- audiohal_dump 文件的保存路径 -->
+    <!-- config other ftm  feature end -->
+</mixer>

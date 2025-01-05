@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sw_selfcheck_items>
+	<command name = "software_selfcheck">
+		<item type = "property" tag = "ro.boot.vc.magic" value="none" />
+		<item type = "property" tag = "ro.boot.veritymode" value="enforcing" />
+		<item type = "property" tag = "ro.boot.vbmeta.device_state" value="locked" />
+		<item type = "property" tag = "ro.crypto.state" value="encrypted" />
+		<item type = "function" tag = "antiFlashCustomizeCheck" so_name = "libbspservice_support" para = "" ap = "vendor" value = "0" />
+		<item type = "function" tag = "emPropCheck" so_name = "libbspservice_support" para = "" ap = "vendor" value = "0" />
+	</command>
+</sw_selfcheck_items>

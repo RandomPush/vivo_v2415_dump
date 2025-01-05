@@ -1,0 +1,61 @@
+<!--
+AreaInfo: AreaType collection.
+ AreaType: A struct of related information about a region.
+ AreaName: The region code of this region.
+ CountryCode: The country codes of the countries included in this region.
+
+ TuningInfo: TuningType collection.
+ TuningType: A struct of related information about a Tuning Parameter.
+ TuningName: The name of the Tuning Parameter.
+ CountryList: The countries that use this Tuning Parameter.
+-->
+
+<chromatixCountryCode>
+<!--Information about the countries corresponding to the region-->
+  <AreaInfo>
+    <AreaType>
+      <AreaName>EEA</AreaName>
+      <CountryCode>PL,DE,IT,CZ,ES,FR,AT,BG,RO,IRL,PT,GR,IE,NL,PT,HR,SK,SI,CY</CountryCode>
+    </AreaType>
+
+    <AreaType>
+      <AreaName>ENA</AreaName>
+      <CountryCode>RS,AL,MK,BA,ME</CountryCode>
+    </AreaType>
+
+    <AreaType>
+      <AreaName>SCA</AreaName>
+      <CountryCode>CL,PE,CO</CountryCode>
+    </AreaType>
+
+    <AreaType>
+      <AreaName>CSA</AreaName>
+      <CountryCode>UA,UZ</CountryCode>
+    </AreaType>
+
+    <AreaType>
+      <AreaName>MEA</AreaName>
+      <CountryCode>EG,KE,TZ,NG,GH,CI,TN,AO,AE,JO,YE,IQ,DZ</CountryCode>
+    </AreaType>
+
+    <AreaType>
+      <AreaName>PSA</AreaName>
+      <CountryCode>SG,KH,MM,NP,BT,LK,PG</CountryCode>
+    </AreaType>
+  </AreaInfo>
+<!--Information about the countries that use this Tuning Parameter-->
+  <TuningInfo>
+
+    <TuningType>
+      <TuningName>in</TuningName>
+      <CountryList>MEA,SCA,EEA,IN,AU,RU,UA,BY,EG,MA,KE,TZ,NG,GH,CI,ZA,TN,AO,CO,MX,CL,PE,PK,BD,NP,BT,LK,PL,DE,IT,CZ,ES,FR,UK,AT,BG,RO,RS,IRL,PT,TR,SA,AE,QA,KW,OM,BH,JO,LB,YE,IL,IQ,
+      GR,UG,RW,BI,DZ,BE,IS,IE,LU,NL,PT,HR,HU,SK,AD,DK,LT,LV,MT,LI,NO,CH,AL,BA,EE,FI,MK,MC,ME,SI,SE,NZ,TJ,TM,MV,CY,PG</CountryList>
+    </TuningType>
+
+    <TuningType>
+      <TuningName>chn</TuningName>
+      <CountryList>CSA,PSA,ID,HK,TW,SG,TH,MY,KH,PH,VN,LA,KZ,UZ,KG,MM,JP,KR,MN</CountryList>
+    </TuningType>
+  </TuningInfo>
+</chromatixCountryCode>
+

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NiceMEEConfig version="1.0.11.1">
+    <LCAParams>
+        <LuxindexMinThred>0</LuxindexMinThred>
+        <LuxindexMaxThred>300</LuxindexMaxThred>
+        <AppZoomMinThred>0.6</AppZoomMinThred>
+        <AppZoomMaxThred>100</AppZoomMaxThred>
+        <!--2:mainCamera, 4:teleCamera, 8:superTeleCamera, 最大长度为10，以便兼容不同项目-->
+        <SupportCam>2,4,8</SupportCam>
+        <!--支持的场景检测结果id,最多支持10种场景-->
+        <SupportScene>0,1,2,3,4,5,6,7</SupportScene>
+        <!--需补全-->
+        <!--LcaModel use="1" engine="10" resi="1" inw="128" inh="128" num="3">nice_lca.vdnn</LcaModel-->
+    </LCAParams>
+    <SharpParams>
+        <!--0: USM, 1: Pyramid-->
+        <SharpMethod>1</SharpMethod>
+        <USM>
+            <radius>5</radius>
+            <threshold>1</threshold>
+            <amount>1</amount>
+        </USM>
+        <Pyramid>
+            <PyramidLevelNum>3</PyramidLevelNum>
+            <PyramidLevels>16 64 256</PyramidLevels>
+        </Pyramid>
+        <BlendRatios>
+            <Background>1.0</Background>
+            <HumanBody>1.0</HumanBody>
+            <HumanFace>1.0</HumanFace>
+            <HumanHair>1.0</HumanHair>
+            <HumanEyeBrow>1.0</HumanEyeBrow>
+            <HumanEye>1.0</HumanEye>
+            <HumanMouth>1.0</HumanMouth>
+        </BlendRatios>
+    </SharpParams>
+    <FaceMagicParams>
+        <NormalConfFile>face_magic_config_Normal.xml</NormalConfFile>
+        <MotionConfFile>face_magic_config.xml</MotionConfFile>
+        <HDRConfFile>face_magic_config.xml</HDRConfFile>
+        <PortraitNightQuadConfFile>face_magic_config_PortraitNightQuad.xml</PortraitNightQuadConfFile>
+        <Reserve1ConfFile>face_magic_config.xml</Reserve1ConfFile>
+        <Reserve2ConfFile>face_magic_config.xml</Reserve2ConfFile>
+    </FaceMagicParams>
+    <TCMParams>
+        <NormalConfFile>magic_tcm_config.xml</NormalConfFile>
+        <MotionConfFile>magic_tcm_config_motion.xml</MotionConfFile>
+        <HDRConfFile>magic_tcm_config.xml</HDRConfFile>
+        <PortraitNightQuadConfFile>magic_tcm_config.xml</PortraitNightQuadConfFile>
+        <Reserve1ConfFile>magic_tcm_config.xml</Reserve1ConfFile>
+        <Reserve2ConfFile>magic_tcm_config.xml</Reserve2ConfFile>
+    </TCMParams>
+</NiceMEEConfig>

@@ -1,0 +1,28 @@
+time:2023/07/27
+model_update:
+
+    model_name: fbp.vdnn (FrontBokehPreview)
+    project_name: tf_refinenet_mobilenet_035_v2_hdr_t3_distill_quant
+    platform: vdnn
+
+    model_name: fes.vdnn (FaceEnhanceSegment)
+    project_name: ref_mn_140_640_qt_cascadepsp_block5_t5
+    platform: neuron
+
+    model_name: psh.vdnn (PersonSkinHairSegment)
+    project_name: psh_rvgg_a2_dbbref_640_25_q28t
+    platform: neuron
+    
+    model_name: pm.vdnn (PersonMatting)
+    project_name: mask_guide_two_stage_mat
+    platform: neuron
+	
+	model_name: hand_seg
+	project_name: hc_mo0_ref_384_9_q
+	platform: neuron
+	
+	model_name: hand_det	
+	project_name: handdet_sim10_8_quant
+	platform: neuron
+	
+	

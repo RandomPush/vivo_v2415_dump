@@ -1,0 +1,10 @@
+<!--
+    Input:
+        vendor/vivo/hardware/interfaces/sensorfactory/aidl/default/vendor.vivo.hardware.sensorfactory-service.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="aidl">
+        <name>vendor.vivo.hardware.sensorfactory</name>
+        <fqname>ISensorFactory/default</fqname>
+    </hal>
+</manifest>

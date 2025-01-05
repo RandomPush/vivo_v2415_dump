@@ -1,0 +1,49 @@
+{
+    "Version": "1.0",
+    "CaptureMemPool" : {
+        "PoolType": "PoolCapture",
+        "AllocCfgType": "MultiPoolFirst",
+        "MultiPerPoolSize": 0,
+        "MultiPoolMargin": 30,
+        "SmallPoolSize": 0,
+        "NormalMode": {
+            "nice": 0,
+            "default": 0
+        },
+        "PortraitMode": {
+            "nice": 0,
+            "rawnr": 0,
+            "softbrp":  0,
+            "rawenhance":  0,
+            "pixelshift":  0,
+            "singleframe":  0,
+            "default": 0
+        },
+        "NightMode": {
+            "default": 0
+        },
+        "SportMode": {
+            "default": 0
+        }
+    },
+    "PreviewMemPool" : {
+        "PoolType": "PoolPreview",
+        "AllocCfgType": "MultiPoolFirst",
+        "MultiPerPoolSize": 0,
+        "MultiPoolMargin": 0,
+        "SmallPoolSize": 0,
+        "NormalMode": {
+            "default": 0
+        }
+    },
+    "VideoMemPool" : {
+        "PoolType": "PoolVideo",
+        "AllocCfgType": "MultiPoolFirst",
+        "MultiPerPoolSize": 0,
+        "MultiPoolMargin": 0,
+        "SmallPoolSize": 0,
+        "NormalMode": {
+            "default": 0
+        }
+    }
+}

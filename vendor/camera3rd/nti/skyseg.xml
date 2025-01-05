@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SkySegConfig version="5.0">
+	<!--算法运行框架(集成勿改)-->
+    <FrameWork>NEURON</FrameWork>
+    <!--算法运行设备(集成勿改)0.cpu 1.gpu, 2.dsp, 3.npu-->
+    <Device>3</Device>
+	<!--模型路径-->
+	<ModelPath>/vendor/camera3rd/nti/SkySegment_DX3_512.vdnn</ModelPath>
+    <input_node>input_0</input_node>
+	<input_data_type>0</input_data_type>
+    <output_node>sigmoid_280</output_node>
+	<output_data_type>0</output_data_type>
+</SkySegConfig>

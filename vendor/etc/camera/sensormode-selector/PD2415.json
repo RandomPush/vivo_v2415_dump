@@ -1,0 +1,988 @@
+{
+	"LogLevel": 1,
+	"UsecaseSelector": [
+		{
+			"Type": "Ratio",
+			"Condition": ["int", ">=1777"],
+			"Result": "VIDEO",
+			"CameraScenario":552
+		},
+		{
+			"Type": "Ratio",
+			"Condition": ["int", "<=1600"],
+			"Result": "PHOTO",
+			"CameraScenario":532
+		},
+		{
+			"Type": "AppType",
+			"Condition": ["string", "vivo"],
+			"Result": "PHOTO",
+			"CameraScenario": 500,
+			"Debug": 1,
+			"UsecaseSelector": [
+				{ // 录像
+					"Type": "UIMode",
+					"Condition": ["int", "==51", "==3", "==53", "==62"],
+					"Result": "VIDEO30",
+					"CameraScenario": 501,
+					"UsecaseSelector": [
+						{ // 标准防抖 & 无防抖
+							"Type": "EISMode",
+							"Condition": ["int", "==0", "==1", "==4", "==9", "==14", "==16", "==12", "==18"],
+							"Result": "VIDEO30",
+							"CameraScenario": 501,
+							"UsecaseSelector": [
+								{ // 60FPS
+									"Type": "FrameRate",
+									"Condition": ["int", "<=60"],
+									"UsecaseSelector": [
+										{
+											"Type": "FrameRate",
+											"Condition": ["int", ">>30"],
+											"Result": "VIDEO60",
+											"CameraScenario": 533,
+											"UsecaseSelector": [
+												{
+													"Type": "Camera ID",
+													"Condition": ["int", "==0"],
+													"Debug": 1,
+													"Result": "VIDEO60_1610"
+												}]
+
+										}]
+								},
+								{ // <=30FPS
+									"Type": "FrameRate",
+									"Condition": ["int", "<=30"],
+									"Result": "VIDEO30",
+									"CameraScenario": 501,
+									"UsecaseSelector": [
+										{ // 无 seamless
+											"Type": "Tag",
+											"Parameter": ["vivo.control", "session.seamlesscontrol"],
+											"Condition": ["int", "NULL"],
+											"Result": "VIDEO30",
+											"CameraScenario": 501,
+											"UsecaseSelector": [
+												{ // 8K
+													"Type": "Width",
+													"Condition": ["int", "==7680"],
+													"Result": "8K",
+													"CameraScenario": 537
+												},
+												{ // HDR10+
+													"Type": "Tag",
+													"Parameter": ["vivo.control", "hdr10_plus_enable"],
+													"Condition": ["int", "==1"],
+													"Result": "HDR10+",
+													"CameraScenario": 541
+												}]
+										},
+										{ // seamless HDR 1曝
+											"Type": "Tag",
+											"Parameter": ["vivo.control", "session.seamlesscontrol"],
+											"Condition": ["int", "==1"],
+											"Debug": 1,
+											"Result": "LBMFHDR1",
+											"CameraScenario": 501,
+											"UsecaseSelector": [
+												{
+													"Type": "Physical ID",
+													"Condition": ["int", "==2"],
+													"Debug": 1,
+													"UsecaseSelector": [
+													{
+														"Type": "Android Property",
+														"Parameter": ["ro.boot.vivo.hardware.pcb.detect", "4", "HW_PD%d"],
+														"Condition": ["int", "==2419"],
+														"Debug": 1,
+														"Result": "DCGHDR1"
+													}]
+												}]
+										},
+										{ // seamless HDR 2曝
+											"Type": "Tag",
+											"Parameter": ["vivo.control", "session.seamlesscontrol"],
+											"Condition": ["int", "==2"],
+											"Debug": 1,
+											"UsecaseSelector": [
+												{
+													"Type": "Property",
+													"Condition": ["property", "LBMFHDR2EXP"],
+													"Result": "LBMFHDR2",
+													"CameraScenario": 501,
+													"UsecaseSelector": [
+														{
+															"Type": "Physical ID",
+															"Condition": ["int", "==2"],
+															"Debug": 1,
+															"UsecaseSelector": [
+																{
+																	"Type": "Android Property",
+																	"Parameter": ["ro.boot.vivo.hardware.pcb.detect", "4", "HW_PD%d"],
+																	"Condition": ["int", "==2419"],
+																	"Debug": 1,
+																	"Result": "DCGHDR2"
+																}]
+														}]
+												},
+												{
+													"Type": "Property",
+													"Condition": ["property", "!LBMFHDR2EXP"],
+													"Result": "LBMFHDR1",
+													"CameraScenario": 501,
+													"UsecaseSelector": [
+														{
+															"Type": "Physical ID",
+															"Condition": ["int", "==2"],
+															"Debug": 1,
+															"UsecaseSelector": [
+																{
+																	"Type": "Android Property",
+																	"Parameter": ["ro.boot.vivo.hardware.pcb.detect", "4", "HW_PD%d"],
+																	"Condition": ["int", "==2419"],
+																	"Debug": 1,
+																	"Result": "DCGHDR1"
+																}]
+														}]
+												}]
+										},
+										{ // LN2
+											"Type": "Tag",
+											"Parameter": ["vivo.control", "enableln2"],
+											"Condition": ["int", "==1"],
+											"Debug": 1,
+											"UsecaseSelector": [
+												{
+													"Type": "Property",
+													"Condition": ["property", "LN2"],
+													"Result": "VIDEOLN2",
+													"Debug": 1,
+													"CameraScenario": 501
+												}]
+										}]
+								}]
+						},
+						{ // 地平线防抖
+							"Type": "EISMode",
+							"Condition": ["int", "==10"],
+							"Debug": 1,
+							"Result": "SKYLINEEIS",
+							"CameraScenario": 542
+						},
+						{ // 超级防抖
+							"Type": "EISMode",
+							"Condition": ["int", "==2"],
+							"Result": "SUPEREIS",
+							"CameraScenario": 540,
+							 "UsecaseSelector": [
+								{ // 60FPS
+									"Type": "FrameRate",
+									"Condition": ["int", "==60"],
+									"Result": "SUPEREIS",
+									"CameraScenario": 540
+								},
+								{ // 30FPS
+									"Type": "FrameRate",
+									"Condition": ["int", "==30"],
+									"Result": "SUPEREIS30",
+									"CameraScenario": 539
+								}]
+						},
+						{ // 前置人像超级防抖
+							"Type": "EISMode",
+							"Condition": ["int", "==7", "==6", "==15"],
+							"Result": "VIDEO30",
+							"CameraScenario": 501,
+							"UsecaseSelector": [
+								{
+									"Type": "FrameRate",
+									"Condition": ["int", "==60"],
+									"Result": "VIDEO60",
+									"CameraScenario": 533
+								},
+								{
+									"Type": "Tag",
+									"Parameter": ["com.mediatek.streamingfeature", "hfpsMode"],
+									"Condition": ["int", "==1"],
+									"Debug": 1,
+									"Result": "VIDEO60",
+									"CameraScenario": 533
+								},
+								{
+									"Type": "Tag",
+									"Parameter": ["vivo.control", "shdr_enable"],
+									"Condition": ["int", "==1"],
+									"Debug": 1,
+									"Result": "MFHDR",
+									"CameraScenario": 543
+								}]
+						},
+						{  // 视频夜景算法
+							"Type": "Tag",
+							"Parameter": ["vivo.control", "videoNight"],
+							"Condition": ["int", "==11"],
+							"Result": "4K30",
+							"CameraScenario": 538
+						}]
+				},
+				{ // 延时摄影
+					"Type": "UIMode",
+					"Condition": ["int", "==12"],
+					"Debug": 1,
+					"Result": "VIDEO30",
+					"CameraScenario": 505
+				},
+				{ // 普通拍照 & 超清文档  & 舞台拍照
+					"Type": "UIMode",
+					"Condition": ["int", "==1", "==13", "==70", "==74"],
+					"Result": "PHOTO",
+					"CameraScenario": 500,
+					"UsecaseSelector": [
+						{ // 附件相机
+							"Type": "Tag",
+							"Parameter": ["vivo.control", "accessory_camera"],
+							"Condition": ["int", "==1"],
+							"Debug": 1,
+							"CameraScenario": 532,
+							"Result": "PHOTO"
+						},
+						{ // seamless SHDR 1曝
+							"Type": "Tag",
+							"Parameter": ["vivo.control", "session.seamlesscontrol"],
+							"Condition": ["int", "==1"],
+							"Debug": 1,
+							"Result": "PHOTOHDR1"
+						},
+						{ // seamless SHDR 2曝
+							"Type": "Tag",
+							"Parameter": ["vivo.control", "session.seamlesscontrol"],
+							"Condition": ["int", "==2"],
+							"Debug": 1,
+							"Result": "PHOTOHDR2"
+						},
+						{ // Remosaic size for VCF
+							"Type": "SCENARIO",
+							"Condition": ["int", "==3"],
+							"Result": "SATREMOSAIC"
+						},
+						{ // ROI Remosaic
+							"Type": "Tag",
+							"Parameter": ["vivo.control", "seamless.roiRemosaic"],
+							"Condition": ["int", "==4"],
+							"Result": "ROIREMOSAIC"
+						},
+						{ // Remosaic
+							"Type": "Tag",
+							"Parameter": ["com.mediatek.control.capture", "remosaicenable"],
+							"Condition": ["int", "==1"],
+							"Debug": 1,
+							"Result": "REMOSAIC",
+							"UsecaseSelector": [
+								{ // SAT Remosaic
+									"Type": "Tag",
+									"Parameter": ["vivo.control", "seamless.remosaic.enable"],
+									"Condition": ["int", "==1"],
+									"Result": "SATREMOSAIC"
+								}]
+						},
+						{ // 超级月亮
+							"Type": "Tag",
+							"Parameter": ["vivo.control", "scenery.subfunction"],
+							"Condition": ["int", "==3"],
+							"Result": "PHOTO",
+							"CameraScenario": 517
+						}]
+				},
+				{ // 动态照片
+					"Type": "UIMode",
+					"Condition": ["int", "==28"],
+					"Debug": 1,
+					"Result": "PHOTO",
+					"CameraScenario": 510
+				},
+				{ // 专业模式
+					"Type": "UIMode",
+					"Condition": ["int", "==16"],
+					"Debug": 1,
+					"Result": "PHOTO",
+					"CameraScenario": 507
+				},
+				{ // 高像素
+					"Type": "UIMode",
+					"Condition": ["int", "==29"],
+					"Result": "PHOTO",
+					"CameraScenario": 511,
+					"UsecaseSelector": [
+						{
+							"Type": "SCENARIO",
+							"Condition": ["int", "==2"],
+							"Result": "REMOSAIC",
+							"CameraScenario": 511
+						},
+						{
+							"Type": "Tag",
+							"Parameter": ["vivo.control", "sensorMode"],
+							"Condition": ["int", "==1"],
+							"Result": "REMOSAIC",
+							"Debug": 1,
+							"CameraScenario": 511
+						}]
+				},
+				{ // 美食
+					"Type": "UIMode",
+					"Condition": ["int", "==57"],
+					"UsecaseSelector": [
+						{
+							"Type": "Tag",
+							"Parameter": ["com.vivo", "MultiCameraBokehSelectSessionId"],
+							"Condition": ["int", "==3"],
+							"Result": "PROTRAIT1X",
+							"CameraScenario": 514,
+							"Debug": 1
+						},
+						{
+							"Type": "Tag",
+							"Parameter": ["com.vivo", "MultiCameraBokehSelectSessionId"],
+							"Condition": ["int", "==11"],
+							"Result": "PROTRAIT2X",
+							"CameraScenario": 515,
+							"UsecaseSelector": [
+								{
+									"Type": "Physical ID",
+									"Condition": ["int", "==2"],
+									"Debug": 1,
+									"Result": "PROTRAIT2XROI",
+									"CameraScenario": 515
+								}]
+						},
+                        {
+							"Type": "Tag",
+							"Parameter": ["com.vivo", "MultiCameraBokehSelectSessionId"],
+							"Condition": ["int", "==16"],
+							"UsecaseSelector": [
+								{
+									"Type": "Physical ID",
+									"Condition": ["int", "==2"],
+									"Debug": 1,
+									"Result": "PROTRAIT4XROI",
+									"CameraScenario": 516
+								},
+								{
+									"Type": "Physical ID",
+									"Condition": ["int", "==3"],
+									"Debug": 1,
+									"Result": "PROTRAIT4X",
+									"CameraScenario": 516
+								}]
+						},
+                        {
+							"Type": "Tag",
+							"Parameter": ["com.vivo", "MultiCameraBokehSelectSessionId"],
+							"Condition": ["int", "==18"],
+							"Result": "PROTRAIT2XL",
+							"CameraScenario": 515,
+							"Debug": 1
+						},
+                        {
+							"Type": "Tag",
+							"Parameter": ["com.vivo", "MultiCameraBokehSelectSessionId"],
+							"Condition": ["int", "==17"],
+							"Result": "PROTRAIT4XL",
+							"CameraScenario": 516,
+							"Debug": 1
+						}]
+				},
+				{ // 夜景模式
+					"Type": "UIMode",
+					"Condition": ["int", "==7"],
+					"Result": "PHOTO",
+					"CameraScenario": 500,
+					"UsecaseSelector": [
+						{ // SAT Remosaic
+							"Type": "SCENARIO",
+							"Condition": ["int", "==3"],
+							"Result": "SATREMOSAIC",
+							"CameraScenario": 500
+						},
+						{ // SAT Remosaic
+							"Type": "Tag",
+							"Parameter": ["vivo.control", "seamless.remosaic.enable"],
+							"Condition": ["int", "==1"],
+							"Result": "SATREMOSAIC",
+							"CameraScenario": 500
+						},
+						{ // ROI Remosaic
+							"Type": "Tag",
+							"Parameter": ["vivo.control", "seamless.roiRemosaic"],
+							"Condition": ["int", "==4"],
+							"Result": "ROIREMOSAIC",
+							"CameraScenario": 500
+						}]
+				},
+				{ // 运动
+				"Type": "UIMode",
+				"Condition": ["int", "==35"],
+				"Result": "PHOTO",
+				"UsecaseSelector": [
+					{
+						"Type": "Tag",
+						"Parameter": ["vivo.control", "motionCaptureMode"],
+						"Condition": ["int", "==2"],
+						"CameraScenario": 531
+					},
+					{
+						"Type": "Tag",
+						"Parameter": ["vivo.control", "motionCaptureMode"],
+						"Condition": ["int", "!=2", "NULL"],
+						"CameraScenario": 519,
+						"UsecaseSelector": [
+							{
+								"Type": "Property",
+								"Condition": ["property", "NORMAL2EXP"],
+								"Result": "SPORT",
+								"Debug": 1
+							}]
+					}]
+				},
+				{ // 超级月亮
+					"Type": "UIMode",
+					"Condition": ["int", "==32"],
+					"Result": "PHOTO",
+					"CameraScenario": 517
+				},
+				{ // 微距
+					"Type": "UIMode",
+					"Condition": ["int", "==34"],
+					"Result": "PHOTO",
+					"CameraScenario": 500
+				},
+				{ // 人像
+					"Type": "UIMode",
+					"Condition": ["int", "==31", "==71"],
+					"Result": "PHOTO",
+					"CameraScenario": 513,
+					"Debug": 1,
+					"UsecaseSelector": [
+						{
+							"Type": "Tag",
+							"Parameter": ["com.vivo", "MultiCameraBokehSelectSessionId"],
+							"Condition": ["int", "==0"],
+							"Result": "PROTRAITZOOM",
+							"CameraScenario": 513,
+							"Debug": 1,
+							"UsecaseSelector": [
+								{
+									"Type": "Tag",
+									"Parameter": ["vivo.control", "initSATRatio"],
+									"Condition": ["float", "<<2.0"],
+									"Debug": 1,
+									"UsecaseSelector": [
+										{
+											"Type": "Physical ID",
+											"Condition": ["int", "==4"],
+											"Debug": 1,
+											"Result": "PROTRAIT1X",
+											"CameraScenario": 513
+										}]
+								}]
+						},
+						{
+							"Type": "Tag",
+							"Parameter": ["vivo.control", "isSportbokeh"],
+							"Condition": ["int", "==1"],
+							"Result": "PROTRAIT1X",
+							"CameraScenario": 513,
+							"Debug": 1
+						},
+						{
+							"Type": "Tag",
+							"Parameter": ["com.vivo", "MultiCameraBokehSelectSessionId"],
+							"Condition": ["int", "==3"],
+							"Result": "PROTRAIT1X",
+							"CameraScenario": 514,
+							"Debug": 1,
+							"UsecaseSelector": [
+								{ // LN2
+									"Type": "Tag",
+									"Parameter": ["vivo.control", "enableln2"],
+									"Condition": ["int", "==1"],
+									"Debug": 1,
+									"UsecaseSelector": [
+										{
+											"Type": "Property",
+											"Condition": ["property", "LN2"],
+											"Result": "PHOTOLN2",
+											"Debug": 1,
+											"CameraScenario": 514
+										}]
+								}]
+						},
+						{
+							"Type": "Tag",
+							"Parameter": ["com.vivo", "MultiCameraBokehSelectSessionId"],
+							"Condition": ["int", "==4"],
+							"Result": "PROTRAIT2X",
+							"CameraScenario": 515,
+							"UsecaseSelector": [
+								{
+									"Type": "Physical ID",
+									"Condition": ["int", "==2"],
+									"Debug": 1,
+									"Result": "PROTRAIT2XROI",
+									"CameraScenario": 515
+								}]
+						},
+						{
+							"Type": "Tag",
+							"Parameter": ["com.vivo", "MultiCameraBokehSelectSessionId"],
+							"Condition": ["int", "==15"],
+							"Result": "PROTRAIT4X",
+							"CameraScenario": 516,
+							"Debug": 1
+						},
+                        {
+							"Type": "Tag",
+							"Parameter": ["com.vivo", "MultiCameraBokehSelectSessionId"],
+							"Condition": ["int", "==18"],
+							"Result": "PROTRAIT2XL",
+							"CameraScenario": 515,
+							"Debug": 1,
+							"UsecaseSelector": [
+								{ // LN2
+									"Type": "Tag",
+									"Parameter": ["vivo.control", "enableln2"],
+									"Condition": ["int", "==1"],
+									"Debug": 1,
+									"UsecaseSelector": [
+										{
+											"Type": "Property",
+											"Condition": ["property", "LN2"],
+											"Result": "PHOTOLN2",
+											"Debug": 1,
+											"CameraScenario": 514
+										}]
+								}]
+						},
+                                                {
+							"Type": "Tag",
+							"Parameter": ["com.vivo", "MultiCameraBokehSelectSessionId"],
+							"Condition": ["int", "==20"],
+							"Result": "PROTRAIT4XL",
+							"CameraScenario": 516,
+							"Debug": 1
+						}]
+				},
+				{ // 前置人像
+					"Type": "UIMode",
+					"Condition": ["int", "==0"],
+					"Result": "PHOTO",
+					"CameraScenario": 500,
+					"Debug": 1,
+					"UsecaseSelector": [
+						{
+							"Type": "SCENARIO",
+							"Condition": ["int", "==2"],
+							"Result": "REMOSAIC",
+							"CameraScenario": 500
+						},
+						{
+							"Type": "Tag",
+							"Parameter": ["vivo.control", "sensorMode"],
+							"Condition": ["int", "==1"],
+							"Debug": 1,
+							"Result": "REMOSAIC",
+							"CameraScenario": 500
+						},
+						{
+							"Type": "Tag",
+							"Parameter": ["com.mediatek.control.capture", "remosaicenable"],
+							"Condition": ["int", "==1"],
+							"Debug": 1,
+							"Result": "REMOSAIC",
+							"CameraScenario": 500
+						}]
+				},
+				{ // 慢镜头
+					"Type": "FrameRate",
+					"Condition": ["int", ">=120"],
+					"Result": "HFR",
+					"CameraScenario": 534,
+					"UsecaseSelector": [
+						{
+							"Type": "FrameRate",
+							"Condition": ["int", "==240"],
+							"Result": "HFR",
+							"CameraScenario": 535
+						},
+						{
+							"Type": "FrameRate",
+							"Condition": ["int", "==480"],
+							"Result": "HFR",
+							"CameraScenario": 536
+						}]
+				},
+				{// 电影人像
+					"Type": "UIMode",
+					"Condition": ["int", "==64"],
+					"Result": "VIDEO",
+					"CameraScenario": 529,
+					"Debug": 1,
+					"UsecaseSelector": [
+						{
+							"Type": "Physical ID",
+							"Condition": ["int", "==2", "==3"],
+							"Debug": 1,
+							"Result": "VIDEO",
+							"CameraScenario": 529,
+							"UsecaseSelector": [
+								{ // 无 seamless
+									"Type": "Tag",
+									"Parameter": ["vivo.control", "session.seamlesscontrol"],
+									"Condition": ["int", "NULL"],
+									"Result": "VIDEO",
+									"CameraScenario": 529,
+									"UsecaseSelector": [
+										{
+											"Type": "Tag",
+											"Parameter": ["vivo.control", "ic.scene"],
+											"Condition": ["bit", "!7"],
+											"Debug": 1,
+											"UsecaseSelector": [
+												{
+													"Type": "Tag",
+													"Parameter": ["vivo.control", "ic.scene"],
+													"Condition": ["bit", "6"],
+													"Debug": 1,
+													"UsecaseSelector": [
+														{ // [7..5] : 010 -- 2X(2)
+															"Type": "Tag",
+															"Parameter": ["vivo.control", "ic.scene"],
+															"Condition": ["bit", "!5"],
+															"Debug": 1,
+															"Result": "PROTRAITROI",
+															"CameraScenario": 529,
+															"UsecaseSelector": [
+																{
+																	"Type": "Tag",
+																	"Parameter": ["vivo.control", "ic.scene"],
+																	"Condition": ["bit", "!2"],
+																	"Debug": 1,
+																	"UsecaseSelector": [
+																		{// [2..4] 极夜(2)
+																			"Type": "Tag",
+																			"Parameter": ["vivo.control", "ic.scene"],
+																			"Condition": ["bit", "3"],
+																			"Debug": 1,
+																			"Result": "VIDEO",
+																			"CameraScenario": 529
+																		}]
+																}]
+														}]
+												}]
+										}]
+								},
+								{ // seamless SHDR 1曝
+									"Type": "Tag",
+									"Parameter": ["vivo.control", "session.seamlesscontrol"],
+									"Condition": ["int", "==1"],
+									"Debug": 1,
+									"Result": "PROTRAITLBMFVHDR1",
+									"CameraScenario": 529,
+									"UsecaseSelector": [
+										{
+											"Type": "Physical ID",
+											"Condition": ["int", "==2"],
+											"Debug": 1,
+											"UsecaseSelector": [
+											{
+												"Type": "Android Property",
+												"Parameter": ["ro.boot.vivo.hardware.pcb.detect", "4", "HW_PD%d"],
+												"Condition": ["int", "==2419"],
+												"Debug": 1,
+												"Result": "PROTRAITDCGVHDR1"
+											}]
+										}]
+								},
+								{ // seamless SHDR 2曝
+									"Type": "Tag",
+									"Parameter": ["vivo.control", "session.seamlesscontrol"],
+									"Condition": ["int", "==2"],
+									"Debug": 1,
+									"UsecaseSelector": [
+										{
+											"Type": "Property",
+											"Condition": ["property", "LBMF2EXP"],
+											"Result": "PROTRAITLBMFVHDR2",
+											"CameraScenario": 501,
+											"UsecaseSelector": [
+												{
+													"Type": "Physical ID",
+													"Condition": ["int", "==2"],
+													"Debug": 1,
+													"UsecaseSelector": [
+														{
+															"Type": "Android Property",
+															"Parameter": ["ro.boot.vivo.hardware.pcb.detect", "4", "HW_PD%d"],
+															"Condition": ["int", "==2419"],
+															"Debug": 1,
+															"UsecaseSelector": [
+																{
+																	"Type": "Property",
+																	"Condition": ["property", "DCGHDR2EXP"],
+																	"Result": "PROTRAITDCGVHDR2"
+																}]
+														}]
+												}]
+										},
+										{
+											"Type": "Property",
+											"Condition": ["property", "!LBMF2EXP"],
+											"Result": "PROTRAITLBMFVHDR1",
+											"CameraScenario": 501,
+											"UsecaseSelector": [
+												{
+													"Type": "Physical ID",
+													"Condition": ["int", "==2"],
+													"Debug": 1,
+													"UsecaseSelector": [
+														{
+															"Type": "Android Property",
+															"Parameter": ["ro.boot.vivo.hardware.pcb.detect", "4", "HW_PD%d"],
+															"Condition": ["int", "==2419"],
+															"Debug": 1,
+															"UsecaseSelector": [
+																{
+																	"Type": "Property",
+																	"Condition": ["property", "!DCGHDR2EXP"],
+																	"Result": "PROTRAITDCGVHDR1"
+																}]
+														}]
+												}]
+										}]
+								}]
+						}]
+				}]
+		},
+		{
+			"Type": "AppType",
+			"Condition": ["string", "ENGINEER"],
+			"Debug": 1,
+			"UsecaseSelector": [
+				{ // 工模普通拍照
+					"Type": "UIMode",
+					"Condition": ["int", "==25"],
+					"Debug": 1,
+					"Result": "PHOTO",
+					"CameraScenario": 545,
+					"UsecaseSelector": [
+						{
+							"Type": "SCENARIO",
+							"Condition": ["int", "==2"],
+							"Result": "REMOSAIC"
+						},
+						{
+							"Type": "Tag",
+							"Parameter": ["vivo.control", "sensorMode"],
+							"Condition": ["int", "==1"],
+							"Result": "REMOSAIC"
+						}]
+				},
+				{ // 工模普通录像
+					"Type": "UIMode",
+					"Condition": ["int", "==3"],
+					"Debug": 1,
+					"Result": "VIDEO",
+					"CameraScenario": 546
+				},
+				{ // 工模人像主摄+广角融合
+					"Type": "Tag",
+					"Parameter": ["com.vivo", "MultiCameraBokehSelectSessionId"],
+					"Condition": ["int", "==3"],
+					"Result": "PROTRAIT1X",
+					"Debug": 1,
+					"CameraScenario": 514
+				},
+				{ // 工模人像望远+主摄融合
+					"Type": "Tag",
+					"Parameter": ["com.vivo", "MultiCameraBokehSelectSessionId"],
+					"Condition": ["int", "==20"],
+					"Result": "ENGPROTRAIT2X",
+					"CameraScenario": 547
+				}]
+		},
+		{
+			"Type": "AppType",
+			"Condition": ["string", "FaceUnlock"],
+			"Debug": 1,
+			"CameraScenario": 548,
+			"UsecaseSelector": [
+				{ // 人脸解锁
+					"Type": "Property",
+					"Condition": ["property", "V2H2"],
+					"Result": "V2H2"
+				}]
+		},
+		{
+			"Type": "AppType",
+			"Condition": ["string", "TIKTOK", "WEIXIN", "KUAISHOU"],
+			"Debug": 1,
+			"UsecaseSelector": [
+				{
+					"Type": "Android Property",
+					"Parameter": ["ro.boot.vivo.hardware.pcb.detect", "4", "HW_PD%d"],
+					"Condition": ["int", "==2419"],
+					"Debug": 1,
+					"UsecaseSelector":[
+						{
+							"Type": "FrameRate",
+							"Condition": ["int", "<=30"],
+							"Debug": 1,
+							"CameraScenario": 551,
+							"Result": "VIDEO",
+							"UsecaseSelector":
+							[
+								{
+									//后置主摄
+									"Type": "Camera ID",
+									"Condition": ["int", "==0"],
+									"Debug": 1,
+									"Result": "PROTRAITDCGVHDR1"
+								}
+							]
+						}]
+				}]
+		},
+		{
+			"Type": "AppType",
+			"Condition": ["string", "!vivo"],
+			"Debug": 1,
+			"UsecaseSelector": [{
+				"Type": "FrameRate",
+				"Condition": ["int", ">=120"],
+				"Result": "HFR",
+				"CameraScenario": 534,
+				"UsecaseSelector": [
+					{
+						"Type": "FrameRate",
+						"Condition": ["int", "==240"],
+						"Result": "HFR",
+						"CameraScenario": 535
+					},
+					{
+						"Type": "FrameRate",
+						"Condition": ["int", "==480"],
+						"Result": "HFR",
+						"CameraScenario": 536
+					}]
+			},
+			{
+				// 60FPS
+				"Type": "AppType",
+				"Condition": ["string", "CTSV", "CTS","ARCore"],
+				"Debug": 1,
+				"UsecaseSelector": [
+				{
+					"Type": "FrameRate",
+					"Condition": ["int", "<=30"],
+					"Result": "PHOTO",
+					"CameraScenario": 532,
+					"UsecaseSelector": [
+						{
+							"Type": "Android Property",
+							"Parameter": ["ro.boot.vivo.hardware.pcb.detect", "4", "HW_PD%d"],
+							"Condition": ["int", "==2419"],
+							"Result": "PHOTO",
+							"Debug": 1,
+							"CameraScenario": 550
+						}]
+				},
+				{
+					"Type": "FrameRate",
+					"Condition": ["int", ">>30"],
+					"UsecaseSelector": [
+					{
+						"Type": "FrameRate",
+						"Condition": ["int", "<=60"],
+						"Result": "VIDEO60",
+						"Debug": 1,
+						"CameraScenario": 533
+					}]
+				}]
+			}]
+		},
+		{
+			"Type": "Physical ID",
+			"Condition": ["int", "==1"],
+			"UsecaseSelector": [
+			{
+				"Type": "AppType",
+				"Condition": ["string", "WEIXIN"],
+				"Debug": 1,
+				"Result": "VIDEO",
+				"CameraScenario": 532,
+				"UsecaseSelector": [
+				{
+					"Type": "YUV Width",
+					"Condition": ["int", "==640"],
+					"Debug": 1,
+					"UsecaseSelector": [
+						{
+							"Type": "YUV Height",
+							"Condition": ["int", "==480"],
+							"Result": "PHOTO",
+							"CameraScenario": 532
+						}]
+				}]
+			}]
+		}
+	],
+	"SensorModeSelector": {
+		"PHOTO": [{"Property": "FullFOV"}, {"Ratio": "1333"}, {"FrameRate" : 30}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"MOVIEBOKEH": [{"Property": "UHD4K"},{"Property": "NORMAL1EXP"}, {"Property": "Binning"},{"Ratio": "1777"}, {"FrameRate" : 30}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"PHOTOHDR1": [{"Property": "SHDR1EXP"}, {"Property": "FullFOV"}, {"Ratio": "1333"}, {"FrameRate" : 30}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"PHOTOHDR2": [{"Property": "SHDR2EXP"}, {"Property": "FullFOV"}, {"Ratio": "1333"}, {"FrameRate" : 30}, {"SensorScenario" : 9}, {"CustomHint" : 0}],
+		"VIDEO": [{"Property": "FullFOV"}, {"Ratio": "1777"}, "FrameRate", {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"PROTRAITDCGVHDR1": [{"Property": "NORMAL1EXP"}, {"Property": "FullFOV"}, {"Ratio": "1777"}, "FrameRate", {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"PROTRAITDCGVHDR2": [{"Property": "DCGHDR2EXP"}, {"Property": "FullFOV"}, {"Ratio": "1777"}, "FrameRate", {"SensorScenario" : 17}, {"CustomHint" : 0}],
+		"PROTRAITLBMFVHDR2": [{"Property": "LBMF2EXP"}, {"Property": "FullFOV"}, {"Ratio": "1777"}, "FrameRate", {"SensorScenario" : 12}, {"CustomHint" : 0}],
+		"PROTRAITLBMFVHDR1": [{"Property": "NORMAL1EXP"}, {"Property": "FullFOV"}, {"Ratio": "1777"}, "FrameRate", {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"PROTRAITROI": [{"Property": "ROI"}, {"Property": "QuadCFA"}, {"RemosaicType" :"HWRemosaic"}, {"Ratio": "1777"}, {"SensorScenario" : 8}, {"CustomHint" : 0}],
+		"VIDEO30": [{"Ratio": "1600"}, {"Property": "Binning"}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"VIDEO60": [{"Property": "FullFOV"}, {"Ratio": "1777"}, {"FrameRate": 60}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"VIDEO60_1610": [{"Property": "FullFOV"}, {"Ratio": "1600"}, {"FrameRate": 60}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"HFR": ["FrameRate", {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"4K60": [{"Property": "UHD4K"}, {"Width": 3840}, {"Height": 2160}, {"Property": "Binning"}, {"FrameRate": 60}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"MFHDR": [{"Ratio": "1777"}, {"FrameRate": 60}, {"Property": "Binning"}, {"Property": "FullFOV"}, {"SensorScenario" : 258}, {"CustomHint" : 0}],
+		"SUPEREIS": [{"Ratio": "1333"}, {"FrameRate": 60}, {"Property": "Binning"}, {"Property": "FullFOV"}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"SUPEREIS30": [{"Ratio": "1333"}, {"FrameRate": 30}, {"Property": "Binning"}, {"Property": "FullFOV"}, {"Property": "SuperEis30"}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"HDR10+": [{"Property": "SHDR2EXP"}, {"Ratio": "1600"}, {"Property": "Binning"}, {"Property": "FullFOV"}, {"SensorScenario" : 9}, {"CustomHint" : 0}],
+		"VHDR2": [{"Property": "SHDR2EXP"}, {"Ratio": "1600"}, {"Property": "Binning"}, {"SensorScenario" : 9}, {"CustomHint" : 0}],
+		"VHDR1": [{"Property": "NORMAL1EXP"}, {"Ratio": "1600"}, {"Property": "Binning"}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"4K30": [{"Property": "UHD4K"}, {"Width": 3840}, {"Height": 2160}, {"Property": "Binning"}, {"FrameRate": 30}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"PROTRAIT1X": [{"Property": "Binning"}, {"Property": "RTB1"}, {"Ratio": "1333"}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"PROTRAIT2X": [{"Property": "RTB2"}, {"Ratio": "1333"}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"PROTRAIT2XROI": [{"Property": "RTB2"}, {"Ratio": "1333"}, {"SensorScenario" : 5}, {"CustomHint" : 0}],
+		"PROTRAIT2XL": [{"Property": "RTB2L"}, {"Ratio": "1333"}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"PROTRAIT4X": [{"Property": "RTB3"}, {"Ratio": "1333"}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"PROTRAIT4XROI": [{"Property": "RTB3"}, {"Ratio": "1333"}, {"SensorScenario" : 5}, {"CustomHint" : 0}],
+		"PROTRAIT4XL": [{"Property": "RTB3L"}, {"Ratio": "1333"}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"PROTRAITZOOM": [{"Property": "RTB5"}, {"Ratio": "1333"}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"ENGPROTRAIT2X": [{"Property": "RTB4"}, {"Ratio": "1333"}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"ENGPROTRAIT2XROI": [{"Property": "RTB4"}, {"Ratio": "1333"}, {"SensorScenario" : 8}, {"CustomHint" : 0}],
+		"REMOSAIC": [{"Property": "QuadCFA"}, {"RemosaicType" :"HWRemosaic"}, {"SensorScenario" : 4}, {"CustomHint" : 0}],
+		"SATREMOSAIC": [{"Property": "QuadCFA"}, {"RemosaicType" :"NORemosaic"}, {"SensorScenario" : 2}, {"CustomHint" : 0}],
+		"SPORT": [{"Property": "NORMAL2EXP"}, {"Property": "Binning"}, {"Ratio": "1333"}, {"SensorScenario" : 9}, {"CustomHint" : 0}],
+		"8K": [{"Property": "UHD8K"}, {"Width": 8192}, {"Height": 4608}, {"SensorScenario" : 259}, {"CustomHint" : 0}],
+		"ROIREMOSAIC": [{"Property": "ROI"}, {"Property": "QuadCFA"}, {"RemosaicType" :"HWRemosaic"}, {"SensorScenario" : 8}, {"CustomHint" : 0}],
+		"SKYLINEEIS": [{"Ratio": "1333"}, {"Property": "FullFOV"}, {"Property": "Binning"}, {"Property": "NORMAL1EXP"}, {"FrameRate" :"30"}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"V2H2": [{"Property": "V2H2"}, {"Property": "FullFOV"}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"PHOTOCROP": [{"Ratio": "1333"}, {"Width": 2608}, {"Height": 1956}, {"SensorScenario" : 1}, {"CustomHint" : 15}],
+		"DCGHDR2": [{"Property": "DCGHDR2EXP"}, {"Ratio": "1600"}, {"Property": "Binning"}, {"SensorScenario" : 17}, {"CustomHint" : 0}],
+		"DCGHDR1": [{"Property": "NORMAL1EXP"}, {"Ratio": "1600"}, {"Property": "Binning"}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"LBMFHDR2": [{"Property": "LBMF2EXP"}, {"Ratio": "1600"}, {"Property": "Binning"}, {"SensorScenario" : 12}, {"CustomHint" : 0}],
+		"LBMFHDR1": [{"Property": "NORMAL1EXP"}, {"Ratio": "1600"}, {"Property": "Binning"}, {"SensorScenario" : 1}, {"CustomHint" : 0}],
+		"PHOTOLN2": [{"Property": "LN2"}, {"Property": "FullFOV"}, {"Ratio": "1333"}, {"FrameRate" : 30}, {"SensorScenario" : 1}, {"CustomHint" : 19}],
+		"VIDEOLN2": [{"Property": "LN2"}, {"Property": "FullFOV"}, {"Ratio": "1600"}, {"FrameRate" : 30}, {"SensorScenario" : 1}, {"CustomHint" : 19}]
+	}
+}

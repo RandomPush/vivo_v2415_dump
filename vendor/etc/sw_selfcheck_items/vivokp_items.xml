@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sw_selfcheck_items>
+	<command name = "software_selfcheck">
+		<item type = "file" tag = "/cache/recovery/vivokp_cert_data" ap = "system" value = "0" />
+		<item type = "file" tag = "/cache/recovery/cert_data" ap = "system" value = "0" />
+		<item type = "file" tag = "/cache/recovery/vivo_kp.cert" ap = "system" value = "0" />
+		<item type = "file" tag = "/cache/recovery/last_vivokp" ap = "system" value = "0" />
+		<item type = "file" tag = "/data/engineermode/070f0000000000000000000000000a0a.tlbin" ap = "system" value = "0" />
+	</command>
+</sw_selfcheck_items>

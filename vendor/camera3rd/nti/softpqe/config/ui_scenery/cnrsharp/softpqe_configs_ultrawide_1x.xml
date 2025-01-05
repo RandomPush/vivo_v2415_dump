@@ -1,0 +1,421 @@
+<swispConfig>
+  <modelBlockDelta description="The delta of block we split">16</modelBlockDelta>
+  <yModelName description="The file name of y model">softpqe_y_1x_0_6_1.vdnn</yModelName>
+  <yModelOutputFakeQuantScale description="The dequant scale for the output of y model">0.0031941733323037624</yModelOutputFakeQuantScale>
+  <yModelOutputFakeQuantOffset description="The dequant offset for the output of y model">-101</yModelOutputFakeQuantOffset>
+  <uvModelName description="The file name of uv model">softpqe_uv_0_7_0.vdnn</uvModelName>
+  <uvModelOutputFakeQuantScale description="The dequant scale for the output of uv model">0.0013194871135056019</uvModelOutputFakeQuantScale>
+  <uvModelOutputFakeQuantOffset description="The dequant offset for the output of uv model">-119</uvModelOutputFakeQuantOffset>
+  <auxUvModelName description="The file name of uv model">softpqe_uv_0_8_0.vdnn</auxUvModelName>
+  <auxUvModelOutputFakeQuantScale description="The dequant scale for the output of uv model">0.0026306803338229656</auxUvModelOutputFakeQuantScale>
+  <auxUvModelOutputFakeQuantOffset description="The dequant offset for the output of uv model">-113</auxUvModelOutputFakeQuantOffset>
+  <yModelMode description="Y model mode: 0(small kernel), 1(large kernel), 2(ETA)">1</yModelMode>
+  <yModelEdgeMaskMode description="Y model edge mask mode, could be 0(none), 1(sobel(src)), 2(sobel(gau(src)))">6</yModelEdgeMaskMode>
+  <uvModelEdgeMaskMode description="UV model edge mask mode, could be 0(none), 1(sobel(Y)), 2(sobel(gau(Y))), 3(sobel(UV)), 4(sobel(UV)xsobel(Y)), 5(gau(sobel(UV)xsobel(Y)))">5</uvModelEdgeMaskMode>
+  <uvModelN1AnchorPosition description="anchor position, range:[0, 1]">0.85</uvModelN1AnchorPosition>
+  <auxUvModelEdgeMaskMode description="UV model edge mask mode, could be 0(none), 1(sobel(Y)), 2(sobel(gau(Y))), 3(sobel(UV)), 4(sobel(UV)xsobel(Y)), 5(gau(sobel(UV)xsobel(Y)))">5</auxUvModelEdgeMaskMode>
+  <auxUvModelN1AnchorPosition description="anchor position, range:[0, 1]">0.85</auxUvModelN1AnchorPosition>
+  <cfrMode description="color fringe reduction mode selection, 1: without color range, 2: with color range">2</cfrMode>
+  <cfrReddish description="increase red range of color fringe reduction, range:[0, 5]">0</cfrReddish>
+  <cfrBluish description="increase blue range of color fringe reduction, range:[0, 5]">0</cfrBluish>
+  <cfrRadialAnchor description="radial anchor position of color fringe reduction, range:[0, 1]">0,0.4,0.6,1.0</cfrRadialAnchor>
+  <usmMode description="usm mode, could be 0, 1 or 2">1</usmMode>
+  <radialAnchor description="radial anchor position, range:[0, 1]">0,0.4,0.7,1.0</radialAnchor>
+  <enableInOutFusion description="enable/disable inOutFusion">1</enableInOutFusion>
+  <TotalLevNum>7</TotalLevNum>
+  <levConfigData>
+    <rawISO description="rawISO = shortGain * 50.">50</rawISO>
+    <inputLowTextureGainL0 description="gain weight to enhance level 0 low texture of input">0.1</inputLowTextureGainL0>
+    <inputLowTextureGainL1 description="gain weight to enhance level 1 low texture of input">1</inputLowTextureGainL1>
+    <radialLevel description="radial gain to enhance corner sharp level, range:[1, 2]">1,1,1.05,1.1</radialLevel>
+    <radialNoiseLevel description="radial gain to enhance corner noise level, range:[0, 10]">1,1,1.05,1.1</radialNoiseLevel>
+    <yModelParameters description="drcGain ={1,2,3,4}">
+          <blurScale description="bigger means sharper, range:[0, 0.5]">0.5,0.5,0.5,0.5</blurScale>
+          <blurGain description="bigger means sharper, range:[0, 20]">5,5,5,5</blurGain>
+          <overShootLevel description="overshoot remove strength, range:[0, 1.5]">0.6,0.6,0.6,0.6</overShootLevel>
+          <overShootEdgeLevel description="overshoot on edge remove strength, range:[0, 1.5]">0.9,0.9,0.9,0.9</overShootEdgeLevel>
+          <underShootLevel description="undershoot remove strength, range:[0, 1.5]">0.5,0.5,0.5,0.5</underShootLevel>
+          <underShootEdgeLevel description="undershoot on edge remove strength, range:[0, 1.5]">0.8,0.8,0.8,0.8</underShootEdgeLevel>
+          <minBlurScale description="minimum blur scale, should be less/eqaul to blurScale, range:[0, 1]">0,0,0,0</minBlurScale>
+          <!-- luma shot noise level, bigger means stronger denoise. -->
+          <noise1Level description="luma shot noise, range:[0, 1]">0.1,0.15,0.225,0.25</noise1Level>
+          <!-- luma read noise level, bigger means stronger denoise. Normally we fix it as 0 -->
+          <noise2Level description="luma read noise, range:[0, 1]">0,0.05,0.1,0.125</noise2Level>
+    </yModelParameters>
+    <uvModelParameters description="drcGain ={1,2,3,4}">
+          <uvRadialLevel description="radial gain to enhance corne denoise level, range:[1, 10]">1,1,1.1,1.2</uvRadialLevel>
+          <!-- chroma shot noise level, bigger means stronger denoise. -->
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.1,0.1,0.1,0.1</minLevel>
+              <anchorLevel description="anchor level">0.4,0.4,0.4,0.4</anchorLevel>
+              <maxLevel description="maximum level">0.7,0.7,0.7,0.7</maxLevel>
+          </noise1Level>
+          <!-- chroma read noise level, bigger means stronger denoise. Normally we fix it as 0 -->
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <!-- chroma read noise size, we will downscale the UV to 1/n resolutions and run the denoise model. -->
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <!-- The max down sampling scale for input -->
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </uvModelParameters>
+    <auxUvModelParameters description="drcGain ={1,2,3,4}">
+          <cfrRadialGain description="color fringe reduction gain, range:[0, 2]">0.8,1.25,1.5,2.0</cfrRadialGain>
+          <cfrRadialDecay description="color fringe reduction threshold decay ratio, range:[0, 1]">1.0,1.0,0.95,0.9</cfrRadialDecay>
+          <saturationLevel description="color fringe satuation threshold, range:[0, 1]">0.85</saturationLevel>
+          <saturationLevelProtection description="color fringe satuation threshold, range:[0, 1]">0.5</saturationLevelProtection>
+          <cfrEdgeLevelProtection description="color fringe satuation threshold, range:[0, 1]">200</cfrEdgeLevelProtection>
+          <cfrEdgeLevel description="color fringe edge threshold, range:[0, 128]">60</cfrEdgeLevel>
+          <cfrEdgeWeight description="color fringe edge weight, range:[0, 1.0]">0.5</cfrEdgeWeight>
+          <!-- chroma shot noise level, bigger means stronger denoise. -->
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.1,0.1,0.2,0.25</minLevel>
+              <anchorLevel description="anchor level">0.6,0.6,0.6,0.6</anchorLevel>
+              <maxLevel description="maximum level">1.0,1.0,1.0,1.0</maxLevel>
+          </noise1Level>
+          <!-- chroma read noise level, bigger means stronger denoise. Normally we fix it as 0 -->
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <!-- chroma read noise size, we will downscale the UV to 1/n resolutions and run the denoise model. -->
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <!-- The max down sampling scale for input -->
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </auxUvModelParameters>
+    <!-- post sharpening kernelSize1 is one of [3,5,7] for thin edge, kernelSize2 is one of [11, 13, 15] for thick edge, e.g [3, 0.5, 11, 0.4]-->
+    <postSharpeningParameters description="post sharpening args [kernelSize1, weight1, kernelSize2, weight2]]">
+          <kernelSize1>3,3,3,3</kernelSize1>
+          <weight1O>0,0,0,0</weight1O>
+          <weight1U>0,0,0,0</weight1U>
+          <kernelSize2>5,5,5,5</kernelSize2>
+          <weight2O>0,0,0,0</weight2O>
+          <weight2U>0,0,0,0</weight2U>
+          <usmStrength description="usm strength">0</usmStrength>
+    </postSharpeningParameters>
+  </levConfigData>
+  <levConfigData>
+    <rawISO description="rawISO = shortGain * 50.">100</rawISO>
+    <inputLowTextureGainL0 description="gain weight to enhance level 0 low texture of input">0</inputLowTextureGainL0>
+    <inputLowTextureGainL1 description="gain weight to enhance level 1 low texture of input">1</inputLowTextureGainL1>
+    <radialLevel description="radial gain to enhance corner sharp level, range:[1, 2]">1,1,1.05,1.1</radialLevel>
+    <radialNoiseLevel description="radial gain to enhance corner noise level, range:[0, 10]">1,1,1.05,1.1</radialNoiseLevel>
+    <yModelParameters description="drcGain ={1,2,3,4}">
+          <blurScale description="bigger means sharper, range:[0, 0.5]">0.5,0.5,0.5,0.5</blurScale>
+          <blurGain description="bigger means sharper, range:[0, 20]">5,5,5,5</blurGain>
+          <overShootLevel description="overshoot remove strength, range:[0, 1.5]">0.6,0.6,0.6,0.6</overShootLevel>
+          <overShootEdgeLevel description="overshoot on edge remove strength, range:[0, 1.5]">0.9,0.9,0.9,0.9</overShootEdgeLevel>
+          <underShootLevel description="undershoot remove strength, range:[0, 1.5]">0.5,0.5,0.5,0.5</underShootLevel>
+          <underShootEdgeLevel description="undershoot on edge remove strength, range:[0, 1.5]">0.8,0.8,0.8,0.8</underShootEdgeLevel>
+          <minBlurScale description="minimum blur scale, should be less/eqaul to blurScale, range:[0, 1]">0,0,0,0</minBlurScale>
+          <noise1Level description="luma shot noise, range:[0, 1]">0.1,0.15,0.2,0.225</noise1Level>
+          <noise2Level description="luma read noise, range:[0, 1]">0,0.05,0.1,0.125</noise2Level>
+    </yModelParameters>
+    <uvModelParameters description="drcGain ={1,2,3,4}">
+          <uvRadialLevel description="radial gain to enhance corne denoise level, range:[1, 10]">1,1,1.1,1.2</uvRadialLevel>
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.1,0.1,0.1,0.1</minLevel>
+              <anchorLevel description="anchor level">0.4,0.4,0.4,0.4</anchorLevel>
+              <maxLevel description="maximum level">0.7,0.7,0.7,0.7</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </uvModelParameters>
+    <auxUvModelParameters description="drcGain ={1,2,3,4}">
+          <cfrRadialGain description="color fringe reduction gain, range:[0, 2]">0.8,1.25,1.5,2.0</cfrRadialGain>
+          <cfrRadialDecay description="color fringe reduction threshold decay ratio, range:[0, 1]">1.0,1.0,0.95,0.9</cfrRadialDecay>
+          <saturationLevel description="color fringe satuation threshold, range:[0, 1]">0.85</saturationLevel>
+          <saturationLevelProtection description="color fringe satuation threshold, range:[0, 1]">0.5</saturationLevelProtection>          
+          <cfrEdgeLevelProtection description="color fringe satuation threshold, range:[0, 1]">200</cfrEdgeLevelProtection>
+          <cfrEdgeLevel description="color fringe edge threshold, range:[0, 128]">60</cfrEdgeLevel>
+          <cfrEdgeWeight description="color fringe edge weight, range:[0, 1.0]">0.5</cfrEdgeWeight>
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.1,0.1,0.2,0.25</minLevel>
+              <anchorLevel description="anchor level">0.6,0.6,0.6,0.6</anchorLevel>
+              <maxLevel description="maximum level">1.0,1.0,1.0,1.0</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </auxUvModelParameters>
+    <postSharpeningParameters description="post sharpening args [kernelSize1, weight1, kernelSize2, weight2]]">
+          <kernelSize1>3,3,3,3</kernelSize1>
+          <weight1O>0,0,0,0</weight1O>
+          <weight1U>0,0,0,0</weight1U>
+          <kernelSize2>5,5,5,5</kernelSize2>
+          <weight2O>0,0,0,0</weight2O>
+          <weight2U>0,0,0,0</weight2U>
+          <usmStrength description="usm strength">0</usmStrength>
+    </postSharpeningParameters>
+  </levConfigData>
+  <levConfigData>
+    <rawISO description="rawISO = shortGain * 50.">200</rawISO>
+    <inputLowTextureGainL0 description="gain weight to enhance level 0 low texture of input">0</inputLowTextureGainL0>
+    <inputLowTextureGainL1 description="gain weight to enhance level 1 low texture of input">1</inputLowTextureGainL1>
+    <radialLevel description="radial gain to enhance corner sharp level, range:[1, 2]">1,1,1.05,1.1</radialLevel>
+    <radialNoiseLevel description="radial gain to enhance corner noise level, range:[0, 10]">1,1,1.05,1.1</radialNoiseLevel>
+    <yModelParameters description="drcGain ={1,2,3,4}">
+          <blurScale description="bigger means sharper, range:[0, 0.5]">0.5,0.5,0.5,0.5</blurScale>
+          <blurGain description="bigger means sharper, range:[0, 20]">5,5,5,5</blurGain>
+          <overShootLevel description="overshoot remove strength, range:[0, 1.5]">0.6,0.6,0.6,0.6</overShootLevel>
+          <overShootEdgeLevel description="overshoot on edge remove strength, range:[0, 1.5]">0.9,0.9,0.9,0.9</overShootEdgeLevel>
+          <underShootLevel description="undershoot remove strength, range:[0, 1.5]">0.5,0.5,0.5,0.5</underShootLevel>
+          <underShootEdgeLevel description="undershoot on edge remove strength, range:[0, 1.5]">0.8,0.8,0.8,0.8</underShootEdgeLevel>
+          <minBlurScale description="minimum blur scale, should be less/eqaul to blurScale, range:[0, 1]">0,0,0,0</minBlurScale>
+          <noise1Level description="luma shot noise, range:[0, 1]">0.125,0.175,0.225,0.25</noise1Level>
+          <noise2Level description="luma read noise, range:[0, 1]">0,0.05,0.1,0.125</noise2Level>
+    </yModelParameters>
+    <uvModelParameters description="drcGain ={1,2,3,4}">
+          <uvRadialLevel description="radial gain to enhance corne denoise level, range:[1, 10]">1,1,1.1,1.2</uvRadialLevel>
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.1,0.1,0.1,0.1</minLevel>
+              <anchorLevel description="anchor level">0.4,0.4,0.4,0.4</anchorLevel>
+              <maxLevel description="maximum level">0.7,0.7,0.7,0.7</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </uvModelParameters>
+    <auxUvModelParameters description="drcGain ={1,2,3,4}">
+          <cfrRadialGain description="color fringe reduction gain, range:[0, 2]">0.8,1.25,1.5,2.0</cfrRadialGain>
+          <cfrRadialDecay description="color fringe reduction threshold decay ratio, range:[0, 1]">1.0,1.0,0.95,0.9</cfrRadialDecay>
+          <saturationLevel description="color fringe satuation threshold, range:[0, 1]">0.85</saturationLevel>
+          <saturationLevelProtection description="color fringe satuation threshold, range:[0, 1]">0.5</saturationLevelProtection>
+          <cfrEdgeLevelProtection description="color fringe satuation threshold, range:[0, 1]">200</cfrEdgeLevelProtection>          
+          <cfrEdgeLevel description="color fringe edge threshold, range:[0, 128]">60</cfrEdgeLevel>
+          <cfrEdgeWeight description="color fringe edge weight, range:[0, 1.0]">0.5</cfrEdgeWeight>
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.1,0.1,0.15,0.2</minLevel>
+              <anchorLevel description="anchor level">0.6,0.6,0.6,0.6</anchorLevel>
+              <maxLevel description="maximum level">1.0,1.0,1.0,1.0</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </auxUvModelParameters>
+    <postSharpeningParameters description="post sharpening args [kernelSize1, weight1, kernelSize2, weight2]]">
+          <kernelSize1>3,3,3,3</kernelSize1>
+          <weight1O>0,0,0,0</weight1O>
+          <weight1U>0,0,0,0</weight1U>
+          <kernelSize2>5,5,5,5</kernelSize2>
+          <weight2O>0,0,0,0</weight2O>
+          <weight2U>0,0,0,0</weight2U>
+          <usmStrength description="usm strength">0</usmStrength>
+    </postSharpeningParameters>
+  </levConfigData>
+  <levConfigData>
+    <rawISO description="rawISO = shortGain * 50.">400</rawISO><!--Raw AINR Enable-->
+    <inputLowTextureGainL0 description="gain weight to enhance level 0 low texture of input">0</inputLowTextureGainL0>
+    <inputLowTextureGainL1 description="gain weight to enhance level 1 low texture of input">1</inputLowTextureGainL1>
+    <radialLevel description="radial gain to enhance corner sharp level, range:[1, 2]">1,1,1.05,1.1</radialLevel>
+    <radialNoiseLevel description="radial gain to enhance corner noise level, range:[0, 10]">1,1,1.05,1.1</radialNoiseLevel>
+    <yModelParameters description="drcGain ={1,2,3,4}">
+          <blurScale description="bigger means sharper, range:[0, 0.5]">0.5,0.5,0.5,0.5</blurScale>
+          <blurGain description="bigger means sharper, range:[0, 20]">5,5,5,5</blurGain>
+          <overShootLevel description="overshoot remove strength, range:[0, 1.5]">0.6,0.6,0.6,0.6</overShootLevel>
+          <overShootEdgeLevel description="overshoot on edge remove strength, range:[0, 1.5]">0.9,0.9,0.9,0.9</overShootEdgeLevel>
+          <underShootLevel description="undershoot remove strength, range:[0, 1.5]">0.5,0.5,0.5,0.5</underShootLevel>
+          <underShootEdgeLevel description="undershoot on edge remove strength, range:[0, 1.5]">0.8,0.8,0.8,0.8</underShootEdgeLevel>
+          <minBlurScale description="minimum blur scale, should be less/eqaul to blurScale, range:[0, 1]">0,0,0,0</minBlurScale>
+          <noise1Level description="luma shot noise, range:[0, 1]">0.1,0.15,0.2,0.225</noise1Level>
+          <noise2Level description="luma read noise, range:[0, 1]">0,0.025,0.075,0.1</noise2Level>
+    </yModelParameters>
+    <uvModelParameters description="drcGain ={1,2,3,4}">
+          <uvRadialLevel description="radial gain to enhance corne denoise level, range:[1, 10]">1,1,1.1,1.2</uvRadialLevel>
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.1,0.1,0.1,0.1</minLevel>
+              <anchorLevel description="anchor level">0.4,0.4,0.4,0.4</anchorLevel>
+              <maxLevel description="maximum level">0.7,0.7,0.7,0.7</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </uvModelParameters>
+    <auxUvModelParameters description="drcGain ={1,2,3,4}">
+          <cfrRadialGain description="color fringe reduction gain, range:[0, 2]">0.8,1.25,1.5,2.0</cfrRadialGain>
+          <cfrRadialDecay description="color fringe reduction threshold decay ratio, range:[0, 1]">1.0,1.0,0.95,0.9</cfrRadialDecay>
+          <saturationLevel description="color fringe satuation threshold, range:[0, 1]">0.85</saturationLevel>
+          <saturationLevelProtection description="color fringe satuation threshold, range:[0, 1]">0.5</saturationLevelProtection>
+          <cfrEdgeLevelProtection description="color fringe satuation threshold, range:[0, 1]">150</cfrEdgeLevelProtection>          
+          <cfrEdgeLevel description="color fringe edge threshold, range:[0, 128]">60</cfrEdgeLevel>
+          <cfrEdgeWeight description="color fringe edge weight, range:[0, 1.0]">0.5</cfrEdgeWeight>
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.1,0.1,0.15,0.2</minLevel>
+              <anchorLevel description="anchor level">0.6,0.6,0.6,0.6</anchorLevel>
+              <maxLevel description="maximum level">1.0,1.0,1.0,1.0</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </auxUvModelParameters>
+    <postSharpeningParameters description="post sharpening args [kernelSize1, weight1, kernelSize2, weight2]]">
+          <kernelSize1>3,3,3,3</kernelSize1>
+          <weight1O>0,0,0,0</weight1O>
+          <weight1U>0,0,0,0</weight1U>
+          <kernelSize2>5,5,5,5</kernelSize2>
+          <weight2O>0,0,0,0</weight2O>
+          <weight2U>0,0,0,0</weight2U>
+          <usmStrength description="usm strength">0</usmStrength>
+    </postSharpeningParameters>
+  </levConfigData>
+  <levConfigData>
+    <rawISO description="rawISO = shortGain * 50.">800</rawISO>
+    <inputLowTextureGainL0 description="gain weight to enhance level 0 low texture of input">0</inputLowTextureGainL0>
+    <inputLowTextureGainL1 description="gain weight to enhance level 1 low texture of input">1</inputLowTextureGainL1>
+    <radialLevel description="radial gain to enhance corner sharp level, range:[1, 2]">1,1,1.05,1.1</radialLevel>
+    <radialNoiseLevel description="radial gain to enhance corner noise level, range:[0, 10]">1,1,1.05,1.1</radialNoiseLevel>
+    <yModelParameters description="drcGain ={1,2,3,4}">
+          <blurScale description="bigger means sharper, range:[0, 0.5]">0.5,0.5,0.5,0.5</blurScale>
+          <blurGain description="bigger means sharper, range:[0, 20]">5,5,5,5</blurGain>
+          <overShootLevel description="overshoot remove strength, range:[0, 1.5]">0.6,0.6,0.6,0.6</overShootLevel>
+          <overShootEdgeLevel description="overshoot on edge remove strength, range:[0, 1.5]">0.9,0.9,0.9,0.9</overShootEdgeLevel>
+          <underShootLevel description="undershoot remove strength, range:[0, 1.5]">0.5,0.5,0.5,0.5</underShootLevel>
+          <underShootEdgeLevel description="undershoot on edge remove strength, range:[0, 1.5]">0.8,0.8,0.8,0.8</underShootEdgeLevel>
+          <minBlurScale description="minimum blur scale, should be less/eqaul to blurScale, range:[0, 1]">0,0,0,0</minBlurScale>
+          <noise1Level description="luma shot noise, range:[0, 1]">0.1,0.15,0.2,0.225</noise1Level>
+          <noise2Level description="luma read noise, range:[0, 1]">0,0.025,0.075,0.1</noise2Level>
+    </yModelParameters>
+    <uvModelParameters description="drcGain ={1,2,3,4}">
+          <uvRadialLevel description="radial gain to enhance corne denoise level, range:[1, 10]">1,1,1.1,1.2</uvRadialLevel>
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.1,0.1,0.1,0.1</minLevel>
+              <anchorLevel description="anchor level">0.4,0.4,0.4,0.4</anchorLevel>
+              <maxLevel description="maximum level">0.7,0.7,0.7,0.7</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </uvModelParameters>
+    <auxUvModelParameters description="drcGain ={1,2,3,4}">
+          <cfrRadialGain description="color fringe reduction gain, range:[0, 2]">0.8,1.25,1.5,2.0</cfrRadialGain>
+          <cfrRadialDecay description="color fringe reduction threshold decay ratio, range:[0, 1]">1.0,1.0,0.95,0.9</cfrRadialDecay>
+          <saturationLevel description="color fringe satuation threshold, range:[0, 1]">0.88</saturationLevel>
+          <saturationLevelProtection description="color fringe satuation threshold, range:[0, 1]">0.25</saturationLevelProtection>
+          <cfrEdgeLevelProtection description="color fringe satuation threshold, range:[0, 1]">150</cfrEdgeLevelProtection>                    
+          <saturationMaskLevel description="color fringe satuation protection threshold, range:[0, 1]">0.5</saturationMaskLevel>
+          <cfrEdgeLevel description="color fringe edge threshold, range:[0, 128]">60</cfrEdgeLevel>
+          <cfrEdgeWeight description="color fringe edge weight, range:[0, 1.0]">0.5</cfrEdgeWeight>
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.1,0.1,0.15,0.2</minLevel>
+              <anchorLevel description="anchor level">0.6,0.6,0.6,0.6</anchorLevel>
+              <maxLevel description="maximum level">1.0,1.0,1.0,1.0</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </auxUvModelParameters>
+    <postSharpeningParameters description="post sharpening args [kernelSize1, weight1, kernelSize2, weight2]]">
+          <kernelSize1>3,3,3,3</kernelSize1>
+          <weight1O>0,0,0,0</weight1O>
+          <weight1U>0,0,0,0</weight1U>
+          <kernelSize2>5,5,5,5</kernelSize2>
+          <weight2O>0,0,0,0</weight2O>
+          <weight2U>0,0,0,0</weight2U>
+          <usmStrength description="usm strength">0</usmStrength>
+    </postSharpeningParameters>
+  </levConfigData>
+  <levConfigData>
+    <rawISO description="rawISO = shortGain * 50.">1600</rawISO>
+    <inputLowTextureGainL0 description="gain weight to enhance level 0 low texture of input">0</inputLowTextureGainL0>
+    <inputLowTextureGainL1 description="gain weight to enhance level 1 low texture of input">1</inputLowTextureGainL1>
+    <radialLevel description="radial gain to enhance corner sharp level, range:[1, 2]">1,1,1.05,1.1</radialLevel>
+    <radialNoiseLevel description="radial gain to enhance corner noise level, range:[0, 10]">1,1,1.05,1.1</radialNoiseLevel>
+    <yModelParameters description="drcGain ={1,2,3,4}">
+          <blurScale description="bigger means sharper, range:[0, 0.5]">0.5,0.5,0.5,0.5</blurScale>
+          <blurGain description="bigger means sharper, range:[0, 20]">5,5,5,5</blurGain>
+          <overShootLevel description="overshoot remove strength, range:[0, 1.5]">0.5,0.5,0.5,0.5</overShootLevel>
+          <overShootEdgeLevel description="overshoot on edge remove strength, range:[0, 1.5]">0.8,0.8,0.8,0.8</overShootEdgeLevel>
+          <underShootLevel description="undershoot remove strength, range:[0, 1.5]">0.4,0.4,0.4,0.4</underShootLevel>
+          <underShootEdgeLevel description="undershoot on edge remove strength, range:[0, 1.5]">0.7,0.7,0.7,0.7</underShootEdgeLevel>
+          <minBlurScale description="minimum blur scale, should be less/eqaul to blurScale, range:[0, 1]">0,0,0,0</minBlurScale>
+          <noise1Level description="luma shot noise, range:[0, 1]">0.125,0.175,0.225,0.25</noise1Level>
+          <noise2Level description="luma read noise, range:[0, 1]">0,0.025,0.075,0.1</noise2Level>
+    </yModelParameters>
+    <uvModelParameters description="drcGain ={1,2,3,4}">
+          <uvRadialLevel description="radial gain to enhance corne denoise level, range:[1, 10]">1,1,1.1,1.2</uvRadialLevel>
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.2,0.2,0.2,0.2</minLevel>
+              <anchorLevel description="anchor level">0.3,0.3,0.3,0.3</anchorLevel>
+              <maxLevel description="maximum level">0.4,0.4,0.4,0.4</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </uvModelParameters>
+    <auxUvModelParameters description="drcGain ={1,2,3,4}">
+          <cfrRadialGain description="color fringe reduction gain, range:[0, 2]">0.8,1.25,1.5,2.0</cfrRadialGain>
+          <cfrRadialDecay description="color fringe reduction threshold decay ratio, range:[0, 1]">1.0,1.0,0.95,0.9</cfrRadialDecay>
+          <saturationLevel description="color fringe satuation threshold, range:[0, 1]">0.94</saturationLevel>
+          <saturationMaskLevel description="color fringe satuation protection threshold, range:[0, 1]">0.5</saturationMaskLevel>
+          <cfrEdgeLevel description="color fringe edge threshold, range:[0, 128]">60</cfrEdgeLevel>
+          <cfrEdgeWeight description="color fringe edge weight, range:[0, 1.0]">0.5</cfrEdgeWeight>
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.1,0.1,0.15,0.2</minLevel>
+              <anchorLevel description="anchor level">0.6,0.6,0.6,0.6</anchorLevel>
+              <maxLevel description="maximum level">1.0,1.0,1.0,1.0</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </auxUvModelParameters>
+    <postSharpeningParameters description="post sharpening args [kernelSize1, weight1, kernelSize2, weight2]]">
+          <kernelSize1>3,3,3,3</kernelSize1>
+          <weight1O>0,0,0,0</weight1O>
+          <weight1U>0,0,0,0</weight1U>
+          <kernelSize2>5,5,5,5</kernelSize2>
+          <weight2O>0,0,0,0</weight2O>
+          <weight2U>0,0,0,0</weight2U>
+          <usmStrength description="usm strength">0</usmStrength>
+    </postSharpeningParameters>
+  </levConfigData>
+  <levConfigData>
+    <rawISO description="rawISO = shortGain * 50.">3200</rawISO>
+    <inputLowTextureGainL0 description="gain weight to enhance level 0 low texture of input">0</inputLowTextureGainL0>
+    <inputLowTextureGainL1 description="gain weight to enhance level 1 low texture of input">1</inputLowTextureGainL1>
+    <radialLevel description="radial gain to enhance corner sharp level, range:[1, 2]">1,1,1.05,1.1</radialLevel>
+    <radialNoiseLevel description="radial gain to enhance corner noise level, range:[0, 10]">1,1,1.05,1.1</radialNoiseLevel>
+    <yModelParameters description="drcGain ={1,2,3,4}">
+          <blurScale description="bigger means sharper, range:[0, 0.5]">0.5,0.5,0.5,0.5</blurScale>
+          <blurGain description="bigger means sharper, range:[0, 20]">5,5,5,5</blurGain>
+          <overShootLevel description="overshoot remove strength, range:[0, 1.5]">0.5,0.5,0.5,0.5</overShootLevel>
+          <overShootEdgeLevel description="overshoot on edge remove strength, range:[0, 1.5]">0.8,0.8,0.8,0.8</overShootEdgeLevel>
+          <underShootLevel description="undershoot remove strength, range:[0, 1.5]">0.4,0.4,0.4,0.4</underShootLevel>
+          <underShootEdgeLevel description="undershoot on edge remove strength, range:[0, 1.5]">0.7,0.7,0.7,0.7</underShootEdgeLevel>
+          <minBlurScale description="minimum blur scale, should be less/eqaul to blurScale, range:[0, 1]">0,0,0,0</minBlurScale>
+          <noise1Level description="luma shot noise, range:[0, 1]">0.125,0.175,0.225,0.25</noise1Level>
+          <noise2Level description="luma read noise, range:[0, 1]">0,0.025,0.075,0.1</noise2Level>
+    </yModelParameters>
+    <uvModelParameters description="drcGain ={1,2,3,4}">
+          <uvRadialLevel description="radial gain to enhance corne denoise level, range:[1, 10]">1,1,1.1,1.2</uvRadialLevel>
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.2,0.2,0.2,0.2</minLevel>
+              <anchorLevel description="anchor level">0.3,0.3,0.3,0.3</anchorLevel>
+              <maxLevel description="maximum level">0.4,0.4,0.4,0.4</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </uvModelParameters>
+    <auxUvModelParameters description="drcGain ={1,2,3,4}">
+          <cfrRadialGain description="color fringe reduction gain, range:[0, 2]">0.8,1.25,1.5,2.0</cfrRadialGain>
+          <cfrRadialDecay description="color fringe reduction threshold decay ratio, range:[0, 1]">1.0,1.0,0.95,0.9</cfrRadialDecay>
+          <saturationLevel description="color fringe satuation threshold, range:[0, 1]">0.96</saturationLevel>
+          <saturationMaskLevel description="color fringe satuation protection threshold, range:[0, 1]">0.5</saturationMaskLevel>
+          <cfrEdgeLevel description="color fringe edge threshold, range:[0, 128]">60</cfrEdgeLevel>
+          <cfrEdgeWeight description="color fringe edge weight, range:[0, 1.0]">0.5</cfrEdgeWeight>
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.1,0.1,0.15,0.2</minLevel>
+              <anchorLevel description="anchor level">0.6,0.6,0.6,0.6</anchorLevel>
+              <maxLevel description="maximum level">1.0,1.0,1.0,1.0</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </auxUvModelParameters>
+    <postSharpeningParameters description="post sharpening args [kernelSize1, weight1, kernelSize2, weight2]]">
+          <kernelSize1>3,3,3,3</kernelSize1>
+          <weight1O>0,0,0,0</weight1O>
+          <weight1U>0,0,0,0</weight1U>
+          <kernelSize2>5,5,5,5</kernelSize2>
+          <weight2O>0,0,0,0</weight2O>
+          <weight2U>0,0,0,0</weight2U>
+          <usmStrength description="usm strength">0</usmStrength>
+    </postSharpeningParameters>
+  </levConfigData>
+</swispConfig>

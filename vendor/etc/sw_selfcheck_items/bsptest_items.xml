@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sw_selfcheck_items>
+	<command name = "software_selfcheck">
+		<item type = "backup" tag = "bsptest_battery" value = "00000000" />
+		<item type = "backup" tag = "bsptest_shipmode" value = "00000000" />
+		<item type = "property" tag = "persist.sys.bsptest.power" value = "" ap = "system" />
+		<item type = "file" tag = "/data/vivo-common/BSPTest/test_key" value = "0" ap = "system" />
+		<item type = "file" tag = "/data/media/0/file_case_sensitive" value = "0" ap = "system" />
+	</command>
+</sw_selfcheck_items>

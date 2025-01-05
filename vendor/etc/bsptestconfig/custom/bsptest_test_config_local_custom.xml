@@ -1,0 +1,61 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="BSPTest_suite" allow-return-values="true" data-provider-thread-count="10" parallel="false" preserve-order="true" thread-count="8" verbose="3">
+	<parameter name="test_title" value="v4.1"/>
+	<parameter name="suit_cycles" value="1"/>
+	<parameter name="switch_interval" value="60"/>
+	<parameter name="high_temp_protect" value="true"/>
+	<parameter name="low_battery_allow_test" value="false"/>
+	<parameter name="limited_charge_life" value="false"/>
+	<parameter name="low_battery_test" value="false"/>
+	<parameter name="charge_max_limit" value="0"/>
+	<parameter name="charge_min_limit" value="0"/>
+	<parameter name="bsptmode" value="true"/>
+	<parameter name="exit_bsptmode" value="true"/>
+	<parameter name="store_test_info" value="true"/>
+	<parameter name="media_volume" value="0"/>
+	<parameter name="skip_mode" value="2"/>
+	<parameter name="tp_driver_load_fail_reboot" value="true"/>
+	<parameter name="sub_system_crash_detect" value="true"/>
+	<parameter name="ufs_write_intercepte" value="true"/>
+	<parameter name="sub_system_level" value="false"/>
+	<parameter name="automatically_lower_brightness" value="true"/>
+	<parameter name="full_charge" value="false"/>
+	<parameter name="life_control" value="true"/>
+	<parameter name="log_control" value="true"/>
+	<parameter name="ddr_training" value="true"/>
+	<parameter name="ddr_frequency_switch_mode" value="0"/>
+	<parameter name="ddr_frequency_switch_interval" value="3"/>
+	<parameter name="ddr_frequency_select" value="0"/>
+	<parameter name="ddr_frequency_switch" value="true"/>
+	<parameter name="ddr_frequency_switch_floor" value="false"/>
+	<parameter name="kmemleak_enable" value="false"/>
+	<parameter name="high_temperature_control" value="true"/>
+	<parameter name="background_hardware_detect" value="false"/>
+	<parameter name="wifi_system_scan_close" value="true"/>
+	<parameter name="reset_after_pass" value="true"/>
+	<parameter name="error_log_control" value=""/>
+	<test name="test1" allow-return-values="true" enabled="true" parallel="classes" thread-count="8" verbose="2">
+		<classes>
+			<class name="com.vivo.bsptest.test.configuration_testing.ConfigurationTestingTest">
+				<parameter name="test_time" value="3600"/>
+				<parameter name="test_name" value="Unknow"/>
+				<parameter name="config_file" value="/vendor/etc/bsptestconfig/custom/adi_test.sh"/>
+				<parameter name="enabled" value="true"/>
+			</class>
+		</classes>
+	</test>
+	<test name="test2" allow-return-values="true" enabled="true" parallel="classes" thread-count="8" verbose="2">
+		<classes>
+			<class name="com.vivo.bsptest.test.log_check.LogRetrievalTest">
+				<parameter name="retrieval_splite" value="1"/>
+				<parameter name="test_time" value="1"/>
+				<parameter name="retrieval_strategy" value="0"/>
+				<parameter name="error_type" value="0"/>
+				<parameter name="retrieval_directory" value="/data/vivo-common/BSPTest/test_file/local_custom_test/adi_test_result"/>
+				<parameter name="key_words" value="fail"/>
+				<parameter name="error_module" value="Unknow"/>
+				<parameter name="enabled" value="true"/>
+			</class>
+		</classes>
+	</test>
+</suite>

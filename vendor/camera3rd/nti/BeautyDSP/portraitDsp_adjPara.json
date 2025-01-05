@@ -1,0 +1,72 @@
+{
+  "portrait": {
+    "logLevel": 3,
+    "cpuBindingPara":[1, 4, 6],
+    "mvpuDeadline": 1,
+    "mvpuPriority": 2,
+    "mvpuPreference": 1,
+    "mvpuBoostValue": 30,
+    "mvpuDelayedPowerOffTime": 4,
+    "runtimeLibPath": "/vendor/lib64/libneuron_runtime.8.so",
+    "configOptions": "--skip-io-allocation --dlamuxer-lazyload --disable-sync-input --disable-invalidate-output --apusys-config \"{ \\\"import_forever\\\": true }\"",
+    "bAdjustQosPerframe": 0,
+    "portraitMvpuCoreNum": 2,
+    "portraitBNeedSetIobuf": 0,
+    "portraitFenceFlag": true,
+    "portraitBSingleDla": false,
+    "portraitBufsizeMode": 1,
+    "portraitDlaVersion": "dlaPortraitDsp_3.0.1",
+    "portraitDlaPath": ["/vendor/camera3rd/nti/BeautyDSP/portraitDsp_all.dlb",
+                        "/vendor/camera3rd/nti/BeautyDSP/portraitDsp_bokeh_2.dlb",
+                        "/vendor/camera3rd/nti/BeautyDSP/portraitDsp_skinsoften_2.dlb",
+                        "/vendor/camera3rd/nti/BeautyDSP/portraitDsp_colorstyle_2.dlb"],
+    "precastLutsPath": "/vendor/camera3rd/nti/BeautyDSP/portraitDsp_precastLuts.bin",
+    "portraitShape": [[960 , 960 , 960 , 960 ],
+                      [1080, 1080, 1088, 1088],
+                      [1280, 960 , 1280, 1280],
+                      [1712, 960 , 1728, 1712],
+                      [1712, 960 , 1728, 1728],
+                      [1920, 800 , 1920, 1920],
+                      [1920, 1080, 1920, 1920],
+                      [2112, 960 , 2112, 2112],
+                      [2144, 960 , 2176, 2144],
+                      [2144, 960 , 2176, 2176],
+                      [2240, 1008, 2240, 2240],
+                      [2088, 960, 2112, 2096]]
+    },
+  "bokeh": {
+    "maxBlurRadiusApeture_Factor": [1.0, 1.0],
+
+    "VAR_PARA_BOKEH_RADIUS_MIN": 5, 
+    "VAR_PARA_BOKEH_DEGREE_MIN": 11,
+    "VAR_PARA_BOKEH_RADIUS_MAX_F200": 7,
+    "VAR_PARA_BOKEH_DEGREE_MAX_F200": 16,
+
+    "VAR_PARA_BOKEH_RADIUS_BIGGER_F200_MIN": 7,
+    "VAR_PARA_BOKEH_DEGREE_BIGGER_F200_MIN": 16,
+    "VAR_PARA_BOKEH_RADIUS_MAX_BIGGER_F200": 9,
+    "VAR_PARA_BOKEH_DEGREE_MAX_BIGGER_F200": 31,
+
+    "VAR_PARA_BOKEH_RADIUS_BIGGER_F140_MIN": 7,
+    "VAR_PARA_BOKEH_DEGREE_BIGGER_F140_MIN": 23,
+    "VAR_PARA_BOKEH_RADIUS_MAX_BIGGER_F140": 9,
+    "VAR_PARA_BOKEH_DEGREE_MAX_BIGGER_F140": 31,
+
+    "VAR_PARA_BOKEH_FUSION_Y_BASE": 20,
+    "VAR_PARA_BOKEH_FUSION_Y_DIV_F200": 20,
+    "VAR_PARA_BOKEH_FUSION_Y_DIV_BIGGER_F200": 37,
+    "VAR_PARA_BOKEH_FUSION_Y_DIV_BIGGER_F140": 37,
+
+    "VAR_PARA_BOKEH_FUSION_UV_BASE": 0,
+    "VAR_PARA_BOKEH_FUSION_UV_DIV_F200": 40,
+    "VAR_PARA_BOKEH_FUSION_UV_DIV_BIGGER_F200": 57,
+    "VAR_PARA_BOKEH_FUSION_UV_DIV_BIGGER_F140": 57,
+
+    "VAR_PARA_BOKEH_DEFAULT_APETURE_F200_VAR": 24,
+    "VAR_PARA_BOKEH_DEFAULT_APETURE_F140_VAR": 34
+  },
+  "skinsoften": {
+  },
+  "colorstyle": {
+  }
+}

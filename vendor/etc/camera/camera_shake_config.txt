@@ -1,0 +1,5 @@
+scene_camera_shake_only
+node_num = 2
+/sys/kernel/hold_actuator_rear_main/hold_status
+/sys/kernel/hold_actuator_tele/hold_status
+need_timeout = 0

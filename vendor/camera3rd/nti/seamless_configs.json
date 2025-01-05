@@ -1,0 +1,53 @@
+{
+	"name": "seamless_config",
+	"Project": "PD2415",
+	"majorVersion": 1,
+	"minorVersion": 0,
+	"roiDetect": {
+		"satCameraNum": 3,
+		"satMode": {
+			"roiForceOnThresholds": 120.0,
+			"roiCancelsLuxrestriction": 0,
+			"_comment": "cameras max 5  switchCount 5 lux/ratio listSize 5x2",
+			"switchCountThreshold": [14, 14, 14],
+			"zoomRatio": {
+				"photo": [999.9, 999.9, 2.0, 999.9, 6, 999.9],
+				"video_common": [999.9, 999.9, 999.9, 999.9, 6, 999.9],
+				"video_1080P_60FPS": [999.9, 999.9, 999.9, 999.9, 6, 999.9],
+				"video_4K_60FPS": [999.9, 999.9, 999.9, 999.9, 6, 999.9]
+			},
+			"luxIndex": {
+				"photo": [9999.9, 9999.9, 380.0, 360.0, 350.0, 330.0],
+				"video_common": [9999.9, 9999.9, 9999.9, 9999.9, 320.0, 300.0],
+				"video_1080P_60FPS": [9999.9, 9999.9, 9999.9, 9999.9, 9999.9, 9999.9],
+				"video_4K_60FPS": [9999.9, 9999.9, 9999.9, 9999.9, 9999.9, 9999.9]
+			}
+		},
+		"noSatMode": {
+			"luxIndex": {
+				"video": [0, 0],
+				"moviePortrait": [0, 0]
+			}
+		}
+	},
+	"sportStagger": {
+		"zoomRatio": {
+			"photo": [1.0, 1.0],
+			"motion": [1.0, 3.0]
+		},
+		"luxIndex": {
+			"photo": [9999.9, 9999.9, 355.0, 325.0, 9999.9, 9999.9],
+			"motion": [9999.9, 9999.9, 210.0, 190.0, 0, 0]
+		},
+		"isSupporthightluxSsport":[1, 1, 1],
+		"isSupportMutiCamSsport":[0, 1, 1],
+		"freqThreshold": [400.0, 35.0],
+		"bandCoefThreshold": [0.05, 0.02]
+	},
+	"StaggerHDR": {
+		"zoomRatio": {
+			"photo": [0.0, 0.0]
+		},
+		"isSupportRoiHDR": [0, 1, 0]
+	}
+}

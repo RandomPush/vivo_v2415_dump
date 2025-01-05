@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sw_selfcheck_items>
+	<command name = "software_selfcheck">
+	<item type = "file" tag = "/data/vusbd/sec_certificate" ap = "system" value = "0" />
+	<item type = "property" tag = "ro.vivo.ftboot.debug" ap = "system" value = "" />
+	</command>
+</sw_selfcheck_items>

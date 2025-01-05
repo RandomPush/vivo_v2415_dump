@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NiceTceConfig version="0.5.1">
+	<NiceTceSwich>
+		<EnableDebugInput>0</EnableDebugInput>
+		<EnableAllinone>0</EnableAllinone>
+		<EnableDeglare>0</EnableDeglare>
+		<EnableSkySegment>1</EnableSkySegment>
+		<EnablePortraitSegment>1</EnablePortraitSegment>
+		<EnableLocalAWB>0</EnableLocalAWB>
+		<EnableNonPortraitAdams>1</EnableNonPortraitAdams>
+		<OutputResizeMethod description="output resize method, 0 bilinear, 1(if cameraUIZoomRatio>=cameraUIZoomRatioThreshold bicubic, else bilinear)">1</OutputResizeMethod>
+		<cameraUIZoomRatioThreshold description="threshold of cameraUIZoomRatio, greater than it, use bicubic resize">0.0</cameraUIZoomRatioThreshold>
+		<bypassFasttmUpscale description="bypass fasttm upscale or not when generate mask, 0 not bypass, 1(if cameraUIZoomRatio>=cameraUIZoomRatioThresholdForBypassFasttmUpscale bypass, else not bypass)">1</bypassFasttmUpscale>
+		<cameraUIZoomRatioThresholdForBypassFasttmUpscale description="threshold of cameraUIZoomRatio when bypass fasttm upscale or not, greater than it, bypass">3.7</cameraUIZoomRatioThresholdForBypassFasttmUpscale>
+		<cameraUIZoomRatioThresholdForTeleSundetect description="threshold of cameraUIZoomRatio when choose tele sundetect model, greater than it">101.0</cameraUIZoomRatioThresholdForTeleSundetect>
+	</NiceTceSwich>
+	<NiceTceXmlConfig>
+		<SkysegConfig description="SkysegConfig name">/vendor/camera3rd/nti/skyseg.xml</SkysegConfig>
+		<PortraitSegConfig description="portrait segment 3in1 config path">/vendor/camera3rd/nti/aisegment_config.json</PortraitSegConfig>
+		<AllinoneConfig description="allinone config path">/vendor/camera3rd/nti/allinone2_0_config.xml</AllinoneConfig>
+		<NiceSpeConfig description="spe xml path for txe">/vendor/camera3rd/nti/nice_spe/spe_config.xml</NiceSpeConfig>
+		<FaceDetConfig description="FaceDet config path for txe">/vendor/camera3rd/nti/fdcapture3_0/</FaceDetConfig>
+		<OutlineConfig description="Outline config path for txe">/vendor/camera3rd/nti/outline/</OutlineConfig>
+		<HandSegmentConfig description="HandSegment config path for txe">/vendor/camera3rd/nti/HandSegConfig.xml</HandSegmentConfig>
+		<visaModConfig description="visaModConfig config path for tce">/vendor/camera3rd/nti/fdcapture3_0/</visaModConfig>
+		<SunDetModelPath description="aiosd config path for tce">/vendor/camera3rd/nti/allinone/sundetect.vdnn</SunDetModelPath>
+		<SunDetModelForTelePath description="aiosd config path for tce when tele">/vendor/camera3rd/nti/allinone/sundetect_bigsun.vdnn</SunDetModelForTelePath>
+	</NiceTceXmlConfig>
+	<NiceTceXmlFolderConfig>
+		<MainCamera>MainCamera_imx921</MainCamera>
+		<TeleCamera>TeleCamera</TeleCamera>
+	</NiceTceXmlFolderConfig>
+	<NiceTceModeControl description="-1:close debug, 0: aitone人像, 1:CVTone, 2:aitone风光 (实拍无效)"> -1 </NiceTceModeControl>
+	<AiModelConfig>
+		<Adams>
+			<Framework>neuron</Framework>
+			<InferType description="0: Quacomm, 1:MTK, 2:CPU Float 3: CPU Quant">1</InferType>
+			<PowerMode description="0: BALANCED, 1: PERFORMANCE, 2: SAVING, 3: TURBO">1</PowerMode>
+			<ModelName>nicetce_night_portrait_v1.vdnn</ModelName>
+			<SegMaskType description="0: None, 1: SegmentMaskU16C3, 2: FaceMaskU16C1, 3: FaceMaskU16C1withPortraitMask">3</SegMaskType>
+			<ChannelOrder description="0: RGB, 1: BGR">0</ChannelOrder>
+			<NNModelInfo>
+				<RunWidth>1024</RunWidth>
+				<RunHegiht>1024</RunHegiht>
+				<RunDepth>3</RunDepth>
+				<ResidualOutput>0</ResidualOutput>
+				<InputNormalizeType description="0: NormAdapt, 1: NormFixed, 2: NormFloat">1</InputNormalizeType>
+				<NormValue>17034.8</NormValue>
+				<unNormValue>65535</unNormValue>
+				<NetOutputDomin description="0: log, 1: Gamma">0</NetOutputDomin>
+				<OutputInfo>
+					<OutputNum> 1 </OutputNum>
+					<OutputMinMax>
+						<Min>0</Min>
+						<Max>0.7507638335227966</Max>
+					</OutputMinMax>
+				</OutputInfo>
+			</NNModelInfo>
+		</Adams>
+		<Adams>
+			<Framework>neuron</Framework>
+			<InferType description="0: Quacomm, 1:MTK, 2:CPU Float 3: CPU Quant">1</InferType>
+			<PowerMode description="0: BALANCED, 1: PERFORMANCE, 2: SAVING, 3: TURBO">1</PowerMode>
+			<ModelName>nicetce_night_noportrait_v11.vdnn</ModelName>
+			<SegMaskType description="0: No Mask, 1: PortraitMask, 2: SkyMask">2</SegMaskType>
+			<ChannelOrder description="0: RGB, 1: BGR">0</ChannelOrder>
+			<NNModelInfo>
+				<RunWidth>1024</RunWidth>
+				<RunHegiht>1024</RunHegiht>
+				<RunDepth>3</RunDepth>
+				<ResidualOutput>0</ResidualOutput>
+				<InputNormalizeType description="0: NormAdapt, 1: NormFixed, 2: NormFloat">1</InputNormalizeType>
+				<NormValue>17034.8</NormValue>
+				<unNormValue>65535.0</unNormValue>
+				<NetOutputDomin description="0: log, 1: Gamma">0</NetOutputDomin>
+				<OutputInfo>
+					<OutputNum> 1 </OutputNum>
+					<OutputMinMax>
+						<Min>0</Min>
+						<Max>0.964809775352478</Max>
+					</OutputMinMax>
+				</OutputInfo>
+			</NNModelInfo>
+		</Adams>
+		<AdamsPostParam>
+			<DownScaleGuidedFilterParams description="parameteres for post-process down-scaled diff filtering">
+				<Radius>4</Radius>
+				<Scale>4</Scale>
+				<Eps>0.0001</Eps>
+				<Mode>0</Mode>
+			</DownScaleGuidedFilterParams>
+			<GuidedFilterParams description="parameteres for post-process ori-scale diff filtering">
+				<Radius>5</Radius>
+				<Scale>2</Scale>
+				<Eps>0.000001</Eps>
+				<Mode>0</Mode>
+				<Detail>0.0</Detail>
+			</GuidedFilterParams>
+		</AdamsPostParam>
+		<HDRNet>
+			<DATA>
+				<multiexp>2</multiexp>
+				<whitepoint>16383</whitepoint>
+				<apply_ccm>1</apply_ccm>
+				<apply_gamma>1</apply_gamma>
+				<gamma_value>2.4</gamma_value>
+			</DATA>
+			<InferType description="0: Quacomm, 1:MTK, 2:CPU Float 3: CPU Quant">1</InferType>
+			<width>1020</width>
+			<height>1020</height>
+			<net_size>512</net_size>
+			<grid_size>32</grid_size>
+			<grid_lumabin>16</grid_lumabin>
+			<coeff_chnl_in>4</coeff_chnl_in>
+			<coeff_chnl_out>6</coeff_chnl_out>
+			<model_name_coeff_s1>nicetce_night_noportrait_coeff_v1.vdnn</model_name_coeff_s1>
+			<model_name_weight_s1>nicetce_night_noportrait_weight_v1.vdnn</model_name_weight_s1>
+			<model_name_coeff_s2>nicetce_night_noportrait_coeff_v1.vdnn</model_name_coeff_s2>
+			<model_name_weight_s2>nicetce_night_noportrait_weight_v1.vdnn</model_name_weight_s2>
+			<netIn_name_coeff>1</netIn_name_coeff>
+			<netIn_name_weight>1</netIn_name_weight>
+			<netOut_name_coeff>116</netOut_name_coeff>
+			<netOut_name_weight>134</netOut_name_weight>
+			<s32GuideSize>1024</s32GuideSize>
+			<GuidedFilterParams description="parameteres for post-process ori-scale diff filtering">
+				<Radius>3</Radius>
+				<Scale>2</Scale>
+				<Eps>0.000001</Eps>
+				<Mode>0</Mode>
+			</GuidedFilterParams>
+		</HDRNet>
+		<FastTM>
+			<ModelName>nicetce_fasttm_v1.vdnn</ModelName>
+			<InferType description="0: QNN quant, 1:MTK quant, 2:CPU Float 3: CPU Quant, 4:QNN FP16, 5:MTK FP16">5</InferType>
+			<InputNormalizeType description="0: NormAdapt, 1: NormFixed, 2: NormFloat">2</InputNormalizeType>
+			<NormValue>15615.0</NormValue>
+			<unNormValue>65535</unNormValue>
+			<runwidth>520</runwidth>
+			<runheight>520</runheight>
+			<channel>3</channel>
+			<InputNodeName>1</InputNodeName>
+			<OutputNodeName>371</OutputNodeName>
+			<OutputDomin description="0: Log 1: Gamma">0</OutputDomin>
+			<OutputMin>0</OutputMin>
+			<OutputMax>1.3733446598052979</OutputMax>
+		</FastTM>
+		<AIDeglare>
+			<DeglareOpen>1</DeglareOpen>
+			<ModelName>nicetce_deglare_v3.vdnn</ModelName>
+			<InferType description="0: QNN quant, 1:MTK quant, 2:CPU Float 3: CPU Quant, 4:QNN FP16, 5:MTK FP16">1</InferType>
+			<InputNormalizeType description="0: NormAdapt, 1: NormFixed, 2: NormFloat">1</InputNormalizeType>
+			<Sigma>1.8</Sigma>
+			<NormValue>16383</NormValue>
+			<runwidth>512</runwidth>
+			<runheight>512</runheight>
+			<channel>3</channel>
+			<InputNodeName>inp</InputNodeName>
+			<OutputDomin description="0: Log 1: Gamma">1</OutputDomin>
+			<OutputNodeName>activation_0</OutputNodeName>
+			<OutputMin>0</OutputMin>
+			<OutputMax>1</OutputMax>
+		</AIDeglare>
+		<AIDeglareSpe>
+			<DeglareOpen>1</DeglareOpen>
+			<ModelName>nicetce_xdeglare_base_v1.vdnn</ModelName>
+			<InferType description="0: QNN quant, 1:MTK quant, 2:CPU Float 3: CPU Quant, 4:QNN FP16, 5:MTK FP16">1</InferType>
+			<InputNormalizeType description="0: NormAdapt, 1: NormFixed, 2: NormFloat">1</InputNormalizeType>
+			<Sigma>1.8</Sigma>
+			<NormValue>16383</NormValue>
+			<runwidth>1024</runwidth>
+			<runheight>1024</runheight>
+			<channel>3</channel>
+			<InputNodeName>inp</InputNodeName>
+			<OutputDomin description="0: Log 1: Gamma">1</OutputDomin>
+			<OutputNodeName>d2s</OutputNodeName>
+			<OutputMin>0</OutputMin>
+			<OutputMax>1</OutputMax>
+		</AIDeglareSpe>
+		<AIDeglareSpe>
+			<DeglareOpen>1</DeglareOpen>
+			<ModelName>nicetce_xdeglare_heavy_v1.vdnn</ModelName>
+			<InferType description="0: QNN quant, 1:MTK quant, 2:CPU Float 3: CPU Quant, 4:QNN FP16, 5:MTK FP16">1</InferType>
+			<InputNormalizeType description="0: NormAdapt, 1: NormFixed, 2: NormFloat">1</InputNormalizeType>
+			<Sigma>1.8</Sigma>
+			<NormValue>16383</NormValue>
+			<runwidth>1024</runwidth>
+			<runheight>1024</runheight>
+			<channel>3</channel>
+			<InputNodeName>inp</InputNodeName>
+			<OutputDomin description="0: Log 1: Gamma">1</OutputDomin>
+			<OutputNodeName>d2s</OutputNodeName>
+			<OutputMin>0</OutputMin>
+			<OutputMax>1</OutputMax>
+		</AIDeglareSpe>
+	</AiModelConfig>
+</NiceTceConfig>

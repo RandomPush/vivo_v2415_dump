@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NiceMeeDeGlareModelConfig version="0.0.1" name='NiceMeeDeGlareModelConfig'>
+	<!-- <SingleModelInfo>
+		<Engine description="vdnn define: 7 mtk neuron, 6 htp, 11 hta, 5 opencl">7</Engine>
+		<ID description="model id, uniquely in this xml">0</ID>
+		<inputname index="0">baise.add</inputname>
+		<inputname index="1">baise.add1</inputname>
+		<outputname index="0">baise.add</outputname>
+		<outputname index="1">baise.add1</outputname>
+		<InputMin index="0">-1</InputMin>
+		<InputMax index="0">1</InputMax>
+		<OutputMin index="0">-1</OutputMin>
+		<OutputMax index="0">1</OutputMax>
+		<IonMemSize>26214400</IonMemSize>
+		<ModelName>aideglare.vdnn</ModelName>
+	</SingleModelInfo> -->
+
+	<SingleModelInfo>
+		<Engine description="vdnn define: 7 mtk neuron, 6 htp, 11 hta, 5 opencl">7</Engine>
+		<ID description="model id, uniquely in this xml">1</ID>
+		<ModelName>nicetce_xdeglare_base_v1.vdnn</ModelName>
+	</SingleModelInfo>
+	<SingleModelInfo>
+		<Engine description="vdnn define: 7 mtk neuron, 6 htp, 11 hta, 5 opencl">7</Engine>
+		<ID description="model id, uniquely in this xml">2</ID>
+		<ModelName>nicetce_xdeglare_heavy_v1.vdnn</ModelName>
+	</SingleModelInfo>
+
+</NiceMeeDeGlareModelConfig>

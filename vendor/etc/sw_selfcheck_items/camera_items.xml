@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sw_selfcheck_items>
+	<!-- 前置双摄校准 -->
+	<command name = "f_double_cam_cali">
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_ret_front" />
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_result_front" />
+	</command>
+
+	<!-- 后置双摄校准 -->
+	<command name = "b_double_cam_focus_cali">
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_ret" />
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_result_front" />
+	</command>
+
+	<!-- 前置主摄&广角虚化校准 -->
+	<command name = "f_main_wide_virt_cali">
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_ret_front" />
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_result_front" />
+	</command>
+
+	<!-- 前置主摄&虚化虚化校准 -->
+	<command name = "f_main_rtb_virt_cali">
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_ret_front2" />
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_result_front2" />
+	</command>
+
+	<!-- 后置主摄&望远虚化校准 -->
+	<command name = "r_main_tele_virt_cali">
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_ret2" />
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_result2" />
+	</command>
+
+	<!-- 后置主摄&广角虚化校准 -->
+	<command name = "r_main_wide_virt_cali">
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_ret4" />
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_result4" />
+	</command>
+
+	<!-- 后置主摄&虚化虚化校准 -->
+	<command name = "r_main_rtb_virt_cali">
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_ret" />
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_result" />
+	</command>
+
+	<!-- 后置主摄&虚化虚化校准 -->
+	<command name = "r_wide_rtb_virt_cali">
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_ret3" />
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_result3" />
+	</command>
+
+	<!-- 后置望远&潜望虚化校准 -->
+	<command name = "r_tele_peri_virt_cali">
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_ret5" />
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_result5" />
+	</command>
+
+	<!-- 后置主摄&潜望虚化校准 -->
+	<command name = "r_main_peri_virt_cali">
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_ret6" />
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_calibration_result6" />
+	</command>
+
+	<!-- 后置主摄&广角AE标定 -->
+	<command name = "r_main_wide_ae">
+		<item type = "file" tag = "/mnt/vendor/persist/camera/AECalibrationData.bin" />
+	</command>
+
+	<!-- 后置望远&潜望融合校准 -->
+	<command name = "r_tele_peri_fuse_cali">
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_fuse_cali_tele_peri_ret" />
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_fuse_cali_tele_peri_result" />
+	</command>
+
+	<!-- 后置主摄&广角融合校准 -->
+	<command name = "r_main_wide_fuse_cali">
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_fuse_cali_main_wide_ret" />
+		<item type = "file" tag = "/mnt/vendor/nvcfg/camera/dual_fuse_cali_main_wide_result" />
+	</command>
+
+	<command name = "software_selfcheck">
+		<!-- 闪光灯测试文件 -->
+		<item type = "file" tag = "/data/media/0/engineermode/camera/FLASH/FlashlightCal.jpg" value = "0"/>
+		<!-- SN CODE烧录确认 -->
+		<item type = "function" tag = "snCodeSelfcheck" so_name = "libsnfileGen" para = "" ap = "vendor" value = "1"/>
+	</command>
+
+</sw_selfcheck_items>

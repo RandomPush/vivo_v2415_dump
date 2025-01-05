@@ -1,0 +1,634 @@
+on post-fs
+    mkdir /config/usb_gadget/g1/functions/mass_storage.usb1
+    write /config/usb_gadget/g1/functions/mass_storage.usb1/lun.0/cdrom 1
+    write /config/usb_gadget/g1/functions/mass_storage.usb1/lun.0/file "/system/etc/autorun.iso"
+
+on boot
+    setprop sys.usb.vcar.mode 0
+    setprop sys.usb.car.mtp 7
+    setprop sys.usb.vidVendor 0x2d95
+    setprop sys.usb.vidProduct 0x6012
+
+    setprop sys.usb.mtp.device_type 3
+
+# Permission for otg
+    chown system system /sys/devices/virtual/vusb/usb0/otg_mode
+    chmod 0664 /sys/devices/virtual/vusb/usb0/otg_mode
+    chmod 0666 /sys/devices/virtual/vusb/usb0/host_mode
+    chmod 0444 /sys/devices/virtual/vusb/usb0/otg_speed
+    chmod 0444 /sys/devices/virtual/vusb/usb0/acc_speed
+
+on property:sys.usb.config=none && property:sys.usb.configfs=1
+    stop vusbd
+
+### vivo customized Vid/Pid for adb ###
+on property:sys.usb.config=adb && property:vendor.usb.acm_cnt=0 && \
+property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    setprop vendor.usb.pid 0x6001
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+
+### vivo customized Vid/Pid for rndis ###
+on property:sys.usb.config=rndis && property:vendor.usb.acm_cnt=0 && \
+property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    setprop vendor.usb.pid 0x600A
+on property:sys.usb.config=rndis,adb && property:vendor.usb.acm_cnt=0 && \
+property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    setprop vendor.usb.pid 0x600B
+
+### vivo customized Vid/Pid for mass_storage ###
+on property:sys.usb.config=mass_storage && property:vendor.usb.acm_cnt=0 && \
+property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    setprop vendor.usb.pid 0x6008
+on property:sys.usb.config=mass_storage,adb && property:vendor.usb.acm_cnt=0 && \
+property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    setprop vendor.usb.pid 0x6009
+
+### vivo customized Vid/Pid for bicr ###
+on property:sys.usb.config=bicr && property:vendor.usb.acm_cnt=0 && \
+property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    setprop vendor.usb.pid 0x6008
+on property:sys.usb.config=bicr,adb && property:vendor.usb.acm_cnt=0 && \
+property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    setprop vendor.usb.pid 0x6009
+
+
+### vivo customized change for mtp&ptp start ###
+### main function : mtp ###
+on property:sys.usb.config=mtp && property:vendor.usb.acm_cnt=0 && \
+property:sys.usb.configfs=1 && property:ro.vendor.vivo.support.cdrom=0 && property:sys.usb.vcar.mode=0
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    setprop vendor.usb.pid 0x6002
+on property:sys.usb.config=mtp && property:vendor.usb.acm_cnt=0 && \
+property:sys.usb.configfs=1 && property:ro.vendor.vivo.support.cdrom=1 && property:sys.usb.vcar.mode=0
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    setprop vendor.usb.pid 0x6012
+on property:sys.usb.config=mtp && property:vendor.usb.acm_cnt=1 && \
+property:sys.usb.configfs=1 && property:sys.usb.vcar.mode=0
+    setprop vendor.usb.pid 0x2012
+    setprop vendor.usb.acm_port1 ""
+on property:sys.usb.config=mtp && property:vendor.usb.acm_cnt=2 && \
+property:sys.usb.configfs=1 && property:sys.usb.vcar.mode=0
+    setprop vendor.usb.pid 0x202A
+
+on property:sys.usb.config=mtp && property:vendor.usb.acm_enable=1 && \
+property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_acm"
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /config/usb_gadget/g1/os_desc/use 1
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/acm.gs${vendor.usb.acm_port0} /config/usb_gadget/g1/configs/b.1/f2
+    symlink /config/usb_gadget/g1/functions/acm.gs${vendor.usb.acm_port1} /config/usb_gadget/g1/configs/b.1/f3
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=mtp && property:vendor.usb.acm_enable=0 && \
+property:sys.usb.configfs=1 && property:ro.vendor.vivo.support.cdrom=0
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp"
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /config/usb_gadget/g1/os_desc/use 1
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 2
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f1
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=mtp && property:vendor.usb.acm_enable=0 && \
+property:sys.usb.configfs=1 && property:ro.vendor.vivo.support.cdrom=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_mass_storage"
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /config/usb_gadget/g1/os_desc/use 1
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/mass_storage.usb1 /config/usb_gadget/g1/configs/b.1/f2
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+### start adbd at init.usb.configfs.rc ###
+on property:sys.usb.config=mtp,adb && property:vendor.usb.acm_cnt=0 && \
+property:sys.usb.configfs=1 && property:ro.vendor.vivo.support.cdrom=0 && property:sys.usb.vcar.mode=0
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    setprop vendor.usb.pid 0x6003
+on property:sys.usb.config=mtp,adb && property:vendor.usb.acm_cnt=0 && \
+property:sys.usb.configfs=1 && property:ro.vendor.vivo.support.cdrom=1 && property:sys.usb.vcar.mode=0
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    setprop vendor.usb.pid 0x6013
+on property:sys.usb.config=mtp,adb && property:vendor.usb.acm_cnt=1 && \
+property:sys.usb.configfs=1 && property:sys.usb.vcar.mode=0
+    setprop vendor.usb.pid 0x200A
+    setprop vendor.usb.acm_port1 ""
+on property:sys.usb.config=mtp,adb && property:vendor.usb.acm_cnt=2 && \
+property:sys.usb.configfs=1 && property:sys.usb.vcar.mode=0
+    setprop vendor.usb.pid 0x2026
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=mtp,adb && \
+property:vendor.usb.acm_enable=1 && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_adb_acm"
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /config/usb_gadget/g1/os_desc/use 1
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
+    symlink /config/usb_gadget/g1/functions/acm.gs${vendor.usb.acm_port0} /config/usb_gadget/g1/configs/b.1/f3
+    symlink /config/usb_gadget/g1/functions/acm.gs${vendor.usb.acm_port1} /config/usb_gadget/g1/configs/b.1/f4
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=mtp,adb && \
+property:vendor.usb.acm_enable=0 && property:sys.usb.configfs=1 && \
+property:ro.vendor.vivo.support.cdrom=0
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_adb"
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /config/usb_gadget/g1/os_desc/use 1
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=mtp,adb && \
+property:vendor.usb.acm_enable=0 && property:sys.usb.configfs=1 && \
+property:ro.vendor.vivo.support.cdrom=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_mass_storage_adb"
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /config/usb_gadget/g1/os_desc/use 1
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/mass_storage.usb1 /config/usb_gadget/g1/configs/b.1/f2
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f3
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+### main function : ptp ###
+on property:sys.usb.config=ptp && property:vendor.usb.acm_cnt=0 && \
+property:sys.usb.configfs=1 && property:ro.vendor.vivo.support.cdrom=0 && property:sys.usb.vcar.mode=0
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    setprop vendor.usb.pid 0x6004
+on property:sys.usb.config=ptp && property:vendor.usb.acm_cnt=0 && \
+property:sys.usb.configfs=1 && property:ro.vendor.vivo.support.cdrom=1 && property:sys.usb.vcar.mode=0
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    setprop vendor.usb.pid 0x6014
+on property:sys.usb.config=ptp && property:vendor.usb.acm_cnt=1 && \
+property:sys.usb.configfs=1 && property:sys.usb.vcar.mode=0
+    setprop vendor.usb.pid 0x2013
+    setprop vendor.usb.acm_port1 ""
+on property:sys.usb.config=ptp && property:vendor.usb.acm_cnt=2 && \
+property:sys.usb.configfs=1 && property:sys.usb.vcar.mode=0
+    setprop vendor.usb.pid 0x202B
+
+on property:sys.usb.config=ptp && property:vendor.usb.acm_enable=1 && \
+property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ptp_acm"
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    symlink /config/usb_gadget/g1/functions/ffs.ptp /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/acm.gs${vendor.usb.acm_port0} /config/usb_gadget/g1/configs/b.1/f2
+    symlink /config/usb_gadget/g1/functions/acm.gs${vendor.usb.acm_port1} /config/usb_gadget/g1/configs/b.1/f3
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=ptp && property:vendor.usb.acm_enable=0 && \
+property:sys.usb.configfs=1 && property:ro.vendor.vivo.support.cdrom=0
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ptp"
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 2
+    symlink /config/usb_gadget/g1/functions/ffs.ptp /config/usb_gadget/g1/configs/b.1/f1
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=ptp && property:vendor.usb.acm_enable=0 && \
+property:sys.usb.configfs=1 && property:ro.vendor.vivo.support.cdrom=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ptp_mass_storage"
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    symlink /config/usb_gadget/g1/functions/ffs.ptp /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/mass_storage.usb1 /config/usb_gadget/g1/configs/b.1/f2
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+### start adbd at init.usb.configfs.rc ###
+on property:sys.usb.config=ptp,adb && property:vendor.usb.acm_cnt=0 && \
+property:sys.usb.configfs=1 && property:ro.vendor.vivo.support.cdrom=0 && property:sys.usb.vcar.mode=0
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    setprop vendor.usb.pid 0x6005
+on property:sys.usb.config=ptp,adb && property:vendor.usb.acm_cnt=0 && \
+property:sys.usb.configfs=1 && property:ro.vendor.vivo.support.cdrom=1 && property:sys.usb.vcar.mode=0
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    setprop vendor.usb.pid 0x6015
+on property:sys.usb.config=ptp,adb && property:vendor.usb.acm_cnt=1 && \
+property:sys.usb.configfs=1 && property:sys.usb.vcar.mode=0
+    setprop vendor.usb.pid 0x200D
+    setprop vendor.usb.acm_port1 ""
+on property:sys.usb.config=ptp,adb && property:vendor.usb.acm_cnt=2 && \
+property:sys.usb.configfs=1 && property:sys.usb.vcar.mode=0
+    setprop vendor.usb.pid 0x2027
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=ptp,adb && \
+property:vendor.usb.acm_enable=1 && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ptp_adb_acm"
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    symlink /config/usb_gadget/g1/functions/ffs.ptp /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
+    symlink /config/usb_gadget/g1/functions/acm.gs${vendor.usb.acm_port0} /config/usb_gadget/g1/configs/b.1/f3
+    symlink /config/usb_gadget/g1/functions/acm.gs${vendor.usb.acm_port1} /config/usb_gadget/g1/configs/b.1/f4
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=ptp,adb && \
+property:vendor.usb.acm_enable=0 && property:sys.usb.configfs=1 && \
+property:ro.vendor.vivo.support.cdrom=0
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ptp_adb"
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    symlink /config/usb_gadget/g1/functions/ffs.ptp /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=ptp,adb && \
+property:vendor.usb.acm_enable=0 && property:sys.usb.configfs=1 && \
+property:ro.vendor.vivo.support.cdrom=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ptp_mass_storage_adb"
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    symlink /config/usb_gadget/g1/functions/ffs.ptp /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/mass_storage.usb1 /config/usb_gadget/g1/configs/b.1/f2
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f3
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+### vivo customized change for mtp&ptp end ###
+
+
+### vivo customized port config start###
+on property:sys.usb.config=charging && property:sys.usb.configfs=1 && \
+property:ro.vendor.vivo.support.cdrom=0 && property:sys.usb.vcar.mode=0
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    write /config/usb_gadget/g1/idProduct 0x6002
+
+on property:sys.usb.config=charging && property:sys.usb.configfs=1 && \
+property:ro.vendor.vivo.support.cdrom=1 && property:sys.usb.vcar.mode=0
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    write /config/usb_gadget/g1/idProduct 0x6012
+
+on property:sys.usb.config=charging && property:sys.usb.configfs=1 && \
+property:ro.vendor.vivo.support.cdrom=0 && property:sys.boot_completed=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp"
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    write /config/usb_gadget/g1/os_desc/use 1
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f1
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=charging && property:sys.usb.configfs=1 && \
+property:ro.vendor.vivo.support.cdrom=1 && property:sys.boot_completed=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_mass_storage"
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/mass_storage.usb1 /config/usb_gadget/g1/configs/b.1/f2
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=charging,adb && property:sys.usb.configfs=1
+    start adbd
+
+on property:sys.usb.config=charging,adb && property:sys.usb.configfs=1 && property:init.svc.adbd=restarting
+    start adbd
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=charging,adb && \
+property:vendor.usb.acm_enable=0 && property:sys.usb.configfs=1 && \
+property:ro.vendor.vivo.support.cdrom=0 && property:sys.usb.vcar.mode=0
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_adb"
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    write /config/usb_gadget/g1/idProduct 0x6003
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+	setprop vendor.usb.pid 0x6003
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=charging,adb && \
+property:vendor.usb.acm_enable=0 && property:sys.usb.configfs=1 && \
+property:ro.vendor.vivo.support.cdrom=0 && property:sys.usb.vcar.mode=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_adb"
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=charging,adb && \
+property:vendor.usb.acm_enable=1 && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "adb_acm"
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    write /config/usb_gadget/g1/idVendor 0x0E8D
+    write /config/usb_gadget/g1/idProduct 0x2006
+    setprop vendor.usb.pid 0x2006
+    setprop vendor.usb.acm_port1 ""
+    symlink /config/usb_gadget/g1/functions/mass_storage.usb0 /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
+    symlink /config/usb_gadget/g1/functions/acm.gs${vendor.usb.acm_port0} /config/usb_gadget/g1/configs/b.1/f3
+    symlink /config/usb_gadget/g1/functions/acm.gs${vendor.usb.acm_port1} /config/usb_gadget/g1/configs/b.1/f4
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=charging,adb && \
+property:vendor.usb.acm_enable=0 && property:sys.usb.configfs=1 && \
+property:ro.vendor.vivo.support.cdrom=1 && property:sys.usb.vcar.mode=0
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_mass_storage_adb"
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    write /config/usb_gadget/g1/idProduct 0x6013
+    symlink /config/usb_gadget/g1/functions/mass_storage.usb1 /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f2
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f3
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+    setprop vendor.usb.pid 0x6013
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=charging,adb && \
+property:vendor.usb.acm_enable=0 && property:sys.usb.configfs=1 && \
+property:ro.vendor.vivo.support.cdrom=1 && property:sys.usb.vcar.mode=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mass_storage_adb"
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    symlink /config/usb_gadget/g1/functions/mass_storage.usb1 /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f2
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f3
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=car,mtp && property:sys.usb.configfs=1 && \
+property:sys.usb.vcar.mode=0
+    write /config/usb_gadget/g1/idVendor 0x2d95
+    setprop vendor.usb.pid 0x6012
+
+on property:sys.usb.config=car,vusbd && property:sys.usb.configfs=1 && \
+property:sys.usb.vcar.mode=0
+    write /config/usb_gadget/g1/idVendor ${sys.usb.vidVendor}
+    setprop vendor.usb.pid ${sys.usb.vidProduct}
+
+on property:sys.usb.config=car,mtp && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "car-ffs-mtp"
+    rm /config/usb_gadget/g1/configs/b.1/f1
+    rm /config/usb_gadget/g1/configs/b.1/f2
+    rm /config/usb_gadget/g1/configs/b.1/f3
+    rm /config/usb_gadget/g1/configs/b.1/f4
+    rm /config/usb_gadget/g1/configs/b.1/f5
+    rm /config/usb_gadget/g1/configs/b.1/f6
+    rm /config/usb_gadget/g1/configs/b.1/f7
+    rm /config/usb_gadget/g1/configs/b.1/f8
+    rm /config/usb_gadget/g1/configs/b.1/f9
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    write /config/usb_gadget/g1/os_desc/use 1
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f1
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=car,vusbd && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "car_vusbd"
+    rm /config/usb_gadget/g1/configs/b.1/f1
+    rm /config/usb_gadget/g1/configs/b.1/f2
+    rm /config/usb_gadget/g1/configs/b.1/f3
+    rm /config/usb_gadget/g1/configs/b.1/f4
+    rm /config/usb_gadget/g1/configs/b.1/f5
+    rm /config/usb_gadget/g1/configs/b.1/f6
+    rm /config/usb_gadget/g1/configs/b.1/f7
+    rm /config/usb_gadget/g1/configs/b.1/f8
+    rm /config/usb_gadget/g1/configs/b.1/f9
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /config/usb_gadget/g1/os_desc/use 1
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+    write /dev/kmsg "Vid "${sys.usb.vidVendor}
+    write /dev/kmsg "Pid "${sys.usb.vidProduct}
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=mtp,adb,acm && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_adb_acm"
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    write /config/usb_gadget/g1/idVendor 0x0E8D
+    write /config/usb_gadget/g1/idProduct 0x200A
+    write /config/usb_gadget/g1/os_desc/use 1
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
+    symlink /config/usb_gadget/g1/functions/acm.gs0 /config/usb_gadget/g1/configs/b.1/f3
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+    setprop vendor.usb.pid 0x200A
+    setprop vendor.usb.acm_port0 0
+    setprop vendor.usb.acm_port1 ""
+    setprop vendor.usb.clear 0
+
+on property:sys.usb.config=charging,acm && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "charging_acm"
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    write /config/usb_gadget/g1/idVendor 0x0E8D
+    write /config/usb_gadget/g1/idProduct 0x201A
+    write /config/usb_gadget/g1/os_desc/use 1
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    symlink /config/usb_gadget/g1/functions/acm.gs0 /config/usb_gadget/g1/configs/b.1/f1
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+    setprop vendor.usb.pid 0x200A
+    setprop vendor.usb.acm_port0 0
+    setprop vendor.usb.acm_port1 ""
+    setprop vendor.usb.clear 0
+
+on property:sys.usb.config=vusbd && property:vendor.usb.acm_cnt=0 && \
+property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    setprop vendor.usb.pid 0x6001
+on property:sys.usb.config=vusbd && property:vendor.usb.acm_cnt=1 && \
+property:sys.usb.configfs=1
+    setprop vendor.usb.pid 0x2006
+    setprop vendor.usb.acm_port1 ""
+on property:sys.usb.config=vusbd && property:vendor.usb.acm_cnt=2 && \
+property:sys.usb.configfs=1
+    setprop vendor.usb.pid 0x2029
+
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=vusbd && \
+property:vendor.usb.acm_enable=1 && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "vusbd_acm"
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    symlink /config/usb_gadget/g1/functions/mass_storage.usb0 /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
+    symlink /config/usb_gadget/g1/functions/acm.gs${vendor.usb.acm_port0} /config/usb_gadget/g1/configs/b.1/f3
+    symlink /config/usb_gadget/g1/functions/acm.gs${vendor.usb.acm_port1} /config/usb_gadget/g1/configs/b.1/f4
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=vusbd && \
+property:vendor.usb.acm_enable=0 && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "vusbd"
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=charging,vusbd && \
+property:vendor.usb.acm_enable=0 && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "vusbd"
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    write /config/usb_gadget/g1/idProduct 0x6001
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+    setprop vendor.usb.pid 0x6001
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=charging,vusbd && \
+property:vendor.usb.acm_enable=1 && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "vusbd_acm"
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    write /config/usb_gadget/g1/idVendor 0x0E8D
+    write /config/usb_gadget/g1/idProduct 0x2006
+    setprop vendor.usb.pid 0x2006
+    setprop vendor.usb.acm_port1 ""
+    symlink /config/usb_gadget/g1/functions/mass_storage.usb0 /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
+    symlink /config/usb_gadget/g1/functions/acm.gs${vendor.usb.acm_port0} /config/usb_gadget/g1/configs/b.1/f3
+    symlink /config/usb_gadget/g1/functions/acm.gs${vendor.usb.acm_port1} /config/usb_gadget/g1/configs/b.1/f4
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=mtp,vusbd && property:vendor.usb.acm_cnt=0 && \
+property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    setprop vendor.usb.pid 0x6003
+on property:sys.usb.config=mtp,vusbd && property:vendor.usb.acm_cnt=1 && \
+property:sys.usb.configfs=1
+    setprop vendor.usb.pid 0x200A
+    setprop vendor.usb.acm_port1 ""
+on property:sys.usb.config=mtp,vusbd && property:vendor.usb.acm_cnt=2 && \
+property:sys.usb.configfs=1
+    setprop vendor.usb.pid 0x2026
+
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=mtp,vusbd && \
+property:vendor.usb.acm_enable=1 && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_vusbd_acm"
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /config/usb_gadget/g1/os_desc/use 1
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
+    symlink /config/usb_gadget/g1/functions/acm.gs${vendor.usb.acm_port0} /config/usb_gadget/g1/configs/b.1/f3
+    symlink /config/usb_gadget/g1/functions/acm.gs${vendor.usb.acm_port1} /config/usb_gadget/g1/configs/b.1/f4
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=mtp,vusbd && \
+property:vendor.usb.acm_enable=0 && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_vusbd"
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /config/usb_gadget/g1/os_desc/use 1
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    symlink /config/usb_gadget/g1/functions/ffs.mtp /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=ptp,vusbd && property:vendor.usb.acm_cnt=0 && \
+property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x2D95
+    setprop vendor.usb.pid 0x6005
+on property:sys.usb.config=ptp,vusbd && property:vendor.usb.acm_cnt=1 && \
+property:sys.usb.configfs=1
+    setprop vendor.usb.pid 0x200D
+    setprop vendor.usb.acm_port1 ""
+on property:sys.usb.config=ptp,vusbd && property:vendor.usb.acm_cnt=2 && \
+property:sys.usb.configfs=1
+    setprop vendor.usb.pid 0x2027
+
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=ptp,vusbd && \
+property:vendor.usb.acm_enable=1 && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ptp_vusbd_acm"
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    symlink /config/usb_gadget/g1/functions/ffs.ptp /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
+    symlink /config/usb_gadget/g1/functions/acm.gs${vendor.usb.acm_port0} /config/usb_gadget/g1/configs/b.1/f3
+    symlink /config/usb_gadget/g1/functions/acm.gs${vendor.usb.acm_port1} /config/usb_gadget/g1/configs/b.1/f4
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=ptp,vusbd && \
+property:vendor.usb.acm_enable=0 && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ptp_vusbd"
+    write /sys/class/udc/${vendor.usb.controller}/device/saving 1
+    write /config/usb_gadget/g1/idProduct ${vendor.usb.pid}
+    symlink /config/usb_gadget/g1/functions/ffs.ptp /config/usb_gadget/g1/configs/b.1/f1
+    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
+    write /config/usb_gadget/g1/UDC ${vendor.usb.controller}
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:vendor.switch.vusbd=debugport
+    setprop sys.usb.config none
+    setprop sys.usb.config mtp,adb,acm
+
+on property:vendor.switch.vusbd=debugport_acm
+    setprop sys.usb.config none
+    setprop sys.usb.config charging,acm
+
+on property:vendor.switch.vusbd=vusbd
+    setprop sys.usb.config none
+    setprop sys.usb.config vusbd
+
+on property:init.svc.vusbd=stopped
+    setprop sys.usb.ffs.ready 0
+
+on property:sys.usb.vserialno=*
+    write /config/usb_gadget/g1/idVendor 0x2d95
+    write /config/usb_gadget/g1/idProduct 0x7000
+    write /config/usb_gadget/g1/strings/0x409/serialnumber ${sys.usb.vserialno}
+    setprop sys.usb.vserialno.state ${sys.usb.vserialno}
+    setprop vendor.usb.pid 0x7000
+
+### vivo customized port config end###
+
+
+
+### distinguishing service configuration ###
+
+on property:sys.usb.ffs.ready=0 && property:sys.usb.config=mtp,adb,acm && property:sys.usb.configfs=1
+    start adbd
+
+on property:sys.usb.config=vusbd && property:sys.usb.configfs=1
+    start adbd
+
+on property:sys.usb.config=charging,vusbd && property:sys.usb.configfs=1
+    start adbd
+
+on property:sys.usb.config=mtp,vusbd && property:sys.usb.configfs=1
+    start adbd
+
+on property:sys.usb.config=ptp,vusbd && property:sys.usb.configfs=1
+    start adbd
+
+on property:sys.usb.config=car,vusbd && property:sys.usb.configfs=1
+    start adbd
+
+### vivo customized port config end ###

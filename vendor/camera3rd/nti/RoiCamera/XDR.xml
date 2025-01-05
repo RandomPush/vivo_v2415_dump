@@ -1,0 +1,768 @@
+﻿<?xml version="1.0"?>
+<XDR_ALG_Parameters>
+    <xmlVersion description="XDR xml Version ">2.0.43</xmlVersion>
+    <DEBUG>
+        <forcedump description="force dump">0</forcedump>
+        <bypassAlgo description="bypass xdr algo">0</bypassAlgo>
+        <HDRtoNormalEnable description="change to normal pipline while hdr and sdr are simmilar in DR">1</HDRtoNormalEnable>
+        <UIZoomRatioThreshToNormal description="change to normal pipline while UI zoom ratio is larger than this threshold">1000.0</UIZoomRatioThreshToNormal>
+    </DEBUG>
+    <GammaTab>
+        <i32defalutGammaTab description="the gamma table is copy from the most bright part gamma lut in ipe gamma">
+            <tableNum>4</tableNum>
+            <lux_start>0 240 380 510</lux_start>
+            <lux_end>190 360 480 1000</lux_end>
+            <gammalen>257</gammalen>
+            <table0>0 13 26 39 52 65 77 90 103 115 128 140 152 165 177 188 200 212 223 234 245 256 267 277 287 298 308 317 327 337 346 355 364 373 381 390 398 406 414 422 430 438 445 452 459 466 473 480 487 493 500 506 512 518 524 530 536 542 547 553 558 564 569 574 579 585 590 594 599 604 609 613 618 623 627 631 636 640 644 648 653 657 661 665 669 673 676 680 684 688 692 695 699 702 706 710 713 717 720 723 727 730 734 737 740 743 747 750 753 756 759 762 765 768 771 774 777 780 783 785 788 791 794 797 799 802 805 807 810 812 815 817 820 822 825 827 830 832 834 837 839 841 844 846 848 850 852 855 857 859 861 863 865 867 869 871 873 875 877 879 881 883 885 887 889 891 892 894 896 898 900 901 903 905 907 908 910 912 913 915 917 918 920 922 923 925 926 928 930 931 933 934 936 937 939 940 942 943 945 946 948 949 951 952 954 955 956 958 959 961 962 963 965 966 968 969 970 972 973 974 976 977 978 980 981 982 983 985 986 987 989 990 991 992 994 995 996 998 999 1000 1001 1003 1004 1005 1006 1008 1009 1010 1011 1013 1014 1015 1016 1018 1019 1020 1024</table0>
+            <table1>0 13 26 39 52 65 77 90 103 115 128 140 152 165 177 188 200 212 223 234 245 256 267 277 287 298 308 317 327 337 346 355 364 373 381 390 398 406 414 422 430 438 445 452 459 466 473 480 487 493 500 506 512 518 524 530 536 542 547 553 558 564 569 574 579 585 590 594 599 604 609 613 618 623 627 631 636 640 644 648 653 657 661 665 669 673 676 680 684 688 692 695 699 702 706 710 713 717 720 723 727 730 734 737 740 743 747 750 753 756 759 762 765 768 771 774 777 780 783 785 788 791 794 797 799 802 805 807 810 812 815 817 820 822 825 827 830 832 834 837 839 841 844 846 848 850 852 855 857 859 861 863 865 867 869 871 873 875 877 879 881 883 885 887 889 891 892 894 896 898 900 901 903 905 907 908 910 912 913 915 917 918 920 922 923 925 926 928 930 931 933 934 936 937 939 940 942 943 945 946 948 949 951 952 954 955 956 958 959 961 962 963 965 966 968 969 970 972 973 974 976 977 978 980 981 982 983 985 986 987 989 990 991 992 994 995 996 998 999 1000 1001 1003 1004 1005 1006 1008 1009 1010 1011 1013 1014 1015 1016 1018 1019 1020 1024</table1>
+            <table2>0 9 19 28 37 47 56 65 74 84 93 102 111 120 129 138 147 156 165 174 183 192 200 209 218 226 235 243 251 260 268 276 284 292 300 307 315 323 330 338 345 352 359 366 373 380 386 393 400 406 412 419 425 431 437 443 449 455 461 466 472 478 483 489 495 500 506 511 516 522 527 533 538 543 548 554 559 564 569 574 579 584 589 594 599 604 609 613 618 623 627 632 637 641 646 650 654 659 663 667 672 676 680 684 688 692 696 700 704 707 711 715 719 722 726 729 733 736 740 743 747 750 753 756 760 763 766 769 772 775 778 781 784 787 790 793 796 798 801 804 807 809 812 815 817 820 823 825 828 830 833 835 838 840 843 845 847 850 852 855 857 859 861 864 866 868 870 873 875 877 879 881 883 885 887 889 892 894 896 898 900 902 903 905 907 909 911 913 915 917 919 920 922 924 926 928 929 931 933 935 936 938 940 941 943 945 947 948 950 951 953 955 956 958 959 961 963 964 966 967 969 970 972 973 975 976 978 980 981 982 984 985 987 988 990 991 993 994 996 997 999 1000 1001 1003 1004 1006 1007 1009 1010 1011 1013 1014 1016 1017 1019 1020 1024</table2>
+            <table3>0 9 19 28 37 47 56 65 74 84 93 101 109 118 126 134 141 149 157 165 172 179 187 194 201 209 216 223 230 236 243 250 257 263 270 276 283 289 295 302 308 314 320 326 332 338 344 349 355 361 366 372 377 383 388 394 399 404 409 414 419 424 429 434 439 444 449 453 458 463 467 472 476 481 485 490 494 499 503 507 511 516 520 524 528 532 536 540 544 548 552 556 560 564 568 572 576 579 583 587 591 595 598 602 606 609 613 617 620 624 627 631 635 638 642 645 649 652 655 659 662 666 669 672 676 679 682 686 689 692 695 699 702 705 708 711 715 718 721 724 727 730 733 736 739 742 745 748 751 754 757 760 763 766 769 772 775 778 781 783 786 789 792 795 797 800 803 806 809 811 814 817 819 822 825 827 830 833 835 838 841 843 846 849 851 854 856 859 861 864 866 869 872 874 877 879 882 884 887 889 891 894 896 899 901 904 906 909 911 913 916 918 921 923 925 928 930 932 935 937 940 942 944 947 949 951 954 956 958 961 963 965 967 970 972 974 977 979 981 984 986 988 990 993 995 997 1000 1002 1004 1006 1009 1011 1013 1015 1018 1020 1024</table3>
+        </i32defalutGammaTab>
+        <i32defalutPortraitGammaTab description="the Portrait gamma table is copy from the most bright part gamma lut in ipe gamma">
+            <tableNum>4</tableNum>
+            <lux_start>0 240 380 510</lux_start>
+            <lux_end>190 360 480 1000</lux_end>
+            <gammalen>257</gammalen>
+            <table0>0 13 26 39 52 65 77 90 103 115 128 140 152 165 177 188 200 212 223 234 245 256 267 277 287 298 308 317 327 337 346 355 364 373 381 390 398 406 414 422 430 438 445 452 459 466 473 480 487 493 500 506 512 518 524 530 536 542 547 553 558 564 569 574 579 585 590 594 599 604 609 613 618 623 627 631 636 640 644 648 653 657 661 665 669 673 676 680 684 688 692 695 699 702 706 710 713 717 720 723 727 730 734 737 740 743 747 750 753 756 759 762 765 768 771 774 777 780 783 785 788 791 794 797 799 802 805 807 810 812 815 817 820 822 825 827 830 832 834 837 839 841 844 846 848 850 852 855 857 859 861 863 865 867 869 871 873 875 877 879 881 883 885 887 889 891 892 894 896 898 900 901 903 905 907 908 910 912 913 915 917 918 920 922 923 925 926 928 930 931 933 934 936 937 939 940 942 943 945 946 948 949 951 952 954 955 956 958 959 961 962 963 965 966 968 969 970 972 973 974 976 977 978 980 981 982 983 985 986 987 989 990 991 992 994 995 996 998 999 1000 1001 1003 1004 1005 1006 1008 1009 1010 1011 1013 1014 1015 1016 1018 1019 1020 1024</table0>
+            <table1>0 13 26 39 52 65 77 90 103 115 128 140 152 165 177 188 200 212 223 234 245 256 267 277 287 298 308 317 327 337 346 355 364 373 381 390 398 406 414 422 430 438 445 452 459 466 473 480 487 493 500 506 512 518 524 530 536 542 547 553 558 564 569 574 579 585 590 594 599 604 609 613 618 623 627 631 636 640 644 648 653 657 661 665 669 673 676 680 684 688 692 695 699 702 706 710 713 717 720 723 727 730 734 737 740 743 747 750 753 756 759 762 765 768 771 774 777 780 783 785 788 791 794 797 799 802 805 807 810 812 815 817 820 822 825 827 830 832 834 837 839 841 844 846 848 850 852 855 857 859 861 863 865 867 869 871 873 875 877 879 881 883 885 887 889 891 892 894 896 898 900 901 903 905 907 908 910 912 913 915 917 918 920 922 923 925 926 928 930 931 933 934 936 937 939 940 942 943 945 946 948 949 951 952 954 955 956 958 959 961 962 963 965 966 968 969 970 972 973 974 976 977 978 980 981 982 983 985 986 987 989 990 991 992 994 995 996 998 999 1000 1001 1003 1004 1005 1006 1008 1009 1010 1011 1013 1014 1015 1016 1018 1019 1020 1024</table1>
+            <table2>0 9 19 28 37 47 56 65 74 84 93 102 111 120 129 138 147 156 165 174 183 192 200 209 218 226 235 243 251 260 268 276 284 292 300 307 315 323 330 338 345 352 359 366 373 380 386 393 400 406 412 419 425 431 437 443 449 455 461 466 472 478 483 489 495 500 506 511 516 522 527 533 538 543 548 554 559 564 569 574 579 584 589 594 599 604 609 613 618 623 627 632 637 641 646 650 654 659 663 667 672 676 680 684 688 692 696 700 704 707 711 715 719 722 726 729 733 736 740 743 747 750 753 756 760 763 766 769 772 775 778 781 784 787 790 793 796 798 801 804 807 809 812 815 817 820 823 825 828 830 833 835 838 840 843 845 847 850 852 855 857 859 861 864 866 868 870 873 875 877 879 881 883 885 887 889 892 894 896 898 900 902 903 905 907 909 911 913 915 917 919 920 922 924 926 928 929 931 933 935 936 938 940 941 943 945 947 948 950 951 953 955 956 958 959 961 963 964 966 967 969 970 972 973 975 976 978 980 981 982 984 985 987 988 990 991 993 994 996 997 999 1000 1001 1003 1004 1006 1007 1009 1010 1011 1013 1014 1016 1017 1019 1020 1024</table2>
+            <table3>0 9 19 28 37 47 56 65 74 84 93 101 109 118 126 134 141 149 157 165 172 179 187 194 201 209 216 223 230 236 243 250 257 263 270 276 283 289 295 302 308 314 320 326 332 338 344 349 355 361 366 372 377 383 388 394 399 404 409 414 419 424 429 434 439 444 449 453 458 463 467 472 476 481 485 490 494 499 503 507 511 516 520 524 528 532 536 540 544 548 552 556 560 564 568 572 576 579 583 587 591 595 598 602 606 609 613 617 620 624 627 631 635 638 642 645 649 652 655 659 662 666 669 672 676 679 682 686 689 692 695 699 702 705 708 711 715 718 721 724 727 730 733 736 739 742 745 748 751 754 757 760 763 766 769 772 775 778 781 783 786 789 792 795 797 800 803 806 809 811 814 817 819 822 825 827 830 833 835 838 841 843 846 849 851 854 856 859 861 864 866 869 872 874 877 879 882 884 887 889 891 894 896 899 901 904 906 909 911 913 916 918 921 923 925 928 930 932 935 937 940 942 944 947 949 951 954 956 958 961 963 965 967 970 972 974 977 979 981 984 986 988 990 993 995 997 1000 1002 1004 1006 1009 1011 1013 1015 1018 1020 1024</table3>
+        </i32defalutPortraitGammaTab>
+    </GammaTab>
+    <NormalGainmap>
+        <drcgainCompensation description="apply drcgain for MTK/Qualcomm tone">
+            <tabAnchorsX>0 0.23 0.25 0.4 0.7 0.9 1</tabAnchorsX>
+            <tabAnchorsY>0 0.23 0.25 0.65 0.85 0.93 1</tabAnchorsY>
+            <num_tabAnchors>7</num_tabAnchors>
+            <percentage>0</percentage>
+        </drcgainCompensation>
+        <number_lux description="Control the number of segments in lux">3</number_lux>
+        <start_lux>200 410 510</start_lux>
+        <end_lux>390 490 600</end_lux>
+        <NoPortrait>
+            <SNMode>
+                <Outdoor>
+                    <a_Offset>0.02 0.02 0.02</a_Offset>
+                    <b_Coef>1.8 1.8 1.8</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.45 0.45 0.45</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">1.2 1.2 1.2</b_CoefHDR>
+                </Outdoor>
+                <Indoor>
+                    <a_Offset>0.02 0.02 0.02</a_Offset>
+                    <b_Coef>1.8 1.8 1.8</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.42 0.42 0.42</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">1.1 1.1 1.1</b_CoefHDR>
+                </Indoor>
+                <Night>
+                    <a_Offset>0.02 0.02 0.02</a_Offset>
+                    <b_Coef>1.8 1.8 1.8</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.35 0.35 0.35</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">1.2 1.2 1.2</b_CoefHDR>
+                </Night>
+                <Sunset>
+                    <a_Offset>0.02 0.02 0.02</a_Offset>
+                    <b_Coef>1.8 1.8 1.8</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.38 0.38 0.38</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">1.2 1.2 1.2</b_CoefHDR>
+                </Sunset>
+                <Market>
+                    <a_Offset>0.02 0.02 0.02</a_Offset>
+                    <b_Coef>1.8 1.8 1.8</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.4 0.4 0.4</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">1.3 1.3 1.3</b_CoefHDR>
+                </Market>
+                <Stage>
+                    <a_Offset>0.02 0.02 0.02</a_Offset>
+                    <b_Coef>1.8 1.8 1.8</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.4 0.4 0.4</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">1.3 1.3 1.3</b_CoefHDR>
+                </Stage>
+            </SNMode>
+            <DayTimeMode>
+                <Outdoor>
+                    <a_Offset>0.02 0.02 0.02</a_Offset>
+                    <b_Coef>1.8 1.8 1.8</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.45 0.45 0.45</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">1.2 1.2 1.2</b_CoefHDR>
+                </Outdoor>
+                <Indoor>
+                    <a_Offset>0.02 0.02 0.02</a_Offset>
+                    <b_Coef>1.8 1.8 1.8</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.42 0.42 0.42</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">1.1 1.1 1.1</b_CoefHDR>
+                </Indoor>
+                <Night>
+                    <a_Offset>0.02 0.02 0.02</a_Offset>
+                    <b_Coef>1.8 1.8 1.8</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.35 0.35 0.35</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">1.2 1.2 1.2</b_CoefHDR>
+                </Night>
+                <Sunset>
+                    <a_Offset>0.02 0.02 0.02</a_Offset>
+                    <b_Coef>1.8 1.8 1.8</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.38 0.38 0.38</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">1.2 1.2 1.2</b_CoefHDR>
+                </Sunset>
+                <Market>
+                    <a_Offset>0.02 0.02 0.02</a_Offset>
+                    <b_Coef>1.8 1.8 1.8</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.4 0.4 0.4</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">1.3 1.3 1.3</b_CoefHDR>
+                </Market>
+                <Stage>
+                    <a_Offset>0.02 0.02 0.02</a_Offset>
+                    <b_Coef>1.8 1.8 1.8</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.4 0.4 0.4</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">1.3 1.3 1.3</b_CoefHDR>
+                </Stage>
+            </DayTimeMode>
+        </NoPortrait>
+        <Portrait>
+            <SNMode>
+                <Outdoor>
+                    <a_Offset>0.1 0.1 0.1</a_Offset>
+                    <b_Coef>1.0 1.0 1.0</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.55 0.55 0.55</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">0.9 0.9 0.9</b_CoefHDR>
+                </Outdoor>
+                <Indoor>
+                    <a_Offset>0.1 0.1 0.1</a_Offset>
+                    <b_Coef>1.0 1.0 1.0</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.62 0.62 0.62</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">0.8 0.8 0.8</b_CoefHDR>
+                </Indoor>
+                <Night>
+                    <a_Offset>0.1 0.1 0.1</a_Offset>
+                    <b_Coef>1.0 1.0 1.0</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.5 0.5 0.5</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">1.0 1.0 1.0</b_CoefHDR>
+                </Night>
+                <Sunset>
+                    <a_Offset>0.1 0.1 0.1</a_Offset>
+                    <b_Coef>1.0 1.0 1.0</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.5 0.5 0.5</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">0.8 0.8 0.8</b_CoefHDR>
+                </Sunset>
+                <Market>
+                    <a_Offset>0.1 0.1 0.1</a_Offset>
+                    <b_Coef>1.0 1.0 1.0</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.5 0.5 0.5</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">1.0 1.0 1.0</b_CoefHDR>
+                </Market>
+                <Stage>
+                    <a_Offset>0.1 0.1 0.1</a_Offset>
+                    <b_Coef>1.0 1.0 1.0</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.5 0.5 0.5</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">1.0 1.0 1.0</b_CoefHDR>
+                </Stage>
+            </SNMode>
+            <DayTimeMode>
+                <Outdoor>
+                    <a_Offset>0.1 0.1 0.1</a_Offset>
+                    <b_Coef>1.0 1.0 1.0</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.55 0.55 0.55</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">0.9 0.9 0.9</b_CoefHDR>
+                </Outdoor>
+                <Indoor>
+                    <a_Offset>0.1 0.1 0.1</a_Offset>
+                    <b_Coef>1.0 1.0 1.0</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.62 0.62 0.62</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">0.8 0.8 0.8</b_CoefHDR>
+                </Indoor>
+                <Night>
+                    <a_Offset>0.1 0.1 0.1</a_Offset>
+                    <b_Coef>1.0 1.0 1.0</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.5 0.5 0.5</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">1.0 1.0 1.0</b_CoefHDR>
+                </Night>
+                <Sunset>
+                    <a_Offset>0.1 0.1 0.1</a_Offset>
+                    <b_Coef>1.0 1.0 1.0</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.5 0.5 0.5</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">0.8 0.8 0.8</b_CoefHDR>
+                </Sunset>
+                <Market>
+                    <a_Offset>0.1 0.1 0.1</a_Offset>
+                    <b_Coef>1.0 1.0 1.0</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.5 0.5 0.5</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">1.0 1.0 1.0</b_CoefHDR>
+                </Market>
+                <Stage>
+                    <a_Offset>0.1 0.1 0.1</a_Offset>
+                    <b_Coef>1.0 1.0 1.0</b_Coef>
+                    <a_OffsetHDR description="Params for HDR to normal pipline">0.5 0.5 0.5</a_OffsetHDR>
+                    <b_CoefHDR description="Params for HDR to normal pipline">1.0 1.0 1.0</b_CoefHDR>
+                </Stage>
+            </DayTimeMode>
+        </Portrait>
+    </NormalGainmap>
+    <XDRGainmap>
+        <number_lux description="Control the number of segments in lux">3</number_lux>
+        <start_lux>200 410 510</start_lux>
+        <end_lux>390 490 600</end_lux>
+        <NoPortrait>
+          <SNMode>
+            <Outdoor>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>7.0 7.0 7.0</GainMid>
+                <GainHigh>100 100 100</GainHigh>
+                <Compress_CoefMin>0.4 0.4 0.4</Compress_CoefMin>
+                <Compress_CoefMid>0.8 0.8 0.8</Compress_CoefMid>
+                <Compress_CoefMax>1.5 1.5 1.5</Compress_CoefMax>
+                <StrengthMin>0.8 0.8 0.8</StrengthMin>
+                <StrengthMid>0.9 0.9 0.9</StrengthMid>
+                <StrengthMax>1.0 1.0 1.0</StrengthMax>
+                <SafeGainRatio>2 2 2</SafeGainRatio>
+                <maxGain>5 5 5</maxGain>
+                <AeGapAdjustRatio_low>1.3 1.3 1.3</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>3 3 3</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2800 2800 2800</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.002 0.002 0.002</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">100 100 100</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">2 2 2</ThreshToNormalPercent>
+            </Outdoor>
+            <Indoor>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>7.0 7.0 7.0</GainMid>
+                <GainHigh>100 100 100</GainHigh>
+                <Compress_CoefMin>0.4 0.4 0.4</Compress_CoefMin>
+                <Compress_CoefMid>0.85 0.85 0.85</Compress_CoefMid>
+                <Compress_CoefMax>1.5 1.5 1.5</Compress_CoefMax>
+                <StrengthMin>0.6 0.6 0.6</StrengthMin>
+                <StrengthMid>0.9 0.9 0.9</StrengthMid>
+                <StrengthMax>1.0 1.0 1.0</StrengthMax>
+                <SafeGainRatio>1.5 1.5 1.5</SafeGainRatio>
+                <maxGain>4 4 4</maxGain>
+                <AeGapAdjustRatio_low>1.5 1.5 1.5</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>3.2 3.2 3.2</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2500 2500 2500</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.01 0.01 0.01</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">100 100 100</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">2 2 2</ThreshToNormalPercent>
+            </Indoor>
+            <Night>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>2.0 2.0 2.0</GainLow>
+                <GainMid>6.0 6.0 6.0</GainMid>
+                <GainHigh>200 200 200</GainHigh>
+                <Compress_CoefMin>0.4 0.4 0.4</Compress_CoefMin>
+                <Compress_CoefMid>0.8 0.8 0.8</Compress_CoefMid>
+                <Compress_CoefMax>1.5 1.5 1.5</Compress_CoefMax>
+                <StrengthMin>1.1 1.1 1.1</StrengthMin>
+                <StrengthMid>1.2 1.2 1.2</StrengthMid>
+                <StrengthMax>1.3 1.3 1.3</StrengthMax>
+                <SafeGainRatio>0.5 0.5 0.5</SafeGainRatio>
+                <maxGain>5.5 5.5 5.5</maxGain>
+                <AeGapAdjustRatio_low>1.2 1.2 1.2</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>2.8 2.8 2.8</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2500 2500 2500</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.002 0.002 0.002</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">100 100 100</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">30000 30000 30000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">2 2 2</ThreshToNormalPercent>
+            </Night>
+            <Sunset>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>6.0 6.0 6.0</GainMid>
+                <GainHigh>100 100 100</GainHigh>
+                <Compress_CoefMin>0.5 0.5 0.5</Compress_CoefMin>
+                <Compress_CoefMid>0.8 0.8 0.8</Compress_CoefMid>
+                <Compress_CoefMax>1.2 1.2 1.2</Compress_CoefMax>
+                <StrengthMin>0.65 0.65 0.65</StrengthMin>
+                <StrengthMid>1.1 1.1 1.1</StrengthMid>
+                <StrengthMax>1.2 1.2 1.2</StrengthMax>
+                <SafeGainRatio>0.8 0.8 0.8</SafeGainRatio>
+                <maxGain>5 5 5</maxGain>
+                <AeGapAdjustRatio_low>0.3 0.3 0.3</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>2.5 2.5 2.5</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2300 2300 2300</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.002 0.002 0.002</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">50 50 50</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">2 2 2</ThreshToNormalPercent>
+            </Sunset>
+            <Market>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>7.0 7.0 7.0</GainMid>
+                <GainHigh>100 100 100</GainHigh>
+                <Compress_CoefMin>0.6 0.6 0.6</Compress_CoefMin>
+                <Compress_CoefMid>0.85 0.85 0.85</Compress_CoefMid>
+                <Compress_CoefMax>1.5 1.5 1.5</Compress_CoefMax>
+                <StrengthMin>0.8 0.8 0.8</StrengthMin>
+                <StrengthMid>0.9 0.9 0.9</StrengthMid>
+                <StrengthMax>1.0 1.0 1.0</StrengthMax>
+                <SafeGainRatio>0.5 0.5 0.5</SafeGainRatio>
+                <maxGain>4 4 4</maxGain>
+                <AeGapAdjustRatio_low>1.5 1.5 1.5</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>3.5 3.5 3.5</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2500 2500 2500</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.01 0.01 0.01</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">100 100 100</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">2 2 2</ThreshToNormalPercent>
+            </Market>
+            <Stage>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>7.0 7.0 7.0</GainMid>
+                <GainHigh>200 200 200</GainHigh>
+                <Compress_CoefMin>0.5 0.5 0.5</Compress_CoefMin>
+                <Compress_CoefMid>0.9 0.9 0.9</Compress_CoefMid>
+                <Compress_CoefMax>1.3 1.3 1.3</Compress_CoefMax>
+                <StrengthMin>0.75 0.75 0.75</StrengthMin>
+                <StrengthMid>1.1 1.1 1.1</StrengthMid>
+                <StrengthMax>1.3 1.3 1.3</StrengthMax>
+                <SafeGainRatio>0.5 0.5 0.5</SafeGainRatio>
+                <maxGain>5.0 5.0 5.0</maxGain>
+                <AeGapAdjustRatio_low>1.3 1.3 1.3</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>2.6 2.6 2.6</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2500 2500 2500</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.01 0.01 0.01</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">100 100 100</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">2 2 2</ThreshToNormalPercent>
+            </Stage>
+          </SNMode>
+          <DayTimeMode>
+            <Outdoor>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>7.0 7.0 7.0</GainMid>
+                <GainHigh>100 100 100</GainHigh>
+                <Compress_CoefMin>0.4 0.4 0.4</Compress_CoefMin>
+                <Compress_CoefMid>0.8 0.8 0.8</Compress_CoefMid>
+                <Compress_CoefMax>1.5 1.5 1.5</Compress_CoefMax>
+                <StrengthMin>0.8 0.8 0.8</StrengthMin>
+                <StrengthMid>0.9 0.9 0.9</StrengthMid>
+                <StrengthMax>1.0 1.0 1.0</StrengthMax>
+                <SafeGainRatio>2 2 2</SafeGainRatio>
+                <maxGain>5 5 5</maxGain>
+                <AeGapAdjustRatio_low>1.3 1.3 1.3</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>3 3 3</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2800 2800 2800</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.002 0.002 0.002</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">100 100 100</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">2 2 2</ThreshToNormalPercent>
+            </Outdoor>
+            <Indoor>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>7.0 7.0 7.0</GainMid>
+                <GainHigh>100 100 100</GainHigh>
+                <Compress_CoefMin>0.4 0.4 0.4</Compress_CoefMin>
+                <Compress_CoefMid>0.85 0.85 0.85</Compress_CoefMid>
+                <Compress_CoefMax>1.5 1.5 1.5</Compress_CoefMax>
+                <StrengthMin>0.6 0.6 0.6</StrengthMin>
+                <StrengthMid>0.9 0.9 0.9</StrengthMid>
+                <StrengthMax>1.0 1.0 1.0</StrengthMax>
+                <SafeGainRatio>1.5 1.5 1.5</SafeGainRatio>
+                <maxGain>4 4 4</maxGain>
+                <AeGapAdjustRatio_low>1.5 1.5 1.5</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>3.2 3.2 3.2</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2500 2500 2500</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.01 0.01 0.01</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">100 100 100</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">2 2 2</ThreshToNormalPercent>
+            </Indoor>
+            <Night>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>2.0 2.0 2.0</GainLow>
+                <GainMid>6.0 6.0 6.0</GainMid>
+                <GainHigh>200 200 200</GainHigh>
+                <Compress_CoefMin>0.4 0.4 0.4</Compress_CoefMin>
+                <Compress_CoefMid>0.8 0.8 0.8</Compress_CoefMid>
+                <Compress_CoefMax>1.5 1.5 1.5</Compress_CoefMax>
+                <StrengthMin>1.1 1.1 1.1</StrengthMin>
+                <StrengthMid>1.2 1.2 1.2</StrengthMid>
+                <StrengthMax>1.3 1.3 1.3</StrengthMax>
+                <SafeGainRatio>0.5 0.5 0.5</SafeGainRatio>
+                <maxGain>5.5 5.5 5.5</maxGain>
+                <AeGapAdjustRatio_low>1.2 1.2 1.2</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>2.8 2.8 2.8</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2500 2500 2500</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.002 0.002 0.002</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">100 100 100</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">30000 30000 30000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">2 2 2</ThreshToNormalPercent>
+            </Night>
+            <Sunset>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>6.0 6.0 6.0</GainMid>
+                <GainHigh>100 100 100</GainHigh>
+                <Compress_CoefMin>0.5 0.5 0.5</Compress_CoefMin>
+                <Compress_CoefMid>0.8 0.8 0.8</Compress_CoefMid>
+                <Compress_CoefMax>1.2 1.2 1.2</Compress_CoefMax>
+                <StrengthMin>0.65 0.65 0.65</StrengthMin>
+                <StrengthMid>1.1 1.1 1.1</StrengthMid>
+                <StrengthMax>1.2 1.2 1.2</StrengthMax>
+                <SafeGainRatio>0.8 0.8 0.8</SafeGainRatio>
+                <maxGain>5 5 5</maxGain>
+                <AeGapAdjustRatio_low>0.3 0.3 0.3</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>2.5 2.5 2.5</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2300 2300 2300</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.002 0.002 0.002</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">50 50 50</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">2 2 2</ThreshToNormalPercent>
+            </Sunset>
+            <Market>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>7.0 7.0 7.0</GainMid>
+                <GainHigh>100 100 100</GainHigh>
+                <Compress_CoefMin>0.6 0.6 0.6</Compress_CoefMin>
+                <Compress_CoefMid>0.85 0.85 0.85</Compress_CoefMid>
+                <Compress_CoefMax>1.5 1.5 1.5</Compress_CoefMax>
+                <StrengthMin>0.8 0.8 0.8</StrengthMin>
+                <StrengthMid>0.9 0.9 0.9</StrengthMid>
+                <StrengthMax>1.0 1.0 1.0</StrengthMax>
+                <SafeGainRatio>0.5 0.5 0.5</SafeGainRatio>
+                <maxGain>4 4 4</maxGain>
+                <AeGapAdjustRatio_low>1.5 1.5 1.5</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>3.5 3.5 3.5</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2500 2500 2500</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.01 0.01 0.01</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">100 100 100</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">2 2 2</ThreshToNormalPercent>
+            </Market>
+            <Stage>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>7.0 7.0 7.0</GainMid>
+                <GainHigh>200 200 200</GainHigh>
+                <Compress_CoefMin>0.5 0.5 0.5</Compress_CoefMin>
+                <Compress_CoefMid>0.9 0.9 0.9</Compress_CoefMid>
+                <Compress_CoefMax>1.3 1.3 1.3</Compress_CoefMax>
+                <StrengthMin>0.75 0.75 0.75</StrengthMin>
+                <StrengthMid>1.1 1.1 1.1</StrengthMid>
+                <StrengthMax>1.3 1.3 1.3</StrengthMax>
+                <SafeGainRatio>0.5 0.5 0.5</SafeGainRatio>
+                <maxGain>5.0 5.0 5.0</maxGain>
+                <AeGapAdjustRatio_low>1.3 1.3 1.3</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>2.6 2.6 2.6</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2500 2500 2500</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.01 0.01 0.01</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">100 100 100</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">2 2 2</ThreshToNormalPercent>
+            </Stage>
+          </DayTimeMode>
+        </NoPortrait>
+        <Portrait>
+          <SNMode>
+            <Outdoor>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>7.0 7.0 7.0</GainMid>
+                <GainHigh>100 100 100</GainHigh>
+                <Compress_CoefMin>0.4 0.4 0.4</Compress_CoefMin>
+                <Compress_CoefMid>0.8 0.8 0.8</Compress_CoefMid>
+                <Compress_CoefMax>1.5 1.5 1.5</Compress_CoefMax>
+                <StrengthMin>0.8 0.8 0.8</StrengthMin>
+                <StrengthMid>0.9 0.9 0.9</StrengthMid>
+                <StrengthMax>1.0 1.0 1.0</StrengthMax>
+                <SafeGainRatio>2 2 2</SafeGainRatio>
+                <maxGain>2.5 2.5 2.5</maxGain>
+                <AeGapAdjustRatio_low>2.4 2.4 2.4</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>3.8 3.8 3.8</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2800 2800 2800</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.02 0.02 0.02</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">70 70 70</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">3 3 3</ThreshToNormalPercent>
+            </Outdoor>
+            <Indoor>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>7.0 7.0 7.0</GainMid>
+                <GainHigh>100 100 100</GainHigh>
+                <Compress_CoefMin>0.4 0.4 0.4</Compress_CoefMin>
+                <Compress_CoefMid>0.85 0.85 0.85</Compress_CoefMid>
+                <Compress_CoefMax>1.5 1.5 1.5</Compress_CoefMax>
+                <StrengthMin>0.8 0.8 0.8</StrengthMin>
+                <StrengthMid>0.9 0.9 0.9</StrengthMid>
+                <StrengthMax>1.0 1.0 1.0</StrengthMax>
+                <SafeGainRatio>1.5 1.5 1.5</SafeGainRatio>
+                <maxGain>2.2 2.2 2.2</maxGain>
+                <AeGapAdjustRatio_low>2.0 2.0 2.0</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>3.8 3.8 4.0</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2500 2500 2500</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.03 0.03 0.03</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">60 60 60</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">3 3 3</ThreshToNormalPercent>
+            </Indoor>
+            <Night>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>2.0 2.0 2.0</GainLow>
+                <GainMid>6.0 6.0 6.0</GainMid>
+                <GainHigh>200 200 200</GainHigh>
+                <Compress_CoefMin>0.4 0.4 0.4</Compress_CoefMin>
+                <Compress_CoefMid>0.8 0.8 0.8</Compress_CoefMid>
+                <Compress_CoefMax>1.5 1.5 1.5</Compress_CoefMax>
+                <StrengthMin>1.1 1.1 1.1</StrengthMin>
+                <StrengthMid>1.2 1.2 1.2</StrengthMid>
+                <StrengthMax>1.3 1.3 1.3</StrengthMax>
+                <SafeGainRatio>0.5 0.5 0.5</SafeGainRatio>
+                <maxGain>2.0 2.0 2.0</maxGain>
+                <AeGapAdjustRatio_low>2.3 2.3 2.5</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>4.2 4.2 4.2</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2500 2500 2500</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.02 0.02 0.02</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">70 70 70</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">30000 30000 30000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">3 3 3</ThreshToNormalPercent>
+            </Night>
+            <Sunset>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>6.0 6.0 6.0</GainMid>
+                <GainHigh>100 100 100</GainHigh>
+                <Compress_CoefMin>0.5 0.5 0.5</Compress_CoefMin>
+                <Compress_CoefMid>0.8 0.8 0.8</Compress_CoefMid>
+                <Compress_CoefMax>1.2 1.2 1.2</Compress_CoefMax>
+                <StrengthMin>0.65 0.65 0.65</StrengthMin>
+                <StrengthMid>1.1 1.1 1.1</StrengthMid>
+                <StrengthMax>1.2 1.2 1.2</StrengthMax>
+                <SafeGainRatio>0.8 0.8 0.8</SafeGainRatio>
+                <maxGain>2.0 2.0 2.0</maxGain>
+                <AeGapAdjustRatio_low>2.3 2.3 2.3</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>4.0 4.0 4.0</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2500 2500 2500</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.2 0.2 0.2</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">60 60 60</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">3 3 3</ThreshToNormalPercent>
+            </Sunset>
+            <Market>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>7.0 7.0 7.0</GainMid>
+                <GainHigh>100 100 100</GainHigh>
+                <Compress_CoefMin>0.6 0.6 0.6</Compress_CoefMin>
+                <Compress_CoefMid>0.85 0.85 0.85</Compress_CoefMid>
+                <Compress_CoefMax>1.5 1.5 1.5</Compress_CoefMax>
+                <StrengthMin>0.8 0.8 0.8</StrengthMin>
+                <StrengthMid>0.9 0.9 0.9</StrengthMid>
+                <StrengthMax>1.0 1.0 1.0</StrengthMax>
+                <SafeGainRatio>0.5 0.5 0.5</SafeGainRatio>
+                <maxGain>2.0 2.0 2.0</maxGain>
+                <AeGapAdjustRatio_low>2.6 2.6 2.7</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>4.4 4.4 4.4</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2500 2500 2500</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.03 0.03 0.03</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">70 70 70</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">3 3 3</ThreshToNormalPercent>
+            </Market>
+            <Stage>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>7.0 7.0 7.0</GainMid>
+                <GainHigh>200 200 200</GainHigh>
+                <Compress_CoefMin>0.5 0.5 0.5</Compress_CoefMin>
+                <Compress_CoefMid>0.9 0.9 0.9</Compress_CoefMid>
+                <Compress_CoefMax>1.3 1.3 1.3</Compress_CoefMax>
+                <StrengthMin>0.75 0.75 0.75</StrengthMin>
+                <StrengthMid>1.1 1.1 1.1</StrengthMid>
+                <StrengthMax>1.3 1.3 1.3</StrengthMax>
+                <SafeGainRatio>0.5 0.5 0.5</SafeGainRatio>
+                <maxGain>2.2 2.2 2.2</maxGain>
+                <AeGapAdjustRatio_low>2.3 2.3 2.3</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>4.2 4.2 4.2</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2500 2500 2500</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.03 0.03 0.03</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">70 70 70</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">3 3 3</ThreshToNormalPercent>
+            </Stage>
+          </SNMode>
+          <DayTimeMode>
+            <Outdoor>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>7.0 7.0 7.0</GainMid>
+                <GainHigh>100 100 100</GainHigh>
+                <Compress_CoefMin>0.4 0.4 0.4</Compress_CoefMin>
+                <Compress_CoefMid>0.8 0.8 0.8</Compress_CoefMid>
+                <Compress_CoefMax>1.5 1.5 1.5</Compress_CoefMax>
+                <StrengthMin>0.8 0.8 0.8</StrengthMin>
+                <StrengthMid>0.9 0.9 0.9</StrengthMid>
+                <StrengthMax>1.0 1.0 1.0</StrengthMax>
+                <SafeGainRatio>2 2 2</SafeGainRatio>
+                <maxGain>2.5 2.5 2.5</maxGain>
+                <AeGapAdjustRatio_low>2.4 2.4 2.4</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>3.8 3.8 3.8</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2800 2800 2800</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.02 0.02 0.02</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">70 70 70</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">3 3 3</ThreshToNormalPercent>
+            </Outdoor>
+            <Indoor>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>7.0 7.0 7.0</GainMid>
+                <GainHigh>100 100 100</GainHigh>
+                <Compress_CoefMin>0.4 0.4 0.4</Compress_CoefMin>
+                <Compress_CoefMid>0.85 0.85 0.85</Compress_CoefMid>
+                <Compress_CoefMax>1.5 1.5 1.5</Compress_CoefMax>
+                <StrengthMin>0.8 0.8 0.8</StrengthMin>
+                <StrengthMid>0.9 0.9 0.9</StrengthMid>
+                <StrengthMax>1.0 1.0 1.0</StrengthMax>
+                <SafeGainRatio>1.5 1.5 1.5</SafeGainRatio>
+                <maxGain>2.2 2.2 2.2</maxGain>
+                <AeGapAdjustRatio_low>2.0 2.0 2.0</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>3.8 3.8 4.0</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2500 2500 2500</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.03 0.03 0.03</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">60 60 60</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">3 3 3</ThreshToNormalPercent>
+            </Indoor>
+            <Night>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>2.0 2.0 2.0</GainLow>
+                <GainMid>6.0 6.0 6.0</GainMid>
+                <GainHigh>200 200 200</GainHigh>
+                <Compress_CoefMin>0.4 0.4 0.4</Compress_CoefMin>
+                <Compress_CoefMid>0.8 0.8 0.8</Compress_CoefMid>
+                <Compress_CoefMax>1.5 1.5 1.5</Compress_CoefMax>
+                <StrengthMin>1.1 1.1 1.1</StrengthMin>
+                <StrengthMid>1.2 1.2 1.2</StrengthMid>
+                <StrengthMax>1.3 1.3 1.3</StrengthMax>
+                <SafeGainRatio>0.5 0.5 0.5</SafeGainRatio>
+                <maxGain>2.0 2.0 2.0</maxGain>
+                <AeGapAdjustRatio_low>2.3 2.3 2.5</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>4.2 4.2 4.2</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2500 2500 2500</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.02 0.02 0.02</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">70 70 70</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">30000 30000 30000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">3 3 3</ThreshToNormalPercent>
+            </Night>
+            <Sunset>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>6.0 6.0 6.0</GainMid>
+                <GainHigh>100 100 100</GainHigh>
+                <Compress_CoefMin>0.5 0.5 0.5</Compress_CoefMin>
+                <Compress_CoefMid>0.8 0.8 0.8</Compress_CoefMid>
+                <Compress_CoefMax>1.2 1.2 1.2</Compress_CoefMax>
+                <StrengthMin>0.65 0.65 0.65</StrengthMin>
+                <StrengthMid>1.1 1.1 1.1</StrengthMid>
+                <StrengthMax>1.2 1.2 1.2</StrengthMax>
+                <SafeGainRatio>0.8 0.8 0.8</SafeGainRatio>
+                <maxGain>2.0 2.0 2.0</maxGain>
+                <AeGapAdjustRatio_low>2.3 2.3 2.3</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>4.0 4.0 4.0</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2500 2500 2500</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.2 0.2 0.2</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">60 60 60</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">3 3 3</ThreshToNormalPercent>
+            </Sunset>
+            <Market>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>7.0 7.0 7.0</GainMid>
+                <GainHigh>100 100 100</GainHigh>
+                <Compress_CoefMin>0.6 0.6 0.6</Compress_CoefMin>
+                <Compress_CoefMid>0.85 0.85 0.85</Compress_CoefMid>
+                <Compress_CoefMax>1.5 1.5 1.5</Compress_CoefMax>
+                <StrengthMin>0.8 0.8 0.8</StrengthMin>
+                <StrengthMid>0.9 0.9 0.9</StrengthMid>
+                <StrengthMax>1.0 1.0 1.0</StrengthMax>
+                <SafeGainRatio>0.5 0.5 0.5</SafeGainRatio>
+                <maxGain>2.0 2.0 2.0</maxGain>
+                <AeGapAdjustRatio_low>2.6 2.6 2.7</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>4.4 4.4 4.4</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2500 2500 2500</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.03 0.03 0.03</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">70 70 70</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">3 3 3</ThreshToNormalPercent>
+            </Market>
+            <Stage>
+                <GainKeypointNum>16</GainKeypointNum>
+                <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.96 0.97 0.98 0.99 0.999 0.9999 1.0</AnchorX_Percent>
+                <GainLow>3.0 3.0 3.0</GainLow>
+                <GainMid>7.0 7.0 7.0</GainMid>
+                <GainHigh>200 200 200</GainHigh>
+                <Compress_CoefMin>0.5 0.5 0.5</Compress_CoefMin>
+                <Compress_CoefMid>0.9 0.9 0.9</Compress_CoefMid>
+                <Compress_CoefMax>1.3 1.3 1.3</Compress_CoefMax>
+                <StrengthMin>0.75 0.75 0.75</StrengthMin>
+                <StrengthMid>1.1 1.1 1.1</StrengthMid>
+                <StrengthMax>1.3 1.3 1.3</StrengthMax>
+                <SafeGainRatio>0.5 0.5 0.5</SafeGainRatio>
+                <maxGain>2.2 2.2 2.2</maxGain>
+                <AeGapAdjustRatio_low>2.3 2.3 2.3</AeGapAdjustRatio_low>
+                <AeGapAdjustRatio_high>4.2 4.2 4.2</AeGapAdjustRatio_high>
+                <AeGapAdjustThresh>2500 2500 2500</AeGapAdjustThresh>
+                <AeGapHighlightPercent_low description="The actual proportion multiplied by 1000.">0.03 0.03 0.03</AeGapHighlightPercent_low>
+                <AeGapHighlightPercent_High description="The actual proportion multiplied by 1000.">70 70 70</AeGapHighlightPercent_High>
+                <BlueBrightnessAdjust description="The larger the value, the less blue brightness compensation">60000 60000 60000</BlueBrightnessAdjust>
+                <HdrToNormalThresh>750 750 750</HdrToNormalThresh>
+                <ThreshToNormalPercent description="smaller than this value, switch to normal pipline,multiplied by 1000">3 3 3</ThreshToNormalPercent>
+            </Stage>
+          </DayTimeMode>
+        </Portrait>
+    </XDRGainmap>
+</XDR_ALG_Parameters>

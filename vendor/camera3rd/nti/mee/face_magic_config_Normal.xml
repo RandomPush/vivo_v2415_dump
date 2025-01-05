@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FaceMagicConfig version="1.0.12.0">
+    <!-- max number of faces can be processed -->
+    <MaxFaceNum>3</MaxFaceNum>
+    <AlgoRunThreds>
+        <!-- 算法生效条件 iso\luxindex\roll\yaw\pitch -->
+        <MinISOThred>0</MinISOThred>
+        <MaxISOThred>14000</MaxISOThred>
+        <MinLuxIndexThred>0</MinLuxIndexThred>
+        <MaxLuxIndexThred>460</MaxLuxIndexThred>
+        <!-- roll:旋转角度【0,360】 -->
+        <MinRollAngle>0</MinRollAngle>
+        <MaxRollAngle>360</MaxRollAngle>
+        <!-- yaw:左右角度【-90，90】 -->
+        <MinYawAngle>-90</MinYawAngle>
+        <MaxYawAngle>90</MaxYawAngle>
+        <!-- pitch:上下角度【-90，90】 -->
+        <MinPitchAngle>-80</MinPitchAngle>
+        <MaxPitchAngle>80</MaxPitchAngle>
+    </AlgoRunThreds>
+
+    <EffectConfigs>
+        <!-- [1,4) 1x镜头-点位-对应LowZoom相关模型配置；   -->
+        <!-- [4,6) 4x镜头-点位-对应MidZoom相关模型配置；   -->
+        <!-- [6,100) 4x镜头 变焦段-对应HighZoom相关模型配置 -->
+        <AppZoomThreds>1.0 3.0 8.0 101.0</AppZoomThreds>
+        <LowZoomEffectConfig>
+            <!-- low Zoom range: [1.0, 4.0) -->
+            <LocalRunThreds>
+                <!-- 最小Laplacian Clarity Threshold，低于此清晰度的人脸不做效果 -->
+                <MinLaplacian>4.0</MinLaplacian>
+            </LocalRunThreds>
+            <SharpParams>
+                <!--0: USM, 1: Pyramid-->
+                <SharpMethod>0</SharpMethod>
+                <USM>
+                    <Sigma>1.0</Sigma>
+                    <Weight>3.0</Weight>
+                </USM>
+                <Pyramid>
+                    <PyramidLevelNum>3</PyramidLevelNum>
+                    <PyramidLevels>16 64 256</PyramidLevels>
+                </Pyramid>
+            </SharpParams>
+            <!-- 是否加detail -->
+            <DetailISOThred>0 2000</DetailISOThred>
+            <!-- 三段：MinISO MidISO HighISO 16400 -->
+            <ISOThred>0 150 900 14000</ISOThred>
+            <!-- 三段：MinModel MidModel BigModel -->
+            <ModelSelectFaceSizeThred>200 540 860 5000</ModelSelectFaceSizeThred>
+            <MaskWeight idx="0" appZoomBeg="1" appZoomEnd="1.4">
+                <!-- 分别对应区域 hair|eye|brow|mouth|skin|bodyWithoutFace|background; -->
+                <LowISOMinFaceHDMaskWeight>0.2 0.2 0.6 0.5 0.5 0 0</LowISOMinFaceHDMaskWeight>
+                <LowISOMidFaceHDMaskWeight>0.5 0.4 0.5 0.4 0.05 0 0</LowISOMidFaceHDMaskWeight>
+                <LowISOMaxFaceHDMaskWeight>0.5 0.7 0.7 0.7 0.05 0 0</LowISOMaxFaceHDMaskWeight>
+                <MidISOMinFaceHDMaskWeight>0.2 0.4 0.6 0.5 0.5 0 0</MidISOMinFaceHDMaskWeight>
+                <MidISOMidFaceHDMaskWeight>0.5 0.4 0.6 0.4 0.1 0 0</MidISOMidFaceHDMaskWeight>
+                <MidISOMaxFaceHDMaskWeight>0.6 0.7 0.7 0.7 0.1 0 0</MidISOMaxFaceHDMaskWeight>
+                <HighISOMinFaceHDMaskWeight>0.2 0.4 0.6 0.6 0.5 0 0</HighISOMinFaceHDMaskWeight>
+                <HighISOMidFaceHDMaskWeight>0.5 0.4 0.7 0.6 0.1 0 0</HighISOMidFaceHDMaskWeight>
+                <HighISOMaxFaceHDMaskWeight>0.7 0.7 0.8 0.7 0.1 0 0</HighISOMaxFaceHDMaskWeight>
+                <!-- 分别对应区域 hair|eye|brow|mouth|skin|bodyWithoutFace|background; -->
+                <LowISOMinFaceSharpMaskWeight>0.067 0.18 0.16 0.067 0.107 0.26 0</LowISOMinFaceSharpMaskWeight>
+                <LowISOMidFaceSharpMaskWeight>0.067 0.25 0.067 0.067 0.05 0.233 0</LowISOMidFaceSharpMaskWeight>
+                <LowISOMaxFaceSharpMaskWeight>0.067 0.25 0.067 0.133 0.05 0.233 0</LowISOMaxFaceSharpMaskWeight>
+                <MidISOMinFaceSharpMaskWeight>0.067 0.18 0.16 0.4 0.067 0.26 0</MidISOMinFaceSharpMaskWeight>
+                <MidISOMidFaceSharpMaskWeight>0.067 0.25 0.133 0.45 0.05 0.367 0</MidISOMidFaceSharpMaskWeight>
+                <MidISOMaxFaceSharpMaskWeight>0.067 0.25 0.133 0.133 0.05 0.233 0</MidISOMaxFaceSharpMaskWeight>
+                <HighISOMinFaceSharpMaskWeight>0.16 0.18 0.16 0.45 0.05 0.26 0</HighISOMinFaceSharpMaskWeight>
+                <HighISOMidFaceSharpMaskWeight>0.133 0.25 0.067 0.4 0.03 0.26 0</HighISOMidFaceSharpMaskWeight>
+                <HighISOMaxFaceSharpMaskWeight>0.133 0.25 0.16 0.16 0.03 0.26 0</HighISOMaxFaceSharpMaskWeight>
+            </MaskWeight>
+			<MaskWeight idx="1" appZoomBeg="1.4" appZoomEnd="2">
+                <!-- 分别对应区域 hair|eye|brow|mouth|skin|bodyWithoutFace|background; -->
+                <LowISOMinFaceHDMaskWeight>0.2 0.2 0.6 0.6 0.5 0 0</LowISOMinFaceHDMaskWeight>
+                <LowISOMidFaceHDMaskWeight>0.7 0.4 0.5 0.7 0.1 0 0</LowISOMidFaceHDMaskWeight>
+                <LowISOMaxFaceHDMaskWeight>0.7 0.7 0.7 0.7 0.1 0 0</LowISOMaxFaceHDMaskWeight>
+                <MidISOMinFaceHDMaskWeight>0.2 0.4 0.6 0.6 0.5 0 0</MidISOMinFaceHDMaskWeight>
+                <MidISOMidFaceHDMaskWeight>0.7 0.4 0.6 0.7 0.1 0 0</MidISOMidFaceHDMaskWeight>
+                <MidISOMaxFaceHDMaskWeight>0.7 0.7 0.7 0.7 0.1 0 0</MidISOMaxFaceHDMaskWeight>
+                <HighISOMinFaceHDMaskWeight>0.2 0.4 0.6 0.6 0.5 0 0</HighISOMinFaceHDMaskWeight>
+                <HighISOMidFaceHDMaskWeight>0.5 0.5 0.6 0.6 0.2 0 0</HighISOMidFaceHDMaskWeight>
+                <HighISOMaxFaceHDMaskWeight>0.7 0.7 0.75 0.7 0.2 0 0</HighISOMaxFaceHDMaskWeight>
+                <!-- 分别对应区域 hair|eye|brow|mouth|skin|bodyWithoutFace|background; -->
+                <LowISOMinFaceSharpMaskWeight>0.133 0.18 0.267 0.173 0.133 0.3 0</LowISOMinFaceSharpMaskWeight>
+                <LowISOMidFaceSharpMaskWeight>0.2 0.4 0.2 0.2 0.1 0.3 0</LowISOMidFaceSharpMaskWeight>
+                <LowISOMaxFaceSharpMaskWeight>0.2 0.4 0.2 0.2 0.1 0.3 0</LowISOMaxFaceSharpMaskWeight>
+                <MidISOMinFaceSharpMaskWeight>0.133 0.18 0.267 0.16 0.133 0.3 0</MidISOMinFaceSharpMaskWeight>
+                <MidISOMidFaceSharpMaskWeight>0.2 0.4 0.2 0.2 0.1 0.3 0</MidISOMidFaceSharpMaskWeight>
+                <MidISOMaxFaceSharpMaskWeight>0.2 0.4 0.2 0.2 0.1 0.3 0</MidISOMaxFaceSharpMaskWeight>
+                <HighISOMinFaceSharpMaskWeight>0.16 0.25 0.16 0.16 0.16 0.26 0</HighISOMinFaceSharpMaskWeight>
+                <HighISOMidFaceSharpMaskWeight>0.2 0.4 0.2 0.2 0.2 0.3 0</HighISOMidFaceSharpMaskWeight>
+                <HighISOMaxFaceSharpMaskWeight>0.2 0.4 0.2 0.2 0.2 0.3 0</HighISOMaxFaceSharpMaskWeight>
+            </MaskWeight>
+			<MaskWeight idx="2" appZoomBeg="2" appZoomEnd="3">
+                <!-- 分别对应区域 hair|eye|brow|mouth|skin|bodyWithoutFace|background; -->
+                <LowISOMinFaceHDMaskWeight>0.2 0.65 0.45 0.45 0.45 0 0</LowISOMinFaceHDMaskWeight>
+                <LowISOMidFaceHDMaskWeight>0.2 0.7 0.4 0.4 0.2 0 0</LowISOMidFaceHDMaskWeight>
+                <LowISOMaxFaceHDMaskWeight>0.2 0.7 0.5 0.4 0.3 0 0</LowISOMaxFaceHDMaskWeight>
+                <MidISOMinFaceHDMaskWeight>0.4 0.85 0.55 0.3 0.75 0 0</MidISOMinFaceHDMaskWeight>
+                <MidISOMidFaceHDMaskWeight>0.5 0.8 0.5 0.24 0.65 0 0</MidISOMidFaceHDMaskWeight>
+                <MidISOMaxFaceHDMaskWeight>0.4 0.75 0.5 0.24 0.65 0 0</MidISOMaxFaceHDMaskWeight>
+                <HighISOMinFaceHDMaskWeight>0.4 0.85 0.75 0.2 0.7 0 0</HighISOMinFaceHDMaskWeight>
+                <HighISOMidFaceHDMaskWeight>0.35 0.9 0.65 0.24 0.65 0 0</HighISOMidFaceHDMaskWeight>
+                <HighISOMaxFaceHDMaskWeight>0.5 0.85 0.75 0.24 0.65 0 0</HighISOMaxFaceHDMaskWeight>
+                <!-- 分别对应区域 hair|eye|brow|mouth|skin|bodyWithoutFace|background; -->
+                <LowISOMinFaceSharpMaskWeight>0.16 0.53 0.333 0.2 0.067 0.3 0</LowISOMinFaceSharpMaskWeight>
+                <LowISOMidFaceSharpMaskWeight>0.133 0.4 0.4 0.267 0.2 0.3 0</LowISOMidFaceSharpMaskWeight>
+                <LowISOMaxFaceSharpMaskWeight>0.067 0.267 0.267 0.267 0.133 0.3 0</LowISOMaxFaceSharpMaskWeight>
+                <MidISOMinFaceSharpMaskWeight>0.2 0.333 0.4 0.37 0.267 0.3 0</MidISOMinFaceSharpMaskWeight>
+                <MidISOMidFaceSharpMaskWeight>0.2 0.533 0.467 0.9 0.267 0.3 0</MidISOMidFaceSharpMaskWeight>
+                <MidISOMaxFaceSharpMaskWeight>0.133 0.267 0.4 0.75 0.267 0.3 0</MidISOMaxFaceSharpMaskWeight>
+                <HighISOMinFaceSharpMaskWeight>0.267 0.4 0.467 0.333 0.333 0.4 0</HighISOMinFaceSharpMaskWeight>
+                <HighISOMidFaceSharpMaskWeight>0.267 0.333 0.4 1.0 0.4 0.3 0</HighISOMidFaceSharpMaskWeight>
+                <HighISOMaxFaceSharpMaskWeight>0.2 0.24 0.333 1.0 0.267 0.3 0</HighISOMaxFaceSharpMaskWeight>
+            </MaskWeight>
+            <FaceBoxConfig>
+                <BlendRate>20</BlendRate>
+                <!-- 多人脸时，人脸靠的很近，iou大于阈值FaceIouThred时，w向外扩张比例【0-100】  -->
+                <ExtendRateX>0</ExtendRateX>
+                <!-- 人脸框向外扩张的比例【0-100】 -->
+                <ExtendRateY>0</ExtendRateY>
+                <FaceIouThred>0.1</FaceIouThred>
+                <!-- 人脸框向上便宜的比例【-1,1】，负数表示向下  -->
+                <UpOffset>-0.04</UpOffset>
+            </FaceBoxConfig>
+            <ModelInfos>
+                <MinModel use="1" engine="7" device="0" power="0" netsize="512" index="0">
+                    <ModelPath>FaceMagic_512HighQuality.vdnn</ModelPath>
+                    <InputNode>input_0</InputNode>
+                    <OutputNode>conv2d_34</OutputNode>
+                </MinModel>
+                <MidModel use="1" engine="7" device="0" power="0" netsize="768" index="1">
+                    <ModelPath>FaceMagic_768HighQuality.vdnn</ModelPath>
+                    <InputNode>input_0</InputNode>
+                    <OutputNode>conv2d_36</OutputNode>
+                </MidModel>
+                <BigModel use="1" engine="7" device="0" power="0" netsize="1024" index="2">
+                    <ModelPath>FaceMagic_1024HighQuality.vdnn</ModelPath>
+                    <InputNode>input_0</InputNode>
+                    <OutputNode>conv2d_36</OutputNode>
+                </BigModel>
+            </ModelInfos>
+        </LowZoomEffectConfig>
+        <MidZoomEffectConfig>
+            <!-- mid Zoom range: [4.0, 6.0) -->
+            <LocalRunThreds>
+                <!-- 最小Laplacian Clarity Threshold，低于此清晰度的人脸不做效果 -->
+                <MinLaplacian>2.0</MinLaplacian>
+            </LocalRunThreds>
+            <SharpParams>
+                <!--0: USM, 1: Pyramid-->
+                <SharpMethod>0</SharpMethod>
+                <USM>
+                    <Sigma>1.0</Sigma>
+                    <Weight>2.0</Weight>
+                </USM>
+                <Pyramid>
+                    <PyramidLevelNum>3</PyramidLevelNum>
+                    <PyramidLevels>16 64 256</PyramidLevels>
+                </Pyramid>
+            </SharpParams>
+            <!-- 是否加detail -->
+            <DetailISOThred>0 2000</DetailISOThred>
+            <!-- 三段：MinISO MidISO HighISO -->
+            <ISOThred>0 200 900 14000</ISOThred>
+            <!-- 三段：MinModel MidModel BigModel -->
+            <ModelSelectFaceSizeThred>200 800 800 5000</ModelSelectFaceSizeThred>
+            <MaskWeight idx="0" appZoomBeg="3" appZoomEnd="4">
+                <!-- 分别对应区域 hair|eye|brow|mouth|skin|bodyWithoutFace|background; -->
+                <LowISOMinFaceHDMaskWeight>0.55 0.7 1.0 0.6 0.5 0 0</LowISOMinFaceHDMaskWeight>
+                <LowISOMidFaceHDMaskWeight>0.5 0.7 0.8 0.5 0.6 0 0</LowISOMidFaceHDMaskWeight>
+                <LowISOMaxFaceHDMaskWeight>0.5 0.8 0.7 0.7 0.4 0 0</LowISOMaxFaceHDMaskWeight>
+                <MidISOMinFaceHDMaskWeight>0.6 0.9 0.7 0.8 0.75 0 0</MidISOMinFaceHDMaskWeight>
+                <MidISOMidFaceHDMaskWeight>0.5 0.7 0.8 0.5 0.7 0 0</MidISOMidFaceHDMaskWeight>
+                <MidISOMaxFaceHDMaskWeight>0.5 0.8 0.75 0.9 0.7 0 0</MidISOMaxFaceHDMaskWeight>
+                <HighISOMinFaceHDMaskWeight>0.5 0.7 0.8 0.5 0.7 0 0</HighISOMinFaceHDMaskWeight>
+                <HighISOMidFaceHDMaskWeight>0.5 0.7 0.8 0.5 0.6 0 0</HighISOMidFaceHDMaskWeight>
+                <HighISOMaxFaceHDMaskWeight>0.5 0.8 0.75 0.7 0.65 0 0</HighISOMaxFaceHDMaskWeight>
+                <!-- 分别对应区域 hair|eye|brow|mouth|skin|bodyWithoutFace|background; -->
+                <LowISOMinFaceSharpMaskWeight>0.3 0.3 0.3 0.3 0.3 0.25 0</LowISOMinFaceSharpMaskWeight>
+                <LowISOMidFaceSharpMaskWeight>0 0.5 0.8 0.5 0.5 0.65 0</LowISOMidFaceSharpMaskWeight>
+                <LowISOMaxFaceSharpMaskWeight>0.45 0.6 0.4 0.6 0.75 0.35 0</LowISOMaxFaceSharpMaskWeight>
+                <MidISOMinFaceSharpMaskWeight>0.45 0.3 0.3 0.4 0.8 0.6 0</MidISOMinFaceSharpMaskWeight>
+                <MidISOMidFaceSharpMaskWeight>0 0.5 0.8 0.5 0.5 0.6 0</MidISOMidFaceSharpMaskWeight>
+                <MidISOMaxFaceSharpMaskWeight>0.1 0.5 0.5 0.7 0.95 0.35 0</MidISOMaxFaceSharpMaskWeight>
+                <HighISOMinFaceSharpMaskWeight>0.5 0.5 0.8 0.5 0.95 0.6 0</HighISOMinFaceSharpMaskWeight>
+                <HighISOMidFaceSharpMaskWeight>0 0.5 0.8 0.5 0.5 0.6 0</HighISOMidFaceSharpMaskWeight>
+                <HighISOMaxFaceSharpMaskWeight>0.45 0.6 0.7 0.8 1.0 0.35 0</HighISOMaxFaceSharpMaskWeight>
+            </MaskWeight>
+            <MaskWeight idx="1" appZoomBeg="4" appZoomEnd="8">
+                <!-- 分别对应区域 hair|eye|brow|mouth|skin|bodyWithoutFace|background; -->
+                <LowISOMinFaceHDMaskWeight>0.3 0.3 0.7 0.5 0.5 0 0</LowISOMinFaceHDMaskWeight>
+                <LowISOMidFaceHDMaskWeight>0.3 0.5 0.7 0.5 0.3 0 0</LowISOMidFaceHDMaskWeight>
+                <LowISOMaxFaceHDMaskWeight>0.4 0.7 0.7 0.6 0.15 0 0</LowISOMaxFaceHDMaskWeight>
+                <MidISOMinFaceHDMaskWeight>0.3 0.5 0.7 0.5 0.5 0 0</MidISOMinFaceHDMaskWeight>
+                <MidISOMidFaceHDMaskWeight>0.3 0.5 0.7 0.5 0.3 0 0</MidISOMidFaceHDMaskWeight>
+                <MidISOMaxFaceHDMaskWeight>0.4 0.7 0.7 0.6 0.45 0 0</MidISOMaxFaceHDMaskWeight>
+                <HighISOMinFaceHDMaskWeight>0.3 0.5 0.7 0.5 0.5 0 0</HighISOMinFaceHDMaskWeight>
+                <HighISOMidFaceHDMaskWeight>0.3 0.5 0.7 0.5 0.3 0 0</HighISOMidFaceHDMaskWeight>
+                <HighISOMaxFaceHDMaskWeight>0.6 0.7 0.7 0.6 0.45 0 0</HighISOMaxFaceHDMaskWeight>
+                <!-- 分别对应区域 hair|eye|brow|mouth|skin|bodyWithoutFace|background; -->
+                <LowISOMinFaceSharpMaskWeight>0.3 0.35 0.6 0.6 0.6 0.75 0</LowISOMinFaceSharpMaskWeight>
+                <LowISOMidFaceSharpMaskWeight>0.6 0.6 0.6 0.6 0.6 0.75 0</LowISOMidFaceSharpMaskWeight>
+                <LowISOMaxFaceSharpMaskWeight>0.3 0.35 0.6 0.6 0.42 0.75 0</LowISOMaxFaceSharpMaskWeight>
+                <MidISOMinFaceSharpMaskWeight>0.3 0.35 0.6 0.6 0.6 0.75 0</MidISOMinFaceSharpMaskWeight>
+                <MidISOMidFaceSharpMaskWeight>0.6 0.6 0.6 0.6 0.6 0.75 0</MidISOMidFaceSharpMaskWeight>
+                <MidISOMaxFaceSharpMaskWeight>0.3 0.35 0.6 0.6 0.42 0.75 0</MidISOMaxFaceSharpMaskWeight>
+                <HighISOMinFaceSharpMaskWeight>0.3 0.35 0.6 0.6 0.6 0.75 0</HighISOMinFaceSharpMaskWeight>
+                <HighISOMidFaceSharpMaskWeight>0.6 0.6 0.6 0.6 0.6 0.75 0</HighISOMidFaceSharpMaskWeight>
+                <HighISOMaxFaceSharpMaskWeight>0.3 0.35 0.6 0.6 0.42 0.75 0</HighISOMaxFaceSharpMaskWeight>
+            </MaskWeight>
+            <FaceBoxConfig>
+                <BlendRate>20</BlendRate>
+                <ExtendRateX>0</ExtendRateX>
+                <ExtendRateY>0</ExtendRateY>
+                <FaceIouThred>0.1</FaceIouThred>
+                <UpOffset>-0.04</UpOffset>
+            </FaceBoxConfig>
+            <ModelInfos>
+                <MinModel use="1" engine="7" device="0" power="0" netsize="512" index="3">
+                    <ModelPath>FaceMagic_512HighQuality.vdnn</ModelPath>
+                    <InputNode>input_0</InputNode>
+                    <OutputNode>conv2d_34</OutputNode>
+                </MinModel>
+                <MidModel use="1" engine="7" device="0" power="0" netsize="768" index="4">
+                    <ModelPath>FaceMagic_768HighQuality.vdnn</ModelPath>
+                    <InputNode>input_0</InputNode>
+                    <OutputNode>conv2d_36</OutputNode>
+                </MidModel>
+                <BigModel use="1" engine="7" device="0" power="0" netsize="1024" index="5">
+                    <ModelPath>FaceMagic_1024HighQuality.vdnn</ModelPath>
+                    <InputNode>input_0</InputNode>
+                    <OutputNode>conv2d_36</OutputNode>
+                </BigModel>
+            </ModelInfos>
+        </MidZoomEffectConfig>
+        <HighZoomEffectConfig>
+            <!-- high Zoom range: [6.0, 100.0] -->
+            <LocalRunThreds>
+                <!-- 最小Laplacian Clarity Threshold，低于此清晰度的人脸不做效果 -->
+                <MinLaplacian>2.0</MinLaplacian>
+            </LocalRunThreds>
+            <SharpParams>
+                <!--0: USM, 1: Pyramid-->
+                <SharpMethod>0</SharpMethod>
+                <USM>
+                    <Sigma>1.0</Sigma>
+                    <Weight>1.0</Weight>
+                </USM>
+                <Pyramid>
+                    <PyramidLevelNum>3</PyramidLevelNum>
+                    <PyramidLevels>16 64 256</PyramidLevels>
+                </Pyramid>
+            </SharpParams>
+            <!-- 是否加detail -->
+            <DetailISOThred>0 2000</DetailISOThred>
+            <!-- 三段：MinISO MidISO HighISO -->
+            <ISOThred>0 200 900 14000</ISOThred>
+            <!-- 三段：MinModel MidModel BigModel -->
+            <ModelSelectFaceSizeThred>200 901 900 5000</ModelSelectFaceSizeThred>
+            <MaskWeight idx="0" appZoomBeg="8" appZoomEnd="31">
+                <!-- 分别对应区域 hair|eye|brow|mouth|skin|bodyWithoutFace|background; -->
+                <LowISOMinFaceHDMaskWeight>0.5 0.5 0.7 0.5 0.5 0.1 0</LowISOMinFaceHDMaskWeight>
+                <LowISOMidFaceHDMaskWeight>0.45 0.6 0.7 0.5 0.5 0.1 0</LowISOMidFaceHDMaskWeight>
+                <LowISOMaxFaceHDMaskWeight>0.45 0.6 0.7 0.5 0.3 0.1 0</LowISOMaxFaceHDMaskWeight>
+                <MidISOMinFaceHDMaskWeight>0.5 0.6 0.7 0.5 0.5 0.1 0</MidISOMinFaceHDMaskWeight>
+                <MidISOMidFaceHDMaskWeight>0.4 0.6 0.7 0.45 0.53 0.1 0</MidISOMidFaceHDMaskWeight>
+                <MidISOMaxFaceHDMaskWeight>0.4 0.6 0.7 0.45 0.53 0.1 0</MidISOMaxFaceHDMaskWeight>
+                <HighISOMinFaceHDMaskWeight>0.5 0.6 0.7 0.5 0.5 0.1 0</HighISOMinFaceHDMaskWeight>
+                <HighISOMidFaceHDMaskWeight>0.4 0.6 0.7 0.45 0.53 0.1 0</HighISOMidFaceHDMaskWeight>
+                <HighISOMaxFaceHDMaskWeight>0.4 0.6 0.7 0.45 0.53 0.1 0</HighISOMaxFaceHDMaskWeight>
+                <!-- 分别对应区域 hair|eye|brow|mouth|skin|bodyWithoutFace|background; -->
+                <LowISOMinFaceSharpMaskWeight>0.9 0.8 0.7 0.7 0.5 0.7 0</LowISOMinFaceSharpMaskWeight>
+                <LowISOMidFaceSharpMaskWeight>0.9 0.8 0.7 0.7 0.5 0.7 0</LowISOMidFaceSharpMaskWeight>
+                <LowISOMaxFaceSharpMaskWeight>0.9 0.8 0.7 0.7 0.2 0.7 0</LowISOMaxFaceSharpMaskWeight>
+                <MidISOMinFaceSharpMaskWeight>0.6 0.8 0.8 0.8 0.5 0.6 0</MidISOMinFaceSharpMaskWeight>
+                <MidISOMidFaceSharpMaskWeight>0.6 0.8 0.8 0.8 0.5 0.6 0</MidISOMidFaceSharpMaskWeight>
+                <MidISOMaxFaceSharpMaskWeight>0.6 0.8 0.8 0.8 0.2 0.35 0</MidISOMaxFaceSharpMaskWeight>
+                <HighISOMinFaceSharpMaskWeight>0.6 0.8 0.8 0.8 0.5 0.65 0</HighISOMinFaceSharpMaskWeight>
+                <HighISOMidFaceSharpMaskWeight>0.6 0.8 0.8 0.8 0.5 0.65 0</HighISOMidFaceSharpMaskWeight>
+                <HighISOMaxFaceSharpMaskWeight>0.6 0.8 0.8 0.8 0.2 0.65 0</HighISOMaxFaceSharpMaskWeight>
+            </MaskWeight>
+            <MaskWeight idx="1" appZoomBeg="31" appZoomEnd="101">
+                <!-- 分别对应区域 hair|eye|brow|mouth|skin|bodyWithoutFace|background; -->
+                <LowISOMinFaceHDMaskWeight>0.5 0.5 0.7 0.5 0.5 0.3 0</LowISOMinFaceHDMaskWeight>
+                <LowISOMidFaceHDMaskWeight>0.45 0.6 0.7 0.5 0.5 0.3 0</LowISOMidFaceHDMaskWeight>
+                <LowISOMaxFaceHDMaskWeight>0.45 0.6 0.7 0.5 0.3 0.3 0</LowISOMaxFaceHDMaskWeight>
+                <MidISOMinFaceHDMaskWeight>0.5 0.6 0.7 0.5 0.5 0.3 0</MidISOMinFaceHDMaskWeight>
+                <MidISOMidFaceHDMaskWeight>0.4 0.6 0.7 0.45 0.53 0.3 0</MidISOMidFaceHDMaskWeight>
+                <MidISOMaxFaceHDMaskWeight>0.4 0.6 0.7 0.45 0.53 0.3 0</MidISOMaxFaceHDMaskWeight>
+                <HighISOMinFaceHDMaskWeight>0.5 0.6 0.7 0.5 0.5 0.3 0</HighISOMinFaceHDMaskWeight>
+                <HighISOMidFaceHDMaskWeight>0.4 0.6 0.7 0.45 0.53 0.3 0</HighISOMidFaceHDMaskWeight>
+                <HighISOMaxFaceHDMaskWeight>0.4 0.6 0.7 0.45 0.53 0.3 0</HighISOMaxFaceHDMaskWeight>
+                <!-- 分别对应区域 hair|eye|brow|mouth|skin|bodyWithoutFace|background; -->
+                <LowISOMinFaceSharpMaskWeight>0.9 0.8 0.7 0.7 0.5 0.7 0</LowISOMinFaceSharpMaskWeight>
+                <LowISOMidFaceSharpMaskWeight>0.9 0.8 0.7 0.7 0.5 0.7 0</LowISOMidFaceSharpMaskWeight>
+                <LowISOMaxFaceSharpMaskWeight>0.9 0.8 0.7 0.7 0.2 0.7 0</LowISOMaxFaceSharpMaskWeight>
+                <MidISOMinFaceSharpMaskWeight>0.6 0.8 0.8 0.8 0.5 0.6 0</MidISOMinFaceSharpMaskWeight>
+                <MidISOMidFaceSharpMaskWeight>0.6 0.8 0.8 0.8 0.5 0.6 0</MidISOMidFaceSharpMaskWeight>
+                <MidISOMaxFaceSharpMaskWeight>0.6 0.8 0.8 0.8 0.2 0.35 0</MidISOMaxFaceSharpMaskWeight>
+                <HighISOMinFaceSharpMaskWeight>0.6 0.8 0.8 0.8 0.5 0.65 0</HighISOMinFaceSharpMaskWeight>
+                <HighISOMidFaceSharpMaskWeight>0.6 0.8 0.8 0.8 0.5 0.65 0</HighISOMidFaceSharpMaskWeight>
+                <HighISOMaxFaceSharpMaskWeight>0.6 0.8 0.8 0.8 0.2 0.65 0</HighISOMaxFaceSharpMaskWeight>
+            </MaskWeight>
+            <FaceBoxConfig>
+                <BlendRate>20</BlendRate>
+                <ExtendRateX>11</ExtendRateX>
+                <ExtendRateY>35</ExtendRateY>
+                <FaceIouThred>0.1</FaceIouThred>
+                <UpOffset>0.2</UpOffset>
+            </FaceBoxConfig>
+            <FaceQualityConfig>
+                <!-- 小于LaplacianThred 会选择lowQualityModel. -->
+                <LaplacianThred>10 10</LaplacianThred>
+                <!-- 大于LuxIndexThred，会选择MidQualityModel ,否则是HighQuality -->
+                <LuxIndexThred>240</LuxIndexThred>
+                <LowQualityBlurKSize>5</LowQualityBlurKSize>
+            </FaceQualityConfig>
+            <ModelInfos>
+                <MinModelLowQuality use="1" engine="7" device="0" power="0" netsize="512" index="6">
+                    <ModelPath>FaceMagic_512HighQuality.vdnn</ModelPath>
+                    <InputNode>input_0</InputNode>
+                    <OutputNode>conv2d_34</OutputNode>
+                </MinModelLowQuality>
+                <MinModelMidQuality use="1" engine="7" device="0" power="0" netsize="512" index="7">
+                    <ModelPath>FaceMagic_512MidQuality.vdnn</ModelPath>
+                    <InputNode>input_0</InputNode>
+                    <OutputNode>conv2d_29</OutputNode>
+                </MinModelMidQuality>
+                <MinModelHighQuality use="1" engine="7" device="0" power="0" netsize="512" index="8">
+                    <ModelPath>FaceMagic_512HighQuality.vdnn</ModelPath>
+                    <InputNode>input_0</InputNode>
+                    <OutputNode>conv2d_34</OutputNode>
+                </MinModelHighQuality>
+                <BigModelLowQuality use="1" engine="7" device="0" power="0" netsize="1024" index="9">
+                    <ModelPath>FaceMagic_512HighQuality.vdnn</ModelPath>
+                    <InputNode>input_0</InputNode>
+                    <OutputNode>conv2d_34</OutputNode>
+                </BigModelLowQuality>
+                <BigModelMidQuality use="1" engine="7" device="0" power="0" netsize="1024" index="10">
+                    <ModelPath>FaceMagic_1024MidQuality.vdnn</ModelPath>
+                    <InputNode>input_0:0</InputNode>
+                    <OutputNode>conv2d_29</OutputNode>
+                </BigModelMidQuality>
+                <BigModelHighQuality use="1" engine="7" device="0" power="0" netsize="1024" index="11">
+                    <ModelPath>FaceMagic_1024HighQuality.vdnn</ModelPath>
+                    <InputNode>input_0</InputNode>
+                    <OutputNode>conv2d_36</OutputNode>
+                </BigModelHighQuality>
+            </ModelInfos>
+        </HighZoomEffectConfig>
+    </EffectConfigs>
+</FaceMagicConfig>

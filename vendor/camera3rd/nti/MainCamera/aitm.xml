@@ -1,0 +1,550 @@
+﻿<?xml version="1.0"?>
+<AITM_ALG_Parameters>
+  <xmlVersion description="aitm xml Version ">1.0.0</xmlVersion>
+  <DEBUG>
+    <forcedump description="force dump">0</forcedump>
+  </DEBUG>
+  <DATA>
+	<multiexp>2</multiexp>
+	<whitepoint>16383</whitepoint>
+	<apply_ccm>1</apply_ccm>
+	<apply_gamma>1</apply_gamma>
+	<gamma_value>2.4</gamma_value>
+  </DATA>
+  <HDRNET>
+    <width>1020</width>
+	<height>1020</height>
+	<net_size>512</net_size>
+	<grid_size>32</grid_size>
+	<grid_lumabin>16</grid_lumabin>
+	<coeff_chnl_in>4</coeff_chnl_in>
+	<coeff_chnl_out>6</coeff_chnl_out>
+	<model_name_coeff_s1>aitm_hdrnet_coeff_s1_w8a16.vdnn</model_name_coeff_s1>
+	<model_name_weight_s1>aitm_hdrnet_weight_s1_w8a16.vdnn</model_name_weight_s1>
+	<model_name_coeff_s2>aitm_hdrnet_coeff_s1_w8a16.vdnn</model_name_coeff_s2>
+	<model_name_weight_s2>aitm_hdrnet_weight_s1_w8a16.vdnn</model_name_weight_s2>
+	<netIn_name_coeff>1</netIn_name_coeff>
+	<netIn_name_weight>1</netIn_name_weight>
+	<netOut_name_coeff>116</netOut_name_coeff>
+	<netOut_name_weight>134</netOut_name_weight>
+  </HDRNET>
+  <PORTRAIT>
+	<number_l>3</number_l>
+	<start_l>300 410 510</start_l>
+	<end_l>390 490 600</end_l>
+	<number_cct>3</number_cct>
+	<start_cct>2300 3700 4800</start_cct>
+	<end_cct>3300 4300 7500</end_cct>
+	<SNMode>
+		<Indoor>
+			<target_l>65.0 65.0 65.0</target_l>
+			<degree_l>0.45 0.45 0.45</degree_l>
+			<target_c>35.0 35.0 35.0</target_c>
+			<target_h>50.0 50.0 50.0</target_h>
+			<degree_c>0 0 0</degree_c>
+			<degree_h>0.1 0.1 0.1</degree_h>
+		</Indoor>
+		<Store>
+			<target_l>68.0 68.0 68.0</target_l>
+			<degree_l>0.45 0.45 0.45</degree_l>
+			<target_c>35.0 35.0 35.0</target_c>
+			<target_h>51.0 51.0 51.0</target_h>
+			<degree_c>0 0 0.1</degree_c>
+			<degree_h>0.1 0.1 0.1</degree_h>
+		</Store>
+		<Landspace>
+			<target_l>68.0 68.0 68.0</target_l>
+			<degree_l>0.45 0.45 0.45</degree_l>
+			<target_c>35.0 35.0 35.0</target_c>
+			<target_h>52.0 52.0 52.0</target_h>
+			<degree_c>0 0 0.1</degree_c>
+			<degree_h>0.1 0.1 0.1</degree_h>
+		</Landspace>
+		<Night>
+			<target_l>68.0 68.0 68.0</target_l>
+			<degree_l>0.3 0.3 0.3</degree_l>
+			<target_c>45.0 45.0 45.0</target_c>
+			<target_h>53.0 53.0 53.0</target_h>
+			<degree_c>0 0 0.1</degree_c>
+			<degree_h>0.1 0.1 0.1</degree_h>
+		</Night>
+		<Sunset>
+			<target_l>68.0 68.0 68.0</target_l>
+			<degree_l>0.45 0.45 0.45</degree_l>
+			<target_c>35.0 35.0 35.0</target_c>
+			<target_h>53.0 53.0 53.0</target_h>
+			<degree_c>0 0 0.1</degree_c>
+			<degree_h>0.1 0.1 0.1</degree_h>
+		</Sunset>	
+	</SNMode>
+	<DayTimeMode>
+		<Indoor>
+			<target_l>75.0 75.0 75.0</target_l>
+			<degree_l>0.45 0.45 0.45</degree_l>
+			<target_c>25.0 25.0 25.0</target_c>
+			<target_h>50.0 50.0 50.0</target_h>
+			<degree_c>0 0 0</degree_c>
+			<degree_h>0.1 0.1 0.1</degree_h>
+		</Indoor>
+		<Store>
+			<target_l>75.0 75.0 75.0</target_l>
+			<degree_l>0.45 0.45 0.45</degree_l>
+			<target_c>25.0 25.0 25.0</target_c>
+			<target_h>50.0 50.0 50.0</target_h>
+			<degree_c>0 0 0.1</degree_c>
+			<degree_h>0.1 0.1 0.1</degree_h>
+		</Store>
+		<Landspace>
+			<target_l>75.0 75.0 75.0</target_l>
+			<degree_l>0.45 0.45 0.45</degree_l>
+			<target_c>25.0 25.0 25.0</target_c>
+			<target_h>50.0 50.0 50.0</target_h>
+			<degree_c>0 0 0.1</degree_c>
+			<degree_h>0.1 0.1 0.1</degree_h>
+		</Landspace>
+		<Night>
+			<target_l>75.0 75.0 75.0</target_l>
+			<degree_l>0.45 0.45 0.45</degree_l>
+			<target_c>25.0 25.0 25.0</target_c>
+			<target_h>50.0 50.0 50.0</target_h>
+			<degree_c>0 0 0.1</degree_c>
+			<degree_h>0.1 0.1 0.1</degree_h>
+		</Night>
+		<Sunset>
+			<target_l>75.0 75.0 75.0</target_l>
+			<degree_l>0.45 0.45 0.45</degree_l>
+			<target_c>25.0 25.0 25.0</target_c>
+			<target_h>50.0 50.0 50.0</target_h>
+			<degree_c>0 0 0.1</degree_c>
+			<degree_h>0.1 0.1 0.1</degree_h>
+		</Sunset>	
+	</DayTimeMode>	
+  </PORTRAIT>
+  <PORTRAITBACKGROUND>
+	<SNMode>
+		<Indoor>
+			<contrast_set>0.01</contrast_set>
+			<contrast_power>0.3</contrast_power>
+			<highlight_set>0.98</highlight_set>
+			<highlight_power>0.9</highlight_power>
+		</Indoor>
+		<Store>
+			<contrast_set>0.01</contrast_set>
+			<contrast_power>0.3</contrast_power>
+			<highlight_set>0.98</highlight_set>
+			<highlight_power>0.9</highlight_power>
+		</Store>
+		<Landspace>
+			<contrast_set>0.01</contrast_set>
+			<contrast_power>0.3</contrast_power>
+			<highlight_set>0.98</highlight_set>
+			<highlight_power>0.9</highlight_power>
+		</Landspace>
+		<Night>
+			<contrast_set>0.01</contrast_set>
+			<contrast_power>0.3</contrast_power>
+			<highlight_set>0.98</highlight_set>
+			<highlight_power>0.9</highlight_power>
+		</Night>
+		<Sunset>
+			<contrast_set>0.01</contrast_set>
+			<contrast_power>0.3</contrast_power>
+			<highlight_set>0.98</highlight_set>
+			<highlight_power>0.9</highlight_power>
+		</Sunset>	
+	</SNMode>
+	<DayTimeMode>
+		<Indoor>
+			<contrast_set>0.01</contrast_set>
+			<contrast_power>0.3</contrast_power>
+			<highlight_set>0.98</highlight_set>
+			<highlight_power>0.9</highlight_power>
+		</Indoor>
+		<Store>
+			<contrast_set>0.01</contrast_set>
+			<contrast_power>0.3</contrast_power>
+			<highlight_set>0.98</highlight_set>
+			<highlight_power>0.9</highlight_power>
+		</Store>
+		<Landspace>
+			<contrast_set>0.01</contrast_set>
+			<contrast_power>0.3</contrast_power>
+			<highlight_set>0.98</highlight_set>
+			<highlight_power>0.9</highlight_power>
+		</Landspace>
+		<Night>
+			<contrast_set>0.01</contrast_set>
+			<contrast_power>0.3</contrast_power>
+			<highlight_set>0.98</highlight_set>
+			<highlight_power>0.9</highlight_power>
+		</Night>
+		<Sunset>
+			<contrast_set>0.01</contrast_set>
+			<contrast_power>0.3</contrast_power>
+			<highlight_set>0.98</highlight_set>
+			<highlight_power>0.9</highlight_power>
+		</Sunset>	
+	</DayTimeMode>
+  </PORTRAITBACKGROUND>
+  <COLOR>
+  	<number_cct>3</number_cct>
+	<start_cct>2300 3700 4800</start_cct>
+	<end_cct>3300 4300 7500</end_cct>
+	<CCMReleaseProtect_Enable>1</CCMReleaseProtect_Enable>
+	<SNMode>
+		<Indoor>
+			<CCMReleaseProtect>
+				<sigma>1500 1500 1500</sigma>
+				<maxShiftR>50000 50000 50000</maxShiftR>
+				<maxShiftG>10000 10000 10000</maxShiftG>
+				<maxShiftB>10000 10000 10000</maxShiftB>
+				<minShiftR>100 100 100</minShiftR>
+				<minShiftG>100 100 100</minShiftG>
+				<minShiftB>100 100 100</minShiftB>
+			</CCMReleaseProtect>
+			<sky>
+				<fColora>2.0 2.0 2.0</fColora>
+				<fOffset1>3.0 3.0 3.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</sky>
+			<nosky>
+				<fColora>2.0 2.0 2.0</fColora>
+				<fOffset1>3.0 3.0 3.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</nosky>
+		</Indoor>
+		<Store>
+			<CCMReleaseProtect>
+				<sigma>1500 1500 1500</sigma>
+				<maxShiftR>50000 50000 50000</maxShiftR>
+				<maxShiftG>15000 15000 15000</maxShiftG>
+				<maxShiftB>15000 15000 15000</maxShiftB>
+				<minShiftR>100 100 100</minShiftR>
+				<minShiftG>100 100 100</minShiftG>
+				<minShiftB>100 100 100</minShiftB>
+			</CCMReleaseProtect>
+			<sky>
+				<fColora>2.0 2.0 2.0</fColora>
+				<fOffset1>3.0 3.0 3.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</sky>
+			<nosky>
+				<fColora>2.0 2.0 2.0</fColora>
+				<fOffset1>3.0 3.0 3.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</nosky>
+		</Store>
+		<Landspace>
+			<CCMReleaseProtect>
+				<sigma>1500 1500 1500</sigma>
+				<maxShiftR>50000 50000 50000</maxShiftR>
+				<maxShiftG>15000 15000 15000</maxShiftG>
+				<maxShiftB>15000 15000 15000</maxShiftB>
+				<minShiftR>100 100 100</minShiftR>
+				<minShiftG>100 100 100</minShiftG>
+				<minShiftB>100 100 100</minShiftB>
+			</CCMReleaseProtect>
+			<sky>
+				<fColora>6.0 6.0 6.0</fColora>
+				<fOffset1>0.0 0.0 0.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</sky>
+			<nosky>
+				<fColora>2.0 2.0 2.0</fColora>
+				<fOffset1>3.0 3.0 3.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</nosky>
+		</Landspace>
+		<Night>
+			<CCMReleaseProtect>
+				<sigma>1500 1500 1500</sigma>
+				<maxShiftR>50000 50000 50000</maxShiftR>
+				<maxShiftG>10000 10000 10000</maxShiftG>
+				<maxShiftB>10000 10000 10000</maxShiftB>
+				<minShiftR>100 100 100</minShiftR>
+				<minShiftG>100 100 100</minShiftG>
+				<minShiftB>100 100 100</minShiftB>
+			</CCMReleaseProtect>
+			<sky>
+				<fColora>3.0 3.0 3.0</fColora>
+				<fOffset1>1.0 1.0 1.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</sky>
+			<nosky>
+				<fColora>6.0 3.0 3.0</fColora>
+				<fOffset1>3.0 3.0 3.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</nosky>
+		</Night>
+		<Sunset>
+			<CCMReleaseProtect>
+				<sigma>1500 1500 1500</sigma>
+				<maxShiftR>50000 50000 50000</maxShiftR>
+				<maxShiftG>15000 15000 15000</maxShiftG>
+				<maxShiftB>15000 15000 15000</maxShiftB>
+				<minShiftR>100 100 100</minShiftR>
+				<minShiftG>100 100 100</minShiftG>
+				<minShiftB>100 100 100</minShiftB>
+			</CCMReleaseProtect>
+			<sky>
+				<fColora>2.0 2.0 2.0</fColora>
+				<fOffset1>3.0 3.0 3.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</sky>
+			<nosky>
+				<fColora>2.0 2.0 2.0</fColora>
+				<fOffset1>3.0 3.0 3.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</nosky>
+		</Sunset>	
+	</SNMode>
+	<DayTimeMode>
+		<Indoor>
+			<CCMReleaseProtect>
+				<sigma>1500 1500 1500</sigma>
+				<maxShiftR>50000 50000 50000</maxShiftR>
+				<maxShiftG>10000 10000 10000</maxShiftG>
+				<maxShiftB>10000 10000 10000</maxShiftB>
+				<minShiftR>100 100 100</minShiftR>
+				<minShiftG>100 100 100</minShiftG>
+				<minShiftB>100 100 100</minShiftB>
+			</CCMReleaseProtect>
+			<sky>
+				<fColora>2.0 2.0 2.0</fColora>
+				<fOffset1>3.0 3.0 3.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</sky>
+			<nosky>
+				<fColora>2.0 2.0 2.0</fColora>
+				<fOffset1>3.0 3.0 3.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</nosky>
+		</Indoor>
+		<Store>
+			<CCMReleaseProtect>
+				<sigma>1500 1500 1500</sigma>
+				<maxShiftR>50000 50000 50000</maxShiftR>
+				<maxShiftG>15000 15000 15000</maxShiftG>
+				<maxShiftB>15000 15000 15000</maxShiftB>
+				<minShiftR>100 100 100</minShiftR>
+				<minShiftG>100 100 100</minShiftG>
+				<minShiftB>100 100 100</minShiftB>
+			</CCMReleaseProtect>
+			<sky>
+				<fColora>2.0 2.0 2.0</fColora>
+				<fOffset1>3.0 3.0 3.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</sky>
+			<nosky>
+				<fColora>2.0 2.0 2.0</fColora>
+				<fOffset1>3.0 3.0 3.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</nosky>
+		</Store>
+		<Landspace>
+			<CCMReleaseProtect>
+				<sigma>1500 1500 1500</sigma>
+				<maxShiftR>50000 50000 50000</maxShiftR>
+				<maxShiftG>15000 15000 15000</maxShiftG>
+				<maxShiftB>15000 15000 15000</maxShiftB>
+				<minShiftR>100 100 100</minShiftR>
+				<minShiftG>100 100 100</minShiftG>
+				<minShiftB>100 100 100</minShiftB>
+			</CCMReleaseProtect>
+			<sky>
+				<fColora>2.0 2.0 2.0</fColora>
+				<fOffset1>3.0 3.0 3.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</sky>
+			<nosky>
+				<fColora>2.0 2.0 2.0</fColora>
+				<fOffset1>3.0 3.0 3.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</nosky>
+		</Landspace>
+		<Night>
+			<CCMReleaseProtect>
+				<sigma>1500 1500 1500</sigma>
+				<maxShiftR>50000 50000 50000</maxShiftR>
+				<maxShiftG>10000 10000 10000</maxShiftG>
+				<maxShiftB>10000 10000 10000</maxShiftB>
+				<minShiftR>100 100 100</minShiftR>
+				<minShiftG>100 100 100</minShiftG>
+				<minShiftB>100 100 100</minShiftB>
+			</CCMReleaseProtect>
+			<sky>
+				<fColora>2.0 2.0 2.0</fColora>
+				<fOffset1>3.0 3.0 3.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</sky>
+			<nosky>
+				<fColora>2.0 2.0 2.0</fColora>
+				<fOffset1>3.0 3.0 3.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</nosky>
+		</Night>
+		<Sunset>
+			<CCMReleaseProtect>
+				<sigma>1500 1500 1500</sigma>
+				<maxShiftR>50000 50000 50000</maxShiftR>
+				<maxShiftG>15000 15000 15000</maxShiftG>
+				<maxShiftB>15000 15000 15000</maxShiftB>
+				<minShiftR>100 100 100</minShiftR>
+				<minShiftG>100 100 100</minShiftG>
+				<minShiftB>100 100 100</minShiftB>
+			</CCMReleaseProtect>
+			<sky>
+				<fColora>2.0 2.0 2.0</fColora>
+				<fOffset1>3.0 3.0 3.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</sky>
+			<nosky>
+				<fColora>2.0 2.0 2.0</fColora>
+				<fOffset1>3.0 3.0 3.0</fOffset1>
+				<fOffset2>10.0 10.0 10.0</fOffset2>
+			</nosky>
+		</Sunset>	
+	</DayTimeMode>	
+  </COLOR>
+  <LUMA>
+		<number_l>3</number_l>
+		<start_l>300 410 510</start_l>
+		<end_l>390 490 600</end_l>
+		<SNMode>
+			<Indoor>
+				<number_kp>7</number_kp>
+				<value_kp>0 5 85 175 225 245 255</value_kp>
+				<sky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</sky>
+				<nosky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</nosky>
+			</Indoor>
+			<Store>
+				<number_kp>7</number_kp>
+				<value_kp>0 5 85 175 225 245 255</value_kp>
+				<sky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</sky>
+				<nosky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</nosky>
+			</Store>
+			<Landspace>
+				<number_kp>7</number_kp>
+				<value_kp>0 5 85 175 225 245 255</value_kp>
+				<sky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</sky>
+				<nosky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</nosky>
+			</Landspace>
+			<Night>
+				<number_kp>7</number_kp>
+				<value_kp>0 5 85 175 225 245 255</value_kp>
+				<sky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</sky>
+				<nosky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</nosky>
+			</Night>
+			<Sunset>
+				<number_kp>7</number_kp>
+				<value_kp>0 5 85 175 225 245 255</value_kp>
+				<sky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</sky>
+				<nosky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</nosky>
+			</Sunset>
+		</SNMode>
+		<DayTimeMode>
+			<Indoor>
+				<number_kp>7</number_kp>
+				<value_kp>0 5 85 175 225 245 255</value_kp>
+				<sky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</sky>
+				<nosky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</nosky>
+			</Indoor>
+			<Store>
+				<number_kp>7</number_kp>
+				<value_kp>0 5 85 175 225 245 255</value_kp>
+				<sky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</sky>
+				<nosky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</nosky>
+			</Store>
+			<Landspace>
+				<number_kp>7</number_kp>
+				<value_kp>0 5 85 175 225 245 255</value_kp>
+				<sky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</sky>
+				<nosky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</nosky>
+			</Landspace>
+			<Night>
+				<number_kp>7</number_kp>
+				<value_kp>0 5 85 175 225 245 255</value_kp>
+				<sky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</sky>
+				<nosky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</nosky>
+			</Night>
+			<Sunset>
+				<number_kp>7</number_kp>
+				<value_kp>0 5 85 175 225 245 255</value_kp>
+				<sky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</sky>
+				<nosky>
+					<fLuma>0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0 0.0 5.0 75.0 175.0 235.0 250.0 255.0</fLuma>
+				</nosky>
+			</Sunset>
+		</DayTimeMode>
+	</LUMA>
+  <XDRGainmap>
+	<DumpGainMap description="dump control for GainMap, convert to jpg">0</DumpGainMap>
+	<GainKeypointNum>12</GainKeypointNum>
+    <AnchorX_Percent>0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 0.95 0.99 0.9999</AnchorX_Percent>
+	<AnchorY_manual>1.0 1.0 1.0 1.0 1.0 1.5 1.9 2.6 3.8 6.0 10.0 12.0</AnchorY_manual>
+	<Compress_Coef>0.8</Compress_Coef>
+	<maxGainRatio>0.03</maxGainRatio>
+	<maxGain>8.0</maxGain>
+  </XDRGainmap>
+  <GammaTab>
+	<i32defalutGammaTab description="the gamma table is copy from the most bright part gamma lut in ipe gamma">
+      <tableNum>4</tableNum>
+      <lux_start>0 240 380 510</lux_start>
+      <lux_end>190 360 480 1000</lux_end>
+      <gammalen>257</gammalen>
+      <table0>0 13 26 39 52 65 77 90 103 115 128 140 152 165 177 188 200 212 223 234 245 256 267 277 287 298 308 317 327 337 346 355 364 373 381 390 398 406 414 422 430 438 445 452 459 466 473 480 487 493 500 506 512 518 524 530 536 542 547 553 558 564 569 574 579 585 590 594 599 604 609 613 618 623 627 631 636 640 644 648 653 657 661 665 669 673 676 680 684 688 692 695 699 702 706 710 713 717 720 723 727 730 734 737 740 743 747 750 753 756 759 762 765 768 771 774 777 780 783 785 788 791 794 797 799 802 805 807 810 812 815 817 820 822 825 827 830 832 834 837 839 841 844 846 848 850 852 855 857 859 861 863 865 867 869 871 873 875 877 879 881 883 885 887 889 891 892 894 896 898 900 901 903 905 907 908 910 912 913 915 917 918 920 922 923 925 926 928 930 931 933 934 936 937 939 940 942 943 945 946 948 949 951 952 954 955 956 958 959 961 962 963 965 966 968 969 970 972 973 974 976 977 978 980 981 982 983 985 986 987 989 990 991 992 994 995 996 998 999 1000 1001 1003 1004 1005 1006 1008 1009 1010 1011 1013 1014 1015 1016 1018 1019 1020 1024</table0>
+      <table1>0 13 26 39 52 65 77 90 103 115 128 140 152 165 177 188 200 212 223 234 245 256 267 277 287 298 308 317 327 337 346 355 364 373 381 390 398 406 414 422 430 438 445 452 459 466 473 480 487 493 500 506 512 518 524 530 536 542 547 553 558 564 569 574 579 585 590 594 599 604 609 613 618 623 627 631 636 640 644 648 653 657 661 665 669 673 676 680 684 688 692 695 699 702 706 710 713 717 720 723 727 730 734 737 740 743 747 750 753 756 759 762 765 768 771 774 777 780 783 785 788 791 794 797 799 802 805 807 810 812 815 817 820 822 825 827 830 832 834 837 839 841 844 846 848 850 852 855 857 859 861 863 865 867 869 871 873 875 877 879 881 883 885 887 889 891 892 894 896 898 900 901 903 905 907 908 910 912 913 915 917 918 920 922 923 925 926 928 930 931 933 934 936 937 939 940 942 943 945 946 948 949 951 952 954 955 956 958 959 961 962 963 965 966 968 969 970 972 973 974 976 977 978 980 981 982 983 985 986 987 989 990 991 992 994 995 996 998 999 1000 1001 1003 1004 1005 1006 1008 1009 1010 1011 1013 1014 1015 1016 1018 1019 1020 1024</table1>
+      <table2>0 10 21 31 42 52 62 73 83 93 103 114 124 134 144 153 163 173 183 192 201 211 220 229 238 247 256 264 273 281 290 298 306 314 322 330 337 345 353 360 367 375 382 389 396 403 409 416 423 429 435 442 448 454 460 466 472 478 484 489 495 500 506 511 516 522 527 532 537 542 547 552 556 561 566 570 575 579 584 588 593 597 601 605 609 614 618 622 626 630 634 637 641 645 649 653 656 660 664 667 671 675 678 682 685 689 692 696 699 702 706 709 712 716 719 722 725 729 732 735 738 741 744 747 750 753 756 759 762 765 768 771 774 777 779 782 785 788 790 793 796 799 801 804 806 809 812 814 817 819 822 824 827 829 832 834 837 839 841 844 846 848 851 853 855 858 860 862 864 866 869 871 873 875 877 879 882 884 886 888 890 892 894 896 898 900 902 904 906 908 910 912 914 915 917 919 921 923 925 927 929 930 932 934 936 938 939 941 943 945 946 948 950 952 953 955 957 959 960 962 964 965 967 969 970 972 974 975 977 978 980 982 983 985 987 988 990 991 993 995 996 998 999 1001 1003 1004 1006 1007 1009 1011 1012 1014 1015 1017 1018 1020 1024</table2>
+      <table3>0 6 13 19 25 32 38 46 53 61 69 78 86 95 104 113 122 131 140 149 158 167 176 185 194 204 214 223 232 241 250 259 268 277 286 296 305 314 323 333 342 351 360 369 378 387 396 405 413 421 430 436 444 450 458 465 472 478 484 489 494 498 502 507 511 517 522 526 531 536 541 546 549 554 559 562 567 571 576 580 585 588 592 596 600 605 609 612 616 620 624 627 631 634 638 642 645 649 653 656 660 664 667 671 674 678 681 685 688 691 695 698 701 705 708 711 714 718 721 724 727 730 733 736 739 742 745 748 751 754 756 759 762 766 767 771 774 777 779 782 785 788 790 794 796 799 802 804 807 810 813 815 818 820 823 826 829 831 833 836 838 840 844 846 848 851 853 855 857 860 863 865 867 869 871 873 877 879 881 883 885 887 889 891 894 896 898 900 902 904 906 908 910 911 913 915 918 920 922 924 926 927 929 931 933 935 936 938 941 943 944 946 948 950 951 953 955 957 958 960 962 963 965 967 968 970 973 974 976 977 979 981 982 984 986 987 989 990 992 994 995 997 998 1000 1002 1003 1005 1006 1008 1010 1011 1013 1014 1016 1017 1019 1024</table3>
+	</i32defalutGammaTab>
+	<i32defalutPortraitGammaTab description="the Portrait gamma table is copy from the most bright part gamma lut in ipe gamma">
+      <tableNum>4</tableNum>
+      <lux_start>0 240 380 510</lux_start>
+      <lux_end>190 360 480 1000</lux_end>
+      <gammalen>257</gammalen>
+      <table0>0 13 26 39 52 65 77 90 103 115 128 140 152 165 177 188 200 212 223 234 245 256 267 277 287 298 308 317 327 337 346 355 364 373 381 390 398 406 414 422 430 438 445 452 459 466 473 480 487 493 500 506 512 518 524 530 536 542 547 553 558 564 569 574 579 585 590 594 599 604 609 613 618 623 627 631 636 640 644 648 653 657 661 665 669 673 676 680 684 688 692 695 699 702 706 710 713 717 720 723 727 730 734 737 740 743 747 750 753 756 759 762 765 768 771 774 777 780 783 785 788 791 794 797 799 802 805 807 810 812 815 817 820 822 825 827 830 832 834 837 839 841 844 846 848 850 852 855 857 859 861 863 865 867 869 871 873 875 877 879 881 883 885 887 889 891 892 894 896 898 900 901 903 905 907 908 910 912 913 915 917 918 920 922 923 925 926 928 930 931 933 934 936 937 939 940 942 943 945 946 948 949 951 952 954 955 956 958 959 961 962 963 965 966 968 969 970 972 973 974 976 977 978 980 981 982 983 985 986 987 989 990 991 992 994 995 996 998 999 1000 1001 1003 1004 1005 1006 1008 1009 1010 1011 1013 1014 1015 1016 1018 1019 1020 1024</table0>
+      <table1>0 13 26 39 52 65 77 90 103 115 128 140 152 165 177 188 200 212 223 234 245 256 267 277 287 298 308 317 327 337 346 355 364 373 381 390 398 406 414 422 430 438 445 452 459 466 473 480 487 493 500 506 512 518 524 530 536 542 547 553 558 564 569 574 579 585 590 594 599 604 609 613 618 623 627 631 636 640 644 648 653 657 661 665 669 673 676 680 684 688 692 695 699 702 706 710 713 717 720 723 727 730 734 737 740 743 747 750 753 756 759 762 765 768 771 774 777 780 783 785 788 791 794 797 799 802 805 807 810 812 815 817 820 822 825 827 830 832 834 837 839 841 844 846 848 850 852 855 857 859 861 863 865 867 869 871 873 875 877 879 881 883 885 887 889 891 892 894 896 898 900 901 903 905 907 908 910 912 913 915 917 918 920 922 923 925 926 928 930 931 933 934 936 937 939 940 942 943 945 946 948 949 951 952 954 955 956 958 959 961 962 963 965 966 968 969 970 972 973 974 976 977 978 980 981 982 983 985 986 987 989 990 991 992 994 995 996 998 999 1000 1001 1003 1004 1005 1006 1008 1009 1010 1011 1013 1014 1015 1016 1018 1019 1020 1024</table1>
+      <table2>0 10 21 31 42 52 62 73 83 93 103 114 124 134 144 153 163 173 183 192 201 211 220 229 238 247 256 264 273 281 290 298 306 314 322 330 337 345 353 360 367 375 382 389 396 403 409 416 423 429 435 442 448 454 460 466 472 478 484 489 495 500 506 511 516 522 527 532 537 542 547 552 556 561 566 570 575 579 584 588 593 597 601 605 609 614 618 622 626 630 634 637 641 645 649 653 656 660 664 667 671 675 678 682 685 689 692 696 699 702 706 709 712 716 719 722 725 729 732 735 738 741 744 747 750 753 756 759 762 765 768 771 774 777 779 782 785 788 790 793 796 799 801 804 806 809 812 814 817 819 822 824 827 829 832 834 837 839 841 844 846 848 851 853 855 858 860 862 864 866 869 871 873 875 877 879 882 884 886 888 890 892 894 896 898 900 902 904 906 908 910 912 914 915 917 919 921 923 925 927 929 930 932 934 936 938 939 941 943 945 946 948 950 952 953 955 957 959 960 962 964 965 967 969 970 972 974 975 977 978 980 982 983 985 987 988 990 991 993 995 996 998 999 1001 1003 1004 1006 1007 1009 1011 1012 1014 1015 1017 1018 1020 1024</table2>
+      <table3>0 6 13 19 25 32 38 46 53 61 69 78 86 95 104 113 122 131 140 149 158 167 176 185 194 204 214 223 232 241 250 259 268 277 286 296 305 314 323 333 342 351 360 369 378 387 396 405 413 421 430 436 444 450 458 465 472 478 484 489 494 498 502 507 511 517 522 526 531 536 541 546 549 554 559 562 567 571 576 580 585 588 592 596 600 605 609 612 616 620 624 627 631 634 638 642 645 649 653 656 660 664 667 671 674 678 681 685 688 691 695 698 701 705 708 711 714 718 721 724 727 730 733 736 739 742 745 748 751 754 756 759 762 766 767 771 774 777 779 782 785 788 790 794 796 799 802 804 807 810 813 815 818 820 823 826 829 831 833 836 838 840 844 846 848 851 853 855 857 860 863 865 867 869 871 873 877 879 881 883 885 887 889 891 894 896 898 900 902 904 906 908 910 911 913 915 918 920 922 924 926 927 929 931 933 935 936 938 941 943 944 946 948 950 951 953 955 957 958 960 962 963 965 967 968 970 973 974 976 977 979 981 982 984 986 987 989 990 992 994 995 997 998 1000 1002 1003 1005 1006 1008 1010 1011 1013 1014 1016 1017 1019 1024</table3>
+	</i32defalutPortraitGammaTab>
+  </GammaTab>
+
+</AITM_ALG_Parameters>

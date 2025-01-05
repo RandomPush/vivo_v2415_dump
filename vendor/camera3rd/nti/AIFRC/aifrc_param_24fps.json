@@ -1,0 +1,56 @@
+{
+    "global": {
+        "debug_level": 7,
+        "bypassFlag": 0,
+        "nnWidth": 960,
+        "nnHeight": 544
+    },
+    "preNN": {
+        "dspPriority": -1,
+        "dspPowerLevel": 6,
+        "dspDcvsEnable": 0,
+        "nnYUV444Size_HWC": [ 544, 960, 3 ],
+        "nnFlowQatSize_HWC":  [ 68, 120, 128 ],
+        "nnFeatureQatSize_HWC": [ 68, 120, 128 ],
+        "nnFusionMaskSize_HWC": [ 544, 960, 1 ],
+        "nnFlowXY_HWC": [ 544, 960, 2 ],
+        "GraphBinaryBufLen_uncom": 9000000,
+        "bInitBackend": 1,
+        "QNNHtpLibPath": "/vendor/lib/rfsa/adsp/libQnnHtpV75.so",
+        "QNNHtpLibPathLen": 256,
+        "QNNBinaryFile": "/vendor/camera3rd/nti/AIFRC/AIFRC_V26.1.8_MD5_05e2c2ebb81f774fe87c85588f5bcb84.cache",
+        "inTensorNum": 3,
+        "inTileNum": [1, 1, 1],
+        "outTensorNum": 4,
+        "outTileNum": [1, 1, 1, 1],
+        "mask_factor": 1.0,
+        "mask_filter_ksize": 7,
+        "flowqat_zero": 128
+    },
+	"mtkvdNN":
+	{
+		"nnYUV444Size_HWC": [ 544, 960, 3 ],
+        "nnFlowQatSize_HWC":  [ 68, 120, 128 ],
+        "nnFeatureQatSize_HWC": [ 68, 120, 128 ],
+        "nnFusionMaskSize_HWC": [ 544, 960, 1 ],
+        "nnFlowXY_HWC": [ 544, 960, 2 ],
+		"platformType": 1,
+		"vdnnPriority": 0,
+		"vdnnFreqHint": 50,
+		"inTensorNum":  3,
+		"outTensorNum": 4,
+        "VDNNBinaryFile": "/vendor/camera3rd/nti/AIFRC/aifrc.vdnn",	
+        "mask_factor": 1.0,
+        "mask_filter_ksize": 7,
+        "flowqat_zero": 128		
+	},
+    "post": {
+        "gpuPriority": -1,
+        "gpuBinaryFile": "/data/vendor/camera/AIFRC",
+        "flow_scale": 0.1748205820719401,
+        "flow_zero": 126.0,
+        "downsample_scale": 2,
+        "fast_motion_threshold": 83.5,
+        "slow_motion_threshold": 0.1
+    }
+}

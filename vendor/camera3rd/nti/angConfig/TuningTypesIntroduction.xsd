@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--========================================================================-->
+<!-- Differentiation of Parameters for ANG Algorithm-->
+<!--========================================================================-->
+
+  <!-- Mode Type
+       The ANG algorithm differentiates parameters based on AlgoType. -->
+    ang_config_bokeh.xml            用于所有带有虚化的场景(最高优先级)
+	ang_config_magic.xml            用于nice maigc的场景(第二优先级)
+	ang_config_niceHDR.xml          用于nice HDR场景
+	ang_config_niceMotion.xml       用于nice Motion场景
+	ang_config_niceNormal.xml       用于nice Normal场景
+	ang_config_softBRP.xml          用于softBRP场景,hdrlite, llhdr, hdr, fastNight, superns,hdroff(目前噪声强度配置为0)
+	ang_config_default.xml          用于非上述用例的case,如night,rawnr-ai等
+	

@@ -1,0 +1,9 @@
+on boot
+    chown system /sys/vforce/cali_coef
+    chmod 0644 /sys/vforce/cali_coef
+    start capacity_key-aidl_hal
+
+service capacity_key-aidl_hal /vendor/bin/hw/vendor.vivo.hardware.capacity_key-service
+    class hal
+    user system
+    group system

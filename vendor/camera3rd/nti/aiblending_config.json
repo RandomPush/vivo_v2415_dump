@@ -1,0 +1,21 @@
+{
+    "network_configs":  {
+        "modelNames": [ "bkrfS.vdnn", "bkrfL.vdnn" ],
+        "networkRuntime": "neuron",
+        "deviceType": 3,
+        "powerMode": 2,
+        "iNodeNames": ["ImageTensor", "BokehTensor", "MatteTensor"],
+        "oNodeNames": ["BokehPrediction"],
+        "inputScales": [ 0.0, 0.0, 0.0 ],
+        "outputScales": [ 0.0022463407586602604 ],
+        "inputZeps": [ 0, 0 ],
+        "outputZeps": [ -111 ],
+        "imageBias": 0,
+        "borderResolution": 1600,
+        "matThres": [20, 128, 20],
+        "iouThres": [0.98, 0.98, 0.98],
+        "smallRegionThres": 0.01
+    }
+}
+
+

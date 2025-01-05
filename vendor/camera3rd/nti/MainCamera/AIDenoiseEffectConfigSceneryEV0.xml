@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<AiDenoiseConfig version="0.0.11">
+    <!-- 普通段ISO模式下的降噪参数 -->
+    <DenoiserBranch>
+        <!-- ISO起始值 -->
+        <ISOstart>0</ISOstart>
+        <!-- ISO终止值： 当输入图片的曝光值在该设定的ISO段范围内下调用该Branch下的参数 -->
+        <ISOend>200</ISOend>
+        <!-- 曝光时间起始值 -->
+        <ExpTimeStart>0</ExpTimeStart>
+        <!-- 曝光时间终止值： 当输入图片的曝光时间值在该设定的曝光段范围内下调用该Branch下的参数 -->
+        <ExpTimeEnd>16000</ExpTimeEnd>
+        <!-- 以下配置仅配置EV0生效 -->
+        <!-- 用来控制噪声的调试 -->
+        <!-- 方差估计将会自动通过以下公式计算： var_input = var * scale * evscale + evbias -->
+        <!-- 例如evscale=0.9，此时方差估计变小，则会放出更多的噪声，若evscale=1.1，则方差估计变大，会导致降噪加强 -->
+        <EvScale>1.0</EvScale>
+        <EvBias>0</EvBias>
+        <!-- 通过控制residule的维度来控制噪声放出的强弱，考虑原降噪公式： clean_image = observed_image - ResScale * noise -->
+        <!-- AI网络估计的是noise这个值，所以当ResScale不等于1.0时，噪声都会呈现均匀增加 -->
+        <ResScale>0</ResScale>
+        <!-- 通过外部传入mask调整特定区域的ResScale，如果没有设置MaskArray或相应的MaskResScale，则默认等于ResScale -->
+        <!-- 通过数组的方式支持多个mask，顺序和传入的mask对应，最大数量为5 -->
+        <!-- ResScale 和 MaskResScale 值域范围是 (0,1.5) -->
+        <MaskArray>
+            <!-- Mask1: SkyMask -->
+            <MaskResScale>0.6</MaskResScale>
+            <!-- Mask2: Portrait -->
+            <MaskResScale>0.4</MaskResScale>
+            <!-- Mask3: Empty -->
+            <MaskResScale>0</MaskResScale>
+            <!-- Mask4: Empty -->
+            <MaskResScale>0</MaskResScale>
+            <!-- Mask5: Empty -->
+            <MaskResScale>0</MaskResScale>
+        </MaskArray>
+    </DenoiserBranch>
+    <DenoiserBranch>
+        <ISOstart>200</ISOstart>
+        <ISOend>750</ISOend>
+        <ExpTimeStart>0</ExpTimeStart>
+        <ExpTimeEnd>16000</ExpTimeEnd>
+        <EvScale>1.0</EvScale>
+        <EvBias>0</EvBias>
+        <ResScale>0.1</ResScale>
+        <MaskArray>
+            <!-- Mask1: SkyMask -->
+            <MaskResScale>0.65</MaskResScale>
+            <!-- Mask2: Portrait -->
+            <MaskResScale>0.45</MaskResScale>
+        </MaskArray>
+    </DenoiserBranch>
+    <DenoiserBranch>
+        <ISOstart>750</ISOstart>
+        <ISOend>1550</ISOend>
+        <ExpTimeStart>0</ExpTimeStart>
+        <ExpTimeEnd>16000</ExpTimeEnd>
+        <EvScale>1.0</EvScale>
+        <EvBias>0</EvBias>
+        <ResScale>0.25</ResScale>
+        <MaskArray>
+            <!-- Mask1: SkyMask -->
+            <MaskResScale>0.75</MaskResScale>
+            <!-- Mask2: Portrait -->
+            <MaskResScale>0.5</MaskResScale>
+        </MaskArray>
+    </DenoiserBranch>
+    <DenoiserBranch>
+        <ISOstart>1550</ISOstart>
+        <ISOend>3150</ISOend>
+        <ExpTimeStart>0</ExpTimeStart>
+        <ExpTimeEnd>16000</ExpTimeEnd>
+        <EvScale>1.0</EvScale>
+        <EvBias>0</EvBias>
+        <ResScale>0.55</ResScale>
+        <MaskArray>
+            <!-- Mask1: SkyMask -->
+            <MaskResScale>0.8</MaskResScale>
+            <!-- Mask2: Portrait -->
+            <MaskResScale>0.65</MaskResScale>
+        </MaskArray>
+    </DenoiserBranch>
+    <DenoiserBranch>
+        <ISOstart>3150</ISOstart>
+        <ISOend>4950</ISOend>
+        <ExpTimeStart>0</ExpTimeStart>
+        <ExpTimeEnd>16000</ExpTimeEnd>
+        <EvScale>1.0</EvScale>
+        <EvBias>0</EvBias>
+        <ResScale>0.65</ResScale>
+        <MaskArray>
+            <!-- Mask1: SkyMask -->
+            <MaskResScale>0.85</MaskResScale>
+            <!-- Mask2: Portrait -->
+            <MaskResScale>0.7</MaskResScale>
+        </MaskArray>
+    </DenoiserBranch>
+    <DenoiserBranch>
+        <ISOstart>4950</ISOstart>
+        <ISOend>7050</ISOend>
+        <ExpTimeStart>0</ExpTimeStart>
+        <ExpTimeEnd>16000</ExpTimeEnd>
+        <EvScale>1.1</EvScale>
+        <EvBias>0</EvBias>
+        <ResScale>0.65</ResScale>
+        <MaskArray>
+            <!-- Mask1: SkyMask -->
+            <MaskResScale>0.85</MaskResScale>
+            <!-- Mask2: Portrait -->
+            <MaskResScale>0.7</MaskResScale>
+        </MaskArray>
+    </DenoiserBranch>
+    <!-- HISO模式下的降噪参数 -->
+    <DenoiserBranch>
+        <ISOstart>7050</ISOstart>
+        <ISOend>9350</ISOend>
+        <ExpTimeStart>0</ExpTimeStart>
+        <ExpTimeEnd>16000</ExpTimeEnd>
+        <EvScale>1.1</EvScale>
+        <EvBias>0</EvBias>
+        <ResScale>0.65</ResScale>
+        <MaskArray>
+            <!-- Mask1: SkyMask -->
+            <MaskResScale>0.8</MaskResScale>
+            <!-- Mask2: Portrait -->
+            <MaskResScale>0.7</MaskResScale>
+        </MaskArray>
+    </DenoiserBranch>
+    <DenoiserBranch>
+        <ISOstart>9350</ISOstart>
+        <ISOend>15550</ISOend>
+        <ExpTimeStart>0</ExpTimeStart>
+        <ExpTimeEnd>16000</ExpTimeEnd>
+        <EvScale>1.1</EvScale>
+        <EvBias>0</EvBias>
+        <ResScale>0.7</ResScale>
+        <MaskArray>
+            <!-- Mask1: SkyMask -->
+            <MaskResScale>0.85</MaskResScale>
+            <!-- Mask2: Portrait -->
+            <MaskResScale>0.7</MaskResScale>
+        </MaskArray>
+    </DenoiserBranch>
+    <DenoiserBranch>
+        <ISOstart>15550</ISOstart>
+        <ISOend>25550</ISOend>
+        <ExpTimeStart>0</ExpTimeStart>
+        <ExpTimeEnd>16000</ExpTimeEnd>
+        <EvScale>1.1</EvScale>
+        <EvBias>0</EvBias>
+        <ResScale>0.8</ResScale>
+        <MaskArray>
+            <!-- Mask1: SkyMask -->
+            <MaskResScale>0.85</MaskResScale>
+            <!-- Mask2: Portrait -->
+            <MaskResScale>0.8</MaskResScale>
+        </MaskArray>
+    </DenoiserBranch>
+    <DenoiserBranch>
+        <ISOstart>25550</ISOstart>
+        <ISOend>32000</ISOend>
+        <ExpTimeStart>0</ExpTimeStart>
+        <ExpTimeEnd>16000</ExpTimeEnd>
+        <EvScale>1.1</EvScale>
+        <EvBias>0</EvBias>
+        <ResScale>0.8</ResScale>
+        <MaskArray>
+            <!-- Mask1: SkyMask -->
+            <MaskResScale>0.85</MaskResScale>
+            <!-- Mask2: Portrait -->
+            <MaskResScale>0.775</MaskResScale>
+        </MaskArray>
+    </DenoiserBranch>
+    <DenoiserBranch>
+        <ISOstart>32000</ISOstart>
+        <ISOend>102400</ISOend>
+        <ExpTimeStart>0</ExpTimeStart>
+        <ExpTimeEnd>16000</ExpTimeEnd>
+        <EvScale>1.1</EvScale>
+        <EvBias>0</EvBias>
+        <ResScale>0.8</ResScale>
+        <MaskArray>
+            <!-- Mask1: SkyMask -->
+            <MaskResScale>0.85</MaskResScale>
+            <!-- Mask2: Portrait -->
+            <MaskResScale>0.8</MaskResScale>
+        </MaskArray>
+    </DenoiserBranch>
+</AiDenoiseConfig>

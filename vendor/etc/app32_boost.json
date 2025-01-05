@@ -1,0 +1,10 @@
+{
+    "mtk_blacklist" : [
+        "com.xingin.xhs",
+        "com.sankuai.meituan",
+        "com.sankuai.meituan.takeoutnew",
+        "tv.danmaku.bili",
+        "android",
+        "android.server.wm.deprecatedabi"
+    ]
+}

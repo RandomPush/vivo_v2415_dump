@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NiceMeeDeGlareConfig version="0.0.1" name='NiceMeeDeGlareConfig'>
+    <ByPass description="0: Not bypass, 1: bypass">0</ByPass>
+
+	<!-- enable -->
+	<EnableScene>
+		<SpecialScene>
+			<MinSize>0</MinSize>
+			<MaxSize>61</MaxSize>
+			<MinISO>0</MinISO>
+			<MaxISO>2000</MaxISO>
+			<MinLuxIndex>0</MinLuxIndex>
+			<MaxLuxIndex>1000</MaxLuxIndex>
+			<MinUIZoom>50</MinUIZoom>
+			<MaxUIZoom>89</MaxUIZoom>
+			<ModelID>1</ModelID>
+		</SpecialScene>
+	</EnableScene>
+
+	<!-- disable -->
+    <DisableScene>
+		<SpecialScene>
+			<UIMode>70,29</UIMode>
+		</SpecialScene>
+	</DisableScene>
+
+	<!-- <Spe cls judgement Config> -->
+	<SpeClsJudgeConfig>
+		<enableSpeCls>1</enableSpeCls>
+		<enableSpeSeg>0</enableSpeSeg>
+		<clsThresholdPortrait>
+   		    <!-- max cluster num is 10 -->
+			<cluster name="non"           threshold="0.01"         grayBlendRatio="0.0"></cluster>
+			<cluster name="spy"           threshold="0.01"         grayBlendRatio="0.0"></cluster>
+			<cluster name="slight"        threshold="0.01"         grayBlendRatio="0.0"></cluster>
+			<cluster name="clear"         threshold="0.01"         grayBlendRatio="0.2"></cluster>
+			<cluster name="heavy"         threshold="0.01"         grayBlendRatio="0.5"></cluster>
+		</clsThresholdPortrait>
+		<clsThresholdNoPortrait>
+   		    <!-- max cluster num is 10 -->
+			<cluster name="non"           threshold="0.01"         grayBlendRatio="0.0"></cluster>
+			<cluster name="spy"           threshold="0.01"         grayBlendRatio="0.0"></cluster>
+			<cluster name="slight"        threshold="0.01"         grayBlendRatio="0.0"></cluster>
+			<cluster name="clear"         threshold="0.01"         grayBlendRatio="0.2"></cluster>
+			<cluster name="heavy"         threshold="0.01"         grayBlendRatio="0.5"></cluster>
+		</clsThresholdNoPortrait>
+	</SpeClsJudgeConfig>
+	<PostParam>
+		<DayTime>
+			<Portrait>
+				<Indoor>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Indoor>
+				<Market>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Market>
+				<Outdoor>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Outdoor>
+				<Night>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Night>
+				<Sunset>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Sunset>
+				<Stage>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Stage>
+			</Portrait>
+			<NoPortrait>
+				<Indoor>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Indoor>
+				<Market>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Market>
+				<Outdoor>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Outdoor>
+				<Night>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Night>
+				<Sunset>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Sunset>
+				<Stage>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Stage>
+			</NoPortrait>
+		</DayTime>
+		<Night>
+			<Portrait>
+				<Indoor>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Indoor>
+				<Market>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Market>
+				<Outdoor>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Outdoor>
+				<Night>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Night>
+				<Sunset>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Sunset>
+				<Stage>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Stage>
+			</Portrait>
+			<NoPortrait>
+				<Indoor>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Indoor>
+				<Market>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Market>
+				<Outdoor>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Outdoor>
+				<Night>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Night>
+				<Sunset>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Sunset>
+				<Stage>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Stage>
+			</NoPortrait>
+		</Night>
+		<ExNight>
+			<Portrait>
+				<Indoor>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Indoor>
+				<Market>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Market>
+				<Outdoor>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Outdoor>
+				<Night>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Night>
+				<Sunset>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Sunset>
+				<Stage>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Stage>
+			</Portrait>
+			<NoPortrait>
+				<Indoor>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Indoor>
+				<Market>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Market>
+				<Outdoor>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Outdoor>
+				<Night>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Night>
+				<Sunset>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Sunset>
+				<Stage>
+					<Enable>0 0 1 1 1</Enable>
+					<GrayAlpha>0.0 0.0 0.0 0.2 0.0</GrayAlpha>
+					<GlobalGlareDecay>1.0 1.0 1.0 1.0 1.0</GlobalGlareDecay>
+					<SkyGlareDecay>1.0 1.0 1.0 1.0 1.0</SkyGlareDecay>
+					<PortraitGlareDecay>1.0 1.0 1.0 1.0 1.0</PortraitGlareDecay>
+					<SkinGlareDecay>1.0 1.0 1.0 1.0 1.0</SkinGlareDecay>
+					<ModelIndex>0 0 0 0 1</ModelIndex>
+				</Stage>
+			</NoPortrait>
+		</ExNight>
+	</PostParam>
+    <SPE description="Scene Perception Engine">
+		<ProcH>640</ProcH>
+		<ProcW>640</ProcW>
+        <ModelPath>/vendor/camera3rd/nti/nice_spe</ModelPath>
+		<XMLPath>/vendor/camera3rd/nti/nice_spe/spe_config.xml</XMLPath>
+    </SPE>
+</NiceMeeDeGlareConfig>

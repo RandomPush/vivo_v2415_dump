@@ -1,0 +1,337 @@
+//epsilon_v2.6.0_PD2415
+
+do_beamform                 1 //beamform switch
+do_bnr                      1 //back groung noise reduction switch
+do_wnr                      1 //first level wind noise reduciton switch(signal based)
+do_ainr                     1 //second level wind noise reduciton switch(Ai based)
+do_agc                      1 //agc switch
+do_hdr                      1 //hdr switch
+do_eq                       1 //eq switch
+
+sosf_s1_m0_a1 -0.8704586625099182
+sosf_s1_m0_a2 0.5667842030525208
+sosf_s1_m0_b0 0.8378015756607056
+sosf_s1_m0_b1 -0.8704586625099182
+sosf_s1_m0_b2 0.7289826273918152
+
+sosf_s1_m1_a1 -0.9110458493232727
+sosf_s1_m1_a2 0.639839231967926
+sosf_s1_m1_b0 0.8916109204292297
+sosf_s1_m1_b1 -0.9110458493232727
+sosf_s1_m1_b2 0.7482283115386963
+
+bf_max_suppress            -12.0 //maximum suppression value (dB)
+bf_bwf_nsd_b_1x             0.5  //NS OFF back 1x beamformer bandwidth fraction
+bf_bwf_nse_b_1x             0.5  //NS ON back 1x beamformer bandwidth fraction
+bf_bwf_nsd_b_3x             0.5  //NS OFF back 3x beamformer bandwidth fraction
+bf_bwf_nse_b_3x             0.5  //NS ON back 3x beamformer bandwidth fraction
+bf_bwf_nsd_f_1x             0.5  //NS OFF front 1x beamformer bandwidth fraction
+bf_bwf_nse_f_1x             0.5  //NS ON front 1x beamformer bandwidth fraction
+
+sensor_noise_ver            1 //sensor noise version
+
+ainr_str                    0.5   //AI based wind noise reduction strength
+
+wnd_vol_init                -70   // smooth volume starting point
+wnd_vol_alpha               0.99  // alpha for smoothing volume
+wnd_vol_sil                 -65   // volume threshold for detect silence
+wnd_vol_noisy               -30   // volume threshold for detect noisy
+wnd_chi_initsft             10    // shift for smooth_chi
+wnd_chi_alpha               0.99  // alpha for smooth_chi
+wnd_chival_sil              21    // cliiped chisqr val when volume < wnd_vol_thd
+wnd_vol_thd                 -65   // smooth volume thd for detect silence, update chisqr with wnd_chival_sil
+wnd_on_sil                  180   // WND on: when volume < wnd_vol_sil                & smooth_chi >wnd_vol_sil
+wnd_on_nrml                 60    // WND on: (wnd_vol_sil) < volume < (wnd_vol_noisy) & smooth_chi >wnd_on_nrml
+wnd_on_noisy                30    // WND on: volume > (wnd_vol_noisy)                 & smooth_chi >wnd_on_noisy
+swnd_on_nrml                20    // (small-wind-detect) WND on: (wnd_vol_sil) < volume < (wnd_vol_noisy) & smooth_chi >swnd_on_nrml
+swnd_on_large               10    // (small-wind-detect) WND on: volume > (wnd_vol_noisy)              
+wnd_largew_counter          6000 
+
+wnr_str                     0.5   //AI based wind noise reduction strength
+wnd_th_nsd                  0.42  //NSOFF wind detect threshold
+wnd_th_nse                  0.42  //NSON wind detect threshold
+cng_noise_str               11.0 //comfort noise strength
+cng_wind_bound             -67.0 //wind scenario comfort noise max bound (dB)
+cng_norm_bound             -100.0 //norm scenario comfort noise max bound (dB)
+cng_attack                  210.0 //cng attack time (ms)
+cng_release                 21.0 //cng release time (ms)
+
+agc_gain_1x                 38.0   //1x agc default gain (dB)
+agc_gain_nx_max             48.0   //Nx agc maximum default gain (dB)
+agc_limit_1x               -1.0    //1x agc limiter (dB)
+agc_limit_nx_max           -1.0    //Nx agc limiter (dB)
+agc_drc_1x_i0              -6.0    //1x agc drc input  value (dB, after apply digital gain)
+agc_drc_1x_o0              -6.0    //1x agc drc output value (dB, after apply digital gain)
+agc_drc_1x_i1               26.0   //1x agc drc input  value (dB, after apply digital gain)
+agc_drc_1x_o1              -2.36   //1x agc drc output value (dB, after apply digital gain)
+agc_drc_nx_i0              -3.0    //Nx agc drc input  value (dB, after apply digital gain)
+agc_drc_nx_o0              -3.0    //Nx agc drc output value (dB, after apply digital gain)
+agc_drc_nx_i1               36.0   //Nx agc drc input  value (dB, after apply digital gain)
+agc_drc_nx_o1              -1.0    //Nx agc drc output value (dB, after apply digital gain)
+agc_atk_fast_1x             25.0   //attack  time (fast)
+agc_atk_norm_1x             100.0  //attack  time (normal)
+agc_atk_slow_1x             500.0  //attack  time (slow)
+agc_rel_fast_1x             500.0  //release time (fast)
+agc_rel_norm_1x             1500.0 //release time (normal)
+agc_rel_slow_1x             3000.0 //release time (slow)
+agc_atk_fast_nx             25.0   //attack  time zoom in mode (fast)
+agc_atk_norm_nx             100.0  //attack  time zoom in mode (normal)
+agc_atk_slow_nx             500.0  //attack  time zoom in mode (slow)
+agc_rel_fast_nx             500.0  //release time zoom in mode (fast)
+agc_rel_norm_nx             1000.0 //release time zoom in mode (normal)
+agc_rel_slow_nx             2000.0 //release time zoom in mode (slow)
+
+hdr_mic_top1                0 //top mic big gain channel idx
+hdr_mic_top2                1 //top mic small gain channel idx
+hdr_mic_btm1                2 //bottom mic big gain channel idx
+hdr_mic_btm2                3 //bottom mic small gain channel idx
+hdr_th_tp                  -6 //top mic hdr threshold (dB)
+hdr_th_bt                  -6 //bottom mic hdr threshold (dB)
+
+eq_nsd_1x_R_0 5.472987  //0hz
+eq_nsd_1x_R_1 5.3758893  //234hz
+eq_nsd_1x_R_2 7.720401  //468hz
+eq_nsd_1x_R_3 5.547918  //703hz
+eq_nsd_1x_R_4 5.503327  //937hz
+eq_nsd_1x_R_5 5.781588  //1171hz
+eq_nsd_1x_R_6 4.8876796  //1406hz
+eq_nsd_1x_R_7 4.101214  //1640hz
+eq_nsd_1x_R_8 3.3283856  //1875hz
+eq_nsd_1x_R_9 3.9347978  //2109hz
+eq_nsd_1x_R_10 2.615368  //2343hz
+eq_nsd_1x_R_11 1.6654496  //2578hz
+eq_nsd_1x_R_12 1.6849239  //2812hz
+eq_nsd_1x_R_13 0.8798981  //3187hz
+eq_nsd_1x_R_14 -0.5141933  //3609hz
+eq_nsd_1x_R_15 -1.825883  //4078hz
+eq_nsd_1x_R_16 -2.770192  //4593hz
+eq_nsd_1x_R_17 -3.0202749  //5156hz
+eq_nsd_1x_R_18 -2.1064038  //5812hz
+eq_nsd_1x_R_19 -2.850003  //6515hz
+eq_nsd_1x_R_20 -3.5451872  //7312hz
+eq_nsd_1x_R_21 -3.0186625  //8203hz
+eq_nsd_1x_R_22 -1.018553  //9187hz
+eq_nsd_1x_R_23 1.3059623  //10265hz
+eq_nsd_1x_R_24 1.6473329  //11484hz
+eq_nsd_1x_R_25 -0.23073447  //12843hz
+eq_nsd_1x_R_26 -1.73544  //14343hz
+eq_nsd_1x_R_27 -4.9865613  //16031hz
+eq_nsd_1x_R_28 -5.2859106  //17906hz
+eq_nsd_1x_R_29 -2.3055542  //21093hz
+
+eq_nsd_1x_L_0 5.720262  //0hz
+eq_nsd_1x_L_1 4.9384737  //234hz
+eq_nsd_1x_L_2 6.894185  //468hz
+eq_nsd_1x_L_3 4.804318  //703hz
+eq_nsd_1x_L_4 5.040963  //937hz
+eq_nsd_1x_L_5 5.0355763  //1171hz
+eq_nsd_1x_L_6 4.761157  //1406hz
+eq_nsd_1x_L_7 4.2779784  //1640hz
+eq_nsd_1x_L_8 3.7469962  //1875hz
+eq_nsd_1x_L_9 4.6570435  //2109hz
+eq_nsd_1x_L_10 3.7671833  //2343hz
+eq_nsd_1x_L_11 3.188338  //2578hz
+eq_nsd_1x_L_12 2.3223197  //2812hz
+eq_nsd_1x_L_13 1.7151308  //3187hz
+eq_nsd_1x_L_14 0.67987865  //3609hz
+eq_nsd_1x_L_15 -0.6775606  //4078hz
+eq_nsd_1x_L_16 -2.2407532  //4593hz
+eq_nsd_1x_L_17 -3.553632  //5156hz
+eq_nsd_1x_L_18 -2.2053716  //5812hz
+eq_nsd_1x_L_19 -2.8575063  //6515hz
+eq_nsd_1x_L_20 -3.6709821  //7312hz
+eq_nsd_1x_L_21 -3.1285818  //8203hz
+eq_nsd_1x_L_22 -0.9786657  //9187hz
+eq_nsd_1x_L_23 1.3822657  //10265hz
+eq_nsd_1x_L_24 1.7407709  //11484hz
+eq_nsd_1x_L_25 -0.25601357  //12843hz
+eq_nsd_1x_L_26 -1.8639221  //14343hz
+eq_nsd_1x_L_27 -4.929352  //16031hz
+eq_nsd_1x_L_28 -5.238803  //17906hz
+eq_nsd_1x_L_29 -2.0956569  //21093hz
+
+eq_nse_1x_R_0 5.472987  //0hz
+eq_nse_1x_R_1 5.3758893  //234hz
+eq_nse_1x_R_2 7.720401  //468hz
+eq_nse_1x_R_3 5.547918  //703hz
+eq_nse_1x_R_4 5.503327  //937hz
+eq_nse_1x_R_5 5.781588  //1171hz
+eq_nse_1x_R_6 4.8876796  //1406hz
+eq_nse_1x_R_7 4.101214  //1640hz
+eq_nse_1x_R_8 3.3283856  //1875hz
+eq_nse_1x_R_9 3.9347978  //2109hz
+eq_nse_1x_R_10 2.615368  //2343hz
+eq_nse_1x_R_11 1.6654496  //2578hz
+eq_nse_1x_R_12 1.6849239  //2812hz
+eq_nse_1x_R_13 0.8798981  //3187hz
+eq_nse_1x_R_14 -0.5141933  //3609hz
+eq_nse_1x_R_15 -1.825883  //4078hz
+eq_nse_1x_R_16 -2.770192  //4593hz
+eq_nse_1x_R_17 -3.0202749  //5156hz
+eq_nse_1x_R_18 -2.1064038  //5812hz
+eq_nse_1x_R_19 -2.850003  //6515hz
+eq_nse_1x_R_20 -3.5451872  //7312hz
+eq_nse_1x_R_21 -3.0186625  //8203hz
+eq_nse_1x_R_22 -1.018553  //9187hz
+eq_nse_1x_R_23 1.3059623  //10265hz
+eq_nse_1x_R_24 1.6473329  //11484hz
+eq_nse_1x_R_25 -0.23073447  //12843hz
+eq_nse_1x_R_26 -1.73544  //14343hz
+eq_nse_1x_R_27 -4.9865613  //16031hz
+eq_nse_1x_R_28 -5.2859106  //17906hz
+eq_nse_1x_R_29 -2.3055542  //21093hz
+
+eq_nse_1x_L_0 5.720262  //0hz
+eq_nse_1x_L_1 4.9384737  //234hz
+eq_nse_1x_L_2 6.894185  //468hz
+eq_nse_1x_L_3 4.804318  //703hz
+eq_nse_1x_L_4 5.040963  //937hz
+eq_nse_1x_L_5 5.0355763  //1171hz
+eq_nse_1x_L_6 4.761157  //1406hz
+eq_nse_1x_L_7 4.2779784  //1640hz
+eq_nse_1x_L_8 3.7469962  //1875hz
+eq_nse_1x_L_9 4.6570435  //2109hz
+eq_nse_1x_L_10 3.7671833  //2343hz
+eq_nse_1x_L_11 3.188338  //2578hz
+eq_nse_1x_L_12 2.3223197  //2812hz
+eq_nse_1x_L_13 1.7151308  //3187hz
+eq_nse_1x_L_14 0.67987865  //3609hz
+eq_nse_1x_L_15 -0.6775606  //4078hz
+eq_nse_1x_L_16 -2.2407532  //4593hz
+eq_nse_1x_L_17 -3.553632  //5156hz
+eq_nse_1x_L_18 -2.2053716  //5812hz
+eq_nse_1x_L_19 -2.8575063  //6515hz
+eq_nse_1x_L_20 -3.6709821  //7312hz
+eq_nse_1x_L_21 -3.1285818  //8203hz
+eq_nse_1x_L_22 -0.9786657  //9187hz
+eq_nse_1x_L_23 1.3822657  //10265hz
+eq_nse_1x_L_24 1.7407709  //11484hz
+eq_nse_1x_L_25 -0.25601357  //12843hz
+eq_nse_1x_L_26 -1.8639221  //14343hz
+eq_nse_1x_L_27 -4.929352  //16031hz
+eq_nse_1x_L_28 -5.238803  //17906hz
+eq_nse_1x_L_29 -2.0956569  //21093hz
+
+eq_nsd_nx_R_0 5.472987  //0hz
+eq_nsd_nx_R_1 5.3758893  //234hz
+eq_nsd_nx_R_2 7.720401  //468hz
+eq_nsd_nx_R_3 5.547918  //703hz
+eq_nsd_nx_R_4 5.503327  //937hz
+eq_nsd_nx_R_5 5.781588  //1171hz
+eq_nsd_nx_R_6 4.8876796  //1406hz
+eq_nsd_nx_R_7 4.101214  //1640hz
+eq_nsd_nx_R_8 3.3283856  //1875hz
+eq_nsd_nx_R_9 3.9347978  //2109hz
+eq_nsd_nx_R_10 2.615368  //2343hz
+eq_nsd_nx_R_11 1.6654496  //2578hz
+eq_nsd_nx_R_12 1.6849239  //2812hz
+eq_nsd_nx_R_13 0.8798981  //3187hz
+eq_nsd_nx_R_14 -0.5141933  //3609hz
+eq_nsd_nx_R_15 -1.825883  //4078hz
+eq_nsd_nx_R_16 -2.770192  //4593hz
+eq_nsd_nx_R_17 -3.0202749  //5156hz
+eq_nsd_nx_R_18 -2.1064038  //5812hz
+eq_nsd_nx_R_19 -2.850003  //6515hz
+eq_nsd_nx_R_20 -3.5451872  //7312hz
+eq_nsd_nx_R_21 -3.0186625  //8203hz
+eq_nsd_nx_R_22 -1.018553  //9187hz
+eq_nsd_nx_R_23 1.3059623  //10265hz
+eq_nsd_nx_R_24 1.6473329  //11484hz
+eq_nsd_nx_R_25 -0.23073447  //12843hz
+eq_nsd_nx_R_26 -1.73544  //14343hz
+eq_nsd_nx_R_27 -4.9865613  //16031hz
+eq_nsd_nx_R_28 -5.2859106  //17906hz
+eq_nsd_nx_R_29 -2.3055542  //21093hz
+
+eq_nsd_nx_L_0 5.720262  //0hz
+eq_nsd_nx_L_1 4.9384737  //234hz
+eq_nsd_nx_L_2 6.894185  //468hz
+eq_nsd_nx_L_3 4.804318  //703hz
+eq_nsd_nx_L_4 5.040963  //937hz
+eq_nsd_nx_L_5 5.0355763  //1171hz
+eq_nsd_nx_L_6 4.761157  //1406hz
+eq_nsd_nx_L_7 4.2779784  //1640hz
+eq_nsd_nx_L_8 3.7469962  //1875hz
+eq_nsd_nx_L_9 4.6570435  //2109hz
+eq_nsd_nx_L_10 3.7671833  //2343hz
+eq_nsd_nx_L_11 3.188338  //2578hz
+eq_nsd_nx_L_12 2.3223197  //2812hz
+eq_nsd_nx_L_13 1.7151308  //3187hz
+eq_nsd_nx_L_14 0.67987865  //3609hz
+eq_nsd_nx_L_15 -0.6775606  //4078hz
+eq_nsd_nx_L_16 -2.2407532  //4593hz
+eq_nsd_nx_L_17 -3.553632  //5156hz
+eq_nsd_nx_L_18 -2.2053716  //5812hz
+eq_nsd_nx_L_19 -2.8575063  //6515hz
+eq_nsd_nx_L_20 -3.6709821  //7312hz
+eq_nsd_nx_L_21 -3.1285818  //8203hz
+eq_nsd_nx_L_22 -0.9786657  //9187hz
+eq_nsd_nx_L_23 1.3822657  //10265hz
+eq_nsd_nx_L_24 1.7407709  //11484hz
+eq_nsd_nx_L_25 -0.25601357  //12843hz
+eq_nsd_nx_L_26 -1.8639221  //14343hz
+eq_nsd_nx_L_27 -4.929352  //16031hz
+eq_nsd_nx_L_28 -5.238803  //17906hz
+eq_nsd_nx_L_29 -2.0956569  //21093hz
+
+eq_nse_nx_R_0 5.472987  //0hz
+eq_nse_nx_R_1 5.3758893  //234hz
+eq_nse_nx_R_2 7.720401  //468hz
+eq_nse_nx_R_3 5.547918  //703hz
+eq_nse_nx_R_4 5.503327  //937hz
+eq_nse_nx_R_5 5.781588  //1171hz
+eq_nse_nx_R_6 4.8876796  //1406hz
+eq_nse_nx_R_7 4.101214  //1640hz
+eq_nse_nx_R_8 3.3283856  //1875hz
+eq_nse_nx_R_9 3.9347978  //2109hz
+eq_nse_nx_R_10 2.615368  //2343hz
+eq_nse_nx_R_11 1.6654496  //2578hz
+eq_nse_nx_R_12 1.6849239  //2812hz
+eq_nse_nx_R_13 0.8798981  //3187hz
+eq_nse_nx_R_14 -0.5141933  //3609hz
+eq_nse_nx_R_15 -1.825883  //4078hz
+eq_nse_nx_R_16 -2.770192  //4593hz
+eq_nse_nx_R_17 -3.0202749  //5156hz
+eq_nse_nx_R_18 -2.1064038  //5812hz
+eq_nse_nx_R_19 -2.850003  //6515hz
+eq_nse_nx_R_20 -3.5451872  //7312hz
+eq_nse_nx_R_21 -3.0186625  //8203hz
+eq_nse_nx_R_22 -1.018553  //9187hz
+eq_nse_nx_R_23 1.3059623  //10265hz
+eq_nse_nx_R_24 1.6473329  //11484hz
+eq_nse_nx_R_25 -0.23073447  //12843hz
+eq_nse_nx_R_26 -1.73544  //14343hz
+eq_nse_nx_R_27 -4.9865613  //16031hz
+eq_nse_nx_R_28 -5.2859106  //17906hz
+eq_nse_nx_R_29 -2.3055542  //21093hz
+
+eq_nse_nx_L_0 5.720262  //0hz
+eq_nse_nx_L_1 4.9384737  //234hz
+eq_nse_nx_L_2 6.894185  //468hz
+eq_nse_nx_L_3 4.804318  //703hz
+eq_nse_nx_L_4 5.040963  //937hz
+eq_nse_nx_L_5 5.0355763  //1171hz
+eq_nse_nx_L_6 4.761157  //1406hz
+eq_nse_nx_L_7 4.2779784  //1640hz
+eq_nse_nx_L_8 3.7469962  //1875hz
+eq_nse_nx_L_9 4.6570435  //2109hz
+eq_nse_nx_L_10 3.7671833  //2343hz
+eq_nse_nx_L_11 3.188338  //2578hz
+eq_nse_nx_L_12 2.3223197  //2812hz
+eq_nse_nx_L_13 1.7151308  //3187hz
+eq_nse_nx_L_14 0.67987865  //3609hz
+eq_nse_nx_L_15 -0.6775606  //4078hz
+eq_nse_nx_L_16 -2.2407532  //4593hz
+eq_nse_nx_L_17 -3.553632  //5156hz
+eq_nse_nx_L_18 -2.2053716  //5812hz
+eq_nse_nx_L_19 -2.8575063  //6515hz
+eq_nse_nx_L_20 -3.6709821  //7312hz
+eq_nse_nx_L_21 -3.1285818  //8203hz
+eq_nse_nx_L_22 -0.9786657  //9187hz
+eq_nse_nx_L_23 1.3822657  //10265hz
+eq_nse_nx_L_24 1.7407709  //11484hz
+eq_nse_nx_L_25 -0.25601357  //12843hz
+eq_nse_nx_L_26 -1.8639221  //14343hz
+eq_nse_nx_L_27 -4.929352  //16031hz
+eq_nse_nx_L_28 -5.238803  //17906hz
+eq_nse_nx_L_29 -2.0956569  //21093hz

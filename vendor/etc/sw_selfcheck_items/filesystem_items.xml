@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sw_selfcheck_items>
+	<command name = "software_selfcheck">
+	<item type = "function" tag = "fs_casefold_check" so_name = "libfscheckservice" para = "/data/media/0" ap = "system" value = "0" />
+	</command>
+</sw_selfcheck_items>

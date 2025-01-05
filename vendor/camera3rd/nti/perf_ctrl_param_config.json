@@ -1,0 +1,1081 @@
+{
+    "name": "perf_ctrl_param_config",
+    "Date": "20220319",
+    "AlgoVersion": "0.1.0",
+    "Version": "1",
+    "links": [
+        {
+            "name": "config_0",
+            "value": [
+                {
+                    "name": "uiMode",
+                    "value": "-1"
+                },
+                {
+                    "name": "nodeName",
+                    "value": "allshot"
+                },
+                {
+                    "name": "perfCtrlSize",
+                    "value": "10"
+                },
+                {
+                    "name": "perfCtrlInstanceType",
+                    "value": "mtkPerfClient"
+                },
+                {
+                    "name": "cpuSetMask",
+                    "value": "00110000"
+                },
+                {
+                    "name": "threadPriority",
+                    "value": "0"
+                },
+                {
+                    "name": "freqTable",
+                    "value": [
+                        {
+                            "name": "smallcpuminfreqkey",
+                            "value": "0x00408000"
+                        },
+                        {
+                            "name": "smallcpuminfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "smallcpumaxfreqkey",
+                            "value": "0x0040c000"
+                        },
+                        {
+                            "name": "smallcpumaxfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "bigcpuminfreqkey",
+                            "value": "0x00408100"
+                        },
+                        {
+                            "name": "bigcpuminfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "bigcpumaxfreqkey",
+                            "value": "0x0040c100"
+                        },
+                        {
+                            "name": "bigcpumaxfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "supercpuminfreqkey",
+                            "value": "0x00408200"
+                        },
+                        {
+                            "name": "supercpuminfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "supercpumaxfreqkey",
+                            "value": "0x0040c200"
+                        },
+                        {
+                            "name": "supercpumaxfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "gpuminlevelkey",
+                            "value": "0x00c00000"
+                        },
+                        {
+                            "name": "gpuminlevelvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "gpumaxlevelkey",
+                            "value": "0x00c04000"
+                        },
+                        {
+                            "name": "gpumaxlevelvalue",
+                            "value": "-1"
+                        }
+                    ]
+                },
+                {
+                    "name": "timeOutTM",
+                    "value": "5000"
+                }
+            ]
+        },
+        {
+            "name": "config_1",
+            "value": [
+                {
+                    "name": "uiMode",
+                    "value": "31"
+                },
+                {
+                    "name": "nodeName",
+                    "value": "allshot"
+                },
+                {
+                    "name": "perfCtrlSize",
+                    "value": "10"
+                },
+                {
+                    "name": "perfCtrlInstanceType",
+                    "value": "mtkPerfClient"
+                },
+                {
+                    "name": "cpuSetMask",
+                    "value": "00110000"
+                },
+                {
+                    "name": "threadPriority",
+                    "value": "0"
+                },
+                {
+                    "name": "cgroupEnable",
+                    "value": "1"
+                },
+                {
+                    "name": "cgroupShares",
+                    "value": "512"
+                },
+                {
+                    "name": "cpuUclampMax",
+                    "value": "50"
+                },
+                {
+                    "name": "freqTable",
+                    "value": [
+                        {
+                            "name": "smallcpuminfreqkey",
+                            "value": "0x00408000"
+                        },
+                        {
+                            "name": "smallcpuminfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "smallcpumaxfreqkey",
+                            "value": "0x0040c000"
+                        },
+                        {
+                            "name": "smallcpumaxfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "bigcpuminfreqkey",
+                            "value": "0x00408100"
+                        },
+                        {
+                            "name": "bigcpuminfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "bigcpumaxfreqkey",
+                            "value": "0x0040c100"
+                        },
+                        {
+                            "name": "bigcpumaxfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "supercpuminfreqkey",
+                            "value": "0x00408200"
+                        },
+                        {
+                            "name": "supercpuminfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "supercpumaxfreqkey",
+                            "value": "0x0040c200"
+                        },
+                        {
+                            "name": "supercpumaxfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "gpuminlevelkey",
+                            "value": "0x00c00000"
+                        },
+                        {
+                            "name": "gpuminlevelvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "gpumaxlevelkey",
+                            "value": "0x00c04000"
+                        },
+                        {
+                            "name": "gpumaxlevelvalue",
+                            "value": "-1"
+                        }
+                    ]
+                },
+                {
+                    "name": "timeOutTM",
+                    "value": "5000"
+                }
+            ]
+        },
+        {
+            "name": "config_2",
+            "value": [
+                {
+                    "name": "uiMode",
+                    "value": "39"
+                },
+                {
+                    "name": "nodeName",
+                    "value": "lightstream"
+                },
+                {
+                    "name": "perfCtrlSize",
+                    "value": "8"
+                },
+                {
+                    "name": "perfCtrlInstanceType",
+                    "value": "mtkPerfClient"
+                },
+                {
+                    "name": "cpuSetMask",
+                    "value": "11110000"
+                },
+                {
+                    "name": "threadPriority",
+                    "value": "-10"
+                },
+                {
+                    "name": "cgroupEnable",
+                    "value": "0"
+                },
+                {
+                    "name": "cgroupShares",
+                    "value": "1024"
+                },
+                {
+                    "name": "freqTable",
+                    "value": [
+                        {
+                            "name": "bigcpuminfreqkey",
+                            "value": "0x00408100"
+                        },
+                        {
+                            "name": "bigcpuminfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "bigcpumaxfreqkey",
+                            "value": "0x0040c100"
+                        },
+                        {
+                            "name": "bigcpumaxfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "supercpuminfreqkey",
+                            "value": "0x00408200"
+                        },
+                        {
+                            "name": "supercpuminfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "supercpumaxfreqkey",
+                            "value": "0x0040c200"
+                        },
+                        {
+                            "name": "supercpumaxfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "gpuminlevelkey",
+                            "value": "0x00c00000"
+                        },
+                        {
+                            "name": "gpuminlevelvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "gpumaxlevelkey",
+                            "value": "0x00c04000"
+                        },
+                        {
+                            "name": "gpumaxlevelvalue",
+                            "value": "-1"
+                        }
+                    ]
+                },
+                {
+                    "name": "timeOutTM",
+                    "value": "3000"
+                }
+            ]
+        },
+        {
+            "name": "config_3",
+            "value": [
+                {
+                    "name": "uiMode",
+                    "value": "31"
+                },
+                {
+                    "name": "nodeName",
+                    "value": "pbeauty"
+                },
+                {
+                    "name": "perfCtrlSize",
+                    "value": "8"
+                },
+                {
+                    "name": "perfCtrlInstanceType",
+                    "value": "mtkPerfClient"
+                },
+                {
+                    "name": "cpuSetMask",
+                    "value": "11111111"
+                },
+                {
+                    "name": "threadPriority",
+                    "value": "0"
+                },
+                {
+                    "name": "cgroupEnable",
+                    "value": "0"
+                },
+                {
+                    "name": "cgroupShares",
+                    "value": "1024"
+                },
+                {
+                    "name": "freqTable",
+                    "value": [
+                        {
+                            "name": "bigcpuminfreqkey",
+                            "value": "0x00408100"
+                        },
+                        {
+                            "name": "bigcpuminfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "bigcpumaxfreqkey",
+                            "value": "0x0040c100"
+                        },
+                        {
+                            "name": "bigcpumaxfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "supercpuminfreqkey",
+                            "value": "0x00408200"
+                        },
+                        {
+                            "name": "supercpuminfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "supercpumaxfreqkey",
+                            "value": "0x0040c200"
+                        },
+                        {
+                            "name": "supercpumaxfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "gpuminlevelkey",
+                            "value": "0x00c00000"
+                        },
+                        {
+                            "name": "gpuminlevelvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "gpumaxlevelkey",
+                            "value": "0x00c04000"
+                        },
+                        {
+                            "name": "gpumaxlevelvalue",
+                            "value": "-1"
+                        }
+                    ]
+                },
+                {
+                    "name": "timeOutTM",
+                    "value": "50"
+                }
+            ]
+        },
+        {
+            "name": "config_4",
+            "value": [
+                {
+                    "name": "uiMode",
+                    "value": "59"
+                },
+                {
+                    "name": "nodeName",
+                    "value": "shot_tiltshift_bokeh"
+                },
+                {
+                    "name": "perfCtrlSize",
+                    "value": "12"
+                },
+                {
+                    "name": "perfCtrlInstanceType",
+                    "value": "mtkPerfClient"
+                },
+                {
+                    "name": "cpuSetMask",
+                    "value": "00001000"
+                },
+                {
+                    "name": "threadPriority",
+                    "value": "0"
+                },
+                {
+                    "name": "cgroupEnable",
+                    "value": "0"
+                },
+                {
+                    "name": "cgroupShares",
+                    "value": "1024"
+                },
+                {
+                    "name": "freqTable",
+                    "value": [
+                        {
+                            "name": "bigcpuminfreqkey",
+                            "value": "0x00408100"
+                        },
+                        {
+                            "name": "bigcpuminfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "bigcpumaxfreqkey",
+                            "value": "0x0040c100"
+                        },
+                        {
+                            "name": "bigcpumaxfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "supercpuminfreqkey",
+                            "value": "0x00408200"
+                        },
+                        {
+                            "name": "supercpuminfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "supercpumaxfreqkey",
+                            "value": "0x0040c200"
+                        },
+                        {
+                            "name": "supercpumaxfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "gpuminlevelkey",
+                            "value": "0x00c00000"
+                        },
+                        {
+                            "name": "gpuminlevelvalue",
+                            "value": "5"
+                        },
+                        {
+                            "name": "gpumaxlevelkey",
+                            "value": "0x00c04000"
+                        },
+                        {
+                            "name": "gpumaxlevelvalue",
+                            "value": "5"
+                        }
+                    ]
+                },
+                {
+                    "name": "timeOutTM",
+                    "value": "3000"
+                }
+            ]
+        },
+        {
+            "name": "config_5",
+            "value": [
+                {
+                    "name": "uiMode",
+                    "value": "-1"
+                },
+                {
+                    "name": "nodeName",
+                    "value": "eng_dualcalib"
+                },
+                {
+                    "name": "perfCtrlSize",
+                    "value": "10"
+                },
+                {
+                    "name": "perfCtrlInstanceType",
+                    "value": "mtkPerfClient"
+                },
+                {
+                    "name": "cpuSetMask",
+                    "value": "00110000"
+                },
+                {
+                    "name": "threadPriority",
+                    "value": "0"
+                },
+                {
+                    "name": "freqTable",
+                    "value": [
+                        {
+                            "name": "smallcpuminfreqkey",
+                            "value": "0x00408000"
+                        },
+                        {
+                            "name": "smallcpuminfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "smallcpumaxfreqkey",
+                            "value": "0x0040c000"
+                        },
+                        {
+                            "name": "smallcpumaxfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "bigcpuminfreqkey",
+                            "value": "0x00408100"
+                        },
+                        {
+                            "name": "bigcpuminfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "bigcpumaxfreqkey",
+                            "value": "0x0040c100"
+                        },
+                        {
+                            "name": "bigcpumaxfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "supercpuminfreqkey",
+                            "value": "0x00408200"
+                        },
+                        {
+                            "name": "supercpuminfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "supercpumaxfreqkey",
+                            "value": "0x0040c200"
+                        },
+                        {
+                            "name": "supercpumaxfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "gpuminlevelkey",
+                            "value": "0x00c00000"
+                        },
+                        {
+                            "name": "gpuminlevelvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "gpumaxlevelkey",
+                            "value": "0x00c04000"
+                        },
+                        {
+                            "name": "gpumaxlevelvalue",
+                            "value": "-1"
+                        }
+                    ]
+                },
+                {
+                    "name": "timeOutTM",
+                    "value": "3000"
+                }
+            ]
+        },
+        {
+            "name": "config_6",
+            "value": [
+                {
+                    "name": "uiMode",
+                    "value": "0"
+                },
+                {
+                    "name": "nodeName",
+                    "value": "remosaic"
+                },
+                {
+                    "name": "perfCtrlSize",
+                    "value": "10"
+                },
+                {
+                    "name": "perfCtrlInstanceType",
+                    "value": "mtkPerfClient"
+                },
+                {
+                    "name": "cpuSetMask",
+                    "value": "01110000"
+                },
+                {
+                    "name": "threadPriority",
+                    "value": "-10"
+                },
+                {
+                    "name": "freqTable",
+                    "value": [
+                        {
+                            "name": "smallcpuminfreqkey",
+                            "value": "0x00408000"
+                        },
+                        {
+                            "name": "smallcpuminfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "smallcpumaxfreqkey",
+                            "value": "0x0040c000"
+                        },
+                        {
+                            "name": "smallcpumaxfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "bigcpuminfreqkey",
+                            "value": "0x00408100"
+                        },
+                        {
+                            "name": "bigcpuminfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "bigcpumaxfreqkey",
+                            "value": "0x0040c100"
+                        },
+                        {
+                            "name": "bigcpumaxfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "supercpuminfreqkey",
+                            "value": "0x00408200"
+                        },
+                        {
+                            "name": "supercpuminfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "supercpumaxfreqkey",
+                            "value": "0x0040c200"
+                        },
+                        {
+                            "name": "supercpumaxfreqvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "gpuminlevelkey",
+                            "value": "0x00c00000"
+                        },
+                        {
+                            "name": "gpuminlevelvalue",
+                            "value": "-1"
+                        },
+                        {
+                            "name": "gpumaxlevelkey",
+                            "value": "0x00c04000"
+                        },
+                        {
+                            "name": "gpumaxlevelvalue",
+                            "value": "-1"
+                        }
+                    ]
+                },
+                {
+                    "name": "timeOutTM",
+                    "value": "3000"
+                }
+            ]
+        },
+        {
+            "name": "config_7",
+            "value": [
+                {
+                    "name":"uiMode",
+                    "value":"29"
+                },
+                {
+                    "name":"nodeName",
+                    "value":"remosaic"
+                },
+                {
+                    "name":"perfCtrlSize",
+                    "value":"10"
+                },
+                {
+                    "name":"perfCtrlInstanceType",
+                    "value":"mtkPerfClient"
+                },
+                {
+                    "name":"cpuSetMask",
+                    "value":"11110000"
+                },
+                {
+                    "name":"threadPriority",
+                    "value":"0"
+                },
+                {
+                    "name":"freqTable",
+                    "value":[
+                            {
+                                    "name":"smallcpuminfreqkey",
+                                    "value":"0x03808000"
+                            },
+                            {
+                                    "name":"smallcpuminfreqvalue",
+                                    "value":"300"
+                            },
+                            {
+                                    "name":"smallcpumaxfreqkey",
+                                    "value":"0x03808100"
+                            },
+                            {
+                                    "name":"smallcpumaxfreqvalue",
+                                    "value":"300"
+                            },
+                            {
+                                    "name":"bigcpuminfreqkey",
+                                    "value":"0x03808200"
+                            },
+                            {
+                                    "name":"bigcpuminfreqvalue",
+                                    "value":"300"
+                            },
+                            {
+                                    "name":"bigcpumaxfreqkey",
+                                    "value":"0x03808300"
+                            },
+                            {
+                                    "name":"bigcpumaxfreqvalue",
+                                    "value":"100"
+                            },
+                            {
+                                    "name":"supercpuminfreqkey",
+                                    "value":"0x03808400"
+                            },
+                            {
+                                    "name":"supercpuminfreqvalue",
+                                    "value":"100"
+                            },
+                            {
+                                    "name":"supercpumaxfreqkey",
+                                    "value":"0x0040c200"
+                            },
+                            {
+                                    "name":"supercpumaxfreqvalue",
+                                    "value":"-1"
+                            },
+                            {
+                                    "name":"gpuminlevelkey",
+                                    "value":"0x00c00000"
+                            },
+                            {
+                                    "name":"gpuminlevelvalue",
+                                    "value":"-1"
+                            },
+                            {
+                                    "name":"gpumaxlevelkey",
+                                    "value":"0x00c04000"
+                            },
+                            {
+                                    "name":"gpumaxlevelvalue",
+                                    "value":"-1"
+                            }
+                    ]
+                },
+                {
+                    "name":"timeOutTM",
+                    "value":"5000"
+                }
+                ]
+        }, {"name":"config_8",
+            "value":[
+                {
+                    "name":"uiMode",
+                    "value":"74"
+                },
+                {
+                    "name":"nodeName",
+                    "value":"slowShutter"
+                },
+                {
+                    "name":"perfCtrlSize",
+                    "value":"8"
+                },
+                {
+                    "name":"perfCtrlInstanceType",
+                    "value":"mtkPerfClient"
+                },
+                {
+                    "name":"cpuSetMask",
+                    "value":"11110000"
+                },
+                {
+                    "name":"threadPriority",
+                    "value":"-10"
+                },
+                {
+                    "name":"cgroupEnable",
+                    "value":"0"
+                },
+                {
+                    "name":"cgroupShares",
+                    "value":"1024"
+                },
+                {
+                    "name":"freqTable",
+                    "value":[
+                            {
+                                    "name":"bigcpuminfreqkey",
+                                    "value":"0x00408100"
+                            },
+                            {
+                                    "name":"bigcpuminfreqvalue",
+                                    "value":"-1"
+                            },
+                            {
+                                    "name":"bigcpumaxfreqkey",
+                                    "value":"0x0040c100"
+                            },
+                            {
+                                    "name":"bigcpumaxfreqvalue",
+                                    "value":"-1"
+                            },
+                            {
+                                    "name":"supercpuminfreqkey",
+                                    "value":"0x00408200"
+                            },
+                            {
+                                    "name":"supercpuminfreqvalue",
+                                    "value":"-1"
+                            },
+                            {
+                                    "name":"supercpumaxfreqkey",
+                                    "value":"0x0040c200"
+                            },
+                            {
+                                    "name":"supercpumaxfreqvalue",
+                                    "value":"-1"
+                            },
+                            {
+                                    "name":"gpuminlevelkey",
+                                    "value":"0x00c00000"
+                            },
+                            {
+                                    "name":"gpuminlevelvalue",
+                                    "value":"-1"
+                            },
+                            {
+                                    "name":"gpumaxlevelkey",
+                                    "value":"0x00c04000"
+                            },
+                            {
+                                    "name":"gpumaxlevelvalue",
+                                    "value":"-1"
+                            }
+                    ]
+                },
+                {
+                    "name":"timeOutTM",
+                    "value":"3000"
+                }
+            ]
+        },
+        {
+            "name": "config_9",
+            "value": [
+                {
+                    "name":"uiMode",
+                    "value":"31"
+                },
+                {
+                    "name":"nodeName",
+                    "value":"raw"
+                },
+                {
+                    "name":"frequencyHint",
+                    "value":"80"
+                }
+                ]
+        },
+        {
+            "name": "config_10",
+            "value": [
+                {
+                    "name":"uiMode",
+                    "value":"31"
+                },
+                {
+                    "name":"nodeName",
+                    "value":"yuv"
+                },
+                {
+                    "name":"frequencyHint",
+                    "value":"50"
+                }
+                ]
+        },
+        {
+            "name": "config_11",
+            "value": [
+                {
+                    "name":"uiMode",
+                    "value":"1"
+                },
+                {
+                    "name":"nodeName",
+                    "value":"allshot"
+                },
+                {
+                    "name": "perfCtrlSize",
+                    "value": "10"
+                },
+                {
+                    "name": "perfCtrlInstanceType",
+                    "value": "mtkPerfClient"
+                },
+                {
+                    "name": "cpuSetMask",
+                    "value": "00110000"
+                },
+                {
+                    "name": "threadPriority",
+                    "value": "0"
+                },
+                {
+                    "name": "cgroupEnable",
+                    "value": "1"
+                },
+                {
+                    "name": "cgroupShares",
+                    "value": "1024"
+                },
+                {
+                    "name": "cpuUclampMax",
+                    "value": "50"
+                }
+            ]
+        },
+        {
+            "name": "config_12",
+            "value": [
+                {
+                    "name":"uiMode",
+                    "value":"29"
+                },
+                {
+                    "name":"nodeName",
+                    "value":"rawNR"
+                },
+                {
+                    "name":"perfCtrlSize",
+                    "value":"10"
+                },
+                {
+                    "name":"perfCtrlInstanceType",
+                    "value":"mtkPerfClient"
+                },
+                {
+                    "name":"cpuSetMask",
+                    "value":"01110000"
+                },
+                {
+                    "name":"threadPriority",
+                    "value":"0"
+                },
+                {
+                    "name":"freqTable",
+                    "value":[
+                            {
+                                    "name":"smallcpuminfreqkey",
+                                    "value":"0x00408000"
+                            },
+                            {
+                                    "name":"smallcpuminfreqvalue",
+                                    "value":"-1"
+                            },
+                            {
+                                    "name":"smallcpumaxfreqkey",
+                                    "value":"0x0040c000"
+                            },
+                            {
+                                    "name":"smallcpumaxfreqvalue",
+                                    "value":"-1"
+                            },
+                            {
+                                    "name":"bigcpuminfreqkey",
+                                    "value":"0x00408100"
+                            },
+                            {
+                                    "name":"bigcpuminfreqvalue",
+                                    "value":"-1"
+                            },
+                            {
+                                    "name":"bigcpumaxfreqkey",
+                                    "value":"0x0040c100"
+                            },
+                            {
+                                    "name":"bigcpumaxfreqvalue",
+                                    "value":"-1"
+                            },
+                            {
+                                    "name":"supercpuminfreqkey",
+                                    "value":"0x00408200"
+                            },
+                            {
+                                    "name":"supercpuminfreqvalue",
+                                    "value":"-1"
+                            },
+                            {
+                                    "name":"supercpumaxfreqkey",
+                                    "value":"0x0040c200"
+                            },
+                            {
+                                    "name":"supercpumaxfreqvalue",
+                                    "value":"-1"
+                            },
+                            {
+                                    "name":"gpuminlevelkey",
+                                    "value":"0x00c00000"
+                            },
+                            {
+                                    "name":"gpuminlevelvalue",
+                                    "value":"-1"
+                            },
+                            {
+                                    "name":"gpumaxlevelkey",
+                                    "value":"0x00c04000"
+                            },
+                            {
+                                    "name":"gpumaxlevelvalue",
+                                    "value":"-1"
+                            }
+                    ]
+                },
+                {
+                    "name":"timeOutTM",
+                    "value":"5000"
+                }
+            ]
+        }			
+    ]
+}

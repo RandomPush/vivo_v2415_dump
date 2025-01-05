@@ -1,0 +1,10 @@
+<!--
+    Input:
+        external/factory/aftersale/hardware/interfaces/vivoasem/aidl/default/vendor.aftersale.hardware.vivoasem.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="aidl">
+        <name>vendor.aftersale.hardware.vivoasem</name>
+        <fqname>IVivoASEm/default</fqname>
+    </hal>
+</manifest>

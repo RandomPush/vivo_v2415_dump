@@ -1,0 +1,223 @@
+service atcid-factory /factory/bin/atcid_factory
+	class late_start
+	user root
+	group root system radio cache audio drmrpc
+	disabled
+
+service atcid-user /vendor/bin/atcid_user
+    user root
+    group root system radio cache audio wifi bluetooth
+    disabled
+
+service atcid-aftersale /factory/bin/atcid_aftersale
+    user root
+    group root system radio cache audio
+    disabled
+
+service atcid_vendor_init /vendor/bin/atcid_vendor -init
+	class late_start
+	user root
+	group system
+	oneshot
+
+service atcid_vendor_demo /vendor/bin/atcid_vendor -demo
+	class late_start
+	user root
+	group system
+	disabled
+
+service atcid_vendor_socket /vendor/bin/atcid_vendor -socket
+	class late_start
+	socket atcid_vendor_socket stream 660 radio system
+	user root
+	group system drmrpc bluetooth graphics wifi audio cameraserver
+
+service atcid_default_simlock /vendor/bin/atcid_user -simlock
+    user root
+    group root system radio cache audio
+    disabled
+    oneshot
+
+# factory engineermode test begin
+on property:persist.sys.bbkem=1
+	start atcid-factory
+	start atcid_vendor_socket
+	stop vendor.engpcclientlte
+	stop atci_service_sys
+	stop atcid-daemon-e
+	stop atcid-daemon-u
+
+on property:persist.sys.bbkem=0
+	stop atcid-factory
+# factory engineermode test end
+
+# user engineermode test begin
+on property:persist.sys.user.bbkem=1
+	start atcid-user
+	stop vendor.engpcclientlte
+	start atcid_vendor_socket
+
+on property:persist.sys.user.bbkem=0
+	stop atcid-user
+# user engineermode test end
+
+# aftersale engineermode test begin
+on property:persist.sys.aftersale.bbkem=1
+	start atcid-aftersale
+	start atcid_vendor_socket
+
+on property:persist.sys.aftersale.bbkem=0
+	stop atcid-aftersale
+# aftersale engineermode test end
+
+on property:vendor.vivo.factory_mount=1
+    mount ext4 /dev/block/by-name/factory /factory ro barrier=1 discard
+    mount erofs /dev/block/by-name/factory /factory ro
+
+on property:sys.rpmb.screen_id=0 && property:persist.sys.bbkem=0 && property:persist.sys.user.bbkem=0
+    stop atcid_vendor_socket
+
+service vivo_em_svr /vendor/bin/vivo_em_svr -init
+	class late_start
+	user root
+	group system cache audio
+	oneshot
+
+service vivo_em_svr_init /vendor/bin/vivo_em_svr -info_init
+	class main
+	user root
+	group system cache audio
+	oneshot
+
+service vivo_em_float /vendor/bin/vivo_em_svr -floating
+	user root
+	group system cache
+	disabled
+	oneshot
+
+service atcid_fbe /system/bin/atcid_common -fbe
+	user root
+	group system cache sdcard_rw media_rw
+	disabled
+	oneshot
+
+on property:sys.boot_completed=1
+    start vivo_em_float
+    start atcid_default_simlock
+
+on property:sys.user.0.ce_available=true
+    start atcid_fbe
+
+service vivo_em_dpdt /vendor/bin/vivo_em_svr -dpdt
+	user root
+	group system
+	disabled
+	oneshot
+
+on property:sys.dpdt.control=1
+    start vivo_em_dpdt
+
+on property:sys.boot_completed=1 && property:persist.sys.atm.flag=1
+    start meta_tst
+    start loghidlvendorservice
+    start loghidlsysservice
+    start atcid-daemon-u
+
+service factory_logcat /system/bin/atcid_common -log
+	user root
+	group system cache
+	disabled
+	oneshot
+
+on property:sys.factory.log=1
+    start factory_logcat
+
+service recovery_log /system/bin/atcid_common -recovery_log
+    user root
+    group system cache
+    disabled
+    oneshot
+
+on property:sys.factory.log=2
+    start recovery_log
+
+on property:sys.factory.log=0
+    stop recovery_log
+
+on post-fs-data
+    mkdir /data/engineermode 0774 root system encryption=Attempt
+    mkdir /data/vendor/engineermode 0774
+    chown system system /data/vendor/engineermode
+    restorecon /data/vendor/engineermode
+    chown root system /mnt/vendor/persist/sensor
+    chmod 775 /mnt/vendor/persist/sensor/
+    chmod 755 /mnt/vendor/persist/sensor/low_light_color_cali
+    chmod 755 /mnt/vendor/persist/sensor/full_light_color_cali
+    chmod 755 /mnt/vendor/persist/sensor/full_light_location_cali
+    chmod 755 /mnt/vendor/persist/sensor/low_light_color_cali_b
+    chmod 755 /mnt/vendor/persist/sensor/full_light_color_cali_b
+    chmod 755 /mnt/vendor/persist/sensor/full_light_location_cali_b
+
+# vivo chenjianzhong add for virtual_ab
+on post-fs-data && property:ro.virtual_ab.enabled=true
+    chown system cache /logdata/recovery/engineer
+    chown system cache /logdata/recovery/engineer/recovery
+	restorecon /logdata/recovery/engineer
+
+service vivo_em_tf /system/bin/atcid_common -setTfTime
+	user root
+	group system cache
+	disabled
+	oneshot
+
+service vivo_em_svr_late_init /vendor/bin/vivo_em_svr -init_after_encryption
+	class main
+	user root
+	group system cache audio
+	oneshot
+
+on property:sys.user.0.ce_available=true
+	start vivo_em_tf
+	start vivo_em_svr_late_init
+
+on property:sys.tool_test_app.start=1
+	chmod 444 /data/media/0/last_tool_test_app.ini
+	copy  /data/media/0/last_tool_test_app.ini /cache/recovery/last_tool_test_app.ini
+	rm /data/media/0/last_tool_test_app.ini
+
+on property:sys.tool_test_app.start=0
+	rm /cache/recovery/last_tool_test_app.ini
+	rm /data/media/0/last_tool_test_app.ini
+
+service vfactory_socket /factory/bin/vfactory -socket
+	class core
+	socket vfactory_socket stream 660 radio system
+	user root
+	group system drmrpc cache
+	oneshot
+
+service atcid_common_bpf_attach /system/bin/atcid_common -bpf_attach
+	user root
+	group system cache
+	disabled
+	oneshot
+
+service atcid_common_bpf_detach /system/bin/atcid_common -bpf_detach
+	user root
+	group system cache
+	disabled
+	oneshot
+
+on property:sys.vivo.bpf_prog_attach=1
+	start atcid_common_bpf_attach
+
+on property:sys.vivo.bpf_prog_detach=1
+	start atcid_common_bpf_detach
+
+on property:persist.sys.engpc.test=1 && property:persist.sys.bbkem=1
+	stop atcid-factory
+	start vendor.engpcclientlte
+
+on property:ro.bootmode=autotest && property:persist.sys.bbkem=1
+	stop atcid-factory
+	start vendor.engpcclientlte

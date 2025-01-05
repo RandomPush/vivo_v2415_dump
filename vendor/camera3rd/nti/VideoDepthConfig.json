@@ -1,0 +1,39 @@
+{
+    "version": "1.0.8",
+    "comment_modelType": "0:maxmodel, 1:minmodel",
+    "modelType": 0,
+    "isPreProc": 0,
+    "isPostProc": 0,
+    "scaleInfo":
+    {
+        "isNeedScale": 1,
+        "a": 190,
+        "b": 37.0220,
+        "c": 4.2915
+    },
+    "netInfo":
+    [
+        {
+            "modelPath": "VideoDepthMT_20231010_dla2vdnn_w288xh512.vdnn",
+            "runtime": "neuron",
+            "threadNum": 1,
+            "frequency": 35,
+            "comment_powermode": "0:Balanced, 1:Performance, 2:Saving, 3:Turbo",
+            "powerMode": 2,
+            "deadlineTime": 100,
+            "inputNode": ["input_y", "input_uv", "rotation_pre", "yuv2grb_table", "rotation_post", "scale_lut"],
+            "outputNode": ["output"]
+        },
+        {
+            "modelPath": "VideoDepthMT_20231010_dla2vdnn_w512xh288.vdnn",
+            "runtime": "neuron",
+            "threadNum": 1,
+            "frequency": 35,
+            "comment_powermode": "0:Balanced, 1:Performance, 2:Saving, 3:Turbo",
+            "powerMode": 2,
+            "deadlineTime": 100,
+            "inputNode": ["input_y", "input_uv", "rotation_pre", "yuv2grb_table", "rotation_post", "scale_lut"],
+            "outputNode": ["output"]
+        }
+    ]
+}

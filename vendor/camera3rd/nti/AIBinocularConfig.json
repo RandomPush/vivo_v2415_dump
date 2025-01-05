@@ -1,0 +1,54 @@
+{
+  "configVersion": "2.0.1.0",
+  "networkInfo":
+  [
+      {
+          "comment_lensDirection": "0:horizontal, 1:vertical",
+          "lensDirection": 0,
+          "modelNum": 1,
+          "loopNum": 11,
+          "comment_platform": "0:MTK5, 1:MTK6, 5:QCOM",
+          "platform": 1,
+          "isCropBorder": 1,
+          "isUseRefRgb": 1,
+          "shareBuffSize": 21233664,
+          "networkParam":
+          [
+              {
+                  "modelPath": "mt6991_1719536490875359_h736w960.vdnn",
+                  "runtime": "neuron",
+                  "threadNum": 1,
+                  "frequency": 100,
+                  "comment_powermode": "0:Balanced, 1:Performance, 2:Saving, 3:Turbo",
+                  "powerMode": 2,
+                  "sessionName": "raft-stereo",
+                  "inputNode": ["input/0", "input/1", "input/2", "LoopInit", "LoopIncrement", "LoopNum", "ConstantValue"],
+                  "outputNode": ["out1", "out2", "out3", "out4", "out5", "slice/1183"]
+              }
+          ]
+      },
+      {
+          "lensDirection": 1,
+          "modelNum": 1,
+          "loopNum": 11,
+          "platform": 1,
+          "isCropBorder": 1,
+          "isUseRefRgb": 1,
+          "shareBuffSize": 21233664,
+          "networkParam":
+          [
+              {
+                  "modelPath": "mt6991_1719537167485982_h960w736.vdnn",
+                  "runtime": "neuron",
+                  "threadNum": 1,
+                  "frequency": 100,
+                  "comment_powermode": "0:Balanced, 1:Performance, 2:Saving, 3:Turbo",
+                  "powerMode": 2,
+                  "sessionName": "raft-stereo",
+                  "inputNode": ["input/0", "input/1", "input/2", "LoopInit", "LoopIncrement", "LoopNum", "ConstantValue"],
+                  "outputNode": ["out1", "out2", "out3", "out4", "out5", "slice/1183"]
+              }
+          ]
+      }
+  ]
+}

@@ -1,0 +1,61 @@
+{	
+	"ARNET": {
+		"modelPath": "micBokehAR_DX4_256.vdnn",
+		"iNodeNum": 3,
+		"iNodeCfgs": {
+			"name_0": "input_0",
+			"allocMem_0": 1,
+			"memType_0": 0,
+			"name_1": "input_1",
+			"allocMem_1": 1,
+			"memType_1": 0,
+			"name_2": "input_2",
+			"allocMem_2": 1,
+			"memType_2": 0
+		},
+		"oNodeCfgs": {
+			"name": "depth_to_space_26",
+			"allocMem": 1,
+			"memType": 0
+		},
+		"sessionName": "default",
+		"inferType": 7
+	},
+	"IUNET": {
+		"modelPath": "micBokehIU_DX4.vdnn",
+		"iNodeNum": 4,
+		"iNodeCfgs": {
+			"name_0": "input_0",
+			"allocMem_0": 1,
+			"memType_0": 0,
+			"name_1": "input_1",
+			"allocMem_1": 1,
+			"memType_1": 0,
+			"name_2": "input_2",
+			"allocMem_2": 1,
+			"memType_2": 0,
+			"name_3": "input_3",
+			"allocMem_3": 1,
+			"memType_3": 0
+		},
+		"oNodeCfgs": {
+			"name": "depth_to_space_18",
+			"allocMem": 1,
+			"memType": 0
+		},
+		"sessionName": "default",
+		"inferType": 7
+	},
+
+	
+	"degOfBlurBenchMark": 12,
+	"degOfSpot":          64,
+	"arInputScale":		  0.0000305185,
+	"arOutputScale":	  0.0000316382,
+	"iuInputScale":		  0.0000305185,
+	"iuOutputScale":	  0.0000323168,
+	"arInputZeroPt":	  0,
+	"arOutputZeroPt":	  0,
+	"iuInputZeroPt":	  0,
+	"iuOutputZeroPt":	  0
+}

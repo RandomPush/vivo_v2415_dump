@@ -1,0 +1,293 @@
+<swispConfig>
+  <TotalLevNum>11</TotalLevNum>
+  <levConfigData>
+    <rawISO description="rawISO = shortGain * 50.">50</rawISO>
+    <yModelParameters description="drcGain ={1,2,3,4}">
+          <blurScale description="bigger means sharper, range:[0, 0.5]">0.6,0.6,0.6,0.6</blurScale>
+          <blurGain description="bigger means sharper, range:[0, 20]">6,6,6,6</blurGain>
+          <overShootLevel description="overshoot remove strength, range:[0, 1.5]">0.3,0.3,0.3,0.3</overShootLevel>
+          <overShootEdgeLevel description="overshoot on edge remove strength, range:[0, 1.5]">0.6,0.6,0.6,0.6</overShootEdgeLevel>
+          <underShootLevel description="undershoot remove strength, range:[0, 1.5]">0.3,0.3,0.3,0.3</underShootLevel>
+          <underShootEdgeLevel description="undershoot on edge remove strength, range:[0, 1.5]">0.6,0.6,0.6,0.6</underShootEdgeLevel>
+          <minBlurScale description="minimum blur scale, should be less/eqaul to blurScale, range:[0, 1]">0.35,0.35,0.35,0.35</minBlurScale>
+          <!-- luma shot noise level, bigger means stronger denoise. -->
+          <noise1Level description="luma shot noise, range:[0, 1]">0.025,0.025,0.025,0.075</noise1Level>
+          <!-- luma read noise level, bigger means stronger denoise. Normally we fix it as 0 -->
+          <noise2Level description="luma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+    </yModelParameters>
+    <uvModelParameters description="drcGain ={1,2,3,4}">
+          <!-- chroma shot noise level, bigger means stronger denoise. -->
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.1,0.1,0.1,0.2</minLevel>
+              <anchorLevel description="anchor level">0.2,0.2,0.2,0.3</anchorLevel>
+              <maxLevel description="maximum level">0.5,0.5,0.5,0.6</maxLevel>
+          </noise1Level>
+          <!-- chroma read noise level, bigger means stronger denoise. Normally we fix it as 0 -->
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <!-- chroma read noise size, we will downscale the UV to 1/n resolutions and run the denoise model. -->
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <!-- The max down sampling scale for input -->
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </uvModelParameters>
+  </levConfigData>
+  <levConfigData>
+    <rawISO description="rawISO = shortGain * 50.">100</rawISO>
+    <inputLowTextureGainL0 description="gain weight to enhance level 0 low texture of input">0</inputLowTextureGainL0>
+    <inputLowTextureGainL1 description="gain weight to enhance level 1 low texture of input">0</inputLowTextureGainL1>
+    <yModelParameters description="drcGain ={1,2,3,4}">
+          <blurScale description="bigger means sharper, range:[0, 0.5]">0.6,0.6,0.6,0.6</blurScale>
+          <blurGain description="bigger means sharper, range:[0, 20]">6,6,6,6</blurGain>
+          <overShootLevel description="overshoot remove strength, range:[0, 1.5]">0.3,0.3,0.3,0.3</overShootLevel>
+          <overShootEdgeLevel description="overshoot on edge remove strength, range:[0, 1.5]">0.6,0.6,0.6,0.6</overShootEdgeLevel>
+          <underShootLevel description="undershoot remove strength, range:[0, 1.5]">0.3,0.3,0.3,0.3</underShootLevel>
+          <underShootEdgeLevel description="undershoot on edge remove strength, range:[0, 1.5]">0.6,0.6,0.6,0.6</underShootEdgeLevel>
+          <minBlurScale description="minimum blur scale, should be less/eqaul to blurScale, range:[0, 1]">0.35,0.35,0.35,0.35</minBlurScale>
+          <noise1Level description="luma shot noise, range:[0, 1]">0.025,0.025,0.025,0.075</noise1Level>
+          <noise2Level description="luma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+    </yModelParameters>
+    <uvModelParameters description="drcGain ={1,2,3,4}">
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.1,0.1,0.15,0.2</minLevel>
+              <anchorLevel description="anchor level">0.2,0.2,0.2,0.3</anchorLevel>
+              <maxLevel description="maximum level">0.5,0.5,0.5,0.6</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </uvModelParameters>
+  </levConfigData>
+  <levConfigData>
+    <rawISO description="rawISO = shortGain * 50.">200</rawISO>
+    <inputLowTextureGainL0 description="gain weight to enhance level 0 low texture of input">0</inputLowTextureGainL0>
+    <inputLowTextureGainL1 description="gain weight to enhance level 1 low texture of input">0</inputLowTextureGainL1>
+    <yModelParameters description="drcGain ={1,2,3,4}">
+          <blurScale description="bigger means sharper, range:[0, 0.5]">0.6,0.6,0.6,0.6</blurScale>
+          <blurGain description="bigger means sharper, range:[0, 20]">6,6,6,6</blurGain>
+          <overShootLevel description="overshoot remove strength, range:[0, 1.5]">0.4,0.4,0.4,0.4</overShootLevel>
+          <overShootEdgeLevel description="overshoot on edge remove strength, range:[0, 1.5]">0.7,0.7,0.7,0.7</overShootEdgeLevel>
+          <underShootLevel description="undershoot remove strength, range:[0, 1.5]">0.3,0.3,0.3,0.3</underShootLevel>
+          <underShootEdgeLevel description="undershoot on edge remove strength, range:[0, 1.5]">0.6,0.6,0.6,0.6</underShootEdgeLevel>
+          <minBlurScale description="minimum blur scale, should be less/eqaul to blurScale, range:[0, 1]">0.35,0.35,0.35,0.35</minBlurScale>
+          <noise1Level description="luma shot noise, range:[0, 1]">0.05,0.05,0.05,0.125</noise1Level>
+          <noise2Level description="luma read noise, range:[0, 1]">0,0,0,0.05</noise2Level>
+    </yModelParameters>
+    <uvModelParameters description="drcGain ={1,2,3,4}">
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.1,0.1,0.15,0.2</minLevel>
+              <anchorLevel description="anchor level">0.2,0.2,0.2,0.3</anchorLevel>
+              <maxLevel description="maximum level">0.5,0.5,0.5,0.6</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </uvModelParameters>
+  </levConfigData>
+  <levConfigData>
+    <rawISO description="rawISO = shortGain * 50.">400</rawISO>
+    <inputLowTextureGainL0 description="gain weight to enhance level 0 low texture of input">0</inputLowTextureGainL0>
+    <inputLowTextureGainL1 description="gain weight to enhance level 1 low texture of input">0</inputLowTextureGainL1>
+    <yModelParameters description="drcGain ={1,2,3,4}">
+          <blurScale description="bigger means sharper, range:[0, 0.5]">0.6,0.6,0.6,0.6</blurScale>
+          <blurGain description="bigger means sharper, range:[0, 20]">6,6,6,6</blurGain>
+          <overShootLevel description="overshoot remove strength, range:[0, 1.5]">0.4,0.4,0.4,0.4</overShootLevel>
+          <overShootEdgeLevel description="overshoot on edge remove strength, range:[0, 1.5]">0.7,0.7,0.7,0.7</overShootEdgeLevel>
+          <underShootLevel description="undershoot remove strength, range:[0, 1.5]">0.3,0.3,0.3,0.3</underShootLevel>
+          <underShootEdgeLevel description="undershoot on edge remove strength, range:[0, 1.5]">0.6,0.6,0.6,0.6</underShootEdgeLevel>
+          <minBlurScale description="minimum blur scale, should be less/eqaul to blurScale, range:[0, 1]">0.35,0.35,0.35,0.35</minBlurScale>
+          <noise1Level description="luma shot noise, range:[0, 1]">0.075,0.075,0.075,0.15</noise1Level>
+          <noise2Level description="luma read noise, range:[0, 1]">0,0,0,0.05</noise2Level>
+    </yModelParameters>
+    <uvModelParameters description="drcGain ={1,2,3,4}">
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.1,0.1,0.15,0.25</minLevel>
+              <anchorLevel description="anchor level">0.2,0.2,0.2,0.3</anchorLevel>
+              <maxLevel description="maximum level">0.5,0.5,0.5,0.6</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </uvModelParameters>
+  </levConfigData>
+  <levConfigData>
+    <rawISO description="rawISO = shortGain * 50.">800</rawISO>
+    <inputLowTextureGainL0 description="gain weight to enhance level 0 low texture of input">0</inputLowTextureGainL0>
+    <inputLowTextureGainL1 description="gain weight to enhance level 1 low texture of input">0</inputLowTextureGainL1>
+    <yModelParameters description="drcGain ={1,2,3,4}">
+          <blurScale description="bigger means sharper, range:[0, 0.5]">0.6,0.6,0.6,0.6</blurScale>
+          <blurGain description="bigger means sharper, range:[0, 20]">6,6,6,6</blurGain>
+          <overShootLevel description="overshoot remove strength, range:[0, 1.5]">0.4,0.4,0.4,0.4</overShootLevel>
+          <overShootEdgeLevel description="overshoot on edge remove strength, range:[0, 1.5]">0.7,0.7,0.7,0.7</overShootEdgeLevel>
+          <underShootLevel description="undershoot remove strength, range:[0, 1.5]">0.3,0.3,0.3,0.3</underShootLevel>
+          <underShootEdgeLevel description="undershoot on edge remove strength, range:[0, 1.5]">0.6,0.6,0.6,0.6</underShootEdgeLevel>
+          <minBlurScale description="minimum blur scale, should be less/eqaul to blurScale, range:[0, 1]">0.35,0.35,0.35,0.35</minBlurScale>
+          <noise1Level description="luma shot noise, range:[0, 1]">0.1,0.1,0.1,0.15</noise1Level>
+          <noise2Level description="luma read noise, range:[0, 1]">0,0,0,0.05</noise2Level>
+    </yModelParameters>
+    <uvModelParameters description="drcGain ={1,2,3,4}">
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.1,0.1,0.15,0.25</minLevel>
+              <anchorLevel description="anchor level">0.4,0.4,0.4,0.4</anchorLevel>
+              <maxLevel description="maximum level">0.7,0.7,0.7,0.8</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </uvModelParameters>
+  </levConfigData>
+  <levConfigData>
+    <rawISO description="rawISO = shortGain * 50.">1600</rawISO>
+    <inputLowTextureGainL0 description="gain weight to enhance level 0 low texture of input">0</inputLowTextureGainL0>
+    <inputLowTextureGainL1 description="gain weight to enhance level 1 low texture of input">0</inputLowTextureGainL1>
+    <yModelParameters description="drcGain ={1,2,3,4}">
+          <blurScale description="bigger means sharper, range:[0, 0.5]">0.6,0.6,0.6,0.6</blurScale>
+          <blurGain description="bigger means sharper, range:[0, 20]">5,5,5,5</blurGain>
+          <overShootLevel description="overshoot remove strength, range:[0, 1.5]">0.4,0.4,0.4,0.4</overShootLevel>
+          <overShootEdgeLevel description="overshoot on edge remove strength, range:[0, 1.5]">0.7,0.7,0.7,0.7</overShootEdgeLevel>
+          <underShootLevel description="undershoot remove strength, range:[0, 1.5]">0.3,0.3,0.3,0.3</underShootLevel>
+          <underShootEdgeLevel description="undershoot on edge remove strength, range:[0, 1.5]">0.6,0.6,0.6,0.6</underShootEdgeLevel>
+          <minBlurScale description="minimum blur scale, should be less/eqaul to blurScale, range:[0, 1]">0.35,0.35,0.35,0.35</minBlurScale>
+          <noise1Level description="luma shot noise, range:[0, 1]">0.1,0.1,0.1,0.15</noise1Level>
+          <noise2Level description="luma read noise, range:[0, 1]">0,0,0,0.05</noise2Level>
+    </yModelParameters>
+    <uvModelParameters description="drcGain ={1,2,3,4}">
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.1,0.1,0.15,0.25</minLevel>
+              <anchorLevel description="anchor level">0.4,0.4,0.4,0.4</anchorLevel>
+              <maxLevel description="maximum level">0.7,0.7,0.7,0.8</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </uvModelParameters>
+  </levConfigData>
+  <levConfigData>
+    <rawISO description="rawISO = shortGain * 50.">3200</rawISO>
+    <inputLowTextureGainL0 description="gain weight to enhance level 0 low texture of input">0</inputLowTextureGainL0>
+    <inputLowTextureGainL1 description="gain weight to enhance level 1 low texture of input">0</inputLowTextureGainL1>
+    <yModelParameters description="drcGain ={1,2,3,4}">
+          <blurScale description="bigger means sharper, range:[0, 0.5]">0.6,0.6,0.6,0.6</blurScale>
+          <blurGain description="bigger means sharper, range:[0, 20]">5,5,5,5</blurGain>
+          <overShootLevel description="overshoot remove strength, range:[0, 1.5]">0.4,0.4,0.4,0.4</overShootLevel>
+          <overShootEdgeLevel description="overshoot on edge remove strength, range:[0, 1.5]">0.7,0.7,0.7,0.7</overShootEdgeLevel>
+          <underShootLevel description="undershoot remove strength, range:[0, 1.5]">0.3,0.3,0.3,0.3</underShootLevel>
+          <underShootEdgeLevel description="undershoot on edge remove strength, range:[0, 1.5]">0.6,0.6,0.6,0.6</underShootEdgeLevel>
+          <minBlurScale description="minimum blur scale, should be less/eqaul to blurScale, range:[0, 1]">0.35,0.35,0.35,0.35</minBlurScale>
+          <noise1Level description="luma shot noise, range:[0, 1]">0.1,0.1,0.1,0.15</noise1Level>
+          <noise2Level description="luma read noise, range:[0, 1]">0,0,0,0.05</noise2Level>
+    </yModelParameters>
+    <uvModelParameters description="drcGain ={1,2,3,4}">
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.2,0.2,0.25,0.3</minLevel>
+              <anchorLevel description="anchor level">0.5,0.5,0.5,0.5</anchorLevel>
+              <maxLevel description="maximum level">0.8,0.8,0.8,0.8</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </uvModelParameters>
+  </levConfigData>
+  <levConfigData>
+    <rawISO description="rawISO = shortGain * 50.">5000</rawISO>
+    <inputLowTextureGainL0 description="gain weight to enhance level 0 low texture of input">0</inputLowTextureGainL0>
+    <inputLowTextureGainL1 description="gain weight to enhance level 1 low texture of input">0</inputLowTextureGainL1>
+    <yModelParameters description="drcGain ={1,2,3,4}">
+          <blurScale description="bigger means sharper, range:[0, 0.5]">0.6,0.6,0.6,0.6</blurScale>
+          <blurGain description="bigger means sharper, range:[0, 20]">5,5,5,5</blurGain>
+          <overShootLevel description="overshoot remove strength, range:[0, 1.5]">0.4,0.4,0.4,0.4</overShootLevel>
+          <overShootEdgeLevel description="overshoot on edge remove strength, range:[0, 1.5]">0.7,0.7,0.7,0.7</overShootEdgeLevel>
+          <underShootLevel description="undershoot remove strength, range:[0, 1.5]">0.3,0.3,0.3,0.3</underShootLevel>
+          <underShootEdgeLevel description="undershoot on edge remove strength, range:[0, 1.5]">0.6,0.6,0.6,0.6</underShootEdgeLevel>
+          <minBlurScale description="minimum blur scale, should be less/eqaul to blurScale, range:[0, 1]">0.35,0.35,0.35,0.35</minBlurScale>
+          <noise1Level description="luma shot noise, range:[0, 1]">0.1,0.1,0.1,0.15</noise1Level>
+          <noise2Level description="luma read noise, range:[0, 1]">0,0,0,0.05</noise2Level>
+    </yModelParameters>
+    <uvModelParameters description="drcGain ={1,2,3,4}">
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.2,0.2,0.2,0.3</minLevel>
+              <anchorLevel description="anchor level">0.5,0.5,0.5,0.5</anchorLevel>
+              <maxLevel description="maximum level">0.8,0.8,0.8,0.8</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </uvModelParameters>
+  </levConfigData>
+  <levConfigData>
+    <rawISO description="rawISO = shortGain * 50.">4800</rawISO>
+    <inputLowTextureGainL0 description="gain weight to enhance level 0 low texture of input">0</inputLowTextureGainL0>
+    <inputLowTextureGainL1 description="gain weight to enhance level 1 low texture of input">0</inputLowTextureGainL1>
+    <yModelParameters description="drcGain ={1,2,3,4}">
+          <blurScale description="bigger means sharper, range:[0, 0.5]">0.6,0.6,0.6,0.6</blurScale>
+          <blurGain description="bigger means sharper, range:[0, 20]">5,5,5,5</blurGain>
+          <overShootLevel description="overshoot remove strength, range:[0, 1.5]">0.3,0.3,0.3,0.3</overShootLevel>
+          <overShootEdgeLevel description="overshoot on edge remove strength, range:[0, 1.5]">0.6,0.6,0.6,0.6</overShootEdgeLevel>
+          <underShootLevel description="undershoot remove strength, range:[0, 1.5]">0.2,0.2,0.2,0.2</underShootLevel>
+          <underShootEdgeLevel description="undershoot on edge remove strength, range:[0, 1.5]">0.5,0.5,0.5,0.5</underShootEdgeLevel>
+          <minBlurScale description="minimum blur scale, should be less/eqaul to blurScale, range:[0, 1]">0.35,0.35,0.35,0.35</minBlurScale>
+          <noise1Level description="luma shot noise, range:[0, 1]">0.1,0.1,0.1,0.15</noise1Level>
+          <noise2Level description="luma read noise, range:[0, 1]">0,0,0,0.05</noise2Level>
+    </yModelParameters>
+    <uvModelParameters description="drcGain ={1,2,3,4}">
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.3,0.3,0.3,0.4</minLevel>
+              <anchorLevel description="anchor level">0.6,0.6,0.6,0.6</anchorLevel>
+              <maxLevel description="maximum level">1,1,1,1</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </uvModelParameters>
+  </levConfigData>
+  <levConfigData>
+    <rawISO description="rawISO = shortGain * 50.">6400</rawISO>
+    <inputLowTextureGainL0 description="gain weight to enhance level 0 low texture of input">0</inputLowTextureGainL0>
+    <inputLowTextureGainL1 description="gain weight to enhance level 1 low texture of input">0</inputLowTextureGainL1>
+    <yModelParameters description="drcGain ={1,2,3,4}">
+          <blurScale description="bigger means sharper, range:[0, 0.5]">0.6,0.6,0.6,0.6</blurScale>
+          <blurGain description="bigger means sharper, range:[0, 20]">5,5,5,5</blurGain>
+          <overShootLevel description="overshoot remove strength, range:[0, 1.5]">0.3,0.3,0.3,0.3</overShootLevel>
+          <overShootEdgeLevel description="overshoot on edge remove strength, range:[0, 1.5]">0.6,0.6,0.6,0.6</overShootEdgeLevel>
+          <underShootLevel description="undershoot remove strength, range:[0, 1.5]">0.2,0.2,0.2,0.2</underShootLevel>
+          <underShootEdgeLevel description="undershoot on edge remove strength, range:[0, 1.5]">0.5,0.5,0.5,0.5</underShootEdgeLevel>
+          <minBlurScale description="minimum blur scale, should be less/eqaul to blurScale, range:[0, 1]">0.35,0.35,0.35,0.35</minBlurScale>
+          <noise1Level description="luma shot noise, range:[0, 1]">0.15,0.15,0.15,0.2</noise1Level>
+          <noise2Level description="luma read noise, range:[0, 1]">0.05,0.05,0.05,0.1</noise2Level>
+    </yModelParameters>
+    <uvModelParameters description="drcGain ={1,2,3,4}">
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.3,0.3,0.3,0.4</minLevel>
+              <anchorLevel description="anchor level">0.6,0.6,0.6,0.6</anchorLevel>
+              <maxLevel description="maximum level">1,1,1,1</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </uvModelParameters>
+  </levConfigData>
+  <levConfigData>
+    <rawISO description="rawISO = shortGain * 50.">12800</rawISO>
+    <inputLowTextureGainL0 description="gain weight to enhance level 0 low texture of input">0</inputLowTextureGainL0>
+    <inputLowTextureGainL1 description="gain weight to enhance level 1 low texture of input">0</inputLowTextureGainL1>
+    <yModelParameters description="drcGain ={1,2,3,4}">
+          <blurScale description="bigger means sharper, range:[0, 0.5]">0.6,0.6,0.6,0.6</blurScale>
+          <blurGain description="bigger means sharper, range:[0, 20]">5,5,5,5</blurGain>
+          <overShootLevel description="overshoot remove strength, range:[0, 1.5]">0.3,0.3,0.3,0.3</overShootLevel>
+          <overShootEdgeLevel description="overshoot on edge remove strength, range:[0, 1.5]">0.6,0.6,0.6,0.6</overShootEdgeLevel>
+          <underShootLevel description="undershoot remove strength, range:[0, 1.5]">0.2,0.2,0.2,0.2</underShootLevel>
+          <underShootEdgeLevel description="undershoot on edge remove strength, range:[0, 1.5]">0.5,0.5,0.5,0.5</underShootEdgeLevel>
+          <minBlurScale description="minimum blur scale, should be less/eqaul to blurScale, range:[0, 1]">0.35,0.35,0.35,0.35</minBlurScale>
+          <noise1Level description="luma shot noise, range:[0, 1]">0.2,0.2,0.2,0.25</noise1Level>
+          <noise2Level description="luma read noise, range:[0, 1]">0.1,0.1,0.1,0.15</noise2Level>
+    </yModelParameters>
+    <uvModelParameters description="drcGain ={1,2,3,4}">
+          <noise1Level description="chroma shot noise, range:[0, 1], 10 levels">
+              <minLevel description="minimum level">0.3,0.3,0.3,0.4</minLevel>
+              <anchorLevel description="anchor level">0.6,0.6,0.6,0.6</anchorLevel>
+              <maxLevel description="maximum level">1,1,1,1</maxLevel>
+          </noise1Level>
+          <noise2Level description="chroma read noise, range:[0, 1]">0,0,0,0</noise2Level>
+          <noise3Level description="chroma noise size, range:[2, 3]">3,3,3,3</noise3Level>
+          <maxDownSamplingScale>8,8,8,8</maxDownSamplingScale>
+    </uvModelParameters>
+  </levConfigData>
+</swispConfig>

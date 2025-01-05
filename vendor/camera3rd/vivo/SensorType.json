@@ -1,0 +1,17 @@
+{
+    "sensorTypeGyro": 0,
+    "sensorTypeAcc": 1,
+    "sensorTypeGravity": 11,
+    "sensorTypeOisMain": 14,
+    "sensorTypeOisWide": -1,
+    "sensorTypeOis2X": 17,
+    "sensorTypeOis5X": -1,
+	
+    "intervalGyro": 3,
+    "intervalAcc": 5,
+    "intervalGravity": 5,
+    "intervalOisMain": 4,
+    "intervalOisWide": 4,
+    "intervalOis2X": 4,
+    "intervalOis5X": 4
+}

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<projectItems>
+    <efuseItem project="PD2163" efuse_type="0"/>
+    <efuseItem project="PD2166" efuse_type="1"/>
+    <efuseItem project="PD2197" efuse_type="1"/>
+    <efuseItem project="PD2197C" efuse_type="1"/>
+    <efuseItem project="PD2215F_EX" efuse_type="1"/>
+    <efuseItem project="PD2204F_EX" efuse_type="1"/>
+    <efuseItem project="PD2139F_EX" efuse_type="1"/>
+    <efuseItem project="PD2139JF_EX" efuse_type="1"/>
+    <efuseItem project="PD2140" efuse_type="1"/>
+    <efuseItem project="PD2140F_EX" efuse_type="1"/>
+    <efuseItem project="PD2140IF_EX" efuse_type="1"/>
+    <efuseItem project="PD2140JF_EX" efuse_type="1"/>
+    <efuseItem project="PD2140NF_EX" efuse_type="1"/>
+    <efuseItem project="PD2230" efuse_type="1"/>
+    <efuseItem project="PD2230E" efuse_type="1"/>
+    <efuseItem project="PD2257F_EX" efuse_type="1"/>
+    <efuseItem project="PD2230F_EX" efuse_type="1"/>
+    <efuseItem project="PD2279" efuse_type="1"/>
+    <efuseItem project="PD2282" efuse_type="1"/>
+    <efuseItem project="PD2279F_EX" efuse_type="1"/>
+    <efuseItem project="PD2281F_EX" efuse_type="1"/>
+    <efuseItem project="PD2317F_EX" efuse_type="1"/>
+    <efuseItem project="PD2317" efuse_type="1"/>
+    <efuseItem project="PD2279J" efuse_type="1"/>
+    <efuseItem project="PD2318" efuse_type="1"/>
+    <efuseItem project="PD2318F_EX" efuse_type="1"/>
+    <efuseItem project="PD2318K" efuse_type="1"/>
+    <efuseItem project="PD2327F_EX" efuse_type="1"/>
+    <efuseItem project="PD2365F_EX" efuse_type="1"/>
+    <efuseItem project="PD2327" efuse_type="1"/>
+</projectItems>

@@ -1,0 +1,10 @@
+<!--
+    Input:
+        external/factory/hardware/interfaces/vivoem/aidl/default/vendor.factory.hardware.vivoem.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="aidl">
+        <name>vendor.factory.hardware.vivoem</name>
+        <fqname>IVivoEm/default</fqname>
+    </hal>
+</manifest>

@@ -1,0 +1,37 @@
+<softpqeConfig>
+  <version>2024011115</version>
+  <processMode description="softpqe process mode, 0: run Y and UV, 1: run UV only, 2: run Y only">0</processMode>
+  <multiThreadMode description="Use multiple threads for Y/UV process">1</multiThreadMode>
+  <postSharpeningFuntion description="Enable/Disable post sharpening funtions">
+      <enableUsm description="Enable/Disable USM">0</enableUsm>
+      <enableSharpen description="Enable/Disable sharpen">0</enableSharpen>
+      <enablePartialSharpen description="Enable/Disable partial sharpen via mask">0</enablePartialSharpen>
+  </postSharpeningFuntion>
+  <autoDetectUvDownScale description="Detect the down scale of UV model automatically">1</autoDetectUvDownScale>
+  <autoUvDownScaleConfig description="[Internal use] The down scale level of UV model when autoDetectUvDownScale is 1">3,3,6,8</autoUvDownScaleConfig>
+  <dumpDataMode description="softpqe dump data mode, 0: dump input/output yuv/png, 1: dump input/output yuv only">1</dumpDataMode>
+  <enableSuperResolution description="Enable/Disable super resolution (Y model), 0: disable, 1: output ori size, 2: output scale size">1</enableSuperResolution>
+  <defaultAlgoConfig description="The file name of default config">softpqe_configs_master_1x.xml</defaultAlgoConfig>
+  <!-- 
+      satRole: 
+      1: ultra wide
+      2: master
+      3: tele
+      4: vr
+      5: tele5x
+      6: tele2_5x
+      7: aux main
+      8: tele3x
+      9: tele3_5x
+      10: tele4x
+  -->
+  <totalSatNum>1</totalSatNum>
+  <satConfigData>
+    <satRole description="camera type">2</satRole>
+    <zoomRatioFor2xModel>1.8</zoomRatioFor2xModel>
+    <zoomRatioFor4xModel>3.6</zoomRatioFor4xModel>
+    <algoConfig1x description="The file name of 1x config">softpqe_configs_master_1x.xml</algoConfig1x>
+    <algoConfig2x description="The file name of 2x config">softpqe_configs_master_2x.xml</algoConfig2x>
+    <algoConfig4x description="The file name of 4x config">softpqe_configs_master_4x.xml</algoConfig4x>
+  </satConfigData>
+</softpqeConfig>

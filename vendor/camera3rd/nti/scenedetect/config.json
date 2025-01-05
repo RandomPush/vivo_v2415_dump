@@ -1,0 +1,352 @@
+{
+    "version" : "0.0.1",
+
+    "detectType" : [
+        {
+            "id" : 1,
+            "name" : "SCENECAHNGE"
+        },
+        {
+            "id" : 2,
+            "name" : "TRIPOD"
+        },
+        {
+            "id" : 3,
+            "name" : "BANDING"
+        },
+        {
+            "id" : 4,
+            "name" : "ALIGN"
+        },
+        {
+            "id" : 5,
+            "name" : "BOUNDEDFLOW"
+        },
+        {
+            "id" : 6,
+            "name" : "HDR_MOTION"
+        },
+        {
+            "id" : 7,
+            "name" : "MOTION_CAPTURE"
+        },
+        {
+            "id" : 8,
+            "name" : "NICE"
+        },
+        {
+            "id" : 9,
+            "name" : "BACKLIGHT"
+        },
+        {
+            "id" : 10,
+            "name" : "VIVO_RAWHDR"
+        },
+        {
+            "id" : 11,
+            "name" : "AIHDR"
+        },
+        {
+            "id" : 12,
+            "name" : "CALCULATOR_CAPTURE_FRAMENUM"
+        },
+        {
+            "id" : 13,
+            "name" : "DOCDEPTH"
+        }
+    ],
+
+    "algoDecisions"  : [
+        {
+            "id" : 1,
+            "name" : "highLight",
+            "isBypass" : 0,
+            "detectTypeList" : [
+                { "detectTypeName" : "BACKLIGHT", "interval" : 4, "cycleIndex" : 1 }
+            ],
+            "decision_rstags" : []
+        },
+        {
+            "id" : 2,
+            "name" : "allinFocus",
+            "isBypass" : 0,
+            "detectTypeList" : [],
+            "decision_rstags" : []
+        },
+        {
+            "id" : 3,
+            "name" : "sceneChange",
+            "isBypass" : 0,
+            "detectTypeList" : [
+                { "detectTypeName" : "SCENECAHNGE", "interval" : 4, "cycleIndex" : 1 }
+            ],
+            "decision_rstags" : []
+        },
+        {
+            "id" : 4,
+            "name" : "portraitNight",
+            "isBypass" : 0,
+            "detectTypeList" : [],
+            "decision_rstags" : []
+        },
+        {
+            "id" : 5,
+            "name" : "tripod",
+            "isBypass" : 0,
+            "detectTypeList" : [
+                { "detectTypeName" : "TRIPOD", "interval" : 1, "cycleIndex" : 1 }
+            ],
+            "decision_rstags" : []
+        },
+        {
+            "id" : 6,
+            "name" : "banding",
+            "isBypass" : 0,
+            "detectTypeList" : [
+                { "detectTypeName" : "BANDING", "interval" : 1, "cycleIndex" : 1 }
+            ],
+            "decision_rstags" : []
+        },
+        {
+            "id" : 7,
+            "name" : "faceHd",
+            "isBypass" : 0,
+            "detectTypeList" : [],
+            "decision_rstags" : []
+        },
+        {
+            "id" : 8,
+            "name" : "sportBokeh",
+            "isBypass" : 0,
+            "detectTypeList" : [],
+            "decision_rstags" : []
+        },
+        {
+            "id" : 10,
+            "name" : "auto",
+            "isBypass" : 0,
+            "detectTypeList" : [],
+            "decision_rstags" : []
+        },
+        {
+            "id" : 11,
+            "name" : "motionMetering",
+            "isBypass" : 0,
+            "detectTypeList" : [
+                { "detectTypeName" : "ALIGN",          "interval" : 5, "cycleIndex" : 4 },
+                { "detectTypeName" : "BOUNDEDFLOW",    "interval" : 5, "cycleIndex" : 5 },
+                { "detectTypeName" : "MOTION_CAPTURE", "interval" : 5, "cycleIndex" : 1 }
+            ],
+            "decision_rstags" : [ "TAG_NEXT_MOTIONMETERING_HDR" ]
+        },
+        {
+            "id" : 12,
+            "name" : "nice",
+            "isBypass" : 0,
+            "detectTypeList" : [
+                { "detectTypeName" : "BACKLIGHT",   "interval" : 4, "cycleIndex" : 1 },
+                { "detectTypeName" : "ALIGN",       "interval" : 2, "cycleIndex" : 1 },
+                { "detectTypeName" : "BOUNDEDFLOW", "interval" : 2, "cycleIndex" : 2 },
+                { "detectTypeName" : "HDR_MOTION",  "interval" : 2, "cycleIndex" : 2 },
+                { "detectTypeName" : "NICE",        "interval" : 1, "cycleIndex" : 1 }
+            ],
+            "decision_rstags" : [ "TAG_NEXT_NICEZOOM_HDR" ]
+        },
+        {
+            "id" : 13,
+            "name" : "pixelshift",
+            "isBypass" : 0,
+            "detectTypeList" : [],
+            "decision_rstags" : [ "TAG_NEXT_ZOOM_HDRTIGHTEN_SUPERNS", "TAG_NEXT_ZOOM_SUPERNS", "TAG_NEXT_ZOOM_HDRTIGHTEN", "TAG_NEXT_RAWHDR_POSTPROC" ]
+        },
+        {
+            "id" : 14,
+            "name" : "zoom",
+            "isBypass" : 0,
+            "detectTypeList" : [],
+            "decision_rstags" : [ "TAG_NEXT_ZOOM_HDRTIGHTEN_SUPERNS", "TAG_NEXT_ZOOM_SUPERNS", "TAG_NEXT_ZOOM_HDRTIGHTEN" ]
+        },
+        {
+            "id" : 15,
+            "name" : "rawhdr",
+            "isBypass" : 0,
+            "detectTypeList" : [
+                { "detectTypeName" : "BACKLIGHT",   "interval" : 4, "cycleIndex" : 1 },
+                { "detectTypeName" : "ALIGN",       "interval" : 2, "cycleIndex" : 1 },
+                { "detectTypeName" : "BOUNDEDFLOW", "interval" : 2, "cycleIndex" : 2 },
+                { "detectTypeName" : "HDR_MOTION",  "interval" : 2, "cycleIndex" : 2 },
+                { "detectTypeName" : "VIVO_RAWHDR", "interval" : 2, "cycleIndex" : 1 }
+            ],
+            "decision_rstags" : [ "TAG_NEXT_RAWHDR_NIGHT" ]
+        },
+        {
+            "id" : 16,
+            "name" : "remosaic",
+            "isBypass" : 0,
+            "detectTypeList" : [],
+            "decision_rstags" : []
+        },
+        {
+            "id" : 17,
+            "name" : "night",
+            "isBypass" : 0,
+            "detectTypeList" : [],
+            "decision_rstags" : []
+        },
+        {
+            "id" : 18,
+            "name" : "yuvhdr",
+            "isBypass" : 1,
+            "detectTypeList" : [
+                { "detectTypeName" : "BACKLIGHT",   "interval" : 4, "cycleIndex" : 1 }
+            ],
+            "decision_rstags" : []
+        },
+        {
+            "id" : 19,
+            "name" : "aihdr",
+            "isBypass" : 0,
+            "detectTypeList" : [
+                { "detectTypeName" : "AIHDR", "interval" : 4, "cycleIndex" : 1 }
+            ],
+            "decision_rstags" : []
+        },
+        {
+            "id" : 20,
+            "name" : "satRemosaic",
+            "isBypass" : 0,
+            "detectTypeList" : [],
+            "decision_rstags" : [ "TAG_NEXT_ZOOM_HDRTIGHTEN_SUPERNS" ]
+        },
+        {
+            "id" : 21,
+            "name" : "docDepth",
+            "isBypass" : 0,
+            "detectTypeList" : [
+                { "detectTypeName" : "DOCDEPTH", "interval" : 1, "cycleIndex" : 1 }
+            ],
+            "decision_rstags" : []
+        },
+        {
+            "id" : 22,
+            "name" : "nightRemosaic",
+            "isBypass" : 0,
+            "detectTypeList" : [],
+            "decision_rstags" : []
+        },
+        {
+            "id" : 23,
+            "name" : "niceSport",
+            "isBypass" : 0,
+            "detectTypeList" : [
+                { "detectTypeName" : "ALIGN",          "interval" : 5, "cycleIndex" : 4 },
+                { "detectTypeName" : "BOUNDEDFLOW",    "interval" : 5, "cycleIndex" : 5 },
+                { "detectTypeName" : "MOTION_CAPTURE", "interval" : 1, "cycleIndex" : 1 }
+            ],
+            "decision_rstags" : [ "TAG_NEXT_NICESPORT_HDR" ]
+        }
+    ],
+    "sceneDetector" : [
+        {
+            "id" : 1,
+            "name" : "common",
+            "isBypass" : 0,
+            "algoDecisionList" : [  "highLight", "sceneChange", "portraitNight", "tripod", "banding", "faceHd", "aihdr" ],
+            "algoDecisionPaths" : [
+                { "TagName" : "TAG_DFT_PATH", "Path" : [ "highLight", "sceneChange", "portraitNight", "tripod", "banding", "faceHd", "aihdr" ] }
+            ]
+        },
+        {
+            "id" : 2,
+            "name" : "priority",
+            "isBypass" : 0,
+            "algoDecisionList" : [ "allinFocus", "docDepth", "auto" ],
+            "algoDecisionPaths" : [
+                { "TagName" : "TAG_DFT_PATH", "Path" : [ "allinFocus", "docDepth", "auto" ] }
+            ]
+        },
+        {
+            "id" : 3,
+            "name" : "sport",
+            "isBypass" : 0,
+            "algoDecisionList" : [ "niceSport", "motionMetering" ],
+            "algoDecisionPaths" : [
+                { "TagName" : "TAG_DFT_PATH", "Path" : [ "niceSport", "motionMetering" ] }
+            ]
+        },
+        {
+            "id" : 4,
+            "name" : "zoom",
+            "isBypass" : 0,
+            "algoDecisionList" : [ "nice", "satRemosaic", "pixelshift", "zoom" ],
+            "algoDecisionPaths" : [
+                { "TagName" : "TAG_DFT_PATH", "Path" : [ "nice" ] }
+            ]
+        },
+        {
+            "id" : 5,
+            "name" : "hdr",
+            "isBypass" : 0,
+            "algoDecisionList" : [ "nice", "rawhdr" ],
+            "algoDecisionPaths" : [
+                { "TagName" : "TAG_DFT_PATH",                       "Path" : [ "nice", "rawhdr" ] },
+                { "TagName" : "TAG_NEXT_ZOOM_HDRTIGHTEN_SUPERNS",   "Path" : [ "rawhdr" ] },
+                { "TagName" : "TAG_NEXT_ZOOM_SUPERNS",              "Path" : [ "rawhdr" ] },
+                { "TagName" : "TAG_NEXT_ZOOM_HDRTIGHTEN",           "Path" : [ "rawhdr" ] },
+                { "TagName" : "TAG_NEXT_MOTIONMETERING_HDR",        "Path" : [ "nice", "rawhdr" ] },
+                { "TagName" : "TAG_NEXT_RAWHDR_POSTPROC",           "Path" : [ "rawhdr" ] },
+                { "TagName" : "TAG_NEXT_NICEZOOM_HDR",              "Path" : [ "nice", "rawhdr" ] },
+                { "TagName" : "TAG_NEXT_NICESPORT_HDR",             "Path" : [ "nice", "rawhdr" ] }
+            ]
+        },
+        {
+            "id" : 6,
+            "name" : "remosaic",
+            "isBypass" : 0,
+            "algoDecisionList" : [ "remosaic", "nightRemosaic" ],
+            "algoDecisionPaths" : [
+                { "TagName" : "TAG_DFT_PATH", "Path" : [ "remosaic", "nightRemosaic" ] }
+            ]
+        },
+        {
+            "id" : 7,
+            "name" : "night",
+            "isBypass" : 0,
+            "algoDecisionList" : [ "nice", "rawhdr", "night" ],
+            "algoDecisionPaths" : [
+                { "TagName" : "TAG_DFT_PATH", "Path" : [ "nice", "rawhdr", "night" ] },
+                { "TagName" : "TAG_NEXT_RAWHDR_NIGHT", "Path" : [ "nice", "rawhdr", "night" ] }
+            ]
+        },
+        {
+            "id" : 8,
+            "name" : "flash",
+            "isBypass" : 0,
+            "algoDecisionList" : [ "nice", "rawhdr", "night" ],
+            "algoDecisionPaths" : [
+                { "TagName" : "TAG_DFT_PATH", "Path" : [ "nice", "rawhdr", "night" ] }
+            ]
+        },
+        {
+            "id" : 9,
+            "name" : "sportBokeh",
+            "isBypass" : 0,
+            "algoDecisionList" : [ "nice", "sportBokeh" ],
+            "algoDecisionPaths" : [
+                { "TagName" : "TAG_DFT_PATH", "Path" : [ "nice", "sportBokeh" ] }
+            ]
+        }
+    ],
+    "detect_paths" : [
+        {
+            "path_id" : 1,
+            "path_info" : "default",
+            "detector_order" : [ "common", "flash", "sportBokeh", "priority", "sport", "zoom", "hdr", "remosaic", "night" ]
+        },
+        {
+            "path_id" : 2,
+            "path_info" : "special case 1 : remosaic > hdr",
+            "detector_order" : [ "common", "flash", "sportBokeh", "priority", "sport", "zoom", "remosaic", "hdr", "night" ]
+        }
+    ]
+}

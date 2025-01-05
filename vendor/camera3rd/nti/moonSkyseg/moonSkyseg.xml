@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SkySegConfig version="0.2.1">
+    <!--算法运行设备(集成勿改)0.cpu 1.gpu, 2.dsp, 3.npu-->
+    <Device>1</Device>
+	<!--模型路径-->
+	<ModelPath>/vendor/camera3rd/nti/tf_refnet_mobilev3_512_sky_dn7_nobn.vdnn</ModelPath>
+    <input_node>data</input_node>
+	<input_data_type>0</input_data_type>
+    <output_node>bilinear/279</output_node>
+	<output_data_type>4</output_data_type>
+</SkySegConfig>

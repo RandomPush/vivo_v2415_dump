@@ -1,0 +1,219 @@
+{
+    "hdrMotion": {
+        "ainrCfg": {
+            "shortGainThrold":	1000,
+            "delevThrold":	-1.5
+        }
+    },
+    "HDR": {
+        "ainrCfg": {
+            "ISOThrold":	100000
+        }
+    },
+    "supernight": {
+        "ainrCfg": {
+            "Enable":	1
+        },
+        "mfainrCfg": {
+            "Enable":	1,
+            "ShortGainISOThrold":	3000,
+            "InputFrameMax":  10,
+            "InputFrameMin":  5
+        },
+        "localawbCfg": {
+            "Enable":	1,
+            "ButtonEnable": 0
+        },
+        "ailtmCfg": {
+            "Enable":	1,
+            "ISOThrold":	10000
+        },
+        "rgbDenoiseCfg": {
+            "Enable":	1,
+            "ShortGainISOThrold":	3200
+        }
+    },
+    "scenery_tripod": {
+        "ainrCfg": {
+            "Enable":	1,
+            "ISOThrold":	200
+        },
+        "mfainrCfg": {
+            "Enable":	0,
+            "ShortGainISOThrold":	12800,
+            "InputFrameMax":  10,
+            "InputFrameMin":  5
+        },
+        "mfainrCfg_2x": {
+            "Enable":	0,
+            "StartRatio": 1.8,
+            "ShortGainISOThrold":	12800,
+            "InputFrameMax":  10,
+            "InputFrameMin":  5
+        },
+        "localawbCfg": {
+            "Enable":	1,
+            "ButtonEnable": 0
+        },
+        "ailtmCfg": {
+            "Enable":	1,
+            "ISOThrold":	1650,
+            "PortraitEnable":	1,
+            "LuxIndexMin":	440,
+            "LuxIndexMax":	516
+        },
+        "rgbDenoiseCfg": {
+            "Enable":	1,
+            "ShortGainISOThrold":	3200
+        }
+    },
+    "scenery_handheld": {
+        "ainrCfg": {
+            "Enable":	1,
+            "ISOThrold":	200
+        },
+        "mfainrCfg": {
+            "Enable":	1,
+            "ShortGainISOThrold":	30000,
+            "InputFrameMax":  10,
+            "InputFrameMin":  5
+        },
+        "mfainrCfg_2x": {
+            "Enable":	1,
+            "StartRatio": 1.8,
+            "ShortGainISOThrold":	25000,
+            "InputFrameMax":  10,
+            "InputFrameMin":  5
+        },
+        "localawbCfg": {
+            "Enable":	1,
+            "ButtonEnable": 0
+        },
+        "ailtmCfg": {
+            "Enable":	1,
+            "ISOThrold":	32000,
+            "PortraitEnable":	1,
+            "LuxIndexMin":	440,
+            "LuxIndexMax":	516
+        },
+        "rgbDenoiseCfg": {
+            "Enable":	1,
+            "ShortGainISOThrold":	3200
+        }
+    },
+    "fastnight": {
+        "ainrCfg": {
+            "Enable":	1
+        },
+        "localawbCfg": {
+            "Enable":	1,
+            "ButtonEnable": 1
+        },
+		"mfainrCfg": {
+            "Enable":	1,
+            "ShortGainISOThrold":	7000,
+            "InputFrameMax":  10,
+            "InputFrameMin":  5
+        },
+	    "mfainrCfgPortrait": {
+            "Enable":	1,
+            "ShortGainISOThrold":	8500,
+            "InputFrameMax":  10,
+            "InputFrameMin":  5
+        },
+        "softBrp3_0": {
+            "Enable":   1
+        }
+    },
+    "portraitdenoise": {
+        "Enable": 1
+    },
+    "stardetect": {
+        "Enable": 1
+    },
+    "superstar": {
+        "ainrCfg": {
+            "Enable":	1
+        },
+        "rgbDenoiseCfg": {
+            "Enable":	1,
+            "ShortGainISOThrold":	3200
+        },
+        "mfainrCfg": {
+            "Enable":	1,
+            "ShortGainISOThrold":	115200,
+            "InputFrameMax":  10,
+            "InputFrameMin":  5
+        }
+    },
+    "HDRLite": {
+        "ainrCfg": {
+            "shortGainThrold":	8,
+            "darkBoostGainRatioThrold":	2.5
+        }
+    },
+    "LLHDR": {
+        "ainrCfg": {
+            "shortGainThrold":	16,
+            "darkBoostGainRatioThrold":	3.2
+        }
+    },
+    "HDRoff": {
+        "ainrCfg": {
+            "shortGainThrold":	16,
+            "darkBoostGainRatioThrold":	6
+        }
+    },
+    "HDRsport": {
+        "mfnrMode": {
+            "isoBoundary0":	600,
+            "isoBoundary1":	2000,
+            "motionLevelBoundary":	3
+        }
+    },
+    "prebps": {
+        "ModeCfg": {
+            "expTimeThrold":	500,
+            "shortgainThrold":	120
+        }
+    },
+    "portraitToneMap": {
+        "ToneCfg": {
+            "outlineEnable": 1,
+            "portraitEnable":	1
+        }
+    },
+    "skySegment": {
+        "segCfg": {
+            "Enable": 1
+        }
+    },
+    "mfnr": {
+        "evmmDenoiseMode": 1
+    },
+    "cac": {
+        "Enable": 0
+    },
+    "star": {
+        "configStarEffectFile": 1,
+        "configStarSoftbrpFile": 1
+    },
+    "lightspot": {
+        "Enable": 1,
+        "luxThreshold": 290,
+        "bgrImageEnable": 0,
+        "threshDay": 10500,
+        "threshNight": 10000
+    },
+    "zeissColorPs": {
+        "fileConfigEnable": 1
+    },
+    "supermoon" : {
+        "softBrp3_0": {
+            "Enable":   1
+        }
+    },
+    "secSkySegment": {
+        "Enable": 1
+    }
+}

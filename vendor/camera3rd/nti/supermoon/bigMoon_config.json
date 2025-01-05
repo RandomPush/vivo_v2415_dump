@@ -1,0 +1,10 @@
+{
+	"bigMoon":{
+		"capture":{
+			"daytimeMoonBrightenValue": 0,
+			"nightMoonBrightenValue": 0,
+			"incompleteMoonBrighten": 1,
+			"allowedDegreeeOfMoonIrregularity": 2.5
+		}
+	}
+}
